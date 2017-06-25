@@ -140,7 +140,7 @@
                             <encodingDesc>
                                 <classDecl>
                                     <taxonomy xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/">
-                                        <category xml:id="documentation"><!-- FN: Tab heißt bisher General Information, zu lang? -->
+                                        <category xml:id="general_information"><!-- zu lang? -->
                                             <category xml:id="bibl_desc">
                                                 <catDesc>
                                                     <ref target="#K1.1">cf. Catalogue 1.1</ref>
@@ -173,7 +173,7 @@
                                             </category>
                                         </category>
                                         <category xml:id="contents">
-                                            <category xml:id="contents_doc"> <!-- Neue ID -->
+                                            <category xml:id="contents_doc">
                                                 <catDesc>
                                                     <ref target="#K2.1">cf. Catalogue 2.1</ref>
                                                 </catDesc>
@@ -199,7 +199,7 @@
                                                             <num type="boolean" value=""/>
                                                         </catDesc>
                                                     </category>
-                                                    <category xml:id="general purpose">
+                                                    <category xml:id="general_purpose">
                                                         <catDesc>
                                                             <num type="boolean" value=""/>
                                                         </catDesc>
@@ -213,6 +213,7 @@
                                                         </category>
                                                     </category>
                                                 </category>
+                                            <!-- hier weiter... -->
                                             <category xml:id="previous_edition">
                                                 <catDesc>
                                                     <ref target="#K2.2">cf. Catalogue 2.2</ref>
@@ -1006,6 +1007,7 @@
             <xf:instance id="working_instance">
                 <wrap xmlns="">
                     <fields>
+                        <purpose/>
                         <doc_type/>
                         <doc_time/>
                         <subject/>
@@ -1035,18 +1037,15 @@
             <xf:bind id="bibl_desc_bind" nodeset="//tei:category[@xml:id='bibl_desc']//tei:num/@value" type="xs:integer" required="true()"/>
             <xf:bind id="contributors_bind" nodeset="//tei:category[@xml:id='contributors']//tei:num/@value" type="xs:integer" required="true()"/>
             <xf:bind id="contacts_bind" nodeset="//tei:category[@xml:id='contacts']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="explained_bind" nodeset="//tei:category[@xml:id='explained']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="reasonable_bind" nodeset="//tei:category[@xml:id='reasonable']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="data_archive_bind" nodeset="//tei:category[@xml:id='data_archive']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="aims_bind" nodeset="//tei:category[@xml:id='aims']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="methods_bind" nodeset="//tei:category[@xml:id='methods']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="data_model_bind" nodeset="//tei:category[@xml:id='data_model']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="help_bind" nodeset="//tei:category[@xml:id='help']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="citation_bind" nodeset="//tei:category[@xml:id='citation']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="complete_bind" nodeset="//tei:category[@xml:id='complete']//tei:num/@value" type="xs:integer" required="true()"/>
-            <xf:bind id="institutional_curation_bind" nodeset="//tei:category[@xml:id='institutional_curation']//tei:num/@value" type="xs:integer" required="true()"/>
             <!-- categories, contents -->
             <xf:bind id="contents_doc_bind" nodeset="//tei:category[@xml:id='contents_doc']//tei:num/@value" type="xs:integer" required="true()"/>
+            <xf:bind id="purpose_bind" nodeset="instance('working_instance')//purpose" type="xs:string" required="true()"/>
+            <xf:bind id="research_bind" nodeset="//tei:category[@xml:id='research']//tei:num/@value" type="xs:integer" required="true()" calculate="if (instance('working_instance')//purpose[contains(.,'research')]) then 1 else 0"/>
+            <xf:bind id="teaching_bind" nodeset="//tei:category[@xml:id='teaching']//tei:num/@value" type="xs:integer" required="true()" calculate="if (instance('working_instance')//purpose[contains(.,'teaching')]) then 1 else 0"/>
+            <xf:bind id="general_purpose_bind" nodeset="//tei:category[@xml:id='general_purpose']//tei:num/@value" type="xs:integer" required="true()" calculate="if (instance('working_instance')//purpose[contains(.,'general_purpose')]) then 1 else 0"/>
+            <xf:bind id="purpose_other_bind" nodeset="//tei:category[@xml:id='purpose']//tei:category[@corresp='#other']//tei:num/@value" type="xs:integer" required="true()" calculate="if (instance('working_instance')//purpose[contains(.,'other')]) then 1 else 0"/>
+            <xf:bind id="purpose_other_free_bind" nodeset="//tei:category[@xml:id='purpose']//tei:category[@corresp='#free']//tei:gloss" type="xs:string" calculate="if (instance('working_instance')//purpose[contains(., 'other')]) then . else ''"/><!-- readonly="if (instance('working_instance')//purpose[contains(.,'other')]) then false() else true()" -->
+            <!-- HIER WEITER -->
             <xf:bind id="previous_edition_bind" nodeset="//tei:category[@xml:id='previous_edition']//tei:num/@value" type="xs:integer" required="true()"/>
             <xf:bind id="materials_used_bind" nodeset="//tei:category[@xml:id='materials_used']//tei:num/@value" type="xs:integer" required="true()"/>
             <xf:bind id="introduction_bind" nodeset="//tei:category[@xml:id='introduction']//tei:num/@value" type="xs:integer" required="true()"/>
@@ -1218,20 +1217,15 @@
                     <xf:output value="if (//tei:titleStmt//tei:forename = '') then 'Reviewer, First Name' else ''"/>
                     <xf:output value="if (//tei:titleStmt//tei:surname = '') then 'Reviewer, Surname' else ''"/>
                     <xf:output value="if (//tei:titleStmt//tei:email = '') then 'Reviewer, Email' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'Documentation, Bibliographic description' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'Documentation, Contributors' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'Documentation, Contacts' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='explained']//tei:num/@value = '') then 'Documentation, Explanation' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='reasonable']//tei:num/@value = '') then 'Documentation, Reasonability' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='data_archive']//tei:num/@value = '') then 'Documentation, Archiving of the data' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='aims']//tei:num/@value = '') then 'Documentation, Aims' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='methods']//tei:num/@value = '') then 'Documentation, Methods' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='data_model']//tei:num/@value = '') then 'Documentation, Data Model' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='help']//tei:num/@value = '') then 'Documentation, Help' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='citation']//tei:num/@value = '') then 'Documentation, Citation' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='complete']//tei:num/@value = '') then 'Documentation, Completion' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='institutional_curation']//tei:num/@value = '') then 'Documentation, Institutional Curation' else ''"/>
-                    <xf:output value="if (//tei:category[@xml:id='contents_doc']//tei:num/@value = '') then 'Contents, Documentation' else ''"/>
+                    <xf:output value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'General information, Bibliographic description' else ''"/>
+                    <xf:output value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'General information, Contributors' else ''"/>
+                    <xf:output value="if (//tei:respStmt//tei:notesStmt//tei:resp[.='']) then 'Personnel, Roles' else ''"/>
+                    <xf:output value="if (//tei:respStmt//tei:notesStmt//tei:name[.='']) then 'Personnel, Names' else ''"/>
+                    
+                    <xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
+                    <xf:output value="if (//tei:category[@xml:id='contents_doc']//tei:num/@value = '') then 'Aims and content, Documentation' else ''"/>
+                    <xf:output value="if (//tei:category[@xml:id='purpose']//tei:num/@value = '') then 'Aims and content, Purpose' else ''"/>
+                    <!-- HIER WEITER -->
                     <xf:output value="if (//tei:category[@xml:id='previous_edition']//tei:num/@value = '') then 'Contents, Previous Edition' else ''"/>
                     <xf:output value="if (//tei:category[@xml:id='materials_used']//tei:num/@value = '') then 'Contents, Materials Used' else ''"/>
                     <xf:output value="if (//tei:category[@xml:id='introduction']//tei:num/@value = '') then 'Contents, Introduction' else ''"/>
@@ -1268,14 +1262,12 @@
                     <xf:output value="if (//tei:category[@xml:id='reuse']//tei:num/@value = '') then 'Accessability, Reuse' else ''"/>
                     <xf:output value="if (//tei:category[@xml:id='declared']//tei:num/@value = '') then 'Accessability, Rights declared' else ''"/>
                     <xf:output value="if (//tei:category[@xml:id='license']//tei:num/@value = '') then 'Accessability, License' else ''"/>
-                    <xf:output value="if (//tei:respStmt//tei:resp[.='']) then 'Personnel, Roles' else ''"/>
-                    <xf:output value="if (//tei:respStmt//tei:name[.='']) then 'Personnel, Names' else ''"/>
                 </xf:message>
             </xf:submission>
         </xf:model>
     </head>
     <body>
-        <h1>Questionnaire</h1>
+        <h1>Questionnaire Text Collections</h1>
         <p class="info">
             <img class="warning" src="icons/messagebox_warning.png" alt="warning"/> Please
             fill in all the fields in all the tabs before submitting. Form data cannot be saved and
@@ -1410,11 +1402,11 @@
         <xf:group>
             <div style="display: none;">
                 <xf:trigger id="t-case_doc">
-                    <xf:label>Documentation</xf:label><!-- FN: General Information? -->
+                    <xf:label>General information</xf:label>
                     <xf:toggle case="case_doc"/>
                 </xf:trigger>
                 <xf:trigger id="t-case_contents">
-                    <xf:label>Contents</xf:label>
+                    <xf:label>Aims and content</xf:label>
                     <xf:toggle case="case_contents"/>
                 </xf:trigger>
                 <xf:trigger id="t-case_presentation">
@@ -1445,10 +1437,10 @@
             <xf:switch id="switch" appearance="dijit:TabContainer">
                 <!-- xf:toggle ev:event="DOMActivate" case="..." ??? -->
                 <xf:case id="case_doc" selected="true">
-                    <xf:label>Documentation</xf:label><!-- FN: General Information -->
+                    <xf:label>General information</xf:label>
                     <div class="caseContent">
                         <xf:group appearance="full">
-                            <xf:label>Documentation</xf:label>
+                            <xf:label>General information</xf:label>
                             <xf:group appearance="full">
                                 <xf:label>Bibliographic description</xf:label>
                                 <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K1.1" target="_new">
@@ -1467,21 +1459,69 @@
                                 </xf:select1>
                             </xf:group>
                             <xf:group appearance="full">
-                                <xf:label>Contributors</xf:label>
+                                <xf:label>Contributors and personnel</xf:label>
                                 <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K1.3" target="_new">
                                     <xf:output ref="//tei:category[@xml:id = 'contributors']/tei:catDesc/tei:ref"/>
                                 </a>
-                                <xf:output ref="//tei:category[@xml:id = 'contributors']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                <xf:select1 bind="contributors_bind" appearance="full">
-                                    <xf:item>
-                                        <xf:label>yes</xf:label>
-                                        <xf:value>1</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>no</xf:label>
-                                        <xf:value>0</xf:value>
-                                    </xf:item>
-                                </xf:select1>
+                                <xf:group appearance="full">
+                                    <xf:label>Contributors</xf:label>
+                                    <xf:output ref="//tei:category[@xml:id = 'contributors']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                    <xf:select1 bind="contributors_bind" appearance="full">
+                                        <xf:item>
+                                            <xf:label>yes</xf:label>
+                                            <xf:value>1</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>no</xf:label>
+                                            <xf:value>0</xf:value>
+                                        </xf:item>
+                                    </xf:select1>
+                                </xf:group>
+                                <xf:group appearance="full">
+                                    <xf:label>Personnel</xf:label>
+                                    <br/>
+                                    <br/>
+                                    <span>Please indicate the involved personnel by <strong>name</strong> (forename surname) and their respective <strong>roles</strong>.</span>
+                                    <br/>
+                                    <br/>
+                                    <span>Choose 'Contributor' if no other role is applicable.</span>
+                                    <br/>
+                                    <xf:trigger src="icons/plus.png" class="add">
+                                        <xf:insert nodeset="//tei:notesStmt//tei:respStmt" at="last()"/>
+                                    </xf:trigger> Add a new entry
+                                    <xf:repeat id="resp_repeat" nodeset="//tei:notesStmt//tei:respStmt" appearance="full">
+                                        <xf:select1 class="personnel_select" ref="tei:resp" appearance="minimal">
+                                            <xf:item>
+                                                <xf:label>Editor</xf:label>
+                                                <xf:value>Editor</xf:value>
+                                            </xf:item>
+                                            <xf:item>
+                                                <xf:label>Encoder</xf:label>
+                                                <xf:value>Encoder</xf:value>
+                                            </xf:item>
+                                            <xf:item>
+                                                <xf:label>Programmer</xf:label>
+                                                <xf:value>Programmer</xf:value>
+                                            </xf:item>
+                                            <xf:item>
+                                                <xf:label>Advisor</xf:label>
+                                                <xf:value>Advisor</xf:value>
+                                            </xf:item>
+                                            <xf:item>
+                                                <xf:label>Designer</xf:label>
+                                                <xf:value>Designer</xf:value>
+                                            </xf:item>
+                                            <xf:item>
+                                                <xf:label>Contributor</xf:label>
+                                                <xf:value>Contributor</xf:value>
+                                            </xf:item>
+                                        </xf:select1>
+                                        <xf:input ref="tei:persName/tei:name"/>
+                                        <xf:trigger src="icons/remove.png" class="remove">
+                                            <xf:delete nodeset="//tei:notesStmt//tei:respStmt[index('resp_repeat')]" if="count(//tei:notesStmt//tei:respStmt) gt 1"/>
+                                        </xf:trigger>
+                                    </xf:repeat>
+                                </xf:group>
                             </xf:group>
                             <xf:group appearance="full">
                                 <xf:label>Contacts</xf:label>
@@ -1504,10 +1544,10 @@
                     </div>
                 </xf:case>
                 <xf:case id="case_contents">
-                    <xf:label>Contents</xf:label>
+                    <xf:label>Aims and content</xf:label>
                     <div class="caseContent">
                         <xf:group appearance="full">
-                            <xf:label>Contents</xf:label>
+                            <xf:label>Aims and content</xf:label>
                             <xf:group appearance="full">
                                 <xf:label>Documentation</xf:label>
                                 <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K2.1" target="_new">
@@ -1524,6 +1564,36 @@
                                         <xf:value>0</xf:value>
                                     </xf:item>
                                 </xf:select1>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Purpose</xf:label>
+                                <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K2.2" target="_new">
+                                    <xf:output ref="//tei:category[@xml:id = 'purpose']/tei:catDesc/tei:ref"/>
+                                </a>
+                                <xf:output ref="//tei:category[@xml:id = 'purpose']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select bind="purpose_bind" appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>research</xf:label>
+                                        <xf:value>research</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>teaching</xf:label>
+                                        <xf:value>teaching</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>general purpose</xf:label>
+                                        <xf:value>general_purpose</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>other</xf:label>
+                                        <xf:value>other</xf:value>
+                                    </xf:item>
+                                </xf:select>
+                                <span class="hint">Hold the Ctrl/CMD key to select multiple entries.</span>
+                                <xf:input bind="purpose_other_free_bind">
+                                    <xf:label>other:</xf:label>
+                                    <xf:hint>choose 'other' above</xf:hint>
+                                </xf:input>
                             </xf:group>
                             <xf:group appearance="full">
                                 <xf:label>Previous Edition</xf:label>
@@ -2844,56 +2914,6 @@
                         </xf:group>
                     </div>
                 </xf:case>
-                <xf:case id="case_personnel">
-                    <xf:label>Personnel</xf:label>
-                    <div class="caseContent">
-                        <xf:group appearance="full">
-                            <xf:label>Personnel</xf:label>
-                            <br/>
-                            <br/>
-                            <span>Please indicate the involved personnel by <strong>name</strong> (forename surname) and their respective <strong>roles</strong>.</span>
-                            <br/>
-                            <br/>
-                            <span>Choose 'Contributor' if no other role is applicable.</span>
-                            <br/>
-                            <xf:trigger src="icons/plus.png" class="add">
-                                <xf:insert nodeset="//tei:notesStmt//tei:respStmt" at="last()"/>
-                            </xf:trigger> Add a new entry
-                                <xf:repeat id="resp_repeat" nodeset="//tei:notesStmt//tei:respStmt" appearance="full">
-                                <xf:select1 class="personnel_select" ref="tei:resp" appearance="minimal">
-                                    <xf:item>
-                                        <xf:label>Editor</xf:label>
-                                        <xf:value>Editor</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Encoder</xf:label>
-                                        <xf:value>Encoder</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Programmer</xf:label>
-                                        <xf:value>Programmer</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Advisor</xf:label>
-                                        <xf:value>Advisor</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Designer</xf:label>
-                                        <xf:value>Designer</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Contributor</xf:label>
-                                        <xf:value>Contributor</xf:value>
-                                    </xf:item>
-                                </xf:select1>
-                                <xf:input ref="tei:persName/tei:name"/>
-                                <xf:trigger src="icons/remove.png" class="remove">
-                                    <xf:delete nodeset="//tei:notesStmt//tei:respStmt[index('resp_repeat')]" if="count(//tei:notesStmt//tei:respStmt) gt 1"/>
-                                </xf:trigger>
-                            </xf:repeat>
-                        </xf:group>
-                    </div>
-                </xf:case>
             </xf:switch>
         </xf:group>
         <xf:group id="submit_group">
@@ -2914,4 +2934,4 @@
             </xf:trigger>
         </xf:group>
     </body>
-</html>ta
+</html>
