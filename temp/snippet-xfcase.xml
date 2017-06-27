@@ -467,4 +467,152 @@
                         </xf:group>
                     </div>
                     </xf:case>
+    <xf:case id="case_composition">
+        <xf:label>Composition</xf:label>
+        <div class="caseContent">
+            <xf:group appearance="full">
+                <xf:label>Composition</xf:label>
+                <xf:group appearance="full">
+                    <xf:label>Documentation</xf:label>
+                    <xf:output
+                        ref="//tei:category[@xml:id = 'documentation_methods']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                    <xf:select1 bind="documentation_methods_bind" appearance="full">
+                        <xf:item>
+                            <xf:label>yes</xf:label>
+                            <xf:value>1</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>no</xf:label>
+                            <xf:value>0</xf:value>
+                        </xf:item>
+                    </xf:select1>
+                </xf:group>
+                <xf:group appearance="full">
+                    <xf:label>Selection</xf:label>
+                    <a
+                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.2"
+                        target="_new">
+                        <xf:output
+                            ref="//tei:category[@xml:id = 'selection']/tei:catDesc/tei:ref"
+                        />
+                    </a>
+                    <xf:output
+                        ref="//tei:category[@xml:id = 'selection']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                    <xf:select bind="selection_bind" appearance="minimal">
+                        <xf:item>
+                            <xf:label>Language</xf:label>
+                            <xf:value>selection_language</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Author</xf:label>
+                            <xf:value>selection_author</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Country</xf:label>
+                            <xf:value>selection_country</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Epoche</xf:label>
+                            <xf:value>selection_epoche</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Genre</xf:label>
+                            <xf:value>selection_genre</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Topic</xf:label>
+                            <xf:value>selection_topic</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Style</xf:label>
+                            <xf:value>selection_style</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>Linguistic characteristics</xf:label>
+                            <xf:value>selection_linguistic_characteristics</xf:value>
+                        </xf:item>
+                        <xf:item>
+                            <xf:label>other</xf:label>
+                            <xf:value>other</xf:value>
+                        </xf:item>
+                    </xf:select>
+                    <span class="hint">Hold the Ctrl/CMD key to select multiple
+                        entries.</span>
+                    <xf:input bind="selection_other_free_bind">
+                        <xf:label>other:</xf:label>
+                        <xf:hint>choose 'other' above</xf:hint>
+                    </xf:input>
+                </xf:group>
+                <xf:group appearance="full">
+                    <xf:label>Size</xf:label>
+                    <a
+                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.4"
+                        target="_new">
+                        <xf:output
+                            ref="//tei:category[@xml:id = 'size_items']/tei:catDesc/tei:ref"
+                        />
+                    </a>
+                    <xf:group appearance="full">
+                        <xf:label>Texts/items</xf:label>
+                        <xf:output
+                            ref="//tei:category[@xml:id = 'size_items']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                        <xf:select1 bind="size_items_bind" appearance="minimal">
+                            <xf:item>
+                                <xf:label>&lt;= 10</xf:label>
+                                <xf:value>item_le10</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>11-50</xf:label>
+                                <xf:value>item_11-50</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>51-100</xf:label>
+                                <xf:value>item_51-100</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>&gt; 100</xf:label>
+                                <xf:value>item_gt100</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>&gt; 1000</xf:label>
+                                <xf:value>item_gt1000</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>unknown</xf:label>
+                                <xf:value>item_unknown</xf:value>
+                            </xf:item>
+                        </xf:select1>
+                    </xf:group>
+                    <xf:group appearance="full">
+                        <xf:label>Tokens</xf:label>
+                        <xf:output
+                            ref="//tei:category[@xml:id = 'size_tokens']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                        <xf:select1 bind="size_tokens_bind" appearance="minimal">
+                            <xf:item>
+                                <xf:label>&lt; 100,000</xf:label>
+                                <xf:value>tokens_lt100.000</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>100,000- 1 Mio.</xf:label>
+                                <xf:value>tokens_100.000-1mio</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>&gt; 1 Mio.</xf:label>
+                                <xf:value>tokens_gt1mio</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>&gt; 10 Mio.</xf:label>
+                                <xf:value>tokens_gt10mio</xf:value>
+                            </xf:item>
+                            <xf:item>
+                                <xf:label>unknown</xf:label>
+                                <xf:value>tokens_unknown</xf:value>
+                            </xf:item>
+                        </xf:select1>
+                    </xf:group>
+                </xf:group>
+            </xf:group>
+        </div>
+    </xf:case>
+    
 </snippet>
