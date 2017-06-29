@@ -54,17 +54,19 @@
                 },2000); */            
                 // Groesse multiselects an Anzahl der options anpassen
                 var sels = document.getElementsByTagName("select");
-                /* <!-- */ 
-                for (var i=0;i < sels.length;i++){
+                /* <!--
+* /
+                for (var i = 0; i < sels.length; i++) {
                     var classAtt1 = sels[i].parentNode.parentNode.parentNode.getAttribute("class");
                     var classAtt2 = sels[i].parentNode.parentNode.getAttribute("class");
-                    if (classAtt1 !== null && classAtt2 !== null){
-                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1){
-                        /* --> */
+                    if (classAtt1 !== null && classAtt2 !== null) {
+                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1) {
+                            /*//--> */
                             var optCount = new Array();
-                            /* <!-- */ 
-                            for (var j=0;j < sels[i].childNodes.length;j++){
-                            /* --> */
+                            /* <!--
+* /
+                for (var j = 0; j < sels[i].childNodes.length; j++) {
+                    /*//--> */
                                 if (sels[i].childNodes[j].nodeType == 1){
                                     optCount.push(sels[i].childNodes[j]);
                                 }
@@ -618,7 +620,8 @@
                                         <category xml:id="composition">
                                             <category xml:id="documentation_methods">
                                                 <catDesc>
-                                                  <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
+                                                  <ref target="#K3.1.1">cf. Catalogue
+                                                  3.1.1-3.1.3</ref>
                                                 </catDesc>
                                                 <catDesc>Are the principles and decisions regarding
                                                   the design of the text collection, its composition
@@ -754,6 +757,73 @@
                                                   </category>
                                                 </category>
                                             </category>
+                                            <category xml:id="organization">
+                                                <catDesc>
+                                                    <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
+                                                </catDesc>
+                                                <catDesc>Does the text collection have identifiable sub-collections or
+                                                    components?</catDesc>
+                                                <catDesc>
+                                                    <num type="boolean" value=""/>
+                                                </catDesc>
+                                            </category>
+                                            <category xml:id="acquisition">
+                                                <category xml:id="text_recording">
+                                                    <catDesc>
+                                                        <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                                                    </catDesc>
+                                                    <catDesc>Does the text collection record or transcribe the textual data for the
+                                                        first time?</catDesc>
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="text_integration">
+                                                    <catDesc>
+                                                        <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                                                    </catDesc>
+                                                    <catDesc>What kind of material has been taken over from other sources?</catDesc>
+                                                    <category xml:id="full_text">
+                                                        <catDesc>
+                                                            <num type="boolean" value=""/>
+                                                        </catDesc>
+                                                    </category>
+                                                    <category xml:id="metadata">
+                                                        <catDesc>
+                                                            <num type="boolean" value=""/>
+                                                        </catDesc>
+                                                    </category>
+                                                    <category xml:id="annotation">
+                                                        <catDesc>
+                                                            <num type="boolean" value=""/>
+                                                        </catDesc>
+                                                    </category>
+                                                    <category corresp="#other">
+                                                        <catDesc>
+                                                            <num type="boolean" value=""/>
+                                                        </catDesc>
+                                                        <category corresp="#free">
+                                                            <gloss/>
+                                                        </category>
+                                                    </category>
+                                                    <category corresp="#none">
+                                                        <catDesc>
+                                                            <num type="boolean" value=""/>
+                                                        </catDesc>
+                                                    </category>
+                                                </category>
+                                            </category>
+                                            <category xml:id="quality">
+                                                <catDesc>
+                                                    <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
+                                                </catDesc>
+                                                <catDesc>Has the quality of the data (transcriptions, metadata, annotations, etc.) been
+                                                    checked?</catDesc>
+                                                <catDesc>
+                                                    <num type="boolean" value=""/>
+                                                </catDesc>
+                                            </category>
+                                            <!-- #### HIER WEITER #### -->
                                         </category>
                                         <category xml:id="data_modelling"> </category>
                                         <category xml:id="provision"> </category>
@@ -785,6 +855,7 @@
                         <selection></selection>
                         <size_items></size_items>
                         <size_tokens></size_tokens>
+                        <text_integration></text_integration>
                     </fields>
                 </wrap>
             </xf:instance>
@@ -1222,7 +1293,38 @@
                 nodeset="//tei:category[@xml:id='tokens_unknown']//tei:num/@value" type="xs:integer"
                 required="true()"
                 calculate="if (instance('working_instance')//size_tokens[contains(.,'tokens_unknown')]) then 1 else 0"/>
-
+            <!-- structure -->
+            <xf:bind id="structure_bind"
+                nodeset="//tei:category[@xml:id='structure']//tei:num/@value" type="xs:integer"
+                required="true()"/>
+            <!-- acquisition, integration -->
+            <xf:bind id="text_recording_bind"
+                nodeset="//tei:category[@xml:id='text_recording']//tei:num/@value" type="xs:integer"
+                required="true()"/>
+            <xf:bind id="text_integration_bind" nodeset="instance('working_instance')//text_integration"
+                type="xs:string" required="true()"/>
+            <xf:bind id="full_text_bind" nodeset="//tei:category[@xml:id='full_text']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'full_text')]) then 1 else 0"/>
+            <xf:bind id="metadata_bind" nodeset="//tei:category[@xml:id='metadata']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'metadata')]) then 1 else 0"/>
+            <xf:bind id="annotation_bind" nodeset="//tei:category[@xml:id='annotation']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'annotation')]) then 1 else 0"/>
+            <xf:bind id="text_integration_other_bind"
+                nodeset="//tei:category[@xml:id='text_integration']//tei:category[@corresp='#other']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'other')]) then 1 else 0"/>
+            <xf:bind id="text_integration_other_free_bind"
+                nodeset="//tei:category[@xml:id='text_integration']//tei:category[@corresp='#free']//tei:gloss"
+                type="xs:string"
+                calculate="if (instance('working_instance')//text_integration[contains(., 'other')]) then . else ''"/>
+            <!-- readonly="if (instance('working_instance')//text_integration[contains(.,'other')]) then false() else true()"  -->
+            <xf:bind id="text_integration_none_bind"
+                nodeset="//tei:category[@xml:id='text_integration']//tei:category[@corresp='#none']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'none')]) then 1 else 0"/>
 
             <!-- submission: http://ide-vm.uni-koeln.de/exist/apps/ride-tc/quest.xq -->
             <xf:submission resource="http://ide-vm.uni-koeln.de:7070/exist/apps/ride-tc/quest.xq"
@@ -1283,6 +1385,12 @@
                     <xf:output
                         value="if (//tei:category[@xml:id='size_tokens']//tei:num/@value = '') then 'Composition, Size (Number of Tokens)' else ''"
                     />
+                    <xf:output
+                        value="if (//tei:category[@xml:id='structure']//tei:num/@value = '') then 'Composition, Structure' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
                 </xf:message>
             </xf:submission>
         </xf:model>
@@ -2221,6 +2329,93 @@
                                             <xf:value>tokens_unknown</xf:value>
                                         </xf:item>
                                     </xf:select1>
+                                </xf:group>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Structure</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.5"
+                                    target="_new">
+                                    <xf:output
+                                        ref="//tei:category[@xml:id = 'structure']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'structure']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select1 bind="structure_bind" appearance="full">
+                                    <xf:item>
+                                        <xf:label>yes</xf:label>
+                                        <xf:value>1</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>no</xf:label>
+                                        <xf:value>0</xf:value>
+                                    </xf:item>
+                                </xf:select1>
+                            </xf:group>
+                            <xf:group>
+                                <xf:label>Data acquisition and integration</xf:label>
+                                <xf:group appearance="full">
+                                    <xf:label>Text recording</xf:label>
+                                    <a
+                                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.6"
+                                        target="_new">
+                                        <xf:output
+                                            ref="//tei:category[@xml:id = 'text_recording']/tei:catDesc/tei:ref"
+                                        />
+                                    </a>
+                                    <xf:output
+                                        ref="//tei:category[@xml:id = 'text_recording']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                    <xf:select1 bind="text_recording_bind" appearance="full">
+                                        <xf:item>
+                                            <xf:label>yes</xf:label>
+                                            <xf:value>1</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>no</xf:label>
+                                            <xf:value>0</xf:value>
+                                        </xf:item>
+                                    </xf:select1>
+                                </xf:group>
+                                <xf:group appearance="full">
+                                    <xf:label>Text integration</xf:label>
+                                    <a
+                                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.6"
+                                        target="_new">
+                                        <xf:output
+                                            ref="//tei:category[@xml:id = 'text_integration']/tei:catDesc/tei:ref"
+                                        />
+                                    </a>
+                                    <xf:output
+                                        ref="//tei:category[@xml:id = 'text_integration']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                    <xf:select bind="text_integration_bind" appearance="minimal">
+                                        <xf:item>
+                                            <xf:label>Full texts</xf:label>
+                                            <xf:value>full_text</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>Metadata</xf:label>
+                                            <xf:value>metadata</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>Annotations</xf:label>
+                                            <xf:value>annotations</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>other</xf:label>
+                                            <xf:value>other</xf:value>
+                                        </xf:item>
+                                        <xf:item>
+                                            <xf:label>none</xf:label>
+                                            <xf:value>none</xf:value>
+                                        </xf:item>
+                                    </xf:select>
+                                    <span class="hint">Hold the Ctrl/CMD key to select multiple
+                                        entries.</span>
+                                    <xf:input bind="selection_other_free_bind">
+                                        <xf:label>other:</xf:label>
+                                        <xf:hint>choose 'other' above</xf:hint>
+                                    </xf:input>
                                 </xf:group>
                             </xf:group>
                         </xf:group>
