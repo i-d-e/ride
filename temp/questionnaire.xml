@@ -823,9 +823,81 @@
                                                     <num type="boolean" value=""/>
                                                 </catDesc>
                                             </category>
-                                            <!-- #### HIER WEITER #### -->
+                                            <!-- TYPOLOGY -->
+                                            <category xml:id="research_type">
+                                                <catDesc>
+                                                    <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                                                </catDesc>
+                                                <catDesc>What kind of research does the collection allow to conduct primarily?</catDesc>
+                                                <category xml:id="qualitative">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="quantitative">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="none">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                            </category>
                                         </category>
-                                        <category xml:id="data_modelling"> </category>
+                                        <!-- HIER WEITER: -->
+                                        <category xml:id="data_modelling">
+                                            <category xml:id="text_treatment">
+                                                <catDesc>
+                                                    <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
+                                                </catDesc>
+                                                <catDesc>How does the text collection deal with the texts that it is built up of?</catDesc>
+                                                <category xml:id="orthographic_transcription">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="phonetic_transcription">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="diplomatic_transcription">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="edited_text">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="translated_text">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="summarized_text">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category xml:id="sampled_text">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
+                                                <category corresp="#other">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                    <category corresp="#free">
+                                                        <gloss/>
+                                                    </category>
+                                                </category>
+                                            </category>
+                                        </category>
                                         <category xml:id="provision"> </category>
                                         <category xml:id="user_interface"> </category>
                                         <category xml:id="preservation"> </category>
@@ -856,6 +928,7 @@
                         <size_items></size_items>
                         <size_tokens></size_tokens>
                         <text_integration></text_integration>
+                        <research_type></research_type>
                     </fields>
                 </wrap>
             </xf:instance>
@@ -1325,6 +1398,23 @@
                 nodeset="//tei:category[@xml:id='text_integration']//tei:category[@corresp='#none']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//text_integration[contains(.,'none')]) then 1 else 0"/>
+            <!-- quality -->
+            <xf:bind id="quality_bind"
+                nodeset="//tei:category[@xml:id='quality']//tei:num/@value" type="xs:integer"
+                required="true()"/>
+            <!-- research type  -->
+            <xf:bind id="research_type_bind" nodeset="instance('working_instance')//research_type"
+                type="xs:string" required="true()"/>
+            <xf:bind id="qualitative_bind" nodeset="//tei:category[@xml:id='qualitative']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//research_type[contains(.,'qualitative')]) then 1 else 0"/>
+            <xf:bind id="quantitative_bind" nodeset="//tei:category[@xml:id='quantitative']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//research_type[contains(.,'quantitative')]) then 1 else 0"/>
+            <xf:bind id="research_type_none_bind"
+                nodeset="//tei:category[@xml:id='research_type']//tei:category[@corresp='#none']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//research_type[contains(.,'none')]) then 1 else 0"/>
 
             <!-- submission: http://ide-vm.uni-koeln.de/exist/apps/ride-tc/quest.xq -->
             <xf:submission resource="http://ide-vm.uni-koeln.de:7070/exist/apps/ride-tc/quest.xq"
@@ -1391,6 +1481,10 @@
                         value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
                     <xf:output
                         value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='quality']//tei:num/@value = '') then 'Composition, Quality assurance' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='research_type']//tei:num/@value = '') then 'Composition, Kind of research' else ''"/>
                 </xf:message>
             </xf:submission>
         </xf:model>
@@ -2417,6 +2511,58 @@
                                         <xf:hint>choose 'other' above</xf:hint>
                                     </xf:input>
                                 </xf:group>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Quality assurance</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.7"
+                                    target="_new">
+                                    <xf:output
+                                        ref="//tei:category[@xml:id = 'quality']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'quality']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select1 bind="quality_bind" appearance="full">
+                                    <xf:item>
+                                        <xf:label>yes</xf:label>
+                                        <xf:value>1</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>no</xf:label>
+                                        <xf:value>0</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>unknown</xf:label>
+                                        <xf:value>3</xf:value>
+                                    </xf:item>
+                                </xf:select1>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Kind of research</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.1.8"
+                                    target="_new">
+                                    <xf:output
+                                        ref="//tei:category[@xml:id = 'research_type']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'research_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select1 bind="research_type_bind" appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>Qualitative research</xf:label>
+                                        <xf:value>qualitative</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Quantitative research</xf:label>
+                                        <xf:value>quantitative</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>none</xf:label>
+                                        <xf:value>none</xf:value>
+                                    </xf:item>
+                                </xf:select1>
                             </xf:group>
                         </xf:group>
                     </div>
