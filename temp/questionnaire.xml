@@ -846,7 +846,6 @@
                                                 </category>
                                             </category>
                                         </category>
-                                        <!-- HIER WEITER: -->
                                         <category xml:id="data_modelling">
                                             <category xml:id="text_treatment">
                                                 <catDesc>
@@ -929,6 +928,7 @@
                         <size_tokens></size_tokens>
                         <text_integration></text_integration>
                         <research_type></research_type>
+                        <text_treatment></text_treatment>
                     </fields>
                 </wrap>
             </xf:instance>
@@ -1415,6 +1415,31 @@
                 nodeset="//tei:category[@xml:id='research_type']//tei:category[@corresp='#none']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//research_type[contains(.,'none')]) then 1 else 0"/>
+            <!-- data modeling, text treatment -->
+            <xf:bind id="text_treatment_bind" nodeset="instance('working_instance')//text_treatment"
+                type="xs:string" required="true()"/>
+            <xf:bind id="orthographic_transcription_bind" nodeset="//tei:category[@xml:id='orthographic_transcription']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'orthographic_transcription')]) then 1 else 0"/>
+            <xf:bind id="phonetic_transcription_bind" nodeset="//tei:category[@xml:id='phonetic_transcription']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'phonetic_transcription')]) then 1 else 0"/>
+            <xf:bind id="diplomatic_transcription_bind" nodeset="//tei:category[@xml:id='diplomatic_transcription']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'diplomatic_transcription')]) then 1 else 0"/>
+            <xf:bind id="edited_text_bind" nodeset="//tei:category[@xml:id='edited_text']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'edited_text')]) then 1 else 0"/>
+            <xf:bind id="translated_text_bind" nodeset="//tei:category[@xml:id='translated_text']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'translated_text')]) then 1 else 0"/>
+            <xf:bind id="summarized_text_bind" nodeset="//tei:category[@xml:id='summarized_text']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'summarized_text')]) then 1 else 0"/>
+            <xf:bind id="sampled_text_bind" nodeset="//tei:category[@xml:id='sampled_text']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'sampled_text')]) then 1 else 0"/>
+            <!-- HIER WEITER -->
 
             <!-- submission: http://ide-vm.uni-koeln.de/exist/apps/ride-tc/quest.xq -->
             <xf:submission resource="http://ide-vm.uni-koeln.de:7070/exist/apps/ride-tc/quest.xq"
