@@ -20,7 +20,7 @@
             .bfTabContainer .xfInput .xfLabel {width: 3.5em;}
             .xfSelectorItem {margin-left: 5px;}
             .help.xfTrigger &gt; button, .add.xfTrigger &gt; button, .remove.xfTrigger &gt; button, .widgetContainer &gt; button {background-color: transparent; border: none;}
-            .dijitToasterContent{padding: 20px; font-size: 0.8em; border-radius: 5px; background-color: #FFFF66; font-weight: normal; white-space: pre;}
+            .dijitToasterContent{padding: 20px; font-size: 0.8em; border-radius: 5px; background-color: #FFFF66; white-space: pre-line; font-weight: normal;}
             .dijitToasterContainer {border: none; width: 600px;}
             .caseContent {padding-top: 15px;}
             .hint {font-size: smaller;}
@@ -2510,65 +2510,122 @@
                 method="post" id="quest_sub" ref="instance('main_instance')//tei:TEI" replace="all"
                 validate="true">
                 <xf:message level="modal" ev:event="xforms-submit-error"
-                    if="event('error-type')='validation-error'"> 
-VALIDATION ERROR: Please fill in all the fields. Missing fields: 
-<xf:output value="if (//tei:title[@xml:id='resource_title'] = '') then 'Resource reviewed, Title' else ''"/>
-<xf:output value="if (//tei:editor[@xml:id='resource_editors'] = '') then 'Resource reviewed, Editors' else ''"/>
-<xf:output value="if (//tei:date[@xml:id='resource_date_publication'] = '') then 'Resource reviewed, Publication Date' else ''"/>
-<xf:output value="if (//tei:date[@xml:id='resource_date_access'] = '') then 'Resource reviewed, Date of last access' else ''"/>
-<xf:output value="if (//tei:titleStmt//tei:forename = '') then 'Reviewer, First Name' else ''"/>
-<xf:output value="if (//tei:titleStmt//tei:surname = '') then 'Reviewer, Surname' else ''"/>
-<xf:output value="if (//tei:titleStmt//tei:email = '') then 'Reviewer, Email' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'General information, Bibliographic description' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'General information, Contributors' else ''"/>
-<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:resp[.='']) then 'General information, Personnel, Roles' else ''"/>
-<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:name[.='']) then 'General information, Personnel, Names' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='doc_contents']//tei:num/@value = '') then 'Aims, Documentation' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='purpose']//tei:num/@value = '') then 'Aims, Purpose' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='audience']//tei:num/@value = '') then 'Aims, Audience' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='classification']//tei:num/@value = '') then 'Aims, Self-classification' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='research_fields']//tei:num/@value = '') then 'Aims, Field of research' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='subject_free']//tei:num/@value = '') then 'Content, Subject' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='era']//tei:num/@value = '') then 'Content, Era' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='language']//tei:num/@value = '') then 'Content, Language' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_type']//tei:num/@value = '') then 'Content, Types of text' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='add_information']//tei:num/@value = '') then 'Content, Additional information' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='documentation_methods']//tei:num/@value = '') then 'Composition, Documentation' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='selection']//tei:num/@value = '') then 'Composition, Selection' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='size_items']//tei:num/@value = '') then 'Composition, Size (Number of Texts)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='size_tokens']//tei:num/@value = '') then 'Composition, Size (Number of Tokens)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='structure']//tei:num/@value = '') then 'Composition, Structure' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'Composition, Data acquisition and integration (Text recording)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'Composition, Data acquisition and integration (Text integration)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='quality']//tei:num/@value = '') then 'Composition, Quality assurance' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='research_type']//tei:num/@value = '') then 'Composition, Kind of research' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_treatment']//tei:num/@value = '') then 'Data modelling, Text treatment' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='basic_format']//tei:num/@value = '') then 'Data modelling, Basic format' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_type']//tei:num/@value = '') then 'Data modelling, Annotation type' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_integration']//tei:num/@value = '') then 'Data modelling, Annotation integration' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_method']//tei:num/@value = '') then 'Data modelling, Annotation method' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='metadata_type']//tei:num/@value = '') then 'Data modelling, Metadata type' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='metadata_level']//tei:num/@value = '') then 'Data modelling, Metadata level' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='data_schema']//tei:num/@value = '') then 'Data modelling, Schemas' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='standard_format']//tei:num/@value = '') then 'Data modelling, Standards' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='basic_data_accessible']//tei:num/@value = '') then 'Provision, Accessability of the basic data' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='download']//tei:num/@value = '') then 'Provision, Download' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='technical_interfaces']//tei:num/@value = '') then 'Provision, Technical interfaces' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='analytical_data']//tei:num/@value = '') then 'Provision, Analytical data' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='reuse']//tei:num/@value = '') then 'Provision, Reuse' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='interface_provision']//tei:num/@value = '') then 'User interface, Provision' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='technical_infrastructure']//tei:num/@value = '') then 'User interface, Technical infrastructure' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='arrangement']//tei:num/@value = '') then 'User interface, Usability, Arrangement' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='orientation']//tei:num/@value = '') then 'User interface, Usability, Orientation' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='browsing']//tei:num/@value = '') then 'User interface, Access modes, Browsing' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='full_text_search']//tei:num/@value = '') then 'User interface, Access modes, Fulltext search' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='advanced_search']//tei:num/@value = '') then 'User interface, Access modes, Advanced Search' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='structured_access']//tei:num/@value = '') then 'User interface, Access modes, Structured access' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'User interface, Analysis tools' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='visualization']//tei:num/@value = '') then 'User interface, Visualization' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"/>
+                    if="event('error-type')='validation-error'"> VALIDATION ERROR: Please fill in
+                    all the fields. Missing fields: <xf:output
+                        value="if (//tei:title[@xml:id='resource_title'] = '') then 'Resource reviewed, Title' else ''"/>
+                    <xf:output
+                        value="if (//tei:editor[@xml:id='resource_editors'] = '') then 'Resource reviewed, Editors' else ''"/>
+                    <xf:output
+                        value="if (//tei:date[@xml:id='resource_date_publication'] = '') then 'Resource reviewed, Publication Date' else ''"/>
+                    <xf:output
+                        value="if (//tei:date[@xml:id='resource_date_access'] = '') then 'Resource reviewed, Date of last access' else ''"/>
+                    <xf:output
+                        value="if (//tei:titleStmt//tei:forename = '') then 'Reviewer, First Name' else ''"/>
+                    <xf:output
+                        value="if (//tei:titleStmt//tei:surname = '') then 'Reviewer, Surname' else ''"/>
+                    <xf:output
+                        value="if (//tei:titleStmt//tei:email = '') then 'Reviewer, Email' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'General information, Bibliographic description' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'General information, Contributors' else ''"/>
+                    <xf:output
+                        value="if (//tei:respStmt//tei:notesStmt//tei:resp[.='']) then 'General information, Personnel, Roles' else ''"/>
+                    <xf:output
+                        value="if (//tei:respStmt//tei:notesStmt//tei:name[.='']) then 'General information, Personnel, Names' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='doc_contents']//tei:num/@value = '') then 'Aims and content, Documentation' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='purpose']//tei:num/@value = '') then 'Aims and content, Purpose' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='audience']//tei:num/@value = '') then 'Aims and content, Audience' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='classification']//tei:num/@value = '') then 'Aims and content, Self-classification' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='research_fields']//tei:num/@value = '') then 'Aims and content, Field of research' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='subject_free']//tei:num/@value = '') then 'Aims and content, Subject' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='era']//tei:num/@value = '') then 'Aims and content, Era' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='language']//tei:num/@value = '') then 'Aims and content, Language' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_type']//tei:num/@value = '') then 'Aims and content, Types of text' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='add_information']//tei:num/@value = '') then 'Aims and content, Additional information' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='documentation_methods']//tei:num/@value = '') then 'Composition, Documentation' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='selection']//tei:num/@value = '') then 'Composition, Selection' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='size_items']//tei:num/@value = '') then 'Composition, Size (Number of Texts)' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='size_tokens']//tei:num/@value = '') then 'Composition, Size (Number of Tokens)' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='structure']//tei:num/@value = '') then 'Composition, Structure' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'Composition, Data acquisition and integration' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='quality']//tei:num/@value = '') then 'Composition, Quality assurance' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='research_type']//tei:num/@value = '') then 'Composition, Kind of research' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='text_treatment']//tei:num/@value = '') then 'Data modelling, Text treatment' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='basic_format']//tei:num/@value = '') then 'Data modelling, Basic format' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='annotation_type']//tei:num/@value = '') then 'Data modelling, Annotation type' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='annotation_integration']//tei:num/@value = '') then 'Data modelling, Annotation integration' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='annotation_method']//tei:num/@value = '') then 'Data modelling, Annotation method' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='metadata_type']//tei:num/@value = '') then 'Data modelling, Metadata type' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='metadata_level']//tei:num/@value = '') then 'Data modelling, Metadata level' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='data_schema']//tei:num/@value = '') then 'Data modelling, Schemas' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='standard_format']//tei:num/@value = '') then 'Data modelling, Standards' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='basic_data_accessible']//tei:num/@value = '') then 'Provision, Accessability of the basic data' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='download']//tei:num/@value = '') then 'Provision, Download' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='technical_interfaces']//tei:num/@value = '') then 'Provision, Technical interfaces' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='analytical_data']//tei:num/@value = '') then 'Provision, Analytical data' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='reuse']//tei:num/@value = '') then 'Provision, Reuse' else ''"/>
+                    <xf:output
+                        value="if (//tei:category[@xml:id='interface_provision']//tei:num/@value = '') then 'User interface, Provision' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='technical_infrastructure']//tei:num/@value = '') then 'User interface, Technical infrastructure' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='arrangement']//tei:num/@value = '') then 'User interface, Usability, Arrangement' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='orientation']//tei:num/@value = '') then 'User interface, Usability, Orientation' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='browsing']//tei:num/@value = '') then 'User interface, Access modes, Browsing' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='full_text_search']//tei:num/@value = '') then 'User interface, Access modes, Fulltext search' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='advanced_search']//tei:num/@value = '') then 'User interface, Access modes, Advanced Search' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='structured_access']//tei:num/@value = '') then 'User interface, Access modes, Structured access' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'User interface, Analysis tools' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='visualization']//tei:num/@value = '') then 'User interface, Visualization' else ''"/>
+                    <xf:output
+                        value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"
+                    />
                 </xf:message>
             </xf:submission>
         </xf:model>
@@ -2602,11 +2659,9 @@ VALIDATION ERROR: Please fill in all the fields. Missing fields:
                                         <xf:label>Editors:</xf:label>
                                     </xf:input>
                                     <xf:trigger src="icons/help_about.png" class="help">
-                                        <xf:message level="ephemeral">
-Editors: 
-
-Bibliographical description of responsible personnel. Please indicate names as "forename surname".
-                                        </xf:message>
+                                        <xf:message level="ephemeral">Editors Bibliographical
+                                            description of responsible personnel. Please indicate
+                                            names as "forename surname".</xf:message>
                                         <xf:action>
                                             <script type="text/javascript">
                                                 setToasterPosition();
@@ -2616,11 +2671,8 @@ Bibliographical description of responsible personnel. Please indicate names as "
                                 </xf:group>
                                 <xf:input bind="resource_uri_bind">
                                     <xf:label>URI:</xf:label>
-                                    <xf:message ev:event="xforms-invalid" 
-                                        level="ephemeral">
-URI:
-
-Invalid URI. Format should be http://abc.de</xf:message>
+                                    <xf:message ev:event="xforms-invalid" level="ephemeral">URI
+                                        Invalid URI. Format should be http://abc.de</xf:message>
                                     <xf:action ev:event="DOMFocusOut">
                                         <xf:revalidate/>
                                     </xf:action>
@@ -2628,20 +2680,18 @@ Invalid URI. Format should be http://abc.de</xf:message>
                                 <xf:group class="help">
                                     <xf:input bind="resource_date_publication_bind">
                                         <xf:label>Publication Date:</xf:label>
-                                        <xf:message ev:event="xforms-invalid" 
-                                            level="ephemeral">
-Publication Date:
-
-Invalid Date. Format should be either yyyy, yyyyff. or yyyy-yyyy, e.g. 2007 or 2007-2013</xf:message>
+                                        <xf:message ev:event="xforms-invalid" level="ephemeral"
+                                            >Publication Date Invalid Date. Format should be either
+                                            yyyy, yyyyff. or yyyy-yyyy, e.g. 2007 or
+                                            2007-2013</xf:message>
                                         <xf:action ev:event="DOMFocusOut">
                                             <xf:revalidate/>
                                         </xf:action>
                                     </xf:input>
                                     <xf:trigger src="icons/help_about.png" class="help">
-                                        <xf:message level="ephemeral">
-Publication Date:
-
-Format should be either yyyy, yyyyff. or yyyy-yyyy, e.g. 2007 or 2007-2013</xf:message>
+                                        <xf:message level="ephemeral">Publication Date Format should
+                                            be either yyyy, yyyyff. or yyyy-yyyy, e.g. 2007 or
+                                            2007-2013</xf:message>
                                         <xf:action>
                                             <script type="text/javascript">
                                                 setToasterPosition();
@@ -2651,11 +2701,9 @@ Format should be either yyyy, yyyyff. or yyyy-yyyy, e.g. 2007 or 2007-2013</xf:m
                                 </xf:group>
                                 <xf:input bind="resource_date_access_bind">
                                     <xf:label>Date of last access:</xf:label>
-                                    <xf:message ev:event="xforms-invalid" 
-                                        level="ephemeral">
-Date of last access:
-
-Invalid Date. Format should be yyyy-mm-dd</xf:message>
+                                    <xf:message ev:event="xforms-invalid" level="ephemeral">Date of
+                                        last access Invalid Date. Format should be
+                                        yyyy-mm-dd</xf:message>
                                     <xf:action ev:event="DOMFocusOut">
                                         <xf:revalidate/>
                                     </xf:action>
@@ -2692,10 +2740,9 @@ Invalid Date. Format should be yyyy-mm-dd</xf:message>
                                     </xf:input>
                                     <xf:input ref=".//tei:email">
                                         <xf:label>Email:</xf:label>
-                                        <xf:message ev:event="xforms-invalid" level="ephemeral">
-Email:
-
-Invalid Email. Format should be abc@def.gh</xf:message>
+                                        <xf:message ev:event="xforms-invalid" level="ephemeral"
+                                            >Email Invalid Email. Format should be
+                                            abc@def.gh</xf:message>
                                         <xf:action ev:event="DOMFocusOut">
                                             <xf:revalidate/>
                                         </xf:action>
@@ -3116,18 +3163,10 @@ Invalid Email. Format should be abc@def.gh</xf:message>
                                         ref="//tei:category[@xml:id = 'era']/tei:catDesc/tei:ref"/>
                                 </a>
                                 <xf:trigger src="icons/help_about.png" class="help">
-                                    <xf:message level="ephemeral">
-Era:
-
-Classics: before 500 CE.
-
-Medieval: 501 CE until 1500 CE.
-
-Early Modern: 1501 CE until 1800 CE.
-
-Modern: 1801 CE until 1945.
-
-Contemporary: 1945 until today.</xf:message>
+                                    <xf:message level="ephemeral" mediatype="text/html"> Era
+                                        Classics: before 500 CE.<br /> Medieval: 501 CE until 1500
+                                        CE.<br /> Early Modern: 1501 CE until 1800 CE.<br /> Modern:
+                                        1801 CE until 1945.<br /> Contemporary 1945 until today. </xf:message>
                                     <xf:action>
                                         <script type="text/javascript">
                                             setToasterPosition();
@@ -4594,10 +4633,7 @@ Contemporary: 1945 until today.</xf:message>
                                 Validation errors will be shown below as long as there are missing
                                 fields. </p>
                             <xf:group id="validation-check">
-                                <xf:output
-                                    value="if (//tei:title[@xml:id='resource_title'] = '') then 'MISSING: Resource reviewed, Title' else ''"/>
-                                <xf:output
-                                    value="if (//tei:title[@xml:id='resource_editors'] = '') then 'MISSING: Resource reviewed, Editors' else ''"/>
+                               
                                 <xf:output
                                     value="if (//tei:date[@xml:id='resource_date_publication'] = '') then 'MISSING: Resource reviewed, Publication Date' else ''"/>
                                 <xf:output
