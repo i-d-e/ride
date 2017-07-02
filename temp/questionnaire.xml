@@ -4,7 +4,7 @@
         <title>Questionnaire Text Collections | RIDE</title>
         <style type="text/css">
             #formWrapper {font-size: 10pt;}
-            .bf .bfTabContainer {width: 850px !important; height: 1500px !important;}
+            .bf .bfTabContainer {width: 850px !important; height: 2000px !important;}
             .bfTabContainer .xfFullGroup &gt; .xfGroupLabel {display: inline-block;}
             .bfTabContainer table .xfLabel {width: 1em;}
             .bfTabContainer table {margin-top: 20px;}
@@ -54,19 +54,17 @@
                 },2000); */            
                 // Groesse multiselects an Anzahl der options anpassen
                 var sels = document.getElementsByTagName("select");
-                /* <!--
-* /
-                for (var i = 0; i < sels.length; i++) {
+                /* <!-- */ 
+                for (var i=0;i < sels.length;i++){
                     var classAtt1 = sels[i].parentNode.parentNode.parentNode.getAttribute("class");
                     var classAtt2 = sels[i].parentNode.parentNode.getAttribute("class");
-                    if (classAtt1 !== null && classAtt2 !== null) {
-                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1) {
-                            /*//--> */
+                    if (classAtt1 !== null && classAtt2 !== null){
+                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1){
+                        /* --> */
                             var optCount = new Array();
-                            /* <!--
-* /
-                for (var j = 0; j < sels[i].childNodes.length; j++) {
-                    /*//--> */
+                            /* <!-- */ 
+                            for (var j=0;j < sels[i].childNodes.length;j++){
+                            /* --> */
                                 if (sels[i].childNodes[j].nodeType == 1){
                                     optCount.push(sels[i].childNodes[j]);
                                 }
@@ -789,12 +787,12 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                   </category>
-                                                  <category xml:id="metadata">
+                                                  <category xml:id="reuse_metadata">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                   </category>
-                                                  <category xml:id="annotation">
+                                                  <category xml:id="reuse_annotation">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
@@ -1000,7 +998,7 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                   </category>
-                                                </category>
+                                                </category> 
                                                 <category xml:id="annotation_method">
                                                   <catDesc>
                                                   <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
@@ -2021,13 +2019,13 @@
                 nodeset="//tei:category[@xml:id='full_text']//tei:num/@value" type="xs:integer"
                 required="true()"
                 calculate="if (instance('working_instance')//text_integration[contains(.,'full_text')]) then 1 else 0"/>
-            <xf:bind id="metadata_bind" nodeset="//tei:category[@xml:id='metadata']//tei:num/@value"
+            <xf:bind id="reuse_metadata_bind" nodeset="//tei:category[@xml:id='reuse_metadata']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//text_integration[contains(.,'metadata')]) then 1 else 0"/>
-            <xf:bind id="annotation_bind"
-                nodeset="//tei:category[@xml:id='annotation']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//text_integration[contains(.,'reuse_metadata')]) then 1 else 0"/>
+            <xf:bind id="reuse_annotation_bind"
+                nodeset="//tei:category[@xml:id='reuse_annotation']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//text_integration[contains(.,'annotation')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//text_integration[contains(.,'reuse_annotation')]) then 1 else 0"/>
             <xf:bind id="text_integration_other_bind"
                 nodeset="//tei:category[@xml:id='text_integration']//tei:category[@corresp='#other']//tei:num/@value"
                 type="xs:integer" required="true()"
@@ -3599,11 +3597,11 @@
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>Metadata</xf:label>
-                                            <xf:value>metadata</xf:value>
+                                            <xf:value>reuse_metadata</xf:value>
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>Annotations</xf:label>
-                                            <xf:value>annotations</xf:value>
+                                            <xf:value>reuse_annotation</xf:value>
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>other</xf:label>
@@ -3771,126 +3769,123 @@
                                 </xf:input>
                             </xf:group>
                             <xf:group appearance="full">
-                                <xf:label>Annotations</xf:label>
-                                <xf:group appearance="full">
-                                    <xf:label>Annotation type</xf:label>
-                                    <a
-                                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
-                                        target="_new">
-                                        <xf:output
-                                            ref="//tei:category[@xml:id = 'annotation_type']/tei:catDesc/tei:ref"
-                                        />
-                                    </a>
+                                <xf:label>Annotation type</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
+                                    target="_new">
                                     <xf:output
-                                        ref="//tei:category[@xml:id = 'annotation_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                    <xf:select bind="annotation_type_bind" appearance="minimal">
-                                        <xf:item>
-                                            <xf:label>Structurally</xf:label>
-                                            <xf:value>structurally</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>Linguistically</xf:label>
-                                            <xf:value>linguistically</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>Semantically</xf:label>
-                                            <xf:value>semantically</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>text-critically</xf:label>
-                                            <xf:value>text_critically</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>other</xf:label>
-                                            <xf:value>other</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>none</xf:label>
-                                            <xf:value>none</xf:value>
-                                        </xf:item>
-                                    </xf:select>
-                                    <span class="hint">Hold the Ctrl/CMD key to select multiple
-                                        entries.</span>
-                                    <xf:input bind="basic_format_other_free_bind">
-                                        <xf:label>other:</xf:label>
-                                        <xf:hint>choose 'other' above</xf:hint>
-                                    </xf:input>
-                                </xf:group>
-                                <xf:group appearance="full">
-                                    <xf:label>Annotation integration</xf:label>
-                                    <a
-                                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
-                                        target="_new">
-                                        <xf:output
-                                            ref="//tei:category[@xml:id = 'annotation_integration']/tei:catDesc/tei:ref"
-                                        />
-                                    </a>
+                                        ref="//tei:category[@xml:id = 'annotation_type']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'annotation_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select bind="annotation_type_bind" appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>Structurally</xf:label>
+                                        <xf:value>structurally</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Linguistically</xf:label>
+                                        <xf:value>linguistically</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Semantically</xf:label>
+                                        <xf:value>semantically</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>text-critically</xf:label>
+                                        <xf:value>text_critically</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>other</xf:label>
+                                        <xf:value>other</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>none</xf:label>
+                                        <xf:value>none</xf:value>
+                                    </xf:item>
+                                </xf:select>
+                                <span class="hint">Hold the Ctrl/CMD key to select multiple
+                                    entries.</span>
+                                <xf:input bind="annotation_type_other_free_bind">
+                                    <xf:label>other:</xf:label>
+                                    <xf:hint>choose 'other' above</xf:hint>
+                                </xf:input>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Annotation integration</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
+                                    target="_new">
                                     <xf:output
-                                        ref="//tei:category[@xml:id = 'annotation_integration']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                    <xf:select bind="annotation_integration_bind"
-                                        appearance="minimal">
-                                        <xf:item>
-                                            <xf:label>Embedded</xf:label>
-                                            <xf:value>embedded</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>Stand-off</xf:label>
-                                            <xf:value>stand-off</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>other</xf:label>
-                                            <xf:value>other</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>not applicable</xf:label>
-                                            <xf:value>not_applicable</xf:value>
-                                        </xf:item>
-                                    </xf:select>
-                                    <span class="hint">Hold the Ctrl/CMD key to select multiple
-                                        entries.</span>
-                                    <xf:input bind="basic_format_other_free_bind">
-                                        <xf:label>other:</xf:label>
-                                        <xf:hint>choose 'other' above</xf:hint>
-                                    </xf:input>
-                                </xf:group>
-                                <xf:group appearance="full">
-                                    <xf:label>Annotation method</xf:label>
-                                    <a
-                                        href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
-                                        target="_new">
-                                        <xf:output
-                                            ref="//tei:category[@xml:id = 'annotation_method']/tei:catDesc/tei:ref"
-                                        />
-                                    </a>
+                                        ref="//tei:category[@xml:id = 'annotation_integration']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'annotation_integration']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select bind="annotation_integration_bind"
+                                    appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>Embedded</xf:label>
+                                        <xf:value>embedded</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Stand-off</xf:label>
+                                        <xf:value>stand-off</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>other</xf:label>
+                                        <xf:value>other</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>not applicable</xf:label>
+                                        <xf:value>not_applicable</xf:value>
+                                    </xf:item>
+                                </xf:select>
+                                <span class="hint">Hold the Ctrl/CMD key to select multiple
+                                    entries.</span>
+                                <xf:input bind="basic_format_other_free_bind">
+                                    <xf:label>other:</xf:label>
+                                    <xf:hint>choose 'other' above</xf:hint>
+                                </xf:input>
+                            </xf:group>
+                            <xf:group appearance="full">
+                                <xf:label>Annotation method</xf:label>
+                                <a
+                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K3.2.2"
+                                    target="_new">
                                     <xf:output
-                                        ref="//tei:category[@xml:id = 'annotation_method']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                    <xf:select1 bind="annotation_method_bind" appearance="minimal">
-                                        <xf:item>
-                                            <xf:label>Manually</xf:label>
-                                            <xf:value>manually</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>Semi-automatically</xf:label>
-                                            <xf:value>semi_automatically</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>Fully automatically</xf:label>
-                                            <xf:value>fully_automatically</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>unknown</xf:label>
-                                            <xf:value>unknown</xf:value>
-                                        </xf:item>
-                                        <xf:item>
-                                            <xf:label>not applicable</xf:label>
-                                            <xf:value>not_applicable</xf:value>
-                                        </xf:item>
-                                    </xf:select1>
-                                    <xf:input bind="basic_format_other_free_bind">
-                                        <xf:label>other:</xf:label>
-                                        <xf:hint>choose 'other' above</xf:hint>
-                                    </xf:input>
-                                </xf:group>
+                                        ref="//tei:category[@xml:id = 'annotation_method']/tei:catDesc/tei:ref"
+                                    />
+                                </a>
+                                <xf:output
+                                    ref="//tei:category[@xml:id = 'annotation_method']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                <xf:select1 bind="annotation_method_bind" appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>Manually</xf:label>
+                                        <xf:value>manually</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Semi-automatically</xf:label>
+                                        <xf:value>semi_automatically</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Fully automatically</xf:label>
+                                        <xf:value>fully_automatically</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>unknown</xf:label>
+                                        <xf:value>unknown</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>not applicable</xf:label>
+                                        <xf:value>not_applicable</xf:value>
+                                    </xf:item>
+                                </xf:select1>
+                                <xf:input bind="basic_format_other_free_bind">
+                                    <xf:label>other:</xf:label>
+                                    <xf:hint>choose 'other' above</xf:hint>
+                                </xf:input>
                             </xf:group>
                             <xf:group appearance="full">
                                 <xf:label>Metadata</xf:label>
@@ -4260,8 +4255,8 @@
                                     </xf:item>
                                 </xf:select1>
                             </xf:group>
-                            <p>If the text collection does not have a dedicated user interface the
-                                following questions can be skipped!</p>
+                            <p><em>If the text collection does not have a dedicated user interface the
+                                following questions can be skipped!</em></p>
                             <xf:group appearance="full">
                                 <xf:label>Technical infrastructure</xf:label>
                                 <a
