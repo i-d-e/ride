@@ -41,44 +41,6 @@
             h1 {font-size: 35px; margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(85,85,85);}
             body {background: none;}
         </style>
-        <script type="text/javascript">
-            var mouse = {x: 0, y: 0};
-            document.addEventListener('mousemove', function(e){ 
-                    mouse.x = e.clientX || e.pageX; 
-                    mouse.y = e.clientY || e.pageY; 
-                }, false);
-            function setToasterPosition(){
-                    document.getElementById("betterformMessageToaster").style.top=mouse.y+"px";
-                }
-            window.onload=function(){
-                /* setTimeout(function(){
-                    setToasterPosition();
-                },2000); */            
-                // Groesse multiselects an Anzahl der options anpassen
-                var sels = document.getElementsByTagName("select");
-                /* <!-- */ 
-                for (var i=0;i < sels.length;i++){
-                    var classAtt1 = sels[i].parentNode.parentNode.parentNode.getAttribute("class");
-                    var classAtt2 = sels[i].parentNode.parentNode.getAttribute("class");
-                    if (classAtt1 !== null && classAtt2 !== null){
-                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1){
-                        /* --> */
-                            var optCount = new Array();
-                            /* <!-- */ 
-                            for (var j=0;j < sels[i].childNodes.length;j++){
-                            /* --> */
-                                if (sels[i].childNodes[j].nodeType == 1){
-                                    optCount.push(sels[i].childNodes[j]);
-                                }
-                                else {}
-                            }
-                            sels[i].setAttribute("size", optCount.length);
-                        }
-                        else {}
-                    }
-                }
-            };
-        </script>
         <xf:model id="ride_questionnaire">
             <xf:instance id="main_instance">
                 <wrap xmlns="">
@@ -1558,6 +1520,7 @@
                         <size_items></size_items>
                         <size_tokens></size_tokens>
                         <text_integration></text_integration>
+                        <structure></structure>
                         <research_type></research_type>
                         <text_treatment></text_treatment>
                         <basic_format></basic_format>
@@ -2512,9 +2475,13 @@
             <xf:submission resource="http://ide-vm.uni-koeln.de:7070/exist/apps/ride-tc/quest.xq"
                 method="post" id="quest_sub" ref="instance('main_instance')//tei:TEI" replace="all"
                 validate="true">
-                <xf:message level="modal" ev:event="xforms-submit-error"
-                    if="event('error-type')='validation-error'"> 
-VALIDATION ERROR: Please fill in all the fields. Missing fields: 
+<xf:message level="modal" ev:event="xforms-submit-error"
+if="event('error-type')='validation-error'"> 
+VALIDATION ERROR: 
+Please fill in all the fields.
+
+Missing fields:
+
 <xf:output value="if (//tei:title[@xml:id='resource_title'] = '') then 'Resource reviewed, Title' else ''"/>
 <xf:output value="if (//tei:editor[@xml:id='resource_editors'] = '') then 'Resource reviewed, Editors' else ''"/>
 <xf:output value="if (//tei:date[@xml:id='resource_date_publication'] = '') then 'Resource reviewed, Publication Date' else ''"/>
@@ -2525,14 +2492,14 @@ VALIDATION ERROR: Please fill in all the fields. Missing fields:
 <xf:output value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'General information, Bibliographic description' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'General information, Contributors' else ''"/>
 <xf:output value="if (//tei:notesStmt//tei:respStmt/tei:resp = '') then 'General information, Personnel, Roles' else ''"/>
-<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:name = '') then 'General information, Personnel, Names' else ''"/>
+<xf:output value="if (//tei:notesStmt//tei:respStmt//tei:name = '') then 'General information, Personnel, Names' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='doc_contents']//tei:num/@value = '') then 'Aims, Documentation' else ''"/>
 <xf:output value="if (instance('working_instance')//purpose = '') then 'Aims, Purpose' else ''"/>
 <xf:output value="if (instance('working_instance')//audience = '') then 'Aims, Audience' else ''"/>
 <xf:output value="if (instance('working_instance')//classification = '') then 'Aims, Self-classification' else ''"/>
 <xf:output value="if (instance('working_instance')//research_fields = '') then 'Aims, Field of research' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='subject_free']//tei:num/@value = '') then 'Content, Subject' else ''"/>
+<xf:output value="if (//tei:category[@xml:id='subject_free']//tei:gloss = '') then 'Content, Subject' else ''"/>
 <xf:output value="if (instance('working_instance')//era = '') then 'Content, Era' else ''"/>
 <xf:output value="if (instance('working_instance')//language = '') then 'Content, Language' else ''"/>
 <xf:output value="if (instance('working_instance')//text_type = '') then 'Content, Types of text' else ''"/>
@@ -2572,8 +2539,11 @@ VALIDATION ERROR: Please fill in all the fields. Missing fields:
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and instance('working_instance')//visualization = '') then 'User interface, Visualization' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"/>
-                </xf:message>
+</xf:message>
             </xf:submission>
+            <xf:action ev:event="xforms-ready">
+                <xf:message level="ephemeral"></xf:message>
+            </xf:action>
         </xf:model>
     </head>
     <body>
@@ -4632,7 +4602,7 @@ Contemporary: 1945 until today.</xf:message>
                                 <xf:output
                                     value="if (instance('working_instance')//research_fields = '') then 'MISSING: Aims, Field of research' else ''"/>
                                 <xf:output
-                                    value="if (//tei:category[@xml:id='subject_free']//tei:num/@value = '') then 'MISSING: Content, Subject' else ''"/>
+                                    value="if (//tei:category[@xml:id='subject_free']//tei:gloss = '') then 'MISSING: Content, Subject' else ''"/>
                                 <xf:output
                                     value="if (instance('working_instance')//era = '') then 'MISSING: Content, Era' else ''"/>
                                 <xf:output
@@ -4737,5 +4707,43 @@ Contemporary: 1945 until today.</xf:message>
                 </xf:case>
             </xf:switch>
         </xf:group>
+        <script type="text/javascript">
+            var mouse = {x: 0, y: 0};
+            document.addEventListener('mousemove', function(e){ 
+                    mouse.x = e.clientX || e.pageX; 
+                    mouse.y = e.clientY || e.pageY; 
+                }, false);
+            function setToasterPosition(){
+                    document.getElementById("betterformMessageToaster").style.top=mouse.y+"px";
+                }
+            require(["dojo/ready"], function(ready){
+                ready(function(){
+                    setToasterPosition();
+                });
+                // Groesse multiselects an Anzahl der options anpassen
+                var sels = document.getElementsByTagName("select");
+                /* <!-- */ 
+                for (var i=0;i < sels.length;i++){
+                    var classAtt1 = sels[i].parentNode.parentNode.parentNode.getAttribute("class");
+                    var classAtt2 = sels[i].parentNode.parentNode.getAttribute("class");
+                    if (classAtt1 !== null && classAtt2 !== null){
+                        if (classAtt1.indexOf("xfRepeatItem") == -1 && classAtt2.indexOf("xfRepeatItem") == -1){
+                        /* --> */
+                            var optCount = new Array();
+                            /* <!-- */ 
+                            for (var j=0;j < sels[i].childNodes.length;j++){
+                            /* --> */
+                                if (sels[i].childNodes[j].nodeType == 1){
+                                    optCount.push(sels[i].childNodes[j]);
+                                }
+                                else {}
+                            }
+                            sels[i].setAttribute("size", optCount.length);
+                        }
+                        else {}
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
