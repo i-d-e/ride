@@ -476,7 +476,7 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="portugese">
+                                                <category xml:id="portuguese">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
@@ -756,7 +756,7 @@
                                                   </category>
                                                 </category>
                                             </category>
-                                            <category xml:id="organization">
+                                            <category xml:id="structure">
                                                 <catDesc>
                                                   <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
                                                 </catDesc>
@@ -2255,10 +2255,10 @@
                 type="xs:string"
                 calculate="if (instance('working_instance')//metadata_level[contains(., 'other')]) then . else ''"/>
             <!-- readonly="if (instance('working_instance')//metadata_level[contains(.,'other')]) then false() else true()"  -->
-            <xf:bind id="metadata_level_non_bind"
-                nodeset="//tei:category[@xml:id='metadata_level']//tei:category[@corresp='#none']//tei:num/@value"
+            <xf:bind id="metadata_level_not_applicable_bind"
+                nodeset="//tei:category[@xml:id='metadata_level']//tei:category[@corresp='#not_applicable']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//metadata_level[contains(.,'none')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//metadata_level[contains(.,'not_applicable')]) then 1 else 0"/>
             <!-- data modeling, data schema -->
             <xf:bind id="data_schema_bind" nodeset="instance('working_instance')//data_schema"
                 type="xs:string" required="true()"/>
@@ -2290,6 +2290,9 @@
             <xf:bind id="xces_bind" nodeset="//tei:category[@xml:id='xces']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//standard_format[contains(.,'xces')]) then 1 else 0"/>
+            <xf:bind id="dublin_core_bind" nodeset="//tei:category[@xml:id='dublin_core']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//standard_format[contains(.,'dublin_core')]) then 1 else 0"/>
             <xf:bind id="edm_bind" nodeset="//tei:category[@xml:id='edm']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//standard_format[contains(.,'edm')]) then 1 else 0"/>
@@ -2521,54 +2524,54 @@ VALIDATION ERROR: Please fill in all the fields. Missing fields:
 <xf:output value="if (//tei:titleStmt//tei:email = '') then 'Reviewer, Email' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='bibl_desc']//tei:num/@value = '') then 'General information, Bibliographic description' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='contributors']//tei:num/@value = '') then 'General information, Contributors' else ''"/>
-<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:resp[.='']) then 'General information, Personnel, Roles' else ''"/>
-<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:name[.='']) then 'General information, Personnel, Names' else ''"/>
+<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:resp = '') then 'General information, Personnel, Roles' else ''"/>
+<xf:output value="if (//tei:notesStmt//tei:respStmt/tei:name = '') then 'General information, Personnel, Names' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='doc_contents']//tei:num/@value = '') then 'Aims, Documentation' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='purpose']//tei:num/@value = '') then 'Aims, Purpose' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='audience']//tei:num/@value = '') then 'Aims, Audience' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='classification']//tei:num/@value = '') then 'Aims, Self-classification' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='research_fields']//tei:num/@value = '') then 'Aims, Field of research' else ''"/>
+<xf:output value="if (instance('working_instance')//purpose = '') then 'Aims, Purpose' else ''"/>
+<xf:output value="if (instance('working_instance')//audience = '') then 'Aims, Audience' else ''"/>
+<xf:output value="if (instance('working_instance')//classification = '') then 'Aims, Self-classification' else ''"/>
+<xf:output value="if (instance('working_instance')//research_fields = '') then 'Aims, Field of research' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='subject_free']//tei:num/@value = '') then 'Content, Subject' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='era']//tei:num/@value = '') then 'Content, Era' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='language']//tei:num/@value = '') then 'Content, Language' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_type']//tei:num/@value = '') then 'Content, Types of text' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='add_information']//tei:num/@value = '') then 'Content, Additional information' else ''"/>
+<xf:output value="if (instance('working_instance')//era = '') then 'Content, Era' else ''"/>
+<xf:output value="if (instance('working_instance')//language = '') then 'Content, Language' else ''"/>
+<xf:output value="if (instance('working_instance')//text_type = '') then 'Content, Types of text' else ''"/>
+<xf:output value="if (instance('working_instance')//add_information = '') then 'Content, Additional information' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='documentation_methods']//tei:num/@value = '') then 'Composition, Documentation' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='selection']//tei:num/@value = '') then 'Composition, Selection' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='size_items']//tei:num/@value = '') then 'Composition, Size (Number of Texts)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='size_tokens']//tei:num/@value = '') then 'Composition, Size (Number of Tokens)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='structure']//tei:num/@value = '') then 'Composition, Structure' else ''"/>
+<xf:output value="if (instance('working_instance')//selection = '') then 'Composition, Selection' else ''"/>
+<xf:output value="if (instance('working_instance')//size_items = '') then 'Composition, Size (Number of Texts)' else ''"/>
+<xf:output value="if (instance('working_instance')//size_tokens = '') then 'Composition, Size (Number of Tokens)' else ''"/>
+<xf:output value="if (instance('working_instance')//structure = '') then 'Composition, Structure' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'Composition, Data acquisition and integration (Text recording)' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'Composition, Data acquisition and integration (Text integration)' else ''"/>
+<xf:output value="if (instance('working_instance')//text_integration = '') then 'Composition, Data acquisition and integration (Text integration)' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='quality']//tei:num/@value = '') then 'Composition, Quality assurance' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='research_type']//tei:num/@value = '') then 'Composition, Kind of research' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='text_treatment']//tei:num/@value = '') then 'Data modelling, Text treatment' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='basic_format']//tei:num/@value = '') then 'Data modelling, Basic format' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_type']//tei:num/@value = '') then 'Data modelling, Annotation type' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_integration']//tei:num/@value = '') then 'Data modelling, Annotation integration' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='annotation_method']//tei:num/@value = '') then 'Data modelling, Annotation method' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='metadata_type']//tei:num/@value = '') then 'Data modelling, Metadata type' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='metadata_level']//tei:num/@value = '') then 'Data modelling, Metadata level' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='data_schema']//tei:num/@value = '') then 'Data modelling, Schemas' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='standard_format']//tei:num/@value = '') then 'Data modelling, Standards' else ''"/>
+<xf:output value="if (instance('working_instance')//research_type = '') then 'Composition, Kind of research' else ''"/>
+<xf:output value="if (instance('working_instance')//text_treatment = '') then 'Data modelling, Text treatment' else ''"/>
+<xf:output value="if (instance('working_instance')//basic_format = '') then 'Data modelling, Basic format' else ''"/>
+<xf:output value="if (instance('working_instance')//annotation_type = '') then 'Data modelling, Annotation type' else ''"/>
+<xf:output value="if (instance('working_instance')//annotation_integration = '') then 'Data modelling, Annotation integration' else ''"/>
+<xf:output value="if (instance('working_instance')//annotation_method = '') then 'Data modelling, Annotation method' else ''"/>
+<xf:output value="if (instance('working_instance')//metadata_type = '') then 'Data modelling, Metadata type' else ''"/>
+<xf:output value="if (instance('working_instance')//metadata_level = '') then 'Data modelling, Metadata level' else ''"/>
+<xf:output value="if (instance('working_instance')//data_schema = '') then 'Data modelling, Schemas' else ''"/>
+<xf:output value="if (instance('working_instance')//standard_format = '') then 'Data modelling, Standards' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='basic_data_accessible']//tei:num/@value = '') then 'Provision, Accessability of the basic data' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='download']//tei:num/@value = '') then 'Provision, Download' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='technical_interfaces']//tei:num/@value = '') then 'Provision, Technical interfaces' else ''"/>
+<xf:output value="if (instance('working_instance')//technical_interfaces = '') then 'Provision, Technical interfaces' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='analytical_data']//tei:num/@value = '') then 'Provision, Analytical data' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='reuse']//tei:num/@value = '') then 'Provision, Reuse' else ''"/>
-<xf:output value="if (//tei:category[@xml:id='interface_provision']//tei:num/@value = '') then 'User interface, Provision' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='technical_infrastructure']//tei:num/@value = '') then 'User interface, Technical infrastructure' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='arrangement']//tei:num/@value = '') then 'User interface, Usability, Arrangement' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='orientation']//tei:num/@value = '') then 'User interface, Usability, Orientation' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='browsing']//tei:num/@value = '') then 'User interface, Access modes, Browsing' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='full_text_search']//tei:num/@value = '') then 'User interface, Access modes, Fulltext search' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='advanced_search']//tei:num/@value = '') then 'User interface, Access modes, Advanced Search' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='structured_access']//tei:num/@value = '') then 'User interface, Access modes, Structured access' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'User interface, Analysis tools' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='visualization']//tei:num/@value = '') then 'User interface, Visualization' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.='yes'] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision = '') then 'User interface, Provision' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and instance('working_instance')//technical_infrastructure = '') then 'User interface, Technical infrastructure' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='arrangement']//tei:num/@value = '') then 'User interface, Usability, Arrangement' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='orientation']//tei:num/@value = '') then 'User interface, Usability, Orientation' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='browsing']//tei:num/@value = '') then 'User interface, Access modes, Browsing' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='full_text_search']//tei:num/@value = '') then 'User interface, Access modes, Fulltext search' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='advanced_search']//tei:num/@value = '') then 'User interface, Access modes, Advanced Search' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='structured_access']//tei:num/@value = '') then 'User interface, Access modes, Structured access' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'User interface, Analysis tools' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and instance('working_instance')//visualization = '') then 'User interface, Visualization' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"/>
                 </xf:message>
             </xf:submission>
         </xf:model>
@@ -3234,8 +3237,8 @@ Contemporary: 1945 until today.</xf:message>
                                         <xf:value>polish</xf:value>
                                     </xf:item>
                                     <xf:item>
-                                        <xf:label>Portugese</xf:label>
-                                        <xf:value>portugese</xf:value>
+                                        <xf:label>Portuguese</xf:label>
+                                        <xf:value>portuguese</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Russian</xf:label>
@@ -4651,7 +4654,7 @@ Contemporary: 1945 until today.</xf:message>
                                 <xf:output
                                     value="if (//tei:category[@xml:id='text_recording']//tei:num/@value = '') then 'MISSING: Composition, Data acquisition and integration (Text recording)' else ''"/>
                                 <xf:output
-                                    value="if (//tei:category[@xml:id='text_integration']//tei:num/@value = '') then 'MISSING: Composition, Data acquisition and integration (Text integration)' else ''"/>
+                                    value="if (instance('working_instance')//text_integration = '') then 'MISSING: Composition, Data acquisition and integration (Text integration)' else ''"/>
                                 <xf:output
                                     value="if (//tei:category[@xml:id='quality']//tei:num/@value = '') then 'MISSING: Composition, Quality assurance' else ''"/>
                                 <xf:output
