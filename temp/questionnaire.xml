@@ -1945,7 +1945,7 @@
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//language[contains(.,'other')]) then 1 else 0"/>
             <xf:bind id="language_other_free_bind"
-                nodeset="//tei:category[@xml:id='language']//tei:category[@corresp='#free']//tei:gloss"
+                nodeset="//tei:category[@xml:id='language']//tei:category[not(@xml:id)][@corresp='#free']//tei:gloss"
                 type="xs:string"
                 calculate="if (instance('working_instance')//language[contains(., 'other')]) then . else ''"/>
             <!-- readonly="if (instance('working_instance')//language[contains(.,'other')]) then false() else true()" -->
@@ -3069,7 +3069,6 @@ Invalid Email. Format should be abc@def.gh</xf:message>
                                     <span>Please indicate the involved personnel by their
                                             <strong>roles</strong> and 
                                          <strong>name</strong> (forename surname).</span>
-                                    <br />
                                     <xf:trigger src="icons/help_about.png" class="help">
                                         <xf:message level="ephemeral">
 Personnel: 
