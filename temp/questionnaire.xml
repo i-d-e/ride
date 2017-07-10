@@ -186,28 +186,6 @@
                                                   </category>
                                                 </category>
                                             </category>
-                                            <category xml:id="audience">
-                                                <catDesc>
-                                                  <ref target="#K2.4">cf. Catalogue 2.4</ref>
-                                                </catDesc>
-                                                <catDesc>What is the text collection’s target
-                                                  audience?</catDesc>
-                                                <category xml:id="scholars">
-                                                  <catDesc>
-                                                  <num type="boolean" value=""/>
-                                                  </catDesc>
-                                                </category>
-                                                <category xml:id="students">
-                                                  <catDesc>
-                                                  <num type="boolean" value=""/>
-                                                  </catDesc>
-                                                </category>
-                                                <category xml:id="interested_public">
-                                                  <catDesc>
-                                                  <num type="boolean" value=""/>
-                                                  </catDesc>
-                                                </category>
-                                            </category>
                                             <category xml:id="classification">
                                                 <catDesc>
                                                   <ref target="#K2.3">cf. Catalogue 2.3</ref>
@@ -471,6 +449,9 @@
                                                   <gloss/>
                                                   </category>
                                                 </category>
+                                                <category xml:id="language_note" corresp="#free">
+                                                    <gloss/>
+                                                </category>
                                             </category>
                                             <category xml:id="text_type">
                                                 <catDesc>
@@ -612,7 +593,7 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="selection_epoche">
+                                                <category xml:id="selection_epoch">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
@@ -816,8 +797,12 @@
                                                 <catDesc>
                                                   <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
                                                 </catDesc>
-                                                <catDesc>How does the text collection deal with the
-                                                  texts that it is built up of?</catDesc>
+                                                <catDesc>How are the textual sources represented in the digital collection?</catDesc>
+                                                <category xml:id="normalized_transcription">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
+                                                </category>
                                                 <category xml:id="orthographic_transcription">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
@@ -832,6 +817,11 @@
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
+                                                </category>
+                                                <category xml:id="transliteration">
+                                                    <catDesc>
+                                                        <num type="boolean" value=""/>
+                                                    </catDesc>
                                                 </category>
                                                 <category xml:id="edited_text">
                                                   <catDesc>
@@ -1423,7 +1413,7 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                   </category>
-                                                  <category xml:id="analysis_personalization">
+                                                  <category xml:id="analysis_customization">
                                                   <catDesc>
                                                   <ref target="#K5.5">cf. Catalogue 5.5</ref>
                                                   </catDesc>
@@ -1689,7 +1679,6 @@
                 <wrap xmlns="">
                     <fields>
                         <purpose></purpose>
-                        <audience></audience>
                         <classification></classification>
                         <research_fields></research_fields>
                         <era></era>
@@ -1782,19 +1771,6 @@
                 type="xs:string"
                 calculate="if (instance('working_instance')//purpose[contains(., 'other')]) then . else ''"/>
             <!-- readonly="if (instance('working_instance')//purpose[contains(.,'other')]) then false() else true()" -->
-            <!-- audience -->
-            <xf:bind id="audience_bind" nodeset="instance('working_instance')//audience"
-                type="xs:string" required="true()"/>
-            <xf:bind id="scholars_bind" nodeset="//tei:category[@xml:id='scholars']//tei:num/@value"
-                type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//audience[contains(.,'scholars')]) then 1 else 0"/>
-            <xf:bind id="students_bind" nodeset="//tei:category[@xml:id='students']//tei:num/@value"
-                type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//audience[contains(.,'students')]) then 1 else 0"/>
-            <xf:bind id="interested_public_bind"
-                nodeset="//tei:category[@xml:id='interested_public']//tei:num/@value"
-                type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//audience[contains(.,'interested_public')]) then 1 else 0"/>
             <!-- classification -->
             <xf:bind id="classification_bind" nodeset="instance('working_instance')//classification"
                 type="xs:string" required="true()"/>
@@ -1973,6 +1949,9 @@
                 type="xs:string"
                 calculate="if (instance('working_instance')//language[contains(., 'other')]) then . else ''"/>
             <!-- readonly="if (instance('working_instance')//language[contains(.,'other')]) then false() else true()" -->
+            <xf:bind id="language_note_free_bind"
+                nodeset="//tei:category[@xml:id='language']//tei:category[@xml:id='language_note'][@corresp='#free']//tei:gloss"
+                type="xs:string"/>
             <!-- text type -->
             <xf:bind id="text_type_bind" nodeset="instance('working_instance')//text_type"
                 type="xs:string" required="true()"/>
@@ -2075,10 +2054,10 @@
                 nodeset="//tei:category[@xml:id='selection_country']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//selection[contains(.,'selection_country')]) then 1 else 0"/>
-            <xf:bind id="selection_epoche_bind"
-                nodeset="//tei:category[@xml:id='selection_epoche']//tei:num/@value"
+            <xf:bind id="selection_epoch_bind"
+                nodeset="//tei:category[@xml:id='selection_epoch']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//selection[contains(.,'selection_epoche')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//selection[contains(.,'selection_epoch')]) then 1 else 0"/>
             <xf:bind id="selection_genre_bind"
                 nodeset="//tei:category[@xml:id='selection_genre']//tei:num/@value"
                 type="xs:integer" required="true()"
@@ -2211,6 +2190,10 @@
             <!-- data modeling, text treatment -->
             <xf:bind id="text_treatment_bind" nodeset="instance('working_instance')//text_treatment"
                 type="xs:string" required="true()"/>
+            <xf:bind id="normalized_transcription_bind"
+                nodeset="//tei:category[@xml:id='normalized_transcription']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'normalized_transcription')]) then 1 else 0"/>
             <xf:bind id="orthographic_transcription_bind"
                 nodeset="//tei:category[@xml:id='orthographic_transcription']//tei:num/@value"
                 type="xs:integer" required="true()"
@@ -2223,6 +2206,10 @@
                 nodeset="//tei:category[@xml:id='diplomatic_transcription']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//text_treatment[contains(.,'diplomatic_transcription')]) then 1 else 0"/>
+            <xf:bind id="transliteration_bind"
+                nodeset="//tei:category[@xml:id='transliteration']//tei:num/@value"
+                type="xs:integer" required="true()"
+                calculate="if (instance('working_instance')//text_treatment[contains(.,'transliteration')]) then 1 else 0"/>
             <xf:bind id="edited_text_bind"
                 nodeset="//tei:category[@xml:id='edited_text']//tei:num/@value" type="xs:integer"
                 required="true()"
@@ -2608,8 +2595,8 @@
             <xf:bind id="analysis_tools_bind"
                 nodeset="//tei:category[@xml:id='analysis_tools']//tei:num/@value" type="xs:integer"
                 required="if(instance('working_instance')//interface_provision[.='no']) then false() else true()"/>
-            <xf:bind id="analysis_personalization_bind"
-                nodeset="//tei:category[@xml:id='analysis_personalization']//tei:num/@value"
+            <xf:bind id="analysis_customization_bind"
+                nodeset="//tei:category[@xml:id='analysis_customization']//tei:num/@value"
                 type="xs:integer"
                 required="if(instance('working_instance')//interface_provision[.='no']) then false() else true()"/>
             <!-- user interface, visualization -->
@@ -2781,7 +2768,6 @@ Missing fields:
 <xf:output value="if (//tei:category[@xml:id='contacts']//tei:num/@value = '') then 'General information, Contacts' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='doc_contents']//tei:num/@value = '') then 'Aims, Documentation' else ''"/>
 <xf:output value="if (instance('working_instance')//purpose = '') then 'Aims, Purpose' else ''"/>
-<xf:output value="if (instance('working_instance')//audience = '') then 'Aims, Audience' else ''"/>
 <xf:output value="if (instance('working_instance')//classification = '') then 'Aims, Self-classification' else ''"/>
 <xf:output value="if (instance('working_instance')//research_fields = '') then 'Aims, Field of research' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='subject_free']//tei:gloss = '') then 'Content, Subject' else ''"/>
@@ -2821,7 +2807,7 @@ Missing fields:
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='advanced_search']//tei:num/@value = '') then 'User interface, Access modes, Advanced Search' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='structured_access']//tei:num/@value = '') then 'User interface, Access modes, Structured access' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'User interface, Analysis tools' else ''"/>
-<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
+<xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_customization']//tei:num/@value = '') then 'User interface, Analysis personalization' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and instance('working_instance')//visualization = '') then 'User interface, Visualization' else ''"/>
 <xf:output value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='personalization']//tei:num/@value = '') then 'User interface, Personalization' else ''"/>
 <xf:output value="if (//tei:category[@xml:id='documentation_project']//tei:num/@value = '') then 'Preservation, Documentation' else ''"/>
@@ -3080,13 +3066,23 @@ Invalid Email. Format should be abc@def.gh</xf:message>
                                     <xf:label>Personnel</xf:label>
                                     <br />
                                     <br />
-                                    <span>Please indicate the involved personnel by
-                                            <strong>name</strong> (forename surname) and their
-                                        respective <strong>roles</strong>.</span>
+                                    <span>Please indicate the involved personnel by their
+                                            <strong>roles</strong> and 
+                                         <strong>name</strong> (forename surname).</span>
                                     <br />
+                                    <xf:trigger src="icons/help_about.png" class="help">
+                                        <xf:message level="ephemeral">
+Personnel: 
+                                            
+Please create a new entry for each person. Choose 'Contributor' if no other role is applicable. 
+                                        </xf:message>
+                                        <xf:action>
+                                            <script type="text/javascript">
+                                                setToasterPosition();
+                                            </script>
+                                        </xf:action>
+                                    </xf:trigger>
                                     <br />
-                                    <span>Choose 'Contributor' if no other role is
-                                        applicable.</span>
                                     <br />
                                     <xf:trigger src="icons/plus.png" class="add">
                                         <xf:insert nodeset="//tei:notesStmt//tei:respStmt"
@@ -3190,6 +3186,18 @@ Invalid Email. Format should be abc@def.gh</xf:message>
                                         ref="//tei:category[@xml:id = 'purpose']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Purpose: 
+                                        
+If the purpose of the text collection is not stated explicitly, please answer according to your own impression. 
+                                    </xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                                setToasterPosition();
+                                            </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'purpose']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="purpose_bind" appearance="minimal">
@@ -3216,34 +3224,6 @@ Invalid Email. Format should be abc@def.gh</xf:message>
                                     <xf:label>other:</xf:label>
                                     <xf:hint>choose 'other' above</xf:hint>
                                 </xf:input>
-                            </xf:group>
-                            <xf:group appearance="full">
-                                <xf:label>Audience</xf:label>
-                                <a
-                                    href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K2.4"
-                                    target="_new">
-                                    <xf:output
-                                        ref="//tei:category[@xml:id = 'audience']/tei:catDesc/tei:ref"
-                                    />
-                                </a>
-                                <xf:output
-                                    ref="//tei:category[@xml:id = 'audience']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                <xf:select bind="audience_bind" appearance="minimal">
-                                    <xf:item>
-                                        <xf:label>Scholars</xf:label>
-                                        <xf:value>scholars</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Students</xf:label>
-                                        <xf:value>students</xf:value>
-                                    </xf:item>
-                                    <xf:item>
-                                        <xf:label>Interested public</xf:label>
-                                        <xf:value>interested_public</xf:value>
-                                    </xf:item>
-                                </xf:select>
-                                <span class="hint">Hold the Ctrl/CMD key to select multiple
-                                    entries.</span>
                             </xf:group>
                             <xf:group appearance="full">
                                 <xf:label>Self-classification</xf:label>
@@ -3437,6 +3417,17 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'language']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Language:
+
+Please choose the language name(s) that correspond(s) best to the language(s) of the texts, e.g. for Old English choose English; for Mexican Spanish choose Spanish. Choose ‘other’ if none of the given language names matches the language(s) in question. If you wish to specify the language(s) further, you can give an additional explanation in the ‘note’ field.</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'language']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="language_bind" appearance="minimal">
@@ -3531,6 +3522,9 @@ Contemporary: 1945 until today.</xf:message>
                                     <xf:label>other:</xf:label>
                                     <xf:hint>choose 'other' above</xf:hint>
                                 </xf:input>
+                                <xf:input bind="language_note_free_bind">
+                                    <xf:label>note:</xf:label>
+                                </xf:input>
                             </xf:group>
                             <xf:group appearance="full">
                                 <xf:label>Types of text</xf:label>
@@ -3541,6 +3535,34 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'text_type']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Types of text:
+                                        
+Literary works: artistic creations like poems, novels, plays, transmitted in one or several documents.
+
+Private documents (letters, diaries...): personal or family documents or papers.
+
+Essays: formal or informal, argumentative or reflective writings.
+
+Newspaper/journal articles: articles discussing recent news of general interest or a specific topic, published in a newspaper or journal.
+
+Charters: texts documenting a legal fact by using a special form supporting its validity, e.g. the Magna Carta.
+
+Files/records: classified collections of documents, e.g. business and trial records, personnel and administration files.
+
+Protocols: written records of meetings.
+
+Scientific papers: (previously published) scientific literature, e.g. articles, monographs or reference works.
+
+Speech transcripts: written records of speech, transcribed orthographically or phonetically, for example.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'text_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="text_type_bind" appearance="minimal">
@@ -3557,7 +3579,7 @@ Contemporary: 1945 until today.</xf:message>
                                         <xf:value>essays</xf:value>
                                     </xf:item>
                                     <xf:item>
-                                        <xf:label>Newspaper articles</xf:label>
+                                        <xf:label>Newspaper/journal articles</xf:label>
                                         <xf:value>newspaper_articles</xf:value>
                                     </xf:item>
                                     <xf:item>
@@ -3601,6 +3623,21 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'add_information']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Additional information:
+                                        
+Commentary: (scholarly) commentary on the content of the documents or regarding other textual phenomena.
+                                    
+Context material: additional (textual) sources which put the texts in the collection into context but are not considered part of the collection itself.
+                                    
+Facsimiles: any copy of historical documents.</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'add_information']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="add_information_bind" appearance="minimal">
@@ -3679,6 +3716,34 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'selection']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Selection:
+
+Selection criteria: factors that guided the selection of texts for the collection and the composition of the text collection.
+                                    
+Language: one or several standard languages or other language varieties (including for example sociolects).
+                                    
+Author: one or several persons or figures that are supposed to have authored the texts.
+                                    
+Country: one or several countries or geographical regions.
+                                    
+Epoch: one or several (historical) epochs or other kinds of time periods.
+                                    
+Genre: literary (e.g. novella, fabel) or non-literary genres/text types (letter, statute, recipe, chat log, etc.).
+
+Topic: one or several thematic aspects of the texts.
+
+Style: one or several writing styles characteristic for authors, periods, schools, text types, etc. (e.g. romantic or realist novels, satirical texts, Victorian style).
+
+Linguistic characteristics: language properties other than style (e.g. the presence of certain grammatical constructions).
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'selection']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="selection_bind" appearance="minimal">
@@ -3695,8 +3760,8 @@ Contemporary: 1945 until today.</xf:message>
                                         <xf:value>selection_country</xf:value>
                                     </xf:item>
                                     <xf:item>
-                                        <xf:label>Epoche</xf:label>
-                                        <xf:value>selection_epoche</xf:value>
+                                        <xf:label>Epoch</xf:label>
+                                        <xf:value>selection_epoch</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Genre</xf:label>
@@ -3735,6 +3800,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'size_items']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Size:
+
+If the size of the text collection is not given explicitly but can be inferred, please choose appropriate numbers, otherwise choose ‘unknown’.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:group appearance="full">
                                     <xf:label>Texts/items</xf:label>
                                     <xf:output
@@ -3890,6 +3967,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'quality']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Quality assurance:
+
+Choose ‘yes’ if there has been a quality check for which results are reported, regardless of whether corrections have been made or not.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'quality']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="quality_bind" appearance="full">
@@ -3916,6 +4005,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'research_type']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Kind of research:
+    
+In many cases both qualitative and quantitative research will be possible. Please choose the methodological orientation that is prevailing form your point of view.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'research_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="research_type_bind" appearance="minimal">
@@ -3950,9 +4051,41 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'text_treatment']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Text treatment:
+                                        
+Normalized transcription: if the orthography has been normalized according to a chosen standard (e.g. ’seyn’ to ’sein’).
+
+Orthographic transcription: a transcription that employs the standard spelling system of each target language (e.g. the surname "Pushkin" in English orthographic transcriptions of the Russian surname "Пу́шкин").
+
+Phonetic transcription: a transcription that is the visual representation of speech sounds or phones (e.g. [ˈpuʂkʲɪn]) or a phonemic transcription (e.g. /ˈpʊʃkɪn/).
+
+Diplomatic transcription: a transcription of the document taking into account features like spelling, punctuation, abbreviations, deletions, insertions, alterations, etc.
+
+Transliteration: A conversion of a text from one script to another (e.g. “Russia” in Cyrillic script, "Россия", is transliterated as "Rossiya" in Latin script).
+
+Edited text: A reading text as constituted by the editor(s), based on text-critical procedures like recensio, examinatio, emendatio, correction, normalization, modernization etc.
+
+Translated text: Any translations into languages different from that of the original text.
+
+Summarized text: A summary of the source text.
+
+Sampled text transcriptions: parts of texts that have been selected and transcribed to represent whole texts (e.g. out of theoretical considerations or for statistical reasons).
+                                    </xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'text_treatment']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="text_treatment_bind" appearance="minimal">
+                                    <xf:item>
+                                        <xf:label>Normalized transcription</xf:label>
+                                        <xf:value>normalized_transcription</xf:value>
+                                    </xf:item>
                                     <xf:item>
                                         <xf:label>Orthographic transcription</xf:label>
                                         <xf:value>orthographic_transcription</xf:value>
@@ -3964,6 +4097,10 @@ Contemporary: 1945 until today.</xf:message>
                                     <xf:item>
                                         <xf:label>Diplomatic transcription</xf:label>
                                         <xf:value>diplomatic_transcription</xf:value>
+                                    </xf:item>
+                                    <xf:item>
+                                        <xf:label>Transliteration</xf:label>
+                                        <xf:value>transliteration</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Edited text</xf:label>
@@ -4002,6 +4139,22 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'basic_format']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Basic format:
+
+Plain text: a pure sequence of character codes supported by the underlying standard (ASCII, Unicode).
+
+XML: Extensible Markup Language, a general markup language that defines a set of rules for encoding documents.
+
+HTML: Hypertext Markup Language, a standard markup language for web pages.
+                                    </xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'basic_format']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="basic_format_bind" appearance="minimal">
@@ -4054,7 +4207,7 @@ Contemporary: 1945 until today.</xf:message>
                                         <xf:value>semantically</xf:value>
                                     </xf:item>
                                     <xf:item>
-                                        <xf:label>text-critically</xf:label>
+                                        <xf:label>Text-critically</xf:label>
                                         <xf:value>text_critically</xf:value>
                                     </xf:item>
                                     <xf:item>
@@ -4158,6 +4311,22 @@ Contemporary: 1945 until today.</xf:message>
                                             ref="//tei:category[@xml:id = 'metadata_type']/tei:catDesc/tei:ref"
                                         />
                                     </a>
+                                    <xf:trigger src="icons/help_about.png" class="help">
+                                        <xf:message level="ephemeral">
+Metadata type:
+
+Descriptive: to describe and identify a resource, e.g. unique identifier, physical, bibliographic and content related attributes (such as medium, dimensions, author, title, publication year, genre, topic).
+
+Structural: information about the internal structure of a resource (such as parts, volumes, chapters, sections, pages).
+
+Administrative: for example technical details, access rights, history of changes.
+                                        </xf:message>
+                                        <xf:action>
+                                            <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                        </xf:action>
+                                    </xf:trigger>
                                     <xf:output
                                         ref="//tei:category[@xml:id = 'metadata_type']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                     <xf:select bind="metadata_type_bind" appearance="minimal">
@@ -4269,6 +4438,46 @@ Contemporary: 1945 until today.</xf:message>
                                             ref="//tei:category[@xml:id = 'standard_format']/tei:catDesc/tei:ref"
                                         />
                                     </a>
+                                    <xf:trigger src="icons/help_about.png" class="help">
+                                        <xf:message level="ephemeral">
+Standards:
+
+TEI: Text Encoding Initiative, cf. http://www.tei-c.org
+
+CEI: Charters Encoding Initiative, cf. https://www.cei.lmu.de
+
+EAD: Encoded Archival Description, cf. https://www.loc.gov/ead/
+
+(X)CES: Corpus Encoding Standard (in XML), cf. https://www.cs.vassar.edu/CES/ and http://www.xces.org/
+
+Dublin Core: a set of vocabulary terms for the description of web resources; cf. http://dublincore.org/
+
+EDM: Europeana Data Model, cf. http://pro.europeana.eu/page/edm-documentation 
+
+METS: Metadata Encoding and Transmission Standard, cf. http://www.loc.gov/standards/mets/
+
+MODS: Metadata Object Description Schema, cf. www.loc.gov/mods/
+
+SKOS: Simple Knowledge Organization System, cf. https://www.w3.org/2004/02/skos/
+
+OWL: Web Ontology Language, cf. https://www.w3.org/OWL/
+
+IMDI: Isle Metadata Initiative, cf. https://tla.mpi.nl/imdi-metadata/
+
+CMDI: Component Metadata Infrastructure, cf. https://www.clarin.eu/content/component-metadata
+
+TCF: Text Corpus Format, cf. https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/The_TCF_Format
+
+OLAC: Open Language Archive Metadata, cf. http://www.language-archives.org/OLAC/metadata-20080531.html
+
+standardized PoS tagset(s): Part-of-Speech tagsets that have been standardized, for example the ‘Part-of-Speech Tagging Guidelines for the Penn Treebank Project’. 
+</xf:message>
+                                        <xf:action>
+                                            <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                        </xf:action>
+                                    </xf:trigger>
                                     <xf:output
                                         ref="//tei:category[@xml:id = 'standard_format']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                     <xf:select bind="standard_format_bind" appearance="minimal">
@@ -4410,6 +4619,22 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'technical_interfaces']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Technical interfaces:
+
+OAI-PMH: Protocol for Metadata Harvesting; a protocol for harvesting metadata descriptions of items in a collection.
+
+REST: Representational State Transfer; a paradigm for the architecture of so-called RESTful web services.
+
+General API: an Application Programming Interface other than OAI-PMH or REST.
+                                    </xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'technical_interfaces']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select bind="technical_interfaces_bind" appearance="minimal">
@@ -4687,6 +4912,18 @@ Contemporary: 1945 until today.</xf:message>
                                                 ref="//tei:category[@xml:id = 'advanced_search']/tei:catDesc/tei:ref"
                                             />
                                         </a>
+                                        <xf:trigger src="icons/help_about.png" class="help">
+                                            <xf:message level="ephemeral">
+Advanced search:
+
+Any search that offers more complex search than just a word or a phrase, e.g. boolean operators, wildcards, restricted search, etc.
+                                            </xf:message>
+                                            <xf:action>
+                                                <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                            </xf:action>
+                                        </xf:trigger>
                                         <xf:output
                                             ref="//tei:category[@xml:id = 'advanced_search']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                         <xf:select1 bind="advanced_search_bind" appearance="full">
@@ -4748,17 +4985,17 @@ Contemporary: 1945 until today.</xf:message>
                                         </xf:select1>
                                     </xf:group>
                                     <xf:group appearance="full">
-                                        <xf:label>Personalization</xf:label>
+                                        <xf:label>Customization</xf:label>
                                         <a
                                             href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0#K5.5"
                                             target="_new">
                                             <xf:output
-                                                ref="//tei:category[@xml:id = 'analysis_personalization']/tei:catDesc/tei:ref"
+                                                ref="//tei:category[@xml:id = 'analysis_customization']/tei:catDesc/tei:ref"
                                             />
                                         </a>
                                         <xf:output
-                                            ref="//tei:category[@xml:id = 'analysis_personalization']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                        <xf:select1 bind="analysis_personalization_bind"
+                                            ref="//tei:category[@xml:id = 'analysis_customization']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
+                                        <xf:select1 bind="analysis_customization_bind"
                                             appearance="full">
                                             <xf:item>
                                                 <xf:label>yes</xf:label>
@@ -4877,6 +5114,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'open_access']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Open Access:
+
+Are the contents of the presentation freely accessible without subscription fee?
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'open_access']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="open_access_bind" appearance="full">
@@ -4923,6 +5172,32 @@ Contemporary: 1945 until today.</xf:message>
                                             ref="//tei:category[@xml:id = 'rights_license']/tei:catDesc/tei:ref"
                                         />
                                     </a>
+                                    <xf:trigger src="icons/help_about.png" class="help">
+                                        <xf:message level="ephemeral">
+License:
+
+CC0: Creative Commons license CC0 applied.
+
+CC-BY: Creative Commons license CC-BY applied.
+
+CC-BY-ND: Creative Commons license CC-BY-ND applied.
+
+CC-BY-NC: Creative Commons license CC-BY-NC applied.
+
+CC-BY-SA: Creative Commons license CC-BY-SA applied.
+
+CC-BY-NC-ND: Creative Commons license CC-BY-NC-ND applied.
+
+CC-BY-NC-SA: Creative Commons license CC-BY-NC-SA applied.
+
+PDM: Work is in the Public Domain.
+</xf:message>
+                                        <xf:action>
+                                            <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                        </xf:action>
+                                    </xf:trigger>
                                     <xf:output
                                         ref="//tei:category[@xml:id = 'rights_license']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                     <xf:select1 bind="rights_license_bind" appearance="minimal">
@@ -4986,6 +5261,30 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'persistent_identification']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Persistent identification and addressing:
+
+DOI: Digital Object Identifier according to the definition of The International DOI Foundation. The DOIs should be resolvable through http://doi.org/.
+
+ARK: Archival Resource Key according to the definition of the California Digital Library. An ARK URL contains the label: ‘ark’ after the URL’s hostname.
+
+URN: Uniform Resource Name using the urn: scheme. URNs always start with the label ’urn:’.
+
+PURL.ORG: Persistent Uniform Resource Locator using the PURL concept and administered by the Online Computer Library Centre.
+
+other service: Choose this if an external service other than the above options is used.
+
+Persistent URLs: Choose this if the project promises permanent URLs or uses a local resolving system between URLs and underlying technical addresses but does not use any of the external services mentioned in the options.
+
+none: Choose this if no persistent identifiers and addressing system are used at all.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'persistent_identification']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="persistent_identification_bind" appearance="minimal">
@@ -5054,6 +5353,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'archiving']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Archiving of the data:
+
+Choose yes if you have reason to believe that the archiving and long term sustainability of the data is cared for (e.g. because the data is part of a platform that cares for these aspects), even if the documentation makes no explicit statement about it.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'archiving']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="archiving_bind" appearance="full">
@@ -5076,6 +5387,18 @@ Contemporary: 1945 until today.</xf:message>
                                         ref="//tei:category[@xml:id = 'curation']/tei:catDesc/tei:ref"
                                     />
                                 </a>
+                                <xf:trigger src="icons/help_about.png" class="help">
+                                    <xf:message level="ephemeral">
+Institutional curation:
+
+Select yes, if there is either an explicit claim that continuous maintenance for the project is provided by some institution or you have strong reason to believe that this is the case, even if it is not explicitly claimed, otherwise select no.
+</xf:message>
+                                    <xf:action>
+                                        <script type="text/javascript">
+                                            setToasterPosition();
+                                        </script>
+                                    </xf:action>
+                                </xf:trigger>
                                 <xf:output
                                     ref="//tei:category[@xml:id = 'curation']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
                                 <xf:select1 bind="curation_bind" appearance="full">
@@ -5155,8 +5478,6 @@ Contemporary: 1945 until today.</xf:message>
                                 <xf:output
                                     value="if (instance('working_instance')//purpose = '') then 'MISSING: Aims, Purpose' else ''"/>
                                 <xf:output
-                                    value="if (instance('working_instance')//audience = '') then 'MISSING: Aims, Audience' else ''"/>
-                                <xf:output
                                     value="if (instance('working_instance')//classification = '') then 'MISSING: Aims, Self-classification' else ''"/>
                                 <xf:output
                                     value="if (instance('working_instance')//research_fields = '') then 'MISSING: Aims, Field of research' else ''"/>
@@ -5235,7 +5556,7 @@ Contemporary: 1945 until today.</xf:message>
                                 <xf:output
                                     value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_tools']//tei:num/@value = '') then 'MISSING: User interface, Analysis tools' else ''"/>
                                 <xf:output
-                                    value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_personalization']//tei:num/@value = '') then 'MISSING: User interface, Analysis personalization' else ''"/>
+                                    value="if (instance('working_instance')//interface_provision[.=('yes','')] and //tei:category[@xml:id='analysis_customization']//tei:num/@value = '') then 'MISSING: User interface, Analysis personalization' else ''"/>
                                 <xf:output
                                     value="if (instance('working_instance')//interface_provision[.=('yes','')] and instance('working_instance')//visualization = '') then 'MISSING: User interface, Visualization' else ''"/>
                                 <xf:output
