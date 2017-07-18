@@ -270,47 +270,47 @@
                                                 </catDesc>
                                                 <catDesc>To which field(s) of research does the text
                                                   collection contribute?</catDesc>
-                                                <category xml:id="history">
+                                                <category xml:id="field_history">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="literary_studies">
+                                                <category xml:id="field_literary_studies">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="linguistics">
+                                                <category xml:id="field_linguistics">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="musicology">
+                                                <category xml:id="field_musicology">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="art_history">
+                                                <category xml:id="field_art_history">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="archaeology">
+                                                <category xml:id="field_archaeology">
                                                     <catDesc>
                                                         <num type="boolean" value=""/>
                                                     </catDesc>
                                                 </category>
-                                                <category xml:id="philosophy">
+                                                <category xml:id="field_philosophy">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="religious_studies">
+                                                <category xml:id="field_religious_studies">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="sociology">
+                                                <category xml:id="field_sociology">
                                                     <catDesc>
                                                         <num type="boolean" value=""/>
                                                     </catDesc>
@@ -337,27 +337,27 @@
                                                 </catDesc>
                                                 <catDesc>What era(s) do the texts belong
                                                   to?</catDesc>
-                                                <category xml:id="classics">
+                                                <category xml:id="era_classics">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="medieval">
+                                                <category xml:id="era_medieval">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="early_modern">
+                                                <category xml:id="era_early_modern">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="modern">
+                                                <category xml:id="era_modern">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                 </category>
-                                                <category xml:id="contemporary">
+                                                <category xml:id="era_contemporary">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
@@ -1498,7 +1498,7 @@
                                                             <num type="boolean" value=""/>
                                                         </catDesc>
                                                     </category>
-                                                    <category xml:id="CC-BY">
+                                                    <category xml:id="CC-BY_only">
                                                         <catDesc>
                                                             <num type="boolean" value=""/>
                                                         </catDesc>
@@ -1540,11 +1540,6 @@
                                                         <category corresp="#free">
                                                             <gloss/>
                                                         </category>
-                                                    </category>
-                                                    <category xml:id="multiple_licenses">
-                                                        <catDesc>
-                                                            <num type="boolean" value=""/>
-                                                        </catDesc>
                                                     </category>
                                                     <category xml:id="no_license">
                                                         <catDesc>
@@ -1806,39 +1801,39 @@
             <xf:bind id="research_fields_bind"
                 nodeset="instance('working_instance')//research_fields" type="xs:string"
                 required="true()"/>
-            <xf:bind id="history_bind" nodeset="//tei:category[@xml:id='history']//tei:num/@value"
+            <xf:bind id="field_history_bind" nodeset="//tei:category[@xml:id='field_history']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'history')]) then 1 else 0"/>
-            <xf:bind id="literary_studies_bind"
-                nodeset="//tei:category[@xml:id='literary_studies']//tei:num/@value"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_history')]) then 1 else 0"/>
+            <xf:bind id="field_literary_studies_bind"
+                nodeset="//tei:category[@xml:id='field_literary_studies']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'literary_studies')]) then 1 else 0"/>
-            <xf:bind id="linguistics"
-                nodeset="//tei:category[@xml:id='linguistics']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_literary_studies')]) then 1 else 0"/>
+            <xf:bind id="field_linguistics"
+                nodeset="//tei:category[@xml:id='field_linguistics']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'linguistics')]) then 1 else 0"/>
-            <xf:bind id="musicology" nodeset="//tei:category[@xml:id='musicology']//tei:num/@value"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_linguistics')]) then 1 else 0"/>
+            <xf:bind id="field_musicology_bind" nodeset="//tei:category[@xml:id='field_musicology']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'musicology')]) then 1 else 0"/>
-            <xf:bind id="art_history"
-                nodeset="//tei:category[@xml:id='art_history']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_musicology')]) then 1 else 0"/>
+            <xf:bind id="field_art_history_bind"
+                nodeset="//tei:category[@xml:id='field_art_history']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'art_history')]) then 1 else 0"/>
-            <xf:bind id="archaeology"
-                nodeset="//tei:category[@xml:id='archaeology']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_art_history')]) then 1 else 0"/>
+            <xf:bind id="field_archaeology_bind"
+                nodeset="//tei:category[@xml:id='field_archaeology']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'archaeology')]) then 1 else 0"/>
-            <xf:bind id="philosophy" nodeset="//tei:category[@xml:id='philosophy']//tei:num/@value"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_archaeology')]) then 1 else 0"/>
+            <xf:bind id="field_philosophy_bind" nodeset="//tei:category[@xml:id='field_philosophy']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'philosophy')]) then 1 else 0"/>
-            <xf:bind id="religious_studies_bind"
-                nodeset="//tei:category[@xml:id='religious_studies']//tei:num/@value"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_philosophy')]) then 1 else 0"/>
+            <xf:bind id="field_religious_studies_bind"
+                nodeset="//tei:category[@xml:id='field_religious_studies']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'religious_studies')]) then 1 else 0"/>
-            <xf:bind id="sociology_bind"
-                nodeset="//tei:category[@xml:id='sociology']//tei:num/@value"
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_religious_studies')]) then 1 else 0"/>
+            <xf:bind id="field_sociology_bind"
+                nodeset="//tei:category[@xml:id='field_sociology']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//research_fields[contains(.,'sociology')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//research_fields[contains(.,'field_sociology')]) then 1 else 0"/>
             <xf:bind id="research_fields_other_bind"
                 nodeset="//tei:category[@xml:id='research_fields']//tei:category[@corresp='#other']//tei:num/@value"
                 type="xs:integer" required="true()"
@@ -1856,23 +1851,23 @@
             <!-- era -->
             <xf:bind id="era_bind" nodeset="instance('working_instance')//era" type="xs:string"
                 required="true()"/>
-            <xf:bind id="classics_bind" nodeset="//tei:category[@xml:id='classics']//tei:num/@value"
+            <xf:bind id="era_classics_bind" nodeset="//tei:category[@xml:id='era_classics']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//era[contains(.,'classics')]) then 1 else 0"/>
-            <xf:bind id="medieval_bind" nodeset="//tei:category[@xml:id='medieval']//tei:num/@value"
+                calculate="if (instance('working_instance')//era[contains(.,'era_classics')]) then 1 else 0"/>
+            <xf:bind id="era_medieval_bind" nodeset="//tei:category[@xml:id='era_medieval']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//era[contains(.,'medieval')]) then 1 else 0"/>
-            <xf:bind id="early_modern_bind"
-                nodeset="//tei:category[@xml:id='early_modern']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//era[contains(.,'era_medieval')]) then 1 else 0"/>
+            <xf:bind id="era_early_modern_bind"
+                nodeset="//tei:category[@xml:id='era_early_modern']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//era[contains(.,'early_modern')]) then 1 else 0"/>
-            <xf:bind id="modern_bind" nodeset="//tei:category[@xml:id='modern']//tei:num/@value"
+                calculate="if (instance('working_instance')//era[contains(.,'era_early_modern')]) then 1 else 0"/>
+            <xf:bind id="era_modern_bind" nodeset="//tei:category[@xml:id='era_modern']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//era[contains(.,'modern')]) then 1 else 0"/>
-            <xf:bind id="contemporary_bind"
-                nodeset="//tei:category[@xml:id='contemporary']//tei:num/@value" type="xs:integer"
+                calculate="if (instance('working_instance')//era[contains(.,'era_modern')]) then 1 else 0"/>
+            <xf:bind id="era_contemporary_bind"
+                nodeset="//tei:category[@xml:id='era_contemporary']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//era[contains(.,'contemporary')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//era[contains(.,'era_contemporary')]) then 1 else 0"/>
             <!-- language -->
             <xf:bind id="language_bind" nodeset="instance('working_instance')//language"
                 type="xs:string" required="true()"/>
@@ -2620,9 +2615,9 @@
             <xf:bind id="CC0_bind" nodeset="//tei:category[@xml:id='CC0']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//rights_license[contains(.,'CC0')]) then 1 else 0"/>
-            <xf:bind id="CC-BY_bind" nodeset="//tei:category[@xml:id='CC-BY']//tei:num/@value"
+            <xf:bind id="CC-BY_bind" nodeset="//tei:category[@xml:id='CC-BY_only']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'CC-BY')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//rights_license[contains(.,'CC-BY_only')]) then 1 else 0"/>
             <xf:bind id="CC-BY-ND_bind" nodeset="//tei:category[@xml:id='CC-BY-ND']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//rights_license[contains(.,'CC-BY-ND')]) then 1 else 0"/>
@@ -2650,9 +2645,6 @@
                 type="xs:string"
                 calculate="if (instance('working_instance')//rights_license[contains(., 'other')]) then . else ''"/>
             <!-- readonly="if (instance('working_instance')//rights_license[contains(.,'other')]) then false() else true()"  -->
-            <xf:bind id="multiple_licenses_bind" nodeset="//tei:category[@xml:id='multiple_licenses']//tei:num/@value"
-                type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'multiple_licenses')]) then 1 else 0"/>
             <xf:bind id="no_license_bind" nodeset="//tei:category[@xml:id='no_license']//tei:num/@value"
                 type="xs:integer" required="true()"
                 calculate="if (instance('working_instance')//rights_license[contains(.,'no_license')]) then 1 else 0"/>
@@ -2662,16 +2654,16 @@
                 required="true()"/>
             <xf:bind id="DOI_bind" nodeset="//tei:category[@xml:id='DOI']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'DOI')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//persistent_identification[contains(.,'DOI')]) then 1 else 0"/>
             <xf:bind id="ARK_bind" nodeset="//tei:category[@xml:id='ARK']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'ARK')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//persistent_identification[contains(.,'ARK')]) then 1 else 0"/>
             <xf:bind id="URN_bind" nodeset="//tei:category[@xml:id='URN']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'URN')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//persistent_identification[contains(.,'URN')]) then 1 else 0"/>
             <xf:bind id="PURL.ORG_bind" nodeset="//tei:category[@xml:id='PURL.ORG']//tei:num/@value"
                 type="xs:integer" required="true()"
-                calculate="if (instance('working_instance')//rights_license[contains(.,'PURL.ORG')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//persistent_identification[contains(.,'PURL.ORG')]) then 1 else 0"/>
             <xf:bind id="persistent_identification_other_bind"
                 nodeset="//tei:category[@xml:id='persistent_identification']//tei:category[@corresp='#other']//tei:num/@value"
                 type="xs:integer" required="true()"
@@ -3291,39 +3283,39 @@ We assume that the text collection is published to be used in a certain context 
                                 <xf:select bind="research_fields_bind" appearance="minimal">
                                     <xf:item>
                                         <xf:label>History</xf:label>
-                                        <xf:value>history</xf:value>
+                                        <xf:value>field_history</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Literary studies</xf:label>
-                                        <xf:value>literary_studies</xf:value>
+                                        <xf:value>field_literary_studies</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Linguistics</xf:label>
-                                        <xf:value>linguistics</xf:value>
+                                        <xf:value>field_linguistics</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Musicology</xf:label>
-                                        <xf:value>musicology</xf:value>
+                                        <xf:value>field_musicology</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Art history</xf:label>
-                                        <xf:value>art_history</xf:value>
+                                        <xf:value>field_art_history</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Archaeology</xf:label>
-                                        <xf:value>archaeology</xf:value>
+                                        <xf:value>field_archaeology</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Philosophy</xf:label>
-                                        <xf:value>philosophy</xf:value>
+                                        <xf:value>field_philosophy</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Religious studies</xf:label>
-                                        <xf:value>religious_studies</xf:value>
+                                        <xf:value>field_religious_studies</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Sociology</xf:label>
-                                        <xf:value>sociology</xf:value>
+                                        <xf:value>field_sociology</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>other</xf:label>
@@ -3381,23 +3373,23 @@ Contemporary: 1945 until today.</xf:message>
                                 <xf:select bind="era_bind" appearance="minimal">
                                     <xf:item>
                                         <xf:label>Classics</xf:label>
-                                        <xf:value>classics</xf:value>
+                                        <xf:value>era_classics</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Medieval</xf:label>
-                                        <xf:value>medieval</xf:value>
+                                        <xf:value>era_medieval</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Early Modern</xf:label>
-                                        <xf:value>early_modern</xf:value>
+                                        <xf:value>era_early_modern</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Modern</xf:label>
-                                        <xf:value>modern</xf:value>
+                                        <xf:value>era_modern</xf:value>
                                     </xf:item>
                                     <xf:item>
                                         <xf:label>Contemporary</xf:label>
-                                        <xf:value>contemporary</xf:value>
+                                        <xf:value>era_contemporary</xf:value>
                                     </xf:item>
                                 </xf:select>
                                 <span class="hint">Hold the Ctrl/CMD key to select multiple
@@ -5194,14 +5186,14 @@ PDM: Work is in the Public Domain.
                                     </xf:trigger>
                                     <xf:output
                                         ref="//tei:category[@xml:id = 'rights_license']/tei:catDesc[not(tei:ref) and not(tei:num)]"/>
-                                    <xf:select1 bind="rights_license_bind" appearance="minimal">
+                                    <xf:select bind="rights_license_bind" appearance="minimal">
                                         <xf:item>
                                             <xf:label>CC0</xf:label>
                                             <xf:value>CC0</xf:value>
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>CC-BY</xf:label>
-                                            <xf:value>CC-BY</xf:value>
+                                            <xf:value>CC-BY_only</xf:value>
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>CC-BY-ND</xf:label>
@@ -5232,15 +5224,12 @@ PDM: Work is in the Public Domain.
                                             <xf:value>other</xf:value>
                                         </xf:item>
                                         <xf:item>
-                                            <xf:label>Multiple licenses</xf:label>
-                                            <xf:value>multiple_licenses</xf:value>
-                                        </xf:item>
-                                        <xf:item>
                                             <xf:label>No explicit license / all rights reserved</xf:label>
                                             <xf:value>no_license</xf:value>
                                         </xf:item>
-                                    </xf:select1>
-                                    <span class="hint">Please choose one of the options.</span>
+                                    </xf:select>
+                                    <span class="hint">Hold the Ctrl/CMD key to select multiple
+                                        entries.</span>
                                     <xf:input bind="rights_license_other_free_bind">
                                         <xf:label>other:</xf:label>
                                         <xf:hint>choose 'other' above</xf:hint>
