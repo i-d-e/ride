@@ -682,7 +682,7 @@
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
                                                   </category>
-                                                  <category xml:id="texts_gt100">
+                                                  <category xml:id="texts_gt100_">
                                                   <catDesc>
                                                   <num type="boolean" value=""/>
                                                   </catDesc>
@@ -2095,9 +2095,9 @@
                 required="true()"
                 calculate="if (instance('working_instance')//size_texts[contains(.,'texts_51-100')]) then 1 else 0"/>
             <xf:bind id="texts_gt100_bind"
-                nodeset="//tei:category[@xml:id='texts_gt100']//tei:num/@value" type="xs:integer"
+                nodeset="//tei:category[@xml:id='texts_gt100_']//tei:num/@value" type="xs:integer"
                 required="true()"
-                calculate="if (instance('working_instance')//size_texts[contains(.,'texts_gt100')]) then 1 else 0"/>
+                calculate="if (instance('working_instance')//size_texts[contains(.,'texts_gt100_')]) then 1 else 0"/>
             <xf:bind id="texts_gt1000_bind"
                 nodeset="//tei:category[@xml:id='texts_gt1000']//tei:num/@value" type="xs:integer"
                 required="true()"
@@ -3826,7 +3826,7 @@ If the size of the text collection is not given explicitly but can be inferred, 
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>&gt; 100</xf:label>
-                                            <xf:value>texts_gt100</xf:value>
+                                            <xf:value>texts_gt100_</xf:value>
                                         </xf:item>
                                         <xf:item>
                                             <xf:label>&gt; 1000</xf:label>
