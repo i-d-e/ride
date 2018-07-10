@@ -1,16 +1,20 @@
-# RIDE - A review journal for digital editions and resources
+# RIDE - Questionnaire Data
 
-This GitHub repository provides the data from the reviewing journal RIDE (http://ride.i-d-e.de). Since 2014, RIDE has been published by the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/).  
+This branch is part of the [GitHub repository](https://github.com/i-d-e/ride) for the reviewing journal RIDE (http://ride.i-d-e.de). It contains summaries of the data gathered in the RIDE questionnaires.
 
 ## Contents
-The repository provides the reviews from the journal RIDE. Each reviewing article consists of a file in XML/TEI with the reviewing text including the data from the questionnaire. Images and/or illustrations that are part of the publication are also provided. 
+Each review in RIDE is accompanied by a so-called *factsheet* containing questions and answers about the reviewed resource. This data is gathered in two types of questionnaires, one for scholarly editions and the other for text collections (including corpora). In this GitHub branch, summaries of all the questionnaire data are published in two XML/TEI files (one for each type of questionnaire). Please note that only those answers that are numerable are published. This includes (multiple-)choice questions but excludes free text commentaries, for example.
 
-## Structure
-The reviews are sorted according to their common publication as an issue. The individual issues can be accessed via separate branches. 
+The questionnaires are available at:
+* [Questionnaire Scholarly Editions](https://ride.i-d-e.de/data/questionnaire/)
+* [Questionnaire Text Collections](https://ride.i-d-e.de/data/questionnaire-text-collections/)
 
 ## License
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
 
 ## Contact
 The repository is run by members of the Institute for Documentology and Scholarly Editing. For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
+
+## Citation suggestion
+Henny-Krahmer, Ulrike, Frederike Neuber and Philipp Steinkrüger. "Questionnaire Data."
 
