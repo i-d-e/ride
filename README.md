@@ -17,7 +17,7 @@ The reviews are sorted according to their common publication as an issue. The in
 * [Issue 8: Text Collections](https://github.com/i-d-e/ride/tree/issues/08)
 
 An additional branch holds summaries of the data gathered with the RIDE Questionnaires:
-*[RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
+* [RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
 
 ## License
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
