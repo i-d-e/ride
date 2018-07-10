@@ -19,5 +19,5 @@ The contents of this repository are published under CC-BY license. For a summary
 The repository is run by members of the Institute for Documentology and Scholarly Editing. For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
 
 ## Citation suggestion
-Henny-Krahmer, Ulrike, Frederike Neuber and Philipp Steinkrüger (eds). "RIDE - Questionnaire Data Summary." *RIDE - A review journal for digital editions and resources.* 2018ff. (https://github.com/i-d-e/ride/tree/questionnaire_data).
+Henny-Krahmer, Ulrike, Frederike Neuber and Philipp Steinkrüger (eds). "RIDE - Questionnaire Data Summary." *RIDE - A review journal for digital editions and resources.* 2018ff. https://github.com/i-d-e/ride/tree/questionnaire_data.
 
