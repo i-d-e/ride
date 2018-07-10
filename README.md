@@ -7,14 +7,14 @@ The repository provides the reviews from the journal RIDE. Each reviewing articl
 
 ## Structure
 The reviews are sorted according to their common publication as an issue. The individual issues can be accessed via separate branches:
-*[Issue 1: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/01)
-*[Issue 2: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/02)
-*[Issue 3: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/03)
-*[Issue 4: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/04)
-*[Issue 5: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/05)
-*[Issue 6: Text Collections](https://github.com/i-d-e/ride/tree/issues/06)
-*[Issue 7: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/07)
-*[Issue 8: Text Collections](https://github.com/i-d-e/ride/tree/issues/08)
+* [Issue 1: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/01)
+* [Issue 2: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/02)
+* [Issue 3: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/03)
+* [Issue 4: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/04)
+* [Issue 5: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/05)
+* [Issue 6: Text Collections](https://github.com/i-d-e/ride/tree/issues/06)
+* [Issue 7: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/07)
+* [Issue 8: Text Collections](https://github.com/i-d-e/ride/tree/issues/08)
 
 An additional branch holds summaries of the data gathered with the RIDE Questionnaires:
 *[RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
