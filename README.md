@@ -3,9 +3,17 @@
 This branch is part of the [GitHub repository](https://github.com/i-d-e/ride) for the reviewing journal RIDE (http://ride.i-d-e.de). It contains summaries of the data gathered in the RIDE questionnaires.
 
 ## Contents
-Each review in RIDE is accompanied by a so-called *factsheet* containing questions and answers about the reviewed resource. This data is gathered in two types of questionnaires, one for scholarly editions and the other for text collections (including corpora). In this GitHub branch, summaries of all the questionnaire data are published in two XML/TEI files (one for each type of questionnaire). Please note that only those answers that are numerable are published. This includes (multiple-)choice questions but excludes free text commentaries, for example.
+Each review in RIDE is accompanied by a so-called *factsheet* containing questions and answers about the reviewed resource. This data is gathered in two types of questionnaires, one for scholarly editions and the other for text collections (including corpora). 
 
-The questionnaires are available at:
+In this GitHub branch, summaries of all the questionnaire data are published for each type of questionnaire. Please note that only those answers that are numerable are published. This includes (multiple-)choice questions but excludes free text commentaries, for example. Where the choice of an option was not compulsory, the total number of answers may be lower than the total number of reviews.
+
+The results are offered in two formats: XML/TEI and CSV (with ; as separator).
+
+See:
+* [Data Summary Scholarly Editions](scholarly_editions)
+* [Data Summary Text Collections](text_collections)
+
+The corresponding questionnaires are available at:
 * [Questionnaire Scholarly Editions](https://ride.i-d-e.de/data/questionnaire/)
 * [Questionnaire Text Collections](https://ride.i-d-e.de/data/questionnaire-text-collections/)
 
