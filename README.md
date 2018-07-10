@@ -7,7 +7,7 @@ Each review in RIDE is accompanied by a so-called *factsheet* containing questio
 
 In this GitHub branch, summaries of all the questionnaire data are published for each type of questionnaire. Please note that only those answers that are numerable are published. This includes (multiple-)choice questions but excludes free text commentaries, for example. Where the choice of an option was not compulsory, the total number of answers may be lower than the total number of reviews.
 
-The results are offered in two formats: XML/TEI and CSV (with ; as separator).
+The results are offered in two formats: XML/TEI and CSV.
 
 See:
 * [Data Summary Scholarly Editions](scholarly_editions)
