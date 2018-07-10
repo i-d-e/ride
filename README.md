@@ -1,4 +1,4 @@
-# RIDE - Questionnaire Data
+# RIDE - Questionnaire Data Summary
 
 This branch is part of the [GitHub repository](https://github.com/i-d-e/ride) for the reviewing journal RIDE (http://ride.i-d-e.de). It contains summaries of the data gathered in the RIDE questionnaires.
 
@@ -9,6 +9,9 @@ The questionnaires are available at:
 * [Questionnaire Scholarly Editions](https://ride.i-d-e.de/data/questionnaire/)
 * [Questionnaire Text Collections](https://ride.i-d-e.de/data/questionnaire-text-collections/)
 
+## Versioning
+With each new issue of RIDE, a new release of the repository is created. Each release also includes an update of the questionnaire data.
+
 ## License
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
 
@@ -16,5 +19,5 @@ The contents of this repository are published under CC-BY license. For a summary
 The repository is run by members of the Institute for Documentology and Scholarly Editing. For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
 
 ## Citation suggestion
-Henny-Krahmer, Ulrike, Frederike Neuber and Philipp Steinkrüger. "Questionnaire Data."
+Henny-Krahmer, Ulrike, Frederike Neuber and Philipp Steinkrüger (eds). "RIDE - Questionnaire Data Summary." *RIDE - A review journal for digital editions and resources.* 2018ff. (https://github.com/i-d-e/ride/tree/questionnaire_data).
 
