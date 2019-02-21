@@ -15,6 +15,7 @@ The reviews are sorted according to their common publication as an issue. The in
 * [Issue 6: Text Collections](https://github.com/i-d-e/ride/tree/issues/06)
 * [Issue 7: Scholarly Editions](https://github.com/i-d-e/ride/tree/issues/07)
 * [Issue 8: Text Collections](https://github.com/i-d-e/ride/tree/issues/08)
+* [Issue 9: Text Collections](https://github.com/i-d-e/ride/tree/issues/09)
 
 An additional branch holds summaries of the data gathered with the RIDE Questionnaires:
 * [RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
