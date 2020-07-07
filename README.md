@@ -23,7 +23,7 @@ An additional branch holds summaries of the data gathered with the RIDE Question
 * [RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
 
 Also, you can access the TEI files of all the reviews together in the "All TEI" branch:
-* [RIDE - TEI All](https://github.com/i-d-e/ride/tree/all_tei)
+* [RIDE - All TEI](https://github.com/i-d-e/ride/tree/all_tei)
 
 ## License
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
