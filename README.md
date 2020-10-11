@@ -20,11 +20,10 @@ The reviews are sorted according to their common publication as an issue. The in
 * [Issue 11: Tools and Environments](https://github.com/i-d-e/ride/tree/issues/11)
 * [Issue 12: Scholarly Editions (Correspondence)](https://github.com/i-d-e/ride/tree/issues/12)
 
-An additional branch holds summaries of the data gathered with the RIDE Questionnaires:
-* [RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data)
-
-Also, you can access the TEI files of all the reviews together in the "All TEI" branch:
-* [RIDE - All TEI](https://github.com/i-d-e/ride/tree/all_tei)
+Additional branches hold data related to the reviews:
+* [RIDE - Questionnaire Data Summary](https://github.com/i-d-e/ride/tree/questionnaire_data) (Summaries of the data gathered with the RIDE Questionnaires)
+* [RIDE - All TEI](https://github.com/i-d-e/ride/tree/all_tei) (The TEI files of all the reviews in one place)
+* [RIDE - Archives](https://github.com/i-d-e/ride/tree/archives) (Zip files of all the reviews sorted by issues)
 
 ## License
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
