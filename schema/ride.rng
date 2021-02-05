@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
+<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
+         xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-01-19T11:08:08Z. 2020.
+Schema generated from ODD source 2021-02-05T06:15:20Z. 2020.
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -214,44 +214,44 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 context="tei:*[@when]">
-        <sch:report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
+        <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 context="tei:*[@from]">
-        <sch:report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</sch:report>
+        <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 context="tei:*[@to]">
-        <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
+        <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <define name="att.datable.attributes">
@@ -438,13 +438,13 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-att.typed-subtypeTyped-constraint-rule-4">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 context="tei:*[@subtype]">
         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
@@ -1187,6 +1187,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    <define name="model.global.edit">
       <choice>
          <ref name="gap"/>
+         <ref name="space"/>
       </choice>
    </define>
    <define name="model.divPart">
@@ -1640,10 +1641,10 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-p-abstractModel-structure-p-constraint-report-4">
             <rule context="tei:p">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+               <report xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
@@ -1653,10 +1654,10 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-p-abstractModel-structure-l-constraint-report-5">
             <rule context="tei:p">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+               <report xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
@@ -1752,10 +1753,10 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                   id="tei_ride-desc-deprecationInfo-only-in-deprecated-constraint-rule-5">
             <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:desc[ @type eq 'deprecationInfo']">
                <sch:assert test="../@validUntil">Information about a
@@ -1789,29 +1790,29 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-gap-jtei.sch-gap-constraint-rule-6">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:gap">
-                  <sch:report test="following-sibling::node()[1][self::text()] and starts-with(following-sibling::node()[1], '.')"> A <sch:name/> element should follow a period rather than precede it when an
+               <sch:report test="following-sibling::node()[1][self::text()] and starts-with(following-sibling::node()[1], '.')"> A <sch:name/> element should follow a period rather than precede it when an
                     ellipsis follows the end of a sentence. </sch:report>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-gap-jtei.sch-gap-ws-constraint-rule-7">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:gap">
-                  <sch:report test="preceding-sibling::node()[1][self::text()][matches(., '\.\s+$')]"> A
+               <sch:report test="preceding-sibling::node()[1][self::text()][matches(., '\.\s+$')]"> A
                     <sch:name/> should follow a period directly, without preceding whitespace.
                   </sch:report>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.change.attribute.change"/>
          <ref name="att.editLike.attributes"/>
@@ -1864,15 +1865,15 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-add-ride.sch-add-context-constraint-rule-8">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:add">
-                  <sch:assert test="ancestor::tei:mod">
-                    <sch:name/> may only occur inside modifications. </sch:assert>
-                </sch:rule>
+               <sch:assert test="ancestor::tei:mod">
+                  <sch:name/> may only occur inside modifications. </sch:assert>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -1889,15 +1890,15 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-del-ride.sch-del-context-constraint-rule-9">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:del">
-                  <sch:assert test="ancestor::tei:mod">
-                    <sch:name/> may only occur inside modifications. </sch:assert>
-                </sch:rule>
+               <sch:assert test="ancestor::tei:mod">
+                  <sch:name/> may only occur inside modifications. </sch:assert>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -2025,55 +2026,55 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-ref-jtei.sch-biblref-parentheses-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:ref[@type eq 'bibl']">
-                  <sch:assert test="not(matches(., '^\(.*\)$'))"> Parentheses are not part of
+               <sch:assert test="not(matches(., '^\(.*\)$'))"> Parentheses are not part of
                     bibliographic references. Please move them out of <sch:name/>. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-ref-jtei.sch-biblref-target-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:ref[@type eq 'bibl']">
-                  <sch:assert test="id(substring-after(@target, '#'))/(self::tei:bibl|self::tei:person[ancestor::tei:particDesc/parent::tei:profileDesc])"> A bibliographic reference must point to an entry in the bibliography.
+               <sch:assert test="id(substring-after(@target, '#'))/(self::tei:bibl|self::tei:person[ancestor::tei:particDesc/parent::tei:profileDesc])"> A bibliographic reference must point to an entry in the bibliography.
                   </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-ref-jtei.sch-biblref-type-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:ref[id(substring-after(@target, '#'))/self::tei:bibl]">
-                  <sch:assert test="@type eq 'bibl'" sqf:fix="bibltype.add"> A bibliographic
+               <sch:assert sqf:fix="bibltype.add" test="@type eq 'bibl'"> A bibliographic
                     reference must be typed as @type="bibl". </sch:assert>
-                  <sqf:fix id="bibltype.add">
-                    <sqf:description>
-                      <sqf:title>Add @type='bibl'.</sqf:title>
-                    </sqf:description>
-                    <sqf:add match="." node-type="attribute" target="type" select="'bibl'"/>
-                  </sqf:fix>
-                </sch:rule>
+               <sqf:fix id="bibltype.add">
+                  <sqf:description>
+                     <sqf:title>Add @type='bibl'.</sqf:title>
+                  </sqf:description>
+                  <sqf:add match="." node-type="attribute" select="'bibl'" target="type"/>
+               </sqf:fix>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-ref-refAtts-constraint-report-8">
             <rule context="tei:ref">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+               <report xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="@target and @cRef">Only one of the
 	attributes @target' and @cRef' may be supplied on <name/>
@@ -2154,10 +2155,10 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-list-gloss-list-must-have-labels-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:list[@type='gloss']">
 	              <sch:assert test="tei:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</sch:assert>
@@ -2216,41 +2217,41 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-head-jtei.sch-head-number-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:head">
-                  <sch:report test="matches(., '^\s*((figure|table|example|section) )?\d', 'i')">
+               <sch:report test="matches(., '^\s*((figure|table|example|section) )?\d', 'i')">
                     Headings are numbered and labeled automatically, please remove the hard-coded
                     label from the text. </sch:report>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-head-jtei.sch-figure-head-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:figure/tei:head">
-                  <sch:assert test="@type = ('legend', 'license')"> Figure titles must have a type
+               <sch:assert test="@type = ('legend', 'license')"> Figure titles must have a type
                     'legend' or 'license'. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-head-jtei.sch-legend-punctuation-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:figure/tei:head[@type='legend']">
-                  <sch:assert role="warning" test="matches(normalize-space(), '[.?!]$')"> A head with the type attribute legend should end with closing punctuation. </sch:assert>
-                </sch:rule>
+               <sch:assert role="warning" test="matches(normalize-space(), '[.?!]$')"> A head with the type attribute legend should end with closing punctuation. </sch:assert>
+            </sch:rule>
          </pattern>
          <ref name="att.global.change.attribute.change"/>
          <ref name="att.placement.attributes"/>
@@ -2272,27 +2273,27 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-note-jtei.sch-note-punctuation-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:note">
-                  <sch:assert role="warning" test="matches(normalize-space(), '[.?!]$')"> A footnote
+               <sch:assert role="warning" test="matches(normalize-space(), '[.?!]$')"> A footnote
                     should end with closing punctuation. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-note-jtei.sch-note-blocks-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:note">
-                  <sch:report test=".//(tei:cit|tei:table|tei:list[not(tokenize(@rend, '\s+')[. eq 'inline'])]|tei:figure|eg:egXML|tei:eg)"> No block-level elements are allowed inside note. </sch:report>
-                </sch:rule>
+               <sch:report test=".//(tei:cit|tei:table|tei:list[not(tokenize(@rend, '\s+')[. eq 'inline'])]|tei:figure|eg:egXML|tei:eg)"> No block-level elements are allowed inside note. </sch:report>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -2308,15 +2309,15 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-graphic-jtei.sch-graphic-context-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:graphic">
-                  <sch:assert test="parent::tei:figure">
-                    <sch:name/> may only occur inside figure. </sch:assert>
-                </sch:rule>
+               <sch:assert test="parent::tei:figure">
+                  <sch:name/> may only occur inside figure. </sch:assert>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -2362,16 +2363,16 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-author-jtei.sch-author-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:titleStmt/tei:author">
-                  <sch:assert test="tei:name and tei:affiliation and tei:email"> Author information
+               <sch:assert test="tei:name and tei:affiliation and tei:email"> Author information
                     in the &lt;titleStmt&gt; must include &lt;name&gt;, &lt;affiliation&gt; and
                     &lt;email&gt;. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.change.attribute.change"/>
          <optional>
@@ -2449,16 +2450,16 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-respStmt-ride.sch-respSmt-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:respStmt">
-                  <sch:assert test="ancestor::tei:notesStmt">
-                    <sch:name/> can only be used in the context of notesStmt.
+               <sch:assert test="ancestor::tei:notesStmt">
+                  <sch:name/> can only be used in the context of notesStmt.
                   </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -2565,15 +2566,15 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-bibl-jtei.sch-bibl-endpunctuation-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:back/tei:div[@type eq 'bibliography']//tei:bibl">
-                  <sch:assert role="warning" test="ends-with(normalize-space(), '.')"> A
+               <sch:assert role="warning" test="ends-with(normalize-space(), '.')"> A
                     bibliographic entry should end with a period. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -2618,20 +2619,20 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <rule context="tei:relatedItem">
                <sch:report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns="http://www.tei-c.org/ns/1.0"
-                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                            xmlns:eg="http://www.tei-c.org/ns/Examples"
                            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                            test="@target and count( child::* ) &gt; 0">
 If the @target attribute on <sch:name/> is used, the
 relatedItem element must be empty</sch:report>
                <sch:assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns="http://www.tei-c.org/ns/1.0"
-                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                            xmlns:eg="http://www.tei-c.org/ns/Examples"
                            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                            test="@target or child::*">A relatedItem element should have either a 'target' attribute
         or a child element to indicate the related bibliographic item</sch:assert>
@@ -2751,15 +2752,15 @@ relatedItem element must be empty</sch:report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-table-jtei.sch-table-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:table">
-                  <sch:assert test="not(ancestor::tei:list)"> No tables are are allowed inside
+               <sch:assert test="not(ancestor::tei:list)"> No tables are are allowed inside
                     lists. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.change.attribute.change"/>
          <optional>
@@ -2919,64 +2920,64 @@ relatedItem element must be empty</sch:report>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-idno-jtei.sch-doi-order-constraint-rule-24">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:back/tei:div[@type eq 'bibliography']//tei:idno[@type eq 'doi']">
-                  <sch:report test="following-sibling::tei:ref"> If a bibliographic entry has a
+               <sch:report test="following-sibling::tei:ref"> If a bibliographic entry has a
                     formal DOI code, it should be placed at the very end of the bibliographic
                     description. </sch:report>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-idno-ride.sch-idno-author-constraint-rule-25">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:author/tei:idno">
-                  <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
+               <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
                     ORCID, GND, or VIAF is allowed. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-idno-ride.sch-idno-author-constraint-rule-26">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:author/tei:idno">
-                  <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
+               <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
                     ORCID, GND, or VIAF is allowed. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-idno-ride.sch-idno-publicationStmt-constraint-rule-27">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:publicationStmt/tei:idno">
-                  <sch:assert test="@type='URI' or @type='DOI' or @type='archive'"> Only the type
+               <sch:assert test="@type='URI' or @type='DOI' or @type='archive'"> Only the type
                     URI, DOI, or archive is allowed. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
@@ -3042,19 +3043,19 @@ relatedItem element must be empty</sch:report>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-seriesStmt-ride.sch-editor-constraint-rule-28">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:seriesStmt/tei:editor[1]">
-                  <sch:assert test="not(@role)">
+               <sch:assert test="not(@role)">
                     the first <sch:name/> should note hava a role attribute.
                   </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3108,19 +3109,19 @@ relatedItem element must be empty</sch:report>
          <ref name="macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-rendition-jtei.sch-rendition-constraint-rule-29">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:rendition">
-                  <sch:assert test="key('idrefs', @xml:id) instance of attribute(rendition)"> Please
+               <sch:assert test="key('idrefs', @xml:id) instance of attribute(rendition)"> Please
                     remove all <sch:name/> definitions that aren't actually being used in the
                     article. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <optional>
@@ -3616,15 +3617,15 @@ relatedItem element must be empty</sch:report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-att-jtei.sch-att-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:att">
-                  <sch:assert test="not(matches(., '^@'))"> Attribute delimiters are not allowed for
+               <sch:assert test="not(matches(., '^@'))"> Attribute delimiters are not allowed for
                     <sch:name/>: they are completed at processing time via XSLT. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3716,16 +3717,16 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-tag-jtei.sch-tag-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:tag">
-                  <sch:assert test="not(matches(., '^[&lt;!?-]|[&gt;/?\-]$'))"> Tag delimiters such
+               <sch:assert test="not(matches(., '^[&lt;!?-]|[&gt;/?\-]$'))"> Tag delimiters such
                     as angle brackets and tag-closing slashes are not allowed for <sch:name/>: they
                     are completed at processing time via XSLT. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <optional>
@@ -3757,16 +3758,16 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-val-jtei.sch-att-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:val">
-                  <sch:assert test="not(matches(., concat('^', $quotes, '|', $quotes, '$')))">
+               <sch:assert test="not(matches(., concat('^', $quotes, '|', $quotes, '$')))">
                     Attribute value delimiters are not allowed for <sch:name/>: they are completed
                     at processing time via XSLT. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3793,28 +3794,28 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:eg="http://www.tei-c.org/ns/Examples"
                  xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:eg="http://www.tei-c.org/ns/Examples"
                  xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  prefix="xs"
                  uri="http://www.w3.org/2001/XMLSchema"/>
          <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:eg="http://www.tei-c.org/ns/Examples"
                  xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  prefix="rng"
                  uri="http://relaxng.org/ns/structure/1.0"/>
@@ -3826,9 +3827,9 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-TEI-xmlid-ride.sch-tei-constraint-rule-33">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:TEI/@xml:id">
-                      <sch:assert test="matches(., 'ride.\d{1,2}.\d{1,2}$')"> The xml:id is required
+               <sch:assert test="matches(., 'ride.\d{1,2}.\d{1,2}$')"> The xml:id is required
                         and must have the format [ride].[issue-number].[review-number] </sch:assert>
-                    </sch:rule>
+            </sch:rule>
          </pattern>
          <empty/>
       </element>
@@ -3866,41 +3867,41 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-text-jtei.sch-article-keywords-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:text[not(tei:body/tei:div[@type = ('editorialIntroduction')])]">
-                  <sch:assert test="parent::tei:TEI/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords">
+               <sch:assert test="parent::tei:TEI/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords">
                     An article must have a keyword list in the header. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-text-jtei.sch-article-abstract-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:text[not(tei:body/tei:div[@type = ('editorialIntroduction')])]">
-                  <sch:assert test="tei:front/tei:div[@type='abstract']"> An article must have a
+               <sch:assert test="tei:front/tei:div[@type='abstract']"> An article must have a
                     front section with an abstract. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-text-jtei.sch-article-back-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:text[not(tei:body/tei:div[@type = ('editorialIntroduction')])]">
-                  <sch:assert test="tei:back/tei:div[@type='bibliography']/tei:listBibl"> An article
+               <sch:assert test="tei:back/tei:div[@type='bibliography']/tei:listBibl"> An article
                     must have a back section with a bibliography. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -4030,88 +4031,88 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-jtei.sch-divtypes-front-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:div[@type = $div.types.front]">
-                  <sch:assert test="parent::tei:front"> A text division of type <sch:value-of select="@type"/> may only occur inside front. </sch:assert>
-                </sch:rule>
+               <sch:assert test="parent::tei:front"> A text division of type <sch:value-of select="@type"/> may only occur inside front. </sch:assert>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-jtei.sch-divtypes-front2-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:front/tei:div">
-                  <sch:assert test="@type = $div.types.front"> Only text divisions of type
+               <sch:assert test="@type = $div.types.front"> Only text divisions of type
                       <sch:value-of select="string-join(for $i in $div.types.front return concat(if (index-of($div.types.front, $i) = count($div.types.front)) then 'or ' else (), '&#34;', $i, '&#34;'), ', ')"/> may appear in the &lt;front&gt;. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-jtei.sch-divtypes-back-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:div[@type = ('bibliography', 'appendix')]">
-                  <sch:assert test="parent::tei:back"> Bibliography
+               <sch:assert test="parent::tei:back"> Bibliography
                     (<sch:name/>[@type="bibliography"]) and appendices
                     (<sch:name/>[@type="appendix"]) may only occur inside back. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-jtei.sch-divtypes-body-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:div[@type = ('editorialIntroduction')]">
-                  <sch:assert test="parent::tei:body"> An editorial introduction
+               <sch:assert test="parent::tei:body"> An editorial introduction
                     (<sch:name/>[@type="editorialIntroduction"]) may only occur inside body.
                   </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-jtei.sch-div-head-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:body//tei:div[not(@type = ('editorialIntroduction'))]">
-                  <sch:assert test="tei:head"> A <sch:name/> must contain a head. </sch:assert>
-                </sch:rule>
+               <sch:assert test="tei:head"> A <sch:name/> must contain a head. </sch:assert>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-ride.div-nesting-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:div[parent::tei:div]">
-                  <sch:report test="count(ancestor::tei:div) gt 2"> maximum three levels of nested
+               <sch:report test="count(ancestor::tei:div) gt 2"> maximum three levels of nested
                     <sch:name/> elements are allowed </sch:report>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-abstractModel-structure-l-constraint-report-14">
             <rule context="tei:div">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+               <report xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
@@ -4121,10 +4122,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-abstractModel-structure-p-constraint-report-15">
             <rule context="tei:div">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+               <report xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
         Abstract model violation: p and ab may not contain higher-level structural elements such as div.
@@ -4142,14 +4143,14 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-div-xmlid-ride.sch-tei-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:div[ancestor::tei:body]/@xml:id">
-                      <sch:assert test="matches(., 'div(\d{1,2})(.\d{1,2}){0,2}$')">The xml:id must have the format div[chapter].[subchapter].[subsubchapter] </sch:assert>
-                    </sch:rule>
+               <sch:assert test="matches(., 'div(\d{1,2})(.\d{1,2}){0,2}$')">The xml:id must have the format div[chapter].[subchapter].[subsubchapter] </sch:assert>
+            </sch:rule>
          </pattern>
          <optional>
             <attribute name="type">
@@ -4244,15 +4245,15 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-front-jtei.sch-front-abstract-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:front">
-                  <sch:assert test="tei:div[@type='abstract']">
-                    <sch:name/> must have an abstract (div[@type='abstract']). </sch:assert>
-                </sch:rule>
+               <sch:assert test="tei:div[@type='abstract']">
+                  <sch:name/> must have an abstract (div[@type='abstract']). </sch:assert>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.change.attribute.change"/>
@@ -4311,16 +4312,16 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-back-jtei.sch-back-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                       context="tei:back">
-                  <sch:assert test="tei:div[@type='bibliography']/tei:listBibl">
-                    <sch:name/> must have a bibliography (div[@type="bibliography"]), which must be
+               <sch:assert test="tei:div[@type='bibliography']/tei:listBibl">
+                  <sch:name/> must have a bibliography (div[@type="bibliography"]), which must be
                     organized inside a listBibl element. </sch:assert>
-                </sch:rule>
+            </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -4341,6 +4342,48 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </attribute>
       </optional>
    </define>
+   <define name="space">
+      <element name="space">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of a significant space in the text. [11.4.1. Space]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="model.descLike"/>
+               <ref name="model.certLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.change.attribute.change"/>
+         <ref name="att.typed.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <optional>
+            <attribute name="resp">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) (responsible party) indicates the individual responsible for identifying and measuring the space</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="dim">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dimension) indicates whether the space is horizontal or vertical.</a:documentation>
+               <choice>
+                  <value>horizontal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the space is horizontal.</a:documentation>
+                  <value>vertical</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the space is vertical.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="subst">
       <element name="subst">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(substitution) groups one or more deletions (or surplus text) with one or more additions when the combination is to be regarded as a single intervention in the text. [11.3.1.5. Substitutions]</a:documentation>
@@ -4355,12 +4398,12 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ride-subst-substContents1-constraint-assert-38">
             <rule context="tei:subst">
-               <assert xmlns:xi="http://www.w3.org/2001/XInclude"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+               <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:eg="http://www.tei-c.org/ns/Examples"
                        xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                        test="child::tei:add and (child::tei:del or child::tei:surplus)">
                   <name/> must have at least one child add and at least one child del or surplus</assert>
@@ -4389,160 +4432,159 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
       </choice>
    </start>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
            prefix="sch"
-           uri="http://purl.oclc.org/dsdl/schematron"/> 
+           uri="http://purl.oclc.org/dsdl/schematron"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
            prefix="tei"
-           uri="http://www.tei-c.org/ns/1.0"/> 
+           uri="http://www.tei-c.org/ns/1.0"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
            prefix="xs"
-           uri="http://www.w3.org/2001/XMLSchema"/> 
+           uri="http://www.w3.org/2001/XMLSchema"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
            prefix="xsl"
-           uri="http://www.w3.org/1999/XSL/Transform"/> 
+           uri="http://www.w3.org/1999/XSL/Transform"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
            prefix="eg"
            uri="http://www.tei-c.org/ns/Examples"/>
    <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-                <xsl:key name="idrefs"
-               match="@target[starts-with(normalize-space(.), '#')]|@rendition[starts-with(normalize-space(.), '#')]"
+      <xsl:key match="@target[starts-with(normalize-space(.), '#')]|@rendition[starts-with(normalize-space(.), '#')]"
+               name="idrefs"
                use="for $i in tokenize(., '\s+') return substring-after($i, '#')"/>
-                <sch:let name="double.quotes" value="'[&#34;“”]'"/>
-                <sch:let name="apos.typographic" value="'[‘’]'"/>
-                <sch:let name="apos.straight" value="''''"/>
-                <sch:let name="quotes" value="concat('[', $apos.straight, '&#34;]')"/>
-                <sch:let name="div.types.front"
+      <sch:let name="double.quotes" value="'[&#34;“”]'"/>
+      <sch:let name="apos.typographic" value="'[‘’]'"/>
+      <sch:let name="apos.straight" value="''''"/>
+      <sch:let name="quotes" value="concat('[', $apos.straight, '&#34;]')"/>
+      <sch:let name="div.types.front"
                value="('abstract', 'acknowledgements', 'authorNotes', 'editorNotes', 'corrections', 'dedication')"/>
-                
-                <sch:let name="tei.version.url"
+      <sch:let name="tei.version.url"
                value="'https://jenkins.tei-c.org/job/TEIP5/lastStableBuild/artifact/P5/release/doc/tei-p5-doc/VERSION'"/>
-                <sch:let name="tei.version"
+      <sch:let name="tei.version"
                value="if (unparsed-text-available($tei.version.url)) then normalize-space(unparsed-text($tei.version.url)) else ()"/>
-              </sch:pattern>
+   </sch:pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-localLinkTarget-constraint-rule-46">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="@*[self::attribute(corresp)|self::attribute(target)|self::attribute(from)|self::attribute(to)|self::attribute(ref)|self::attribute(rendition)|self::attribute(resp)|self::attribute(source)][not(ancestor::eg:egXML)][not(ancestor::tei:category)][some $i in tokenize(., '\s+') satisfies starts-with($i, '#')]">
-                <sch:let name="orphan.pointers"
+         <sch:let name="orphan.pointers"
                   value="for $p in tokenize(., '\s+')[starts-with(., '#')] return if (not(id(substring-after($p, '#')))) then $p else ()"/>
-                <sch:report test="exists($orphan.pointers)"> There's no local target for
+         <sch:report test="exists($orphan.pointers)"> There's no local target for
                     <sch:value-of select="if (count($orphan.pointers) &gt; 1) then 'these pointers' else 'this pointer'"/>: <sch:value-of select="string-join($orphan.pointers, ', ')"/>. Please make sure
                   you're referring to an existing @xml:id value. </sch:report>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-renditionTarget-constraint-rule-47">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="@rendition">
-                <sch:let name="orphan.pointers"
+         <sch:let name="orphan.pointers"
                   value="for $p in tokenize(., '\s+')[starts-with(., '#')] return for $id in id(substring-after($p, '#'))[not(self::tei:rendition)] return $p"/>
-                <sch:report test="exists($orphan.pointers)">
-                  <sch:value-of select="if (count($orphan.pointers) &gt; 1) then 'These pointers don''t' else 'This pointer doesn''t'"/> point to a &lt;rendition&gt; target: <sch:value-of select="string-join($orphan.pointers, ', ')"/>. </sch:report>
-              </sch:rule>
+         <sch:report test="exists($orphan.pointers)">
+            <sch:value-of select="if (count($orphan.pointers) &gt; 1) then 'These pointers don''t' else 'This pointer doesn''t'"/> point to a &lt;rendition&gt; target: <sch:value-of select="string-join($orphan.pointers, ', ')"/>. </sch:report>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-quoteDelim-constraint-rule-48">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:title[@level eq 'a']|tei:mentioned|tei:soCalled|tei:quote|tei:q">
-                <sch:assert xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                     test="not(matches(., concat('^', $double.quotes, '|', $double.quotes, '$')))"
-                     sqf:fix="quotation.remove"> Quotation mark delimiters are not allowed for
+         <sch:assert xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+                     sqf:fix="quotation.remove"
+                     test="not(matches(., concat('^', $double.quotes, '|', $double.quotes, '$')))"> Quotation mark delimiters are not allowed for
                   <sch:name/>: they are completed at processing time via XSLT. </sch:assert>
-                <sqf:fix xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+         <sqf:fix xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                   id="quotation.remove">
-                  <sqf:description>
-                    <sqf:title>Remove quotation marks.</sqf:title>
-                  </sqf:description>
-                  <sqf:stringReplace regex="{concat('^', $double.quotes, '|', $double.quotes, '$')}"/>
-                </sqf:fix>
-              </sch:rule>
+            <sqf:description>
+               <sqf:title>Remove quotation marks.</sqf:title>
+            </sqf:description>
+            <sqf:stringReplace regex="{concat('^', $double.quotes, '|', $double.quotes, '$')}"/>
+         </sqf:fix>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-crossref-id-constraint-rule-49">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:body//tei:div[not(@type='editorialIntroduction')]|tei:figure|tei:table"
                 role="warning">
-                <sch:assert test="@xml:id"> You're strongly advised to add an @xml:id attribute to
+         <sch:assert test="@xml:id"> You're strongly advised to add an @xml:id attribute to
                   <sch:name/> to ease formal cross-referencing with (ptr|ref)[@type='crossref']
                 </sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-formalCrossref-constraint-rule-50">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="text()[not(ancestor::tei:eg|ancestor::eg:egXML|ancestor::tei:code|ancestor::tei:tag|ancestor::tei:ref[not(@type='crossref')])]"
                 role="warning">
-                <sch:assert test="not(matches(., '(table|figure|example|section) \d+([.,]\d+)* ((above)|(below))', 'i'))"> Please replace literal references to tables, figures, examples, and sections
+         <sch:assert test="not(matches(., '(table|figure|example|section) \d+([.,]\d+)* ((above)|(below))', 'i'))"> Please replace literal references to tables, figures, examples, and sections
                   with a formal crosslink: (ptr|ref)[@type="crossref"] </sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-crossrefTargetType-constraint-rule-51">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:ptr[@type='crossref']|tei:ref[@type='crossref']">
-                <sch:let name="orphan.pointers"
+         <sch:let name="orphan.pointers"
                   value="for $p in tokenize(@target, '\s+')[starts-with(., '#')] return for $id in id(substring-after($p, '#'))[not(self::tei:div or self::tei:figure or self::tei:table or self::tei:note or self::tei:p)] return $p"/>
-                <sch:report test="exists($orphan.pointers)"> Cross-links
+         <sch:report test="exists($orphan.pointers)"> Cross-links
                   (<sch:name/>[@type="crossref"]) should be targeted at div, figure, table, or note
                   elements. The target of <sch:value-of select="if (count($orphan.pointers) &gt; 1) then 'these pointers' else 'this pointer'"/> doesn't satisfy this condition: <sch:value-of select="string-join($orphan.pointers, ', ')"/>. </sch:report>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-crossrefType-constraint-rule-52">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:ptr[not(@type='crossref')]|tei:ref[not(@type='crossref')]">
-                <sch:report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-                     test="id(substring-after(@target, '#'))/(self::tei:div|self::tei:figure|self::tei:table)"
-                     sqf:fix="crossreftype.add"> Please type internal cross-references as 'crossref'
+         <sch:report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+                     sqf:fix="crossreftype.add"
+                     test="id(substring-after(@target, '#'))/(self::tei:div|self::tei:figure|self::tei:table)"> Please type internal cross-references as 'crossref'
                   (<sch:name/>[@type="crossref"]). </sch:report>
-                <sqf:fix xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+         <sqf:fix xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
                   id="crossreftype.add">
-                  <sqf:description>
-                    <sqf:title>Add @type='crossref'.</sqf:title>
-                  </sqf:description>
-                  <sqf:add match="."
+            <sqf:description>
+               <sqf:title>Add @type='crossref'.</sqf:title>
+            </sqf:description>
+            <sqf:add match="."
                      node-type="attribute"
-                     target="type"
-                     select="'crossref'"/>
-                </sqf:fix>
-              </sch:rule>
+                     select="'crossref'"
+                     target="type"/>
+         </sqf:fix>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="tei_ride-jtei.sch-centuries-constraint-rule-53">
       <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="text()[not(ancestor::tei:quote or ancestor::tei:title)]">
-                <sch:assert test="not(matches(., '\d\d?((th)|(st)|(rd)|(nd))[- ]centur((y)|(ies))', 'i'))">
+         <sch:assert test="not(matches(., '\d\d?((th)|(st)|(rd)|(nd))[- ]centur((y)|(ies))', 'i'))">
                   Centuries such as "the nineteenth century" should be spelled out, not written with
                   digits. </sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
 </grammar>
