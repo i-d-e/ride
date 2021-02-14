@@ -16,7 +16,7 @@ The contents of this repository are published under CC-BY license. For a summary
 
 ## Contact
 
-The repository is run by members of the Institute for Documentodatalogy and Scholarly Editing. For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
+The repository is run by members of the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
 
 
 
