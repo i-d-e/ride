@@ -1,0 +1,1761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.13.5">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>A Review of confessio.ie, or Practical Thoughts on Digital Editing in Classics </title>
+        <author>
+          <name>
+            <forename>Yannick</forename>
+            <surname>Brandenburg</surname>
+          </name>
+          <idno type="ORCID">https://orcid.org/0000-0002-3429-3118</idno>
+          <affiliation>
+            <orgName>University of Cologne</orgName>
+            <placeName/>
+          </affiliation>
+          <email>yannick.brandenburg@uni-koeln.de</email>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+        <date when="2020-12">December 2020</date>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-13/patrick-confessio</idno>
+        <idno type="DOI">10.18716/ride.a.13.5</idno>
+        <idno type="archive"
+          >https://github.com/i-d-e/ride/blob/archives/issue13/patrick-confessio.zip?raw=true</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="j">RIDE - A review journal for digital editions and resources</title>
+        <editor>Ulrike Henny-Krahmer</editor>
+        <editor>Frederike Neuber</editor>
+        <editor>Patrick Sahle</editor>
+        <editor role="managing">Ulrike Henny-Krahmer</editor>
+        <editor role="managing">Frederike Neuber</editor>
+        <editor role="technical">Bernhard Assmann</editor>
+        <editor role="technical">Jana Klinger</editor>
+        <biblScope unit="issue" n="13">Digital Scholarly Editions</biblScope>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-13</idno>
+      </seriesStmt>
+      <notesStmt>
+        <relatedItem type="reviewed_resource">
+          <bibl>
+            <title>The Saint Patrick’s Confessio Hypertext Stack Project</title>
+            <editor>Anthony Harvey, Jane Conroy, Franz Fischer</editor>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Anthony Harvey</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Jane Conroy</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Franz Fischer</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Hayley Humphrey</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Alessio Frenda</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Roman Bleier</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Daniela Schulz</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Programmer</resp>
+              <persName>Niall O’Leary</persName>
+            </respStmt>
+            <date type="publication">2011</date>
+            <idno type="URI">https://www.confessio.ie/#</idno>
+            <date type="accessed">2020-09-02</date>
+          </bibl>
+        </relatedItem>
+        <relatedItem type="reviewing_criteria">
+          <bibl>
+            <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing Scholarly
+              Digital Editions</ref>
+          </bibl>
+        </relatedItem>
+      </notesStmt>
+      <sourceDesc>
+        <p>born digital</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+          <category xml:id="documentation">
+            <category xml:id="bibl_desc">
+              <catDesc>
+                <ref target="#K1.2">cf. Catalogue 1.2</ref>
+              </catDesc>
+              <catDesc>Is it easily possible to describe the project bibliographically along the
+                schema "responsible editors, publishing/hosting institution, year(s) of
+                publishing"?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="contributors">
+              <catDesc>
+                <ref target="#K1.4">cf. Catalogue 1.4</ref>
+              </catDesc>
+              <catDesc>Are the contributors (editors, institutions, associates) of the project fully
+                documented?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="contacts">
+              <catDesc>
+                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+              </catDesc>
+              <catDesc>Does the project list contact persons?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="selection">
+              <category xml:id="explained">
+                <catDesc>
+                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                </catDesc>
+                <catDesc>Is the selection of materials of the project explicitly
+                  documented?</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="reasonable">
+                <catDesc>
+                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                </catDesc>
+                <catDesc>Is the selection by and large reasonable?</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="data_archive">
+              <catDesc>
+                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the documentation include information about the long term sustainability
+                of the basic data (archiving of the data)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="aims">
+              <catDesc>
+                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="methods">
+              <catDesc>
+                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="data_model">
+              <catDesc>
+                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Does the project document which data model (e.g. TEI) has been used and for
+                what reason?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="help">
+              <catDesc>
+                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts concerning the use of the
+                project?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="citation">
+              <catDesc>
+                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or
+                a part of it)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="complete">
+              <catDesc>
+                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                further modifications and additions)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="institutional_curation">
+              <catDesc>
+                <ref target="#K4.13">cf. Catalogue 4.13</ref>
+              </catDesc>
+              <catDesc>Does the project provide information about institutional support for the
+                curation and sustainability of the project?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="contents">
+            <category xml:id="previous_edition">
+              <catDesc>
+                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="materials_used">
+              <catDesc>
+                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Does the edition make use of these previous editions?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="introduction">
+              <catDesc>
+                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer an introduction to the subject-matter (the author(s),
+                the work, its history, the theme, etc.) of the project?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="bibliography">
+              <catDesc>
+                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a bibliography?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="commentary">
+              <catDesc>
+                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                passages, interpretation, etc.)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="contexts">
+              <catDesc>
+                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project include or link to external resources with contextual
+                material?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="images">
+              <catDesc>
+                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of digitised sources?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="image_quality">
+              <catDesc>
+                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="transcriptions">
+              <catDesc>
+                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc> Is the text fully transcribed?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="text_quality">
+              <catDesc>
+                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                etc.)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="indices">
+              <catDesc>
+                <ref target="#K4.5">cf. Catalogue 4.5</ref>
+              </catDesc>
+              <catDesc>Does the project feature compilations indices, registers or visualisations
+                that offer alternative ways to access the material?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="documents">
+              <category xml:id="doc_type">
+                <catDesc>
+                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                </catDesc>
+                <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                <category xml:id="single_manuscript">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="single_work">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="collection_of_texts">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="collected_works">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="papers">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="archival_holding">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="charters">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="letters">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="diary">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category corresp="#other">
+                  <catDesc>
+                    <num type="boolean" value="1"/>
+                  </catDesc>
+                  <category corresp="#free">
+                    <desc>manuscripts</desc>
+                  </category>
+                </category>
+              </category>
+              <category xml:id="doc_time">
+                <catDesc>
+                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                </catDesc>
+                <catDesc>What era(s) do the documents belong to?</catDesc>
+                <category xml:id="classics">
+                  <catDesc>
+                    <num type="boolean" value="1"/>
+                  </catDesc>
+                </category>
+                <category xml:id="medieval">
+                  <catDesc>
+                    <num type="boolean" value="1"/>
+                  </catDesc>
+                </category>
+                <category xml:id="early_modern">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="modern">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+              </category>
+            </category>
+            <category xml:id="subject">
+              <catDesc>
+                <ref target="#K1.3">cf. Catalogue 1.3</ref>
+              </catDesc>
+              <catDesc>Which perspective(s) do the editors take towards the edited material? How can
+                the edition be classified in general terms?</catDesc>
+              <category xml:id="history">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="philology_literary_studies">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="philosophy_theology">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="history_of_science">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="musicology">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="art_history">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+            </category>
+          </category>
+          <category xml:id="presentation">
+            <category xml:id="spin_offs">
+              <catDesc>
+                <ref target="#K4.11">cf. Catalogue 4.11</ref>
+              </catDesc>
+              <catDesc>Does the project offer any spin-offs?</catDesc>
+              <category xml:id="app">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="mobile">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="PDF">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+              <category corresp="#none">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="browse_by">
+              <catDesc>
+                <ref target="#K4.3">cf. Catalogue 4.3</ref>
+              </catDesc>
+              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
+              <category xml:id="authors">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="works">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="versions">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="structure">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="pages">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="browse_by_documents">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="type_of_material">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="browse_by_images">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="dates">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="persons">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="places">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+            </category>
+          </category>
+          <category xml:id="search">
+            <category xml:id="simple">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer a simple search?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="advanced">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer an advanced search?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="wildcard">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search support the use of wildcards?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="index">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer an index of the searched field?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="suggest">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="helptext">
+              <catDesc>
+                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts for the search?</catDesc>
+              <catDesc>
+                <num type="booleanX" value="1"/>
+              </catDesc>
+            </category>
+          </category>
+          <category xml:id="aim">
+            <category xml:id="audience">
+              <catDesc>
+                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+              </catDesc>
+              <catDesc>Who is the intended audience of the project?</catDesc>
+              <category xml:id="scholars">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="interested_public">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="typology">
+              <catDesc>
+                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+              </catDesc>
+              <catDesc>Which type fits best for the reviewed project?</catDesc>
+              <category xml:id="facsimile_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="archive_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="documentary_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="diplomatic_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="genetic_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="work_critical_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="text_critical_edition">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="enriched_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="database_edition">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="digital_library">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="typology_collection_of_texts">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+              <category corresp="#none">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category xml:id="method">
+            <catDesc rend="label">Method</catDesc>
+            <category xml:id="critical_editing">
+              <catDesc>
+                <ref target="#K3.6">cf. Catalogue 3.6</ref>
+              </catDesc>
+              <catDesc>In how far is the text critically edited?</catDesc>
+              <category xml:id="transmission_examined">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="palaeographic_annotations">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="normalization">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="variants">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="emendation">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="commentary_notes">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+              <category corresp="#none">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="standards">
+              <catDesc>
+                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <category xml:id="XML">
+                <catDesc>Is the data encoded in XML?</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="standardized_data_model">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+                <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
+              </category>
+            </category>
+            <category xml:id="text_type">
+              <catDesc>
+                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+              </catDesc>
+              <catDesc>Which kinds or forms of text are presented?</catDesc>
+              <category xml:id="facsimiles">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="diplomatic_transcription">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="edited_text">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="translations">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="commentaries">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="semantic_data">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category xml:id="technical_accessability">
+            <category xml:id="persistent_identification">
+              <catDesc>
+                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Are there persistent identifiers and an addressing system for the edition
+                and/or parts/objects of it and which mechanism is used to that end?</catDesc>
+              <category xml:id="DOI">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="ARK">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="URN">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="PURL.ORG">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+              <category xml:id="persistent_URLs">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#none">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="interfaces">
+              <catDesc>
+                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse
+                of the data of the project in other contexts?</catDesc>
+              <category xml:id="OAI-PMH">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="REST">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="general_API">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category corresp="#other">
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <category corresp="#free">
+                  <desc/>
+                </category>
+              </category>
+              <category corresp="#none">
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="open_access">
+              <catDesc>Is the edition Open Access?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="basic_data_accessible">
+              <catDesc>
+                <ref target="#K4.12">cf. Catalogue 4.12</ref>
+              </catDesc>
+              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of
+                the edition (e.g. for a page)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="download">
+              <catDesc>
+                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
+              <catDesc>
+                <num type="boolean" value="0"/>
+              </catDesc>
+            </category>
+            <category xml:id="reuse">
+              <catDesc>
+                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can you use the data with other tools useful for this kind of
+                content?</catDesc>
+              <catDesc>
+                <num type="boolean" value="1"/>
+              </catDesc>
+            </category>
+            <category xml:id="rights">
+              <category xml:id="declared">
+                <catDesc>
+                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                </catDesc>
+                <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="license">
+                <catDesc>
+                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                </catDesc>
+                <catDesc>Under what license are the contents released?</catDesc>
+                <category xml:id="CC0">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY-ND">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY-NC">
+                  <catDesc>
+                    <num type="boolean" value="1"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY-SA">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY-NC-ND">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="CC-BY-NC-SA">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="PDM">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category corresp="#other">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                  <category corresp="#free">
+                    <desc/>
+                  </category>
+                </category>
+                <category xml:id="no_license">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+                <category xml:id="multiple_licenses">
+                  <catDesc>
+                    <num type="boolean" value="0"/>
+                  </catDesc>
+                </category>
+              </category>
+            </category>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en"/>
+      </langUsage>
+      <textClass>
+        <keywords xml:lang="en">
+          <term>classics</term>
+          <term>critical apparatus</term>
+          <term>medieval latin</term>
+          <term>critical edition</term>
+          <term>digitization</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div type="abstract">
+        <p>The Hypertext Stack Project (confessio.ie), which digitizes Bieler’s 1950/51 print
+          edition of Patrick of Ireland’s letters, is one of few critical digital editions in
+          classical scholarship. Hence, besides supplying much supporting material such as
+          translations or images of manuscripts, it aims to serve as a model for digitally editing
+          (late) ancient texts. Confessio.ie succeeds at showing that TEI can be applied to
+          classical texts as well, which has been doubted, and paves the way for a more hypertextual
+          understanding of a textual tradition. The project has worked out a by and large suitable
+          layout for a digital edition of a text with a medieval manuscript tradition. However,
+          future editors will need to give deeper thought to matters such as accurately encoding and
+          presenting an apparatus criticus and improving the user friendliness of the interface.
+          Further, because of inaccuracies in the digital apparatus users will want to exploit
+          confessio.ie’s rich resources not instead of, but only next to Bieler’s print edition.</p>
+      </div>
+    </front>
+    <body>
+      <!-- Ab hier Reviewtext, inkl. Fußnoten/Bilder/etc.; 
+      tei:div, tei:p, tei:figure, tei:note bekommen mit xml:id eine fortlaufende Nummerierung,
+      siehe Review von Victorians und LDM -->
+      <div xml:id="div1">
+        <head>Introduction</head>
+        <p xml:id="p1">Patrick of Ireland, who in the fifth century evangelized the Irish, in
+          modern-day popular culture arguably counts among the most well-known, certainly among the
+          most influential Christian saints. About his life and deeds legends circulate, many of
+          which find their origin in a seventh-century Life of Patrick written by the Irish monk,
+          Muirchú. Two Latin texts have come down to us from Late Antiquity that can undoubtedly be
+          attributed to Patrick himself: the so-called <emph>Confessio</emph> and the
+            <emph>Epistola</emph>. Both of them are written in epistolary form and are united in the
+          tradition as the first and second books, respectively, of the <emph>Libri Epistolarum
+            Sancti Patricii Episcopi</emph>. These letters have been edited in one of the few
+          editions of ancient texts that come close to being definitive, by Ludwig Bieler (Bieler
+          1950; Bieler 1951).<note xml:id="ftn1">Collectively and under the same title, this work
+            has been re-issued by the Irish Manuscripts Commission (Dublin 1952) and – together with
+            Bieler 1966 – re-published by the Royal Irish Academy (Bieler 1993).</note>
+        </p>
+        <p xml:id="p2">The project under review here, called ‘Saint Patrick’s <emph>Confessio</emph>
+          Hypertext Stack Project’ (in short: confessio.ie, or ‘HyperStack’), aims at enabling
+          everyone, not least those not to form part of the scholarly community, to “read what St
+          Patrick actually wrote <emph>in his own words</emph>” (italics original). It is Bieler’s
+          edition which is at its core. Both Bieler’s work and confessio.ie are related to the same
+          larger project, the Dictionary of Medieval Latin from Celtic Sources (DMLCS)<note
+            xml:id="ftn2">Cf. the website of the DMLCS, &lt;<ref
+              target="https://web.archive.org/save/http://journals.eecs.qub.ac.uk/DMLCS/"
+              >https://web.archive.org/save/http://journals.eecs.qub.ac.uk/DMLCS/</ref>&gt;. Besides
+            numerous spin-offs and ancillary papers, the first volume of the dictionary has been
+            published, in form of an index (Harvey and Power 2005).</note> of the Royal Irish
+          Academy: Bieler’s reprint of 1993 has been published as Ancillary Publications IV of the
+          DMLCS.</p>
+        <p xml:id="p3">Confessio.ie came into being as an initiative by the DMLCS and its editor,
+          Anthony Harvey, who acted as the principal investigator. Most of the work has been carried
+          out by the post-doctoral researcher, Franz Fischer, between 2008 and 2011. They have been
+          supported by a number of short- to mid-term-interns. For the technical realization, the
+          project relied on the Digital Humanities Observatory of the Royal Irish Academy.<note
+            xml:id="ftn3">&lt;<ref
+              target="https://web.archive.org/web/20191104161426/https://www.ria.ie/research-projects/archive/digital-humanities-observatory"
+              >https://web.archive.org/web/20191104161426/https://www.ria.ie/research-projects/archive/digital-humanities-observatory</ref>&gt;.</note>
+          The Royal Irish Academy has funded the project and is now responsible for its curation and
+          long-term sustainment. As the ongoing DMLCS project has been put in charge of that, the
+          long-term availability of confessio.ie is reasonably safe. However, there is no guidance
+          how to cite the digital edition.</p>
+        <p xml:id="p4"> Confessio.ie was launched already in September 2011.<note xml:id="ftn4">Only
+            one review, to my knowledge, has been published (Ó Dochartaigh 2012); a more user
+            centered approach is taken by Caria and Mathiak 2018.</note> There are a number of
+          reasons why it still appears worthwhile to review this resource after almost a decade has
+          passed. First, confessio.ie is to date the most comprehensive venture to produce a digital
+          critical edition within classical philology, and one of only a handful of by and large
+          successful editions in this field.<note xml:id="ftn5">One may think of, e.g., Daniel Kiss’
+            Catullus Online, which however rightfully presents itself as a repertory rather than an
+            edition (<ref
+              target="https://web.archive.org/web/20200818110425/http://www.catullusonline.org/CatullusOnline/index.php"
+              >https://web.archive.org/web/20200818110425/http://www.catullusonline.org/CatullusOnline/index.php</ref>),
+            or the test edition of Galen in the Corpus Medicorum Graecorum project (<ref
+              target="https://web.archive.org/web/20191114230638/http://pom.bbaw.de/cmg/"
+              >https://web.archive.org/web/20191114230638/http://pom.bbaw.de/cmg/</ref>). The
+            numerous projects within, e.g., digital epigraphy or papyrology, do not bear on this
+            matter because they edit documents rather than texts transmitted in, at least
+            potentially, more than one document. The same holds for scholia, which are extremely
+            hard to transfer into a print edition (cf., e.g., Mastronarde 2010ff. or the Munich
+            based project to edit glosses on Persius and Martianus Capella &lt;<ref
+              target="https://web.archive.org/web/20191021140937/https://www.mueze.uni-muenchen.de/editing_glosses/index.html"
+              >https://web.archive.org/web/20191021140937/https://www.mueze.uni-muenchen.de/editing_glosses/index.html</ref>&gt;).
+            Useful tools for finding (one’s way through) digital editions not only of classical
+            texts are two on line catalogues (Sahle 2008ff.; Franzini 2012ff.), and, with a scope
+            far more narrow, that is encompassing only editions that are both critical and of Greek
+            or Latin texts, &lt;<ref
+              target="https://web.archive.org/web/20191021080038/https://wiki.digitalclassicist.org/Digital_Critical_Editions_of_Texts_in_Greek_and_Latin"
+              >https://web.archive.org/web/20191021080038/https://wiki.digitalclassicist.org/Digital_Critical_Editions_of_Texts_in_Greek_and_Latin</ref>&gt;.</note>
+          Confessio.ie may thus be approached as a model by anyone who considers producing a digital
+          scholarly edition of a classical text. Second, it stands out among digital scholarly
+          editions due to its outreach focus. Third, within Classics and apart from discussions of
+          digital editions as such (e.g., Monella 2018, 143), confessio.ie still tends to be largely
+          neglected as a critical edition. </p>
+      </div>
+      <div xml:id="div2">
+        <head>Aims</head>
+        <p xml:id="p5"> The ‘HyperStack’ aims to serve both the scholarly community and the wider
+          public. For the former, it strives to be a prime digital tool for textual research on
+          Patrick. For the latter, it aims to disseminate information about the historical Patrick
+          as he emerges from his writings. This two-fold objective led the project to assemble a
+          vast number of different, if mostly textual documents that bear on Patrick and his
+          writings. </p>
+        <p xml:id="p6"> Confessio.ie centers around a ‘hypertextual’ approach to its text(s)
+          (Lavagnino 1997). This means, the text is not just regarded as one Latin text transmitted
+          in different forms, but as a multi-layered entity consisting of many other things besides
+          it (which still forms the core): Manuscripts, translations, earlier and recent editions
+          and the like all form part of the same hypertext (van Zundert 2016, 103). Confessio.ie has
+          been set up with this uniquely digital approach in mind (Fischer 2013, 82–84). </p>
+        <p xml:id="p7">In terms of academic outreach, the prime goal of the project is “to give
+          Irish society as direct access as possible to the historical Patrick”.<note xml:id="ftn6"
+              >&lt;<ref
+              target="https://web.archive.org/web/20191024172507/https://www.confessio.ie/about/hyperstack#"
+              >https://web.archive.org/web/20191024172507/https://www.confessio.ie/about/hyperstack#</ref>&gt;.</note>
+          Apart from providing translations into various languages, the project group therefore have
+          intended to provide the reader with much supporting material. Articles und other texts on
+          the website address issues such as the context in which Patrick wrote<note xml:id="ftn7"
+              >&lt;<ref
+              target="https://web.archive.org/web/20191009105909/https://confessio.ie/more/article_kelly#"
+              >https://web.archive.org/web/20191009105909/https://confessio.ie/more/article_kelly#</ref>&gt;.</note>
+          and, perhaps even more importantly, where the widespread legends about the Irish patron
+          come from (see below on supplements).</p>
+        <p xml:id="p8"> When it comes to confessio.ie as a research tool, the project aims on the
+          one hand to make the information contained in Bieler’s editions digitally available.<note
+            xml:id="ftn8">Using the most up-to-date, most reliable edition in digital and
+            digitization projects is, contrary to what one might reasonably expect, rather the
+            exception than the rule, cf. e.g. the Library of Latin Texts (&lt;<ref
+              target="https://web.archive.org/web/20190215000000*/https://about.brepolis.net/library-of-latin-texts/"
+              >https://web.archive.org/web/20190215000000*/https://about.brepolis.net/library-of-latin-texts/</ref>&gt;),
+            the Thesaurus Linguae Graecae (&lt;<ref
+              target="https://web.archive.org/web/20190924081450/http://stephanus.tlg.uci.edu/Iris/inst/csearch.jsp"
+              >https://web.archive.org/web/20190924081450/http://stephanus.tlg.uci.edu/Iris/inst/csearch.jsp</ref>&gt;)
+            or the database of the Packhard Humanities Institute (&lt;<ref
+              target="https://web.archive.org/web/20190804110250/https://latin.packhum.org/index"
+              >https://web.archive.org/web/20190804110250/https://latin.packhum.org/index</ref>&gt;).</note>
+          On the other hand, it enables researchers to directly access images of all eight extant
+          manuscripts and a number of relevant publications. Confessio.ie wants to be the one place
+          where all the important (textual) information on Patrick’s works is collected. But the
+          project has yet another, farther reaching aim, as it aims to be a “case study of how to
+          deal with text transmission and how to deal with the academic heritage of the print
+            era”.<note xml:id="ftn9"
+            >&lt;https://web.archive.org/save/https://www.confessio.ie/about/hyperstack&gt;, section
+            5.2.</note>
+        </p>
+      </div>
+      <div xml:id="div3">
+        <head>Scope and Contents</head>
+        <p xml:id="p9">
+          <figure xml:id="img1">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-1.png"/>
+            <head type="legend">The start page of confessio.ie.</head>
+          </figure> Confessio.ie features an enormous, and mostly well chosen, range of material
+          that is of interest to scholars and non-scholars alike. The project’s website is well
+          structured and particularly strong in guiding the visitor straight to the textual version
+          she needs. The focus of the home page’s presentation is the text of Patrick’s
+            <emph>Confessio</emph>: There, the user immediately encounters the text’s first
+          paragraph in an English translation and is at the same time invited to read on in a
+          language of her choice (<ref type="crossref" target="#img1">see fig. 1</ref>). By this
+          means, confessio.ie strongly signals that the <emph>text</emph> of Patrick’s work is the
+          centerpiece of the project. </p>
+        <p xml:id="p10">If the user does not follow the suggestion to immediately read on, she can
+          approach the self-explaining, well laid out top menu. This will lead her to
+          ‘confessio/epistola’, ‘manuscripts/prints’, ‘special features’, and an ‘about’ section.
+          Less highlighted are a useful introductory video<note xml:id="ftn10">Available from
+              &lt;<ref
+              target="https://web.archive.org/save/https://www.youtube.com/watch?v=tBuXnQr4ZSM"
+              >https://web.archive.org/save/https://www.youtube.com/watch?v=tBuXnQr4ZSM</ref>&gt;
+            and embedded into &lt;<ref
+              target="https://web.archive.org/save/https://www.confessio.ie/about/videointroduction#"
+              >https://web.archive.org/save/https://www.confessio.ie/about/videointroduction#</ref>&gt;.
+            Unfortunately there is no link to this video on the website apart from the subpage
+            referred to on the home page.</note> and a link to the publishing house’s offer to
+          purchase confessio.ie’s original English translation of the <emph>Confessio</emph>
+          (McCarthy 2011).</p>
+        <p xml:id="p11">Much material is downloadable in the ‘downloads’ subsection of the ‘special
+          features’ section. One finds (1) XML files of the critical edition of the Confessio and of
+          the draft of the Epistola, (2) of all translations, (3) of the manuscript descriptions,
+          and (4) PDF files of the editions, transcriptions and facsimiles used in setting up
+          confessio.ie.</p>
+        <div xml:id="div3.1">
+          <head>Confessio.ie as a digital scholarly edition</head>
+          <p xml:id="p12"> The heart of the project is the digital edition of Patrick’s
+              <emph>Confessio</emph>, somewhat less so of his <emph>Epistola</emph> (I will come to
+            this point). The digital edition, as indicated above, is principally a digitization of
+            Bieler’s edition and commentary from 1950/51.<note xml:id="ftn11">Bieler’s text (only)
+              had already at an earlier point been included into the Archive of Celtic-Latin
+              Literature (ACLL) published by Brepols on behalf of DMCLS. I have not been able to
+              access ACLL.</note> In the download section users can access a PDF of this edition
+            (Bieler 1993), which is helpful for those who want to compare the digital to the printed
+            version and to access all its material that does not feature on confessio.ie, such as
+            indices or an introduction. </p>
+          <p xml:id="p13"> For years now, and already when confessio.ie came into being, the
+            well-known TEI P5 guidelines have been the standard rules for encoding a digital
+            scholarly edition (TEI Consortium 2019). The project team adhere to the principles laid
+            out therein and have written their files in XML. Most philologists and historians,
+            however, are likely to be more interested in the user interface of this digital edition.
+            The main question they will ask is: Does confessio.ie address what a scholar (reasonably
+            or not) expects from an edition of a classical text? </p>
+          <p xml:id="p14">
+            <figure xml:id="img2">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-2.png"/>
+              <head type="legend">The layout of the digital edition.</head>
+            </figure> The layout of the digital edition is as straightforward as it is helpful (<ref
+              type="crossref" target="#img2">see fig. 2</ref>). The main text, including the
+            critical sigla known from printed editions<note xml:id="ftn12">Against the custom, but
+              as quite common on the web and elsewhere these days, for additions confessio.ie does
+              not use pointed brackets ⟨ ⟩, but greater/less-than-signs &lt; &gt;.</note> and bible
+            quotations in italics, is on the center-right. The <emph>Confessio</emph> is split into
+            the 62 paragraphs of Bieler’s edition, each of which is presented on a separate page.
+            The resulting text length per page is easily digestible. Most paragraphs are, on today’s
+            ordinary desktop screens, easily presented in whole. Above the text, one finds the title
+            of the respective work (‘I. CONFESSIO’), the number of the paragraph, and a search
+            function. The search is explained in the FAQ (see below); it will search the main text
+            and each of the apparatuses/commentaries. Nothing more advanced than the search for
+            strings is supported. </p>
+          <p xml:id="p15"> Additional and commendable features can be found below the text. Here,
+            users can immediately access other versions of the same text they are reading in Latin:
+            introductory sections and images of each of the manuscripts and earlier editions; and
+            the relevant passage in each of the translations available on confessio.ie. Regrettably
+            though, except for the manuscripts (only via the apparatus criticus!), confessio.ie is
+            unable to display text/edition and image/translation at the same time; and manuscripts
+            are not aligned on any level below page/column (see below). </p>
+          <p xml:id="p16"> Although all of this is useful in its own right, scholars will find the
+            left-hand column the most important one. Here, all three apparatuses from Bieler’s
+            edition are presented: an apparatus criticus, an apparatus fontium, and an apparatus
+            biblicus (in this order, which by reasonably deviating from Bieler’s order (sources,
+            critical, bible) gives the critical apparatus the prominence it deserves). Bieler’s
+            commentary is to be found here too; technically, it has been treated just like the
+            apparatuses. </p>
+          <p xml:id="p17">In the default view, none of the apparatuses is opened. As all of them are
+            displayed next to each paragraph page – whether they contain information or not –, users
+            have to open them individually (or keep them open from the start when navigating through
+            the text) in order to find out if there is any information stored in the respective
+            apparatus in the respective paragraph. Especially the apparatus fontium is not present
+            on many of Bieler’s pages and thus in the digital version it is oftentimes empty. At
+            times I find it a bit distracting to still have it on display all the time.</p>
+          <p xml:id="p18">
+            <figure xml:id="img3">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-3.png"/>
+              <head type="legend">Alignment.</head>
+            </figure>The alignment of apparatuses and text are well done. In writing the XML files,
+            each word of Patrick’s text has been automatically given a unique ID. This ID is named
+            after the page, line, and word-in-line numbers of White’s edition (White 1905), which
+            are also used by Bieler. This allows for an impressively reliable, detailed alignment of
+            text and apparatus. When hovering over an apparatus entry, the corresponding text is
+            highlighted (<ref type="crossref" target="#img3">see fig. 3</ref>). All apparatuses and
+            the commentary are highlighted in the same visual way. </p>
+          <p xml:id="p19"> However, when the mouse hovers over the text, the corresponding sections
+            of the apparatuses are not highlighted. It is not clear if the project team have
+            consciously decided against this (and if they have, why). I for one would have preferred
+            to have also the text direct me to the apparatuses, which would facilitate work when
+            compared to the printed book (Caria and Mathiak 2018, 274). </p>
+          <p xml:id="p20">
+            <figure xml:id="img4">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-4.png"/>
+              <head type="legend">Ms Paris lat. 17626 in the text view.</head>
+            </figure>How the critical apparatus is set up to deal with manuscripts, sigla, and other
+            abbreviations, is a great help.<note xml:id="ftn13">For most traditional classicists,
+              the opportunity to get (links to) manuscripts is probably the foremost advantage when
+              it comes to digital editions.</note> This is achieved by two means. First, in the
+            apparatuses, it is easy to identify all kinds of abbreviations, including sigla of
+            manuscripts and even sigla of groups of manuscripts. All manuscript group sigla are
+            resolved when hovering over them. Abbreviations of modern literature and ancient works
+            are hyperlinked to the respective bibliography or abbreviation list entries. Second, all
+            manuscript sigla, when clicked, will load an image of the relevant page of the
+            manuscript just above the main text of the <emph>Confessio</emph> (<ref type="crossref"
+              target="#img4">see fig. 4</ref>), and thus allow direct access to the sources. </p>
+          <p xml:id="p21">
+            <figure xml:id="img5">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-5.png"/>
+              <head type="legend">The apparatus criticus.</head>
+            </figure>Yet there is a major disadvantage in how the apparatuses are visualized, which
+            makes them appear to lack structure and makes them hard to follow: They fail to signal
+            where an entry starts and where it ends. For example, in <emph>Confessio</emph> 52 the
+            fourth entry in Bieler runs: ‘nihilominus: nihilhominum P. nihil δ’. <ref
+              type="crossref" target="#img5">Fig. 5</ref> shows how this is visualized in the
+            digital edition. It is not intuitively clear that <emph>nihil</emph> belongs to the
+            entry in the line above (esp. when compared to the first, not indented line, which
+            exhibits three – actually four, because ‘mercedem dabam V’ belongs here, too –
+            individual entries). Neither is it intuitively understandable, why some lines (or
+            entries) are indented and some are not, or indeed where an entry starts (how to tell
+            from the layout where, e.g., the entry ‘auidisse V. audissime P.’ starts and ends?). </p>
+          <p xml:id="p22"> The reason for this easily avoidable shortcoming is a decision the
+            project team have made about the details of their XML files. They have transformed
+            Bieler’s apparatus into XML as follows, by using the paragraph tag
+              <code>&lt;p&gt;</code> (simplified): <code>&lt;note&gt;&lt;p&gt;</code>nihilominus:
+            nihilhominum <code>&lt;ref
+              type="witness"&gt;</code>P<code>&lt;/ref&gt;</code>.<code>&lt;/p&gt;&lt;p&gt;</code>nihil
+              <code>&lt;ref type="witness"&gt;</code>Î´<note xml:id="ftn14"> I. e.,
+              δ.</note><code>&lt;/ref&gt;</code>.<code>&lt;/p&gt;&lt;/note&gt;</code>. But those
+            entries which exhibit only a single variant transmitted in a single manuscript or family
+            of manuscripts lack a <code>&lt;p&gt;</code> tag: e.g.,
+            <code>&lt;note&gt;</code>cupiebam <code>&lt;ref
+              type="witness"&gt;</code>Î´<code>&lt;/ref&gt;</code>.<code>&lt;/note&gt;</code> . Now,
+            when it comes to representation on screen, this use of <code>&lt;p&gt;</code> has the
+            unfortunate consequences that the entry ‘nihilominus … nihil δ’ has a line break in
+            between and thus lacks the appearance of a continuous entry. Nor is it, e.g., clear that
+            ‘me cum’ starts a new entry which runs until ‘mecum et P’ in the next line. </p>
+          <p xml:id="p23"><figure xml:id="img6">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-6.png"/>
+              <head type="legend">The commentary.</head>
+            </figure> In the same vein, the commentary looks crowded, although contentwise it isn’t.
+            Technically the commentary is not treated differently from any of the apparatuses. Each
+            entry is identified by a <code>&lt;note&gt;</code> tag. Each commentary entry is
+            separated by an <code>&lt;ab&gt;</code> tag (in the print edition, they are not aligned
+            to the text on any sub-paragraph level either). This is only rendered by a dash (—)
+            which is hard to make out within the text of the commentary (<ref type="crossref"
+              target="#img6">see fig. 6</ref>). This visualization makes the commentary quite
+            difficult to read, at least for my eye. Other options, e.g., beginning a new paragraph
+            or highlighting the lemma, would certainly find more appreciation. </p>
+          <p xml:id="p24">By and large, the digital edition of confessio.ie is a digitization of
+            Bieler’s print edition. As text editions are the foundation of all further research in
+            any philology, accuracy in informing readers about manuscript readings is indispensable
+            (Reeve 2000, 200–201). In the case of confessio.ie, one will not ask for an accurate
+            representation of the manuscript evidence, but of Bieler’s edition.</p>
+          <p xml:id="p25">In order to judge the reliability of the work, I have taken random
+            samples. The main text has been well proofread and is, as far as I am aware, free of
+            errors. It accurately reproduces even interpunction and italicization. This claim cannot
+            unfortunately be held for the critical apparatus. The apparatus criticus is the
+            centerpiece of a scholarly edition und its quality therefore can’t be neglected (Tarrant
+            2016, 128–40; Fischer 2019). In my samples, I have come across the following deviations
+            from Bieler’s edition (I give Bieler’s reading first):<note xml:id="ftn15">I have not
+              regularly checked if the deviations tacitly emend an error made by Bieler, but where I
+              have, I found his readings confirmed.</note> 17 (239,22 White) <emph>quidam</emph> C] <emph>quidam</emph> G; 17
+            (239,26) <emph>notam</emph> C] <emph>notam</emph> G; 20 (241,15) <emph>quandiu</emph> D] <emph>quamdiu</emph> D; 20 (241,16) <emph>mēbrorum</emph><note
+              xml:id="ftn16">The XML files are encoded in UTF-8, so there should not have been
+              technical constraints that prevented the project from using special characters of this
+              kind. And cf., e.g., 41 (248,8) <emph>sc̄orum</emph>, 59 (252,13)
+              <emph>illū</emph>.</note> C] <emph>mebrorum</emph> C; 28 (244,7) <emph>hiberionē</emph> G] <emph>hiberione</emph> G; 46
+            (249,24) <emph>postᵗergū</emph> G] <emph>postᵗergu</emph> G. </p>
+          <p xml:id="p26">Confessio.ie further fails to inform the reader that D omits 20–21
+            (242,1–3) <emph>qui loquimini … annos</emph> and that R is corrupt there (<emph>qui loquitur … iterum</emph>).
+            There are also some rather minor errors of other types: 2 (236,2) <emph>et</emph> is
+            aligned with <emph>me</emph> instead of <emph>et</emph> in the text (the error is in the
+            XML file: <code>@target="#W.236.02.04"</code> should read
+              <code>@target="#W.236.02.05"</code>). 17 (240,1–2) Bieler writes ‘<emph>R mut</emph>’, which is
+            resolved on confessio.ie to ‘<emph>R mutitlus</emph>’ [sic]. Despite all its merits in other fields,
+            because of these errors and inaccuracies collectively, the digital edition of
+            confessio.ie stays short of being reliable.</p>
+        </div>
+        <div xml:id="div3.2">
+          <head>The Epistola</head>
+          <p xml:id="p27"> While Patrick’s <emph>Confessio</emph> is the centerpiece of the ‘Saint
+            Patrick’s <emph>Confessio</emph> Hypertext Stack Project’, they do not altogether
+            neglect the second of his extant writings, the <emph>Epistola</emph>, also edited by
+            Bieler and transmitted together with the <emph>Confessio</emph> in most manuscripts. In
+            fact, confessio.ie offers almost as many translations of the as of the
+              <emph>Confessio</emph> (although there is no German translation of the
+              <emph>Epistola</emph>, but the <emph>Confessio</emph> was translated into German
+            specifically for this project). </p>
+          <p xml:id="p28"> There is no full digital edition of the <emph>Epistola</emph> on
+            confessio.ie. There is a page which obviously was prepared for encompassing a full-grown
+            edition of this text as taken from Bieler.<note xml:id="ftn17">&lt;<ref
+                target="https://web.archive.org/web/20191010185003/https://www.confessio.ie/etexts/epistola_latin"
+                >https://web.archive.org/web/20191010185003/https://www.confessio.ie/etexts/epistola_latin</ref>&gt;.</note>
+            But the XML file for the <emph>Epistola</emph>, which too is downloadable (see above),
+            is hardly more than a draft from which to go on (just compare the roughly 22,000
+            characters of the TEI header of the <emph>Confessio</emph> XML file to the mere 540
+            characters of the <emph>Epistola</emph> file!). It features only the whole text of the
+            letter, all the words given their specific IDs, and the apparatus fontium has fully been
+            encoded, thus arriving at being (as yet) no more than another uncritical edition on the
+            web. </p>
+        </div>
+        <div xml:id="div3.3">
+          <head>Editorial Principles and Transmission</head>
+          <p xml:id="p29"> This is one of the weakest points in the digital edition. For any
+            critical edition is reasonably expected to lay out their principles in terms of, e.g.,
+            method, orthography, normalization. It is equally necessary to say a word about the
+            manuscript tradition, or at least where to find such information. In spite of the
+            extensive information given in the ‘About the HyperStack project’ section, there is
+            hardly a word about any of this – and if it is, users have to collect the information
+            from different parts of the web site by themselves. </p>
+          <p xml:id="p30"> I will give two examples which I consider especially unfortunate. The
+            first one is the stemma. Bieler was a philologist, and like most classicists a
+            ‘Lachmannian’. This means, he went to quite some lengths in order to come up with a
+            stemma, which in his case allows him, he claims, to go back to Patrick’s autograph,
+            called Σ (Bieler 1950, 7–39). He comes up with an indirect tradition, Ψ, and three
+            manuscript families of the direct tradition: D, V, and Φ comprising all remaining six
+            witnesses. All of this is hardly remarked, let alone discussed, on confessio.ie. But can
+            a critical edition, whether digital or not, really dispense with it? True, there is a
+            short note saying “Bieler’s edition is an excellent attempt to reconstruct an
+            approximate original of the <emph>Confessio</emph>, the archetype Σ” (‘About the
+            HyperStack’, 4.1). And in the ‘Special Features/Key to Symbols and Abbreviations’
+            section there are scans of Bieler’s pedigrees, without being explained: Why there, and
+            how is one looking for the relationships of the manuscripts supposed to find them? This
+            necessary information is first too little and second too scattered. It would have
+            sufficed, though, to explicitly refer the user to Bieler’s introduction for this kind of
+            information. </p>
+          <p xml:id="p31"> My second example concerns the alterations the confessio.ie team has made
+            to Bieler’s edition. The text they use comes from the Archive of Celtic-Latin
+            Literature, as documented in ‘About the HyperStack’ 4.2 (<ref type="crossref"
+              target="#ftn10">see note 10</ref>). A user will however have to recur to the XML file
+            of the Latin text (where she is not directed) in order to find out about the
+            consequences. Only there (in the header, <code>&lt;notesStmt&gt;</code>), there is a
+            detailed discussion, for example, about the use of u and v, stating: Bieler uses capital
+            V and small capital u. Confessio.ie writes all consonants as v, all vowels as u. In the
+            commentary then, the capitals are all written V. This is not a significant point in
+            itself, but it is at the least not user friendly to hide this kind of information in an
+            XML file without even directing there, especially when considering that many users will
+            probably be either not ready or not able to open and read an XML file. </p>
+        </div>
+        <div xml:id="div3.4">
+          <head>Manuscripts and Editions</head>
+          <p xml:id="p32">
+            <figure xml:id="img7">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-7.png"/>
+              <head type="legend">Description and digital representation of the Book of
+                Armagh.</head>
+            </figure> The project team must be congratulated for succeeding in being granted the
+            rights to digitally reproduce images of all eight manuscripts. Noteworthily, for the
+            first time they have made digitally available images of the pertaining sections of the
+            famous ‘Book of Armagh’ (Dublin, TCD 52, <ref type="crossref" target="#img7">see fig.
+              7</ref>).<note xml:id="ftn18">There is a facsimile edition (Gwynn, J. 1913).</note>
+            Except for the two Salisbury manuscripts (221 and 223), which had to be digitized from
+            microfilms, all of them are high-resolution colour images. </p>
+          <p xml:id="p33">All manuscripts have been described by the project researcher, Franz
+            Fischer. The descriptions and images of the manuscripts are easily accessible in a
+            seperate ‘manuscripts/prints’ section. Their XML files are available for download from
+            the downloads section. After an introduction containing information about the location,
+            provenance, sigla (it is missing for Rouen 1391, which should be R), available images,
+            and a copyright notice, there are useful sections of various detail on each manuscript’s
+            content, physical description, history, and a bibliography.</p>
+          <p xml:id="p34">From the manuscripts pages, it is not possible to be directed to the
+            pertinent sections of Patrick’s text. Although it is immensely useful to have the
+            manuscripts at hand when reading the critical edition, users will find it less
+            convenient that manuscripts are aligned to the text on page/column level only, rather
+            than on the level of paragraphs or even words (see above). This forces them to spend a
+            lot of time on searching the respective manuscript folium for the passage they want to
+            see in the original manuscript. It is especially unfortunate, as confessio.ie claims
+            that readers “are invited to find their way through the dense net of textual layers” and
+            in this respect explicitly mentions the manuscript reproductions (‘About’, 2.2). </p>
+          <p xml:id="p35">
+            <figure xml:id="img8">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_13/patrick-confessio/pictures/picture-8.png"/>
+              <head type="legend">Description and digital representation of Ware’s edition.</head>
+            </figure> The same holds, mutatis mutandis, for earlier editions. PDFs of all earlier
+            editions are available for download (Ware 1656; Papebroch 1668; White 1905; Bieler
+            1950/51), and, additionally, of a diplomatic transcription (Gwynn, E. 1937) and a
+            facsimile print (Gwynn, J. 1913) of the Book of Armagh. Interestingly, the copy of
+            White’s edition used is the very one that Bieler used and annotated when he prepared his
+            edition. The descriptions of the editions are far shorter and less structured than those
+            of the manuscripts (<ref type="crossref" target="#img8">see fig. 8)</ref>. </p>
+        </div>
+        <div xml:id="div3.5">
+          <head>Translations</head>
+          <p xml:id="p36">One of the most notable features of the project is the translations. The
+            project team have included translations of the <emph>Confessio</emph> into English
+            (McCarthy 2011), Irish (Mac Philibín 1961), Italian (Malaspina 1985), Brazilian
+            Portuguese (dos Santos 2007), German (newly translated by project’s researcher, Franz
+            Fischer), and English (Blank) Verse (Ferguson 1877–1886). There are translations of the
+              <emph>Epistola</emph> into all of these languages but German. To have translations of
+            Patrick’s texts in many languages accessibly available is obviously very useful. XML
+            files of all the translations are available for download, which allows users to
+            transform them into a format of their choice. </p>
+          <p xml:id="p37"> As McCarthy’s new translation has been reviewed before (Ó Dochartaigh
+            2012, 32) and the other ones have been published before, I can confine myself to
+            Fischer’s German rendering of the <emph>Confessio</emph>. This is only the second
+            translation into German; the first (and to-date only one of the <emph>Epistola</emph>)
+            being Wotke 1940. Fischer has succeeded in writing a vivid, readable German translation.
+            He is exceptionally strong at rendering the colloquial, paratactic, often anacoluthic
+            style (cf., e.g., 12, 43). Misrepresentations and inaccuracies are few: e.g., 4 <emph>ut
+              didicimus</emph> is rather ‘wie wir erkannt haben’ than ‘so ward es uns gelehrt’ (to
+            say nothing of the form ‘ward’ in a 21ˢᵗ century translation), 11 <emph>(epistola) non
+              deserta</emph> is hardly rendered appropriately by ‘nicht wohlfeil verfasst’. </p>
+        </div>
+        <div xml:id="div3.6">
+          <head>Supplements</head>
+          <p xml:id="p38"> As this review primarily focuses on the edition proper, I will here but
+            list the impressive quantity of the secondary material, mostly aimed at non-experts in
+            the field. There are (1) an introduction to Patrick’s writings (by David Kelly), (2) an
+            uncritical Latin text and an English translation of Muirchú’s <emph>Life of
+              Patrick</emph>, (3) the same of Tírechán’s <emph>Collections</emph>, (4) articles on
+            how Muirchú and Tírechán cope with Patrick’s conversion (by Elizabeth Dawson), (5) on
+            Tírechán (by Terry O’Hagan), (6) on Patrick’s representation in art (by Rachel Moss),
+            (7) a novel ‘Seeking Patrick’ (by Derick Mockler), including an audio book, (8) an audio
+            recording of the English translation of the <emph>Confessio</emph>. In addition, we are
+            promised on line dictionary entries from the parent project, DMLCS, which have never
+            been added. </p>
+          <p xml:id="p39"> The project team have further set up an extensive bibliography on
+            Patrick, which covers contributions until 2011.<note xml:id="ftn19">&lt;<ref
+                target="https://web.archive.org/web/20191021082412/https://www.confessio.ie/more/bibliography_full#"
+                >https://web.archive.org/web/20191021082412/https://www.confessio.ie/more/bibliography_full#</ref>&gt;.</note>
+            Most usefully, numerous entries (especially those that do not betray what they are
+            concerned with in their titles) are furnished with notes indicating the topic,
+            summarizing their main points of argument or relating them to other pertinent
+            literature. If available, there are hyperlinks to any digital version of each entry.
+          </p>
+        </div>
+      </div>
+      <div xml:id="div4">
+        <head>Usability </head>
+        <p xml:id="p40"> In terms of usability, confessio.ie has several shortcomings, of which the
+          following are the most severe:<note xml:id="ftn20">Similarly, participants in a recent
+            study on the usability of digital scholarly editions repeatedly signalled they had
+            experienced difficulties in navigating confessio.ie (Caria and Mathiak 2018).</note>
+          first, the availability and accessibility of information. Often it is not easy to spot the
+          information one looks for. For example, few will suspect to find Bieler’s pedigree, on
+          which the edition is based, in the subsection ‘key to symbols and abbreviations’ (as
+          pointed out above, detailed discussion on how the manuscripts relate to each other is
+          altogether lacking). Second, the search function is too limited to be of any help. Third,
+          images of manuscripts, older editions and the text of confessio.ie are not closely
+          aligned. </p>
+        <p xml:id="p41">This shortcoming is not remedied by the FAQ. There are only two questions:
+          “How to use the electronic version of Bieler's Latin edition?” and “How to use the
+          manuscript viewer?”. They give only the most basic information and neither of them
+          addresses any details. </p>
+      </div>
+      <div xml:id="div5">
+        <head>Technology and Applying TEI</head>
+
+        <p xml:id="p42"> The project team, thankfully, have made it easy to follow their major
+          technological paths and explained in detail which tools they used and why.<note
+            xml:id="ftn21">&lt;<ref
+              target="https://web.archive.org/web/20191022093209/https://www.confessio.ie/about/technologies"
+              >https://web.archive.org/web/20191022093209/https://www.confessio.ie/about/technologies</ref>&gt;.</note>
+          Much of this has no bearing on the digital edition as it is, but only on the supplementary
+          material and can thus be neglected here. The project has used the fairly common content
+          management system, Drupal, for organizing their data. The high resolution images of the
+          manuscripts are run by a specifically built browser-based viewing application. This
+          application, about which little information is available, allows for sending ‘only a
+          subset of the enormous image files to the browser’. As a result, the images, despite their
+          size, load very quickly and zooming works impressively smooth. </p>
+        <p xml:id="p43"> Perhaps more importantly, the digital edition is based on an XML file that
+          follows the TEI P5 standards, for obvious reasons not in the latest version (TEI
+          Consortium 2019). The XML file is easily downloadable (see above). The schema they use, as
+          appears from the XML file, is the then-standard TEI one (tei_all.rng, version 1.7.0),<note
+            xml:id="ftn22">Available from &lt;<ref
+              target="https://web.archive.org/web/20191021151220/https://tei-c.org/Vault/P5/1.7.0/xml/tei/custom/schema/relaxng/tei_all.rng"
+              >https://web.archive.org/web/20191021151220/https://tei-c.org/Vault/P5/1.7.0/xml/tei/custom/schema/relaxng/tei_all.rng</ref>&gt;.</note>
+          which allows for using all TEI tags. </p>
+        <p xml:id="p44">Encoding the apparatus criticus is in theory and practice the most
+          difficult, but arguably the most important part of a digital editor’s work. For the TEI P5
+          guidelines expect such an apparatus to be more or less a repository of variants (chapter
+          12). In classical philology, at least, the critical apparatus serves many more purposes
+          which philologists reasonably expect to be adequately represented in a digital edition too
+          (Damon 2016; Keeline 2017; Olson 2019). Thus, the set-up of the apparatus criticus has
+          been identified as the main (and in the view of some, insurmountable) obstacle in applying
+          TEI to classical texts (Damon 2016; Fischer 2019, 213).<note xml:id="ftn23">A different
+            approach is taken by the Digital Latin project, cf. &lt;<ref
+              target="https://web.archive.org/web/20191022092921/https://digitallatin.github.io/guidelines/LDLT-Guidelines.html"
+              >https://web.archive.org/web/20191022092921/https://digitallatin.github.io/guidelines/LDLT-Guidelines.html</ref>&gt;.</note></p>
+        <p xml:id="p45"> The HyperStack project has found a practical solution for coping with this
+          problem. Within the apparatus they use a <code>&lt;note&gt;</code> tag for each apparatus
+          entry (but no <code>&lt;app&gt;</code>, <code>&lt;lem&gt;</code>, or
+            <code>&lt;rdg&gt;</code>). Whatever Bieler wrote as his own comments in the apparatus,
+          is rendered by an <code>&lt;emph&gt;</code> tag. This choice serves the needs of humans
+          quite well, for example in 4 (236,10–13), simplified: <code>&lt;note&gt;</code>omnia —
+          principium <code>&lt;emph&gt;</code>deest<code>&lt;/emph&gt;
+            &lt;ref&gt;</code>V<code>&lt;/ref&gt;</code>; <code>&lt;emph&gt;</code>quae leguntur
+            in<code>&lt;/emph&gt; &lt;ref&gt;</code>v<code>&lt;/ref&gt;</code>,
+            <code>&lt;emph&gt;</code>coniecturae
+            debentur<code>&lt;/emph&gt;</code>.<code>&lt;/note&gt;</code> . This procedure has the
+          advantage that trained humans can easily identify that V has a lacuna, which has been
+          filled in v by way of conjecturing. It has the severe disadvantage that this way of
+          encoding differs greatly from the actual standards set by TEI P5, which thus cannot be
+          exploited in its entirety. </p>
+      </div>
+      <div xml:id="div6">
+        <head>Conclusion: Confessio.ie As A Pioneer</head>
+        <p xml:id="p46"> Confessio.ie is a pioneering project in the field of digital editions of
+          classical texts. As such, the project must be thanked for opening paths which will
+          ultimately lead to native digital, critical editions also of ancient and late ancient
+            texts.<note xml:id="ftn24">In this regard, much is to be expected from the Library of
+            Digital Latin Texts (LDLT) project, which appears to approach a state where it can
+            actually be used as a proper editing tool: &lt;<ref
+              target="https://web.archive.org/web/20191022093057/https://digitallatin.org/library-digital-latin-texts"
+              >https://web.archive.org/web/20191022093057/https://digitallatin.org/library-digital-latin-texts</ref>&gt;.</note>
+          This is all the more important as research in classical philology, too, is turning more
+          and more digital. In this regard, it was a wise decision to take the philological
+          information from another source (Bieler’s edition) and to focus on its digital
+          implementation. The Royal Irish Academy is in charge of the long-term sustainment of the
+          project; hence its long-term availability is guaranteed. </p>
+        <p xml:id="p47">There are many commendable features of confessio.ie. The approach to think
+          of a transmitted text as a hypertext consisting of text, manuscripts, images, editions,
+          translations etc. is one of the major strengths of confessio.ie: There, <cit><quote>[t]he
+              relations between the texts and the contextualising information is described, but not
+              expressed through the ‘hyper fabric’ of e.g. HTTP links. Even so, the Confessio is
+              rather an exception to the rule—very few of today’s digital editions seem to be
+              particularly concerned with the core ideal of hypertext as an expression of linked
+              information, of process and context.</quote><bibl>van Zundert 2016, 103</bibl></cit>
+          This is something only a digital edition can do – although it will not be feasible to use
+          every hypertextual layer in each and every edition (Fischer 2017, 281). In an impressive
+          manner, confessio.ie has collected and provided any kind of textual information one may
+          ask for about Patrick’s writings. </p>
+        <p xml:id="p48">Confessio.ie has also shown that using TEI is indeed an apt method for
+          creating digital editions of classical texts. Hence, there is no need to look for
+          something else: Classics can cope with the de facto standard, although the details of how
+          to encode an apparatus still are in need of a long-term solution (I doubt this will be
+          settled any time soon). Even more: They have given a very useful example of how an edition
+          and a digital apparatus criticus can be visualized.</p>
+        <p xml:id="p49">However, there are some points that future editors should give even more
+          attention to. First and foremost, and this holds for any edition, be it digital or not,
+          accuracy in representing text and manuscripts readings is indispensable. This demand is
+          self-evident, but it must be stressed again. As the apparatus of Bieler’s edition is not
+          always adequately represented, this is a major shortcoming of confessio.ie and the reason
+          why confessio.ie cannot be used instead of, but only in comparison with, Bieler’s
+          edition.</p>
+        <p xml:id="p50">For a critical edition to be recognized as such, it is likewise necessary to
+          include all relevant information about the textual transmission and editorial principles.
+          If this edition is digital, it will be helpful for all users to have this information
+          easily available on the website. As for user friendliness, confessio.ie provides some
+          obstacles for their users, especially in the alignment of images, older editions and
+          translations, and user guidance around the website. With regard to these topics, future
+          editors will be well advised to find out for themselves how to do better.</p>
+        <p xml:id="p51">All in all, the ‘HyperStack project’ has impressively paved a route to a
+          more multi-layered understanding of a ‘classical text’. It has set a first usable point of
+          departure for digital editions of classical texts, and successfully provided a first idea
+          of how such texts can be transferred to the digital era.</p>
+      </div>
+    </body>
+    <back>
+      <!-- Ab hier Bibliografie -->
+      <div type="bibliography">
+        <listBibl>
+          <bibl>Bieler, Ludwig. 1950. “<emph>Libri Epistolarum Sancti Patricii Episcopi</emph>:
+            Introduction, Text and Commentary. Part I.” <emph>Classica et Mediaevalia</emph> 11:
+            1–150.</bibl>
+          <bibl>Bieler, Ludwig. 1951. “<emph>Libri Epistolarum Sancti Patricii Episcopi</emph>:
+            Introduction, Text and Commentary. Part II.” <emph>Classica et Mediaevalia</emph> 12:
+            79–214.</bibl>
+          <bibl>Bieler, Ludwig. 1966. “<emph>Libri Epistolarum Sancti Patricii Episcopi</emph>.
+            Addenda.” <emph>Analecta Hibernica</emph> 23: 313–15.</bibl>
+          <bibl>Bieler, Ludwig. 1993. <emph>Libri Epistolarum Sancti Patricii Episcopi.
+              Introduction, Text and Commentary</emph>. Dublin.</bibl>
+          <bibl>Caria, Federico, and Brigitte Mathiak. 2018. “A Hybrid Focus Group for the
+            Evaluation of Digital Scholarly Editions of Literary Authors.” In <emph>Digital
+              Scholarly Editions as Interfaces</emph>, edited by Roman Bleier, Martina
+            Bürgermeister, Helmut W. Klug, Frederike Neuber, and Gerlinde Schneider, 267–85.</bibl>
+          <bibl>Damon, Cynthia. 2016. “Beyond Variants: Some Digital Desiderata for the Critical
+            Apparatus of Ancient Greek and Latin Texts.” In Driscoll and Pierazzo 2016,
+            201–18.</bibl>
+          <bibl>dos Santos, Dominique Vieira Coelho. 2007. “Tradução Os Livros Das Cartas Do Bispo
+            São Patrício.” <emph>Brathair</emph> 7 (1): 107–36.</bibl>
+          <bibl>Driscoll, Matthew James, and Elena Pierazzo, eds. 2016. <emph>Digital Scholarly
+              Editing: Theories and Practices</emph>. <ref
+              target="http://www.doabooks.org/doab?func=fulltext&amp;rid=19695"
+              >http://www.doabooks.org/doab?func=fulltext&amp;rid=19695</ref>.</bibl>
+          <bibl>Ferguson, Samuel. 1877–1886. “On the Patrician Documents.” <emph>The Transactions of
+              the Royal Irish Academy</emph> 27: 67–134.</bibl>
+          <bibl>Fischer, Franz. 2013. “<emph>All Texts Are Equal, but…</emph>: Textual Plurality and
+            the Critical Text in Digital Scholarly Editions.” <emph>Variants</emph> 10:
+            77–92.</bibl>
+          <bibl>Fischer, Franz. 2017. “Digital Corpora and Scholarly Editions of Latin Texts:
+            Features and Requirements of Textual Criticism.” <emph>Speculum</emph> 92:
+            S266–S288.</bibl>
+          <bibl>Fischer, Franz. 2019. “Digital Classical Philology and the Critical Apparatus.” In
+              <emph>Digital Classical Philology: Ancient Greek and Latin in the Digital
+              Revolution</emph>, edited by Monica Berti, 203–19. Age of Access? Grundfragen der
+            Informationsgesellschaft 10.</bibl>
+          <bibl>Franzini, Greta. 2012ff. “A Catalogue of Digital Editions.” <ref
+              target="https://web.archive.org/web/20191021072342/https://dig-ed-cat.acdh.oeaw.ac.at/"
+              >https://web.archive.org/web/20191021072342/https://dig-ed-cat.acdh.oeaw.ac.at/</ref>.</bibl>
+          <bibl>Gwynn, Edward. 1937. <emph>Book of Armagh: The Patrician Documents</emph>.
+            Dublin.</bibl>
+          <bibl>Gwynn, John. 1913. <emph>Liber Ardmachanus. The Book of Armagh</emph>. Dublin,
+            London.</bibl>
+          <bibl>Harvey, Anthony, and Jane Power. 2005. <emph>The Non-Classical Lexicon of Celtic
+              Latinity. Volume I: Letters A–H</emph>.</bibl>
+          <bibl>Keeline, Tom. 2017. “The Apparatus Criticus in the Digital Age.” <emph>The Classical
+              Journal</emph> 112 (3): 342–63.</bibl>
+          <bibl>Lavagnino, John. 1997. “Excerpted: Reading, Scholarship, and Hypertext Editions.”
+              <emph>The Journal of Electronic Publishing</emph> 3 (1). <ref
+              target="https://doi.org/10.3998/3336451.0003.112"
+              >https://doi.org/10.3998/3336451.0003.112</ref>.</bibl>
+          <bibl>Mac Philibín, Liam. 1961. <emph>Mise Pádraig: Nua-Aistriú Gaeilge Ar Scríbhinní
+              Naomh Pádraig</emph>. Dublin.</bibl>
+          <bibl>Malaspina, Elena. 1985. <emph>Gli Scritti Di San Patrizio: Alle Origini Del
+              Cristianesimo Irlandese</emph>. Roma.</bibl>
+          <bibl>Mastronarde, Donald J. 2010ff. “Euripides Scholia.” <ref
+              target="https://web.archive.org/web/20191024172104/https://euripidesscholia.org/EurSchHome.html"
+              >https://web.archive.org/web/20191024172104/https://euripidesscholia.org/EurSchHome.html</ref>.</bibl>
+          <bibl>McCarthy, Padraig. 2011. <emph>My Name Is Patrick. St Patrick’s Confessio</emph>.
+            Dublin: Royal Irish Academy.</bibl>
+          <bibl>Monella, Paolino Onofrio. 2018. “Why Are There No Comprehensively Digital Scholarly
+            Editions of Classical Texts?” In <emph>Digital Philology: New Thoughts on Old
+              Questions</emph>, edited by Adele Cipolla, 141–59. Padova: libreriauniversitaria.it.
+              <ref
+              target="https://iris.unipa.it/retrieve/handle/10447/294132/580748/monella2018why.pdf"
+              >https://iris.unipa.it/retrieve/handle/10447/294132/580748/monella2018why.pdf</ref>.</bibl>
+          <bibl>Ó Dochartaigh, Caitríona. 2012. “Review of Anthony Harvey and Franz Fischer (Eds),
+            the St Patrick’s Confessio Hypertext Stack. Dublin: Royal Irish Academy, 2011. Pádraig
+            McCarthy (Transl.), My Name Is Patrick. Dublin: Royal Irish Academy, 2011.”
+              <emph>Óenach: FMRSI Reviews</emph> 4 (1): 31–36.</bibl>
+          <bibl>Olson, S. Douglas. 2019. “Further Notes on the Apparatus Criticus.” <emph>The
+              Classical Journal</emph> 114 (3): 330–44.</bibl>
+          <bibl>Papebroch, Daniel. 1668. “De Sancto Patricio Episcopo Apostolo Et Primate
+            Hiberniae.” In <emph>Acta Sanctorum, Martii II</emph>, edited by Daniel Papebroch,
+            517–92. Antwerp.</bibl>
+          <bibl>Reeve, Michael D. 2000. “Cuius in Usum? Recent and Future Editing.” <emph>The
+              Journal of Roman Studies</emph> 90: 196–206.</bibl>
+          <bibl>Sahle, Patrick. 2008ff. “A Catalog of Digital Scholarly Editions, Version 3.0.” <ref
+              target="https://web.archive.org/web/20191021074341/http://www.digitale-edition.de/"
+              >https://web.archive.org/web/20191021074341/http://www.digitale-edition.de/</ref>.</bibl>
+          <bibl>Tarrant, Richard John. 2016. <emph>Texts, Editors, and Readers: Methods and Problems
+              in Latin Textual Criticism</emph>.</bibl>
+          <bibl>TEI Consortium. 2019. “TEI P5: Guidelines for Electronic Text Encoding and
+            Interchange. Version 3.6.0. Last Updated on 16th July 2019, Revision Daa3cc0b9.” <ref
+              target="http://www.tei-c.org/Guidelines/P5/"
+            >http://www.tei-c.org/Guidelines/P5/</ref>.</bibl>
+          <bibl>van Zundert, Joris. 2016. “Barely Beyond the Book?” In Driscoll and Pierazzo 2016,
+            83–106.</bibl>
+          <bibl>Ware, James, ed. 1656. <emph>S. Patricio, Qui Hibernos Ad Fidem Christi Convertit,
+              Adscripta Opuscula, Quorum Aliqua Nunc Primum Ex Antiquis Mss. Codicibus in Lucem
+              Emissa Sunt, Reliqua Recognita; Omnia Notis Ad Rem Historicam Et Antiquariam
+              Spectantibus Illustrata</emph>. London.</bibl>
+          <bibl>White, Newport J.D. 1905. “Libri Sancti Patricii: The Latin Writings of Saint
+            Patrick.” <emph>Proceedings of the Royal Irish Academy</emph> 25: 201–326. <ref
+              target="https://www.archive.org/details/MN5141ucmf_2"
+              >https://www.archive.org/details/MN5141ucmf_2</ref>.</bibl>
+          <bibl>Wotke, Friedrich. 1940. <emph>Das Bekenntnis Des Heiligen Patrick Und Sein Brief an
+              Die Gefolgsleute Des Coroticus</emph>.</bibl>
+        </listBibl>
+      </div>
+    </back>
+  </text>
+</TEI>
+ 
