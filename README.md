@@ -13,6 +13,10 @@ This GitHub repository provides the data from the reviewing journal RIDE (http:/
 
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
 
+## Contributors
+
+The datasets are provided by the Institute for Documentology and Scholarly Editing. The modeling, recording, conversion and curation of the data was carried out mainly by Bernhard Assmann, Ulrike Henny-Krahmer, Frederike Neuber, Torsten Schassan and Philipp Steinkrüger.
+
 ## Contact
 
 The repository is run by members of the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
