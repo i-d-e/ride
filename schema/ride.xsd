@@ -1,0 +1,3146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.tei-c.org/ns/1.0" xmlns:examples="http://www.tei-c.org/ns/Examples">
+  <xs:import namespace="http://www.tei-c.org/ns/Examples" schemaLocation="http://ride.i-d-e.de/wp-content/uploads/downloads/schema/examples.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://ride.i-d-e.de/wp-content/uploads/downloads/schema/xml.xsd"/>
+  <!--
+    Schema generated from ODD source 2015-10-28T09:13:28Z. .
+    TEI Edition: Version 2.9.1. Last updated on
+    	15th October 2015, revision 46ac023
+    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
+    
+  -->
+  <!-- This template file is freely available and you are hereby authorised to copy, modify, and redistribute it in any way without further reference or permissions.When making such modifications, you are strongly recommended to change the present text to include an accurate statement of the licencing conditions applicable to your modified text. -->
+  <xs:complexType name="macro.paraContent" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="ns1:model.phrase"/>
+      <xs:group ref="ns1:model.inter"/>
+      <xs:group ref="ns1:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.phraseSeq" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="ns1:model.phrase"/>
+      <xs:group ref="ns1:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.phraseSeq.limited" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="ns1:model.limitedPhrase"/>
+      <xs:group ref="ns1:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="macro.specialPara" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="ns1:model.phrase"/>
+      <xs:group ref="ns1:model.inter"/>
+      <xs:group ref="ns1:model.divPart"/>
+      <xs:group ref="ns1:model.global"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:group name="macro.anyXML">
+    <xs:choice>
+      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##local" processContents="skip"/>
+    </xs:choice>
+  </xs:group>
+  <xs:simpleType name="data.certainty">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="high"/>
+      <xs:enumeration value="medium"/>
+      <xs:enumeration value="low"/>
+      <xs:enumeration value="unknown"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="data.probability">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="data.numeric">
+    <xs:union memberTypes="xs:double xs:decimal">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="data.count">
+    <xs:restriction base="xs:nonNegativeInteger"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.temporal.w3c">
+    <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.truthValue">
+    <xs:restriction base="xs:boolean"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.xTruthValue">
+    <xs:union memberTypes="xs:boolean">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="unknown"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="inapplicable"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="data.language">
+    <xs:union memberTypes="xs:language">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="data.outputMeasurement">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="data.pointer">
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.word">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="data.text">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.enumerated">
+    <xs:restriction base="ns1:data.word"/>
+  </xs:simpleType>
+  <xs:simpleType name="data.temporal.iso">
+    <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:attributeGroup name="att.canonical.attributes">
+    <xs:attributeGroup ref="ns1:att.canonical.attribute.key"/>
+    <xs:attributeGroup ref="ns1:att.canonical.attribute.ref"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.canonical.attribute.key">
+    <xs:attribute name="key" type="ns1:data.text">
+      <xs:annotation>
+        <xs:documentation>provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.canonical.attribute.ref">
+    <xs:attribute name="ref">
+      <xs:annotation>
+        <xs:documentation>(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attributes">
+    <xs:attributeGroup ref="ns1:att.ranging.attribute.atLeast"/>
+    <xs:attributeGroup ref="ns1:att.ranging.attribute.atMost"/>
+    <xs:attributeGroup ref="ns1:att.ranging.attribute.min"/>
+    <xs:attributeGroup ref="ns1:att.ranging.attribute.max"/>
+    <xs:attributeGroup ref="ns1:att.ranging.attribute.confidence"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attribute.atLeast">
+    <xs:attribute name="atLeast" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>gives a minimum estimated value for the approximate measurement.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attribute.atMost">
+    <xs:attribute name="atMost" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>gives a maximum estimated value for the approximate measurement.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attribute.min">
+    <xs:attribute name="min" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attribute.max">
+    <xs:attribute name="max" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.ranging.attribute.confidence">
+    <xs:attribute name="confidence" type="ns1:data.probability">
+      <xs:annotation>
+        <xs:documentation>specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by min and max, or the proportion of observed values that fall within that range.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attributes">
+    <xs:attributeGroup ref="ns1:att.ranging.attributes"/>
+    <xs:attributeGroup ref="ns1:att.dimensions.attribute.unit"/>
+    <xs:attributeGroup ref="ns1:att.dimensions.attribute.quantity"/>
+    <xs:attributeGroup ref="ns1:att.dimensions.attribute.extent"/>
+    <xs:attributeGroup ref="ns1:att.dimensions.attribute.precision"/>
+    <xs:attributeGroup ref="ns1:att.dimensions.attribute.scope"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attribute.unit">
+    <xs:attribute name="unit">
+      <xs:annotation>
+        <xs:documentation>names the unit used for the measurement
+Suggested values include: 1] cm(centimetres) ; 2] mm(millimetres) ; 3] in(inches) ; 4] lines; 5] chars(characters) </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="xs:Name">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="cm">
+                <xs:annotation>
+                  <xs:documentation>(centimetres) </xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="mm">
+                <xs:annotation>
+                  <xs:documentation>(millimetres) </xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="in">
+                <xs:annotation>
+                  <xs:documentation>(inches) </xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="lines">
+                <xs:annotation>
+                  <xs:documentation>lines of text</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="chars">
+                <xs:annotation>
+                  <xs:documentation>(characters) characters of text</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attribute.quantity">
+    <xs:attribute name="quantity" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>specifies the length in the units specified</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attribute.extent">
+    <xs:attribute name="extent" type="ns1:data.text">
+      <xs:annotation>
+        <xs:documentation>indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attribute.precision">
+    <xs:attribute name="precision" type="ns1:data.certainty">
+      <xs:annotation>
+        <xs:documentation>characterizes the precision of the values specified by the other attributes.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.dimensions.attribute.scope">
+    <xs:attribute name="scope" type="ns1:data.enumerated">
+      <xs:annotation>
+        <xs:documentation>where the measurement summarizes more than one observation, specifies the applicability of this measurement.
+Sample values include: 1] all; 2] most; 3] range</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.breaking.attributes">
+    <xs:attributeGroup ref="ns1:att.breaking.attribute.break"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.breaking.attribute.break">
+    <xs:attribute name="break" type="ns1:data.enumerated">
+      <xs:annotation>
+        <xs:documentation>indicates whether or not the element bearing this attribute should be considered to mark the end of an orthographic token in the same way as whitespace.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.cReferencing.attributes">
+    <xs:attributeGroup ref="ns1:att.cReferencing.attribute.cRef"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.cReferencing.attribute.cRef">
+    <xs:attribute name="cRef" type="ns1:data.text">
+      <xs:annotation>
+        <xs:documentation>(canonical reference) specifies the destination of the pointer by supplying a canonical reference expressed using the scheme defined in a refsDecl element in the TEI header</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attributes">
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attribute.when"/>
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attribute.notBefore"/>
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attribute.notAfter"/>
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attribute.from"/>
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attribute.to"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.when">
+    <xs:attribute name="when" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>supplies the value of the date or time in a standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.notBefore">
+    <xs:attribute name="notBefore" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.notAfter">
+    <xs:attribute name="notAfter" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.from">
+    <xs:attribute name="from" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.w3c.attribute.to">
+    <xs:attribute name="to" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>indicates the ending point of the period in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.attributes">
+    <xs:attributeGroup ref="ns1:att.datable.w3c.attributes"/>
+    <xs:attributeGroup ref="ns1:att.datable.iso.attributes"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attributes"/>
+    <xs:attributeGroup ref="ns1:att.datable.attribute.calendar"/>
+    <xs:attributeGroup ref="ns1:att.datable.attribute.period"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.attribute.calendar">
+    <xs:attribute name="calendar" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>indicates the system or calendar to which the date represented by the content of this element belongs.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.attribute.period">
+    <xs:attribute name="period" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>supplies a pointer to some location defining a named period of time within which the datable item is understood to have occurred.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declarable.attributes">
+    <xs:attributeGroup ref="ns1:att.declarable.attribute.default"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.declarable.attribute.default">
+    <xs:attribute name="default" default="false">
+      <xs:annotation>
+        <xs:documentation>indicates whether or not this element is selected by default when its parent is selected.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="true">
+            <xs:annotation>
+              <xs:documentation>This element is selected if its parent is selected</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="false">
+            <xs:annotation>
+              <xs:documentation>This element can only be selected explicitly, unless it is the only one of its kind, in which case it is selected if its parent is selected.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.docStatus.attributes">
+    <xs:attributeGroup ref="ns1:att.docStatus.attribute.status"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.docStatus.attribute.status">
+    <xs:attribute name="status" default="draft" type="ns1:data.enumerated">
+      <xs:annotation>
+        <xs:documentation>describes the status of a document either currently or, when associated with a dated element, at the time indicated.
+Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.responsibility.attributes">
+    <xs:attributeGroup ref="ns1:att.global.responsibility.attribute.cert"/>
+    <xs:attributeGroup ref="ns1:att.global.responsibility.attribute.resp"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.responsibility.attribute.cert">
+    <xs:attribute name="cert" type="ns1:data.certainty">
+      <xs:annotation>
+        <xs:documentation>(certainty) signifies the degree of certainty associated with the intervention or interpretation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.responsibility.attribute.resp">
+    <xs:attribute name="resp">
+      <xs:annotation>
+        <xs:documentation>(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attributes">
+    <xs:attributeGroup ref="ns1:att.dimensions.attributes"/>
+    <xs:attributeGroup ref="ns1:att.source.attributes"/>
+    <xs:attributeGroup ref="ns1:att.editLike.attribute.evidence"/>
+    <xs:attributeGroup ref="ns1:att.editLike.attribute.instant"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.evidence">
+    <xs:attribute name="evidence">
+      <xs:annotation>
+        <xs:documentation>indicates the nature of the evidence supporting the reliability or accuracy of the intervention or interpretation.
+Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:union memberTypes="xs:Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="internal">
+                        <xs:annotation>
+                          <xs:documentation>there is internal evidence to support the intervention.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="external">
+                        <xs:annotation>
+                          <xs:documentation>there is external evidence to support the intervention.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="conjecture">
+                        <xs:annotation>
+                          <xs:documentation>the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:union>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.editLike.attribute.instant">
+    <xs:attribute name="instant" default="false" type="ns1:data.xTruthValue">
+      <xs:annotation>
+        <xs:documentation>indicates whether this is an instant revision or not.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.rendition.attributes">
+    <xs:attributeGroup ref="ns1:att.global.rendition.attribute.rend"/>
+    <xs:attributeGroup ref="ns1:att.global.rendition.attribute.style"/>
+    <xs:attributeGroup ref="ns1:att.global.rendition.attribute.rendition"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.rendition.attribute.rend">
+    <xs:attribute name="rend">
+      <xs:annotation>
+        <xs:documentation>(rendition) indicates how the element in question was rendered or presented in the source text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.rendition.attribute.style">
+    <xs:attribute name="style" type="ns1:data.text">
+      <xs:annotation>
+        <xs:documentation>contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.rendition.attribute.rendition">
+    <xs:attribute name="rendition">
+      <xs:annotation>
+        <xs:documentation>points to a description of the rendering or presentation used for this element in the source text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attributes">
+    <xs:attributeGroup ref="ns1:att.global.rendition.attributes"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attributes"/>
+    <xs:attributeGroup ref="ns1:att.global.facs.attributes"/>
+    <xs:attributeGroup ref="ns1:att.global.change.attributes"/>
+    <xs:attributeGroup ref="ns1:att.global.responsibility.attributes"/>
+    <xs:attributeGroup ref="ns1:att.global.attribute.xmlid"/>
+    <xs:attributeGroup ref="ns1:att.global.attribute.n"/>
+    <xs:attributeGroup ref="ns1:att.global.attribute.xmllang"/>
+    <xs:attributeGroup ref="ns1:att.global.attribute.xmlbase"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmlid">
+    <xs:attribute ref="xml:id"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.n">
+    <xs:attribute name="n" type="ns1:data.text">
+      <xs:annotation>
+        <xs:documentation>(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmllang">
+    <xs:attribute ref="xml:lang"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.attribute.xmlbase">
+    <xs:attribute ref="xml:base"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.internetMedia.attributes">
+    <xs:attributeGroup ref="ns1:att.internetMedia.attribute.mimeType"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.internetMedia.attribute.mimeType">
+    <xs:attribute name="mimeType">
+      <xs:annotation>
+        <xs:documentation>(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.media.attributes">
+    <xs:attributeGroup ref="ns1:att.internetMedia.attributes"/>
+    <xs:attributeGroup ref="ns1:att.media.attribute.width"/>
+    <xs:attributeGroup ref="ns1:att.media.attribute.height"/>
+    <xs:attributeGroup ref="ns1:att.media.attribute.scale"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.media.attribute.width">
+    <xs:attribute name="width" type="ns1:data.outputMeasurement">
+      <xs:annotation>
+        <xs:documentation>Where the media are displayed, indicates the display width</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.media.attribute.height">
+    <xs:attribute name="height" type="ns1:data.outputMeasurement">
+      <xs:annotation>
+        <xs:documentation>Where the media are displayed, indicates the display height</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.media.attribute.scale">
+    <xs:attribute name="scale" type="ns1:data.numeric">
+      <xs:annotation>
+        <xs:documentation>Where the media are displayed, indicates a scale factor to be applied when generating the desired display size</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.resourced.attributes">
+    <xs:attributeGroup ref="ns1:att.resourced.attribute.url"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.resourced.attribute.url">
+    <xs:attribute name="url" use="required" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>(uniform resource locator) specifies the URL from which the media concerned may be obtained.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attributes">
+    <xs:attributeGroup ref="ns1:att.canonical.attributes"/>
+    <xs:attributeGroup ref="ns1:att.naming.attribute.role"/>
+    <xs:attributeGroup ref="ns1:att.naming.attribute.nymRef"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attribute.role">
+    <xs:attribute name="role">
+      <xs:annotation>
+        <xs:documentation>may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.enumerated"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.naming.attribute.nymRef">
+    <xs:attribute name="nymRef">
+      <xs:annotation>
+        <xs:documentation>(reference to the canonical name) provides a means of locating the canonical form (nym) of the names associated with the object named by the element bearing it.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.placement.attributes">
+    <xs:attributeGroup ref="ns1:att.placement.attribute.place"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.placement.attribute.place">
+    <xs:attribute name="place">
+      <xs:annotation>
+        <xs:documentation>specifies where this item is placed.
+Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6] overleaf; 7] above; 8] end; 9] inline; 10] inspace</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:union memberTypes="xs:Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="below">
+                        <xs:annotation>
+                          <xs:documentation>below the line</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="bottom">
+                        <xs:annotation>
+                          <xs:documentation>at the foot of the page</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="margin">
+                        <xs:annotation>
+                          <xs:documentation>in the margin (left, right, or both)</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="top">
+                        <xs:annotation>
+                          <xs:documentation>at the top of the page</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="opposite">
+                        <xs:annotation>
+                          <xs:documentation>on the opposite, i.e. facing, page</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="overleaf">
+                        <xs:annotation>
+                          <xs:documentation>on the other side of the leaf</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="above">
+                        <xs:annotation>
+                          <xs:documentation>above the line</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="end">
+                        <xs:annotation>
+                          <xs:documentation>at the end of e.g. chapter or volume.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="inline">
+                        <xs:annotation>
+                          <xs:documentation>within the body of the text.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="inspace">
+                        <xs:annotation>
+                          <xs:documentation>in a predefined space, for example left by an earlier scribe.</xs:documentation>
+                        </xs:annotation>
+                      </xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:union>
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attributes">
+    <xs:attributeGroup ref="ns1:att.typed.attribute.type"/>
+    <xs:attributeGroup ref="ns1:att.typed.attribute.subtype"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attribute.type">
+    <xs:attribute name="type" type="ns1:data.enumerated">
+      <xs:annotation>
+        <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.typed.attribute.subtype">
+    <xs:attribute name="subtype" type="ns1:data.enumerated">
+      <xs:annotation>
+        <xs:documentation>provides a sub-categorization of the element, if needed</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attributes">
+    <xs:attributeGroup ref="ns1:att.pointing.attribute.targetLang"/>
+    <xs:attributeGroup ref="ns1:att.pointing.attribute.target"/>
+    <xs:attributeGroup ref="ns1:att.pointing.attribute.evaluate"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attribute.targetLang">
+    <xs:attribute name="targetLang" type="ns1:data.language">
+      <xs:annotation>
+        <xs:documentation>specifies the language of the content to be found at the destination referenced by target, using a language tag generated according to BCP 47.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attribute.target">
+    <xs:attribute name="target">
+      <xs:annotation>
+        <xs:documentation>specifies the destination of the reference by supplying one or more URI References</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.pointing.attribute.evaluate">
+    <xs:attribute name="evaluate">
+      <xs:annotation>
+        <xs:documentation>specifies the intended meaning when the target of a pointer is itself a pointer.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="all">
+            <xs:annotation>
+              <xs:documentation>if the element pointed to is itself a pointer, then the target of that pointer will be taken, and so on, until an element is found which is not a pointer.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="one">
+            <xs:annotation>
+              <xs:documentation>if the element pointed to is itself a pointer, then its target (whether a pointer or not) is taken as the target of this pointer.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="none">
+            <xs:annotation>
+              <xs:documentation>no further evaluation of targets is carried out beyond that needed to find the element specified in the pointer's target.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.sortable.attributes">
+    <xs:attributeGroup ref="ns1:att.sortable.attribute.sortKey"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.sortable.attribute.sortKey">
+    <xs:attribute name="sortKey" type="ns1:data.word">
+      <xs:annotation>
+        <xs:documentation>supplies the sort key for this element in an index, list or group which contains it.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.edition.attributes">
+    <xs:attributeGroup ref="ns1:att.edition.attribute.ed"/>
+    <xs:attributeGroup ref="ns1:att.edition.attribute.edRef"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.edition.attribute.ed">
+    <xs:attribute name="ed">
+      <xs:annotation>
+        <xs:documentation>(edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.edition.attribute.edRef">
+    <xs:attribute name="edRef">
+      <xs:annotation>
+        <xs:documentation>(edition reference) provides a pointer to the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.spanning.attributes">
+    <xs:attributeGroup ref="ns1:att.spanning.attribute.spanTo"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.spanning.attribute.spanTo">
+    <xs:attribute name="spanTo" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>indicates the end of a span initiated by the element bearing this attribute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.translatable.attributes">
+    <xs:attributeGroup ref="ns1:att.translatable.attribute.versionDate"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.translatable.attribute.versionDate">
+    <xs:attribute name="versionDate" type="ns1:data.temporal.w3c">
+      <xs:annotation>
+        <xs:documentation>specifies the date on which the source text was extracted and sent to the translator</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="model.nameLike.agent">
+    <xs:choice>
+      <xs:element ref="ns1:name"/>
+      <xs:element ref="ns1:orgName"/>
+      <xs:element ref="ns1:persName"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.nameLike.agent_alternation">
+    <xs:choice>
+      <xs:element ref="ns1:name"/>
+      <xs:element ref="ns1:orgName"/>
+      <xs:element ref="ns1:persName"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.nameLike.agent_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:name"/>
+      <xs:element ref="ns1:orgName"/>
+      <xs:element ref="ns1:persName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike.agent_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:name"/>
+      <xs:element minOccurs="0" ref="ns1:orgName"/>
+      <xs:element minOccurs="0" ref="ns1:persName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike.agent_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:name"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:orgName"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:persName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike.agent_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:name"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:orgName"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:persName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.emphLike">
+    <xs:choice>
+      <xs:element ref="ns1:emph"/>
+      <xs:element ref="ns1:gloss"/>
+      <xs:element ref="ns1:title"/>
+      <xs:element ref="ns1:code"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.emphLike_alternation">
+    <xs:choice>
+      <xs:element ref="ns1:emph"/>
+      <xs:element ref="ns1:gloss"/>
+      <xs:element ref="ns1:title"/>
+      <xs:element ref="ns1:code"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.emphLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:emph"/>
+      <xs:element ref="ns1:gloss"/>
+      <xs:element ref="ns1:title"/>
+      <xs:element ref="ns1:code"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.emphLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:emph"/>
+      <xs:element minOccurs="0" ref="ns1:gloss"/>
+      <xs:element minOccurs="0" ref="ns1:title"/>
+      <xs:element minOccurs="0" ref="ns1:code"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.emphLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:emph"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:gloss"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:title"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:code"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.emphLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:emph"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:gloss"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:title"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:code"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.highlighted">
+    <xs:sequence>
+      <xs:group ref="ns1:model.emphLike"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike">
+    <xs:sequence>
+      <xs:element ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.dateLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:date"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike">
+    <xs:sequence>
+      <xs:element ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.measureLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:num"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike">
+    <xs:sequence>
+      <xs:element ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike_alternation">
+    <xs:sequence>
+      <xs:element ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike_sequence">
+    <xs:sequence>
+      <xs:element ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.egLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="examples:egXML"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.graphicLike">
+    <xs:sequence>
+      <xs:element ref="ns1:graphic"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional">
+    <xs:sequence>
+      <xs:element ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.transcriptional_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:supplied"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pPart.edit">
+    <xs:sequence>
+      <xs:group ref="ns1:model.pPart.transcriptional"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.ptrLike">
+    <xs:choice>
+      <xs:element ref="ns1:ptr"/>
+      <xs:element ref="ns1:ref"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.global.meta">
+    <xs:sequence>
+      <xs:element ref="ns1:alt"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.milestoneLike">
+    <xs:sequence>
+      <xs:element ref="ns1:lb"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.biblLike">
+    <xs:choice>
+      <xs:element ref="ns1:biblStruct"/>
+      <xs:element ref="ns1:listBibl"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.biblLike_alternation">
+    <xs:choice>
+      <xs:element ref="ns1:biblStruct"/>
+      <xs:element ref="ns1:listBibl"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.biblLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:biblStruct"/>
+      <xs:element ref="ns1:listBibl"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.biblLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:biblStruct"/>
+      <xs:element minOccurs="0" ref="ns1:listBibl"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.biblLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:biblStruct"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:listBibl"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.biblLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:biblStruct"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:listBibl"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike">
+    <xs:sequence>
+      <xs:element ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.headLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike">
+    <xs:sequence>
+      <xs:element ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.labelLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:label"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike">
+    <xs:sequence>
+      <xs:element ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.listLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:list"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.noteLike">
+    <xs:sequence>
+      <xs:element ref="ns1:note"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike">
+    <xs:sequence>
+      <xs:element ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:p"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.divPart">
+    <xs:sequence>
+      <xs:group ref="ns1:model.pLike"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart">
+    <xs:sequence>
+      <xs:element ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeNamePart_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:placeName"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike">
+    <xs:sequence>
+      <xs:group ref="ns1:model.placeNamePart"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike_alternation">
+    <xs:sequence>
+      <xs:group ref="ns1:model.placeNamePart_alternation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike_sequence">
+    <xs:sequence>
+      <xs:group ref="ns1:model.placeNamePart_sequence"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike_sequenceOptional">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="ns1:model.placeNamePart_sequenceOptional"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.placeNamePart_sequenceOptionalRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.placeStateLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:group maxOccurs="unbounded" ref="ns1:model.placeNamePart_sequenceRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.publicationStmtPart.agency">
+    <xs:sequence>
+      <xs:element ref="ns1:publisher"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.publicationStmtPart.detail">
+    <xs:choice>
+      <xs:element ref="ns1:date"/>
+      <xs:element ref="ns1:idno"/>
+      <xs:element ref="ns1:availability"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.availabilityPart">
+    <xs:sequence>
+      <xs:element ref="ns1:licence"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.glossLike">
+    <xs:sequence>
+      <xs:element ref="ns1:gloss"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike">
+    <xs:sequence>
+      <xs:element ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike_alternation">
+    <xs:sequence>
+      <xs:element ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.quoteLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:quote"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike">
+    <xs:sequence>
+      <xs:group ref="ns1:model.quoteLike"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike_alternation">
+    <xs:sequence>
+      <xs:group ref="ns1:model.quoteLike_alternation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike_sequence">
+    <xs:sequence>
+      <xs:group ref="ns1:model.quoteLike_sequence"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike_sequenceOptional">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="ns1:model.quoteLike_sequenceOptional"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.quoteLike_sequenceOptionalRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.qLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:group maxOccurs="unbounded" ref="ns1:model.quoteLike_sequenceRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.respLike">
+    <xs:choice>
+      <xs:element ref="ns1:author"/>
+      <xs:element ref="ns1:editor"/>
+      <xs:element ref="ns1:respStmt"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divTopPart">
+    <xs:sequence>
+      <xs:group ref="ns1:model.headLike"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.divTop">
+    <xs:sequence>
+      <xs:group ref="ns1:model.divTopPart"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.pLike.front">
+    <xs:sequence>
+      <xs:element ref="ns1:head"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.imprintPart">
+    <xs:sequence>
+      <xs:element ref="ns1:publisher"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.addressLike">
+    <xs:choice>
+      <xs:element ref="ns1:email"/>
+      <xs:element ref="ns1:affiliation"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.addressLike_alternation">
+    <xs:choice>
+      <xs:element ref="ns1:email"/>
+      <xs:element ref="ns1:affiliation"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.addressLike_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:email"/>
+      <xs:element ref="ns1:affiliation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.addressLike_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:email"/>
+      <xs:element minOccurs="0" ref="ns1:affiliation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.addressLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:email"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:affiliation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.addressLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:email"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:affiliation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike">
+    <xs:choice>
+      <xs:group ref="ns1:model.nameLike.agent"/>
+      <xs:group ref="ns1:model.placeStateLike"/>
+      <xs:element ref="ns1:idno"/>
+      <xs:group ref="ns1:model.persNamePart"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.nameLike_alternation">
+    <xs:choice>
+      <xs:group ref="ns1:model.nameLike.agent_alternation"/>
+      <xs:group ref="ns1:model.placeStateLike_alternation"/>
+      <xs:element ref="ns1:idno"/>
+      <xs:group ref="ns1:model.persNamePart_alternation"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.nameLike_sequence">
+    <xs:sequence>
+      <xs:group ref="ns1:model.nameLike.agent_sequence"/>
+      <xs:group ref="ns1:model.placeStateLike_sequence"/>
+      <xs:element ref="ns1:idno"/>
+      <xs:group ref="ns1:model.persNamePart_sequence"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike_sequenceOptional">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="ns1:model.nameLike.agent_sequenceOptional"/>
+      <xs:group minOccurs="0" ref="ns1:model.placeStateLike_sequenceOptional"/>
+      <xs:element minOccurs="0" ref="ns1:idno"/>
+      <xs:group minOccurs="0" ref="ns1:model.persNamePart_sequenceOptional"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.nameLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.nameLike.agent_sequenceOptionalRepeatable"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.placeStateLike_sequenceOptionalRepeatable"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:idno"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.persNamePart_sequenceOptionalRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.global">
+    <xs:choice>
+      <xs:group ref="ns1:model.global.meta"/>
+      <xs:group ref="ns1:model.milestoneLike"/>
+      <xs:group ref="ns1:model.noteLike"/>
+      <xs:element ref="ns1:figure"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.pPart.data">
+    <xs:choice>
+      <xs:group ref="ns1:model.dateLike"/>
+      <xs:group ref="ns1:model.measureLike"/>
+      <xs:group ref="ns1:model.addressLike"/>
+      <xs:group ref="ns1:model.nameLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.inter">
+    <xs:choice>
+      <xs:group ref="ns1:model.egLike"/>
+      <xs:group ref="ns1:model.biblLike"/>
+      <xs:group ref="ns1:model.labelLike"/>
+      <xs:group ref="ns1:model.listLike"/>
+      <xs:group ref="ns1:model.qLike"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.common">
+    <xs:choice>
+      <xs:group ref="ns1:model.divPart"/>
+      <xs:group ref="ns1:model.inter"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.phrase">
+    <xs:choice>
+      <xs:group ref="ns1:model.highlighted"/>
+      <xs:group ref="ns1:model.graphicLike"/>
+      <xs:group ref="ns1:model.pPart.edit"/>
+      <xs:group ref="ns1:model.ptrLike"/>
+      <xs:group ref="ns1:model.pPart.data"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.limitedPhrase">
+    <xs:choice>
+      <xs:group ref="ns1:model.emphLike"/>
+      <xs:group ref="ns1:model.ptrLike"/>
+      <xs:group ref="ns1:model.pPart.data"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.divLike">
+    <xs:sequence>
+      <xs:element ref="ns1:div"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.teiHeaderPart">
+    <xs:sequence>
+      <xs:element ref="ns1:encodingDesc"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.encodingDescPart">
+    <xs:sequence>
+      <xs:element ref="ns1:classDecl"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="att.source.attributes">
+    <xs:attributeGroup ref="ns1:att.source.attribute.source"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.source.attribute.source">
+    <xs:attribute name="source">
+      <xs:annotation>
+        <xs:documentation>provides a pointer to the bibliographical source from which a quotation or citation is drawn.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.personal.attributes">
+    <xs:attributeGroup ref="ns1:att.naming.attributes"/>
+    <xs:attributeGroup ref="ns1:att.personal.attribute.full"/>
+    <xs:attributeGroup ref="ns1:att.personal.attribute.sort"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.personal.attribute.full">
+    <xs:attribute name="full" default="yes">
+      <xs:annotation>
+        <xs:documentation>indicates whether the name component is given in full, as an abbreviation or simply as an initial.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="yes">
+            <xs:annotation>
+              <xs:documentation>the name component is spelled out in full.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="abb">
+            <xs:annotation>
+              <xs:documentation>(abbreviated) the name component is given in an abbreviated form.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="init">
+            <xs:annotation>
+              <xs:documentation>(initial letter) the name component is indicated only by one initial.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.personal.attribute.sort">
+    <xs:attribute name="sort" type="ns1:data.count">
+      <xs:annotation>
+        <xs:documentation>specifies the sort order of the name component in relation to others within the name.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="p">
+    <xs:annotation>
+      <xs:documentation>(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emph">
+    <xs:annotation>
+      <xs:documentation>(emphasized) marks words or phrases which are stressed or emphasized for linguistic or rhetorical effect. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quote">
+    <xs:annotation>
+      <xs:documentation>(quotation) contains a phrase or passage attributed by the narrator or author to some agency external to the text. [3.3.3. Quotation 4.3.1. Grouped Texts]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.specialPara">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+          <xs:attributeGroup ref="ns1:att.source.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gloss">
+    <xs:annotation>
+      <xs:documentation>identifies a phrase or word used to provide a gloss or definition for some other word or phrase. [3.3.4. Terms, Glosses, Equivalents, and Descriptions 22.4.1. Description of Components]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.translatable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+          <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+          <xs:attributeGroup ref="ns1:att.cReferencing.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:annotation>
+      <xs:documentation>(name, proper noun) contains a proper noun or noun phrase. [3.5.1. Referring Strings]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="email">
+    <xs:annotation>
+      <xs:documentation>(electronic mail address) contains an email address identifying a location to which email messages can be delivered. [3.5.2. Addresses]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="num">
+    <xs:annotation>
+      <xs:documentation>(number) contains a number, written in any form. [3.5.3. Numbers and
+Measures]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.ranging.attributes"/>
+          <xs:attribute name="type">
+            <xs:annotation>
+              <xs:documentation>indicates the type of numeric value.
+Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:union memberTypes="xs:Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="cardinal">
+                      <xs:annotation>
+                        <xs:documentation>absolute number, e.g. 21, 21.5</xs:documentation>
+                      </xs:annotation>
+                    </xs:enumeration>
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="ordinal">
+                      <xs:annotation>
+                        <xs:documentation>ordinal number, e.g. 21st</xs:documentation>
+                      </xs:annotation>
+                    </xs:enumeration>
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="fraction">
+                      <xs:annotation>
+                        <xs:documentation>fraction, e.g. one half or three-quarters</xs:documentation>
+                      </xs:annotation>
+                    </xs:enumeration>
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="percentage">
+                      <xs:annotation>
+                        <xs:documentation>a percentage</xs:documentation>
+                      </xs:annotation>
+                    </xs:enumeration>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:union>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="value" type="ns1:data.numeric">
+            <xs:annotation>
+              <xs:documentation>supplies the value of the number in standard form.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date">
+    <xs:annotation>
+      <xs:documentation>contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="ns1:model.phrase"/>
+        <xs:group ref="ns1:model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ptr">
+    <xs:annotation>
+      <xs:documentation>(pointer) defines a pointer to another location. [3.6. Simple Links and Cross-References 16.1. Links]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+      <xs:attributeGroup ref="ns1:att.internetMedia.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attributeGroup ref="ns1:att.cReferencing.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref">
+    <xs:annotation>
+      <xs:documentation>(reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+          <xs:attributeGroup ref="ns1:att.internetMedia.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+          <xs:attributeGroup ref="ns1:att.cReferencing.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="list">
+    <xs:annotation>
+      <xs:documentation>contains any sequence of items organized as a list. [3.7. Lists]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="ns1:model.divTop"/>
+          <xs:group ref="ns1:model.global"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:sequence maxOccurs="unbounded">
+            <xs:element ref="ns1:item"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+          </xs:sequence>
+          <xs:sequence maxOccurs="unbounded">
+            <xs:element ref="ns1:label"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+            <xs:element ref="ns1:item"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attribute.subtype"/>
+      <xs:attribute name="type">
+        <xs:annotation>
+          <xs:documentation>describes the nature of the items in the list.
+Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syllogism</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:Name">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="gloss">
+                  <xs:annotation>
+                    <xs:documentation>each list item glosses some term or concept, which is given by a label element preceding the list item.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="index">
+                  <xs:annotation>
+                    <xs:documentation>each list item is an entry in an index such as the alphabetical topical index at the back of a print volume.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="instructions">
+                  <xs:annotation>
+                    <xs:documentation>each list item is a step in a sequence of instructions, as in a recipe.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="litany">
+                  <xs:annotation>
+                    <xs:documentation>each list item is one of a sequence of petitions, supplications or invocations, typically in a religious ritual.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="syllogism">
+                  <xs:annotation>
+                    <xs:documentation>each list item is part of an argument consisting of two or more propositions and a final conclusion derived from them.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item">
+    <xs:annotation>
+      <xs:documentation>contains one component of a list. [3.7. Lists 2.6. The Revision Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.specialPara">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="label">
+    <xs:annotation>
+      <xs:documentation>contains any label or heading used to identify part of a text, typically but not exclusively in a list or glossary. [3.7. Lists]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+          <xs:attributeGroup ref="ns1:att.placement.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="head">
+    <xs:annotation>
+      <xs:documentation>(heading) contains any type of heading, for example the title of a section, or the heading of a list, glossary, manuscript description, etc. [4.2.1. Headings and Trailers]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="ns1:model.phrase"/>
+        <xs:group ref="ns1:model.inter"/>
+        <xs:group ref="ns1:model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="note">
+    <xs:annotation>
+      <xs:documentation>contains a note or annotation. [3.8.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.11.2.8. Notes and Statement of Language 9.3.5.4. Notes within Entries]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.specialPara">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.placement.attributes"/>
+          <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+          <xs:attributeGroup ref="ns1:att.source.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+          <xs:attribute name="anchored" default="true" type="ns1:data.truthValue">
+            <xs:annotation>
+              <xs:documentation>indicates whether the copy text shows the exact place of reference for the note.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="targetEnd">
+            <xs:annotation>
+              <xs:documentation>points to the end of the span to which the note is attached, if the note is not embedded in the text at that point.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction>
+                <xs:simpleType>
+                  <xs:list itemType="ns1:data.pointer"/>
+                </xs:simpleType>
+                <xs:minLength value="1"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="graphic">
+    <xs:annotation>
+      <xs:documentation>indicates the location of an inline graphic, illustration, or figure. [3.9. Graphics and Other Non-textual Components]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.media.attributes"/>
+      <xs:attributeGroup ref="ns1:att.resourced.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lb">
+    <xs:annotation>
+      <xs:documentation>(line break) marks the start of a new (typographic) line in some edition or version of a text. [3.10.3. Milestone
+Elements 7.2.5. Speech Contents]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attributeGroup ref="ns1:att.edition.attributes"/>
+      <xs:attributeGroup ref="ns1:att.spanning.attributes"/>
+      <xs:attributeGroup ref="ns1:att.breaking.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monogr">
+    <xs:annotation>
+      <xs:documentation>(monographic level) contains bibliographic elements describing an item (e.g. a book or journal) published as an independent item (i.e. as a separate physical object). [3.11.2.1. Analytic, Monographic, and Series Levels]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0">
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+            <xs:element maxOccurs="unbounded" ref="ns1:title"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:group ref="ns1:model.ptrLike"/>
+              <xs:element ref="ns1:idno"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:choice maxOccurs="unbounded">
+              <xs:element ref="ns1:title"/>
+              <xs:group ref="ns1:model.ptrLike"/>
+              <xs:element ref="ns1:idno"/>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="ns1:author"/>
+              <xs:element ref="ns1:editor"/>
+              <xs:element ref="ns1:respStmt"/>
+            </xs:choice>
+          </xs:sequence>
+          <xs:element ref="ns1:idno"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:availability"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.noteLike"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="ns1:idno"/>
+          <xs:group ref="ns1:model.ptrLike"/>
+          <xs:element ref="ns1:editor"/>
+          <xs:element ref="ns1:respStmt"/>
+        </xs:choice>
+        <xs:element ref="ns1:imprint"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:imprint"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="author">
+    <xs:annotation>
+      <xs:documentation>in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.naming.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editor">
+    <xs:annotation>
+      <xs:documentation>contains a secondary statement of responsibility for a bibliographic item, for example the name of an individual, institution or organization, (or of several such) acting as editor, compiler, translator, etc. [3.11.2.2. Titles, Authors, and Editors]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.naming.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respStmt">
+    <xs:annotation>
+      <xs:documentation>(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="ns1:resp"/>
+          <xs:group maxOccurs="unbounded" ref="ns1:model.nameLike.agent"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:group maxOccurs="unbounded" ref="ns1:model.nameLike.agent"/>
+          <xs:element maxOccurs="unbounded" ref="ns1:resp"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.canonical.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resp">
+    <xs:annotation>
+      <xs:documentation>(responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq.limited">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.canonical.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title">
+    <xs:annotation>
+      <xs:documentation>contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.canonical.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attribute.subtype"/>
+          <xs:attribute name="type" type="ns1:data.enumerated">
+            <xs:annotation>
+              <xs:documentation>classifies the title according to some convenient typology.
+Sample values include: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ; 4] short; 5] desc(descriptive) </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="imprint">
+    <xs:annotation>
+      <xs:documentation>groups information relating to the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:choice>
+          <xs:group ref="ns1:model.imprintPart"/>
+          <xs:group ref="ns1:model.dateLike"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:respStmt"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="publisher">
+    <xs:annotation>
+      <xs:documentation>provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="biblStruct">
+    <xs:annotation>
+      <xs:documentation>(structured bibliographic citation) contains a structured bibliographic citation, in which only bibliographic sub-elements appear and in a specified order. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:monogr"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="ns1:model.noteLike"/>
+          <xs:element ref="ns1:idno"/>
+          <xs:group ref="ns1:model.ptrLike"/>
+          <xs:element ref="ns1:relatedItem"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.declarable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.docStatus.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listBibl">
+    <xs:annotation>
+      <xs:documentation>(citation list) contains a list of bibliographic citations of any kind. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.headLike"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:group ref="ns1:model.biblLike"/>
+          <xs:group ref="ns1:model.milestoneLike"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.declarable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="relatedItem">
+    <xs:annotation>
+      <xs:documentation>contains or references some other bibliographic item which is related to the present one in some specified manner, for example as a constituent or alternative version of it. [3.11.2.7. Related Items]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0">
+        <xs:group ref="ns1:model.biblLike"/>
+        <xs:group ref="ns1:model.ptrLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attribute name="target" type="ns1:data.pointer">
+        <xs:annotation>
+          <xs:documentation>points to the related bibliographic element by means of an absolute or relative URI reference</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="teiHeader">
+    <xs:annotation>
+      <xs:documentation>(TEI header) supplies the descriptive and declarative information making up an electronic title page for every TEI-conformant document. [2.1.1. The TEI Header and Its Components 15.1. Varieties of Composite Text]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:fileDesc"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.teiHeaderPart"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attribute name="type" default="text" type="ns1:data.enumerated">
+        <xs:annotation>
+          <xs:documentation>specifies the kind of document to which the header is attached, for example whether it is a corpus or individual text.
+Sample values include: 1] text; 2] corpus</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fileDesc">
+    <xs:annotation>
+      <xs:documentation>(file description) contains a full bibliographic description of an electronic file. [2.2. The File Description 2.1.1. The TEI Header and Its Components]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element ref="ns1:titleStmt"/>
+          <xs:element ref="ns1:publicationStmt"/>
+          <xs:element minOccurs="0" ref="ns1:notesStmt"/>
+        </xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:sourceDesc"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titleStmt">
+    <xs:annotation>
+      <xs:documentation>(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:title"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.respLike"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="publicationStmt">
+    <xs:annotation>
+      <xs:documentation>(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence maxOccurs="unbounded">
+          <xs:group ref="ns1:model.publicationStmtPart.agency"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.publicationStmtPart.detail"/>
+        </xs:sequence>
+        <xs:group maxOccurs="unbounded" ref="ns1:model.pLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="idno">
+    <xs:annotation>
+      <xs:documentation>(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:idno"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attribute name="type" type="ns1:data.enumerated">
+        <xs:annotation>
+          <xs:documentation>categorizes the identifier, for example as an ISBN, Social Security number, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="availability">
+    <xs:annotation>
+      <xs:documentation>supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution, Licensing, etc.]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="ns1:model.availabilityPart"/>
+        <xs:group ref="ns1:model.pLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.declarable.attributes"/>
+      <xs:attribute name="status" default="unknown">
+        <xs:annotation>
+          <xs:documentation>supplies a code identifying the current availability of the text.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="free">
+              <xs:annotation>
+                <xs:documentation>the text is freely available.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="unknown">
+              <xs:annotation>
+                <xs:documentation>the status of the text is unknown.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="restricted">
+              <xs:annotation>
+                <xs:documentation>the text is not freely available.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="licence">
+    <xs:annotation>
+      <xs:documentation>contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution, Licensing, etc.]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.specialPara">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.pointing.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="notesStmt">
+    <xs:annotation>
+      <xs:documentation>(notes statement) collects together any notes providing information about a text additional to that recorded in other parts of the bibliographic description. [2.2.6. The Notes Statement 2.2. The File Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="ns1:model.noteLike"/>
+        <xs:element ref="ns1:relatedItem"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sourceDesc">
+    <xs:annotation>
+      <xs:documentation>(source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="ns1:model.pLike"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:group ref="ns1:model.biblLike"/>
+          <xs:group ref="ns1:model.listLike"/>
+        </xs:choice>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="encodingDesc">
+    <xs:annotation>
+      <xs:documentation>(encoding description) documents the relationship between an electronic text and the source or sources from which it was derived. [2.3. The Encoding Description 2.1.1. The TEI Header and Its Components]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="ns1:model.encodingDescPart"/>
+        <xs:group ref="ns1:model.pLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="classDecl">
+    <xs:annotation>
+      <xs:documentation>(classification declarations) contains one or more taxonomies defining any classificatory codes used elsewhere in the text. [2.3.7. The Classification Declaration 2.3. The Encoding Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:taxonomy"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taxonomy">
+    <xs:annotation>
+      <xs:documentation>defines a typology either implicitly, by means of a bibliographic citation, or explicitly by a structured taxonomy. [2.3.7. The Classification Declaration]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.glossLike"/>
+        <xs:element maxOccurs="unbounded" ref="ns1:category"/>
+        <xs:sequence>
+          <xs:group ref="ns1:model.biblLike"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:category"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:annotation>
+      <xs:documentation>contains an individual descriptive category, possibly nested within a superordinate category, within a user-defined taxonomy. [2.3.7. The Classification Declaration]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element maxOccurs="unbounded" ref="ns1:catDesc"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.glossLike"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:category"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="catDesc">
+    <xs:annotation>
+      <xs:documentation>(category description) describes some category within a taxonomy or text typology, either in the form of a brief prose description or in terms of the situational parameters used by the TEI formal textDesc. [2.3.7. The Classification Declaration]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.limitedPhrase"/>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TEI">
+    <xs:annotation>
+      <xs:documentation>(TEI document) contains a single TEI-conformant document, containing a single TEI header, a single text, one or more members of the model.resourceLike class, or a combination of these. A series of TEI elements may be combined together to form a teiCorpus element. [4. Default Text Structure 15.1. Varieties of Composite Text]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:teiHeader"/>
+        <xs:element ref="ns1:text"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="text">
+    <xs:annotation>
+      <xs:documentation>contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="ns1:front"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+        </xs:sequence>
+        <xs:element ref="ns1:body"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="ns1:back"/>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="body">
+    <xs:annotation>
+      <xs:documentation>(text body) contains the whole body of a single unitary text, excluding any front or back matter. [4. Default Text Structure]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+        <xs:sequence minOccurs="0">
+          <xs:group ref="ns1:model.divTop"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="ns1:model.global"/>
+            <xs:group ref="ns1:model.divTop"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:choice>
+          <xs:sequence maxOccurs="unbounded">
+            <xs:group ref="ns1:model.divLike"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:group ref="ns1:model.common"/>
+              <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+            </xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:group ref="ns1:model.divLike"/>
+              <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="div">
+    <xs:annotation>
+      <xs:documentation>(text division) contains a subdivision of the front, body, or back of a text. [4.1. Divisions of the Body]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="ns1:model.divTop"/>
+          <xs:group ref="ns1:model.global"/>
+        </xs:choice>
+        <xs:choice minOccurs="0">
+          <xs:sequence maxOccurs="unbounded">
+            <xs:group ref="ns1:model.divLike"/>
+            <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:group ref="ns1:model.common"/>
+              <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+            </xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:group ref="ns1:model.divLike"/>
+              <xs:group minOccurs="0" maxOccurs="unbounded" ref="ns1:model.global"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="front">
+    <xs:annotation>
+      <xs:documentation>(front matter) contains any prefatory matter (headers, title page, prefaces, dedications, etc.) found at the start of a document, before the main body. [4.6. Title Pages 4. Default Text Structure]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="ns1:model.pLike"/>
+          <xs:group ref="ns1:model.pLike.front"/>
+          <xs:group ref="ns1:model.global"/>
+        </xs:choice>
+        <xs:sequence minOccurs="0">
+          <xs:group ref="ns1:model.divLike"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="ns1:model.divLike"/>
+            <xs:group ref="ns1:model.global"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="back">
+    <xs:annotation>
+      <xs:documentation>(back matter) contains any appendixes, etc. following the main part of a text. [4.7. Back Matter 4. Default Text Structure]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="ns1:model.pLike.front"/>
+          <xs:group ref="ns1:model.pLike"/>
+          <xs:group ref="ns1:model.listLike"/>
+          <xs:group ref="ns1:model.global"/>
+        </xs:choice>
+        <xs:sequence minOccurs="0">
+          <xs:group ref="ns1:model.divLike"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="ns1:model.divLike"/>
+            <xs:group ref="ns1:model.global"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="figure">
+    <xs:annotation>
+      <xs:documentation>groups elements representing or containing graphic information such as an illustration, formula, or figure. [14.4. Specific Elements for Graphic Images]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="ns1:model.headLike"/>
+        <xs:group ref="ns1:model.common"/>
+        <xs:group ref="ns1:model.graphicLike"/>
+        <xs:group ref="ns1:model.global"/>
+      </xs:choice>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.placement.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="att.datable.custom.attributes">
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.when-custom"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.notBefore-custom"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.notAfter-custom"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.from-custom"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.to-custom"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.datingPoint"/>
+    <xs:attributeGroup ref="ns1:att.datable.custom.attribute.datingMethod"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.when-custom">
+    <xs:attribute name="when-custom">
+      <xs:annotation>
+        <xs:documentation>supplies the value of a date or time in some custom standard form.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.notBefore-custom">
+    <xs:attribute name="notBefore-custom">
+      <xs:annotation>
+        <xs:documentation>specifies the earliest possible date for the event in some custom standard form.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.notAfter-custom">
+    <xs:attribute name="notAfter-custom">
+      <xs:annotation>
+        <xs:documentation>specifies the latest possible date for the event in some custom standard form.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.from-custom">
+    <xs:attribute name="from-custom">
+      <xs:annotation>
+        <xs:documentation>indicates the starting point of the period in some custom standard form.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.to-custom">
+    <xs:attribute name="to-custom">
+      <xs:annotation>
+        <xs:documentation>indicates the ending point of the period in some custom standard form.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.word"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.datingPoint">
+    <xs:attribute name="datingPoint" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.custom.attribute.datingMethod">
+    <xs:attribute name="datingMethod" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>supplies a pointer to a calendar element or other means of interpreting the values of the custom dating attributes.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="model.persNamePart">
+    <xs:choice>
+      <xs:element ref="ns1:surname"/>
+      <xs:element ref="ns1:forename"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.persNamePart_alternation">
+    <xs:choice>
+      <xs:element ref="ns1:surname"/>
+      <xs:element ref="ns1:forename"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="model.persNamePart_sequence">
+    <xs:sequence>
+      <xs:element ref="ns1:surname"/>
+      <xs:element ref="ns1:forename"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.persNamePart_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:surname"/>
+      <xs:element minOccurs="0" ref="ns1:forename"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.persNamePart_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:surname"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:forename"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="model.persNamePart_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns1:surname"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:forename"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="att.datable.iso.attributes">
+    <xs:attributeGroup ref="ns1:att.datable.iso.attribute.when-iso"/>
+    <xs:attributeGroup ref="ns1:att.datable.iso.attribute.notBefore-iso"/>
+    <xs:attributeGroup ref="ns1:att.datable.iso.attribute.notAfter-iso"/>
+    <xs:attributeGroup ref="ns1:att.datable.iso.attribute.from-iso"/>
+    <xs:attributeGroup ref="ns1:att.datable.iso.attribute.to-iso"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.iso.attribute.when-iso">
+    <xs:attribute name="when-iso" type="ns1:data.temporal.iso">
+      <xs:annotation>
+        <xs:documentation>supplies the value of a date or time in a standard form.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.iso.attribute.notBefore-iso">
+    <xs:attribute name="notBefore-iso" type="ns1:data.temporal.iso">
+      <xs:annotation>
+        <xs:documentation>specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.iso.attribute.notAfter-iso">
+    <xs:attribute name="notAfter-iso" type="ns1:data.temporal.iso">
+      <xs:annotation>
+        <xs:documentation>specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.iso.attribute.from-iso">
+    <xs:attribute name="from-iso" type="ns1:data.temporal.iso">
+      <xs:annotation>
+        <xs:documentation>indicates the starting point of the period in standard form.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.datable.iso.attribute.to-iso">
+    <xs:attribute name="to-iso" type="ns1:data.temporal.iso">
+      <xs:annotation>
+        <xs:documentation>indicates the ending point of the period in standard form.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="orgName">
+    <xs:annotation>
+      <xs:documentation>(organization name) contains an organizational name. [13.2.2. Organizational Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persName">
+    <xs:annotation>
+      <xs:documentation>(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="surname">
+    <xs:annotation>
+      <xs:documentation>contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [13.2.1. Personal Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="forename">
+    <xs:annotation>
+      <xs:documentation>contains a forename, given or baptismal name. [13.2.1. Personal Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="placeName">
+    <xs:annotation>
+      <xs:documentation>contains an absolute or relative place name. [13.2.3. Place Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.personal.attributes"/>
+          <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="affiliation">
+    <xs:annotation>
+      <xs:documentation>contains an informal description of a person's present or past affiliation with some organization, for example an employer or sponsor. [15.2.2. The Participant Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.phraseSeq">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attributeGroup ref="ns1:att.datable.attributes"/>
+          <xs:attributeGroup ref="ns1:att.naming.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="att.global.linking.attributes">
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.corresp"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.synch"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.sameAs"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.copyOf"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.next"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.prev"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.exclude"/>
+    <xs:attributeGroup ref="ns1:att.global.linking.attribute.select"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.corresp">
+    <xs:attribute name="corresp">
+      <xs:annotation>
+        <xs:documentation>(corresponds) points to elements that correspond to the current element in some way.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.synch">
+    <xs:attribute name="synch">
+      <xs:annotation>
+        <xs:documentation>(synchronous) points to elements that are synchronous with the current element.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.sameAs">
+    <xs:attribute name="sameAs" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>points to an element that is the same as the current element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.copyOf">
+    <xs:attribute name="copyOf" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>points to an element of which the current element is a copy.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.next">
+    <xs:attribute name="next" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>points to the next element of a virtual aggregate of which the current element is part.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.prev">
+    <xs:attribute name="prev" type="ns1:data.pointer">
+      <xs:annotation>
+        <xs:documentation>(previous) points to the previous element of a virtual aggregate of which the current element is part.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.exclude">
+    <xs:attribute name="exclude">
+      <xs:annotation>
+        <xs:documentation>points to elements that are in exclusive alternation with the current element.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.linking.attribute.select">
+    <xs:attribute name="select">
+      <xs:annotation>
+        <xs:documentation>selects one or more alternants; if one alternant is selected, the ambiguity or uncertainty is marked as resolved. If more than one alternant is selected, the degree of ambiguity or uncertainty is marked as reduced by the number of alternants not selected.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="alt">
+    <xs:annotation>
+      <xs:documentation>(alternation) identifies an alternation or a set of choices among elements or passages. [16.8. Alternation]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.pointing.attribute.targetLang"/>
+      <xs:attributeGroup ref="ns1:att.pointing.attribute.evaluate"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+      <xs:attribute name="target">
+        <xs:annotation>
+          <xs:documentation>specifies the destination of the reference by supplying one or more URI References</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list>
+                <xs:simpleType>
+                  <xs:union memberTypes="ns1:data.pointer ns1:data.pointer ns1:data.pointer"/>
+                </xs:simpleType>
+              </xs:list>
+            </xs:simpleType>
+            <xs:minLength value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="mode">
+        <xs:annotation>
+          <xs:documentation>states whether the alternations gathered in this collection are exclusive or inclusive.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="excl">
+              <xs:annotation>
+                <xs:documentation>(exclusive) indicates that the alternation is exclusive, i.e. that at most one of the alternatives occurs.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="incl">
+              <xs:annotation>
+                <xs:documentation>(inclusive) indicates that the alternation is not exclusive, i.e. that one or more of the alternatives occur.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="weights">
+        <xs:annotation>
+          <xs:documentation>If mode is , each weight states the probability that the corresponding alternative occurs. If mode is incl each weight states the probability that the corresponding alternative occurs given that at least one of the other alternatives occurs.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list>
+                <xs:simpleType>
+                  <xs:union memberTypes="ns1:data.probability ns1:data.probability ns1:data.probability"/>
+                </xs:simpleType>
+              </xs:list>
+            </xs:simpleType>
+            <xs:minLength value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="att.global.facs.attributes">
+    <xs:attributeGroup ref="ns1:att.global.facs.attribute.facs"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.facs.attribute.facs">
+    <xs:attribute name="facs">
+      <xs:annotation>
+        <xs:documentation>(facsimile) points to all or part of an image which corresponds with the content of the element.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.change.attributes">
+    <xs:attributeGroup ref="ns1:att.global.change.attribute.change"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.global.change.attribute.change">
+    <xs:attribute name="change">
+      <xs:annotation>
+        <xs:documentation>points to one or more change elements documenting a state or revision campaign to which the element bearing this attribute and its children have been assigned by the encoder.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction>
+          <xs:simpleType>
+            <xs:list itemType="ns1:data.pointer"/>
+          </xs:simpleType>
+          <xs:minLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="supplied">
+    <xs:annotation>
+      <xs:documentation>signifies text supplied by the transcriber or editor for any reason; for example because the original cannot be read due to physical damage, or because of an obvious omission by the author or scribe. [11.3.3.1. Damage, Illegibility, and Supplied Text]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ns1:macro.paraContent">
+          <xs:attributeGroup ref="ns1:att.global.attributes"/>
+          <xs:attributeGroup ref="ns1:att.editLike.attributes"/>
+          <xs:attribute name="reason">
+            <xs:annotation>
+              <xs:documentation>one or more words indicating why the text has had to be supplied, e.g. overbinding, faded-ink, lost-folio, omitted-in-original.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction>
+                <xs:simpleType>
+                  <xs:list itemType="ns1:data.word"/>
+                </xs:simpleType>
+                <xs:minLength value="1"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="code">
+    <xs:annotation>
+      <xs:documentation>contains literal code from some formal language such as a programming language. [22.1.1. Phrase Level Terms]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attribute name="lang" type="ns1:data.word">
+        <xs:annotation>
+          <xs:documentation>(formal language) a name identifying the formal language in which the code is expressed</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
