@@ -4,8 +4,8 @@ This GitHub repository provides the data from the reviewing journal RIDE (http:/
 
 ## Contents of the repository
 
-* issues: Complete datasets of all issues sorted by issues, including a file in XML/TEI file (with review text and questionnaire) and images and/or illustrations that are part of the publication
-* tei: The TEI files of all the reviews in one place
+* issues: Complete datasets of all issues sorted by issues, including a file in XML/TEI (with review text and questionnaire) and images and/or illustrations that are part of the publication
+* tei: The XML/TEI files of all the reviews in one place
 * schema: The relaxNG schema of the XML/TEI files
 * questionnaire_data: Summaries of the data gathered with the RIDE questionnaires
 
@@ -16,6 +16,10 @@ The contents of this repository are published under CC-BY license. For a summary
 ## Contact
 
 The repository is run by members of the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
+
+
+
+
 
 
 
