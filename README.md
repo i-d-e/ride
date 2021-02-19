@@ -17,10 +17,15 @@ The contents of this repository are published under CC-BY license. For a summary
 
 The datasets are provided by the Institute for Documentology and Scholarly Editing. The modeling, recording, conversion and curation of the data was carried out mainly by Bernhard Assmann, Ulrike Henny-Krahmer, Frederike Neuber, Torsten Schassan and Philipp Steinkrüger.
 
+## Citation
+
+Repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550707)
+
+Release v-1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
+
 ## Contact
 
 The repository is run by members of the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
-
 
 
 
