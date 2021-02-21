@@ -1,1068 +1,1506 @@
-<?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title/>
-        <respStmt>
-          <resp>author</resp>
-          <name>
-            <persName>
-              <forename xml:id="reviewer_forename">Andrew</forename>
-              <surname xml:id="reviewer_surname">Dunning</surname>
-            </persName>
-            <affiliation>
-              <orgName xml:id="reviewer_organization">Centre for Medieval Studies, University of Toronto</orgName>
-              <placeName xml:id="reviewer_place">Toronto, Ontario, Canada</placeName>
-            </affiliation>
-            <email xml:id="reviewer_email">andrew.dunning (at) utoronto.ca</email>
-          </name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Institut f&#xFC;r Dokumentologie und Editorik</publisher>
-        <date/>
-        <idno type="issue">3</idno>
-        <idno type="URI">http://ride.i-d-e.de/issue-3/petrus_plaoul</idno>
-        <idno type="doi">10.18716/ride.a.3.3</idno>
-        <availability>
-          <licence>
-            <ref target="http://creativecommons.org/licenses/by/4.0/"/>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <notesStmt>
-        <relatedItem>
-          <biblStruct>
-            <monogr>
-              <title xml:id="resource_title">Petrus Plaoul. Commentarius in libros Sententiarum: Editiones electronicas</title>
-              <editor xml:id="resource_editors">Jeffrey C. Witt</editor>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Jeffrey C. Witt</name>
-                </persName>
-              </respStmt>
-              <imprint>
-                <date xml:id="resource_date_publication">2011ff.</date>
-              </imprint>
-            </monogr>
-            <idno xml:id="resource_uri">http://petrusplaoul.org</idno>
-          </biblStruct>
-        </relatedItem>
-        <note>
-          <date xml:id="resource_date_access">2015-02-03</date>
-        </note>
-      </notesStmt>
-      <sourceDesc>
-        <p>Auf der Basis von <ref>http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1</ref></p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
-          <category xml:id="documentation">
-            <category xml:id="bibl_desc">
-              <catDesc>
-                <ref target="#K1.2">cf. Catalogue 1.2</ref>
-              </catDesc>
-              <catDesc>Is it easily possible to describe the project bibliographically along the schema "responsible editors, publishing/hosting institution, year(s) of publishing"?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contributors">
-              <catDesc>
-                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-              </catDesc>
-              <catDesc>Are the contributors (editors, institutions, associates) of the project fully documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contacts">
-              <catDesc>
-                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-              </catDesc>
-              <catDesc>Does the project list contact persons?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="selection">
-              <category xml:id="explained">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="reasonable">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection by and large reasonable?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="data_archive">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the documentation include information about the long term sustainability of the basic data (archiving of the data)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="aims">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="methods">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="data_model">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <catDesc>Does the project document which data model (e.g. TEI) has been used and for what reason?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="help">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts concerning the use of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="citation">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or a part of it)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="complete">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the editon regard itself as a completed project (i.e. not promise further modifications and additions)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="institutional_curation">
-              <catDesc>
-                <ref target="#K4.13">cf. Catalogue 4.13</ref>
-              </catDesc>
-              <catDesc>Does the project provide information about institutional support for the curation and sustainability of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="contents">
-            <category xml:id="previous_edition">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="materials_used">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Does the edition make use of these previous editions?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="introduction">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer an introduction to the subject-matter (the author(s), the work, its history, the theme, etc.) of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="bibliography">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a bibliography?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="commentary">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear passages, interpretation, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="contexts">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project include or link to external resources with contextual material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="images">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer images of digitised sources?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="image_quality">
-              <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref></catDesc>
-              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="transcriptions">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc> Is the text fully transcribed?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="text_quality">
-              <catDesc>
-                <ref target="#K4.6">cf. Catalogue 4.6</ref>
-              </catDesc>
-              <catDesc>Does the project offer texts of an acceptable quality (typos, errors, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="indices">
-              <catDesc>
-                <ref target="#K4.5">cf. Catalogue 4.5</ref>
-              </catDesc>
-              <catDesc>Does the project feature compilations indices, registers or visualisations that offer alternative ways to access the material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="documents">
-              <category xml:id="doc_type">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
-                <category xml:id="single_manuscript">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="single_work">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collection_of_texts">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collected_works">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="papers">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="archival_holding">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="charters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="letters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="diary">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.3.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Rethinking the publication of premodern sources: Petrus Plaoul on the
+               Sentences</title>
+            <author ref="https://orcid.org/0000-0003-0464-5036">
+               <name>
+                  <forename>Andrew</forename>
+                  <surname>Dunning</surname>
+               </name>
+               <affiliation>
+                  <orgName>Centre for Medieval Studies, University of Toronto</orgName>
+                  <placeName>Toronto, Ontario, Canada</placeName>
+               </affiliation>
+               <email>andrew.dunning (at) utoronto.ca</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2015-11">November 2015</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-3/petrus_plaoul</idno>
+            <idno type="DOI">10.18716/ride.a.3.3</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue03/petrus_plaoul/petrus_plaoul.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0001-8820-5112" role="assistant">Tessa
+               Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny</editor>
+            <biblScope unit="issue" n="3">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-3</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Petrus Plaoul. Commentarius in libros Sententiarum: Editiones
+                     electronicas</title>
+                  <editor>Jeffrey C. Witt</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Jeffrey C. Witt</persName>
+                  </respStmt>
+                  <date type="publication">2011ff.</date>
+                  <idno type="URI">http://petrusplaoul.org</idno>
+                  <date type="accessed">2015-02-03</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-              </category>
-              <category xml:id="doc_time">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>What era(s) do the documents belong to?</catDesc>
-                <category xml:id="classics">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="medieval">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="early_modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="subject">
-              <catDesc>
-                <ref target="#K1.3">cf. Catalogue 1.3</ref>
-              </catDesc>
-              <catDesc>Which perspective(s) do the editors take towards the edited material? How can the edition be classified in general terms?</catDesc>
-              <category xml:id="history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philology_literary_studies">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philosophy_theology">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="history_of_science">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="musicology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="art_history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="presentation">
-            <category xml:id="spin_offs">
-              <catDesc>
-                <ref target="#K4.11">cf. Catalogue 4.11</ref>
-              </catDesc>
-              <catDesc>Does the project offer any spin-offs?</catDesc>
-              <category xml:id="app">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="mobile">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PDF">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="browse_by">
-              <catDesc>
-                <ref target="#K4.3">cf. Catalogue 4.3</ref>
-              </catDesc>
-              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
-              <category xml:id="authors">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="works">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="versions">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="structure">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="pages">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_documents">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="type_of_material">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_images">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="dates">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="persons">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="places">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="search">
-            <category xml:id="simple">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer a simple search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="advanced">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer an advanced search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="wildcard">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search support the use of wildcards?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="index">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer an index of the searched field?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="suggest">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="helptext">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts for the search?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="aim">
-            <category xml:id="audience">
-              <catDesc>
-                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-              </catDesc>
-              <catDesc>Who is the intended audience of the project?</catDesc>
-              <category xml:id="scholars">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="interested_public">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="typology">
-              <catDesc>
-                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
-              </catDesc>
-              <catDesc>Which type fits best for the reviewed project?</catDesc>
-              <category xml:id="facsimile_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="archive_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="documentary_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="genetic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="work_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="text_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="enriched_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="database_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_library">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_collection_of_texts">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="method">
-            <catDesc rend="label">Method</catDesc>
-            <category xml:id="critical_editing">
-              <catDesc>
-                <ref target="#K3.6">cf. Catalogue 3.6</ref>
-              </catDesc>
-              <catDesc>In how far is the text critically edited?</catDesc>
-              <category xml:id="transmission_examined">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="palaeographic_annotations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="normalization">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="variants">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="emendation">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentary_notes">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="standards">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <category xml:id="XML">
-                <catDesc>Is the data encoded in XML?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="standardized_data_model">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-                <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
-              </category>
-            </category>
-            <category xml:id="text_type">
-              <catDesc>
-                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
-              </catDesc>
-              <catDesc>Which kinds or forms of text are presented?</catDesc>
-              <category xml:id="facsimiles">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_transcription">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="edited_text">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="translations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentaries">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="semantic_data">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="technical_accessability">
-            <category xml:id="persistent_identification">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Are there persistent identifiers and an addressing system for the edition and/or parts/objects of it and which mechanism is used to that end?</catDesc>
-              <category xml:id="DOI">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="ARK">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="URN">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PURL.ORG">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category xml:id="persistent_URLs">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="interfaces">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse of the data of the project in other contexts?</catDesc>
-              <category xml:id="OAI-PMH">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="REST">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_API">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="open_access">
-              <catDesc>Is the edition Open Access?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="basic_data_accessible">
-              <catDesc>
-                <ref target="#K4.12">cf. Catalogue 4.12</ref>
-              </catDesc>
-              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of the edition (e.g. for a page)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="download">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="reuse">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can you use the data with other tools useful for this kind of content?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="rights">
-              <category xml:id="declared">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Are the rights to (re)use the content declared?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="license">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Under what license are the contents released?</catDesc>
-                <category xml:id="CC0">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-ND">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="PDM">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category xml:id="no_license">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="multiple_licenses">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-          </category>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="abstract">
-        <p>Jeffrey Witt&#x2019;s edition of the lectures on Peter Lombard&#x2019;s Sentences by Peter Plaoul (1353&#x2013;1415) uses &#x2018;progressive publication&#x2019; to make the text public much sooner than has been previously feasible within traditional print models, bringing many long-held scholarly ideals to fulfilment. It is centred on a series of documentary transcriptions linked to manuscript facsimiles, which are combined into a single critical text. This is part of Witt&#x2019;s broader initiative to create a &#x2018;<emph>Sentences</emph> Commentary Text Archive&#x2019; that seeks to facilitate comparison of the many commentaries written on this work.</p>
-      </div>
-      <div type="text">
-        <div type="div2">
-          <head>Introduction</head>
-          <p>Many significant works of the Middle Ages are still available only in manuscript form. To read these texts, one must be a skilled Latinist and palaeographer, negotiate with a library to gain access to manuscripts, and have the leisure to work through various scribal errors. They almost entirely inaccessible.</p>
-          <p>This problem is evident in the case of the commentaries on Peter Lombard&#x2019;s Sentences, which organizes biblical and patristic <emph>sententiae</emph> (opinions) into a systematic overview of key debates in theology, becoming the prevailing textbook on the subject in Western Europe after its creation in the middle of the 12th century. From the 13th century until the end of the Middle Ages, it was a standard requirement in formal theological study to comment on this book. <emph>Sentences</emph> commentaries survive from many of the most influential philosophers and theologians of the late medieval period, such as Alexander of Hales, Thomas Aquinas, and Martin Luther; and there are many more from figures who are much less known. By studying these texts in the context of the others written, one can essentially map the history of Western thought on any of the subjects they address (as shown, for example, by Rosemann 2007). Every commentary forms one piece of an enormous network, and if we could see and link every part, we would have a much clearer idea of the origin and development of philosophical, theological, and social ideas in this period.</p>
-          <p>This is practical on a large scale only if there is already an edition of the text, and the slow process of publishing texts under the traditional print model inhibits the study of works beyond a limited canon. This has not favoured authors such as Peter Plaoul, a major figure of the University of Paris in the late 14th century who left little written output, drawing limited attention from modern scholars (see Millet 2009). The edition of Peter&#x2019;s lectures on the <emph>Sentences</emph> by Jeffrey C. Witt combats the author&#x2019;s obscurity and takes on a work that would be intolerably expensive to print, since the complexity of its manuscript tradition prevents straightforward resolution into a single collated text. What we need instead is a series of documentary editions, and the site is suitably labelled <emph>editiones</emph>, in the plural. Witt makes the case that we can only meet the future needs for learning about the tradition of <emph>Sentences</emph> commentaries by taking advantage of the tools for electronic publishing available to us (Witt 2015), and this is the first serious project to consider out how to do this in practice.</p>
-          <p>The site is also a brilliant application of the principles of &#x2018;progressive publication&#x2019; to medieval texts to make Witt&#x2019;s work public while offering solutions to the scholarly concerns that made this methodology untenable in a printed format, providing a readable draft of the text that he has emended over time. The site has been online since 2011, a time when there were few models for undertaking and presenting such work. Witt&#x2019;s edition is an inspiration for anyone unconvinced of the benefits of presenting a medieval text online.</p>
-        </div>
-        <div type="div2">
-          <head>&#x2018;Progressive Publication&#x2019;</head>
-          <p>Lists of medieval authors and their works (such as Sharpe 1997) are littered with announcements of editions that are nowhere to be found, the instigator having retired, died, or simply lost interest. A later scholar who takes up the project must repeat years of labour. Electronic publishing supplies the means to avoid this situation. Witt calls his model for publicly editing Peter&#x2019;s unpublished work &#x2018;progressive publication&#x2019; (Witt 2013). This idea has already gained traction in the sciences, where it is also called &#x2018;continuous publishing&#x2019;, but is only slowly making its way to the humanities. It is hardly a radical notion as applied to scholarly editions, as it brings to fruition long-held aspirations of textual critics. The Oxford edition of the Vulgate New Testament, though it began in 1877 and was not finished until 1954, produced almost immediate results by publishing versions of some of its most important manuscripts in a separate series, &#x2018;Old-Latin Biblical Texts&#x2019;, producing seven volumes between 1883 and 1923 (see Wordsworth 1883). The creators of the <emph>Corpus Christianorum</emph> originally proposed to publish editions of their texts &#x2018;in rapid succession&#x2019; and small print runs to allow the series to stay abreast of the latest research ([Dekkers] 1948, 413; cf. Leemans 2003, 17). With the Internet, this vision can finally be realized, allowing editors to make their initial work public without their inevitable oversights haunting them forever.</p>
-          <p>The many benefits of this approach likely make its use seem obvious to outsiders, but there is little precedent in the humanities for making preliminary work public, while many scientific disciplines have practised this for decades. We need to be both more forgiving of editors and more vigilant in how we use manuscript sources if we wish the model to gain acceptance in the field of scholarly editing. Especially when one is dealing with unpublished texts, it takes little effort to produce a useful transcription, but a great deal more to produce a <emph>printable</emph> edition. Publishing in-progress work entails a certain amount of bravery: one must be prepared to make embarrassing mistakes, of the sort that might prompt a reviewer to question the editor&#x2019;s linguistic capabilities. Because of the potential for misunderstanding the process, Witt has positioned the site as it stands as a &#x2018;finding aid&#x2019; meant to precede a full critical edition (Witt 2013). He makes public only those sections that he feels have reached a reasonable level of accuracy; readers can access the rest of the text only by writing the Witt, who issues individual accounts. This approach allows the text to reach those truly interested in the work, though it is rather labour-intensive and adds complexity to the software. It is an interesting criticism of the general trend favouring processes that allow scholarship without human contact, and a helpful middle ground between the idealist&#x2019;s approach of placing everything in the open and the typical strategy of making one&#x2019;s work entirely secret. Nonetheless, one hopes that such precautions will soon be unnecessary; it is more user-friendly to warn readers of the text&#x2019;s status clearly, as used by projects such as the <ref target="http://ride.i-d-e.de/issues/issue-2/sga_frankenstein-notebooks/">Shelley-Godwin Archive</ref>.</p>
-          <p>If anyone is reluctant to cite such an edition, it is worth remembering that our printed editions are far less reliable than we like to think. For example, the influential commentary on the Pauline epistles by Peter Lombard is typically cited from the Patrologia Latina; it is rarely noted that this is an error-prone reprint of a thinly documented edition from the 16th century (Peter Lombard 1535). It is available everywhere online, and is far more accessible to the typical reader than even the most accurate manuscript; but like most early-modern editions, its relationship to its sources is entirely opaque. Even an imperfect working edition is a vast improvement over such texts if it has a documented manuscript basis and follows modern techniques &#x2013; and, crucially, is widely available. Scholars continue to make assumptions based on the <emph>Patrologia Latina</emph> and students suffer through its inaccurate texts every day – sometimes even where a more recent critical edition exists, because that edition is only available in a handful of libraries due to its ruinous cost.</p>
-        </div>
-        <div type="div2">
-          <head>The <emph>Sentences</emph> Commentary Text Archive</head>
-          <p>Making texts available more widely available, sooner, is only part of the reason to make a digital edition: another is that print editions simply do not allow us to answer the questions we ask of them. The edition of Peter&#x2019;s work is only the beginning of an ambitious plan for a <ref target="http://scta.info"><emph>Sentences</emph> Commentary Text Archive</ref>, which will eventually allow precisely the type of comparative study that <emph>Sentences</emph> commentaries need. As a basis for this, Witt aims to have <emph>Sentences</emph> commentaries digitized to a common standard. In this initial foray, he took on two projects at once to make Peter&#x2019;s work available: the editing of the text itself, and the creation of an open-source system used to publish it online, <ref target="http://lombardpress.org">LombardPress</ref>, which he has also used for a collaborative edition of Adam Wodeham&#x2019;s commentary on the <emph>Sentences</emph> (Hallamma et al. 2011&#x2013;13).</p>
-          <p>Given the circumstances of a nascent field, the mere fact that the edition has appeared at all in a usable form is something of an achievement. There are few people who unite the skills of a philosopher, historian, Latinist, palaeographer, and computer scientist: Witt is evidently one of them. His ideas address the problems faced by all who wish to create digital editions of texts written before the modern era. We have no standards for the publication of medieval works, or even expectations for what online editions should record from a manuscript. Those who set about to begin a digital edition of a work typically find that while it is relatively straightforward to mark up a text using the Text Encoding Initiative (TEI) recommendations, displaying the resulting files in a readable format is difficult. Because TEI-based projects often develop their own guidelines (in choosing, for example, among several competing choices for marking abbreviations), they tend not to be compatible with one another, making it difficult to reuse work from other scholars. The fact that software to support editions must at present be written almost from scratch for each project is one of the reasons why digital editions have not become more common. Indeed, it is unlikely that digital editions will begin to gain traction until a publisher of extended editions exists that supports the use of TEI and manages a stringent peer-review process, as the forthcoming <ref target="http://digitallatin.org/">Digital Latin Library</ref> intends to do.</p>
-          <p>Witt has made a step towards solving these problems in creating a modular system, LombardPress, that he intends to be reusable for other <emph>Sentences</emph> commentaries, and has made it available under the GNU General Public Licence. Its documentation is still under development, meaning that it is not yet feasible to reapply it to new projects. Further, it relies on software that is complex to maintain over the long term (PHP and MySQL). Nonetheless, few of the problems he seeks to solve are specific to <emph>Sentences </emph>commentaries, and there is much that his work could contribute to communities aiming to create a common standard for editing premodern documents (such as EpiDoc, which has expanded beyond its original scope of epigraphy). What we now need is a decentralized editing platform developing Witt’s model that can be applied to any premodern text and is based on the most simple technology available, in combination with centralized repositories where sources can be deposited and combined with other works for research and reading.</p>
-        </div>
-        <div type="div2">
-          <head>Editorial Method</head>
-          <p>Witt presented the original version of the site as a ‘social edition’ (Witt 2011; inspired by Siemens et al. 2012). The term has not aged well, and Witt now omits any mention of it, but it is still a visible influence. One might argue that the principles of social editing are merely those of making the best use of digital media to improve scholarship and make it more widely known. Witt now frames it in this way:</p>
-          <quote>
-            <p>This site aims to be a stepping stone towards an eventual critical edition of the Sentences commentary of Peter Plaoul. As I have worked on this text, learning more and more about it, both about its length and complexity, it is clear that a supremely polished critical edition of the text is not a one-person job. If it is ever to be completed it will require a team of interested people. But there is a dilemma here. How can people ever become interested in the text if they do not know about its existence or the topics contained within it?</p>
-            <ref>Witt 2013</ref>
-          </quote>
-          <p>It is not possible to tell how many contributions Witt has received. The comments function is streamlined, helpfully noting the version of the text to which they were referring, but it is rather dull to comb through lists of minor spelling and grammar corrections looking for potentially insightful remarks, and it would be better if one could make desired changes to the text directly. The Wikipedia model of allowing immediate modification is probably not the ideal of most editors; more appropriate to a critical edition directed by a particular editor is the idea of the &#x2018;pull request&#x2019; popularized by the Git source control management software, which allows anyone to change their own copy of a file to read precisely as they think it should, then create a proposal explaining their rationale (which the maintainer of the original merges into the main version). Both of these models make it clear who has contributed to a particular file, which might motivate more readers to participate.</p>
-          <figure>
-            <head>Fig. 1: Text-Manuscript Viewer</head>
-            <graphic url="wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-1.png"/>
-          </figure>
-          <p>Also implied in Witt&#x2019;s model is the ideal of providing the reader with the same resources as the editor. Registered users are able to view images corresponding to the text of the manuscript, including a feature that allows one to compare a transcription (helpfully displayed with the original line breaks) against a photograph. This is what allows the responsible publication of a preliminary text: if one can view the sources, it is easy to confirm the editor&#x2019;s reading, eliminating the fear that one might be risking one&#x2019;s reputation by citing a working text.</p>
-          <p>Peter&#x2019;s <emph>Sentences</emph> commentary is a series of lectures, and some of the surviving witnesses are student notes, varying considerably in places (Glorieux 1939). The edition has so far taken four of seven manuscripts into account, with each source transcribed in full. It is not clear if all witnesses will be included in the final version; an explanation of the editorial method, manuscript selection criteria, and codicological descriptions have yet to be added.</p>
-          <p>While Witt does not explain his method in these terms, he is essentially creating a documentary edition of each of these texts, of a sort advocated by others (e.g. Pierazzo 2014; van Dalen-Oskam 2015), with an edited text provided (at least notionally) in parallel. It enforces, further, the idea that every historical version of a text is the edition of its scribe(s). The manuscripts&#x2019; original capitalization and punctuation is retained (not always consistently), which can be of great service in editing a text for the first time; editors have made many blunders because they did not take the time to understand scribal punctuation on its own terms. The editions could be made more useful by marking where spelling has been modernized (for example, <emph>e</emph> is silently expanded on many occasions to <emph>ae</emph>) and abbreviation are expanded, allowing their use for linguistic research, though it must be admitted that the standard TEI guidelines for these features are too verbose to be usable by editors of heavily abbreviated premodern texts. The approach of creating a critical edition founded on a collection of documentary editions is likely to be the most useful to future scholars.</p>
-          <figure>
-            <head>Fig. 2: Text Comparison</head>
-            <graphic url="wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-2.png"/>
-          </figure>
-          <p>This idea of <emph>editiones</emph> should be taken further. The focus of the site is still an eclectic reader&#x2019;s version of the commentary with a traditional apparatus, and we need to reconsider whether these truly help us to answer our research questions. Witt is here doubtless thinking of the demands of readers who simply want to look up a text and move on, but this could be done with much less work. Such readers are rarely interested in textual variants, and simply want something they can understand quickly; it would be less laborious to correct the best witness and display this in the default view (using TEI, this could be displayed in either a diplomatic or normalized form) than to create an entirely separate critical text. There are already many competing methods of punctuating modern editions of medieval Latin, and anyone with enough experience to read Peter Plaoul directly could also work through a corrected version of the medieval punctuation. If one is truly concerned about making the text broadly accessible, this can be achieved even more effectively with a vernacular translation. A critical apparatus, in the meantime, can never meet the needs of every reader interested in textual variants; its function is properly to explain the editor&#x2019;s rationale for reconstructing the text, and this is better achieved with a commentary. Its format has never promoted usability, since it is defined entirely by the space constraints imposed by print, and it has not improved with a transition to a digital format.</p>
-          <p>Witt has the germ of something much better in a tool that graphically shows the variants between any two sources, offering the edited text in parallel with the sources. Where we simply need to show the differences between witnesses, this can be done more usably and accurately with visual tools. The version of the comparison tool available at this writing only allows for comparison of two witnesses, and is not clever enough to ignore variants traditionally deemed insignificant (as of spelling, punctuation, and capitalization). Once these problems are solved (towards which Juxta and CollateX have already made significant progress), this will eventually represent a far more accessible alternative to the critical apparatus normally printed at the bottom of the page.</p>
-        </div>
-        <div type="div2">
-          <head>Presentation</head>
-          <figure>
-            <head>Fig. 3: Biography and Timeline</head>
-            <graphic url="wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-3.png"/>
-          </figure>
-          <p>It is difficult to go from an encoded text to an edition that a non-technical user can sit down and read. Many editions become wrapped up in what is technically possible rather than focusing on what usable, ending up as a mere technology demonstration. Witt does not, however, try to impress readers with his technical wizardry; one would never know without investigation, for example, that behind the timeline accompanying his engaging biography of Peter is a rigorously structured TEI file.</p>
-          <figure>
-            <head>Fig. 4: Text Setting</head>
-            <graphic url="wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-4.png"/>
-          </figure>
-          <p>The only part of the website that reveals the underlying markup to the reader is a feature that displays it under individual paragraph menus; the full files are gradually being made available for download as they become more complete. The edition is not, however, at the point of being easier to read than a typical printed edition. Few digital editions produced to date have placed an emphasis on readability, with correspondingly low typographical standards. One quickly becomes lost in the text of the main reading screen, and the &#x2018;Paragraph Menu&#x2019; links create unnecessary clutter.</p>
-          <p>This situation could be easily improved by increasing the type size and line spacing, reducing the line length, using typographer&#x2019;s quotation marks, and distinguishing the menu link more clearly from the text (by moving it into to the right margin, for example). More still could be done by taking advantage of responsive design techniques that now make it a relatively straightforward task to make a single website highly usable on desktops, tablets, and phones. This is key for allowing a text to be usable in a classroom setting, while commuting, or as a reference tool in heated conference debates. Yet reading from paper still carries many benefits that screens cannot achieve. As part of LombardPress, Witt has also written a program transforming his editions into a printable format (using the advanced typesetting capabilities of LaTeX). The focus of creating a digital edition of a text should be to publish it in a technology-independent format, meaning that it is not tied to either paper or a particular encoding scheme, and Witt shows that this can achieved with minimal resources.</p>
-          <figure>
-            <head>Fig. 5: Outline</head>
-            <graphic url="wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-5.png"/>
-          </figure>
-          <p>The edition truly excels, even over a printed book, in its finding aids. An outline accompanies each section of the text, allowing one to quickly see the flow of an argument, as well as allowing comparison between disparate witnesses (Witt 2014). There is also a simple search interface, amplified by lists of names, titles of works, subjects, quotations, and unresolved textual issues (a particularly useful innovation). Even many completed editions do not have indices as detailed as these.</p>
-        </div>
-        <div type="div2">
-          <head>Archiving and Licensing</head>
-          <p>Computer interfaces are passing: it seems unlikely that much of the software supporting the website will still be functional in another decade, and even if it is, it will need to be updated to meet the expectations of future users. For any digital edition, it is critical to archive one&#x2019;s findings in an open and well-documented format, as well as deposit them in a repository where other scholars might find them. Editors hope that we have a solution to the first problem in the TEI guidelines, which is highly structured, and helps editors to achieve independence from technology through encouraging to record the meaning of their decisions, while most other software focuses on visual appearance. While the latter approach represents how we have been trained to encode textual meaning over centuries, it is much more subjective and less useful, especially when applying texts to new research questions or making writing accessible to users with print disabilities.</p>
-          <p>To fill the need for a reasonably stable referencing system, the paragraphs of each section are numbered. This comes with the problem that paragraph structure often changes as editions progress, and to mitigate this Witt suggests citing the version of the text along with this, which is easy to understand and cite, and the site gives a sample citation for each section of the text. The lack of persistent identifiers is a more serious concern. Even the URI scheme specifically reflects on the site&#x2019;s PHP coding, with addresses such as <hi rend="tt">petrusplaoul.org/text/textdisplay.php?fs=lectio1</hi>. Witt could simplify links and make them more stable by rewriting this as <hi rend="tt">petrusplaoul.org/text/lectio1</hi>. It might be simpler to encourage the use of the folio and line numbers of a significant manuscript.</p>
-          <p>The text is provided under a Creative Commons Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND) licence. This implies that others are prohibited from producing their own version of the text, against the traditional practice among editors of basing their work on that of others as much as possible; West notes that many editors in his day, to prevent error, sent their editions to printers by modifying a copy of an older edition using proofing marks rather than produce an entirely new typescript (West 1973, 101&#x2013;2). In any event, the restriction has limited force in many jurisdictions as applied to scholarly editions. The text of a critical edition is not a copyrightable work in some parts of the world, meaning that a critically edited version of a public-domain work is itself in the public domain (Margoni and Perry 2011). In the European Union, scholarly editions have copyright protection for no more than thirty years (even less as implemented in most countries). The Creative Commons Attribution-ShareAlike (CC BY-SA) licence is more reflective of the historical practice of editing; its use formalizes scholarly expectations and ensures that editors have the same rights around the world. Under this licence, other users must credit past editors and make their improved version of the text available under the same terms. This is just as effective in preventing potential exploitation as restricting it to non-commercial use, and can only serve to promote the original editor&#x2019;s work.</p>
-          <div type="div2">
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>14th century</term>
+               <term>15th century</term>
+               <term>commentary</term>
+               <term>critical edition</term>
+               <term>documentary edition</term>
+               <term>latin</term>
+               <term>medieval latin</term>
+               <term>Petrus Plaoul</term>
+               <term>philosophy</term>
+               <term>TEI</term>
+               <term>theology</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Jeffrey Witt’s edition of the lectures on Peter Lombard’s Sentences by Peter Plaoul
+               (1353–1415) uses ‘progressive publication’ to make the text public much sooner than
+               has been previously feasible within traditional print models, bringing many long-held
+               scholarly ideals to fulfilment. It is centred on a series of documentary
+               transcriptions linked to manuscript facsimiles, which are combined into a single
+               critical text. This is part of Witt’s broader initiative to create a
+                  ‘<emph>Sentences</emph> Commentary Text Archive’ that seeks to facilitate
+               comparison of the many commentaries written on this work.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">Many significant works of the Middle Ages are still available only in
+               manuscript form. To read these texts, one must be a skilled Latinist and
+               palaeographer, negotiate with a library to gain access to manuscripts, and have the
+               leisure to work through various scribal errors. They almost entirely
+               inaccessible.</p>
+            <p xml:id="p2">This problem is evident in the case of the commentaries on Peter
+               Lombard’s Sentences, which organizes biblical and patristic <emph>sententiae</emph>
+               (opinions) into a systematic overview of key debates in theology, becoming the
+               prevailing textbook on the subject in Western Europe after its creation in the middle
+               of the 12th century. From the 13th century until the end of the Middle Ages, it was a
+               standard requirement in formal theological study to comment on this book.
+                  <emph>Sentences</emph> commentaries survive from many of the most influential
+               philosophers and theologians of the late medieval period, such as Alexander of Hales,
+               Thomas Aquinas, and Martin Luther; and there are many more from figures who are much
+               less known. By studying these texts in the context of the others written, one can
+               essentially map the history of Western thought on any of the subjects they address
+               (as shown, for example, by Rosemann 2007). Every commentary forms one piece of an
+               enormous network, and if we could see and link every part, we would have a much
+               clearer idea of the origin and development of philosophical, theological, and social
+               ideas in this period.</p>
+            <p xml:id="p3">This is practical on a large scale only if there is already an edition of
+               the text, and the slow process of publishing texts under the traditional print model
+               inhibits the study of works beyond a limited canon. This has not favoured authors
+               such as Peter Plaoul, a major figure of the University of Paris in the late 14th
+               century who left little written output, drawing limited attention from modern
+               scholars (see Millet 2009). The edition of Peter’s lectures on the
+                  <emph>Sentences</emph> by Jeffrey C. Witt combats the author’s obscurity and takes
+               on a work that would be intolerably expensive to print, since the complexity of its
+               manuscript tradition prevents straightforward resolution into a single collated text.
+               What we need instead is a series of documentary editions, and the site is suitably
+               labelled <emph>editiones</emph>, in the plural. Witt makes the case that we can only
+               meet the future needs for learning about the tradition of <emph>Sentences</emph>
+               commentaries by taking advantage of the tools for electronic publishing available to
+               us (Witt 2015), and this is the first serious project to consider out how to do this
+               in practice.</p>
+            <p xml:id="p4">The site is also a brilliant application of the principles of
+               ‘progressive publication’ to medieval texts to make Witt’s work public while offering
+               solutions to the scholarly concerns that made this methodology untenable in a printed
+               format, providing a readable draft of the text that he has emended over time. The
+               site has been online since 2011, a time when there were few models for undertaking
+               and presenting such work. Witt’s edition is an inspiration for anyone unconvinced of
+               the benefits of presenting a medieval text online.</p>
+         </div>
+         <div xml:id="div2">
+            <head>‘Progressive Publication’</head>
+            <p xml:id="p5">Lists of medieval authors and their works (such as Sharpe 1997) are
+               littered with announcements of editions that are nowhere to be found, the instigator
+               having retired, died, or simply lost interest. A later scholar who takes up the
+               project must repeat years of labour. Electronic publishing supplies the means to
+               avoid this situation. Witt calls his model for publicly editing Peter’s unpublished
+               work ‘progressive publication’ (Witt 2013). This idea has already gained traction in
+               the sciences, where it is also called ‘continuous publishing’, but is only slowly
+               making its way to the humanities. It is hardly a radical notion as applied to
+               scholarly editions, as it brings to fruition long-held aspirations of textual
+               critics. The Oxford edition of the Vulgate New Testament, though it began in 1877 and
+               was not finished until 1954, produced almost immediate results by publishing versions
+               of some of its most important manuscripts in a separate series, ‘Old-Latin Biblical
+               Texts’, producing seven volumes between 1883 and 1923 (see Wordsworth 1883). The
+               creators of the <emph>Corpus Christianorum</emph> originally proposed to publish
+               editions of their texts ‘in rapid succession’ and small print runs to allow the
+               series to stay abreast of the latest research ([Dekkers] 1948, 413; cf. Leemans 2003,
+               17). With the Internet, this vision can finally be realized, allowing editors to make
+               their initial work public without their inevitable oversights haunting them
+               forever.</p>
+            <p xml:id="p6">The many benefits of this approach likely make its use seem obvious to
+               outsiders, but there is little precedent in the humanities for making preliminary
+               work public, while many scientific disciplines have practised this for decades. We
+               need to be both more forgiving of editors and more vigilant in how we use manuscript
+               sources if we wish the model to gain acceptance in the field of scholarly editing.
+               Especially when one is dealing with unpublished texts, it takes little effort to
+               produce a useful transcription, but a great deal more to produce a
+                  <emph>printable</emph> edition. Publishing in-progress work entails a certain
+               amount of bravery: one must be prepared to make embarrassing mistakes, of the sort
+               that might prompt a reviewer to question the editor’s linguistic capabilities.
+               Because of the potential for misunderstanding the process, Witt has positioned the
+               site as it stands as a ‘finding aid’ meant to precede a full critical edition (Witt
+               2013). He makes public only those sections that he feels have reached a reasonable
+               level of accuracy; readers can access the rest of the text only by writing the Witt,
+               who issues individual accounts. This approach allows the text to reach those truly
+               interested in the work, though it is rather labour-intensive and adds complexity to
+               the software. It is an interesting criticism of the general trend favouring processes
+               that allow scholarship without human contact, and a helpful middle ground between the
+               idealist’s approach of placing everything in the open and the typical strategy of
+               making one’s work entirely secret. Nonetheless, one hopes that such precautions will
+               soon be unnecessary; it is more user-friendly to warn readers of the text’s status
+               clearly, as used by projects such as the <ref
+                  target="http://ride.i-d-e.de/issues/issue-2/sga_frankenstein-notebooks/"
+                  >Shelley-Godwin Archive</ref>.</p>
+            <p xml:id="p7">If anyone is reluctant to cite such an edition, it is worth remembering
+               that our printed editions are far less reliable than we like to think. For example,
+               the influential commentary on the Pauline epistles by Peter Lombard is typically
+               cited from the Patrologia Latina; it is rarely noted that this is an error-prone
+               reprint of a thinly documented edition from the 16th century (Peter Lombard 1535). It
+               is available everywhere online, and is far more accessible to the typical reader than
+               even the most accurate manuscript; but like most early-modern editions, its
+               relationship to its sources is entirely opaque. Even an imperfect working edition is
+               a vast improvement over such texts if it has a documented manuscript basis and
+               follows modern techniques – and, crucially, is widely available. Scholars continue to
+               make assumptions based on the <emph>Patrologia Latina</emph> and students suffer
+               through its inaccurate texts every day – sometimes even where a more recent critical
+               edition exists, because that edition is only available in a handful of libraries due
+               to its ruinous cost.</p>
+         </div>
+         <div xml:id="div3">
+            <head>The <emph>Sentences</emph> Commentary Text Archive</head>
+            <p xml:id="p8">Making texts available more widely available, sooner, is only part of the
+               reason to make a digital edition: another is that print editions simply do not allow
+               us to answer the questions we ask of them. The edition of Peter’s work is only the
+               beginning of an ambitious plan for a <ref target="http://scta.info">
+                  <emph>Sentences</emph> Commentary Text Archive</ref>, which will eventually allow
+               precisely the type of comparative study that <emph>Sentences</emph> commentaries
+               need. As a basis for this, Witt aims to have <emph>Sentences</emph> commentaries
+               digitized to a common standard. In this initial foray, he took on two projects at
+               once to make Peter’s work available: the editing of the text itself, and the creation
+               of an open-source system used to publish it online, <ref
+                  target="http://lombardpress.org">LombardPress</ref>, which he has also used for a
+               collaborative edition of Adam Wodeham’s commentary on the <emph>Sentences</emph>
+               (Hallamma et al. 2011–13).</p>
+            <p xml:id="p9">Given the circumstances of a nascent field, the mere fact that the
+               edition has appeared at all in a usable form is something of an achievement. There
+               are few people who unite the skills of a philosopher, historian, Latinist,
+               palaeographer, and computer scientist: Witt is evidently one of them. His ideas
+               address the problems faced by all who wish to create digital editions of texts
+               written before the modern era. We have no standards for the publication of medieval
+               works, or even expectations for what online editions should record from a manuscript.
+               Those who set about to begin a digital edition of a work typically find that while it
+               is relatively straightforward to mark up a text using the Text Encoding Initiative
+               (TEI) recommendations, displaying the resulting files in a readable format is
+               difficult. Because TEI-based projects often develop their own guidelines (in
+               choosing, for example, among several competing choices for marking abbreviations),
+               they tend not to be compatible with one another, making it difficult to reuse work
+               from other scholars. The fact that software to support editions must at present be
+               written almost from scratch for each project is one of the reasons why digital
+               editions have not become more common. Indeed, it is unlikely that digital editions
+               will begin to gain traction until a publisher of extended editions exists that
+               supports the use of TEI and manages a stringent peer-review process, as the
+               forthcoming <ref target="http://digitallatin.org/">Digital Latin Library</ref>
+               intends to do.</p>
+            <p xml:id="p10">Witt has made a step towards solving these problems in creating a
+               modular system, LombardPress, that he intends to be reusable for other
+                  <emph>Sentences</emph> commentaries, and has made it available under the GNU
+               General Public Licence. Its documentation is still under development, meaning that it
+               is not yet feasible to reapply it to new projects. Further, it relies on software
+               that is complex to maintain over the long term (PHP and MySQL). Nonetheless, few of
+               the problems he seeks to solve are specific to <emph>Sentences</emph> commentaries,
+               and there is much that his work could contribute to communities aiming to create a
+               common standard for editing premodern documents (such as EpiDoc, which has expanded
+               beyond its original scope of epigraphy). What we now need is a decentralized editing
+               platform developing Witt’s model that can be applied to any premodern text and is
+               based on the most simple technology available, in combination with centralized
+               repositories where sources can be deposited and combined with other works for
+               research and reading.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Editorial Method</head>
+            <p xml:id="p11">Witt presented the original version of the site as a ‘social edition’
+               (Witt 2011; inspired by Siemens et al. 2012). The term has not aged well, and Witt
+               now omits any mention of it, but it is still a visible influence. One might argue
+               that the principles of social editing are merely those of making the best use of
+               digital media to improve scholarship and make it more widely known. Witt now frames
+               it in this way: <cit>
+                  <quote>This site aims to be a stepping stone towards an eventual critical edition
+                     of the Sentences commentary of Peter Plaoul. As I have worked on this text,
+                     learning more and more about it, both about its length and complexity, it is
+                     clear that a supremely polished critical edition of the text is not a
+                     one-person job. If it is ever to be completed it will require a team of
+                     interested people. But there is a dilemma here. How can people ever become
+                     interested in the text if they do not know about its existence or the topics
+                     contained within it?</quote>
+                  <bibl>Witt 2013</bibl>
+               </cit></p>
+            <p xml:id="p12">It is not possible to tell how many contributions Witt has received. The
+               comments function is streamlined, helpfully noting the version of the text to which
+               they were referring, but it is rather dull to comb through lists of minor spelling
+               and grammar corrections looking for potentially insightful remarks, and it would be
+               better if one could make desired changes to the text directly. The Wikipedia model of
+               allowing immediate modification is probably not the ideal of most editors; more
+               appropriate to a critical edition directed by a particular editor is the idea of the
+               ‘pull request’ popularized by the Git source control management software, which
+               allows anyone to change their own copy of a file to read precisely as they think it
+               should, then create a proposal explaining their rationale (which the maintainer of
+               the original merges into the main version). Both of these models make it clear who
+               has contributed to a particular file, which might motivate more readers to
+               participate.</p>
+            <p xml:id="p13">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-1.png"/>
+                  <head type="legend">Text-Manuscript Viewer.</head>
+               </figure> Also implied in Witt’s model is the ideal of providing the reader with the
+               same resources as the editor. Registered users are able to view images corresponding
+               to the text of the manuscript, including a feature that allows one to compare a
+               transcription (helpfully displayed with the original line breaks) against a
+               photograph. This is what allows the responsible publication of a preliminary text: if
+               one can view the sources, it is easy to confirm the editor’s reading, eliminating the
+               fear that one might be risking one’s reputation by citing a working text.</p>
+            <p xml:id="p14">Peter’s <emph>Sentences</emph> commentary is a series of lectures, and
+               some of the surviving witnesses are student notes, varying considerably in places
+               (Glorieux 1939). The edition has so far taken four of seven manuscripts into account,
+               with each source transcribed in full. It is not clear if all witnesses will be
+               included in the final version; an explanation of the editorial method, manuscript
+               selection criteria, and codicological descriptions have yet to be added.</p>
+            <p xml:id="p15">While Witt does not explain his method in these terms, he is essentially
+               creating a documentary edition of each of these texts, of a sort advocated by others
+               (e.g. Pierazzo 2014; van Dalen-Oskam 2015), with an edited text provided (at least
+               notionally) in parallel. It enforces, further, the idea that every historical version
+               of a text is the edition of its scribe(s). The manuscripts’ original capitalization
+               and punctuation is retained (not always consistently), which can be of great service
+               in editing a text for the first time; editors have made many blunders because they
+               did not take the time to understand scribal punctuation on its own terms. The
+               editions could be made more useful by marking where spelling has been modernized (for
+               example, <emph>e</emph> is silently expanded on many occasions to <emph>ae</emph>)
+               and abbreviation are expanded, allowing their use for linguistic research, though it
+               must be admitted that the standard TEI guidelines for these features are too verbose
+               to be usable by editors of heavily abbreviated premodern texts. The approach of
+               creating a critical edition founded on a collection of documentary editions is likely
+               to be the most useful to future scholars.</p>
+            <p xml:id="p16">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-2.png"/>
+                  <head type="legend">Text Comparison.</head>
+               </figure> This idea of <emph>editiones</emph> should be taken further. The focus of
+               the site is still an eclectic reader’s version of the commentary with a traditional
+               apparatus, and we need to reconsider whether these truly help us to answer our
+               research questions. Witt is here doubtless thinking of the demands of readers who
+               simply want to look up a text and move on, but this could be done with much less
+               work. Such readers are rarely interested in textual variants, and simply want
+               something they can understand quickly; it would be less laborious to correct the best
+               witness and display this in the default view (using TEI, this could be displayed in
+               either a diplomatic or normalized form) than to create an entirely separate critical
+               text. There are already many competing methods of punctuating modern editions of
+               medieval Latin, and anyone with enough experience to read Peter Plaoul directly could
+               also work through a corrected version of the medieval punctuation. If one is truly
+               concerned about making the text broadly accessible, this can be achieved even more
+               effectively with a vernacular translation. A critical apparatus, in the meantime, can
+               never meet the needs of every reader interested in textual variants; its function is
+               properly to explain the editor’s rationale for reconstructing the text, and this is
+               better achieved with a commentary. Its format has never promoted usability, since it
+               is defined entirely by the space constraints imposed by print, and it has not
+               improved with a transition to a digital format.</p>
+            <p xml:id="p17">Witt has the germ of something much better in a tool that graphically
+               shows the variants between any two sources, offering the edited text in parallel with
+               the sources. Where we simply need to show the differences between witnesses, this can
+               be done more usably and accurately with visual tools. The version of the comparison
+               tool available at this writing only allows for comparison of two witnesses, and is
+               not clever enough to ignore variants traditionally deemed insignificant (as of
+               spelling, punctuation, and capitalization). Once these problems are solved (towards
+               which Juxta and CollateX have already made significant progress), this will
+               eventually represent a far more accessible alternative to the critical apparatus
+               normally printed at the bottom of the page.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Presentation</head>
+            <p xml:id="p18">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-3.png"/>
+                  <head type="legend">Biography and Timeline.</head>
+               </figure> It is difficult to go from an encoded text to an edition that a
+               non-technical user can sit down and read. Many editions become wrapped up in what is
+               technically possible rather than focusing on what usable, ending up as a mere
+               technology demonstration. Witt does not, however, try to impress readers with his
+               technical wizardry; one would never know without investigation, for example, that
+               behind the timeline accompanying his engaging biography of Peter is a rigorously
+               structured TEI file.</p>
+            <p xml:id="p19">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-4.png"/>
+                  <head type="legend">Text Setting.</head>
+               </figure> The only part of the website that reveals the underlying markup to the
+               reader is a feature that displays it under individual paragraph menus; the full files
+               are gradually being made available for download as they become more complete. The
+               edition is not, however, at the point of being easier to read than a typical printed
+               edition. Few digital editions produced to date have placed an emphasis on
+               readability, with correspondingly low typographical standards. One quickly becomes
+               lost in the text of the main reading screen, and the ‘Paragraph Menu’ links create
+               unnecessary clutter.</p>
+            <p xml:id="p20">This situation could be easily improved by increasing the type size and
+               line spacing, reducing the line length, using typographer’s quotation marks, and
+               distinguishing the menu link more clearly from the text (by moving it into to the
+               right margin, for example). More still could be done by taking advantage of
+               responsive design techniques that now make it a relatively straightforward task to
+               make a single website highly usable on desktops, tablets, and phones. This is key for
+               allowing a text to be usable in a classroom setting, while commuting, or as a
+               reference tool in heated conference debates. Yet reading from paper still carries
+               many benefits that screens cannot achieve. As part of LombardPress, Witt has also
+               written a program transforming his editions into a printable format (using the
+               advanced typesetting capabilities of LaTeX). The focus of creating a digital edition
+               of a text should be to publish it in a technology-independent format, meaning that it
+               is not tied to either paper or a particular encoding scheme, and Witt shows that this
+               can achieved with minimal resources.</p>
+            <p xml:id="p21">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_3/petrus_plaoul/pictures/picture-5.png"/>
+                  <head type="legend">Outline.</head>
+               </figure> The edition truly excels, even over a printed book, in its finding aids. An
+               outline accompanies each section of the text, allowing one to quickly see the flow of
+               an argument, as well as allowing comparison between disparate witnesses (Witt 2014).
+               There is also a simple search interface, amplified by lists of names, titles of
+               works, subjects, quotations, and unresolved textual issues (a particularly useful
+               innovation). Even many completed editions do not have indices as detailed as
+               these.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Archiving and Licensing</head>
+            <p xml:id="p22">Computer interfaces are passing: it seems unlikely that much of the
+               software supporting the website will still be functional in another decade, and even
+               if it is, it will need to be updated to meet the expectations of future users. For
+               any digital edition, it is critical to archive one’s findings in an open and
+               well-documented format, as well as deposit them in a repository where other scholars
+               might find them. Editors hope that we have a solution to the first problem in the TEI
+               guidelines, which is highly structured, and helps editors to achieve independence
+               from technology through encouraging to record the meaning of their decisions, while
+               most other software focuses on visual appearance. While the latter approach
+               represents how we have been trained to encode textual meaning over centuries, it is
+               much more subjective and less useful, especially when applying texts to new research
+               questions or making writing accessible to users with print disabilities.</p>
+            <p xml:id="p23">To fill the need for a reasonably stable referencing system, the
+               paragraphs of each section are numbered. This comes with the problem that paragraph
+               structure often changes as editions progress, and to mitigate this Witt suggests
+               citing the version of the text along with this, which is easy to understand and cite,
+               and the site gives a sample citation for each section of the text. The lack of
+               persistent identifiers is a more serious concern. Even the URI scheme specifically
+               reflects on the site’s PHP coding, with addresses such as
+                  <code>petrusplaoul.org/text/textdisplay.php?fs=lectio1</code>. Witt could simplify
+               links and make them more stable by rewriting this as
+                  <code>petrusplaoul.org/text/lectio1</code>. It might be simpler to encourage the
+               use of the folio and line numbers of a significant manuscript.</p>
+            <p xml:id="p24">The text is provided under a Creative Commons
+               Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND) licence. This implies that
+               others are prohibited from producing their own version of the text, against the
+               traditional practice among editors of basing their work on that of others as much as
+               possible; West notes that many editors in his day, to prevent error, sent their
+               editions to printers by modifying a copy of an older edition using proofing marks
+               rather than produce an entirely new typescript (West 1973, 101–2). In any event, the
+               restriction has limited force in many jurisdictions as applied to scholarly editions.
+               The text of a critical edition is not a copyrightable work in some parts of the
+               world, meaning that a critically edited version of a public-domain work is itself in
+               the public domain (Margoni and Perry 2011). In the European Union, scholarly editions
+               have copyright protection for no more than thirty years (even less as implemented in
+               most countries). The Creative Commons Attribution-ShareAlike (CC BY-SA) licence is
+               more reflective of the historical practice of editing; its use formalizes scholarly
+               expectations and ensures that editors have the same rights around the world. Under
+               this licence, other users must credit past editors and make their improved version of
+               the text available under the same terms. This is just as effective in preventing
+               potential exploitation as restricting it to non-commercial use, and can only serve to
+               promote the original editor’s work.</p>
+         </div>
+         <div xml:id="div7">
             <head>Conclusion</head>
-            <p>If Witt had decided to follow the safe and entrenched path of producing an essentially finished text before publishing it in a printed book, few of us would have heard of Peter Plaoul, and we would not be able to read his work on the <emph>Sentences</emph> with ease for years to come. Even then, it would have been tied to the particular technology of paper, inhibiting its accessibility and limiting its usefulness for research and teaching. Instead, we have an in-progress edition whose relationship to its manuscripts is far more clearly documented than a typical printed edition, and as it develops, it can benefit from the eyes of many readers, rather than having us furtively pencilling corrections into library copies or noting them in reviews. Through his work, Witt is gradually removing the many barriers to the text, bringing it only a translation away from being entirely accessible to a moderately educated audience. This is how we should publish medieval books.</p>
-            <p>Witt&#x2019;s edition felt like a vision of the future when it first appeared in 2011. He has overcome the many layers of technical obscurantism necessary to publish a scholarly edition online, and has helped to establish a model that begins to practise the theories editors have discussed for decades but have never had the means to fulfil. Having succeeded in these things, one desires to be able to read more about the thinking and process behind his work, and especially to know more about what he has discovered in Peter Plaoul. For now, Witt has already brought to light the intellectual side of a remarkable historical figure, giving us another glimpse into university teaching in the 14th century and contributing another piece of the puzzle that is the history of <emph>Sentences</emph> commentaries.</p>
-          </div>
-        </div>
-      </div>
-      <div type="references">
-        <list>
-          <item>[Dekkers, Eligius]. 1948. &#x2018;A Proposed New Edition of Early Christian Texts&#x2019;. <emph>Sacris Erudiri</emph> 1: 405&#x2013;14. doi: <ref target="http://doi.org/10.1484/J.SE.2.305052">10.1484/J.SE.2.305052</ref>.</item>
-          <item>Glorieux, Pal&#xE9;mon. 1939. &#x2018;L&#x2019;ann&#xE9;e universitaire 1392&#x2013;1393 &#xE0; la Sorbonne &#xE0; travers les notes d&#x2019;un &#xE9;tudiant&#x2019;. <emph>Revue des sciences religieuses</emph> 19 (4): 429&#x2013;82. doi: <ref target="http://doi.org/10.3406/rscir.1939.1801">10.3406/rscir.1939.1801</ref>.</item>
-          <item>Hallamma, Olli, Jeffrey C. Witt, John Slotemaker, and Severin Kitanov. 2011&#x2013;13. <emph>Adam Wodeham: Editio critica electronica Ordinationis Oxoniensis</emph>. <ptr target="http://adamwodeham.org/"/>.</item>
-          <item>Leemans, Johan. 2003. &#x2018;Fifty Years of <emph>Corpus Christianorum</emph> (1953–2003): From Limited Project to Multi-Located Scholarly Enterprise’&#x2019;. In <emph>Corpus Christianorum, 1953–2003: Xenium Natalicium. Fifty Years of Scholarly Editing</emph>, edited by Johan Leemans and Luc Jocqué, 11–55. Turnhout: Brepols. <ptr target="https://web.archive.org/web/20140826144240/http://www.corpuschristianorum.org/series/pdf/Xenium%20natalicium%201953-2003_1.pdf"/></item>
-          <item>Margoni, Thomas, and Mark Perry. 2011. &#x2018;Scientific and Critical Editions of Public Domain Works: An Example of European Copyright Law (Dis)Harmonization&#x2019;. <emph>Canadian Intellectual Property Review</emph> 27 (1): 157&#x2013;70. <ptr target="http://ssrn.com/abstract=1961535"/>.</item>
-          <item>Millet, H&#xE9;l&#xE8;ne. 2009. &#x2018;Pierre Plaoul (1353&#x2013;1415): Une grande figure de l&#x2019;universit&#xE9; de Paris &#xE9;clips&#xE9;e par Gerson&#x2019;. In <emph>Itin&#xE9;raires du savoir de l&#x2019;Italie &#xE0; la Scandinavie (Xe&#x2013;XVIe si&#xE8;cle): &#xC9;tudes offertes &#xE0; Elisabeth Mornet</emph>, edited by Corinne P&#xE9;neau, 179&#x2013;200. Histoire ancienne et m&#xE9;di&#xE9;vale 99. Paris: Publications de la Sorbonne.</item>
-          <item>Peter Lombard. 1535. <emph>In omnes D. Pauli Apost. Epistolas Collectanea</emph>. Paris: Heirs of Jodocus Badius. Reprinted (1854) in PL 191:1297–1696, 192:9–520. <ptr target="https://archive.org/details/petrilongobardi1535collectanea"/>.</item>
-          <item>Pierazzo, Elena. 2014. &#x2018;Digital Documentary Editions and the Others&#x2019;. <emph>Scholarly Editing</emph> 35. <ptr target="http://www.scholarlyediting.org/2014/essays/essay.pierazzo.html"/>.</item>
-          <item>Rosemann, Philipp W. 2007. <emph>The Story of a Great Medieval Book: Peter Lombard&#x2019;s Sentences</emph>. Peterborough, ON: Broadview Press.</item>
-          <item>Sharpe, Richard. 1997. <emph>A Handlist of the Latin Writers of Great Britain and Ireland Before 1540</emph>. Publications of the <emph>Journal of Medieval Latin</emph> 1. Turnhout: Brepols.</item>
-          <item>Siemens, Ray, Meagan Timney, Cara Leitch, Corina Koolen, and Alex Garnett. 2012. &#x2018;Toward Modeling the <emph>Social</emph> Edition: An Approach to Understanding the Electronic Scholarly Edition in the Context of New and Emerging Social Media&#x2019;. <emph>Literary and Linguistic Computing</emph> 27 (4): 445&#x2013;61. doi: <ref target="http://doi.org/10.1093/llc/fqs013">10.1093/llc/fqs013</ref>.</item>
-          <item>van Dalen-Oskam, Karina. 2015. &#x2018;In Praise of the Variant Analysis Tool: A Computational Approach to Medieval Literature&#x2019;. In <emph>Texts, Transmissions, Receptions: Modern Approaches to Narratives</emph>, edited by André Lardinois, Sophie Levie, Hans Hoeken, and Christoph Lüthy, 35–54. Radboud Studies in Humanities 1. Leiden: Brill. doi: <ref target="http://doi.org/10.1163/9789004270848_004"
-            >10.1163/9789004270848_004</ref>.</item>
-          <item>West, Martin L. 1973. <emph>Textual Criticism and Editorial Technique Applicable to Greek and Latin Texts</emph>. Stuttgart: Teubner.</item>
-          <item>Witt, Jeffrey C. 2011. &#x2018;Letter to the Reader&#x2019;. <emph>Petrus Plaoul. Editio critica electronica Commentarii in libris Sententiarum</emph>. March 23. <ptr target="https://web.archive.org/web/20120724113759/http://www.jeffreycwitt.com/plaoul/"/>.</item>
-          <item>Witt, Jeffrey C. 2013. &#x2018;About&#x2019;. <emph>Petrus Plaoul. Editiones electronicas</emph>. <ptr target="https://web.archive.org/web/20140629210844/http://petrusplaoul.org/about/"/>.</item>
-          <item>Witt, Jeffrey C. 2014. &#x2018;Peter Plaoul&#x2019;s <emph>Lecture</emph> Commentary on the <emph>Sentences</emph>: A Canonical Ordered List of Lectures&#x2019;. <emph>Manuscripta</emph> 58 (2): 159&#x2013;270. doi: <ref target="http://doi.org/10.1484/J.MMS.5.103364">10.1484/J.MMS.5.103364</ref>.</item>
-          <item>Witt, Jeffrey C. 2015. &#x2018;Texts, Media, and Re-Mediation: The Digital Future of the <emph>Sentences</emph> Commentary Tradition&#x2019;. In <emph>Mediaeval Commentaries on the Sentences of Peter Lombard</emph>, edited by Philipp W. Rosemann, 3:504&#x2013;15. Leiden: Brill. doi: <ref target="http://doi.org/10.1163/9789004283046_011">10.1163/9789004283046_011</ref>.</item>
-          <item>Wordsworth, John. 1883. <emph>The Oxford Critical Edition of the Vulgate New Testament</emph>. Oxford. <ptr target="http://hdl.handle.net/2027/yale.39002088448908"/>.</item>
-        </list>
-      </div>
-    </body>
-  </text>
+            <p xml:id="p25">If Witt had decided to follow the safe and entrenched path of producing
+               an essentially finished text before publishing it in a printed book, few of us would
+               have heard of Peter Plaoul, and we would not be able to read his work on the
+                  <emph>Sentences</emph> with ease for years to come. Even then, it would have been
+               tied to the particular technology of paper, inhibiting its accessibility and limiting
+               its usefulness for research and teaching. Instead, we have an in-progress edition
+               whose relationship to its manuscripts is far more clearly documented than a typical
+               printed edition, and as it develops, it can benefit from the eyes of many readers,
+               rather than having us furtively pencilling corrections into library copies or noting
+               them in reviews. Through his work, Witt is gradually removing the many barriers to
+               the text, bringing it only a translation away from being entirely accessible to a
+               moderately educated audience. This is how we should publish medieval books.</p>
+            <p xml:id="p26">Witt’s edition felt like a vision of the future when it first appeared
+               in 2011. He has overcome the many layers of technical obscurantism necessary to
+               publish a scholarly edition online, and has helped to establish a model that begins
+               to practise the theories editors have discussed for decades but have never had the
+               means to fulfil. Having succeeded in these things, one desires to be able to read
+               more about the thinking and process behind his work, and especially to know more
+               about what he has discovered in Peter Plaoul. For now, Witt has already brought to
+               light the intellectual side of a remarkable historical figure, giving us another
+               glimpse into university teaching in the 14th century and contributing another piece
+               of the puzzle that is the history of <emph>Sentences</emph> commentaries.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>[Dekkers, Eligius]. 1948. ‘A Proposed New Edition of Early Christian Texts’.
+                     <emph>Sacris Erudiri</emph> 1: 405–14. doi: <ref
+                     target="http://doi.org/10.1484/J.SE.2.305052"
+                  >10.1484/J.SE.2.305052</ref>.</bibl>
+               <bibl>Glorieux, Palémon. 1939. ‘L’année universitaire 1392–1393 à la Sorbonne à
+                  travers les notes d’un étudiant’. <emph>Revue des sciences religieuses</emph> 19
+                  (4): 429–82. doi: <ref target="http://doi.org/10.3406/rscir.1939.1801"
+                     >10.3406/rscir.1939.1801</ref>.</bibl>
+               <bibl>Hallamma, Olli, Jeffrey C. Witt, John Slotemaker, and Severin Kitanov. 2011–13.
+                     <emph>Adam Wodeham: Editio critica electronica Ordinationis Oxoniensis</emph>.
+                     <ref target="http://adamwodeham.org/">http://adamwodeham.org/</ref>.</bibl>
+               <bibl>Leemans, Johan. 2003. ‘Fifty Years of <emph>Corpus Christianorum</emph>
+                  (1953–2003): From Limited Project to Multi-Located Scholarly Enterprise’’. In
+                     <emph>Corpus Christianorum, 1953–2003: Xenium Natalicium. Fifty Years of
+                     Scholarly Editing</emph>, edited by Johan Leemans and Luc Jocqué, 11–55.
+                  Turnhout: Brepols. <ref
+                     target="https://web.archive.org/web/20140826144240/http://www.corpuschristianorum.org/series/pdf/Xenium%20natalicium%201953-2003_1.pdf"
+                     >https://web.archive.org/web/20140826144240/http://www.corpuschristianorum.org/series/pdf/Xenium%20natalicium%201953-2003_1.pdf</ref>. </bibl>
+               <bibl>Margoni, Thomas, and Mark Perry. 2011. ‘Scientific and Critical Editions of
+                  Public Domain Works: An Example of European Copyright Law (Dis)Harmonization’.
+                     <emph>Canadian Intellectual Property Review</emph> 27 (1): 157–70. <ref
+                     target="http://ssrn.com/abstract=1961535"
+                     >http://ssrn.com/abstract=1961535</ref>.</bibl>
+               <bibl>Millet, Hélène. 2009. ‘Pierre Plaoul (1353–1415): Une grande figure de
+                  l’université de Paris éclipsée par Gerson’. In <emph>Itinéraires du savoir de
+                     l’Italie à la Scandinavie (Xe–XVIe siècle): Études offertes à Elisabeth
+                     Mornet</emph>, edited by Corinne Péneau, 179–200. Histoire ancienne et
+                  médiévale 99. Paris: Publications de la Sorbonne.</bibl>
+               <bibl>Peter Lombard. 1535. <emph>In omnes D. Pauli Apost. Epistolas
+                     Collectanea</emph>. Paris: Heirs of Jodocus Badius. Reprinted (1854) in PL
+                  191:1297–1696, 192:9–520. <ref
+                     target="https://archive.org/details/petrilongobardi1535collectanea"
+                     >https://archive.org/details/petrilongobardi1535collectanea</ref>.</bibl>
+               <bibl>Pierazzo, Elena. 2014. ‘Digital Documentary Editions and the Others’.
+                     <emph>Scholarly Editing</emph> 35. <ref
+                     target="http://www.scholarlyediting.org/2014/essays/essay.pierazzo.html"
+                     >http://www.scholarlyediting.org/2014/essays/essay.pierazzo.html</ref>.</bibl>
+               <bibl>Rosemann, Philipp W. 2007. <emph>The Story of a Great Medieval Book: Peter
+                     Lombard’s Sentences</emph>. Peterborough, ON: Broadview Press.</bibl>
+               <bibl>Sharpe, Richard. 1997. <emph>A Handlist of the Latin Writers of Great Britain
+                     and Ireland Before 1540</emph>. Publications of the <emph>Journal of Medieval
+                     Latin</emph> 1. Turnhout: Brepols.</bibl>
+               <bibl>Siemens, Ray, Meagan Timney, Cara Leitch, Corina Koolen, and Alex Garnett.
+                  2012. ‘Toward Modeling the <emph>Social</emph> Edition: An Approach to
+                  Understanding the Electronic Scholarly Edition in the Context of New and Emerging
+                  Social Media’. <emph>Literary and Linguistic Computing</emph> 27 (4): 445–61. doi:
+                     <ref target="http://doi.org/10.1093/llc/fqs013"
+                  >10.1093/llc/fqs013</ref>.</bibl>
+               <bibl>van Dalen-Oskam, Karina. 2015. ‘In Praise of the Variant Analysis Tool: A
+                  Computational Approach to Medieval Literature’. In <emph>Texts, Transmissions,
+                     Receptions: Modern Approaches to Narratives</emph>, edited by André Lardinois,
+                  Sophie Levie, Hans Hoeken, and Christoph Lüthy, 35–54. Radboud Studies in
+                  Humanities 1. Leiden: Brill. doi: <ref
+                     target="http://doi.org/10.1163/9789004270848_004"
+                     >10.1163/9789004270848_004</ref>.</bibl>
+               <bibl>West, Martin L. 1973. <emph>Textual Criticism and Editorial Technique
+                     Applicable to Greek and Latin Texts</emph>. Stuttgart: Teubner.</bibl>
+               <bibl>Witt, Jeffrey C. 2011. ‘Letter to the Reader’. <emph>Petrus Plaoul. Editio
+                     critica electronica Commentarii in libris Sententiarum</emph>. March 23. <ref
+                     target="https://web.archive.org/web/20120724113759/http://www.jeffreycwitt.com/plaoul/"
+                     >https://web.archive.org/web/20120724113759/http://www.jeffreycwitt.com/plaoul/</ref>.</bibl>
+               <bibl>Witt, Jeffrey C. 2013. ‘About’. <emph>Petrus Plaoul. Editiones
+                     electronicas</emph>. <ref
+                     target="https://web.archive.org/web/20140629210844/http://petrusplaoul.org/about/"
+                     >https://web.archive.org/web/20140629210844/http://petrusplaoul.org/about/</ref>.</bibl>
+               <bibl>Witt, Jeffrey C. 2014. ‘Peter Plaoul’s <emph>Lecture</emph> Commentary on the
+                     <emph>Sentences</emph>: A Canonical Ordered List of Lectures’.
+                     <emph>Manuscripta</emph> 58 (2): 159–270. doi: <ref
+                     target="http://doi.org/10.1484/J.MMS.5.103364"
+                  >10.1484/J.MMS.5.103364</ref>.</bibl>
+               <bibl>Witt, Jeffrey C. 2015. ‘Texts, Media, and Re-Mediation: The Digital Future of
+                  the <emph>Sentences</emph> Commentary Tradition’. In <emph>Mediaeval Commentaries
+                     on the Sentences of Peter Lombard</emph>, edited by Philipp W. Rosemann,
+                  3:504–15. Leiden: Brill. doi: <ref
+                     target="http://doi.org/10.1163/9789004283046_011"
+                     >10.1163/9789004283046_011</ref>.</bibl>
+               <bibl>Wordsworth, John. 1883. <emph>The Oxford Critical Edition of the Vulgate New
+                     Testament</emph>. Oxford. <ref
+                     target="http://hdl.handle.net/2027/yale.39002088448908"
+                     >http://hdl.handle.net/2027/yale.39002088448908</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
 </TEI>

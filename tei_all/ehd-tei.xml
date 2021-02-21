@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">   
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.13.4">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>At the intersection of sciences, humanities and technologies – A review of
                     the edition humboldt digital</title>
-                <author>
+                <author ref="https://orcid.org/0000-0003-1272-886X">
                     <name>
                         <forename>Maria</forename>
                         <surname>Benauer</surname>
                     </name>
-                    <idno type="ORCID"
-                        >https://orcid.org/0000-0003-1272-886X</idno>
                     <affiliation>
                         <orgName>University of Vienna</orgName>
                         <placeName>Vienna</placeName>
@@ -26,19 +25,22 @@
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13/ehd</idno>
                 <idno type="DOI">10.18716/ride.a.13.4</idno>
                 <idno type="archive"
-                    >https://github.com/i-d-e/ride/blob/archives/issue13/ehd.zip?raw=true</idno>
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue13/ehd/ehd.pdf</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <seriesStmt>
                 <title level="j">RIDE - A review journal for digital editions and resources</title>
-                <editor>Ulrike Henny-Krahmer</editor>
-                <editor>Frederike Neuber</editor>
-                <editor>Patrick Sahle</editor>
-                <editor role="managing">Ulrike Henny-Krahmer</editor>
-                <editor role="managing">Frederike Neuber</editor>
-                <editor role="technical">Bernhard Assmann</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+                <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
                 <editor role="technical">Jana Klinger</editor>
                 <biblScope unit="issue" n="13">Digital Scholarly Editions</biblScope>
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13</idno>
@@ -47,7 +49,7 @@
                 <relatedItem type="reviewed_resource">
                     <bibl>
                         <title>edition humboldt digital</title>
-                          <editor>Ottmar Ette</editor>
+                        <editor>Ottmar Ette</editor>
                         <respStmt>
                             <resp>Editor</resp>
                             <persName>Prof. Dr. Ottmar Ette</persName>
@@ -79,7 +81,7 @@
                         <respStmt>
                             <resp>Editor</resp>
                             <persName>Christian Thomas</persName>
-                        </respStmt>                        
+                        </respStmt>
                         <respStmt>
                             <resp>Editor</resp>
                             <persName>Dr. Ulrike Leitner</persName>
@@ -1114,9 +1116,6 @@
             </div>
         </front>
         <body>
-            <!-- Ab hier Reviewtext, inkl. Fußnoten/Bilder/etc.; 
-      tei:div, tei:p, tei:figure, tei:note bekommen mit xml:id eine fortlaufende Nummerierung,
-      siehe Review von Victorians und LDM -->
             <div xml:id="div1">
                 <head>Introduction</head>
                 <p xml:id="p1">Alexander von Humboldt (1769–1859) is predominantly known as the
@@ -1161,10 +1160,11 @@
                     historical sources. All things considered, ‘Traveling Humboldt’ brings together
                     a well-chosen team consisting of scholars from diverse research backgrounds such
                     as history, philology, romance studies, mathematics and digital humanities, and
-                    thus fulfills its self-imposed interdisciplinary approach.<note xml:id="ftn1"
-                            ><ref
-                                target="https://web.archive.org/web/20190604152900/https://edition-humboldt.de/about/index.xql?id=H0002928&amp;l=en"
-                                >https://web.archive.org/web/20190604152900/https://edition-humboldt.de/about/index.xql?id=H0002928&amp;l=en</ref>.</note></p>
+                    thus fulfills its self-imposed interdisciplinary approach.<note xml:id="ftn1">
+                        <ref
+                            target="https://web.archive.org/web/20190604152900/https://edition-humboldt.de/about/index.xql?id=H0002928&amp;l=en"
+                            >https://web.archive.org/web/20190604152900/https://edition-humboldt.de/about/index.xql?id=H0002928&amp;l=en</ref>.</note>
+                </p>
                 <p xml:id="p4">Notwithstanding the project’s solid financial and scholarly
                     resources, editorial focus still must be set. Thus, the project focusses on the
                     thematic complex of travel which is considered an integral element of Humboldt’s
@@ -1187,9 +1187,11 @@
                     Hence, the edition includes unedited material as well as information from
                     preceding and third-party edition projects. However, even though borrowed
                     transcriptions or information are always declared as such, a systematic list of
-                    all utilized external resources is missing.<note xml:id="ftn2"><ref
-                        target="https://web.archive.org/web/20200815164557/https://www.bbaw.de/forschung/alexander-von-humboldt-auf-reisen-wissenschaft-aus-der-bewegung"
-                        >https://web.archive.org/web/20200815164557/https://www.bbaw.de/forschung/alexander-von-humboldt-auf-reisen-wissenschaft-aus-der-bewegung</ref>.</note></p>
+                    all utilized external resources is missing.<note xml:id="ftn2">
+                        <ref
+                            target="https://web.archive.org/web/20200815164557/https://www.bbaw.de/forschung/alexander-von-humboldt-auf-reisen-wissenschaft-aus-der-bewegung"
+                            >https://web.archive.org/web/20200815164557/https://www.bbaw.de/forschung/alexander-von-humboldt-auf-reisen-wissenschaft-aus-der-bewegung</ref>.</note>
+                </p>
                 <p xml:id="p5"> Due to its choice in source material, ‘Travelling Humboldt’ not only
                     has to handle the genuine complexity of Humboldt’s work, but also the diversity
                     of the chosen material. The project attempts to tackle these challenges by using
@@ -1215,12 +1217,13 @@
                     use of the adjectives ‘digital’ and ‘print’ suggests that the editions define
                     themselves by their chosen medium (see also the <ref type="crossref"
                         target="#div4">chapter “Digital – print – hybrid?”</ref>). </p>
-                <p xml:id="p8"><figure xml:id="img1">
+                <p xml:id="p8">
+                    <figure xml:id="img1">
                         <graphic
                             url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ehd/pictures/picture-1.png"/>
                         <head type="legend">The <emph>edition humboldt digital</emph> as a part of
-                            an information network.<note xml:id="ftn4">cf. Kraft 2018a
-                            396.</note></head>
+                            an information network.<note xml:id="ftn4">cf. Kraft 2018a 396.</note>
+                        </head>
                     </figure> The <emph>edition humboldt digital</emph> makes use of the advantages
                     of Digital Humanities technologies in order to make Humboldt’s work accessible
                     and exploitable in numerous ways. Both a critical text and a reading version are
@@ -1240,9 +1243,10 @@
                         von.</note> In the chronology, detected errors are corrected by the editors,
                     because not only former researchers made some errors but also a genius like
                     Alexander von Humboldt himself were not above the possibility of occasional
-                    confusions in his notes.<note xml:id="ftn6"><ref
-                        target="https://web.archive.org/web/20190604152954/https://edition-humboldt.de/about/index.xql?id=H0000002&amp;l=en"
-                        >https://web.archive.org/web/20190604152954/https://edition-humboldt.de/about/index.xql?id=H0000002&amp;l=en</ref>.</note>
+                    confusions in his notes.<note xml:id="ftn6">
+                        <ref
+                            target="https://web.archive.org/web/20190604152954/https://edition-humboldt.de/about/index.xql?id=H0000002&amp;l=en"
+                            >https://web.archive.org/web/20190604152954/https://edition-humboldt.de/about/index.xql?id=H0000002&amp;l=en</ref>.</note>
                 </p>
                 <p xml:id="p10">The edition is completed with a presentation of high-resolution
                     facsimiles (provided that the legal framework permits it). Thus, the
@@ -1258,7 +1262,8 @@
                     omissions and erroneous leaps in chronology in order to recreate Humboldt’s
                     original itineraries. However, beside this chronological function, the
                         <emph>edition humboldt print</emph> only serves as a supplement to its
-                    digital counterpart.<note xml:id="ftn7">cf. Kraft 2018a 387.</note></p>
+                    digital counterpart.<note xml:id="ftn7">cf. Kraft 2018a 387.</note>
+                </p>
                 <p xml:id="p12">Since the <emph>edition humboldt print</emph> is not available yet,
                     this review only focusses on the manifestation of its digital counterpart, the
                         <emph>edition humboldt digital</emph>.<note xml:id="ftn8">Meanwhile, since
@@ -1312,8 +1317,10 @@
                         <quote>A project which works on a hybrid edition of historical manuscripts
                             in 2017, needs to remain open to the question, which requirements and
                             expectations will be demanded of such an edition in three, five, ten or
-                            fifteen years.<note xml:id="ftn10">cf. Kraft 2018a 386.</note></quote>
-                    </cit></p>
+                            fifteen years.<note xml:id="ftn10">cf. Kraft 2018a 386.</note>
+                        </quote>
+                    </cit>
+                </p>
             </div>
             <div xml:id="div5">
                 <head>The edition humboldt digital</head>
@@ -1322,9 +1329,10 @@
                     <p xml:id="p16"> The <emph>edition humboldt digital</emph> provides an extensive
                         and precise documentation. From editorial guidelines and technical key
                         parameters to human resources – the user is informed about every detail;
-                        however small it might be.<note xml:id="ftn11"><ref
-                            target="http://web.archive.org/web/20190604153215/https://edition-humboldt.de/about/index.xql?id=H0016212&amp;l=en"
-                            >http://web.archive.org/web/20190604153215/https://edition-humboldt.de/about/index.xql?id=H0016212&amp;l=en</ref>.</note>
+                        however small it might be.<note xml:id="ftn11">
+                            <ref
+                                target="http://web.archive.org/web/20190604153215/https://edition-humboldt.de/about/index.xql?id=H0016212&amp;l=en"
+                                >http://web.archive.org/web/20190604153215/https://edition-humboldt.de/about/index.xql?id=H0016212&amp;l=en</ref>.</note>
                         Therefore, the <emph>edition humboldt digital</emph> meets the transparency
                         criteria as demanded of scholarly editions. Unfortunately, the documentation
                         is only available in German, while most of the other parts of the edition
@@ -1333,7 +1341,8 @@
                         Humboldt’s work itself is written in German too, this issue seems to be
                         negligible. Nevertheless, it is worth discussing the edition’s
                         methodological principles in detail for an English-speaking audience at this
-                            point.<note xml:id="ftn12"><ref
+                            point.<note xml:id="ftn12">
+                            <ref
                                 target="http://web.archive.org/web/20190604153115/edition-humboldt.de/richtlinien/index.html"
                                 >http://web.archive.org/web/20190604153115/edition-humboldt.de/richtlinien/index.html</ref>.</note>
                     </p>
@@ -1365,15 +1374,17 @@
                     <p xml:id="p19">Based on this general methodological introduction, the
                         documentation provides a separate section with further information on the
                         individual treatment of metadata, text, letters and the index.<note
-                            xml:id="ftn13"><ref
+                            xml:id="ftn13">
+                            <ref
                                 target="http://web.archive.org/web/20190604153115/edition-humboldt.de/richtlinien/index.html"
                                 >http://web.archive.org/web/20190604153115/edition-humboldt.de/richtlinien/index.html</ref>.</note>
                         In each section, the practical implementation of the different models is
                         illustrated by using practical examples. On a technical level, the markup
                         system relies on the ‘Basisformat des Deutschen Textarchivs (DTABf)’, which
-                        conforms to the TEI guidelines.<note xml:id="ftn14"><ref
-                            target="http://web.archive.org/web/20190604153326/http://deutschestextarchiv.de/doku/basisformat/"
-                            >http://web.archive.org/web/20190604153326/http://deutschestextarchiv.de/doku/basisformat/</ref>.</note>
+                        conforms to the TEI guidelines.<note xml:id="ftn14">
+                            <ref
+                                target="http://web.archive.org/web/20190604153326/http://deutschestextarchiv.de/doku/basisformat/"
+                                >http://web.archive.org/web/20190604153326/http://deutschestextarchiv.de/doku/basisformat/</ref>.</note>
                         Therefore, the edition’s data model complies with current standards in text
                         markup and textual archiving. Due to some particularities of Humboldt’s
                         notes, a project-related adaptation and enhancement of the tag set was
@@ -1393,7 +1404,8 @@
                             DTABf.<note xml:id="ftn15">Some examples of application in the
                             documentation also contain practical advices on how to apply the
                             encoding itself. Therefore, one might conclude that the documentation is
-                            also designed as internal guideline for the project’s staff.</note></p>
+                            also designed as internal guideline for the project’s staff.</note>
+                    </p>
                     <p xml:id="p21">Overall, the project’s documentation is a powerful resource that
                         enables users to develop a deeper understanding of the edition. Thus, as
                         already discussed above, an English translation of the documentation would
@@ -1420,11 +1432,13 @@
                             xml:id="ftn16">For further information on <emph>ediarum</emph> see the
                             project’s homepage and a review as recently published in RIDE: <ref
                                 target="https://web.archive.org/web/20190604153420/http://www.bbaw.de/telota"
-                                >https://web.archive.org/web/20190604153420/http://www.bbaw.de/telota</ref>; cf.
-                            Mertgens. 2019.</note> initiative. The open source software ‘digilib’ is
-                        used for displaying facsimiles. Considering long-term preservation issues,
-                        this use of open access and open source tools is commendable. </p>
-                    <p xml:id="p25"><figure xml:id="img2">
+                                >https://web.archive.org/web/20190604153420/http://www.bbaw.de/telota</ref>;
+                            cf. Mertgens. 2019.</note> initiative. The open source software
+                        ‘digilib’ is used for displaying facsimiles. Considering long-term
+                        preservation issues, this use of open access and open source tools is
+                        commendable. </p>
+                    <p xml:id="p25">
+                        <figure xml:id="img2">
                             <graphic
                                 url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ehd/pictures/picture-2.png"/>
                             <head type="legend">The front page of the <emph>edition humboldt
@@ -1441,7 +1455,7 @@
                         different sections of the digital edition. </p>
                     <p xml:id="p27">For instance, the front page of the section <emph>Topics</emph>
                         provides a kind of main menu, where the elaborated topics are selectable
-                        (see <ref type="crossref" target="#img2">figure 2</ref>). By choosing one
+                        (see <ref type="crossref" target="#img3">figure 3</ref>). By choosing one
                         topic, another sub-layer with different subheadings appears. </p>
                     <p xml:id="p28">
                         <figure xml:id="img3">
@@ -1472,20 +1486,20 @@
                         named after its original title, which sometimes leads to obscure headings
                         such as ‘<emph>Voyage d’Espagne aux Canaries et à Cumaná Obs. astron. de
                             Juin à Oct. 1799</emph>’ which labels the edition of Humboldt’s American
-                        journal. This
-                        choice of title is legitimate, as the content of the module is further
-                        specified in the subheadings. However, processing information becomes
-                        difficult in general, if not only the editions but also their editorial
-                        comments do not have self-evident titles either. Referring to the example of
-                        the American journal once again, the title ‘<emph>Ich habe es mir zur
-                            Pflicht gemacht, alle angegebenen Beobachtungen ohne Auswahl in mein
-                            Tagebuch einzutragen</emph>’ is a literary masterpiece (see <ref type="crossref" target="#img4">figure 4</ref>). Nevertheless, a
-                        title such as ‘Foreword’ or ‘Introduction’ would be more meaningful, as it
-                        clearly describes the essence of the contributing module. In addition,
-                        titles, which are based on multilingual quotations, are inconvenient for an
-                        international audience. Even though some modules do have self-evident
-                        titles, all in all, a standard procedure for name-assignment is missing and
-                        makes the journal section quite confusing. </p>
+                        journal. This choice of title is legitimate, as the content of the module is
+                        further specified in the subheadings. However, processing information
+                        becomes difficult in general, if not only the editions but also their
+                        editorial comments do not have self-evident titles either. Referring to the
+                        example of the American journal once again, the title ‘<emph>Ich habe es mir
+                            zur Pflicht gemacht, alle angegebenen Beobachtungen ohne Auswahl in mein
+                            Tagebuch einzutragen</emph>’ is a literary masterpiece (see <ref
+                            type="crossref" target="#img5">figure 5</ref>). Nevertheless, a title
+                        such as ‘Foreword’ or ‘Introduction’ would be more meaningful, as it clearly
+                        describes the essence of the contributing module. In addition, titles, which
+                        are based on multilingual quotations, are inconvenient for an international
+                        audience. Even though some modules do have self-evident titles, all in all,
+                        a standard procedure for name-assignment is missing and makes the journal
+                        section quite confusing. </p>
                     <p xml:id="p30">
                         <figure xml:id="img5">
                             <graphic
@@ -1498,7 +1512,8 @@
                         Furthermore, a visual distinction between the edition and its comments
                         through colors, a table of contents, or a drop-down navigation chart could
                         provide powerful tools to intuitively guide the user through the content. </p>
-                    <p xml:id="p31"><figure xml:id="img6">
+                    <p xml:id="p31">
+                        <figure xml:id="img6">
                             <graphic
                                 url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ehd/pictures/picture-6.png"/>
                             <head type="legend">User interface of the <emph>edition humboldt
@@ -1520,7 +1535,8 @@
                         image would be a tremendous help. Here, the <emph>edition humboldt
                             digital</emph> could exploit further technical options to its
                             advantage.<note xml:id="ftn17">For example, when viewing the first
-                            American Travel Journal f. 96r.</note></p>
+                            American Travel Journal f. 96r.</note>
+                    </p>
                     <p xml:id="p33">
                         <figure xml:id="img7">
                             <graphic
@@ -1539,7 +1555,8 @@
                 </div>
                 <div xml:id="div5.3">
                     <head>Index and search engine</head>
-                    <p xml:id="p34"><figure xml:id="img8">
+                    <p xml:id="p34">
+                        <figure xml:id="img8">
                             <graphic
                                 url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ehd/pictures/picture-8.png"/>
                             <head type="legend">The edition’s index offers various possibilities to
@@ -1577,15 +1594,17 @@
                         edition also comprises a plant index which lists each plant mentioned in the
                         edited sources and links it to digital databases such as the <emph>Catalogue
                             of Life</emph> or the <emph>Biodiversity Heritage Library</emph>.<note
-                            xml:id="ftn18"><ref
+                            xml:id="ftn18">
+                            <ref
                                 target="https://web.archive.org/web/20190605184115/https://www.biodiversitylibrary.org/"
                                 >https://web.archive.org/web/20190605184115/https://www.biodiversitylibrary.org/</ref>;
                                 <ref
-                                    target="http://web.archive.org/web/20190529190620/http://www.catalogueoflife.org/"
-                                    >http://web.archive.org/web/20190529190620/http://www.catalogueoflife.org/</ref>.</note>
+                                target="http://web.archive.org/web/20190529190620/http://www.catalogueoflife.org/"
+                                >http://web.archive.org/web/20190529190620/http://www.catalogueoflife.org/</ref>.</note>
                         Hence, this index is a powerful resource, particularly for those from a
                         biological or ecological research background.</p>
-                    <p xml:id="p37"><figure xml:id="img9">
+                    <p xml:id="p37">
+                        <figure xml:id="img9">
                             <graphic
                                 url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ehd/pictures/picture-9.png"/>
                             <head type="legend">The edition’s search engine is easy to handle
@@ -1659,9 +1678,11 @@
                         newspapers since its launch. Additionally, the fact the <emph>edition
                             humboldt digital</emph> was awarded with the first Berlin DH price in
                         2017 further contributed towards its public and media attention.<note
-                            xml:id="ftn20"><ref
+                            xml:id="ftn20">
+                            <ref
                                 target="http://web.archive.org/web/20190830202045/https://edition-humboldt.de/about/index.xql?id=H0016214&amp;l=de"
-                                >http://web.archive.org/web/20190830202045/https://edition-humboldt.de/about/index.xql?id=H0016214&amp;l=de</ref>.</note></p>
+                                >http://web.archive.org/web/20190830202045/https://edition-humboldt.de/about/index.xql?id=H0016214&amp;l=de</ref>.</note>
+                    </p>
                 </div>
             </div>
             <div xml:id="div6">
@@ -1719,7 +1740,6 @@
             </div>
         </body>
         <back>
-            <!-- Ab hier Bibliografie; bitte Kursivierungen mit tei:emph (s.o.) beibehalten -->
             <div type="bibliography">
                 <listBibl>
                     <bibl>Humboldt, Alexander von. 1983. ‘Chronologische Übersicht über wichtige
@@ -1729,22 +1749,22 @@
                     <bibl>Kraft, Tobias. 2017. ‘Die Berliner <emph>Edition Humboldt digital</emph>’.
                         In <emph>Hin – International Review for Humboldt Studies 34</emph>: 3-16.
                             <ref
-                                target="http://web.archive.org/web/20190604155213/http://www.hin-online.de/index.php/hin/article/view/256/462"
-                                >http://web.archive.org/web/20190604155213/http://www.hin-online.de/index.php/hin/article/view/256/462</ref>.</bibl>
+                            target="http://web.archive.org/web/20190604155213/http://www.hin-online.de/index.php/hin/article/view/256/462"
+                            >http://web.archive.org/web/20190604155213/http://www.hin-online.de/index.php/hin/article/view/256/462</ref>.</bibl>
                     <bibl>Kraft, Tobias. 2018a. ‘Hybride Edition und analoges Erbe.
                         Editionsphilologie und Alexander von Humboldt-Forschung in der digitalen
                         Sattelzeit’. In <emph>Informatik-Spektrum 12</emph>: 385-397.</bibl>
                     <bibl>Kraft, Tobias. 2018b. ‘Die Berliner Edition Humboldt digital’. In
                             <emph>Alexander von Humboldt, Handbuch: Leben – Werk – Wirkung</emph>,
                         edited by Ottmar Ette, 276-284. Stuttgart: J.B. Metzler.</bibl>
-                    <bibl>Andreas Mertgens. 2019. ‘Ediarum. A toolbox for editors and developers’.
+                    <bibl>Mertgens, Andreas. 2019. ‘Ediarum. A toolbox for editors and developers’.
                         In <emph>RIDE 11</emph>. <ref
                             target="http://web.archive.org/web/20200915110631/https://ride.i-d-e.de/issues/issue-11/ediarum/"
                             >http://web.archive.org/web/20200915110631/https://ride.i-d-e.de/issues/issue-11/ediarum/</ref>.</bibl>
                     <bibl>Plewe, Ernst. 1974. ‘Humboldt, Alexander von’, In <emph>Neue Deutsche
                             Biographie 10</emph>: 33-43. <ref
-                                target="http://web.archive.org/web/20190604155447/https://www.deutsche-biographie.de/pnd118554700.html"
-                                >http://web.archive.org/web/20190604155447/https://www.deutsche-biographie.de/pnd118554700.html</ref>.</bibl>
+                            target="http://web.archive.org/web/20190604155447/https://www.deutsche-biographie.de/pnd118554700.html"
+                            >http://web.archive.org/web/20190604155447/https://www.deutsche-biographie.de/pnd118554700.html</ref>.</bibl>
                     <bibl>Sahle, Patrick. 2013. ‘Digitale Editionsformen, Zum Umgang mit der
                         Überlieferung unter den Bedienungen des Medienwandels: Befunde, Theorie und
                         Methodik’. In <emph>Schriften des Instituts für Dokumentologie und Editorik
@@ -1758,8 +1778,8 @@
                     <bibl>Schnee, Florian. 2019. ‘Unveröffentlichte Schriften aus Humboldts Nachlass
                         in der „edition humboldt print“‘. In <emph>Alexander von Humboldt
                             Informationen digital</emph>. <ref
-                                target="http://web.archive.org/web/20200118221524/https://www.avhumboldt.de/?p=15740"
-                                >http://web.archive.org/web/20200118221524/https://www.avhumboldt.de/?p=15740</ref>.</bibl>
+                            target="http://web.archive.org/web/20200118221524/https://www.avhumboldt.de/?p=15740"
+                            >http://web.archive.org/web/20200118221524/https://www.avhumboldt.de/?p=15740</ref>.</bibl>
                 </listBibl>
             </div>
         </back>

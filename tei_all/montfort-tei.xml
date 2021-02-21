@@ -1,1081 +1,1490 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title/>
-        <respStmt>
-          <resp>author</resp>
-          <name>
-            <persName>
-              <forename xml:id="reviewer_forename">Torsten</forename>
-              <surname xml:id="reviewer_surname">Schaßan</surname>
-            </persName>
-            <affiliation>
-              <orgName xml:id="reviewer_organization">Herzog August Bibliothek</orgName>
-              <placeName xml:id="reviewer_place">Wolfenbüttel</placeName>
-            </affiliation>
-            <email xml:id="reviewer_email">schassan (at) hab.de</email>
-          </name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Institut für Dokumentologie und Editorik</publisher>
-        <date/>
-        <idno type="issue">4</idno>
-        <idno type="URI">http://ride.i-d-e.de/issue-4/montfort</idno>
-        <idno type="doi">10.18716/ride.a.4.3</idno>
-        <availability>
-          <licence>
-            <ref target="http://creativecommons.org/licenses/by/4.0/"/>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <notesStmt>
-        <relatedItem>
-          <biblStruct>
-            <monogr>
-              <title xml:id="resource_title">Hugo von Montfort: Das poetische Werk</title>
-              <editor xml:id="resource_editors">Wernfried Hofmeister</editor>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Wernfried Hofmeister</name>
-                </persName>
-              </respStmt>
-              <respStmt>
-                <resp>Designer</resp>
-                <persName>
-                  <name>H. Klug</name>
-                </persName>
-              </respStmt>
-              <imprint>
-                <date xml:id="resource_date_publication">2011-2015</date>
-              </imprint>
-            </monogr>
-            <idno xml:id="resource_uri">http://www-gewi.uni-graz.at/montfort-edition/</idno>
-          </biblStruct>
-        </relatedItem>
-        <note>
-          <date xml:id="resource_date_access">2016-02-17</date>
-        </note>
-      </notesStmt>
-      <sourceDesc>
-        <p>Auf der Basis von <ref>http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1</ref>
-        </p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
-          <category xml:id="documentation">
-            <category xml:id="bibl_desc">
-              <catDesc>
-                <ref target="#K1.2">cf. Catalogue 1.2</ref>
-              </catDesc>
-              <catDesc>Is it easily possible to describe the project bibliographically along the schema "responsible editors, publishing/hosting institution, year(s) of publishing"?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contributors">
-              <catDesc>
-                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-              </catDesc>
-              <catDesc>Are the contributors (editors, institutions, associates) of the project fully documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contacts">
-              <catDesc>
-                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-              </catDesc>
-              <catDesc>Does the project list contact persons?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="selection">
-              <category xml:id="explained">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="reasonable">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection by and large reasonable?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="data_archive">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the documentation include information about the long term sustainability of the basic data (archiving of the data)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="aims">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="methods">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="data_model">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <catDesc>Does the project document which data model (e.g. TEI) has been used and for what reason?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="help">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts concerning the use of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="citation">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or a part of it)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="complete">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the editon regard itself as a completed project (i.e. not promise further modifications and additions)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="institutional_curation">
-              <catDesc>
-                <ref target="#K4.13">cf. Catalogue 4.13</ref>
-              </catDesc>
-              <catDesc>Does the project provide information about institutional support for the curation and sustainability of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="contents">
-            <category xml:id="previous_edition">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="materials_used">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Does the edition make use of these previous editions?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="introduction">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer an introduction to the subject-matter (the author(s), the work, its history, the theme, etc.) of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="bibliography">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a bibliography?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="commentary">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear passages, interpretation, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="contexts">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project include or link to external resources with contextual material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="images">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer images of digitised sources?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="image_quality">
-              <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
-              </catDesc>
-              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="transcriptions">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc> Is the text fully transcribed?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="text_quality">
-              <catDesc>
-                <ref target="#K4.6">cf. Catalogue 4.6</ref>
-              </catDesc>
-              <catDesc>Does the project offer texts of an acceptable quality (typos, errors, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="indices">
-              <catDesc>
-                <ref target="#K4.5">cf. Catalogue 4.5</ref>
-              </catDesc>
-              <catDesc>Does the project feature compilations indices, registers or visualisations that offer alternative ways to access the material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="documents">
-              <category xml:id="doc_type">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
-                <category xml:id="single_manuscript">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="single_work">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collection_of_texts">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collected_works">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="papers">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="archival_holding">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="charters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="letters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="diary">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.4.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Hugo von Montfort: Das poetische Werk</title>
+            <author ref="https://orcid.org/0000-0002-8902-4775">
+               <name>
+                  <forename>Torsten</forename>
+                  <surname>Schaßan</surname>
+               </name>
+               <affiliation>
+                  <orgName>Herzog August Bibliothek</orgName>
+                  <placeName>Wolfenbüttel, Germany</placeName>
+               </affiliation>
+               <email>schassan (at) hab.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2016-06">June 2016</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-4/montfort</idno>
+            <idno type="DOI">10.18716/ride.a.4.3</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue04/montfort/montfort.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0001-8820-5112" role="assistant">Tessa
+               Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny</editor>
+            <biblScope unit="issue" n="4">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-4</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Hugo von Montfort: Das poetische Werk</title>
+                  <editor>Wernfried Hofmeister</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Wernfried Hofmeister</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Designer</resp>
+                     <persName>H. Klug</persName>
+                  </respStmt>
+                  <date type="publication">2011-2015</date>
+                  <idno type="URI">http://www-gewi.uni-graz.at/montfort-edition/</idno>
+                  <date type="accessed">2016-02-17</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-              </category>
-              <category xml:id="doc_time">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>What era(s) do the documents belong to?</catDesc>
-                <category xml:id="classics">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="medieval">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="early_modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="subject">
-              <catDesc>
-                <ref target="#K1.3">cf. Catalogue 1.3</ref>
-              </catDesc>
-              <catDesc>Which perspective(s) do the editors take towards the edited material? How can the edition be classified in general terms?</catDesc>
-              <category xml:id="history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philology_literary_studies">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="philosophy_theology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="history_of_science">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="musicology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="art_history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="presentation">
-            <category xml:id="spin_offs">
-              <catDesc>
-                <ref target="#K4.11">cf. Catalogue 4.11</ref>
-              </catDesc>
-              <catDesc>Does the project offer any spin-offs?</catDesc>
-              <category xml:id="app">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="mobile">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PDF">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="browse_by">
-              <catDesc>
-                <ref target="#K4.3">cf. Catalogue 4.3</ref>
-              </catDesc>
-              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
-              <category xml:id="authors">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="works">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="versions">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="structure">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="pages">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_documents">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="type_of_material">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_images">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="dates">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="persons">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="places">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="search">
-            <category xml:id="simple">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer a simple search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="advanced">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer an advanced search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="wildcard">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search support the use of wildcards?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="index">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer an index of the searched field?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="suggest">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="helptext">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts for the search?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="aim">
-            <category xml:id="audience">
-              <catDesc>
-                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-              </catDesc>
-              <catDesc>Who is the intended audience of the project?</catDesc>
-              <category xml:id="scholars">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="interested_public">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="typology">
-              <catDesc>
-                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
-              </catDesc>
-              <catDesc>Which type fits best for the reviewed project?</catDesc>
-              <category xml:id="facsimile_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="archive_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="documentary_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_edition">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="genetic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="work_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="text_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="enriched_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="database_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_library">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_collection_of_texts">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="method">
-            <catDesc rend="label">Method</catDesc>
-            <category xml:id="critical_editing">
-              <catDesc>
-                <ref target="#K3.6">cf. Catalogue 3.6</ref>
-              </catDesc>
-              <catDesc>In how far is the text critically edited?</catDesc>
-              <category xml:id="transmission_examined">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="palaeographic_annotations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="normalization">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="variants">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="emendation">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentary_notes">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="standards">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <category xml:id="XML">
-                <catDesc>Is the data encoded in XML?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="standardized_data_model">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
-              </category>
-            </category>
-            <category xml:id="text_type">
-              <catDesc>
-                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
-              </catDesc>
-              <catDesc>Which kinds or forms of text are presented?</catDesc>
-              <category xml:id="facsimiles">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_transcription">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="edited_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="translations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentaries">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="semantic_data">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="technical_accessability">
-            <category xml:id="persistent_identification">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Are there persistent identifiers and an addressing system for the edition and/or parts/objects of it and which mechanism is used to that end?</catDesc>
-              <category xml:id="DOI">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="ARK">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="URN">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PURL.ORG">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category xml:id="persistent_URLs">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="interfaces">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse of the data of the project in other contexts?</catDesc>
-              <category xml:id="OAI-PMH">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="REST">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_API">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="open_access">
-              <catDesc>Is the edition Open Access?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="basic_data_accessible">
-              <catDesc>
-                <ref target="#K4.12">cf. Catalogue 4.12</ref>
-              </catDesc>
-              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of the edition (e.g. for a page)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="download">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="reuse">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can you use the data with other tools useful for this kind of content?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="rights">
-              <category xml:id="declared">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Are the rights to (re)use the content declared?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="license">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Under what license are the contents released?</catDesc>
-                <category xml:id="CC0">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="PDM">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category xml:id="no_license">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="multiple_licenses">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-          </category>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="abstract">
-        <p><emph>Hugo von Montfort – The poetic work</emph> calls itself a hybrid edition. In fact one would hesitate to call this a digital edition as from the beginning, the main purpose of the website had been to accompany the printed edition. Nevertheless, over time more materials have been assembled and offer multiple ways of access: for textual scholarly work (<emph>Lesefassung</emph>), for linguistic and palaeographic interests (<emph>Augenfassung</emph>), for listening. Unfortunately the texts are distributed over several websites and cannot be linked as one would wish. Additionally, the <emph>Augenfassung</emph> is available only for the main manuscript. Restrictive licensing will not allow to make use of the material other than reading on-line. This is regrettable as the original edition has been award-winning.</p>
-      </div>
-      <div type="text">
-        <div type="div2">
-          <head>Einleitung</head>
-          <p>Hugo XII., Graf von Montfort-Bregenz, (1357 bis 1423) war Hochadeliger der Steiermark. Zwar war er über seine Mutter mit den Habsburgern verwandt, verbesserte seine Position aber durch allgemein erfolgreiches politisches Handeln im Dienste der Habsburger sowie durch geschickte Heiratspolitik ständig und stieg bis zum steierischen Landeshauptmann auf. Sein Leben ist durch zahlreiche Quellen gut belegt. Hinter dem Ruf als Politiker bleibt der Ruf als Dichter deutlich zurück. Hinsichtlich seiner literaturgeschichtlichen Bedeutung steht der Montforter vor allem im Schatten des Südtirolers Oswald von Wolkenstein. Doch als einer der letzten Dichter, der die verfestigten Formen des Minnesangs noch einmal mit neuem Geist zu beleben versuchten, ist seinem Werk seit dem späten 19. Jh. immer wieder Aufmerksamket zuteil geworden. Dabei liegt der Wert seiner Dichtung mehr in der Gestaltung aus eigenem Erleben als in besonderer Kunstfertigkeit, da er seine Lieder nicht als Huldigung an eine hohe unerreichbare Herrin, sondern als Preis der eigenen Ehefrau verfasst. (Werner, 68)</p>
-          <figure>
-            <head>Fig. 1: Hugo von Montforts Autorensignatur</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-1.png"/>
-          </figure>
-          <p>In den Quellen tritt er uns als „selbstbewußte[r] Dichter" (Hofmeister 2005, XVI.) entgegen, der mehrfach die Sammlung und Veröffentlichung seiner Werke, darunter auch in einer als Prachtausgabe angelegten Handschrift, in Auftrag gegeben hat. Als Dichter ist er auch mit einem angesehenen Adelsorden ausgezeichnet worden.</p>
-          <p>Hugo unterteilt sein poetisches Werk in Rede, Brief und Lied.<note xml:id="ftn1" n="1">Vgl. <ref target="https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H39.VB.S41">https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H39.VB.S41</ref> und <ref target="https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H47.VB.S26">https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H47.VB.S26</ref></note> In den Reden in Gedichtform entwickelt er seine ritterlich-ethischen und ästhetischen Anschauungen über die Welt und übt scharfe Kritik am sittlichen Verfall seiner Zeit und ihrer Ordnungsmächte. Die Briefe entstanden auf Reisen und haben die Form von Minnebriefen. Die Lieder sind teils didaktisch-moralisierend, teils Minnelieder, in denen der Dichter anders als in klassischen Minneliedern das Lob der eigenen Gattin singt. (Werner, 70). Das Werk umfasst in der Edition 40 Nummern und ist in vier Handschriften überliefert:<list><item>Heidelberg, Universitätsbibliothek, Cod. pal. Germ. 329<note xml:id="ftn2" n="2"><ref target="https://web.archive.org/web/20130930025741/http://digi.ub.uni-heidelberg.de/diglit/cpg329">https://web.archive.org/web/20130930025741/http://digi.ub.uni-heidelberg.de/diglit/cpg329</ref></note></item><item>Berlin, Staatsbibliothek, Ms. germ. Fol. 757,21</item><item>Colmar, Bibliothèque de la Ville, Ms. 84</item><item>Vorau, Augustiner-Chorherrenstift, Hs. 389</item></list>Die Autorschaft Hugos ist für die letzten beiden der 40 Nummern zweifelhaft, da diese im Heidelberger Prachtkodex nachgetragen wurden.</p>
-        </div>
-        <div type="div2">
-          <head>Frühere Editionen</head>
-          <p>Mit der Edition Hofmeisters wurde den drei zuvor veröffentlichten und „stark eingeschränkt" (Hofmeister 2005, XIII) verfügbaren Editionen (Bartsch 1879, Wackernell 1881, Thurnher, Spechtler und Jones 1978–1981) eine weitere Neuausgabe zur intensiveren Beschäftigung hinzugefügt. Besonders die letzte Edition von Thurnher et.al. ist interessant, weil sie in Umfang und Vorgehensweise der hier zu rezensierenden Neuausgabe ähnelt. Sie bietet in Teil I die übliche Einführung in Leben und Werk, die Beschreibung der Überlieferung und der Handschriften, eine Bibliographie, das Vollfaksimile von cpg 329 sowie Abbildungen der Streuüberlieferung, jeweils in Schwarz-Weiß-Abbildungen. Das Faksimile der Heidelberger Handschrift wird geringfügig verkleinert dargeboten (Schriftspiegel 16,5×13 cm statt 21×15 cm), die Abbildungen der Streuüberlieferung etwa in Originalgröße. Teil II enthält die Transkription von Gedichten und Melodien. Die Transkription hat eine zweifache Funktion: „Sie soll einerseits die Lektüre des Faksimiles erleichtern, zum anderen ist sie für Übungszwecke im akademischen Lehrbetrieb gedacht. […] Die drei Einzelüberlieferungen (Berlin, Colmar, Vorau) bleiben unberücksichtigt, weil diese Transkription eine kritische Ausgabe nicht ersetzen kann und will." (Spechtler 1978, III) Der drei Jahre später erschienene Teil III liefert schließlich eine Verskonkordanz und Stellenliste (Word Finding List). Im Nachwort wird hierzu – bemerkenswerterweise ja schon 1981 – bemerkt, dass „Texte für die verschiedensten literatur- und sprachwissenschaftlichen Untersuchungen durch den Computer so aufbereitet werden, wie sie wirklich in den Handschriften überliefert sind. Das ist nur dann gewährleistet, wenn handschriftennahe Ausgaben vorliegen oder wenn überhaupt handschriftentreue Transkriptionen zur Alphabetisierung durch EDV verwendet werden." (Jones et.al. 1981, 3)</p>
-        </div>
-        <div type="div2">
-          <head>Neuedition</head>
-          <p>Die Edition des poetischen Werks von Hugo von Montfort wurde 2005 von Wernfried Hofmeister publiziert. Sie wurde hybrid veröffentlicht - die Druckausgabe als Studienausgabe im DeGruyter-Verlag, die elektronische Publikation auf der Webseite des Instituts für Germanistik der Karl-Franzens-Universität Graz. Diese Seite hat kein Impressum, reklamiert aber das Copyright auf die Texte für Hofmeister und das Copyright für das Layout für H. Klug. 2007-2010 wurden die Materialien um eine neue Visualisierung und um erweiterte Suchmöglichkeiten ergänzt, die getrennt von den ursprünglichen Materialien auf einer neuen Webseite im Rahmen der Informationsplattform GAMS – Geisteswissenschaftliches Asset Management System – angeboten werden. Für diese Seite existiert ein Impressum, auf welchem das Institut als Herausgeber, Hofmeister als Projektleiter und das Zentrum für Informationsmodellierung der Universität Graz für die technische Umsetzung angegeben werden. Diese Rezension bezieht sich auf die ältere Webseite, die Einbindung der Augenfassung zur Visualisierung und Suche wird allerdings zu thematisieren sein.</p>
-        </div>
-        <div type="div2">
-          <head>Gegenstand und Inhalt der begleitenden Internet-Plattform</head>
-          <p>Die Webseite bietet eine Transliteration aller bekannten Textzeugen. Die Texte stehen in drei Formaten (PDF, RTF u. TXT) zur Verfügung. Sämtliche Download-Formate sind inhaltlich identisch, da die Textgestalt unter Vermeidung störender Formatierungen allein auf dem internationalen ASCII-Zeichencode beruht. Die Transliterationen verwenden Symbole und Codes, die in separaten Dokumenten aufgeschlüsselt werden. Diese umfassen je eine Kodierungstabelle für alphabetische Zeichen und Sonderzeichen wie Abbreviaturen, Ligaturen, Interpunktionen, Symbole und Sub- bzw. Superskripte, sowie eine Sternsymbol-Liste, welche die in den Transliterationen vorkommenden Stellen referenziert und den zugehörigen Kommentar liefert. In einer für Fol. 1ra beispielhaft gezeigten Transponiersynopse können Faksimile, Basistransliteration und gedruckter Lesetext nebeneinander gesehen werden. Diese Synopse ist auch im Buch abgedruckt.</p>
-          <p>Die Edition bietet digitale Faksimiles der Streuüberlieferung sowie eine Beispielseite aus dem Heidelberger Codex. Da der Heidelberger Codex seit 2005 online als Volldigitalisat verfügbar ist, wird nachträglich zusätzlich für den ganzen Codex auf die Heidelberger Seite verwiesen. Die Abbildungen der Streuüberlieferung liegen als Farbabbildungen vor. Die Auflösungen der Bilder sind unterschiedlich: Der Berliner Codex ist in gleicher Größe abgebildet wie schon in der Edition von 1978, die Handschrift aus Colmar ist demgegenüber sogar kleiner reproduziert. Lediglich die Vorauer Abbildungen sind stark vergrößert und bieten einen deutlichen Mehrwert gegenüber der Vorgängeredition. Der mehrfach in der Lesefassung erwähnte „Erstabdruck" der Streuhandschriften bezieht sich also „nur" auf die Transkriptionen.</p>
-          <figure>
-            <head>Fig. 2: Detail aus dem Pfannberger Fresko: Hugo von Montfort</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-2.png"/>
-          </figure>
-          <p>Als weitere Materialien auf der Webseite werden einige Abbildungen des Pfannberger Freskos und der Bregenzer Ahnengalerie mit Hugo, Abbildungen seiner Burgen und seiner Grabtafel versammelt. Eine Publikationsliste von Wernfried Hofmeister zur Hugo von Montfort-Edition und Links beschließen das Angebot.</p>
-          <p>Was die begleitende Seite dem Buch an Abbildungen und der daraus resultierenden Möglichkeit der parallelen Anzeige voraus hat – auch wenn diese nur in der wiederum abgeleiteten Augenfassung realisiert ist –, das fehlt ihr an Wissen, welches die Edition ausmacht: Die Apparate für Textkritik und Sachkommentar sind im Wesentlichen nur im Druck verfügbar. Lediglich einige Phänomene, die als Schreibbesonderheiten in den Sachkommentar eingegangen sind, liegen zugleich in der Sternsymbol-Liste kommentiert und damit elektronisch vor. Dass die Apparate in der elektronischen Edition nicht vollständig zur Verfügung stehen ist besonders zu bedauern, da selbst neuere Publikationen – wenn überhaupt – oft nur mit einer „moving wall" von nur zwei bis drei Jahren belegt sind. Auch die Tatsache, dass die Publikation bereits 10 Jahre zurückliegt konnte nicht dafür sorgen, dass auch die Apparate ihren Weg in die digitalen Plattformen gefunden haben.</p>
-        </div>
-        <div type="div2">
-          <head>Ziele und Methoden</head>
-          <p>Auf der Startseite der „Begleitende[n] Internet-Plattform zur Neuausgabe" liest man, dass es sich um „eine Hybridedition [handelt], die auslotet, wie ein dichterisches Werk des Mittelalters in seiner multimedialen Form repräsentiert werden kann."<note xml:id="ftn3" n="3"><ref target="https://web.archive.org/web/20150227195452/http://www-gewi.uni-graz.at/montfort-edition/">https://web.archive.org/web/20150227195452/http://www-gewi.uni-graz.at/montfort-edition/</ref></note> „Zur Stärkung dieses 'missionarischen' Impetus" (Hofmeister 2005, XIII) wurde eine mehrstufige Editionstechnik eingesetzt: Eine elektronischen Basistransliteration bietet eine äußerst überlieferungsnahe Codierung aller handschriftlichen Graphien. Für die Druckausgabe wurde der Lesetext stringent aus der Basisliteration abgeleitet. Dieser zeichnet sich vor allem durch graphetische Reduktion aus, welche eine verbesserte Les- und Zitierbarkeit erreichen soll. Die Augenfassung soll „die editorische Informationsdichte der abstrakt ASCII-codierten Basistransliteration (BT) des cpg 329 Hugos von Montfort auf einen Blick sichtbar [...] machen und ihr detailliertes Durchsuchen in unmittelbarem Bildkontakt mit der Überlieferung [...] ermöglichen".<note xml:id="ftn4" n="4"><ref target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/augenfassg.html">http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/augenfassg.html</ref>. Zu den - aufgrund des Alters der Webseite - nicht zeitgemäßen Eigenarten gehört es, dass diese Seite nicht separat aufgerufen werden kann. Stattdessen wird man von einem Javascript auf das Haupt-Frameset weitergeleitet. Dies macht es Angeboten wie dem Internet Archive unmöglich, die Seite adäquat zu archivieren. Die vorgenannte Seite steuert man deshalb am Besten von der in Anmerkung 3 genannten Adresse an.</note> Die Melodiefassung schließlich „erleichtert in einer modernen Notation die sangliche Umsetzung der zehn mit Melodien überlieferten Texte. Sie ist die Basis für die Hörfassung, die Eberhard Kummer eingespielt hat."<note xml:id="ftn5" n="5">Wie Anmerkung 3.</note></p>
-          <p>Von der Startseite der Edition führen Links zu Lese-, Augen-, Hör- und Melodiefassung. Der Link zur Lesefassung führt leider nur zur Webseite des gedruckten Buches bei DeGruyter. Die eigentlichen Editionstexte verbergen sich hinter dem nur im linken Frame aufgeführten Link „Basistransliteration". Dort werden Basistransliterationen für alle vier Überlieferungsträger zum freien Download zur Verfügung gestellt. Der Editor bezeichnet die Transliterationen als „hyper-diplomatisch", d.h. als genaue Überlieferungsabschriften, aus denen der Text der Studienausgabe wiederum „dynamisch" abgeleitet worden ist.Auch der Link zur Melodiefassung führt zu DeGruyter, da die Melodien als Anhang im gedruckten Werk veröffentlicht sind. Der Link zur Hörfassung wiederum führt zum ORF-Shop, wo eine Einspielung der Lieder käuflich erworben werden kann.</p>
-        </div>
-        <div type="div2">
-          <head>Basistransliteration</head>
-          <p>Die Internet-Plattform „präsentiert im Sinne einer mehrschichtigen internetbasierten Hybrid-Edition zum einen die gesamte Überlieferung in Form aller Faksimiles und zum anderen deren Basistransliteration; Codierungstabellen und weitere Materialien traten von Beginn weg ergänzend hinzu."<note xml:id="ftn6" n="6"><ref target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html">http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html</ref>. Vgl. Anmerkung 4.</note> In der Kodierungstabelle für alphabetische Zeichen sind bis zu drei graphetische Varianten für jeden Groß- und Kleinbuchstaben verzeichnet. Großbuchstaben sind je nach Stellung in Text abweichend als Kleinbuchstaben wiedergegeben.<note xml:id="ftn7" n="7"><ref target="http://www-gewi.uni-graz.at/montfort-edition/mat/Alphabet-Kodierung.pdf">http://www-gewi.uni-graz.at/montfort-edition/mat/Alphabet-Kodierung.pdf</ref> (Accessed 07.06.2016)</note> In der Kodierungstabelle für Sonderzeichen werden 18 Phänomene aufgelistet, die in der Transliteration mit Zahlen adressiert sind und wiedergegeben werden, sowie 11 Abbreviaturen und Ligaturen und weitere 11 Markierungen für Gestaltungsmerkmale, Auslassungen usw. nachgewiesen. Mit dieser Vielfalt kommt Hofmeister einer handschriftengetreuen Transliteration noch näher als Spechtler 1981, doch kannte auch dieser bereits einige Kodierungen, mit denen er der damaligen Computergeneration paläographische Besonderheiten nahebringen wollte und diese Besonderheiten verarbeitbar machen konnte: So wurden beispielsweise Punkte über Vokalen, welche mehrere Funktionen haben könnten, nach dem jeweiligen Vokal ausgegeben, z.B. möchte als MO:CHTE. (Spechtler 1981, 5)</p>
-          <figure>
-            <head>Fig. 3: Ausschnitt aus der Heidelberg-Basistransliteration</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-3.png"/>
-          </figure>
-          <p>Ergänzt um den genauen Zeilen- und Spaltenfall ergibt sich z.B. die Ausgabe in Fig. 3. Hofmeister verzichtet in der Basistransliteration auf einige Schritte der Normalisierung, beispielsweise des langen und runden s oder von u/v, welche noch in der Vorgängeredition vorgenommen wurden. Dieser Verzicht ist für sprachwissenschaftliche Untersuchungen von Interesse, z.B. konnten für die vorliegende Handschrift mit der erzielten Genauigkeit im Rahmen des Schriftforschungsprojektes DAmalS vormals strittige Fragen der Zuweisung der Schrift zu den einzelnen Schreibern geklärt werden.<note xml:id="ftn8" n="8">Vgl. <ref target="http://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/hofmeister_wernfried/ENDBERICHT_DAmalS_gesamt.pdf">http://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/hofmeister_wernfried/ENDBERICHT_DAmalS_gesamt.pdf</ref> (Accessed 07.06.2016)</note></p>
-        </div>
-        <div type="div2">
-          <head>Augenfassung</head>
-          <p>Die Plattform zur Veröffentlichung der Augenfassung, das Geisteswissenschaftliche Asset Management System (GAMS), beschreibt sich selbst als System „zur Verwaltung, Publikation und Langzeitarchivierung digitaler Ressourcen"<note xml:id="ftn9" n="9"><ref target="https://web.archive.org/web/20160116210131/http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=about">https://web.archive.org/web/20160116210131/http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=about</ref></note> Die Augenfassung wird auf der Übersichtsseite des GAMS als Hybridedition präsentiert, „die auslotet, wie ein dichterisches Werk des Mittelalters in seiner multimedialen Form repräsentiert werden kann."<note xml:id="ftn10" n="10"><ref target="https://web.archive.org/web/20160116203043/http://gams.uni-graz.at/context:gams.projekte">https://web.archive.org/web/20160116203043/http://gams.uni-graz.at/context:gams.projekte</ref></note>, welche „auf einer nach dem Prinzip der Grazer dynamischen, mehrschichtigen Editionsmethode von Andrea und Wernfried Hofmeister mikrographetisch aufbereitete[n] Basistransliteration [basiert]."<note xml:id="ftn11" n="11">So früher auf der GAMS-Homepage, heute als Zitat nur noch in einer Präsentation fassbar: Martina Semlak: Publikationsworkflows und Standardwerkzeuge. Chemnitz 2012. <ref target="http://docplayer.org/docview/23/1874560/">http://docplayer.org/docview/23/1874560/</ref> (Accessed 07.06.2016)</note></p>
-          <p>Im Rahmen dieser Präsentation sind lediglich ein Einleitungstext zur Augenfassung, die Edition des Haupttextzeugen, nach Texten und Seiten gegliedert, sowie die Suche verfügbar. Die Augenfassung „wurde 2007-2010 als eine Art Human Interface entwickelt, um die editorische Informationsdichte der abstrakt ASCII-codierten Basistransliteration des cpg 329 Hugos von Montfort auf einen Blick sichtbar zu machen und ihr detailliertes Durchsuchen in unmittelbarem Bildkontakt mit der Überlieferung zu ermöglichen. Damit soll für den Forschungs- wie auch für den Lehrbetrieb ein Anstoß zu einer explorativen Erschließung der Werke des Montforters geleistet werden."<note xml:id="ftn12" n="12"><ref target="https://web.archive.org/web/20150306210826/http://gams.uni-graz.at/archive/objects/collection:me/methods/sdef:Context/get?mode=about">https://web.archive.org/web/20150306210826/http://gams.uni-graz.at/archive/objects/collection:me/methods/sdef:Context/get?mode=about</ref></note></p>
-          <figure>
-            <head>Fig. 4: Parallelansicht der Augenfassung</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-4.png"/>
-          </figure>
-          <p>Die Repräsentationen der Basistransliteration in sowohl graphisch „normalisierter" Form, nach Seiten bzw. Textstrukturen gegliederten Ansichten als auch in Synopse mit dem Handschriftenfaksimile sind nur für die Heidelberger Handschrift realisiert. Für den Streubestand wurden demgegenüber keine eigenen Augenfassungen hergestellt, wodurch diese Darstellungsmöglichkeiten hier entfallen.</p>
-          <figure>
-            <head>Fig. 5: Diakritika-Suche der Augenfassung</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-5.png"/>
-          </figure>
-          <p>Für die genannten Materialien ist sowohl eine Volltextsuche als auch eine Suche nach Diakritika eingerichtet. Auf der Webseite der Augenfassung kann der TEI-kodierte Quelltext, welcher der Visualisierung zugrunde liegt, eingesehen und heruntergeladen werden. Die TEI-Kodierung ist recht eigenwillig. Da aber die Augenfassung viel später entstanden und daher nur ein Nebenprodukt der Edition und in diese nicht eingegliedert ist, soll hierauf nicht weiter eingegangen werden.</p>
-        </div>
-        <div type="div2">
-          <head>Umsetzung und Präsentation</head>
-          <p>Die Gestaltung der Webseite mutet auch nach der letzten Aktualisierung im Juni 2014 unverändert altertümlich an. Die Frame-basierte Bildschirmaufteilung verbirgt die geladenen Inhalte hinter der unveränderlich angezeigten Basisadresse der Site. Die Seite ist nicht für die Größe des Viewports optimiert. Da die Frames in ihrer Größe außerdem nicht verändert werden können, werden auf kleinen Monitoren die Navigationspunkte in der linken Spalte von der Abbildung der Druckausgabe der Edition verdeckt.</p>
-          <figure>
-            <head>Fig. 6: Parallelansicht der Augenfassung, mit Lupenfunktion</head>
-            <graphic url="wp-content/uploads/issue_4/montfort/pictures/picture-6.png"/>
-          </figure>
-          <p>Doch auch die Gestaltung der Augenfassung lässt im Detail noch Wünsche offen: So kann zur genaueren Betrachtung von Text und Bild eine Lupenfunktion aktiviert werden, die zeilengenau eine Vergrößerung des Faksimiles auf den Bildschirm bringt. Da der angezeigte Ausschnitt fest oberhalb des Cursors platziert ist, kann es passieren, dass der Ausschnitt nach oben aus dem Fenster wandert und nicht mehr zu sehen ist, wenn die anzuzeigende Zeile selbst am oberen Rand des Bildschirms platziert ist. Gleiches gilt für den rechten Rand, da sich im Fall kleiner Bildschirme der Cursor zu weit nach rechts bewegen kann und der Ausschnitt nach rechts aus dem Bild wandert.</p>
-          <p>Insgesamt ist die dauerhafte Trennung der beiden Webseiten zu bedauern, da die Verbindung der ursprünglich zur Verfügung gestellten Materialien mit der graphisch sehr schön umgesetzten Visualisierung und den Suchmöglichkeiten der Augenfassung wesentlich zum Verständnis und zur Nutzbarkeit der Edition beitragen würde. Hofmeister räumt selbst ein, dass die „Basistransliteration jedoch jenseits des Forschungsprojekts DAmalS nicht die erhoffte Aufmerksamkeit des eigenen philologischen Faches erlangte" und daher die Idee aufkam, „den Informationsreichtum dieser elektronischen Textbasis mittels einer ikonischen Recodierung augenfälliger zu machen".<note xml:id="ftn13" n="13"><ref target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html">http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html</ref>. Vgl. Anmerkung 4.</note></p>
-        </div>
-        <div type="div2">
-          <head>Zitierbarkeit</head>
-          <p>Der Autor erwähnt in der gedruckten Ausgabe bereits die Möglichkeit einer Adressänderung der Edition. Er führt als mögliche Strategien zur Auffindung der Edition den Server des DeGruyter-Verlags und den Einsatz von Suchmaschinen an. Beides ist inhaltlich richtig, geht aber an der Grundanforderung nach zitierbaren, stabil referenzierbaren Texten vorbei. Die Bedenken sind für die Hauptseite der Edition (Begleitende Internet-Plattform) bisher unbegründet, doch könnten Benutzer aufgrund der Trennung in Editionsseite und Augenfassung, die unter verschiedenen Adressen zu finden sind, irritiert werden. Die Basisadresse der Augenfassung ist ebenfalls bislang stabil, doch sind die Angebote des GAMS insgesamt 2014 so überarbeitet und in eine neue technische Umgebung integriert worden, dass nicht alle Adressen stabil geblieben sind.</p>
-          <p>Die Adressen der ursprünglichen Editionsseite sind zwar stabil und auch die Texte nutzen allesamt die Nummerierungschemata der gedruckten Edition bzw. beziehen sich konkret auf Folio- und Zeilenangaben aus den transkribierten Handschriften, auf Textebene gibt es also keine Zitationsschwierigkeiten. Wohl aber gibt es Hindernisse auf der Dateiebene: Die Transliterationen können nur als Gesamtdatei in Form des PDF abgerufen werden und die Paratexte werden -wie oben beschrieben- in Frames angezeigt und sind nicht unter eindeutigen Adressen erreichbar, weil die Frames die eigentlichen Adressen „verstecken".</p>
-          <p>Anders bei der Augenfassung: Hier haben alle Seiten eine eigene URL, die aber zumeist aus kryptischen Abrufbefehlen der Software Fedora zusammengesetzt ist. Die Textauszüge der Augenfassung sind teils unter vorhersehbaren, verständlichen Adressen erreichbar: Die in der Edition durchnummerierten Texte der Heidelberger Handschrift enthalten als Teil der URL die Zeichenkette „get#1HTx", wobei das „x" durch die jeweilige Nummer des Textes ersetzt werden muss. Möchte man aber eine Binnengliederung aufrufen, beispielsweise Strophe 3 von Text 3, so lautet der letzte Teil der URL „get#1H3.VA.S3"; man müsste nunmehr wissen, dass die dritte Strophe des dritten Textes auf Folio 3va beginnt, um direkt dorthin springen zu können. Beim Aufruf der synoptischen Ansicht der Handschrift und der Transliteration wiederum ist der entscheidende Teil des Aufrufs in der Mitte der URL zu finden, z.B. http://gams.uni-graz.at/fedora/get/o:me.1v/bdef:TEI/get.</p>
-        </div>
-        <div type="div2">
-          <head>Rechtedeklaration</head>
-          <p>Wie oben beschrieben wird für die Texte das Copyright von Hofmeister reklamiert, für das Layout von H. Klug. Aus verlagsrechtlichen Gründen konnte auf der Webseite keine elektronische Fassung des Drucktexts angeboten werden; Ende 2010 ist der Volltext der Druckfassung allerdings in die Mittelhochdeutsche Begriffsdatenbank<note xml:id="ftn14" n="14"><ref target="http://mhdbdb.sbg.ac.at:8000/mhdbdb/App?action=TextInfoEdit&amp;text=HUG">http://mhdbdb.sbg.ac.at:8000/mhdbdb/App?action=TextInfoEdit&amp;text=HUG</ref>. (Accessed: 16.1.2016)</note> eingespeist worden.</p>
-          <p>Im Rahmen der Augenfassung gibt es keine dezidierte Aussage zur Rechtslage und zur Nutzung der Materialien, so dass die Rechtedeklaration der übergeordneten GAMS-Seite gelten müsste. Hier ist auf allen Seiten das Logo von und Link zur Lizenz Creative Commons BY-NC-SA 4.0 zu sehen. Doch bietet gerade diese (str)enge CC-Lizenz einigen Grund zur Reibung, denn wenn der Hauptbestandteil der Texte eine handschriftennahe Umschrift darstellt und die Handschrift natürlich längst gemeinfrei ist, bezieht sie sich dann womöglich nur auf den Einleitungstext zur Augenfassung? Oder muss eine Transliteration, wie sie hier geboten wird, doch als weitergehende editorische Leistung, die ein Urheberrecht begründet, angesehen werden?</p>
-        </div>
-        <div type="div2">
-          <head>Fazit. Oder: Handelt es sich um eine digitale Edition?</head>
-          <p>Die Webseite „Hugo von Montfort – Das poetische Werk" nennt sich schon im Untertitel „Begleitende Internet-Plattform" und bald darauf „Hybridedition". Wernfried Hofmeister will Materialien zur Verfügung stellen, welche das Werk Hugos in seiner multimedialen Form repräsentiert. Auf der Webseite selbst findet man nun immerhin die verdienstvollen, sehr handschriftennahen Transliterationen, ansonsten aber nur Links zu den eigentlich multimedialen Inhalten, sei es zur CD oder auch zur Augenfassung.</p>
-          <p>Dass die Verknüpfung von Bild und Text auf einer anderen Webseite stattfindet, während sie auf der Editionsseite nur unverbunden – monolithisch – nebeneinander stehen, dass die digital vorliegenden Texte auf einer anderen Webseite durchsucht werden müssen ohne alle Teile zu integrieren. Dass den digital zur Verfügung gestellten Texten die kritischen Teile (immer noch) fast vollständig fehlen und diese nur im Druck verfügbar sind, hinterlässt beim Rezensenten ein irritierendes Gefühl.</p>
-          <p>Ob der Aufwand dieser Edition sich lohnte, da auf den ersten Blick der Unterschied zur Edition von 1978 recht gering ausfällt, mögen künftige Fragestellungen und Algorithmen zeigen. Die Unterscheidung von Schreibern aufgrund der Schreibweisen sind ein erster Fingerzeig. Wernfried Hofmeister wurde für diese Edition mit dem „Erzherzog-Johann-Forschungspreis des Landes Steiermark 2006" ausgezeichnet. 2015 könnte man sich die Ressourcen der hybriden Edition noch ein wenig integrierter, vollständiger, zitierfähiger und verfügbarer vorstellen.</p>
-        </div>
-      </div>
-      <div type="references">
-        <listBibl>
-          <bibl>Bartsch, Karl, ed. <emph>Hugo von Montfort</emph>. Tübingen 1879. (Bibliothek des Litauischen Vereins in Stuttgart; 143)</bibl>
-          <bibl>Hofmeister, Wernfried, ed. <emph>Hugo von Montfort: Das poetische Werk [Texte, Melodien, Einführung]</emph>. Mit einem Melodie-Anh. von Agnes Grond. Berlin [u.a.] : de Gruyter, 2005.</bibl>
-          <bibl>Hofmeister, Wernfried, ed. <emph>Hugo von Montfort: Das poetische Werk. Begleitende Internet-Plattform zur Neuausgabe</emph>. <ref target="http://www-gewi.uni-graz.at/montfort-edition">http://www-gewi.uni-graz.at/montfort-edition</ref> (Accessed 07.06.2016).</bibl>
-          <bibl>Hugo von Montfort: Das poetische Werk – Augenfassung. Graz 2007–2015. <ref target="http://gams.uni-graz.at/me">http://gams.uni-graz.at/me</ref> (Accessed 07.06.2016).</bibl>
-          <bibl>Thurnher, Eugen, Franz V. Spechtler, George F. Jones. <emph>Hugo von Montfort</emph>. 3 Bde. Göppingen 1978–1981.</bibl>
-          <bibl>Thurnher, Eugen, Franz V. Spechtler und Ulrich Müller, eds. I: Die Heidelberger Handschrift cpg 329 und die gesamte Streuüberlieferung. In Abbildungen. Göppingen 1978. (Litterae; 56)</bibl>
-          <bibl>Spechtler, Franz V.: II: <emph>Die Texte und Melodien der Heidelberger Handschrift cpg 329. Transkription</emph>. Göppingen 1978. (Litterae; 57)</bibl>
-          <bibl>Jones, G.F., Franz V. Spechtler und R. Uminsky, eds. III: <emph>Verskonkoranz zur Heidelberger Handschrift cpg 329</emph>. Göppingen 1981. (Litterae; 58)</bibl>
-          <bibl>Wackernell, Joseph E., ed. <emph>Hugo von Montfort</emph>. Mit Abhandlungen zur Geschichte der deutschen Literatur, Sprache und Metrik im XIV. und XV. Jahrhundert. Innsbruck 1881. (Ältere Tirolische Dichter; 3/1881) <ref target="https://archive.org/details/hugovonmontfort00hugogoog">https://archive.org/details/hugovonmontfort00hugogoog</ref> (Accessed 07.06.2016).</bibl>
-          <bibl>Werner, Wilfried: Cimelia Heidelbergensia: 30 illuminierte Handschriften der Universitätsbibliothek Heidelberg — Wiesbaden, 1975. <ref target="http://digi.ub.uni-heidelberg.de/diglit/Cimelia1975/0065">http://digi.ub.uni-heidelberg.de/diglit/Cimelia1975/0065</ref> (Accessed 07.06.2016)</bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>14th century</term>
+               <term>15th century</term>
+               <term>hybrid edition</term>
+               <term>middle high german</term>
+               <term>Minnesang</term>
+               <term>transliteration</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>Hugo von Montfort – The poetic work</emph> calls itself a hybrid edition. In
+               fact one would hesitate to call this a digital edition as from the beginning, the
+               main purpose of the website had been to accompany the printed edition. Nevertheless,
+               over time more materials have been assembled and offer multiple ways of access: for
+               textual scholarly work (<emph>Lesefassung</emph>), for linguistic and palaeographic
+               interests (<emph>Augenfassung</emph>), for listening. Unfortunately the texts are
+               distributed over several websites and cannot be linked as one would wish.
+               Additionally, the <emph>Augenfassung</emph> is available only for the main
+               manuscript. Restrictive licensing will not allow to make use of the material other
+               than reading on-line. This is regrettable as the original edition has been
+               award-winning.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Einleitung</head>
+            <p xml:id="p1">Hugo XII., Graf von Montfort-Bregenz, (1357 bis 1423) war Hochadeliger
+               der Steiermark. Zwar war er über seine Mutter mit den Habsburgern verwandt,
+               verbesserte seine Position aber durch allgemein erfolgreiches politisches Handeln im
+               Dienste der Habsburger sowie durch geschickte Heiratspolitik ständig und stieg bis
+               zum steierischen Landeshauptmann auf. Sein Leben ist durch zahlreiche Quellen gut
+               belegt. Hinter dem Ruf als Politiker bleibt der Ruf als Dichter deutlich zurück.
+               Hinsichtlich seiner literaturgeschichtlichen Bedeutung steht der Montforter vor allem
+               im Schatten des Südtirolers Oswald von Wolkenstein. Doch als einer der letzten
+               Dichter, der die verfestigten Formen des Minnesangs noch einmal mit neuem Geist zu
+               beleben versuchten, ist seinem Werk seit dem späten 19. Jh. immer wieder
+               Aufmerksamket zuteil geworden. Dabei liegt der Wert seiner Dichtung mehr in der
+               Gestaltung aus eigenem Erleben als in besonderer Kunstfertigkeit, da er seine Lieder
+               nicht als Huldigung an eine hohe unerreichbare Herrin, sondern als Preis der eigenen
+               Ehefrau verfasst. (Werner, 68)</p>
+            <p xml:id="p2">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-1.png"/>
+                  <head type="legend">Hugo von Montforts Autorensignatur.</head>
+               </figure>In den Quellen tritt er uns als „selbstbewußte[r] Dichter" (Hofmeister 2005,
+               XVI.) entgegen, der mehrfach die Sammlung und Veröffentlichung seiner Werke, darunter
+               auch in einer als Prachtausgabe angelegten Handschrift, in Auftrag gegeben hat. Als
+               Dichter ist er auch mit einem angesehenen Adelsorden ausgezeichnet worden.</p>
+            <p xml:id="p3">Hugo unterteilt sein poetisches Werk in Rede, Brief und Lied.<note
+                  xml:id="ftn1">Vgl. <ref
+                     target="https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H39.VB.S41"
+                     >https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H39.VB.S41</ref>
+                  und <ref
+                     target="https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H47.VB.S26"
+                     >https://web.archive.org/web/20150605102530/http://gams.uni-graz.at/archive/get/o:me.2/sdef:HTML/get#1H47.VB.S26</ref>.
+               </note> In den Reden in Gedichtform entwickelt er seine ritterlich-ethischen und
+               ästhetischen Anschauungen über die Welt und übt scharfe Kritik am sittlichen Verfall
+               seiner Zeit und ihrer Ordnungsmächte. Die Briefe entstanden auf Reisen und haben die
+               Form von Minnebriefen. Die Lieder sind teils didaktisch-moralisierend, teils
+               Minnelieder, in denen der Dichter anders als in klassischen Minneliedern das Lob der
+               eigenen Gattin singt. (Werner, 70). Das Werk umfasst in der Edition 40 Nummern und
+               ist in vier Handschriften überliefert:<list rend="bulleted">
+                  <item>Heidelberg, Universitätsbibliothek, Cod. pal. Germ. 329<note xml:id="ftn2">
+                        <ref
+                           target="https://web.archive.org/web/20130930025741/http://digi.ub.uni-heidelberg.de/diglit/cpg329"
+                           >https://web.archive.org/web/20130930025741/http://digi.ub.uni-heidelberg.de/diglit/cpg329</ref>.
+                     </note>
+                  </item>
+                  <item>Berlin, Staatsbibliothek, Ms. germ. Fol. 757,21</item>
+                  <item>Colmar, Bibliothèque de la Ville, Ms. 84</item>
+                  <item>Vorau, Augustiner-Chorherrenstift, Hs. 389</item>
+               </list> Die Autorschaft Hugos ist für die letzten beiden der 40 Nummern zweifelhaft,
+               da diese im Heidelberger Prachtkodex nachgetragen wurden.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Frühere Editionen</head>
+            <p xml:id="p4">Mit der Edition Hofmeisters wurde den drei zuvor veröffentlichten und
+               „stark eingeschränkt" (Hofmeister 2005, XIII) verfügbaren Editionen (Bartsch 1879,
+               Wackernell 1881, Thurnher, Spechtler und Jones 1978–1981) eine weitere Neuausgabe zur
+               intensiveren Beschäftigung hinzugefügt. Besonders die letzte Edition von Thurnher
+               et.al. ist interessant, weil sie in Umfang und Vorgehensweise der hier zu
+               rezensierenden Neuausgabe ähnelt. Sie bietet in Teil I die übliche Einführung in
+               Leben und Werk, die Beschreibung der Überlieferung und der Handschriften, eine
+               Bibliographie, das Vollfaksimile von cpg 329 sowie Abbildungen der
+               Streuüberlieferung, jeweils in Schwarz-Weiß-Abbildungen. Das Faksimile der
+               Heidelberger Handschrift wird geringfügig verkleinert dargeboten (Schriftspiegel
+               16,5×13 cm statt 21×15 cm), die Abbildungen der Streuüberlieferung etwa in
+               Originalgröße. Teil II enthält die Transkription von Gedichten und Melodien. Die
+               Transkription hat eine zweifache Funktion: „Sie soll einerseits die Lektüre des
+               Faksimiles erleichtern, zum anderen ist sie für Übungszwecke im akademischen
+               Lehrbetrieb gedacht. […] Die drei Einzelüberlieferungen (Berlin, Colmar, Vorau)
+               bleiben unberücksichtigt, weil diese Transkription eine kritische Ausgabe nicht
+               ersetzen kann und will." (Spechtler 1978, III) Der drei Jahre später erschienene Teil
+               III liefert schließlich eine Verskonkordanz und Stellenliste (Word Finding List). Im
+               Nachwort wird hierzu – bemerkenswerterweise ja schon 1981 – bemerkt, dass „Texte für
+               die verschiedensten literatur- und sprachwissenschaftlichen Untersuchungen durch den
+               Computer so aufbereitet werden, wie sie wirklich in den Handschriften überliefert
+               sind. Das ist nur dann gewährleistet, wenn handschriftennahe Ausgaben vorliegen oder
+               wenn überhaupt handschriftentreue Transkriptionen zur Alphabetisierung durch EDV
+               verwendet werden." (Jones et.al. 1981, 3)</p>
+         </div>
+         <div xml:id="div3">
+            <head>Neuedition</head>
+            <p xml:id="p5">Die Edition des poetischen Werks von Hugo von Montfort wurde 2005 von
+               Wernfried Hofmeister publiziert. Sie wurde hybrid veröffentlicht - die Druckausgabe
+               als Studienausgabe im DeGruyter-Verlag, die elektronische Publikation auf der
+               Webseite des Instituts für Germanistik der Karl-Franzens-Universität Graz. Diese
+               Seite hat kein Impressum, reklamiert aber das Copyright auf die Texte für Hofmeister
+               und das Copyright für das Layout für H. Klug. 2007-2010 wurden die Materialien um
+               eine neue Visualisierung und um erweiterte Suchmöglichkeiten ergänzt, die getrennt
+               von den ursprünglichen Materialien auf einer neuen Webseite im Rahmen der
+               Informationsplattform GAMS – Geisteswissenschaftliches Asset Management System –
+               angeboten werden. Für diese Seite existiert ein Impressum, auf welchem das Institut
+               als Herausgeber, Hofmeister als Projektleiter und das Zentrum für
+               Informationsmodellierung der Universität Graz für die technische Umsetzung angegeben
+               werden. Diese Rezension bezieht sich auf die ältere Webseite, die Einbindung der
+               Augenfassung zur Visualisierung und Suche wird allerdings zu thematisieren sein.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Gegenstand und Inhalt der begleitenden Internet-Plattform</head>
+            <p xml:id="p6">Die Webseite bietet eine Transliteration aller bekannten Textzeugen. Die
+               Texte stehen in drei Formaten (PDF, RTF u. TXT) zur Verfügung. Sämtliche
+               Download-Formate sind inhaltlich identisch, da die Textgestalt unter Vermeidung
+               störender Formatierungen allein auf dem internationalen ASCII-Zeichencode beruht. Die
+               Transliterationen verwenden Symbole und Codes, die in separaten Dokumenten
+               aufgeschlüsselt werden. Diese umfassen je eine Kodierungstabelle für alphabetische
+               Zeichen und Sonderzeichen wie Abbreviaturen, Ligaturen, Interpunktionen, Symbole und
+               Sub- bzw. Superskripte, sowie eine Sternsymbol-Liste, welche die in den
+               Transliterationen vorkommenden Stellen referenziert und den zugehörigen Kommentar
+               liefert. In einer für Fol. 1ra beispielhaft gezeigten Transponiersynopse können
+               Faksimile, Basistransliteration und gedruckter Lesetext nebeneinander gesehen werden.
+               Diese Synopse ist auch im Buch abgedruckt.</p>
+            <p xml:id="p7">Die Edition bietet digitale Faksimiles der Streuüberlieferung sowie eine
+               Beispielseite aus dem Heidelberger Codex. Da der Heidelberger Codex seit 2005 online
+               als Volldigitalisat verfügbar ist, wird nachträglich zusätzlich für den ganzen Codex
+               auf die Heidelberger Seite verwiesen. Die Abbildungen der Streuüberlieferung liegen
+               als Farbabbildungen vor. Die Auflösungen der Bilder sind unterschiedlich: Der
+               Berliner Codex ist in gleicher Größe abgebildet wie schon in der Edition von 1978,
+               die Handschrift aus Colmar ist demgegenüber sogar kleiner reproduziert. Lediglich die
+               Vorauer Abbildungen sind stark vergrößert und bieten einen deutlichen Mehrwert
+               gegenüber der Vorgängeredition. Der mehrfach in der Lesefassung erwähnte
+               „Erstabdruck" der Streuhandschriften bezieht sich also „nur" auf die
+               Transkriptionen.</p>
+            <p xml:id="p8">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-2.png"/>
+                  <head type="legend">Detail aus dem Pfannberger Fresko: Hugo von Montfort.</head>
+               </figure> Als weitere Materialien auf der Webseite werden einige Abbildungen des
+               Pfannberger Freskos und der Bregenzer Ahnengalerie mit Hugo, Abbildungen seiner
+               Burgen und seiner Grabtafel versammelt. Eine Publikationsliste von Wernfried
+               Hofmeister zur Hugo von Montfort-Edition und Links beschließen das Angebot.</p>
+            <p xml:id="p9">Was die begleitende Seite dem Buch an Abbildungen und der daraus
+               resultierenden Möglichkeit der parallelen Anzeige voraus hat – auch wenn diese nur in
+               der wiederum abgeleiteten Augenfassung realisiert ist –, das fehlt ihr an Wissen,
+               welches die Edition ausmacht: Die Apparate für Textkritik und Sachkommentar sind im
+               Wesentlichen nur im Druck verfügbar. Lediglich einige Phänomene, die als
+               Schreibbesonderheiten in den Sachkommentar eingegangen sind, liegen zugleich in der
+               Sternsymbol-Liste kommentiert und damit elektronisch vor. Dass die Apparate in der
+               elektronischen Edition nicht vollständig zur Verfügung stehen ist besonders zu
+               bedauern, da selbst neuere Publikationen – wenn überhaupt – oft nur mit einer „moving
+               wall" von nur zwei bis drei Jahren belegt sind. Auch die Tatsache, dass die
+               Publikation bereits 10 Jahre zurückliegt konnte nicht dafür sorgen, dass auch die
+               Apparate ihren Weg in die digitalen Plattformen gefunden haben.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Ziele und Methoden</head>
+            <p xml:id="p10">Auf der Startseite der „Begleitende[n] Internet-Plattform zur
+               Neuausgabe" liest man, dass es sich um „eine Hybridedition [handelt], die auslotet,
+               wie ein dichterisches Werk des Mittelalters in seiner multimedialen Form
+               repräsentiert werden kann."<note xml:id="ftn3">
+                  <ref
+                     target="https://web.archive.org/web/20150227195452/http://www-gewi.uni-graz.at/montfort-edition/"
+                     >https://web.archive.org/web/20150227195452/http://www-gewi.uni-graz.at/montfort-edition/</ref>.
+               </note> „Zur Stärkung dieses 'missionarischen' Impetus" (Hofmeister 2005, XIII) wurde
+               eine mehrstufige Editionstechnik eingesetzt: Eine elektronischen Basistransliteration
+               bietet eine äußerst überlieferungsnahe Codierung aller handschriftlichen Graphien.
+               Für die Druckausgabe wurde der Lesetext stringent aus der Basisliteration abgeleitet.
+               Dieser zeichnet sich vor allem durch graphetische Reduktion aus, welche eine
+               verbesserte Les- und Zitierbarkeit erreichen soll. Die Augenfassung soll „die
+               editorische Informationsdichte der abstrakt ASCII-codierten Basistransliteration (BT)
+               des cpg 329 Hugos von Montfort auf einen Blick sichtbar [...] machen und ihr
+               detailliertes Durchsuchen in unmittelbarem Bildkontakt mit der Überlieferung [...]
+                  ermöglichen".<note xml:id="ftn4">
+                  <ref
+                     target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/augenfassg.html"
+                     >http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/augenfassg.html</ref>.
+                  Zu den - aufgrund des Alters der Webseite - nicht zeitgemäßen Eigenarten gehört
+                  es, dass diese Seite nicht separat aufgerufen werden kann. Stattdessen wird man
+                  von einem Javascript auf das Haupt-Frameset weitergeleitet. Dies macht es
+                  Angeboten wie dem Internet Archive unmöglich, die Seite adäquat zu archivieren.
+                  Die vorgenannte Seite steuert man deshalb am Besten von der in <ref
+                     type="crossref" target="#ftn3">Anmerkung 3</ref> genannten Adresse an.</note>
+               Die Melodiefassung schließlich „erleichtert in einer modernen Notation die sangliche
+               Umsetzung der zehn mit Melodien überlieferten Texte. Sie ist die Basis für die
+               Hörfassung, die Eberhard Kummer eingespielt hat."<note xml:id="ftn5">Wie <ref
+                     type="crossref" target="#ftn3">Anmerkung 3</ref>.</note>
+            </p>
+            <p xml:id="p11">Von der Startseite der Edition führen Links zu Lese-, Augen-, Hör- und
+               Melodiefassung. Der Link zur Lesefassung führt leider nur zur Webseite des gedruckten
+               Buches bei DeGruyter. Die eigentlichen Editionstexte verbergen sich hinter dem nur im
+               linken Frame aufgeführten Link „Basistransliteration". Dort werden
+               Basistransliterationen für alle vier Überlieferungsträger zum freien Download zur
+               Verfügung gestellt. Der Editor bezeichnet die Transliterationen als
+               „hyper-diplomatisch", d.h. als genaue Überlieferungsabschriften, aus denen der Text
+               der Studienausgabe wiederum „dynamisch" abgeleitet worden ist.Auch der Link zur
+               Melodiefassung führt zu DeGruyter, da die Melodien als Anhang im gedruckten Werk
+               veröffentlicht sind. Der Link zur Hörfassung wiederum führt zum ORF-Shop, wo eine
+               Einspielung der Lieder käuflich erworben werden kann.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Basistransliteration</head>
+            <p xml:id="p12">Die Internet-Plattform „präsentiert im Sinne einer mehrschichtigen
+               internetbasierten Hybrid-Edition zum einen die gesamte Überlieferung in Form aller
+               Faksimiles und zum anderen deren Basistransliteration; Codierungstabellen und weitere
+               Materialien traten von Beginn weg ergänzend hinzu."<note xml:id="ftn6">
+                  <ref
+                     target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html"
+                     >http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html</ref>.
+                  Vgl. <ref type="crossref" target="#ftn4">Anmerkung 4</ref>.</note> In der
+               Kodierungstabelle für alphabetische Zeichen sind bis zu drei graphetische Varianten
+               für jeden Groß- und Kleinbuchstaben verzeichnet. Großbuchstaben sind je nach Stellung
+               in Text abweichend als Kleinbuchstaben wiedergegeben.<note xml:id="ftn7">
+                  <ref
+                     target="http://www-gewi.uni-graz.at/montfort-edition/mat/Alphabet-Kodierung.pdf"
+                     >http://www-gewi.uni-graz.at/montfort-edition/mat/Alphabet-Kodierung.pdf</ref>
+                  (Accessed 07.06.2016).</note> In der Kodierungstabelle für Sonderzeichen werden 18
+               Phänomene aufgelistet, die in der Transliteration mit Zahlen adressiert sind und
+               wiedergegeben werden, sowie 11 Abbreviaturen und Ligaturen und weitere 11
+               Markierungen für Gestaltungsmerkmale, Auslassungen usw. nachgewiesen. Mit dieser
+               Vielfalt kommt Hofmeister einer handschriftengetreuen Transliteration noch näher als
+               Spechtler 1981, doch kannte auch dieser bereits einige Kodierungen, mit denen er der
+               damaligen Computergeneration paläographische Besonderheiten nahebringen wollte und
+               diese Besonderheiten verarbeitbar machen konnte: So wurden beispielsweise Punkte über
+               Vokalen, welche mehrere Funktionen haben könnten, nach dem jeweiligen Vokal
+               ausgegeben, z.B. möchte als MO:CHTE. (Spechtler 1981, 5)</p>
+            <p xml:id="p13">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-3.png"/>
+                  <head type="legend">Ausschnitt aus der Heidelberg-Basistransliteration.</head>
+               </figure> Ergänzt um den genauen Zeilen- und Spaltenfall ergibt sich z.B. die Ausgabe
+               in <ref type="crossref" target="#img3">Abb. 3</ref>. Hofmeister verzichtet in der
+               Basistransliteration auf einige Schritte der Normalisierung, beispielsweise des
+               langen und runden s oder von u/v, welche noch in der Vorgängeredition vorgenommen
+               wurden. Dieser Verzicht ist für sprachwissenschaftliche Untersuchungen von Interesse,
+               z.B. konnten für die vorliegende Handschrift mit der erzielten Genauigkeit im Rahmen
+               des Schriftforschungsprojektes DAmalS vormals strittige Fragen der Zuweisung der
+               Schrift zu den einzelnen Schreibern geklärt werden.<note xml:id="ftn8">Vgl. <ref
+                     target="http://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/hofmeister_wernfried/ENDBERICHT_DAmalS_gesamt.pdf"
+                     >http://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/hofmeister_wernfried/ENDBERICHT_DAmalS_gesamt.pdf</ref>
+                  (Accessed 07.06.2016).</note>
+            </p>
+         </div>
+         <div xml:id="div7">
+            <head>Augenfassung</head>
+            <p xml:id="p14">Die Plattform zur Veröffentlichung der Augenfassung, das
+               Geisteswissenschaftliche Asset Management System (GAMS), beschreibt sich selbst als
+               System „zur Verwaltung, Publikation und Langzeitarchivierung digitaler
+                  Ressourcen"<note xml:id="ftn9">
+                  <ref
+                     target="https://web.archive.org/web/20160116210131/http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=about"
+                     >https://web.archive.org/web/20160116210131/http://gams.uni-graz.at/archive/objects/context:gams/methods/sdef:Context/get?mode=about</ref>.
+               </note> Die Augenfassung wird auf der Übersichtsseite des GAMS als Hybridedition
+               präsentiert, „die auslotet, wie ein dichterisches Werk des Mittelalters in seiner
+               multimedialen Form repräsentiert werden kann."<note xml:id="ftn10">
+                  <ref
+                     target="https://web.archive.org/web/20160116203043/http://gams.uni-graz.at/context:gams.projekte"
+                     >https://web.archive.org/web/20160116203043/http://gams.uni-graz.at/context:gams.projekte</ref>.
+               </note>, welche „auf einer nach dem Prinzip der Grazer dynamischen, mehrschichtigen
+               Editionsmethode von Andrea und Wernfried Hofmeister mikrographetisch aufbereitete[n]
+               Basistransliteration [basiert]."<note xml:id="ftn11">So früher auf der GAMS-Homepage,
+                  heute als Zitat nur noch in einer Präsentation fassbar: Martina Semlak:
+                  Publikationsworkflows und Standardwerkzeuge. Chemnitz 2012. <ref
+                     target="http://docplayer.org/docview/23/1874560/"
+                     >http://docplayer.org/docview/23/1874560/</ref> (Accessed 07.06.2016).</note>
+            </p>
+            <p xml:id="p15">Im Rahmen dieser Präsentation sind lediglich ein Einleitungstext zur
+               Augenfassung, die Edition des Haupttextzeugen, nach Texten und Seiten gegliedert,
+               sowie die Suche verfügbar. Die Augenfassung „wurde 2007-2010 als eine Art Human
+               Interface entwickelt, um die editorische Informationsdichte der abstrakt
+               ASCII-codierten Basistransliteration des cpg 329 Hugos von Montfort auf einen Blick
+               sichtbar zu machen und ihr detailliertes Durchsuchen in unmittelbarem Bildkontakt mit
+               der Überlieferung zu ermöglichen. Damit soll für den Forschungs- wie auch für den
+               Lehrbetrieb ein Anstoß zu einer explorativen Erschließung der Werke des Montforters
+               geleistet werden."<note xml:id="ftn12">
+                  <ref
+                     target="https://web.archive.org/web/20150306210826/http://gams.uni-graz.at/archive/objects/collection:me/methods/sdef:Context/get?mode=about"
+                     >https://web.archive.org/web/20150306210826/http://gams.uni-graz.at/archive/objects/collection:me/methods/sdef:Context/get?mode=about</ref>.
+               </note>
+            </p>
+            <p xml:id="p16">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-4.png"/>
+                  <head type="legend">Parallelansicht der Augenfassung.</head>
+               </figure> Die Repräsentationen der Basistransliteration in sowohl graphisch
+               „normalisierter" Form, nach Seiten bzw. Textstrukturen gegliederten Ansichten als
+               auch in Synopse mit dem Handschriftenfaksimile sind nur für die Heidelberger
+               Handschrift realisiert. Für den Streubestand wurden demgegenüber keine eigenen
+               Augenfassungen hergestellt, wodurch diese Darstellungsmöglichkeiten hier
+               entfallen.</p>
+            <p xml:id="p17">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-5.png"/>
+                  <head type="legend">Diakritika-Suche der Augenfassung.</head>
+               </figure> Für die genannten Materialien ist sowohl eine Volltextsuche als auch eine
+               Suche nach Diakritika eingerichtet. Auf der Webseite der Augenfassung kann der
+               TEI-kodierte Quelltext, welcher der Visualisierung zugrunde liegt, eingesehen und
+               heruntergeladen werden. Die TEI-Kodierung ist recht eigenwillig. Da aber die
+               Augenfassung viel später entstanden und daher nur ein Nebenprodukt der Edition und in
+               diese nicht eingegliedert ist, soll hierauf nicht weiter eingegangen werden.</p>
+         </div>
+         <div xml:id="div8">
+            <head>Umsetzung und Präsentation</head>
+            <p xml:id="p18">Die Gestaltung der Webseite mutet auch nach der letzten Aktualisierung
+               im Juni 2014 unverändert altertümlich an. Die Frame-basierte Bildschirmaufteilung
+               verbirgt die geladenen Inhalte hinter der unveränderlich angezeigten Basisadresse der
+               Site. Die Seite ist nicht für die Größe des Viewports optimiert. Da die Frames in
+               ihrer Größe außerdem nicht verändert werden können, werden auf kleinen Monitoren die
+               Navigationspunkte in der linken Spalte von der Abbildung der Druckausgabe der Edition
+               verdeckt.</p>
+            <p xml:id="p19">
+               <figure xml:id="img6">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/montfort/pictures/picture-6.png"/>
+                  <head type="legend">Parallelansicht der Augenfassung, mit Lupenfunktion.</head>
+               </figure> Doch auch die Gestaltung der Augenfassung lässt im Detail noch Wünsche
+               offen: So kann zur genaueren Betrachtung von Text und Bild eine Lupenfunktion
+               aktiviert werden, die zeilengenau eine Vergrößerung des Faksimiles auf den Bildschirm
+               bringt. Da der angezeigte Ausschnitt fest oberhalb des Cursors platziert ist, kann es
+               passieren, dass der Ausschnitt nach oben aus dem Fenster wandert und nicht mehr zu
+               sehen ist, wenn die anzuzeigende Zeile selbst am oberen Rand des Bildschirms
+               platziert ist. Gleiches gilt für den rechten Rand, da sich im Fall kleiner
+               Bildschirme der Cursor zu weit nach rechts bewegen kann und der Ausschnitt nach
+               rechts aus dem Bild wandert.</p>
+            <p xml:id="p20">Insgesamt ist die dauerhafte Trennung der beiden Webseiten zu bedauern,
+               da die Verbindung der ursprünglich zur Verfügung gestellten Materialien mit der
+               graphisch sehr schön umgesetzten Visualisierung und den Suchmöglichkeiten der
+               Augenfassung wesentlich zum Verständnis und zur Nutzbarkeit der Edition beitragen
+               würde. Hofmeister räumt selbst ein, dass die „Basistransliteration jedoch jenseits
+               des Forschungsprojekts DAmalS nicht die erhoffte Aufmerksamkeit des eigenen
+               philologischen Faches erlangte" und daher die Idee aufkam, „den Informationsreichtum
+               dieser elektronischen Textbasis mittels einer ikonischen Recodierung augenfälliger zu
+                  machen".<note xml:id="ftn13">
+                  <ref
+                     target="http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html"
+                     >http://web.archive.org/save/http://www-gewi.uni-graz.at/montfort-edition/index.html?/montfort-edition/genese.html</ref>.
+                  Vgl. <ref type="crossref" target="#ftn4">Anmerkung 4</ref>.</note>
+            </p>
+         </div>
+         <div xml:id="div9">
+            <head>Zitierbarkeit</head>
+            <p xml:id="p21">Der Autor erwähnt in der gedruckten Ausgabe bereits die Möglichkeit
+               einer Adressänderung der Edition. Er führt als mögliche Strategien zur Auffindung der
+               Edition den Server des DeGruyter-Verlags und den Einsatz von Suchmaschinen an. Beides
+               ist inhaltlich richtig, geht aber an der Grundanforderung nach zitierbaren, stabil
+               referenzierbaren Texten vorbei. Die Bedenken sind für die Hauptseite der Edition
+               (Begleitende Internet-Plattform) bisher unbegründet, doch könnten Benutzer aufgrund
+               der Trennung in Editionsseite und Augenfassung, die unter verschiedenen Adressen zu
+               finden sind, irritiert werden. Die Basisadresse der Augenfassung ist ebenfalls
+               bislang stabil, doch sind die Angebote des GAMS insgesamt 2014 so überarbeitet und in
+               eine neue technische Umgebung integriert worden, dass nicht alle Adressen stabil
+               geblieben sind.</p>
+            <p xml:id="p22">Die Adressen der ursprünglichen Editionsseite sind zwar stabil und auch
+               die Texte nutzen allesamt die Nummerierungschemata der gedruckten Edition bzw.
+               beziehen sich konkret auf Folio- und Zeilenangaben aus den transkribierten
+               Handschriften, auf Textebene gibt es also keine Zitationsschwierigkeiten. Wohl aber
+               gibt es Hindernisse auf der Dateiebene: Die Transliterationen können nur als
+               Gesamtdatei in Form des PDF abgerufen werden und die Paratexte werden -wie oben
+               beschrieben- in Frames angezeigt und sind nicht unter eindeutigen Adressen
+               erreichbar, weil die Frames die eigentlichen Adressen „verstecken".</p>
+            <p xml:id="p23">Anders bei der Augenfassung: Hier haben alle Seiten eine eigene URL, die
+               aber zumeist aus kryptischen Abrufbefehlen der Software Fedora zusammengesetzt ist.
+               Die Textauszüge der Augenfassung sind teils unter vorhersehbaren, verständlichen
+               Adressen erreichbar: Die in der Edition durchnummerierten Texte der Heidelberger
+               Handschrift enthalten als Teil der URL die Zeichenkette „get#1HTx", wobei das „x"
+               durch die jeweilige Nummer des Textes ersetzt werden muss. Möchte man aber eine
+               Binnengliederung aufrufen, beispielsweise Strophe 3 von Text 3, so lautet der letzte
+               Teil der URL „get#1H3.VA.S3"; man müsste nunmehr wissen, dass die dritte Strophe des
+               dritten Textes auf Folio 3va beginnt, um direkt dorthin springen zu können. Beim
+               Aufruf der synoptischen Ansicht der Handschrift und der Transliteration wiederum ist
+               der entscheidende Teil des Aufrufs in der Mitte der URL zu finden, z.B.
+               http://gams.uni-graz.at/fedora/get/o:me.1v/bdef:TEI/get.</p>
+         </div>
+         <div xml:id="div10">
+            <head>Rechtedeklaration</head>
+            <p xml:id="p24">Wie oben beschrieben wird für die Texte das Copyright von Hofmeister
+               reklamiert, für das Layout von H. Klug. Aus verlagsrechtlichen Gründen konnte auf der
+               Webseite keine elektronische Fassung des Drucktexts angeboten werden; Ende 2010 ist
+               der Volltext der Druckfassung allerdings in die Mittelhochdeutsche
+                  Begriffsdatenbank<note xml:id="ftn14">
+                  <ref
+                     target="http://mhdbdb.sbg.ac.at:8000/mhdbdb/App?action=TextInfoEdit&amp;text=HUG"
+                     >http://mhdbdb.sbg.ac.at:8000/mhdbdb/App?action=TextInfoEdit&amp;text=HUG</ref>.
+                  (Accessed: 16.1.2016).</note> eingespeist worden.</p>
+            <p xml:id="p25">Im Rahmen der Augenfassung gibt es keine dezidierte Aussage zur
+               Rechtslage und zur Nutzung der Materialien, so dass die Rechtedeklaration der
+               übergeordneten GAMS-Seite gelten müsste. Hier ist auf allen Seiten das Logo von und
+               Link zur Lizenz Creative Commons BY-NC-SA 4.0 zu sehen. Doch bietet gerade diese
+               (str)enge CC-Lizenz einigen Grund zur Reibung, denn wenn der Hauptbestandteil der
+               Texte eine handschriftennahe Umschrift darstellt und die Handschrift natürlich längst
+               gemeinfrei ist, bezieht sie sich dann womöglich nur auf den Einleitungstext zur
+               Augenfassung? Oder muss eine Transliteration, wie sie hier geboten wird, doch als
+               weitergehende editorische Leistung, die ein Urheberrecht begründet, angesehen
+               werden?</p>
+         </div>
+         <div xml:id="div11">
+            <head>Fazit. Oder: Handelt es sich um eine digitale Edition?</head>
+            <p xml:id="p26">Die Webseite „Hugo von Montfort – Das poetische Werk" nennt sich schon
+               im Untertitel „Begleitende Internet-Plattform" und bald darauf „Hybridedition".
+               Wernfried Hofmeister will Materialien zur Verfügung stellen, welche das Werk Hugos in
+               seiner multimedialen Form repräsentiert. Auf der Webseite selbst findet man nun
+               immerhin die verdienstvollen, sehr handschriftennahen Transliterationen, ansonsten
+               aber nur Links zu den eigentlich multimedialen Inhalten, sei es zur CD oder auch zur
+               Augenfassung.</p>
+            <p xml:id="p27">Dass die Verknüpfung von Bild und Text auf einer anderen Webseite
+               stattfindet, während sie auf der Editionsseite nur unverbunden – monolithisch –
+               nebeneinander stehen, dass die digital vorliegenden Texte auf einer anderen Webseite
+               durchsucht werden müssen ohne alle Teile zu integrieren. Dass den digital zur
+               Verfügung gestellten Texten die kritischen Teile (immer noch) fast vollständig fehlen
+               und diese nur im Druck verfügbar sind, hinterlässt beim Rezensenten ein irritierendes
+               Gefühl.</p>
+            <p xml:id="p28">Ob der Aufwand dieser Edition sich lohnte, da auf den ersten Blick der
+               Unterschied zur Edition von 1978 recht gering ausfällt, mögen künftige
+               Fragestellungen und Algorithmen zeigen. Die Unterscheidung von Schreibern aufgrund
+               der Schreibweisen sind ein erster Fingerzeig. Wernfried Hofmeister wurde für diese
+               Edition mit dem „Erzherzog-Johann-Forschungspreis des Landes Steiermark 2006"
+               ausgezeichnet. 2015 könnte man sich die Ressourcen der hybriden Edition noch ein
+               wenig integrierter, vollständiger, zitierfähiger und verfügbarer vorstellen.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Bartsch, Karl, ed. <emph>Hugo von Montfort</emph>. Tübingen 1879. (Bibliothek
+                  des Litauischen Vereins in Stuttgart; 143).</bibl>
+               <bibl>Hofmeister, Wernfried, ed. <emph>Hugo von Montfort: Das poetische Werk [Texte,
+                     Melodien, Einführung]</emph>. Mit einem Melodie-Anh. von Agnes Grond. Berlin
+                  [u.a.] : de Gruyter, 2005.</bibl>
+               <bibl>Hofmeister, Wernfried, ed. <emph>Hugo von Montfort: Das poetische Werk.
+                     Begleitende Internet-Plattform zur Neuausgabe</emph>. Accessed 07.06.2016. <ref
+                     target="http://www-gewi.uni-graz.at/montfort-edition"
+                     >http://www-gewi.uni-graz.at/montfort-edition</ref>.</bibl>
+               <bibl>Hugo von Montfort: Das poetische Werk – Augenfassung. Graz 2007–2015. Accessed
+                  07.06.2016. <ref target="http://gams.uni-graz.at/me"
+                     >http://gams.uni-graz.at/me</ref>.</bibl>
+               <bibl>Thurnher, Eugen, Franz V. Spechtler, George F. Jones. <emph>Hugo von
+                     Montfort</emph>. 3 Bde. Göppingen 1978–1981.</bibl>
+               <bibl>Thurnher, Eugen, Franz V. Spechtler und Ulrich Müller, eds. I: Die Heidelberger
+                  Handschrift cpg 329 und die gesamte Streuüberlieferung. In Abbildungen. Göppingen
+                  1978. (Litterae; 56).</bibl>
+               <bibl>Spechtler, Franz V.: II: <emph>Die Texte und Melodien der Heidelberger
+                     Handschrift cpg 329. Transkription</emph>. Göppingen 1978. (Litterae;
+                  57).</bibl>
+               <bibl>Jones, G.F., Franz V. Spechtler und R. Uminsky, eds. III: <emph>Verskonkoranz
+                     zur Heidelberger Handschrift cpg 329</emph>. Göppingen 1981. (Litterae;
+                  58).</bibl>
+               <bibl>Wackernell, Joseph E., ed. <emph>Hugo von Montfort</emph>. Mit Abhandlungen zur
+                  Geschichte der deutschen Literatur, Sprache und Metrik im XIV. und XV.
+                  Jahrhundert. Innsbruck 1881. (Ältere Tirolische Dichter; 3/1881). Accessed
+                  07.06.2016. <ref target="https://archive.org/details/hugovonmontfort00hugogoog"
+                     >https://archive.org/details/hugovonmontfort00hugogoog</ref>.</bibl>
+               <bibl>Werner, Wilfried: Cimelia Heidelbergensia: 30 illuminierte Handschriften der
+                  Universitätsbibliothek Heidelberg — Wiesbaden, 1975. Accessed 07.06.2016. <ref
+                     target="http://digi.ub.uni-heidelberg.de/diglit/Cimelia1975/0065"
+                     >http://digi.ub.uni-heidelberg.de/diglit/Cimelia1975/0065</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
 </TEI>

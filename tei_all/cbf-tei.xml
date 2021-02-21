@@ -1,1065 +1,1512 @@
-<?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title/>
-        <respStmt>
-          <resp>author</resp>
-          <name>
-            <persName>
-              <forename>Mellissa</forename>
-              <surname>Hinton</surname>
-            </persName>
-            <affiliation>
-              <orgName>Long Island University/Post Campus</orgName>
-              <placeName>Brookville, NY, USA</placeName>
-            </affiliation>
-            <email>Mellissa.Hinton (at) liu.edu</email>
-          </name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Institut f&#xFC;r Dokumentologie und Editorik</publisher>
-        <date/>
-        <idno type="issue">7</idno>
-        <idno type="URI">http://ride.i-d-e.de/issues/issue-7/cbf</idno>
-        <idno type="DOI">10.18716/ride.a.7.1</idno>
-        <availability>
-          <licence>
-            <ref target="http://creativecommons.org/licenses/by/4.0/"/>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <notesStmt>
-        <relatedItem>
-          <biblStruct>
-            <monogr>
-              <title xml:id="resource_title">Crossing Brooklyn Ferry:  An Online Critical Edition</title>
-              <editor xml:id="resource_editors">Jesse Merandy</editor>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Jesse Merandy</name>
-                </persName>
-              </respStmt>
-              <imprint>
-                <date xml:id="resource_date_publication">2008</date>
-              </imprint>
-            </monogr>
-            <idno xml:id="resource_uri">http://msr-archives.rutgers.edu/CBF/</idno>
-          </biblStruct>
-        </relatedItem>
-        <note>
-          <date xml:id="resource_date_access">2017-06-24</date>
-        </note>
-      </notesStmt>
-      <sourceDesc>
-        <p>Auf der Basis von <ref>http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1</ref>
-                </p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
-          <category xml:id="documentation">
-            <category xml:id="bibl_desc">
-              <catDesc>
-                <ref target="#K1.2">cf. Catalogue 1.2</ref>
-              </catDesc>
-              <catDesc>Is it easily possible to describe the project bibliographically along the schema "responsible editors, publishing/hosting institution, year(s) of publishing"?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contributors">
-              <catDesc>
-                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-              </catDesc>
-              <catDesc>Are the contributors (editors, institutions, associates) of the project fully documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contacts">
-              <catDesc>
-                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-              </catDesc>
-              <catDesc>Does the project list contact persons?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="selection">
-              <category xml:id="explained">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="reasonable">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection by and large reasonable?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="data_archive">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the documentation include information about the long term sustainability of the basic data (archiving of the data)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="aims">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="methods">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="data_model">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <catDesc>Does the project document which data model (e.g. TEI) has been used and for what reason?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="help">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts concerning the use of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="citation">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or a part of it)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="complete">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the editon regard itself as a completed project (i.e. not promise further modifications and additions)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="institutional_curation">
-              <catDesc>
-                <ref target="#K4.13">cf. Catalogue 4.13</ref>
-              </catDesc>
-              <catDesc>Does the project provide information about institutional support for the curation and sustainability of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="contents">
-            <category xml:id="previous_edition">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="materials_used">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Does the edition make use of these previous editions?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="introduction">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer an introduction to the subject-matter (the author(s), the work, its history, the theme, etc.) of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="bibliography">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a bibliography?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="commentary">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear passages, interpretation, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contexts">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project include or link to external resources with contextual material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="images">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer images of digitised sources?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="image_quality">
-              <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
-                            </catDesc>
-              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="transcriptions">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc> Is the text fully transcribed?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="text_quality">
-              <catDesc>
-                <ref target="#K4.6">cf. Catalogue 4.6</ref>
-              </catDesc>
-              <catDesc>Does the project offer texts of an acceptable quality (typos, errors, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="indices">
-              <catDesc>
-                <ref target="#K4.5">cf. Catalogue 4.5</ref>
-              </catDesc>
-              <catDesc>Does the project feature compilations indices, registers or visualisations that offer alternative ways to access the material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="documents">
-              <category xml:id="doc_type">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
-                <category xml:id="single_manuscript">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="single_work">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collection_of_texts">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collected_works">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="papers">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="archival_holding">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="charters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="letters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="diary">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.7.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Crossing Brooklyn Ferry: An Online Critical Edition</title>
+            <author>
+               <name>
+                  <forename>Mellissa</forename>
+                  <surname>Hinton</surname>
+               </name>
+               <affiliation>
+                  <orgName>Long Island University/Post Campus</orgName>
+                  <placeName>Brookville, NY, USA</placeName>
+               </affiliation>
+               <email>Mellissa.Hinton (at) liu.edu</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+            <date when="2017-12">December 2017</date>
+            <idno type="URI">https://ride.i-d-e.de/issues/issue-7/crossing-brooklyn-ferry-an-online-critical-edition/</idno>
+            <idno type="DOI">10.18716/ride.a.7.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue07/cbf/cbf.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <biblScope unit="issue" n="7">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-7</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Crossing Brooklyn Ferry: An Online Critical Edition</title>
+                  <editor>Jesse Merandy</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>
+                        <name>Jesse Merandy</name>
+                     </persName>
+                  </respStmt>
+                  <date type="publication">2008</date>
+                  <idno type="URI">http://msr-archives.rutgers.edu/CBF/</idno>
+                  <date type="accessed">2017-06-24</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
+                     >Criteria for Reviewing Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-              </category>
-              <category xml:id="doc_time">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>What era(s) do the documents belong to?</catDesc>
-                <category xml:id="classics">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="medieval">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="early_modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="modern">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="subject">
-              <catDesc>
-                <ref target="#K1.3">cf. Catalogue 1.3</ref>
-              </catDesc>
-              <catDesc>Which perspective(s) do the editors take towards the edited material? How can the edition be classified in general terms?</catDesc>
-              <category xml:id="history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philology_literary_studies">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="philosophy_theology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="history_of_science">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="musicology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="art_history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="presentation">
-            <category xml:id="spin_offs">
-              <catDesc>
-                <ref target="#K4.11">cf. Catalogue 4.11</ref>
-              </catDesc>
-              <catDesc>Does the project offer any spin-offs?</catDesc>
-              <category xml:id="app">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="mobile">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PDF">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="browse_by">
-              <catDesc>
-                <ref target="#K4.3">cf. Catalogue 4.3</ref>
-              </catDesc>
-              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
-              <category xml:id="authors">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="works">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="versions">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="structure">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="pages">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_documents">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="type_of_material">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_images">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="dates">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="persons">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="places">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="search">
-            <category xml:id="simple">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer a simple search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="advanced">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer an advanced search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="wildcard">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search support the use of wildcards?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="index">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer an index of the searched field?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="suggest">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-            <category xml:id="helptext">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts for the search?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="2"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="aim">
-            <category xml:id="audience">
-              <catDesc>
-                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-              </catDesc>
-              <catDesc>Who is the intended audience of the project?</catDesc>
-              <category xml:id="scholars">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="interested_public">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="typology">
-              <catDesc>
-                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
-              </catDesc>
-              <catDesc>Which type fits best for the reviewed project?</catDesc>
-              <category xml:id="facsimile_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="archive_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="documentary_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="genetic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="work_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="text_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="enriched_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="database_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_library">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_collection_of_texts">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="method">
-            <catDesc rend="label">Method</catDesc>
-            <category xml:id="critical_editing">
-              <catDesc>
-                <ref target="#K3.6">cf. Catalogue 3.6</ref>
-              </catDesc>
-              <catDesc>In how far is the text critically edited?</catDesc>
-              <category xml:id="transmission_examined">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="palaeographic_annotations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="normalization">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="variants">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="emendation">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentary_notes">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="standards">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <category xml:id="XML">
-                <catDesc>Is the data encoded in XML?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="standardized_data_model">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
-              </category>
-            </category>
-            <category xml:id="text_type">
-              <catDesc>
-                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
-              </catDesc>
-              <catDesc>Which kinds or forms of text are presented?</catDesc>
-              <category xml:id="facsimiles">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_transcription">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="edited_text">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="translations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentaries">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="semantic_data">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="technical_accessability">
-            <category xml:id="persistent_identification">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Are there persistent identifiers and an addressing system for the
-                                                edition and/or parts/objects of it and which mechanism is used to
-                                                that end?</catDesc>
-              <category xml:id="DOI">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="ARK">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="URN">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PURL.ORG">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category xml:id="persistent_URLs">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="interfaces">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse of the data of the project in other contexts?</catDesc>
-              <category xml:id="OAI-PMH">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="REST">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_API">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="open_access">
-              <catDesc>Is the edition Open Access?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="basic_data_accessible">
-              <catDesc>
-                <ref target="#K4.12">cf. Catalogue 4.12</ref>
-              </catDesc>
-              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of the edition (e.g. for a page)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="download">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="reuse">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can you use the data with other tools useful for this kind of content?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="rights">
-              <category xml:id="declared">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Are the rights to (re)use the content declared?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="license">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Under what license are the contents released?</catDesc>
-                <category xml:id="CC0">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="PDM">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category xml:id="no_license">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="multiple_licenses">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-          </category>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="abstract">Jesse Merandy&#x2019;s legacy project,<emph> Crossing Brooklyn Ferry: An Online Critical Edition</emph> (2008-09), presents new avenues for reading and studying American poet Walt Whitman&#x2019;s iconic work. Aimed at an audience of students and scholars, the site includes the text of Whitman&#x2019;s acclaimed poem as it evolved through five editions of <emph>Leaves of Grass</emph> published during the poet&#x2019;s lifetime. The site also includes critical commentary and analysis; edition comparisons; still and moving images; audio files; and a walking tour of Brooklyn, New York. The site is archived as an issue of <emph>Mickle Street Review</emph>, an online journal published by Rutgers University at its Camden, New Jersey campus. Its archiving ensures a measure of stability and user expectation that Merandy&#x2019;s website will remain accessible as an open access resource. However, the static archiving also prevents site updating. As a result, many broken links remain on the site, as do typos, and textual transcription errors. There is no evidence of TEI/XML coding which limits reusability of text. Since quality transcription is expected in a scholarly digital edition, as is an XML layer, this site cannot be considered a scholarly digital edition. In spite of the limitations, however, Merandy&#x2019;s project is a fascinating one that provides the user with a multi-sensory experience that transcends what one would have experienced in a print-only environment.</div>
-      <div type="text">
-        <div type="div2">
-          <head>Overview &amp; Scope of the Project</head>
-          <p>&#x2018;Crossing Brooklyn Ferry&#x2019; by American poet Walt Whitman (1819-1892), was included in his nineteenth-century groundbreaking work, <emph>Leaves of Grass</emph>. First published in the second edition of <emph>Leaves of Grass</emph> (1856) under the original title of &#x2018;Sun-Down Poem,&#x2019; &#x2018;Crossing Brooklyn Ferry&#x2019; is one of the most widely acclaimed and anthologized poems in the Whitman oeuvre. It contains many of the poetic elements for which Whitman is noted: thematic elements celebrating place and people, and stylistic elements including the catalogue device deployed throughout his poetry. The poem has been dubbed &#x2018;the masterpiece of the first two editions,&#x2019; an achievement brought about through Whitman&#x2019;s control of theme, imagery, rhythm, and symbolism (Allen 1967, 184). Whitman continued to revise and expand the work throughout his life and his work influences modern poetry even to the present day. </p>
-          <p>In <emph><ref target="http://msr-archives.rutgers.edu/CBF/">Crossing Brooklyn Ferry: An Online Critical Edition</ref></emph>, the online edition&#x2019;s creator, Jesse Merandy, provides an enriched perspective on the poem as it evolved throughout Whitman&#x2019;s maturity as a poet. This edition began as a project for Merandy when he was a student at the City University of New York Graduate Center. Merandy is currently the Director of the Digital Media Lab at The Bard Graduate Center, New York. Merandy is a self-described &#x2018;Whitmaniac&#x2019; and his passion for the subject is evident in this project. Merandy&#x2019;s familiarity with New York brings additional perspective and added value to this edition. The aim of Merandy&#x2019;s work as stated in the opening page is to offer the novice or scholar an opportunity to examine the poem &#x2018;from new vistas&#x2019; by offering an interactive multi-media approach. On a 13 October 2013 <ref target="https://web.archive.org/web/20170605170316/http:/jessemerandy.com/crossing-brooklyn-ferry-an-online-critical-edition/">blog</ref> post, Merandy stated he was &#x2018;interested&#x2019; in how varying theoretical approaches could provide &#x2018;perspective on a work, but wondered how I could bring those views together in an online space. I was particularly curious as to how this experience could differ from the traditional critical edition and what new insights might be revealed in taking a new approach.&#x2019;</p>
-          <figure>
-            <head>Fig. 1: Home page for <emph>Crossing Brooklyn Ferry</emph></head>
-            <graphic url="wp-content/uploads/issue_7/cbf/pictures/picture-1.png"/>
-          </figure>
-          <p>The website (copyright 2008) critically examines &#x2018;Crossing Brooklyn Ferry&#x2019; through several methods: close reading, a color-coded overview of the edition&#x2019;s evolution, a comparison of editions, and a walking tour of Brooklyn to give the reader a sense of time and place. The embedded glosses, critical interpretations, still images, and audio and video files give the user a multi-sensory experience that is an alternative to a static reading experience via the printed page. In fact, creating a scholarly digital edition was not Merandy&#x2019;s intent. Rather, as his objective states on the website, his project was &#x2018;an effort to show how we can build from the wealth of resources and databases currently available to us online, and pay tribute to the digital Whitman scholars whose efforts have laid the important groundwork for online projects. It is hoped that this website represents another step in the evolution of online scholarship and helps to inspire future works.&#x2019; Thus, while Merandy&#x2019;s work may be considered experimental and inspirational for Whitman scholars, it may also be applied to the broader context of digital humanities and should be considered within that context as well.</p>
-          <p>As already noted, Merandy&#x2019;s online edition has its origin as a class assignment. However, it was published in issue #19/20 of <emph><ref target="https://web.archive.org/web/20170829150458/http:/msr-archives.rutgers.edu/pages/about.htm">Mickle Street Review: An Electronic Journal of Whitman and American Studies</ref></emph> (2008) with a theme of &#x2018;Sights and Sounds.&#x2019; This open access journal is published under the auspices of the Walt Whitman Program in American Studies at the Camden, New Jersey campus of Rutgers University. For this particular issue, Merandy designed the website and served as managing editor. Merandy&#x2019;s work is now archived on the online journal&#x2019;s site which presents a conundrum when considering the work as a scholarly digital edition. The very fact that it has been archived as an issue of the journal underscores the fact that it is a work expected to be static in nature. However, even that basic assumption is disrupted in this case, because while the date of the issue is 2008, elements of Merandy&#x2019;s website/journal contribution have copyright dates of 2009. (This hybridization is somewhat convoluted and the consideration of the <emph>Mickle Street Review</emph> as a journal might be a catalyst for a reconsideration of the meaning of journal itself, but that is a different matter altogether.) The main value in archiving Merandy&#x2019;s project as part of <emph>Mickle Street Review</emph> is that it provides a solid foundation for long term sustainability and accessibility. The journal has an excellent provenance and there is an expectation that this journal (and Merandy&#x2019;s site) will be available in the future. At the same time, its status as an archived work presents a drawback because the site is no longer being updated. As a result, the site is rife with many broken links. These broken links and discovered errors, including transcription errors, cannot be corrected. As technological applications continue to evolve, legacy sites that lack maintenance or updating have the potential to disappoint a user or cause one to think the site is &#x2018;quaint.&#x2019; With the static qualities brought about by its publication in a fixed journal, Merandy&#x2019;s work might be considered one of &#x2018;the late age of print&#x2019; as defined by Jay David Bolter (1991) where the conceptual space contains &#x2018;writing [that] is stable, monumental, and controlled exclusively by the author&#x2019; (Bolter 1991, 11). Thus, the project reflects the tensions of an emerging technological moment; it is a hybrid project where fixity is implied by the journal&#x2019;s archiving, while change is anticipated via its manifestation as a website.</p>
-          <p>The limitations of <emph>Crossing Brooklyn Ferry: An Online Critical Edition</emph> are due to its archiving in a static environment. As a result, the edition does not meet current expectations for scholarly editions. The <emph>MLA Statement on the Scholarly Edition in the Digital Age </emph>outlines the benefits of digital modalities that are expected today. First, data should be stored to be reused in other works. In addition, users in a digital environment have an opportunity to participate in furtherance of scholarship by providing commentary or annotations, and for providing editorial functions (MLA 2016, 1). Because of the nature of Merandy&#x2019;s project&#x2019;s origin in time and space, and its publication within a static journal, neither of these expectations is met.</p>
-          <p>The state of online editions has evolved significantly since Merandy&#x2019;s effort began. The nature of the effort does not comply with current best practices as defined earlier by Peter Shillingsburg (2013a), but that is to be expected given the increasing age of Merandy&#x2019;s project. Standard 4.12 of the <emph>Criteria for Reviewing Scholarly Digital Editions</emph> (2014) has an expectation that underlying data be accessible in code such as XML. Further, for text encoding in the humanities, &#x2018;TEI is now considered the <emph>de facto</emph> standard&#x2019; (Pierazzo 2016, 308). However, there is no indication that XML/TEI was used in Merandy&#x2019;s project.</p>
-          <p>Another basic principle applied by one scholar prescribes that all the relevant forms of a work should be included to serve as a representation of the work (Shillingsburg 2013a). Merandy has attempted to meet this standard by including the text from the second edition of <emph>Leaves of Grass</emph> and the revisions that follow. However, another best practice for bibliographers or textual critics is to identify meticulously &#x2018;which particular copy of the first state of the first printing of the work was used as copy-text for their new printed scholarly edition&#x2019; (Shillingsburg 2013a, 3). The effort under review falls short of this expectation. While Merandy cites the year of each edition of <emph>Leaves of Grass</emph> where &#x2018;Crossing Brooklyn Ferry&#x2019; was originally included or revised, he does not provide the full bibliographic information for each of those editions. Instead, it is unclear what Merandy used as source materials. While the resource list seems to indicate Merandy relied on the variorum edition of Whitman&#x2019;s works to transcribe the work, it is also possible that the transcriptions were derived from the <emph><ref target="https://web.archive.org/web/20170605124614/http:/whitmanarchive.org/">Walt Whitman Archive</ref></emph> which is also cited in the list of resources. Merandy&#x2019;s omission of precise bibliographic citation is a limitation on the reliability of the work because it is difficult for the reader to compare Merandy&#x2019;s text against a specific primary source.</p>
-          <p>Including annotations within textual transcriptions is another practice that one scholar recommends should be avoided (Shillingsburg 2013a). Merandy avoids this problem by providing transcriptions with embedded annotations (the menu option labeled Edition Evolution) and without them (the Edition Comparisons menu option). That allows part of the website to function as Shillingsburg advises as a stable foundation upon which critical analysis can be built. &#x2018;Separating text-only from enhancement makes both transcription of text and enhancement of text more versatile and flexible&#x2019; (Shillingsburg 2013a, 11). Merandy has accomplished this to some extent through the drop down menu choices.</p>
-          <p>Merandy&#x2019;s site includes transcriptions without accompanying page images from source texts. &#x2018;A virtual collection of transcriptions without images of the material archive is not a virtual archive--is not a surrogate in any sense whatsoever&#x2019; (Shillingsburg 2013b, 3). As a result, the scholar would be unable to rely on the transcription because it is unverifiable. Unfortunately, that is the case with Merandy&#x2019;s project. The user can go out of the site to compare texts, but cannot verify transcriptions within it.</p>
-          <p>In spite of these limitations, Merandy does provide an interesting approach to the study of this iconic poem. From the home page of <emph>Crossing Brooklyn Ferry</emph>, users can link to seven different sub-pages from a drop down menu within the site as well as to other content in the issue of the <emph>Mickle Street Review</emph>. The seven options are headed &#x2018;Close Reading&#x2019;, &#x2018;Edition Evolution&#x2019;, &#x2018;Edition Comparisons&#x2019;, &#x2018;Walking Tour&#x2019; (multi-sensory), &#x2018;Talk Back&#x2019;, &#x2018;About This Project&#x2019;, and &#x2018;Resources&#x2019;. The sub-pages will be examined separately. Unfortunately, no search functionality is built into the site. </p>
-        </div>
-        <div type="div2">
-          <head>Website Sections</head>
-          <div type="div3">
-            <head>Close Reading</head>
-            <p>Walt Whitman stated his intentions about further publication in the unnumbered ninth edition (1891) of <emph>Leaves of Grass</emph>, published by David McKay. Of the various published editions, the poet wrote, &#x2018;I prefer and recommend this present one, complete, for future printing, if there should be any&#x2019; (Whitman 1891, 2). Merandy&#x2019;s opening statement in the close reading section cites the 1881 edition as Whitman&#x2019;s preferred edition. However, Whitman did not revise &#x2018;Crossing Brooklyn Ferry&#x2019; after the 1881 edition, so Merandy&#x2019;s close reading does examine Whitman&#x2019;s &#x2018;final&#x2019; published version of the poem. In the close reading, Merandy provides glosses for vocabulary, and offers critical insights. These features add value far beyond what a traditional textual essay would have provided. Unfortunately, Merandy&#x2019;s introduction to this section is somewhat misleading as noted above and a typo (a misspelling of &#x2018;preferred&#x2019;). The textual transcription of the poem in this section has at least one error (&#x2018;thiswhich&#x2019; instead of &#x2018;this which&#x2019; in stanza 8:5) which impacts keyword searching. The combination of these missteps must give the user pause.</p>
-            <figure>
-              <head>Fig. 2: Close Reading of &#x2018;Crossing Brooklyn Ferry&#x2019;</head>
-              <graphic url="wp-content/uploads/issue_7/cbf/pictures/picture-2.png"/>
-            </figure>
-            <p>Merandy provides a legend to the embedded coding as follows: <list><item>a analysis and criticism</item><item>g word gloss</item><item>i image</item><item>m manuscript images</item><item>q quotes</item><item>v video</item></list> The corresponding embedded codes (a, g, and q) provide the reader with insightful critical analysis, explanatory word glosses, and appropriate quotations from Whitman&#x2019;s prose writings. By hovering over the codes, the textual statements are visible to the user. Display of special characters (apostrophes, for example) is actually a distraction in the text because of anomalies in coding that may be specific to the browser. For example, in this reviewer&#x2019;s browser, diamond-enclosed question marks replace quotation marks and apostrophes.<note xml:id="ftn1" n="1">Browser used was Firefox 55.0.3 on Windows 10 Enterprise version 1607. Similar browser anomalies were also found using Chrome 61.0.3163.79.</note> But even these anomalies are inconsistent; in some text, the marks display correctly. These anomalies vary from established scholarly norms and detract from the quality. Alternatively, the user can click on the codes and open the text window, but the white on black layout is difficult to read. One of only three word glosses, the gloss for &#x2018;similitudes&#x2019; cites <emph>Encarta Dictionary</emph>, an early Microsoft electronic reference work that has been defunct since 2009. The added text could benefit from a proofreader&#x2019;s eye. Still, the weaving of these pieces does enrich the work and help elucidate the poem for new readers.</p>
-            <p>The inclusion of still images and a video recording provides added value for the reader. Static visual images include primary texts, photographs or paintings of New York&#x2019;s waterfront, people, buildings, etc. Including images provides context for contemporary users, and defines antiquated terms such as &#x2018;lighter&#x2019; or &#x2018;schooner&#x2019; for modern readers. Juxtaposing nineteenth-century images of places with twenty-first-century ones also provides an enhanced perspective. Most of the images were downloaded from the New York Public Library&#x2019;s (NYPL) digital collections and Merandy credits the NYPL by providing the image number, but attribution for other images is lacking.</p>
-            <p>The single video image included in this edition is a 1903 video recording entitled <emph>Panorama Water Front and Brooklyn Bridge from East River</emph> from Thomas A. Edison, Inc. The video includes a phenomenal view of the Brooklyn Bridge which Whitman might have seen during the bridge&#x2019;s construction. Merandy&#x2019;s inclusion of this vision speaks to progress in the industrial age; the completion of the bridge in 1883 would make the Brooklyn-Manhattan ferry system obsolete. So Merandy&#x2019;s inclusion of the video serves as a bit of poetry unto itself. The file is stored as an MPG file. The source information shows the video can be downloaded from the <emph>Mickle Street Review</emph> website, but it could not be discovered there. It is likely that it was originally downloaded from the Library of Congress website where it can be viewed, but the site does not include a citation for it. Providing a complete citation at the item level (the video recording) might help users access additional material.</p>
-            <p>In the close reading section, Merandy includes three sample images from Whitman&#x2019;s 1855-56 <emph>Notebook</emph> which can be viewed by clicking on the embedded &#x2018;m&#x2019; code. These images provide the user with a sense of materiality of the text, connecting the twenty-first-century reader with the nineteenth-century writer. The digital world does not support tactile modality to promote understanding &#x2013; at least not yet &#x2013; so the inclusion of these images provides a surrogate. Although the inclusion of the images provides an introduction to the manuscript, the user does not have the option to compare the transcription to the original document. The text does not show the transcription of the notebook page. <emph><ref target="https://web.archive.org/web/20170605124614/http:/whitmanarchive.org/">The Walt Whitman Archive</ref></emph> includes notebook images with accompanying transcription in TEI, but the page images provided on Merandy&#x2019;s site are not included there yet.</p>
-            <p>The display from clicking in the close reading section is sometimes difficult to interpret. This factor can be attributed to the dated code. All in all, there are some concerns about the functionality of this section, but Merandy&#x2019;s insights are interesting and worth reading.</p>
-          </div>
-          <div type="div3">
-            <head>Edition Evolution</head>
-            <p>In this section of the website, Merandy traces Whitman&#x2019;s changes and emendations to &#x2018;Crossing Brooklyn Ferry&#x2019; from the original publication in the 1856 edition of <emph>Leaves of Grass</emph> through the 1881 edition. Merandy uses visual cues (red or white text) to show deletions or changes and once again uses an embedded code &#x2018;a&#x2019; to include textual analysis. There is real value in this method. When compared with the variorum edition Merandy cites in the resource list, the changes are much clearer to understand and recognize. This example showcases the value of a web-based edition over the black and white printed page. Here the text pops up just as it did on the close reading section of the website with some of the same idiosyncrasies. In this section, too, Merandy has embedded related images and textual commentary.</p>
-            <figure>
-              <head>Fig. 3: Edition Evolution of &#x2018;Crossing Brooklyn Ferry&#x2019;</head>
-              <graphic url="wp-content/uploads/issue_7/cbf/pictures/picture-3.png"/>
-            </figure>
-            <p>Unfortunately, outside of the year of publication, Merandy provides no additional bibliographic information for source texts. To fully document the evolution, full publication information would be important for a scholarly edition.</p>
-            <p>One value added feature of Merandy&#x2019;s approach is the photograph of Whitman embedded in the text that corresponds with the publication period of each edition. This feature gives a sense of time passing; the user can follow the maturation of the poet&#x2019;s work as he aged.</p>
-          </div>
-          <div type="div3">
-            <head>Edition Comparisons</head>
-            <p>In this section, Merandy allows the user to select two different editions and read them side by side. This comparison method lacks the sophistication and functionality of such comparisons that can be generated today using open source software applications such as Juxta. Users on Merandy&#x2019;s site must find the variants themselves. Comparing Merandy&#x2019;s textual transcriptions with editions stored in <emph>The Walt Whitman Archive</emph> using <ref target="https://web.archive.org/web/20170605151619/http:/www.juxtasoftware.org/">Juxta</ref> revealed a small number of transcription errors on the website. These are recorded in the table below. Curiously, the transcription errors in the edition comparisons subpage are not consistent with the edition evolution subpage. Errors, whether in the text of transcriptions or introduced by the transcriber, undermine the value of any textual project. While these transcription errors are few and slight, they do change the reading of the poem, and in poetry especially, nuances matter. As the <emph>MLA Statement on the Scholarly Edition in the Digital Age</emph> indicates, &#x2018;completeness and accuracy of textual account and resultant text or texts&#x2019; is expected in a scholarly edition as a &#x2018;best practice&#x2019; (MLA 2016, 4).</p>
-            <p>Transcription errors revealed in Juxta: <table><row><cell role="head">Edition</cell><cell role="head">Stanza: Line</cell><cell role="head">Close Reading</cell><cell role="head">Edition Evolution</cell><cell role="head">Edition Comparisons</cell><cell role="head">Whitman Archive Page Image</cell></row><row><cell>1860</cell><cell>5:01</cell><cell>--</cell><cell>instance</cell><cell>instance</cell><cell>distance</cell></row><row><cell>1860</cell><cell>17: 7, 24: 13</cell><cell>--</cell><cell>r&#xF4;le</cell><cell>rle</cell><cell>r&#xF4;le</cell></row><row><cell>1881</cell><cell>6:07</cell><cell>knotted</cell><cell>knotted</cell><cell>knotted</cell><cell>knitted</cell></row><row><cell>1881</cell><cell>8:06</cell><cell>thiswhich</cell><cell>this which</cell><cell>thiswhich</cell><cell>this which</cell></row></table></p>
-            <figure>
-              <head>Fig. 4: Sample text comparison of &#x2018;Crossing Brooklyn Ferry&#x2019;</head>
-              <graphic url="wp-content/uploads/issue_7/cbf/pictures/picture-4.png"/>
-            </figure>
-          </div>
-          <div type="div3">
-            <head>Walking Tour</head>
-            <p>One of the most interesting attributes of Merandy&#x2019;s project is the inclusion of the Brooklyn walking tour. As a New York City resident and former CUNY student, Merandy is qualified to provide this enhanced perspective. <emph>Walking with Whitman: A Downloadable Walking Tour</emph> takes the visitor &#x2018;through the historic streets of Brooklyn Heights&#x2019; along with an opportunity to cross into Manhattan, either via the Brooklyn Bridge or water taxi. The user is offered a fresh, multi-sensory experience for studying Whitman&#x2019;s Brooklyn. This section of the website allows the user to download a travel packet and text of the audio files as portable document files. The travel packet includes directions, travel maps, and historic information to guide the user along the roads of Brooklyn. Of course, since 2009 when this packet was completed, Google Maps has become a more sophisticated application and Merandy&#x2019;s maps look fairly primitive by comparison. An updated version of this site could include a mobile app. Technology has come a long way since 2009.</p>
-            <p>This experience can be considered multi-sensory because people today (Whitman&#x2019;s &#x2018;generations hence&#x2019;) who actually take the tour will find their senses stimulated by the sounds of the Brooklyn streets, the smells from food wagons, and other urban delights. This kind of exploration brings the works of Whitman to life. It is perhaps the single most important aspect of Merandy&#x2019;s project. </p>
-            <figure>
-              <head>Fig. 5: Walking tour to accompany <emph>Crossing Brooklyn Ferry: An Online Critical Edition</emph></head>
-              <graphic url="wp-content/uploads/issue_7/cbf/pictures/picture-5.png"/>
-            </figure>
-            <p>Audio files are stored as MP3 files. These files contain narrations of selections from Whitman&#x2019;s poetry and prose. The narrations are designed to accompany the walking tour and are numbered to sync with stops along the tour.</p>
-            <p>Unfortunately, because the site has not been updated, links to additional resources (with the exception of boat tours) are broken.</p>
-          </div>
-        </div>
-        <div type="div2">
-          <head>Other Sub-Pages</head>
-          <p>The link for the &#x2018;Talk Back&#x2019; sub-page is broken so it is impossible to identify Merandy&#x2019;s intent. The link to &#x2018;About This Project&#x2019; gives an overview of Merandy&#x2019;s project and acknowledges his mentors for the project. The &#x2018;Resources&#x2019; page includes a bibliography of works cited throughout the site. However, many of the links to external sites are broken. The list of resources also includes misspellings (&#x2018;Fienberg&#x2019; for &#x2018;Feinberg&#x2019; at the Library of Congress).</p>
-          <p>While fixity (as slippery a term as it is) is anticipated in printed editions, fixity in the digital world is not expected, so encountering so many broken links is very disappointing.</p>
-        </div>
-        <div type="div2">
-          <head>Conclusion </head>
-          <p>Guidelines from the Institut f&#xFC;r Dokumentologie und Editorik (IDE) indicate that to be considered a scholarly digital edition, a work must include a statement of the editorial method employed, comply with scholarly expectations for content and quality, and open up new possibilities beyond those of the age of print (2014). In IDE terms, scholarly digital editions are &#x2018;information systems which follow a methodology determined by a digital paradigm.&#x2019; From such a broad generalization, Merandy&#x2019;s project, <emph>Crossing Brooklyn Ferry: An Online Critical Edition</emph>, would appear to qualify as a scholarly digital edition. It includes a statement about the editorial method, and opens up possibilities for study that were not available in the print age. IDE guidelines also require an abstraction layer such as XML for consideration as a scholarly digital edition, but Merandy&#x2019;s project does not include evidence of this layer.</p>
-          <p>Merandy&#x2019;s project is commendable in that it provides users with an enriched perspective on Whitman&#x2019;s iconic poem through the incorporation of textual commentary, embedded images, sound files, and other multi-sensory features. Particularly noteworthy is Merandy&#x2019;s creation and inclusion of the Brooklyn walking tour. Students encountering the poem for the first time would find Merandy&#x2019;s site to be very informative and eye-opening. It seems to this reviewer, however, that quality of the work remains the commonality whether an edition is published in a print medium or in an electronic format. Accuracy and careful transcription from the source material remain paramount so that scholars and perhaps more importantly, students, can use a resource with confidence and surety, if not fixity. Because of the lack of the evidence for the abstraction layer, attribution questions, factual errors, the lack of clear bibliographic citation for the various editions, the admittedly small but significant number of transcription errors, and unfortunate excess of broken links, this reviewer cannot consider this effort to be a scholarly digital edition in the strictest sense of the term. If Merandy would take this legacy edition out of mothballs, correct the errors, and update the coding, it has the potential to become one, and Merandy is certainly the one to do it.</p>
-          <p>The main problem with legacy editions is that as technology marches forward, these works may be left behind and there is a real concern that at some point in the future, access to them might be limited. Given its genesis as a student project (which is the case with so many digital humanities projects) Merandy&#x2019;s <emph>Crossing Brooklyn Ferry: An Online Critical Edition</emph> is a reflection of its time and reflects the shortcomings of a legacy project which was not originally envisioned as a definitive scholarly digital edition. Still, this project is a fascinating one and warrants consideration in the field of Whitman studies. The examination of Merandy&#x2019;s site also raises philosophical questions about the nature of legacy editions in a time of change where today&#x2019;s efforts are out of date tomorrow. What is the responsibility for maintaining legacy editions as digital tools continue to evolve? Is it fair to assess them against a standard that was not available at the time of their creation? What about the temporality of the project? These questions, of course, go beyond the scope of this review but they remain intriguing.</p>
-        </div>
-      </div>
-      <div type="references">
-        <listBibl>
-          <bibl>Allen, Gay Wilson. 1967. <emph>The Solitary Singer: A Critical Biography of Walt Whitman</emph>. New York: New York University Press.</bibl>
-          <bibl>Bolter, Jay David. 1991. <emph>Writing Space: The Computer, Hypertext, and the History of Writing</emph>. Hillsdale, New Jersey: Lawrence Erlbaum.</bibl>
-          <bibl>Merandy, Jesse. <emph>Jesse Merandy</emph> (blog). <ptr target="https://web.archive.org/web/20170605170316/http:/jessemerandy.com/crossing-brooklyn-ferry-an-online-critical-edition/"/>.</bibl>
-          <bibl>MLA Committee on Scholarly Editions. 2016. &#x2018;MLA Statement on the Scholarly Edition in the Digital Age.&#x2019; Modern Language Association of America. <ptr target="https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/MLA-Statement-on-the-Scholarly-Edition-in-the-Digital-Age"/>.</bibl>
-          <bibl>NINES and Permanent Software. <emph>Juxta</emph>. <ptr target="http://www.juxtasoftware.org/"/>.</bibl>
-          <bibl>Pierazzo, Elena. 2016. &#x2018;Textual Scholarship and Text Encoding: A New Theoretical Framework.&#x2019; In <emph>A New Companion to Digital Humanities</emph>, edited by Schreibman, Susan, Siemens, Raymond George, and Unsworth, John M., 307&#x2013;21. Chichester: John Wiley.</bibl>
-          <bibl>Sahle, Patrick, Georg Vogeler, et al. 2014. &#x2018;Criteria for Reviewing Scholarly Digital Editions.&#x2019; Institut f&#xFC;r Dokumentologie und Editorik. <ptr target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"/>.</bibl>
-          <bibl>Shillingsburg, Peter. 2013a. &#x2018;Development Principles for Virtual Archives and Editions.&#x2019; <emph>Center for Textual Studies and Digital Humanities Publications</emph>. <ptr target="http://ecommons.luc.edu/ctsdh_pubs/4"/>.</bibl>
-          <bibl>Shillingsburg, Peter. 2013b. &#x2018;From Physical to Digital Textuality: Loss and Gain in Literary Projects.&#x2019; <emph>Center for Textual Studies and Digital Humanities Publications</emph>. <ptr target="http://ecommons.luc.edu/ctsdh_pubs/2"/>.</bibl>
-          <bibl><emph>The Walt Whitman Archive</emph>. Edited by Ed Folsom and Kenneth M. Price. [Lincoln, Neb.]: Center for Digital Research in the Humanities, University of Nebraska--Lincoln. <ptr target="http://www.whitmanarchive.org/"/>.</bibl>
-          <bibl>Whitman, Walt. <emph>Leaves of Grass</emph>. [9th ed.] Philadelphia: David McKay. 1892. <ptr target="http://whitmanarchive.org/published/LG/1891/whole.html"/>.</bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <catDesc rend="label">Method</catDesc>
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>19th century</term>
+               <term>work critical edition</term>
+               <term>American</term>
+               <term>poetry</term>
+               <term> TEI</term>
+               <term>Whitman</term>
+               <term> XML</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Jesse Merandy’s legacy project,<emph> Crossing Brooklyn Ferry: An Online Critical
+                  Edition</emph> (2008-09), presents new avenues for reading and studying American
+               poet Walt Whitman’s iconic work. Aimed at an audience of students and scholars, the
+               site includes the text of Whitman’s acclaimed poem as it evolved through five
+               editions of <emph>Leaves of Grass</emph> published during the poet’s lifetime. The
+               site also includes critical commentary and analysis; edition comparisons; still and
+               moving images; audio files; and a walking tour of Brooklyn, New York. The site is
+               archived as an issue of <emph>Mickle Street Review</emph>, an online journal
+               published by Rutgers University at its Camden, New Jersey campus. Its archiving
+               ensures a measure of stability and user expectation that Merandy’s website will
+               remain accessible as an open access resource. However, the static archiving also
+               prevents site updating. As a result, many broken links remain on the site, as do
+               typos, and textual transcription errors. There is no evidence of TEI/XML coding which
+               limits reusability of text. Since quality transcription is expected in a scholarly
+               digital edition, as is an XML layer, this site cannot be considered a scholarly
+               digital edition. In spite of the limitations, however, Merandy’s project is a
+               fascinating one that provides the user with a multi-sensory experience that
+               transcends what one would have experienced in a print-only environment.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Overview &amp; Scope of the Project</head>
+            <p xml:id="p1">‘Crossing Brooklyn Ferry’ by American poet Walt Whitman (1819-1892), was
+               included in his nineteenth-century groundbreaking work, <emph>Leaves of Grass</emph>.
+               First published in the second edition of <emph>Leaves of Grass</emph> (1856) under
+               the original title of ‘Sun-Down Poem,’ ‘Crossing Brooklyn Ferry’ is one of the most
+               widely acclaimed and anthologized poems in the Whitman oeuvre. It contains many of
+               the poetic elements for which Whitman is noted: thematic elements celebrating place
+               and people, and stylistic elements including the catalogue device deployed throughout
+               his poetry. The poem has been dubbed ‘the masterpiece of the first two editions,’ an
+               achievement brought about through Whitman’s control of theme, imagery, rhythm, and
+               symbolism (Allen 1967, 184). Whitman continued to revise and expand the work
+               throughout his life and his work influences modern poetry even to the present day. </p>
+            <p xml:id="p2">In <emph><ref target="http://msr-archives.rutgers.edu/CBF/">Crossing
+                     Brooklyn Ferry: An Online Critical Edition</ref></emph>, the online edition’s
+               creator, Jesse Merandy, provides an enriched perspective on the poem as it evolved
+               throughout Whitman’s maturity as a poet. This edition began as a project for Merandy
+               when he was a student at the City University of New York Graduate Center. Merandy is
+               currently the Director of the Digital Media Lab at The Bard Graduate Center, New
+               York. Merandy is a self-described ‘Whitmaniac’ and his passion for the subject is
+               evident in this project. Merandy’s familiarity with New York brings additional
+               perspective and added value to this edition. The aim of Merandy’s work as stated in
+               the opening page is to offer the novice or scholar an opportunity to examine the poem
+               ‘from new vistas’ by offering an interactive multi-media approach. On a 13 October
+               2013 <ref
+                  target="https://web.archive.org/web/20170605170316/http:/jessemerandy.com/crossing-brooklyn-ferry-an-online-critical-edition/"
+                  >blog</ref> post, Merandy stated he was ‘interested’ in how varying theoretical
+               approaches could provide ‘perspective on a work, but wondered how I could bring those
+               views together in an online space. I was particularly curious as to how this
+               experience could differ from the traditional critical edition and what new insights
+               might be revealed in taking a new approach.’</p>
+            <p xml:id="p3">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_7/cbf/pictures/picture-1.png"/>
+                  <head type="legend">Home page for <emph>Crossing Brooklyn Ferry</emph>.</head>
+               </figure> The website (copyright 2008) critically examines ‘Crossing Brooklyn Ferry’
+               through several methods: close reading, a color-coded overview of the edition’s
+               evolution, a comparison of editions, and a walking tour of Brooklyn to give the
+               reader a sense of time and place. The embedded glosses, critical interpretations,
+               still images, and audio and video files give the user a multi-sensory experience that
+               is an alternative to a static reading experience via the printed page. In fact,
+               creating a scholarly digital edition was not Merandy’s intent. Rather, as his
+               objective states on the website, his project was ‘an effort to show how we can build
+               from the wealth of resources and databases currently available to us online, and pay
+               tribute to the digital Whitman scholars whose efforts have laid the important
+               groundwork for online projects. It is hoped that this website represents another step
+               in the evolution of online scholarship and helps to inspire future works.’ Thus,
+               while Merandy’s work may be considered experimental and inspirational for Whitman
+               scholars, it may also be applied to the broader context of digital humanities and
+               should be considered within that context as well.</p>
+            <p xml:id="p4">As already noted, Merandy’s online edition has its origin as a class
+               assignment. However, it was published in issue #19/20 of <emph><ref
+                     target="https://web.archive.org/web/20170829150458/http:/msr-archives.rutgers.edu/pages/about.htm"
+                     >Mickle Street Review: An Electronic Journal of Whitman and American
+                     Studies</ref></emph> (2008) with a theme of ‘Sights and Sounds.’ This open
+               access journal is published under the auspices of the Walt Whitman Program in
+               American Studies at the Camden, New Jersey campus of Rutgers University. For this
+               particular issue, Merandy designed the website and served as managing editor.
+               Merandy’s work is now archived on the online journal’s site which presents a
+               conundrum when considering the work as a scholarly digital edition. The very fact
+               that it has been archived as an issue of the journal underscores the fact that it is
+               a work expected to be static in nature. However, even that basic assumption is
+               disrupted in this case, because while the date of the issue is 2008, elements of
+               Merandy’s website/journal contribution have copyright dates of 2009. (This
+               hybridization is somewhat convoluted and the consideration of the <emph>Mickle Street
+                  Review</emph> as a journal might be a catalyst for a reconsideration of the
+               meaning of journal itself, but that is a different matter altogether.) The main value
+               in archiving Merandy’s project as part of <emph>Mickle Street Review</emph> is that
+               it provides a solid foundation for long term sustainability and accessibility. The
+               journal has an excellent provenance and there is an expectation that this journal
+               (and Merandy’s site) will be available in the future. At the same time, its status as
+               an archived work presents a drawback because the site is no longer being updated. As
+               a result, the site is rife with many broken links. These broken links and discovered
+               errors, including transcription errors, cannot be corrected. As technological
+               applications continue to evolve, legacy sites that lack maintenance or updating have
+               the potential to disappoint a user or cause one to think the site is ‘quaint.’ With
+               the static qualities brought about by its publication in a fixed journal, Merandy’s
+               work might be considered one of ‘the late age of print’ as defined by Jay David
+               Bolter (1991) where the conceptual space contains ‘writing [that] is stable,
+               monumental, and controlled exclusively by the author’ (Bolter 1991, 11). Thus, the
+               project reflects the tensions of an emerging technological moment; it is a hybrid
+               project where fixity is implied by the journal’s archiving, while change is
+               anticipated via its manifestation as a website.</p>
+            <p xml:id="p5">The limitations of <emph>Crossing Brooklyn Ferry: An Online Critical
+                  Edition</emph> are due to its archiving in a static environment. As a result, the
+               edition does not meet current expectations for scholarly editions. The <emph>MLA
+                  Statement on the Scholarly Edition in the Digital Age </emph>outlines the benefits
+               of digital modalities that are expected today. First, data should be stored to be
+               reused in other works. In addition, users in a digital environment have an
+               opportunity to participate in furtherance of scholarship by providing commentary or
+               annotations, and for providing editorial functions (MLA 2016, 1). Because of the
+               nature of Merandy’s project’s origin in time and space, and its publication within a
+               static journal, neither of these expectations is met.</p>
+            <p xml:id="p6">The state of online editions has evolved significantly since Merandy’s
+               effort began. The nature of the effort does not comply with current best practices as
+               defined earlier by Peter Shillingsburg (2013a), but that is to be expected given the
+               increasing age of Merandy’s project. Standard 4.12 of the <emph>Criteria for
+                  Reviewing Scholarly Digital Editions</emph> (2014) has an expectation that
+               underlying data be accessible in code such as XML. Further, for text encoding in the
+               humanities, ‘TEI is now considered the <emph>de facto</emph> standard’ (Pierazzo
+               2016, 308). However, there is no indication that XML/TEI was used in Merandy’s
+               project.</p>
+            <p xml:id="p7">Another basic principle applied by one scholar prescribes that all the
+               relevant forms of a work should be included to serve as a representation of the work
+               (Shillingsburg 2013a). Merandy has attempted to meet this standard by including the
+               text from the second edition of <emph>Leaves of Grass</emph> and the revisions that
+               follow. However, another best practice for bibliographers or textual critics is to
+               identify meticulously ‘which particular copy of the first state of the first printing
+               of the work was used as copy-text for their new printed scholarly edition’
+               (Shillingsburg 2013a, 3). The effort under review falls short of this expectation.
+               While Merandy cites the year of each edition of <emph>Leaves of Grass</emph> where
+               ‘Crossing Brooklyn Ferry’ was originally included or revised, he does not provide the
+               full bibliographic information for each of those editions. Instead, it is unclear
+               what Merandy used as source materials. While the resource list seems to indicate
+               Merandy relied on the variorum edition of Whitman’s works to transcribe the work, it
+               is also possible that the transcriptions were derived from the <emph>
+                  <ref target="https://web.archive.org/web/20170605124614/http:/whitmanarchive.org/"
+                     >Walt Whitman Archive</ref>
+               </emph> which is also cited in the list of resources. Merandy’s omission of precise
+               bibliographic citation is a limitation on the reliability of the work because it is
+               difficult for the reader to compare Merandy’s text against a specific primary
+               source.</p>
+            <p xml:id="p8">Including annotations within textual transcriptions is another practice
+               that one scholar recommends should be avoided (Shillingsburg 2013a). Merandy avoids
+               this problem by providing transcriptions with embedded annotations (the menu option
+               labeled Edition Evolution) and without them (the Edition Comparisons menu option).
+               That allows part of the website to function as Shillingsburg advises as a stable
+               foundation upon which critical analysis can be built. ‘Separating text-only from
+               enhancement makes both transcription of text and enhancement of text more versatile
+               and flexible’ (Shillingsburg 2013a, 11). Merandy has accomplished this to some extent
+               through the drop down menu choices.</p>
+            <p xml:id="p9">Merandy’s site includes transcriptions without accompanying page images
+               from source texts. ‘A virtual collection of transcriptions without images of the
+               material archive is not a virtual archive--is not a surrogate in any sense
+               whatsoever’ (Shillingsburg 2013b, 3). As a result, the scholar would be unable to
+               rely on the transcription because it is unverifiable. Unfortunately, that is the case
+               with Merandy’s project. The user can go out of the site to compare texts, but cannot
+               verify transcriptions within it.</p>
+            <p xml:id="p10">In spite of these limitations, Merandy does provide an interesting
+               approach to the study of this iconic poem. From the home page of <emph>Crossing
+                  Brooklyn Ferry</emph>, users can link to seven different sub-pages from a drop
+               down menu within the site as well as to other content in the issue of the
+                  <emph>Mickle Street Review</emph>. The seven options are headed ‘Close Reading’,
+               ‘Edition Evolution’, ‘Edition Comparisons’, ‘Walking Tour’ (multi-sensory), ‘Talk
+               Back’, ‘About This Project’, and ‘Resources’. The sub-pages will be examined
+               separately. Unfortunately, no search functionality is built into the site.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Website Sections</head>
+            <div xml:id="div2.1">
+               <head>Close Reading</head>
+               <p xml:id="p11">Walt Whitman stated his intentions about further publication in the
+                  unnumbered ninth edition (1891) of <emph>Leaves of Grass</emph>, published by
+                  David McKay. Of the various published editions, the poet wrote, ‘I prefer and
+                  recommend this present one, complete, for future printing, if there should be any’
+                  (Whitman 1891, 2). Merandy’s opening statement in the close reading section cites
+                  the 1881 edition as Whitman’s preferred edition. However, Whitman did not revise
+                  ‘Crossing Brooklyn Ferry’ after the 1881 edition, so Merandy’s close reading does
+                  examine Whitman’s ‘final’ published version of the poem. In the close reading,
+                  Merandy provides glosses for vocabulary, and offers critical insights. These
+                  features add value far beyond what a traditional textual essay would have
+                  provided. Unfortunately, Merandy’s introduction to this section is somewhat
+                  misleading as noted above and a typo (a misspelling of ‘preferred’). The textual
+                  transcription of the poem in this section has at least one error (‘thiswhich’
+                  instead of ‘this which’ in stanza 8:5) which impacts keyword searching. The
+                  combination of these missteps must give the user pause.</p>
+               <p xml:id="p12">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/cbf/pictures/picture-2.png"/>
+                     <head type="legend">Close Reading of ‘Crossing Brooklyn Ferry’.</head>
+                  </figure> Merandy provides a legend to the embedded coding as follows: <list
+                     rend="bulleted">
+                     <item>a analysis and criticism</item>
+                     <item>g word gloss</item>
+                     <item>i image</item>
+                     <item>m manuscript images</item>
+                     <item>q quotes</item>
+                     <item>v video</item>
+                  </list> The corresponding embedded codes (a, g, and q) provide the reader with
+                  insightful critical analysis, explanatory word glosses, and appropriate quotations
+                  from Whitman’s prose writings. By hovering over the codes, the textual statements
+                  are visible to the user. Display of special characters (apostrophes, for example)
+                  is actually a distraction in the text because of anomalies in coding that may be
+                  specific to the browser. For example, in this reviewer’s browser, diamond-enclosed
+                  question marks replace quotation marks and apostrophes.<note xml:id="ftn1">Browser
+                     used was Firefox 55.0.3 on Windows 10 Enterprise version 1607. Similar browser
+                     anomalies were also found using Chrome 61.0.3163.79.</note> But even these
+                  anomalies are inconsistent; in some text, the marks display correctly. These
+                  anomalies vary from established scholarly norms and detract from the quality.
+                  Alternatively, the user can click on the codes and open the text window, but the
+                  white on black layout is difficult to read. One of only three word glosses, the
+                  gloss for ‘similitudes’ cites <emph>Encarta Dictionary</emph>, an early Microsoft
+                  electronic reference work that has been defunct since 2009. The added text could
+                  benefit from a proofreader’s eye. Still, the weaving of these pieces does enrich
+                  the work and help elucidate the poem for new readers.</p>
+               <p xml:id="p13">The inclusion of still images and a video recording provides added
+                  value for the reader. Static visual images include primary texts, photographs or
+                  paintings of New York’s waterfront, people, buildings, etc. Including images
+                  provides context for contemporary users, and defines antiquated terms such as
+                  ‘lighter’ or ‘schooner’ for modern readers. Juxtaposing nineteenth-century images
+                  of places with twenty-first-century ones also provides an enhanced perspective.
+                  Most of the images were downloaded from the New York Public Library’s (NYPL)
+                  digital collections and Merandy credits the NYPL by providing the image number,
+                  but attribution for other images is lacking.</p>
+               <p xml:id="p14">The single video image included in this edition is a 1903 video
+                  recording entitled <emph>Panorama Water Front and Brooklyn Bridge from East
+                     River</emph> from Thomas A. Edison, Inc. The video includes a phenomenal view
+                  of the Brooklyn Bridge which Whitman might have seen during the bridge’s
+                  construction. Merandy’s inclusion of this vision speaks to progress in the
+                  industrial age; the completion of the bridge in 1883 would make the
+                  Brooklyn-Manhattan ferry system obsolete. So Merandy’s inclusion of the video
+                  serves as a bit of poetry unto itself. The file is stored as an MPG file. The
+                  source information shows the video can be downloaded from the <emph>Mickle Street
+                     Review</emph> website, but it could not be discovered there. It is likely that
+                  it was originally downloaded from the Library of Congress website where it can be
+                  viewed, but the site does not include a citation for it. Providing a complete
+                  citation at the item level (the video recording) might help users access
+                  additional material.</p>
+               <p xml:id="p15">In the close reading section, Merandy includes three sample images
+                  from Whitman’s 1855-56 <emph>Notebook</emph> which can be viewed by clicking on
+                  the embedded ‘m’ code. These images provide the user with a sense of materiality
+                  of the text, connecting the twenty-first-century reader with the
+                  nineteenth-century writer. The digital world does not support tactile modality to
+                  promote understanding – at least not yet – so the inclusion of these images
+                  provides a surrogate. Although the inclusion of the images provides an
+                  introduction to the manuscript, the user does not have the option to compare the
+                  transcription to the original document. The text does not show the transcription
+                  of the notebook page. <emph><ref
+                        target="https://web.archive.org/web/20170605124614/http:/whitmanarchive.org/"
+                        >The Walt Whitman Archive</ref></emph> includes notebook images with
+                  accompanying transcription in TEI, but the page images provided on Merandy’s site
+                  are not included there yet.</p>
+               <p xml:id="p16">The display from clicking in the close reading section is sometimes
+                  difficult to interpret. This factor can be attributed to the dated code. All in
+                  all, there are some concerns about the functionality of this section, but
+                  Merandy’s insights are interesting and worth reading.</p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Edition Evolution</head>
+               <p xml:id="p17">In this section of the website, Merandy traces Whitman’s changes and
+                  emendations to ‘Crossing Brooklyn Ferry’ from the original publication in the 1856
+                  edition of <emph>Leaves of Grass</emph> through the 1881 edition. Merandy uses
+                  visual cues (red or white text) to show deletions or changes and once again uses
+                  an embedded code ‘a’ to include textual analysis. There is real value in this
+                  method. When compared with the variorum edition Merandy cites in the resource
+                  list, the changes are much clearer to understand and recognize. This example
+                  showcases the value of a web-based edition over the black and white printed page.
+                  Here the text pops up just as it did on the close reading section of the website
+                  with some of the same idiosyncrasies. In this section, too, Merandy has embedded
+                  related images and textual commentary.</p>
+               <p xml:id="p18">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/cbf/pictures/picture-3.png"/>
+                     <head type="legend">Edition Evolution of ‘Crossing Brooklyn Ferry’.</head>
+                  </figure> Unfortunately, outside of the year of publication, Merandy provides no
+                  additional bibliographic information for source texts. To fully document the
+                  evolution, full publication information would be important for a scholarly
+                  edition.</p>
+               <p xml:id="p19">One value added feature of Merandy’s approach is the photograph of
+                  Whitman embedded in the text that corresponds with the publication period of each
+                  edition. This feature gives a sense of time passing; the user can follow the
+                  maturation of the poet’s work as he aged.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Edition Comparisons</head>
+               <p xml:id="p20">In this section, Merandy allows the user to select two different
+                  editions and read them side by side. This comparison method lacks the
+                  sophistication and functionality of such comparisons that can be generated today
+                  using open source software applications such as Juxta. Users on Merandy’s site
+                  must find the variants themselves. Comparing Merandy’s textual transcriptions with
+                  editions stored in <emph>The Walt Whitman Archive</emph> using <ref
+                     target="https://web.archive.org/web/20170605151619/http:/www.juxtasoftware.org/"
+                     >Juxta</ref> revealed a small number of transcription errors on the website.
+                  These are recorded in the table below. Curiously, the transcription errors in the
+                  edition comparisons subpage are not consistent with the edition evolution subpage.
+                  Errors, whether in the text of transcriptions or introduced by the transcriber,
+                  undermine the value of any textual project. While these transcription errors are
+                  few and slight, they do change the reading of the poem, and in poetry especially,
+                  nuances matter. As the <emph>MLA Statement on the Scholarly Edition in the Digital
+                     Age</emph> indicates, ‘completeness and accuracy of textual account and
+                  resultant text or texts’ is expected in a scholarly edition as a ‘best practice’
+                  (MLA 2016, 4).</p>
+               <p xml:id="p21">Transcription errors revealed in Juxta: <table>
+                     <head/>
+                     <row role="label">
+                        <cell>Edition</cell>
+                        <cell>Stanza: Line</cell>
+                        <cell>Close Reading</cell>
+                        <cell>Edition Evolution</cell>
+                        <cell>Edition Comparisons</cell>
+                        <cell>Whitman Archive Page Image</cell>
+                     </row>
+                     <row>
+                        <cell>1860</cell>
+                        <cell>5:01</cell>
+                        <cell>--</cell>
+                        <cell>instance</cell>
+                        <cell>instance</cell>
+                        <cell>distance</cell>
+                     </row>
+                     <row>
+                        <cell>1860</cell>
+                        <cell>17: 7, 24: 13</cell>
+                        <cell>--</cell>
+                        <cell>rôle</cell>
+                        <cell>rle</cell>
+                        <cell>rôle</cell>
+                     </row>
+                     <row>
+                        <cell>1881</cell>
+                        <cell>6:07</cell>
+                        <cell>knotted</cell>
+                        <cell>knotted</cell>
+                        <cell>knotted</cell>
+                        <cell>knitted</cell>
+                     </row>
+                     <row>
+                        <cell>1881</cell>
+                        <cell>8:06</cell>
+                        <cell>thiswhich</cell>
+                        <cell>this which</cell>
+                        <cell>thiswhich</cell>
+                        <cell>this which</cell>
+                     </row>
+                  </table>
+               </p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Walking Tour</head>
+               <p xml:id="p22">One of the most interesting attributes of Merandy’s project is the
+                  inclusion of the Brooklyn walking tour. As a New York City resident and former
+                  CUNY student, Merandy is qualified to provide this enhanced perspective.
+                     <emph>Walking with Whitman: A Downloadable Walking Tour</emph> takes the
+                  visitor ‘through the historic streets of Brooklyn Heights’ along with an
+                  opportunity to cross into Manhattan, either via the Brooklyn Bridge or water taxi.
+                  The user is offered a fresh, multi-sensory experience for studying Whitman’s
+                  Brooklyn. This section of the website allows the user to download a travel packet
+                  and text of the audio files as portable document files. The travel packet includes
+                  directions, travel maps, and historic information to guide the user along the
+                  roads of Brooklyn. Of course, since 2009 when this packet was completed, Google
+                  Maps has become a more sophisticated application and Merandy’s maps look fairly
+                  primitive by comparison. An updated version of this site could include a mobile
+                  app. Technology has come a long way since 2009.</p>
+               <p xml:id="p23">This experience can be considered multi-sensory because people today
+                  (Whitman’s ‘generations hence’) who actually take the tour will find their senses
+                  stimulated by the sounds of the Brooklyn streets, the smells from food wagons, and
+                  other urban delights. This kind of exploration brings the works of Whitman to
+                  life. It is perhaps the single most important aspect of Merandy’s project.</p>
+               <p xml:id="p24">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/cbf/pictures/picture-5.png"/>
+                     <head type="legend">Walking tour to accompany <emph>Crossing Brooklyn Ferry: An
+                           Online Critical Edition</emph>.</head>
+                  </figure> Audio files are stored as MP3 files. These files contain narrations of
+                  selections from Whitman’s poetry and prose. The narrations are designed to
+                  accompany the walking tour and are numbered to sync with stops along the tour.</p>
+               <p xml:id="p25">Unfortunately, because the site has not been updated, links to
+                  additional resources (with the exception of boat tours) are broken.</p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Other Sub-Pages</head>
+            <p xml:id="p26">The link for the ‘Talk Back’ sub-page is broken so it is impossible to
+               identify Merandy’s intent. The link to ‘About This Project’ gives an overview of
+               Merandy’s project and acknowledges his mentors for the project. The ‘Resources’ page
+               includes a bibliography of works cited throughout the site. However, many of the
+               links to external sites are broken. The list of resources also includes misspellings
+               (‘Fienberg’ for ‘Feinberg’ at the Library of Congress).</p>
+            <p xml:id="p27">While fixity (as slippery a term as it is) is anticipated in printed
+               editions, fixity in the digital world is not expected, so encountering so many broken
+               links is very disappointing.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Conclusion </head>
+            <p xml:id="p28">Guidelines from the Institut für Dokumentologie und Editorik (IDE)
+               indicate that to be considered a scholarly digital edition, a work must include a
+               statement of the editorial method employed, comply with scholarly expectations for
+               content and quality, and open up new possibilities beyond those of the age of print
+               (2014). In IDE terms, scholarly digital editions are ‘information systems which
+               follow a methodology determined by a digital paradigm.’ From such a broad
+               generalization, Merandy’s project, <emph>Crossing Brooklyn Ferry: An Online Critical
+                  Edition</emph>, would appear to qualify as a scholarly digital edition. It
+               includes a statement about the editorial method, and opens up possibilities for study
+               that were not available in the print age. IDE guidelines also require an abstraction
+               layer such as XML for consideration as a scholarly digital edition, but Merandy’s
+               project does not include evidence of this layer.</p>
+            <p xml:id="p29">Merandy’s project is commendable in that it provides users with an
+               enriched perspective on Whitman’s iconic poem through the incorporation of textual
+               commentary, embedded images, sound files, and other multi-sensory features.
+               Particularly noteworthy is Merandy’s creation and inclusion of the Brooklyn walking
+               tour. Students encountering the poem for the first time would find Merandy’s site to
+               be very informative and eye-opening. It seems to this reviewer, however, that quality
+               of the work remains the commonality whether an edition is published in a print medium
+               or in an electronic format. Accuracy and careful transcription from the source
+               material remain paramount so that scholars and perhaps more importantly, students,
+               can use a resource with confidence and surety, if not fixity. Because of the lack of
+               the evidence for the abstraction layer, attribution questions, factual errors, the
+               lack of clear bibliographic citation for the various editions, the admittedly small
+               but significant number of transcription errors, and unfortunate excess of broken
+               links, this reviewer cannot consider this effort to be a scholarly digital edition in
+               the strictest sense of the term. If Merandy would take this legacy edition out of
+               mothballs, correct the errors, and update the coding, it has the potential to become
+               one, and Merandy is certainly the one to do it.</p>
+            <p xml:id="p30">The main problem with legacy editions is that as technology marches
+               forward, these works may be left behind and there is a real concern that at some
+               point in the future, access to them might be limited. Given its genesis as a student
+               project (which is the case with so many digital humanities projects) Merandy’s
+                  <emph>Crossing Brooklyn Ferry: An Online Critical Edition</emph> is a reflection
+               of its time and reflects the shortcomings of a legacy project which was not
+               originally envisioned as a definitive scholarly digital edition. Still, this project
+               is a fascinating one and warrants consideration in the field of Whitman studies. The
+               examination of Merandy’s site also raises philosophical questions about the nature of
+               legacy editions in a time of change where today’s efforts are out of date tomorrow.
+               What is the responsibility for maintaining legacy editions as digital tools continue
+               to evolve? Is it fair to assess them against a standard that was not available at the
+               time of their creation? What about the temporality of the project? These questions,
+               of course, go beyond the scope of this review but they remain intriguing.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Allen, Gay Wilson. 1967. <emph>The Solitary Singer: A Critical Biography of
+                     Walt Whitman</emph>. New York: New York University Press.</bibl>
+               <bibl>Bolter, Jay David. 1991. <emph>Writing Space: The Computer, Hypertext, and the
+                     History of Writing</emph>. Hillsdale, New Jersey: Lawrence Erlbaum.</bibl>
+               <bibl>Merandy, Jesse. <emph>Jesse Merandy</emph> (blog). <ref
+                     target="https://web.archive.org/web/20170605170316/http:/jessemerandy.com/crossing-brooklyn-ferry-an-online-critical-edition/"
+                     >https://web.archive.org/web/20170605170316/http:/jessemerandy.com/crossing-brooklyn-ferry-an-online-critical-edition/</ref>.</bibl>
+               <bibl>MLA Committee on Scholarly Editions. 2016. ‘MLA Statement on the Scholarly
+                  Edition in the Digital Age.’ Modern Language Association of America. <ref
+                     target="https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/MLA-Statement-on-the-Scholarly-Edition-in-the-Digital-Age"
+                     >https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/MLA-Statement-on-the-Scholarly-Edition-in-the-Digital-Age</ref>.</bibl>
+               <bibl>NINES and Permanent Software. <emph>Juxta</emph>. <ref
+                     target="http://www.juxtasoftware.org/"
+                  >http://www.juxtasoftware.org/</ref>.</bibl>
+               <bibl>Pierazzo, Elena. 2016. ‘Textual Scholarship and Text Encoding: A New
+                  Theoretical Framework.’ In <emph>A New Companion to Digital Humanities</emph>,
+                  edited by Schreibman, Susan, Siemens, Raymond George, and Unsworth, John M.,
+                  307–21. Chichester: John Wiley.</bibl>
+               <bibl>Sahle, Patrick, Georg Vogeler, et al. 2014. ‘Criteria for Reviewing Scholarly
+                  Digital Editions.’ Institut für Dokumentologie und Editorik. <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
+                     >https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/</ref>.</bibl>
+               <bibl>Shillingsburg, Peter. 2013a. ‘Development Principles for Virtual Archives and
+                  Editions.’ <emph>Center for Textual Studies and Digital Humanities
+                     Publications</emph>. <ref target="http://ecommons.luc.edu/ctsdh_pubs/4"
+                     >http://ecommons.luc.edu/ctsdh_pubs/4</ref>.</bibl>
+               <bibl>Shillingsburg, Peter. 2013b. ‘From Physical to Digital Textuality: Loss and
+                  Gain in Literary Projects.’ <emph>Center for Textual Studies and Digital
+                     Humanities Publications</emph>. <ref
+                     target="http://ecommons.luc.edu/ctsdh_pubs/2"
+                     >http://ecommons.luc.edu/ctsdh_pubs/2</ref>.</bibl>
+               <bibl>
+                  <emph>The Walt Whitman Archive</emph>. Edited by Ed Folsom and Kenneth M. Price.
+                  [Lincoln, Neb.]: Center for Digital Research in the Humanities, University of
+                  Nebraska--Lincoln. <ref target="http://www.whitmanarchive.org/"
+                     >http://www.whitmanarchive.org/</ref>.</bibl>
+               <bibl>Whitman, Walt. <emph>Leaves of Grass</emph>. [9th ed.] Philadelphia: David
+                  McKay. 1892. <ref target="http://whitmanarchive.org/published/LG/1891/whole.html"
+                     >http://whitmanarchive.org/published/LG/1891/whole.html</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
 </TEI>
