@@ -1,1110 +1,1551 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title/>
-        <respStmt>
-          <resp>author</resp>
-          <name>
-            <persName>
-              <forename xml:id="reviewer_forename">Martina</forename>
-              <surname xml:id="reviewer_surname">Scholger</surname>
-            </persName>
-            <affiliation>
-              <orgName xml:id="reviewer_organization">Centre for Information Modelling - Austrian Centre for Digital Humanities, University of Graz</orgName>
-              <placeName xml:id="reviewer_place">Graz, Austria</placeName>
-            </affiliation>
-            <email xml:id="reviewer_email">martina.scholger (at) uni-graz.at</email>
-          </name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Institut für Dokumentologie und Editorik</publisher>
-        <date/>
-        <idno type="issue">4</idno>
-        <idno type="URI">http://ride.i-d-e.de/issue-4/klee</idno>
-        <idno type="doi">10.18716/ride.a.4.4</idno>
-        <availability>
-          <licence>
-            <ref target="http://creativecommons.org/licenses/by/4.0/"/>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <notesStmt>
-        <relatedItem>
-          <biblStruct>
-            <monogr>
-              <title xml:id="resource_title">Paul Klee – Bildnerische Form- und Gestaltungslehre</title>
-              <editor xml:id="resource_editors">Fabienne Eggelhöfer; Marianne Keller Tschirren</editor>
-              <respStmt>
-                <resp>Contributor</resp>
-                <persName>
-                  <name>Christine Burger</name>
-                </persName>
-              </respStmt>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Fabienne Eggelhöfer</name>
-                </persName>
-              </respStmt>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Marianne Keller Tschirren</name>
-                </persName>
-              </respStmt>
-              <respStmt>
-                <resp>Contributor</resp>
-                <persName>
-                  <name>Marco Näpflin</name>
-                </persName>
-              </respStmt>
-              <respStmt>
-                <resp>Contributor</resp>
-                <persName>
-                  <name>Helen Würsch</name>
-                </persName>
-              </respStmt>
-              <imprint>
-                <date xml:id="resource_date_publication">2012</date>
-              </imprint>
-            </monogr>
-            <idno xml:id="resource_uri">http://www.kleegestaltungslehre.zpk.org</idno>
-          </biblStruct>
-        </relatedItem>
-        <note>
-          <date xml:id="resource_date_access">2016-03-04</date>
-        </note>
-      </notesStmt>
-      <sourceDesc>
-        <p>Auf der Basis von <ref>http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1</ref>
-                </p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
-          <category xml:id="documentation">
-            <category xml:id="bibl_desc">
-              <catDesc>
-                <ref target="#K1.2">cf. Catalogue 1.2</ref>
-              </catDesc>
-              <catDesc>Is it easily possible to describe the project bibliographically along the schema "responsible editors, publishing/hosting institution, year(s) of publishing"?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="contributors">
-              <catDesc>
-                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-              </catDesc>
-              <catDesc>Are the contributors (editors, institutions, associates) of the project fully documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contacts">
-              <catDesc>
-                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-              </catDesc>
-              <catDesc>Does the project list contact persons?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="selection">
-              <category xml:id="explained">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="reasonable">
-                <catDesc>
-                  <ref target="#K2.1">cf. Catalogue 2.1</ref>
-                </catDesc>
-                <catDesc>Is the selection by and large reasonable?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="data_archive">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the documentation include information about the long term sustainability of the basic data (archiving of the data)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="aims">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="methods">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="data_model">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <catDesc>Does the project document which data model (e.g. TEI) has been used and for what reason?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="help">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts concerning the use of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="citation">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or a part of it)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="complete">
-              <catDesc>
-                <ref target="#K4.16">cf. Catalogue 4.16</ref>
-              </catDesc>
-              <catDesc>Does the editon regard itself as a completed project (i.e. not promise further modifications and additions)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="institutional_curation">
-              <catDesc>
-                <ref target="#K4.13">cf. Catalogue 4.13</ref>
-              </catDesc>
-              <catDesc>Does the project provide information about institutional support for the curation and sustainability of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="contents">
-            <category xml:id="previous_edition">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="materials_used">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>Does the edition make use of these previous editions?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="introduction">
-              <catDesc>
-                <ref target="#K4.15">cf. Catalogue 4.15</ref>
-              </catDesc>
-              <catDesc>Does the project offer an introduction to the subject-matter (the author(s), the work, its history, the theme, etc.) of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="bibliography">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a bibliography?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="commentary">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear passages, interpretation, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contexts">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project include or link to external resources with contextual material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="images">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>Does the project offer images of digitised sources?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="image_quality">
-              <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
-                            </catDesc>
-              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="transcriptions">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc> Is the text fully transcribed?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="text_quality">
-              <catDesc>
-                <ref target="#K4.6">cf. Catalogue 4.6</ref>
-              </catDesc>
-              <catDesc>Does the project offer texts of an acceptable quality (typos, errors, etc.)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="indices">
-              <catDesc>
-                <ref target="#K4.5">cf. Catalogue 4.5</ref>
-              </catDesc>
-              <catDesc>Does the project feature compilations indices, registers or visualisations that offer alternative ways to access the material?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="documents">
-              <category xml:id="doc_type">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
-                <category xml:id="single_manuscript">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="single_work">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collection_of_texts">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collected_works">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="papers">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="archival_holding">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="charters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="letters">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="diary">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.4.4">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Paul Klee – Bildnerische Form- und Gestaltungslehre</title>
+            <author ref="https://orcid.org/0000-0003-1438-3236">
+               <name>
+                  <forename>Martina</forename>
+                  <surname>Scholger</surname>
+               </name>
+               <affiliation>
+                  <orgName>Centre for Information Modelling - Austrian Centre for Digital
+                     Humanities, University of Graz</orgName>
+                  <placeName>Graz, Austria</placeName>
+               </affiliation>
+               <email>martina.scholger (at) uni-graz.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2016-06">June 2016</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-4/klee</idno>
+            <idno type="DOI">10.18716/ride.a.4.4</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue04/klee/klee.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0001-8820-5112" role="assistant">Tessa
+               Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny</editor>
+            <biblScope unit="issue" n="4">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-4</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Paul Klee – Bildnerische Form- und Gestaltungslehre</title>
+                  <editor>Fabienne Eggelhöfer; Marianne Keller Tschirren</editor>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Christine Burger</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Fabienne Eggelhöfer</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Marianne Keller Tschirren</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Marco Näpflin</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Helen Würsch</persName>
+                  </respStmt>
+                  <date type="publication">2012</date>
+                  <idno type="URI">http://www.kleegestaltungslehre.zpk.org</idno>
+                  <date type="accessed">2016-03-04</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
                   </category>
-                </category>
-              </category>
-              <category xml:id="doc_time">
-                <catDesc>
-                  <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
-                </catDesc>
-                <catDesc>What era(s) do the documents belong to?</catDesc>
-                <category xml:id="classics">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="medieval">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="early_modern">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="modern">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="subject">
-              <catDesc>
-                <ref target="#K1.3">cf. Catalogue 1.3</ref>
-              </catDesc>
-              <catDesc>Which perspective(s) do the editors take towards the edited material? How can the edition be classified in general terms?</catDesc>
-              <category xml:id="history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philology_literary_studies">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="philosophy_theology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="history_of_science">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="musicology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="art_history">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="presentation">
-            <category xml:id="spin_offs">
-              <catDesc>
-                <ref target="#K4.11">cf. Catalogue 4.11</ref>
-              </catDesc>
-              <catDesc>Does the project offer any spin-offs?</catDesc>
-              <category xml:id="app">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="mobile">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PDF">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="browse_by">
-              <catDesc>
-                <ref target="#K4.3">cf. Catalogue 4.3</ref>
-              </catDesc>
-              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
-              <category xml:id="authors">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="works">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="versions">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="structure">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="pages">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_documents">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="type_of_material">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="browse_by_images">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="dates">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="persons">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="places">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="search">
-            <category xml:id="simple">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer a simple search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="advanced">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer an advanced search?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="wildcard">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search support the use of wildcards?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="index">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer an index of the searched field?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="suggest">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="helptext">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Does the project offer help texts for the search?</catDesc>
-              <catDesc>
-                <num type="booleanX" value="1"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="aim">
-            <category xml:id="audience">
-              <catDesc>
-                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-              </catDesc>
-              <catDesc>Who is the intended audience of the project?</catDesc>
-              <category xml:id="scholars">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="interested_public">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="typology">
-              <catDesc>
-                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
-              </catDesc>
-              <catDesc>Which type fits best for the reviewed project?</catDesc>
-              <category xml:id="facsimile_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="archive_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="documentary_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_edition">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="genetic_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="work_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="text_critical_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="enriched_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="database_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_library">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_collection_of_texts">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="method">
-            <catDesc rend="label">Method</catDesc>
-            <category xml:id="critical_editing">
-              <catDesc>
-                <ref target="#K3.6">cf. Catalogue 3.6</ref>
-              </catDesc>
-              <catDesc>In how far is the text critically edited?</catDesc>
-              <category xml:id="transmission_examined">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="palaeographic_annotations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="normalization">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="variants">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="emendation">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentary_notes">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="standards">
-              <catDesc>
-                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-              </catDesc>
-              <category xml:id="XML">
-                <catDesc>Is the data encoded in XML?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="standardized_data_model">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
-              </category>
-            </category>
-            <category xml:id="text_type">
-              <catDesc>
-                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
-              </catDesc>
-              <catDesc>Which kinds or forms of text are presented?</catDesc>
-              <category xml:id="facsimiles">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_transcription">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="edited_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="translations">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentaries">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="semantic_data">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="technical_accessability">
-            <category xml:id="persistent_identification">
-              <catDesc>
-                <ref target="#K4.8">cf. Catalogue 4.8</ref>
-              </catDesc>
-              <catDesc>Are there persistent identifiers and an addressing system for the
-                                                edition and/or parts/objects of it and which mechanism is used to
-                                                that end?</catDesc>
-              <category xml:id="DOI">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="ARK">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="URN">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PURL.ORG">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category xml:id="persistent_URLs">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="interfaces">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse of the data of the project in other contexts?</catDesc>
-              <category xml:id="OAI-PMH">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="REST">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_API">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="open_access">
-              <catDesc>Is the edition Open Access?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="basic_data_accessible">
-              <catDesc>
-                <ref target="#K4.12">cf. Catalogue 4.12</ref>
-              </catDesc>
-              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of the edition (e.g. for a page)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="download">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="reuse">
-              <catDesc>
-                <ref target="#K4.9">cf. Catalogue 4.9</ref>
-              </catDesc>
-              <catDesc>Can you use the data with other tools useful for this kind of content?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="rights">
-              <category xml:id="declared">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Are the rights to (re)use the content declared?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="license">
-                <catDesc>
-                  <ref target="#K4.13">cf. Catalogue 4.13</ref>
-                </catDesc>
-                <catDesc>Under what license are the contents released?</catDesc>
-                <category xml:id="CC0">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="PDM">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category xml:id="no_license">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="multiple_licenses">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-          </category>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="abstract">
-        <p>This paper reviews the digital edition of Paul Klee’s <emph>Bildnerische Form- und Gestaltungslehre</emph>, the collection of his important teaching notes during his time at the Bauhaus as facsimile and transcript. A major challenge of this project is the dynamic nature of the material: the teaching material was restructured, revised and subsequently reused several times. While the transcriptions are unfortunately only available as images, which severely limits the possibilities for re-use of the research data, the edition nevertheless provides a vital source for art-historical research on an artist who influenced a generation of successors.</p>
-      </div>
-      <div type="text">
-        <div type="div2">
-          <head>Einleitung</head>
-          <figure>
-            <head>Fig. 1: Startseite: Paul Klee - Bildnerische Form- und Gestaltungslehre</head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-1.png"/>
-          </figure>
-          <p>Paul Klees Auseinandersetzung mit der Form- und Gestaltungslehre prägte nachhaltig die Grafik und Malerei der Moderne und beeinflusste eine ganze Generation von Künstlern. Sein Schaffen zeichnete sich durch das Spiel mit Farben und Formen zur Erschaffung imaginärer Welten aus: „Kunst gibt nicht das Sichtbare wieder, sondern macht sichtbar" (Klee 1920). Er stand in enger Verbindung zur Redaktionsgemeinschaft „Der Blaue Reiter", hatte eine Professur an der Kunstakademie Düsseldorf inne und lehrte am Bauhaus in Weimar und Dessau. Mit seinem Unterricht am Bauhaus verlieh er dem ihm eigenen Stil ein theoretisches Fundament und lehrte seine Schüler das eigenständige bildnerische Denken.</p>
-          <p>Die vorliegende Edition des Zentrums Paul Klee stellt erstmals die gesamten Unterrichtsnotizen zur <emph>Bildnerischen Form- und Gestaltungslehre</emph> von Paul Klee als Faksimiles und Transkriptionen in digitaler Form zur Verfügung<note xml:id="ftn1" n="1">Die bisher als <emph>Pädagogischer Nachlass</emph> bezeichneten Notizen entstanden zwischen 1921 und 1931 während Paul Klees Lehrtätigkeit am Bauhaus in Weimar und Dessau und sind Teil seines künstlerischen Nachlasses am Zentrum Paul Klee in Bern.</note>. Sie bietet damit eine für die kunsthistorische Forschung unverzichtbare Quelle, die Einblick in die Arbeit des bedeutenden Malers und Grafikers Paul Klee (1879-1949) gewährt.</p>
-          <p>Bis zur Veröffentlichung der Datenbank war besonders die Rekonstruktion der Notizen zur bildnerischen Gestaltungslehre ausständig, was nicht zuletzt an dem prozesshaften Charakter des Materials lag. Mit diesem Editionsprojekt ist es gelungen, die bisher nur schwer verfügbaren Unterrichtsnotizen einer breiten Öffentlichkeit zugänglich zu machen, was sich auch aufgrund des Materialumfangs als Druckedition nur schwer bewältigen ließe.</p>
-        </div>
-        <div type="div2">
-          <head>Gegenstand der Edition</head>
-          <p>Seinen ersten Vortragszyklus, den Paul Klee zwischen 1921 und 1922 am Bauhaus abhielt, skizzierte er auf 192 Seiten in einem von ihm paginierten Buch und bezeichnete es mit dem Titel <emph>Beiträge zur bildnerischen Formlehre</emph>. Auszüge daraus publizierte Klee 1925 in komprimierter Form als <emph>Pädagogisches Skizzenbuch</emph> in der Reihe der Bauhausbücher (Zentrum Paul Klee 2012a). Die Themen seines Unterrichts reichten von der Auseinandersetzung mit der Linie, der Perspektive, dem Gleichgewicht und der Komposition, bis hin zur Farbenlehre.</p>
-          <p>Paul Klees <emph>Bildnerische Gestaltungslehre</emph> wurde von ihm selbst in 24 Kapiteln angelegt. Der <emph>Allgemeine Teil</emph> beschäftigt sich mit den Grundsätzen der bildnerischen Gestaltung. Die <emph>Planimetrische Gestaltung</emph> setzt sich mit den zweidimensionalen Formen ausgehend von Kreis, Dreieck und Quadrat auseinander. Die <emph>Stereometrische Gestaltung</emph> widmet sich der Darstellung dreidimensionaler Körper wie Kubus, Pyramide, Oktaeder, Hexaeder, Kugel und Kegel (Zentrum Paul Klee 2012a).</p>
-          <p>Während sich die <emph>Bildnerische Formlehre</emph> auf ein von Paul Klee handschriftlich verfasstes Notizbuch mit etwa 200 Seiten beschränkt, besteht die <emph>Bildnerische Gestaltungslehre</emph> aus einer Sammlung von rund 3900 Seiten, die als Notizbücher und lose Blätter vorliegen. Die Datenbank stellt diese vollständig als Faksimile und Transkriptionen zur Verfügung.</p>
-          <p>Paul Klee gliederte seine Unterrichtsnotizen thematisch in Umschlägen, die später durch seine Witwe Lily Klee und Jürg Spiller in der Reihenfolge ihrer Überlieferung nummeriert wurden. Im Rahmen eines Forschungsprojektes inventarisierte das Zentrum Paul Klee die Notizen neu. In der Datenbank wird das Quellenmaterial umfangreich beschrieben, auch zur Problematik der Nummerierung und der systematischen Ordnung der Gestaltungslehre, die aufgrund von losen Blättern und der mehrfachen Wiederverwendung und Umstrukturierung des Unterrichts schwer zu rekonstruieren ist, wird Stellung genommen (Zentrum Paul Klee 2012a).</p>
-          <p>Jürg Spiller publizierte eine zweibändige Edition zur Form- und Gestaltungslehre, <emph>Das Bildnerische Denken</emph> (Spiller 1956) und die <emph>Unendliche Naturgeschichte</emph> (Spiller 1970). Die Fachwelt bemängelte die Veränderung des ursprünglichen Aufbaus der Manuskripte durch den Editor und die Ergänzung durch eigene Darstellungen, ohne dies entsprechend auszuweisen. Die dem Material immanente Dynamik wurde von Spiller nicht berücksichtigt, die Darstellung suggeriert ein statisches, abgeschlossenes Werk (Huggler 1977 7-8).</p>
-          <p>Die gedruckte Edition der <emph>Bildnerischen Formlehre</emph> hingegen, die 1979 von Jürgen Glaesemer und der Paul Klee-Stiftung herausgegeben wurde, stellt bereits sämtliche Faksimiles und Transkriptionen bereit (Glaesemer 1979).</p>
-          <p>In einem durch den Schweizerischer Nationalfonds zur Förderung der wissenschaftlichen Forschung (SNF) und die Paul-Klee-Stiftung der Burgergemeinde Bern geförderten Projektes entstand zwischen 2008 und 2012 die digitale Edition der <emph>Beiträge zur Bildnerischen Formlehre</emph> und der <emph>Bildnerischen Gestaltungslehre</emph><note xml:id="ftn2" n="2"> Zu Projektlaufzeit, Veröffentlichung und Status des Projektes werden auf der Website selbst keine Angaben gemacht. In einer Medienmitteilung vom August 2012 wird die Projektlaufzeit mit 4 Jahren, die Freischaltung der Datenbank mit Ende August 2012 angegeben (Zentrum Paul Klee 2012b).</note>. Für die Onlinedatenbank wurden die Manuskripte am Zentrum Paul Klee digitalisiert, neu sortiert und inventarisiert sowie im Fall der noch nicht in digitaler Form repräsentierten <emph>Gestaltungslehre</emph> transkribiert.<note xml:id="ftn3" n="3"> Im Impressum wird als Herausgeber das Zentrum Paul Klee genannt sowie die für Konzeption, Redaktion und Umsetzung verantwortlichen MitarbeiterInnen Fabienne Eggelhöfer und Marianne Keller Tschirren. Auch für Transkription und Bildbearbeitung werden die verantwortlichen MitarbeiterInnen namentlich genannt, ein entsprechender Bildnachweis wird erbracht. Des Weiteren werden Datenbankdesign, Programmierung sowie finanzielle Unterstützung ausgewiesen.</note> Am Ende des Projektes stand die Ausstellung <emph>Meister Klee! Lehrer am Bauhaus</emph>, vom 31. Juli 2012 bis 6. Januar 2013, kuratiert von Fabienne Eggelhöfer und Marianne Keller Tschirren, am Zentrum Paul Klee in Bern.<note xml:id="ftn4" n="4">Die genannten MitarbeiterInnen zeichneten nicht nur für den Ausstellungskatalog (Eggelhöfer–Keller Tschirren–Thöner) verantwortlich, sondern verfassten auch projekteinschlägige Dissertationen (Eggelhöfer 2012; Keller Tschirren 2012)</note></p>
-        </div>
-        <div type="div2">
-          <head>Inhalte</head>
-          <p>Mit der Bereitstellung der Faksimiles und Transkripte, besonders der bis dahin noch wenig berücksichtigten <emph>Gestaltungslehre</emph>, erfüllt die Edition ein lang ersehntes Desideratum der Klee-Forschung. Das Projekt liefert insgesamt sehr detaillierte Beschreibungen zu den einzelnen Kapiteln und Digitalisaten, zur Überlieferung und besonders zur Problematik der Sortierung und Inventarisierung der <emph>Gestaltungslehre</emph>. Eine weiterführende Bibliografie findet sich in der Beschreibung des Quellenmaterials.</p>
-          <p>Der Inhalt der Unterrichtsnotizen stellt eine wertvolle Ressource für die Kunstgeschichtsforschung dar: Zur <emph>Bildnerischen Formlehre</emph> sowie zu jedem einzelnen Kapitel der <emph>Bildnerischen Gestaltungslehre</emph> wird von den EditorInnen eine sehr detaillierte Beschreibung des Quellenmaterials angeboten. Diese umfasst jeweils den Umfang des Konvoluts mit Angaben zum Materialtyp, den Kommentar mit Erläuterungen zur Zusammenstellung des Materials, Informationen über den Beschreibstoff, den Versuch einer (relativen) zeitlichen Einordnung sowie eine inhaltliche Beschreibung des Abschnittes. Diese Informationen werden über das Icon „Erläuterungen zum Kapitel" in einem horizontalen Menübalken, der sich unterhalb der Kopfzeile befindet, im PDF Format angeboten. Lediglich die Überblicksbeschreibung zur <emph>Gestaltungslehre</emph> ist zusätzlich zur Druckversion als Webansicht verfügbar; aus Gründen der Konsistenz, der einfacheren Benutzbarkeit und der Nachhaltigkeit wäre hier eine Vereinheitlichung des gesamten Angebots als HTML- und PDF-Format lohnend.</p>
-          <figure>
-            <head>Fig. 2: Weitere Informationen zur Seite</head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-2.png"/>
-          </figure>
-          <p>Zusätzlich zur Dokumentation der Kapitel werden über das so genannte Info-Fenster zu jedem einzelnen Digitalisat Metainformationen angeboten, sofern diese bekannt sind. Diese Angaben umfassen den Künstler, die Zuordnung zu Kapitel und Unterkapitel, Schlagworte zum Inhalt („Inhalt"), alte und neue Inventarnummer („Inv. Nr bzw. Alte Inv. Nr.") , die Abmessungen des Blattes („Maße"), Materialtyp und Beschreibstoff („Technik") sowie den Aufbewahrungsort des Manuskripts („Standort"). Die von Klee mit Farbstift eingefügten Nummerierungen und im Text vorkommende Datierungen („Bezeichnung") sind ebenso Teil der Kurzinformation wie die Anführung zusammengehörender Seitenfolgen und Referenzen auf andere Seiten („Bemerkung").</p>
-        </div>
-        <div type="div2">
-          <head>Transkript</head>
-          <p>Im Transkript werden die originale Orthographie, die Interpunktion sowie die dem Autor eigene Art der Trennung von Substantiven und Verwendung der Groß- und Kleinschreibung soweit als möglich erhalten. Fehlende, vertauschte oder unnötige Buchstaben werden im Fließtext korrigiert und kursiv hervorgehoben, zusätzlich wird die Originalschreibweise in der Fußnote angeführt. Fehlende Interpunktion bleibt unberücksichtigt. Der Geminationsstrich über den Buchstaben „m" und „n" wird normalisiert und zu „mm" und „nn" aufgelöst.</p>
-          <figure>
-            <head>Fig. 3: Wie an diesem Beispiel (<ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/21/144/">www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/21/144/</ref>) ersichtlich, würde sich eine Verschlagwortung der im Text beschriebenen Skizzierungen lohnen.</head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-3.png"/>
-          </figure>
-          <p>Textuelle Interventionen wie Einfügungen und Streichungen sowie editorische Anmerkungen werden in die Fußnoten ausgelagert: Einfügungen werden durch Schrägstriche markiert und Streichungen durchgestrichen angezeigt. Bei der Präsentation des Transkripts wurde eine möglichst dokumentennahe Nachempfindung des originalen Seitenlayouts angestrebt, d.h. Textgliederung, Zeileneinzug und Unterstreichungen werden in Anlehnung an das Layout der Faksimiles wiedergegeben. Auf die zusätzliche Markierung von Skizzen und grafischen Elementen wurde verzichtet, auch wird nicht zwischen Fließtexten und Bildunterschriften unterschieden. Eine Kennzeichnung grafischer Elemente (wie zum Beispiel ein Pfeil, der auf eine andere Textpassage verweist) im Text würde nicht nur die Orientierung auf der Manuskriptseite erleichtern, sondern auch zum Textverständnis beitragen. Der Text enthält eine Fülle an Zeichnungen und grafischen Elementen, die zur pädagogischen Vermittlung bildnerischer Form- und Gestaltungsmerkmale von besonderer Relevanz sind. Hier müsste man also über einen Weg nachdenken, diese Skizzen ebenfalls zu erschließen. Gerade im Fall der Manuskripte von Paul Klee, deren umfangreiches Skizzenmaterial nicht nur illustrativen Charakter hat, sondern auch die Rolle des vorherrschenden Informationsträgers übernehmen kann, ist die besondere Beachtung der bildlichen Elemente anzustreben. Durch die Annotation von Skizzen und Detailskizzen könnten Querverbindungen zu vergleichbaren Darstellungen hergestellt und einer Analyse unterzogen werden. Eine Erweiterung der Suchfunktionalität, die eine Skizze in einem definierten Nahverhältnis zum Text mit einschließt oder sogar eine verbale Beschreibung der Skizzen bzw. eine Verschlagwortung mit Hilfe eines kontrollierten Vokabulars anbietet, würde dem kunsthistorisch interessierten Benutzer besonders entgegenkommen und gezielte Suchabfragen nach Farben, Formen und Inhalten zulassen um z.B. Entwicklungsstadien sichtbar zu machen.</p>
-          <p>Sofern vorhanden wird die von Paul Klee vorgenommene Paginierung ebenfalls transkribiert. Metamarkierungen wie Stempel, Pfeile, einzelne Buchstaben oder Zahlen, später hinzugefügte Nummerierungen und Inventarnummern wurden im Transkript nicht berücksichtigt.<note xml:id="ftn5" n="5">Siehe <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/06/001/">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/06/001/</ref>. Stempel, Nummerierung rechts oben, rote Nummerierung rechts unten, rote Nummerierung unten werden nicht berücksichtigt.</note></p>
-        </div>
-        <div type="div2">
-          <head>Technischer Hintergrund und Präsentation</head>
-          <p>Für die Präsentation der Webinhalte werden Standardtechnologien wie XHTML, CSS und JavaScript eingesetzt. Über die dahinter stehende technische Infrastruktur und die Umsetzung wird auf der Website keine nähere Information gegeben. Das Datenbankdesign und die Programmierung wurden laut Impressum an externe Dienstleister ausgelagert. Es ist weder bekannt, in welchem Datenformat die Transkripte vorliegen, noch werden die zugrundeliegenden Rohdaten im Sinne von offenen Forschungsdaten zur Verfügung gestellt. Damit ist eine Nachnutzung der Daten nicht möglich.</p>
-          <p>Das Design der Seite ist sehr reduziert in schlichtem Grau und Rot gehalten und rückt damit den Inhalt der Edition in den Vordergrund. Der Aufbau folgt den üblichen Designrichtlinien, die Navigation mit ein- und ausklappbaren Menüs auf der linken Seite ermöglicht einen raschen Zugriff auf die Inhalte. Eine zusätzliche Hervorhebung der beiden Hauptressourcen – die <emph>Bildnerische Formlehre</emph> und die <emph>Bildnerische Gestaltungslehre</emph> – würden einen für den Benutzer noch einfacheren Zugang ermöglichen und die Unterscheidung der beiden Ressourcen fördern. Insgesamt wirkt das Design der Seite etwas veraltet, nicht zuletzt wegen der „Treeview-Navigation" mit vorangestelltem Plus- und Minuszeichen, eingerückter Hierarchieebene und den wenig ansprechenden Icons. Die Seite ist auf eine sehr hohe Bildschirmauflösung ausgerichtet, sodass auf kleineren Endgeräten die Inhalte beschnitten werden.</p>
-          <p>Ein nach Ansicht der HerausgeberInnen wesentlicher Fortschritt der Onlineausgabe ist eine vollständige farbliche Reproduktion der Unterrichtsnotizen, die zum Verständnis der Textgenese beitragen soll.</p>
-          <figure>
-            <head>Fig. 4: Ein Beispiel dafür, wie bezahlt sich eine farbige Reproduktion macht: <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/11/017/index_manu.pdf">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/11/017/index_manu.pdf</ref>.</head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-4.png"/>
-          </figure>
-          <p>Betrachtet man die Manuskripte aus einer textgenetischen Perspektive, können nachträgliche Textinterventionen, die in unterschiedlichen zeitlichen Stadien entstanden sind, beobachtet werden. Das sind zum Beispiel Modifikationen wie Streichungen und Hinzufügungen durch den Verfasser selbst, der die Notizen über mehrere Jahre in unterschiedlicher Zusammensetzung im Unterricht verwendet hat, oder die nachträgliche Paginierung durch seine Witwe Lilly Klee, die nach seinem Tod vorgenommen wurde. Allerdings wird dieser Entstehungsprozess der Unterrichtsnotizen von den EditorInnen nicht weiter annotiert und dokumentiert, die Interpretationsleistung bleibt dem Rezipienten überlassen. Eine Annotation der Textgenese könnte wertvolle Aufschlüsse über die Entwicklung von Klees Unterricht am Bauhaus geben. Zur digitalen Repräsentation von genetischen Phänomenen und der Rekonstruktion von Schreibprozessen bietet die Text Encoding Initiative (TEI) ein Instrumentarium, das von der Arbeitsgruppe „Genetic Editions" vorgeschlagen und in die Empfehlungen des Kodierungsstandards integriert wurden. Durch diese Ergänzungen können Textmodifikationen und -umstellungen, alternative Lesarten sowie Metamarkierungen und Verweise in einen chronologischen Ablauf gebracht und mit Verantwortlichkeiten versehen werden. Damit lassen sich unterschiedliche Stadien des Textes aufzeigen um den Entstehungsprozess zu rekonstruieren (Workgroup on Genetic Editions 2010).</p>
-          <p>Die Qualität der Faksimiles ist sehr heterogen, vor allem bleibt ungeklärt warum einige Digitalisate nur als Doppelseite, der Großteil der Notizhefte und Blätter hingegen als Einzelseite aufgenommen und zur Verfügung gestellt wurden. Besonders in ersterem Fall kann der Text aufgrund seiner Auflösung und Größe nur sehr schwer rezipiert werden. Bei den meisten Einzelseitenaufnahmen reicht die Auflösung der Faksimiles aus, um sie als begleitende Abbildung zum Transkript zu verwenden. Für eine genauere Untersuchung von Detailphänomenen im Manuskript, wie zum Beispiel Textmodifikationen und -überschreibungen, insbesondere aber die den Text begleitenden und das jeweilige Unterrichtsthema erläuternden Skizzen, eignen sich die Abbildungen jedoch nicht. Es verwundert daher, dass der Grund für die unzureichende Auflösung der Faksimiles in der Webansicht nicht an der mangelnden Aufnahmequalität liegen kann: Die Druckansicht bestätigt, dass die Digitalisate mit einer deutlich höheren Auflösung aufgenommen wurden. Die Bereitstellung der Bilder in einer höheren Auflösung, die Aufnahme der Digitalisate als Einzelseiten und die Anzeige in einem Image Viewer mit Zoomfunktion würde gerade diese Ressource besonders aufwerten.</p>
-          <figure>
-            <head>Fig. 5: Parallelansicht von Faksimile und Transkript <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/</ref></head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-5.png"/>
-          </figure>
-          <p>Eine eklatante Schwäche des Projektes ist die Präsentation von Faksimile und Transkript: diese werden in der Bildschirmanzeige gemeinsam in einem einzigen Bild gespeichert und angezeigt. Dabei wirkt sich die verlustbehaftete Kompressionsrate besonders auf die Lesbarkeit des Transkripts am Bildschirm aus. Zwar wird durch die Nebeneinanderstellung von Faksimile und Transkript und die parallele farbliche Hervorhebung einzelner Ausschnitte eine Text-Bild-Verknüpfung angeboten, diese enthält jedoch aufgrund der Präsentation des Transkripts als Abbildung keine computerlesbare Datenstruktur.</p>
-          <figure>
-            <head>Fig. 6: Parallelansicht mit farblicher Hervorhebung <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/</ref></head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-6.png"/>
-          </figure>
-          <p>Die Entscheidung, das Transkript nur als Bild anzubieten, kann nicht nachvollzogen werden, verzichtet man doch damit auf einige der grundlegendsten Vorzüge einer digitalen Edition, wie z.B. Bildannotation und -manipulation durch die Präsentation der Faksimiles in einem Image Viewer, das Angebot alternativer Ausgabeformate (z.B. Druck, eBook) durch die Verwendung von Annotationsstandards, Visualisierungen der Daten als Zeitleisten und Karten oder die Vernetzungsmöglichkeit mit externen Ressourcen. Damit entspricht diese Edition weder dem Stand der Technik noch der etablierten Methodologie, was die Güte des Projektes erheblich mindert. Transkript und Faksimile können nicht voneinander getrennt werden und aufgrund der Speicherung in einem Bild handelt es sich aus technischer Sicht nicht um eine tatsächliche Text-Bild-Verknüpfung, sondern um eine Verknüpfung von Bildern. Darüber hinaus ist die Seite auf eine sehr hohe Bildschirmauflösung ausgerichtet und reagiert nicht – im Sinne responsiven Webdesigns – flexibel auf die Anforderungen der jeweils benutzten Endgeräte.</p>
-          <p>Insbesondere in Bezug auf die Langzeitverfügbarkeit des Materials muss zudem kritisch bemerkt werden, dass das JPG-Format für die Repräsentation von Transkripten nicht geeignet ist, weil das Format zum einen verlustbehaftet und zum anderen auf aktuelle Möglichkeiten der Endgeräte optimiert ist. Im Vergleich zu Textdateien benötigen Bilddaten einen ungleich größeren Speicherplatz. Ob die Rohdaten in einem offenen Grafikformat (z.B. TIFF) bzw. Textformat (z.B. XML) existieren und in einem digitalen Repository gespeichert sind, geht aus der Projektbeschreibung nicht hervor. Jedenfalls kann der Text weder kopiert, noch in einem anderen Forschungskontext weiterbearbeitet und analysiert werden. Aufgrund der reinen Bildtranskripte können die Texte von externen Suchmaschinen nicht gefunden werden; ob die Texte auf anderem Weg – z.B. über das PDF – gefunden werden könnten, kann nicht überprüft werden. Die Indizierung wird durch entsprechende Anweisungen in einer robots.txt-Datei unterbunden. Die Entscheidung darüber, die Daten für Suchmaschinen und damit für den Benutzer nicht auffindbar zu machen, kann nicht nachvollzogen werden, stellen doch Suchmaschinen ein zentrales Instrument zur Suche und Navigation im Internet dar.</p>
-          <p>Die Hervorhebung korrespondierender Textpassagen wird über eine JavaScript-Programmierung gelöst, indem mittels CSS-Formatierungen farbige Layer über das Bild gelegt werden, die eine Verknüpfung von Transkript und Bild herstellen. Aufgrund fehlerhafter Anzeigeeffekte erschließt sich jedoch nicht immer, weshalb bei der Auswahl bestimmter Bereiche im Transkript gleichzeitig auch andere Textstellen markiert werden, was eine irreführende Verbindung der Inhalte suggeriert.<note xml:id="ftn6" n="6">Siehe <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/03/24/135/">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/03/24/135/</ref>. Bewegt man die Maus über die Textpassage die mit „Das Charakteristikum der Frontalen Position […]" beginnt, so werden auch andere Textteile farbig markiert.</note> Die Präsentation der Edition bietet daher noch Möglichkeiten zur Verbesserung.</p>
-        </div>
-        <div type="div2">
-          <head>Suche</head>
-          <p>Rechts oben auf der Website befindet sich ein einfacher Suchschlitz für die Volltextsuche, der Suchbegriff wird über die Enter-Taste oder den Suchen-Button abgesetzt. Eine detaillierte Beschreibung mit Beispielen zu den möglichen Suchfunktionen findet sich im Menüpunkt „Zur Datenbank" und im Hilfetext, der über das Fragezeichen-Icon erreichbar ist. Begriffe, die unter doppelten Anführungszeichen stehen, werden als zusammenhängende Phrase gesucht, eine Verknüpfung mehrerer Begriffe ist über das Plus-Zeichen als Suchoperator möglich, Wortbestandteile können über das Voran- bzw. Hintanstellen eines Asterisk als Trunkierungzeichen gesucht werden. Auch die kombinierte Suche nach Worten und Wortbestandteilen ist möglich. Zusätzlich lässt sich die Suche auf bestimmte Kapitel, das Info-Fenster, das Transkript oder auf die von Paul Klee eingeführten Seitenzahlen einschränken. Nachdem die originale Orthographie von Paul Klee in der Transkription unverändert blieb, können alternative Schreibweisen nur über die entsprechende Eingabe der Originalschreibweise gefunden werden. Hier könnte der Einsatz einer Volltextsuche mit Fuzzy-Logik zur Auffindung von ähnlichen Schreibweisen und Zeichenketten, wie zum Beispiel „Centrum" und „Zentrum", eine präzisere Trefferquote liefern.</p>
-          <p>Die Suchresultate werden nach Inventarnummern sortiert aufgelistet. Ein einzelnes Suchergebnis enthält einen Titel, der sich aus Kapitelzuordnung (sofern es sich um die <emph>Gestaltungslehre</emph> handelt), die Zuordnung zur <emph>Bildnerischen Formlehre</emph> bzw. <emph>Bildnerischen Gestaltungslehre</emph> über ein Kürzel und die fortlaufende Nummerierung des Faksimiles zusammensetzt. Das gesuchte Schlüsselwort wird in seinem Kontext ausgegeben und zusätzlich durch Fettdruck und gelbe Hinterlegung hervorgehoben. Das Thumbnail zeigt Faksimile und Transkript, von dort aus führt ein Link weiter zur Einzelobjektansicht. Die Suchresultate können auch direkt über das Drop-Down-Menü in der horizontalen Navigationsleiste angesteuert werden. Auch hier wird deutlich, dass die Entscheidung, das Transkript nur als Bild wiederzugeben von Nachteil ist, denn die Fundstelle wird im Transkript nicht hervorgehoben.</p>
-          <figure>
-            <head>Fig. 7: Liste der Suchresultate zum Begriff „Netzhaut"</head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-7.png"/>
-          </figure>
-          <p>Als zusätzliche Funktionalitäten werden ein Drop-Down Menü zur Navigation innerhalb der Seite sowie jeweils ein Button zum Info-Fenster, zur Kapitelerläuterung, zu den unterschiedlichen Druckoptionen, zur Kapitelübersicht und zu einem Hilfetext angeboten. Der Benutzer hat die Möglichkeit zwischen vier Druckoptionen im Format PDF zu wählen: Manuskript und Transkription auf einer Seite; Manuskript und Info-Fenster auf zwei Seiten; Manuskript, Info-Fenster und Transkription auf drei Seiten; oder nur das Manuskript auf einer Seite. Über den Button „Kapitelübersicht anzeigen" soll es möglich sein, ausgewählte Seiten aus dem aktuell gewählten Kapitel als PDF herunterzuladen. Diese Funktion ist leider nicht besonders benutzerfreundlich umgesetzt: Es werden nicht nur die selektierten Seiten des Kapitels, sondern mehrere Seiten – deren Auswahlkriterien nicht nachvollziehbar sind – heruntergeladen. Die Digitalisate werden im PDF Format in einer wesentlich besseren Qualität zur Verfügung gestellt als in der Anzeige auf der Website. Die Gründe für diese Entscheidung werden nicht genannt, es kann nur vermutet werden, dass bei zu großen Bilddateien lange Ladezeiten befürchtet wurden.</p>
-          <figure>
-            <head>Fig. 8: Die hervorragende Qualität des Manuskripts in der Druckansicht <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/index_manu.pdf">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/index_manu.pdf</ref></head>
-            <graphic url="wp-content/uploads/issue_4/klee/pictures/picture-8.png"/>
-          </figure>
-          <p>Ebenfalls eine Herausforderung für den Benutzer stellt das Drop-Down Menü zur Navigation im horizontalen Menübalken dar: Zwar kann man innerhalb der Kapitel auf diese Weise einfach die einzelnen Faksimileseiten ansteuern, in der Einleitung werden hingegen Faksimileseiten ohne erkennbaren Zusammenhang verknüpft. Die Bedienbarkeit der Website wird für den Benutzer dadurch erschwert, dass das Drop-Down Menü mit unterschiedlichen Funktionen belegt ist, d.h. einmal um über den gesamten Inhalt der Edition, ein zweites Mal um in einem ausgewählten Kapitel und ein weiteres Mal um in den Suchergebnissen zu navigieren.</p>
-          <p>Die einzelnen Handschriftenseiten sind fortlaufend durchnummeriert, diese Nummerierung spiegelt sich auch in der Struktur der URL wider. Somit ist eine eindeutige Zitierbarkeit von Einzelobjekten, wenn auch nur als Einheit von Text und Bild, möglich.</p>
-        </div>
-        <div type="div2">
-          <head>Fazit</head>
-          <p>Die (digitale) Edition als „erschließende Wiedergabe historischer Dokumente" (Sahle 2:168) ist eine in der Kunstgeschichte bislang wenig beachtete Herangehensweise. Umso mehr ist die Wichtigkeit solcher Bemühungen, wie der hier vorliegenden Digitalisierung der Unterrichtsnotizen von Paul Klee, positiv hervorzuheben, die damit in einer Reihe mit beispielhaften Projekten wie der gedruckten Edition der <emph>Max Beckmann Skizzenbücher</emph> (Max Beckmann Gesellschaft 2010) sowie den digitalen Editionen <emph>Vincent van Gogh. The Letters</emph> (Van Gogh Museum und Huygens Institute 2009) und <emph>Goethes Farbenlehre</emph> (Goethe [1810]) steht.</p>
-          <p>Die zuvor genannten vielschichtigen Funktionalitäten und Möglichkeiten einer digitalen Edition erlauben es, den Gedanken und Assoziationen eines Künstlers, wie hier Paul Klee, in einem höherem Maße näher zu kommen als es eine gedruckte Edition zu leisten vermag. Der enorme Umfang der Unterrichtsnotizen wäre als gedruckte Edition durch die notwendige Gegenüberstellung von Faksimile und Transkript zum einen mit enormem Aufwand verbunden, zum anderen in einer für den Leser übersichtlichen Darstellung kaum zu bewältigen. Darüber hinaus verlangen die Manuskripte nach einer ausführlichen Kommentierung, die den Rahmen einer Druckfassung überschreiten würde.</p>
-          <p>Eine Besonderheit der Unterrichtsnotizen ist die Dynamik des Materials: Klee veränderte im Laufe seiner Lehrtätigkeit immer wieder den Aufbau seiner Lehre, was sich auch in seinen Notizen niederschlägt. Die Edition gewährt somit Einblick in die Entwicklung der pädagogischen Vermittlung der Inhalte durch den Künstler.</p>
-          <p>Grundsätzlich steht mit der Edition eine gute Datenbasis für die Forschung zur Verfügung, die durch die Verknüpfung mit externen Ressourcen, die Implementierung aktueller Darstellungsmethoden und erweiterter Funktionen umfangreiche Analysen und Visualisierungen ermöglichen könnte.</p>
-          <p>Die größte Schwäche dieses Editionsprojektes ist die ausschließliche Verfügbarkeit der Transkription als Bild. Sowohl in Bezug auf die Lesbarkeit für den Benutzer, als auch die Nachnutzung der Forschungsdaten, bleibt diese Entscheidung unverständlich und wertet das gesamte Projekt erheblich ab. Wie die Suchfunktion zeigt, werden parallel dazu auch maschinenlesbare Volltexte in einer Datenbank vorgehalten. Die Zurverfügungstellung der Transkription in XML oder einem anderen für die Nachnutzung der Daten geeigneten Format wäre wünschenswert und wertvoll. Die Qualität der Digitalisate in der Druckversion bestätigt, dass diese in einer hochauflösenden Variante vorliegen, während jene der Bildschirmanzeige merklich schlechter ist.</p>
-          <p>Mit der Digitalisierung, Transkription und Neustrukturierung des Materials wurden die angestrebten Projektziele erreicht und eine bis dahin nur schwer zugängliche Ressource einer breiten Öffentlichkeit frei zur Verfügung gestellt. Das Projekt folgt zwar einem druckorientierten Ansatz, erkennt jedoch den Mehrwert digitaler Methoden und birgt das Potenzial, die Möglichkeiten des Mediums zum weiteren Erkenntnisgewinn auszuschöpfen.</p>
-        </div>
-      </div>
-      <div type="references">
-        <listBibl>
-          <bibl>Eggelhöfer, Fabienne, Keller Tschirren, Marianne, Thöner, Wolfgang, <emph>Meister Klee! Lehrer am Bauhaus</emph>, Ausst.kat. Ostfildern: Hatje Cantz 2012.</bibl>
-          <bibl>Eggelhöfer, Fabienne, <emph>Paul Klees Lehre vom Schöpferischen</emph>, Diss. Bern: Universität Bern 2012. <ref target="http://web.archive.org/web/20150313123046/http://www.zb.unibe.ch/download/eldiss/12eggelhoefer_f.pdf">http://web.archive.org/web/20150313123046/http://www.zb.unibe.ch/download/eldiss/12eggelhoefer_f.pdf</ref>.</bibl>
-          <bibl>Keller Tschirren, Marianne, <emph>Dreieck, Kreis, Kugel. Farbenordnungen im Unterricht von Paul Klee am Bauhaus</emph>, Diss. Bern: Universität Bern 2012. <ref target="http://web.archive.org/web/20150313123133/http://www.zb.unibe.ch/download/eldiss/12keller_m.pdf">http://web.archive.org/web/20150313123133/http://www.zb.unibe.ch/download/eldiss/12keller_m.pdf</ref>.</bibl>
-          <bibl>Klee, Paul, „Schöpferische Konfession.", <emph>Tribüne der Kunst und der Zeit. Eine Schriftensammlung</emph>. Ed. Kasimir Edschmid, Berlin: Erich Reiß Verlag 1920.</bibl>
-          <bibl>Glaesemer, Jürgen. <emph>Beiträge zur bildnerischen Formlehre: faksimilierte Ausgabe des Originalmanuskripts von Paul Klees erstem Vortragszyklus am Staatlichen Bauhaus Weimar 1921/22</emph>. Basel: Schwabe 1979.</bibl>
-          <bibl>Goethe, Johann Wolfgang von, <emph>Zur Farbenlehre</emph>. 2 Bde. Tübingen [1810]. Deutsches Textarchiv. <ref target="http://web.archive.org/web/20150314132007/http://www.deutschestextarchiv.de/book/view/goethe_farbenlehre01_1810?p=10">http://web.archive.org/web/20150314132007/http://www.deutschestextarchiv.de/book/view/goethe_farbenlehre01_1810?p=10</ref> (Accessed 07.06.2016).</bibl>
-          <bibl>Huggler, Max, „Die Kunsttheorie von Paul Klee." <emph>Der „Pädagogische Nachlass" von Paul Klee</emph>. Eds. Kunstmuseum Bern, Ausst.kat. Bern: Kunstmuseum Bern 1977. 3-19.</bibl>
-          <bibl>Max Beckmann Gesellschaft, ed. <emph>Max Beckmann. Die Skizzenbücher. Ein Kritischer Katalog</emph>. Ostfildern: Hatje Cantz, 2010.</bibl>
-          <bibl>Sahle, Patrick. 2013. <emph>Digitale Editionsformen. Zum Umgang mit der Überlieferung unter den Bedingungen des Medienwandels. Teil 2: Befunde, Theorie und Methodik</emph>. Schriften des Instituts für Dokumentologie und Editorik, 9. Norderstedt: Books on demand.</bibl>
-          <bibl>Spiller, Jürg, <emph>Form- und Gestaltungslehre. 1. Das bildnerische Denken</emph>. Basel: Schwabe, 1956.</bibl>
-          <bibl>Spiller, Jürg, <emph>Form- und Gestaltungslehre. 2. Unendliche Naturgeschichte: prinzipielle Ordnung der bildnerischen Mittel, verbunden mit Naturstudium, und konstruktive Kompositionswege</emph>. Basel: Schwabe, 1970.</bibl>
-          <bibl>Van Gogh Museum und Huygens Institute, <emph>Van Gogh. The Letters</emph>, 2009. <ref target="http://web.archive.org/web/20150314133717/http://vangoghletters.org/vg/">http://web.archive.org/web/20150314133717/http://vangoghletters.org/vg/</ref>.</bibl>
-          <bibl>Workgroup on Genetic Editions. An Encoding Model for Genetic Editions. 2010. <ref target="http://web.archive.org/web/20160606070814/http://www.tei-c.org/Activities/Council/Working/tcw19.html">http://web.archive.org/web/20160606070814/http://www.tei-c.org/Activities/Council/Working/tcw19.html</ref>.</bibl>
-          <bibl>Zentrum Paul Klee, <emph>Medienmitteilung. Paul Klee – Bildnerische Form- und Gestaltungslehre online</emph>, Bern: Zentrum Paul Klee 2012. <ref target="http://web.archive.org/save/http://www.zpk.org/de/service-navigation/medien/medienmitteilungen-2012/paul-klee-n-bildnerische-form-und-gestaltungslehre-481.html">http://web.archive.org/save/http://www.zpk.org/de/service-navigation/medien/medienmitteilungen-2012/paul-klee-n-bildnerische-form-und-gestaltungslehre-481.html</ref>.</bibl>
-          <bibl>Zentrum Paul Klee, <emph>Zum Quellenmaterial: Paul Klees Unterrichtsnotizen</emph>, Bern: Zentrum Paul Klee 2012. <ref target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/Archiv/2011/01/25/00003/">http://www.kleegestaltungslehre.zpk.org/ee/ZPK/Archiv/2011/01/25/00003/</ref> (Accessed 07.06.2016).</bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>20th century</term>
+               <term>art history</term>
+               <term>Bauhaus</term>
+               <term>facsimile</term>
+               <term>Klee</term>
+               <term>teaching notes</term>
+               <term>transcription</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This paper reviews the digital edition of Paul Klee’s <emph>Bildnerische Form- und
+                  Gestaltungslehre</emph>, the collection of his important teaching notes during his
+               time at the Bauhaus as facsimile and transcript. A major challenge of this project is
+               the dynamic nature of the material: the teaching material was restructured, revised
+               and subsequently reused several times. While the transcriptions are unfortunately
+               only available as images, which severely limits the possibilities for re-use of the
+               research data, the edition nevertheless provides a vital source for art-historical
+               research on an artist who influenced a generation of successors.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Einleitung</head>
+            <p xml:id="p1">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-1.png"/>
+                  <head type="legend">.Startseite: Paul Klee - Bildnerische Form- und
+                     Gestaltungslehre.</head>
+               </figure> Paul Klees Auseinandersetzung mit der Form- und Gestaltungslehre prägte
+               nachhaltig die Grafik und Malerei der Moderne und beeinflusste eine ganze Generation
+               von Künstlern. Sein Schaffen zeichnete sich durch das Spiel mit Farben und Formen zur
+               Erschaffung imaginärer Welten aus: „Kunst gibt nicht das Sichtbare wieder, sondern
+               macht sichtbar" (Klee 1920). Er stand in enger Verbindung zur Redaktionsgemeinschaft
+               „Der Blaue Reiter", hatte eine Professur an der Kunstakademie Düsseldorf inne und
+               lehrte am Bauhaus in Weimar und Dessau. Mit seinem Unterricht am Bauhaus verlieh er
+               dem ihm eigenen Stil ein theoretisches Fundament und lehrte seine Schüler das
+               eigenständige bildnerische Denken.</p>
+            <p xml:id="p2">Die vorliegende Edition des Zentrums Paul Klee stellt erstmals die
+               gesamten Unterrichtsnotizen zur <emph>Bildnerischen Form- und Gestaltungslehre</emph>
+               von Paul Klee als Faksimiles und Transkriptionen in digitaler Form zur
+                  Verfügung.<note xml:id="ftn1">Die bisher als <emph>Pädagogischer Nachlass</emph>
+                  bezeichneten Notizen entstanden zwischen 1921 und 1931 während Paul Klees
+                  Lehrtätigkeit am Bauhaus in Weimar und Dessau und sind Teil seines künstlerischen
+                  Nachlasses am Zentrum Paul Klee in Bern.</note> Sie bietet damit eine für die
+               kunsthistorische Forschung unverzichtbare Quelle, die Einblick in die Arbeit des
+               bedeutenden Malers und Grafikers Paul Klee (1879-1949) gewährt.</p>
+            <p xml:id="p3">Bis zur Veröffentlichung der Datenbank war besonders die Rekonstruktion
+               der Notizen zur bildnerischen Gestaltungslehre ausständig, was nicht zuletzt an dem
+               prozesshaften Charakter des Materials lag. Mit diesem Editionsprojekt ist es
+               gelungen, die bisher nur schwer verfügbaren Unterrichtsnotizen einer breiten
+               Öffentlichkeit zugänglich zu machen, was sich auch aufgrund des Materialumfangs als
+               Druckedition nur schwer bewältigen ließe.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Gegenstand der Edition</head>
+            <p xml:id="p4">Seinen ersten Vortragszyklus, den Paul Klee zwischen 1921 und 1922 am
+               Bauhaus abhielt, skizzierte er auf 192 Seiten in einem von ihm paginierten Buch und
+               bezeichnete es mit dem Titel <emph>Beiträge zur bildnerischen Formlehre</emph>.
+               Auszüge daraus publizierte Klee 1925 in komprimierter Form als <emph>Pädagogisches
+                  Skizzenbuch</emph> in der Reihe der Bauhausbücher (Zentrum Paul Klee 2012a). Die
+               Themen seines Unterrichts reichten von der Auseinandersetzung mit der Linie, der
+               Perspektive, dem Gleichgewicht und der Komposition, bis hin zur Farbenlehre.</p>
+            <p xml:id="p5">Paul Klees <emph>Bildnerische Gestaltungslehre</emph> wurde von ihm
+               selbst in 24 Kapiteln angelegt. Der <emph>Allgemeine Teil</emph> beschäftigt sich mit
+               den Grundsätzen der bildnerischen Gestaltung. Die <emph>Planimetrische
+                  Gestaltung</emph> setzt sich mit den zweidimensionalen Formen ausgehend von Kreis,
+               Dreieck und Quadrat auseinander. Die <emph>Stereometrische Gestaltung</emph> widmet
+               sich der Darstellung dreidimensionaler Körper wie Kubus, Pyramide, Oktaeder,
+               Hexaeder, Kugel und Kegel (Zentrum Paul Klee 2012a).</p>
+            <p xml:id="p6">Während sich die <emph>Bildnerische Formlehre</emph> auf ein von Paul
+               Klee handschriftlich verfasstes Notizbuch mit etwa 200 Seiten beschränkt, besteht die
+                  <emph>Bildnerische Gestaltungslehre</emph> aus einer Sammlung von rund 3900
+               Seiten, die als Notizbücher und lose Blätter vorliegen. Die Datenbank stellt diese
+               vollständig als Faksimile und Transkriptionen zur Verfügung.</p>
+            <p xml:id="p7">Paul Klee gliederte seine Unterrichtsnotizen thematisch in Umschlägen,
+               die später durch seine Witwe Lily Klee und Jürg Spiller in der Reihenfolge ihrer
+               Überlieferung nummeriert wurden. Im Rahmen eines Forschungsprojektes inventarisierte
+               das Zentrum Paul Klee die Notizen neu. In der Datenbank wird das Quellenmaterial
+               umfangreich beschrieben, auch zur Problematik der Nummerierung und der systematischen
+               Ordnung der Gestaltungslehre, die aufgrund von losen Blättern und der mehrfachen
+               Wiederverwendung und Umstrukturierung des Unterrichts schwer zu rekonstruieren ist,
+               wird Stellung genommen (Zentrum Paul Klee 2012a).</p>
+            <p xml:id="p8">Jürg Spiller publizierte eine zweibändige Edition zur Form- und
+               Gestaltungslehre, <emph>Das Bildnerische Denken</emph> (Spiller 1956) und die
+                  <emph>Unendliche Naturgeschichte</emph> (Spiller 1970). Die Fachwelt bemängelte
+               die Veränderung des ursprünglichen Aufbaus der Manuskripte durch den Editor und die
+               Ergänzung durch eigene Darstellungen, ohne dies entsprechend auszuweisen. Die dem
+               Material immanente Dynamik wurde von Spiller nicht berücksichtigt, die Darstellung
+               suggeriert ein statisches, abgeschlossenes Werk (Huggler 1977 7-8).</p>
+            <p xml:id="p9">Die gedruckte Edition der <emph>Bildnerischen Formlehre</emph> hingegen,
+               die 1979 von Jürgen Glaesemer und der Paul Klee-Stiftung herausgegeben wurde, stellt
+               bereits sämtliche Faksimiles und Transkriptionen bereit (Glaesemer 1979).</p>
+            <p xml:id="p10">In einem durch den Schweizerischer Nationalfonds zur Förderung der
+               wissenschaftlichen Forschung (SNF) und die Paul-Klee-Stiftung der Burgergemeinde Bern
+               geförderten Projektes entstand zwischen 2008 und 2012 die digitale Edition der
+                  <emph>Beiträge zur Bildnerischen Formlehre</emph> und der <emph>Bildnerischen
+                  Gestaltungslehre</emph>.<note xml:id="ftn2">Zu Projektlaufzeit, Veröffentlichung
+                  und Status des Projektes werden auf der Website selbst keine Angaben gemacht. In
+                  einer Medienmitteilung vom August 2012 wird die Projektlaufzeit mit 4 Jahren, die
+                  Freischaltung der Datenbank mit Ende August 2012 angegeben (Zentrum Paul Klee
+                  2012b).</note> Für die Onlinedatenbank wurden die Manuskripte am Zentrum Paul Klee
+               digitalisiert, neu sortiert und inventarisiert sowie im Fall der noch nicht in
+               digitaler Form repräsentierten <emph>Gestaltungslehre</emph> transkribiert.<note
+                  xml:id="ftn3">Im Impressum wird als Herausgeber das Zentrum Paul Klee genannt
+                  sowie die für Konzeption, Redaktion und Umsetzung verantwortlichen
+                  MitarbeiterInnen Fabienne Eggelhöfer und Marianne Keller Tschirren. Auch für
+                  Transkription und Bildbearbeitung werden die verantwortlichen MitarbeiterInnen
+                  namentlich genannt, ein entsprechender Bildnachweis wird erbracht. Des Weiteren
+                  werden Datenbankdesign, Programmierung sowie finanzielle Unterstützung
+                  ausgewiesen.</note> Am Ende des Projektes stand die Ausstellung <emph>Meister
+                  Klee! Lehrer am Bauhaus</emph>, vom 31. Juli 2012 bis 6. Januar 2013, kuratiert
+               von Fabienne Eggelhöfer und Marianne Keller Tschirren, am Zentrum Paul Klee in
+                  Bern.<note xml:id="ftn4">Die genannten MitarbeiterInnen zeichneten nicht nur für
+                  den Ausstellungskatalog (Eggelhöfer–Keller Tschirren–Thöner) verantwortlich,
+                  sondern verfassten auch projekteinschlägige Dissertationen (Eggelhöfer 2012;
+                  Keller Tschirren 2012).</note>
+            </p>
+         </div>
+         <div xml:id="div3">
+            <head>Inhalte</head>
+            <p xml:id="p11">Mit der Bereitstellung der Faksimiles und Transkripte, besonders der bis
+               dahin noch wenig berücksichtigten <emph>Gestaltungslehre</emph>, erfüllt die Edition
+               ein lang ersehntes Desideratum der Klee-Forschung. Das Projekt liefert insgesamt sehr
+               detaillierte Beschreibungen zu den einzelnen Kapiteln und Digitalisaten, zur
+               Überlieferung und besonders zur Problematik der Sortierung und Inventarisierung der
+                  <emph>Gestaltungslehre</emph>. Eine weiterführende Bibliografie findet sich in der
+               Beschreibung des Quellenmaterials.</p>
+            <p xml:id="p12">Der Inhalt der Unterrichtsnotizen stellt eine wertvolle Ressource für
+               die Kunstgeschichtsforschung dar: Zur <emph>Bildnerischen Formlehre</emph> sowie zu
+               jedem einzelnen Kapitel der <emph>Bildnerischen Gestaltungslehre</emph> wird von den
+               EditorInnen eine sehr detaillierte Beschreibung des Quellenmaterials angeboten. Diese
+               umfasst jeweils den Umfang des Konvoluts mit Angaben zum Materialtyp, den Kommentar
+               mit Erläuterungen zur Zusammenstellung des Materials, Informationen über den
+               Beschreibstoff, den Versuch einer (relativen) zeitlichen Einordnung sowie eine
+               inhaltliche Beschreibung des Abschnittes. Diese Informationen werden über das Icon
+               „Erläuterungen zum Kapitel" in einem horizontalen Menübalken, der sich unterhalb der
+               Kopfzeile befindet, im PDF Format angeboten. Lediglich die Überblicksbeschreibung zur
+                  <emph>Gestaltungslehre</emph> ist zusätzlich zur Druckversion als Webansicht
+               verfügbar; aus Gründen der Konsistenz, der einfacheren Benutzbarkeit und der
+               Nachhaltigkeit wäre hier eine Vereinheitlichung des gesamten Angebots als HTML- und
+               PDF-Format lohnend.</p>
+            <p xml:id="p13">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-2.png"/>
+                  <head type="legend">Weitere Informationen zur Seite.</head>
+               </figure> Zusätzlich zur Dokumentation der Kapitel werden über das so genannte
+               Info-Fenster zu jedem einzelnen Digitalisat Metainformationen angeboten, sofern diese
+               bekannt sind. Diese Angaben umfassen den Künstler, die Zuordnung zu Kapitel und
+               Unterkapitel, Schlagworte zum Inhalt („Inhalt"), alte und neue Inventarnummer („Inv.
+               Nr bzw. Alte Inv. Nr."), die Abmessungen des Blattes („Maße"), Materialtyp und
+               Beschreibstoff („Technik") sowie den Aufbewahrungsort des Manuskripts („Standort").
+               Die von Klee mit Farbstift eingefügten Nummerierungen und im Text vorkommende
+               Datierungen („Bezeichnung") sind ebenso Teil der Kurzinformation wie die Anführung
+               zusammengehörender Seitenfolgen und Referenzen auf andere Seiten („Bemerkung").</p>
+         </div>
+         <div xml:id="div4">
+            <head>Transkript</head>
+            <p xml:id="p14">Im Transkript werden die originale Orthographie, die Interpunktion sowie
+               die dem Autor eigene Art der Trennung von Substantiven und Verwendung der Groß- und
+               Kleinschreibung soweit als möglich erhalten. Fehlende, vertauschte oder unnötige
+               Buchstaben werden im Fließtext korrigiert und kursiv hervorgehoben, zusätzlich wird
+               die Originalschreibweise in der Fußnote angeführt. Fehlende Interpunktion bleibt
+               unberücksichtigt. Der Geminationsstrich über den Buchstaben „m" und „n" wird
+               normalisiert und zu „mm" und „nn" aufgelöst.</p>
+            <p xml:id="p15">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-3.png"/>
+                  <head type="legend">Wie an diesem Beispiel (<ref
+                        target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/21/144/"
+                        >www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/21/144/</ref>)
+                     ersichtlich, würde sich eine Verschlagwortung der im Text beschriebenen
+                     Skizzierungen lohnen.</head>
+               </figure> Textuelle Interventionen wie Einfügungen und Streichungen sowie editorische
+               Anmerkungen werden in die Fußnoten ausgelagert: Einfügungen werden durch
+               Schrägstriche markiert und Streichungen durchgestrichen angezeigt. Bei der
+               Präsentation des Transkripts wurde eine möglichst dokumentennahe Nachempfindung des
+               originalen Seitenlayouts angestrebt, d.h. Textgliederung, Zeileneinzug und
+               Unterstreichungen werden in Anlehnung an das Layout der Faksimiles wiedergegeben. Auf
+               die zusätzliche Markierung von Skizzen und grafischen Elementen wurde verzichtet,
+               auch wird nicht zwischen Fließtexten und Bildunterschriften unterschieden. Eine
+               Kennzeichnung grafischer Elemente (wie zum Beispiel ein Pfeil, der auf eine andere
+               Textpassage verweist) im Text würde nicht nur die Orientierung auf der
+               Manuskriptseite erleichtern, sondern auch zum Textverständnis beitragen. Der Text
+               enthält eine Fülle an Zeichnungen und grafischen Elementen, die zur pädagogischen
+               Vermittlung bildnerischer Form- und Gestaltungsmerkmale von besonderer Relevanz sind.
+               Hier müsste man also über einen Weg nachdenken, diese Skizzen ebenfalls zu
+               erschließen. Gerade im Fall der Manuskripte von Paul Klee, deren umfangreiches
+               Skizzenmaterial nicht nur illustrativen Charakter hat, sondern auch die Rolle des
+               vorherrschenden Informationsträgers übernehmen kann, ist die besondere Beachtung der
+               bildlichen Elemente anzustreben. Durch die Annotation von Skizzen und Detailskizzen
+               könnten Querverbindungen zu vergleichbaren Darstellungen hergestellt und einer
+               Analyse unterzogen werden. Eine Erweiterung der Suchfunktionalität, die eine Skizze
+               in einem definierten Nahverhältnis zum Text mit einschließt oder sogar eine verbale
+               Beschreibung der Skizzen bzw. eine Verschlagwortung mit Hilfe eines kontrollierten
+               Vokabulars anbietet, würde dem kunsthistorisch interessierten Benutzer besonders
+               entgegenkommen und gezielte Suchabfragen nach Farben, Formen und Inhalten zulassen um
+               z.B. Entwicklungsstadien sichtbar zu machen.</p>
+            <p xml:id="p16">Sofern vorhanden wird die von Paul Klee vorgenommene Paginierung
+               ebenfalls transkribiert. Metamarkierungen wie Stempel, Pfeile, einzelne Buchstaben
+               oder Zahlen, später hinzugefügte Nummerierungen und Inventarnummern wurden im
+               Transkript nicht berücksichtigt.<note xml:id="ftn5">Siehe <ref
+                     target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/06/001/"
+                     >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/06/001/</ref>.
+                  Stempel, Nummerierung rechts oben, rote Nummerierung rechts unten, rote
+                  Nummerierung unten werden nicht berücksichtigt.</note>
+            </p>
+         </div>
+         <div xml:id="div5">
+            <head>Technischer Hintergrund und Präsentation</head>
+            <p xml:id="p17">Für die Präsentation der Webinhalte werden Standardtechnologien wie
+               XHTML, CSS und JavaScript eingesetzt. Über die dahinter stehende technische
+               Infrastruktur und die Umsetzung wird auf der Website keine nähere Information
+               gegeben. Das Datenbankdesign und die Programmierung wurden laut Impressum an externe
+               Dienstleister ausgelagert. Es ist weder bekannt, in welchem Datenformat die
+               Transkripte vorliegen, noch werden die zugrundeliegenden Rohdaten im Sinne von
+               offenen Forschungsdaten zur Verfügung gestellt. Damit ist eine Nachnutzung der Daten
+               nicht möglich.</p>
+            <p xml:id="p18">Das Design der Seite ist sehr reduziert in schlichtem Grau und Rot
+               gehalten und rückt damit den Inhalt der Edition in den Vordergrund. Der Aufbau folgt
+               den üblichen Designrichtlinien, die Navigation mit ein- und ausklappbaren Menüs auf
+               der linken Seite ermöglicht einen raschen Zugriff auf die Inhalte. Eine zusätzliche
+               Hervorhebung der beiden Hauptressourcen – die <emph>Bildnerische Formlehre</emph> und
+               die <emph>Bildnerische Gestaltungslehre</emph> – würden einen für den Benutzer noch
+               einfacheren Zugang ermöglichen und die Unterscheidung der beiden Ressourcen fördern.
+               Insgesamt wirkt das Design der Seite etwas veraltet, nicht zuletzt wegen der
+               „Treeview-Navigation" mit vorangestelltem Plus- und Minuszeichen, eingerückter
+               Hierarchieebene und den wenig ansprechenden Icons. Die Seite ist auf eine sehr hohe
+               Bildschirmauflösung ausgerichtet, sodass auf kleineren Endgeräten die Inhalte
+               beschnitten werden.</p>
+            <p xml:id="p19">Ein nach Ansicht der HerausgeberInnen wesentlicher Fortschritt der
+               Onlineausgabe ist eine vollständige farbliche Reproduktion der Unterrichtsnotizen,
+               die zum Verständnis der Textgenese beitragen soll.</p>
+            <p xml:id="p20">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-4.png"/>
+                  <head type="legend">Ein Beispiel dafür, wie bezahlt sich eine farbige Reproduktion
+                     macht: <ref
+                        target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/11/017/index_manu.pdf"
+                        >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/02/11/017/index_manu.pdf</ref>.</head>
+               </figure> Betrachtet man die Manuskripte aus einer textgenetischen Perspektive,
+               können nachträgliche Textinterventionen, die in unterschiedlichen zeitlichen Stadien
+               entstanden sind, beobachtet werden. Das sind zum Beispiel Modifikationen wie
+               Streichungen und Hinzufügungen durch den Verfasser selbst, der die Notizen über
+               mehrere Jahre in unterschiedlicher Zusammensetzung im Unterricht verwendet hat, oder
+               die nachträgliche Paginierung durch seine Witwe Lilly Klee, die nach seinem Tod
+               vorgenommen wurde. Allerdings wird dieser Entstehungsprozess der Unterrichtsnotizen
+               von den EditorInnen nicht weiter annotiert und dokumentiert, die
+               Interpretationsleistung bleibt dem Rezipienten überlassen. Eine Annotation der
+               Textgenese könnte wertvolle Aufschlüsse über die Entwicklung von Klees Unterricht am
+               Bauhaus geben. Zur digitalen Repräsentation von genetischen Phänomenen und der
+               Rekonstruktion von Schreibprozessen bietet die Text Encoding Initiative (TEI) ein
+               Instrumentarium, das von der Arbeitsgruppe „Genetic Editions" vorgeschlagen und in
+               die Empfehlungen des Kodierungsstandards integriert wurden. Durch diese Ergänzungen
+               können Textmodifikationen und -umstellungen, alternative Lesarten sowie
+               Metamarkierungen und Verweise in einen chronologischen Ablauf gebracht und mit
+               Verantwortlichkeiten versehen werden. Damit lassen sich unterschiedliche Stadien des
+               Textes aufzeigen um den Entstehungsprozess zu rekonstruieren (Workgroup on Genetic
+               Editions 2010).</p>
+            <p xml:id="p21">Die Qualität der Faksimiles ist sehr heterogen, vor allem bleibt
+               ungeklärt warum einige Digitalisate nur als Doppelseite, der Großteil der Notizhefte
+               und Blätter hingegen als Einzelseite aufgenommen und zur Verfügung gestellt wurden.
+               Besonders in ersterem Fall kann der Text aufgrund seiner Auflösung und Größe nur sehr
+               schwer rezipiert werden. Bei den meisten Einzelseitenaufnahmen reicht die Auflösung
+               der Faksimiles aus, um sie als begleitende Abbildung zum Transkript zu verwenden. Für
+               eine genauere Untersuchung von Detailphänomenen im Manuskript, wie zum Beispiel
+               Textmodifikationen und -überschreibungen, insbesondere aber die den Text begleitenden
+               und das jeweilige Unterrichtsthema erläuternden Skizzen, eignen sich die Abbildungen
+               jedoch nicht. Es verwundert daher, dass der Grund für die unzureichende Auflösung der
+               Faksimiles in der Webansicht nicht an der mangelnden Aufnahmequalität liegen kann:
+               Die Druckansicht bestätigt, dass die Digitalisate mit einer deutlich höheren
+               Auflösung aufgenommen wurden. Die Bereitstellung der Bilder in einer höheren
+               Auflösung, die Aufnahme der Digitalisate als Einzelseiten und die Anzeige in einem
+               Image Viewer mit Zoomfunktion würde gerade diese Ressource besonders aufwerten.</p>
+            <p xml:id="p22">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-5.png"/>
+                  <head type="legend">Parallelansicht von Faksimile und Transkript <ref
+                        target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/"
+                        >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/</ref>.</head>
+               </figure>Eine eklatante Schwäche des Projektes ist die Präsentation von Faksimile und
+               Transkript: diese werden in der Bildschirmanzeige gemeinsam in einem einzigen Bild
+               gespeichert und angezeigt. Dabei wirkt sich die verlustbehaftete Kompressionsrate
+               besonders auf die Lesbarkeit des Transkripts am Bildschirm aus. Zwar wird durch die
+               Nebeneinanderstellung von Faksimile und Transkript und die parallele farbliche
+               Hervorhebung einzelner Ausschnitte eine Text-Bild-Verknüpfung angeboten, diese
+               enthält jedoch aufgrund der Präsentation des Transkripts als Abbildung keine
+               computerlesbare Datenstruktur.</p>
+            <p xml:id="p23">
+               <figure xml:id="img6">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-6.png"/>
+                  <head type="legend">Parallelansicht mit farblicher Hervorhebung <ref
+                        target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/"
+                        >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/</ref>.</head>
+               </figure> Die Entscheidung, das Transkript nur als Bild anzubieten, kann nicht
+               nachvollzogen werden, verzichtet man doch damit auf einige der grundlegendsten
+               Vorzüge einer digitalen Edition, wie z.B. Bildannotation und -manipulation durch die
+               Präsentation der Faksimiles in einem Image Viewer, das Angebot alternativer
+               Ausgabeformate (z.B. Druck, eBook) durch die Verwendung von Annotationsstandards,
+               Visualisierungen der Daten als Zeitleisten und Karten oder die Vernetzungsmöglichkeit
+               mit externen Ressourcen. Damit entspricht diese Edition weder dem Stand der Technik
+               noch der etablierten Methodologie, was die Güte des Projektes erheblich mindert.
+               Transkript und Faksimile können nicht voneinander getrennt werden und aufgrund der
+               Speicherung in einem Bild handelt es sich aus technischer Sicht nicht um eine
+               tatsächliche Text-Bild-Verknüpfung, sondern um eine Verknüpfung von Bildern. Darüber
+               hinaus ist die Seite auf eine sehr hohe Bildschirmauflösung ausgerichtet und reagiert
+               nicht – im Sinne responsiven Webdesigns – flexibel auf die Anforderungen der jeweils
+               benutzten Endgeräte.</p>
+            <p xml:id="p24">Insbesondere in Bezug auf die Langzeitverfügbarkeit des Materials muss
+               zudem kritisch bemerkt werden, dass das JPG-Format für die Repräsentation von
+               Transkripten nicht geeignet ist, weil das Format zum einen verlustbehaftet und zum
+               anderen auf aktuelle Möglichkeiten der Endgeräte optimiert ist. Im Vergleich zu
+               Textdateien benötigen Bilddaten einen ungleich größeren Speicherplatz. Ob die
+               Rohdaten in einem offenen Grafikformat (z.B. TIFF) bzw. Textformat (z.B. XML)
+               existieren und in einem digitalen Repository gespeichert sind, geht aus der
+               Projektbeschreibung nicht hervor. Jedenfalls kann der Text weder kopiert, noch in
+               einem anderen Forschungskontext weiterbearbeitet und analysiert werden. Aufgrund der
+               reinen Bildtranskripte können die Texte von externen Suchmaschinen nicht gefunden
+               werden; ob die Texte auf anderem Weg – z.B. über das PDF – gefunden werden könnten,
+               kann nicht überprüft werden. Die Indizierung wird durch entsprechende Anweisungen in
+               einer robots.txt-Datei unterbunden. Die Entscheidung darüber, die Daten für
+               Suchmaschinen und damit für den Benutzer nicht auffindbar zu machen, kann nicht
+               nachvollzogen werden, stellen doch Suchmaschinen ein zentrales Instrument zur Suche
+               und Navigation im Internet dar.</p>
+            <p xml:id="p25">Die Hervorhebung korrespondierender Textpassagen wird über eine
+               JavaScript-Programmierung gelöst, indem mittels CSS-Formatierungen farbige Layer über
+               das Bild gelegt werden, die eine Verknüpfung von Transkript und Bild herstellen.
+               Aufgrund fehlerhafter Anzeigeeffekte erschließt sich jedoch nicht immer, weshalb bei
+               der Auswahl bestimmter Bereiche im Transkript gleichzeitig auch andere Textstellen
+               markiert werden, was eine irreführende Verbindung der Inhalte suggeriert.<note
+                  xml:id="ftn6">Siehe <ref
+                     target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/03/24/135/"
+                     >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/03/24/135/</ref>.
+                  Bewegt man die Maus über die Textpassage die mit „Das Charakteristikum der
+                  Frontalen Position […]" beginnt, so werden auch andere Textteile farbig
+                  markiert.</note> Die Präsentation der Edition bietet daher noch Möglichkeiten zur
+               Verbesserung.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Suche</head>
+            <p xml:id="p26">Rechts oben auf der Website befindet sich ein einfacher Suchschlitz für
+               die Volltextsuche, der Suchbegriff wird über die Enter-Taste oder den Suchen-Button
+               abgesetzt. Eine detaillierte Beschreibung mit Beispielen zu den möglichen
+               Suchfunktionen findet sich im Menüpunkt „Zur Datenbank" und im Hilfetext, der über
+               das Fragezeichen-Icon erreichbar ist. Begriffe, die unter doppelten Anführungszeichen
+               stehen, werden als zusammenhängende Phrase gesucht, eine Verknüpfung mehrerer
+               Begriffe ist über das Plus-Zeichen als Suchoperator möglich, Wortbestandteile können
+               über das Voran- bzw. Hintanstellen eines Asterisk als Trunkierungzeichen gesucht
+               werden. Auch die kombinierte Suche nach Worten und Wortbestandteilen ist möglich.
+               Zusätzlich lässt sich die Suche auf bestimmte Kapitel, das Info-Fenster, das
+               Transkript oder auf die von Paul Klee eingeführten Seitenzahlen einschränken. Nachdem
+               die originale Orthographie von Paul Klee in der Transkription unverändert blieb,
+               können alternative Schreibweisen nur über die entsprechende Eingabe der
+               Originalschreibweise gefunden werden. Hier könnte der Einsatz einer Volltextsuche mit
+               Fuzzy-Logik zur Auffindung von ähnlichen Schreibweisen und Zeichenketten, wie zum
+               Beispiel „Centrum" und „Zentrum", eine präzisere Trefferquote liefern.</p>
+            <p xml:id="p27">Die Suchresultate werden nach Inventarnummern sortiert aufgelistet. Ein
+               einzelnes Suchergebnis enthält einen Titel, der sich aus Kapitelzuordnung (sofern es
+               sich um die <emph>Gestaltungslehre</emph> handelt), die Zuordnung zur
+                  <emph>Bildnerischen Formlehre</emph> bzw. <emph>Bildnerischen
+                  Gestaltungslehre</emph> über ein Kürzel und die fortlaufende Nummerierung des
+               Faksimiles zusammensetzt. Das gesuchte Schlüsselwort wird in seinem Kontext
+               ausgegeben und zusätzlich durch Fettdruck und gelbe Hinterlegung hervorgehoben. Das
+               Thumbnail zeigt Faksimile und Transkript, von dort aus führt ein Link weiter zur
+               Einzelobjektansicht. Die Suchresultate können auch direkt über das Drop-Down-Menü in
+               der horizontalen Navigationsleiste angesteuert werden. Auch hier wird deutlich, dass
+               die Entscheidung, das Transkript nur als Bild wiederzugeben von Nachteil ist, denn
+               die Fundstelle wird im Transkript nicht hervorgehoben.</p>
+            <p xml:id="p28">
+               <figure xml:id="img7">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-7.png"/>
+                  <head type="legend">Liste der Suchresultate zum Begriff "Netzhaut".</head>
+               </figure> Als zusätzliche Funktionalitäten werden ein Drop-Down Menü zur Navigation
+               innerhalb der Seite sowie jeweils ein Button zum Info-Fenster, zur
+               Kapitelerläuterung, zu den unterschiedlichen Druckoptionen, zur Kapitelübersicht und
+               zu einem Hilfetext angeboten. Der Benutzer hat die Möglichkeit zwischen vier
+               Druckoptionen im Format PDF zu wählen: Manuskript und Transkription auf einer Seite;
+               Manuskript und Info-Fenster auf zwei Seiten; Manuskript, Info-Fenster und
+               Transkription auf drei Seiten; oder nur das Manuskript auf einer Seite. Über den
+               Button „Kapitelübersicht anzeigen" soll es möglich sein, ausgewählte Seiten aus dem
+               aktuell gewählten Kapitel als PDF herunterzuladen. Diese Funktion ist leider nicht
+               besonders benutzerfreundlich umgesetzt: Es werden nicht nur die selektierten Seiten
+               des Kapitels, sondern mehrere Seiten – deren Auswahlkriterien nicht nachvollziehbar
+               sind – heruntergeladen. Die Digitalisate werden im PDF Format in einer wesentlich
+               besseren Qualität zur Verfügung gestellt als in der Anzeige auf der Website. Die
+               Gründe für diese Entscheidung werden nicht genannt, es kann nur vermutet werden, dass
+               bei zu großen Bilddateien lange Ladezeiten befürchtet wurden.</p>
+            <p xml:id="p29">
+               <figure xml:id="img8">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_4/klee/pictures/picture-8.png"/>
+                  <head type="legend">Die hervorragende Qualität des Manuskripts in der Druckansicht
+                        <ref
+                        target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/index_manu.pdf"
+                        >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/BG/2012/01/02/006/index_manu.pdf</ref>.</head>
+               </figure> Ebenfalls eine Herausforderung für den Benutzer stellt das Drop-Down Menü
+               zur Navigation im horizontalen Menübalken dar: Zwar kann man innerhalb der Kapitel
+               auf diese Weise einfach die einzelnen Faksimileseiten ansteuern, in der Einleitung
+               werden hingegen Faksimileseiten ohne erkennbaren Zusammenhang verknüpft. Die
+               Bedienbarkeit der Website wird für den Benutzer dadurch erschwert, dass das Drop-Down
+               Menü mit unterschiedlichen Funktionen belegt ist, d.h. einmal um über den gesamten
+               Inhalt der Edition, ein zweites Mal um in einem ausgewählten Kapitel und ein weiteres
+               Mal um in den Suchergebnissen zu navigieren.</p>
+            <p xml:id="p30">Die einzelnen Handschriftenseiten sind fortlaufend durchnummeriert,
+               diese Nummerierung spiegelt sich auch in der Struktur der URL wider. Somit ist eine
+               eindeutige Zitierbarkeit von Einzelobjekten, wenn auch nur als Einheit von Text und
+               Bild, möglich.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Fazit</head>
+            <p xml:id="p31">Die (digitale) Edition als „erschließende Wiedergabe historischer
+               Dokumente" (Sahle 2:168) ist eine in der Kunstgeschichte bislang wenig beachtete
+               Herangehensweise. Umso mehr ist die Wichtigkeit solcher Bemühungen, wie der hier
+               vorliegenden Digitalisierung der Unterrichtsnotizen von Paul Klee, positiv
+               hervorzuheben, die damit in einer Reihe mit beispielhaften Projekten wie der
+               gedruckten Edition der <emph>Max Beckmann Skizzenbücher</emph> (Max Beckmann
+               Gesellschaft 2010) sowie den digitalen Editionen <emph>Vincent van Gogh. The
+                  Letters</emph> (Van Gogh Museum und Huygens Institute 2009) und <emph>Goethes
+                  Farbenlehre</emph> (Goethe [1810]) steht.</p>
+            <p xml:id="p32">Die zuvor genannten vielschichtigen Funktionalitäten und Möglichkeiten
+               einer digitalen Edition erlauben es, den Gedanken und Assoziationen eines Künstlers,
+               wie hier Paul Klee, in einem höherem Maße näher zu kommen als es eine gedruckte
+               Edition zu leisten vermag. Der enorme Umfang der Unterrichtsnotizen wäre als
+               gedruckte Edition durch die notwendige Gegenüberstellung von Faksimile und Transkript
+               zum einen mit enormem Aufwand verbunden, zum anderen in einer für den Leser
+               übersichtlichen Darstellung kaum zu bewältigen. Darüber hinaus verlangen die
+               Manuskripte nach einer ausführlichen Kommentierung, die den Rahmen einer Druckfassung
+               überschreiten würde.</p>
+            <p xml:id="p33">Eine Besonderheit der Unterrichtsnotizen ist die Dynamik des Materials:
+               Klee veränderte im Laufe seiner Lehrtätigkeit immer wieder den Aufbau seiner Lehre,
+               was sich auch in seinen Notizen niederschlägt. Die Edition gewährt somit Einblick in
+               die Entwicklung der pädagogischen Vermittlung der Inhalte durch den Künstler.</p>
+            <p xml:id="p34">Grundsätzlich steht mit der Edition eine gute Datenbasis für die
+               Forschung zur Verfügung, die durch die Verknüpfung mit externen Ressourcen, die
+               Implementierung aktueller Darstellungsmethoden und erweiterter Funktionen
+               umfangreiche Analysen und Visualisierungen ermöglichen könnte.</p>
+            <p xml:id="p35">Die größte Schwäche dieses Editionsprojektes ist die ausschließliche
+               Verfügbarkeit der Transkription als Bild. Sowohl in Bezug auf die Lesbarkeit für den
+               Benutzer, als auch die Nachnutzung der Forschungsdaten, bleibt diese Entscheidung
+               unverständlich und wertet das gesamte Projekt erheblich ab. Wie die Suchfunktion
+               zeigt, werden parallel dazu auch maschinenlesbare Volltexte in einer Datenbank
+               vorgehalten. Die Zurverfügungstellung der Transkription in XML oder einem anderen für
+               die Nachnutzung der Daten geeigneten Format wäre wünschenswert und wertvoll. Die
+               Qualität der Digitalisate in der Druckversion bestätigt, dass diese in einer
+               hochauflösenden Variante vorliegen, während jene der Bildschirmanzeige merklich
+               schlechter ist.</p>
+            <p xml:id="p36">Mit der Digitalisierung, Transkription und Neustrukturierung des
+               Materials wurden die angestrebten Projektziele erreicht und eine bis dahin nur schwer
+               zugängliche Ressource einer breiten Öffentlichkeit frei zur Verfügung gestellt. Das
+               Projekt folgt zwar einem druckorientierten Ansatz, erkennt jedoch den Mehrwert
+               digitaler Methoden und birgt das Potenzial, die Möglichkeiten des Mediums zum
+               weiteren Erkenntnisgewinn auszuschöpfen.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Eggelhöfer, Fabienne, Keller Tschirren, Marianne, Thöner, Wolfgang,
+                     <emph>Meister Klee! Lehrer am Bauhaus</emph>, Ausst.kat. Ostfildern: Hatje
+                  Cantz 2012.</bibl>
+               <bibl>Eggelhöfer, Fabienne, <emph>Paul Klees Lehre vom Schöpferischen</emph>, Diss.
+                  Bern: Universität Bern 2012. <ref
+                     target="http://web.archive.org/web/20150313123046/http://www.zb.unibe.ch/download/eldiss/12eggelhoefer_f.pdf"
+                     >http://web.archive.org/web/20150313123046/http://www.zb.unibe.ch/download/eldiss/12eggelhoefer_f.pdf</ref>.</bibl>
+               <bibl>Keller Tschirren, Marianne, <emph>Dreieck, Kreis, Kugel. Farbenordnungen im
+                     Unterricht von Paul Klee am Bauhaus</emph>, Diss. Bern: Universität Bern 2012.
+                     <ref
+                     target="http://web.archive.org/web/20150313123133/http://www.zb.unibe.ch/download/eldiss/12keller_m.pdf"
+                     >http://web.archive.org/web/20150313123133/http://www.zb.unibe.ch/download/eldiss/12keller_m.pdf</ref>.</bibl>
+               <bibl>Klee, Paul, „Schöpferische Konfession.", <emph>Tribüne der Kunst und der Zeit.
+                     Eine Schriftensammlung</emph>. Ed. Kasimir Edschmid, Berlin: Erich Reiß Verlag
+                  1920.</bibl>
+               <bibl>Glaesemer, Jürgen. <emph>Beiträge zur bildnerischen Formlehre: faksimilierte
+                     Ausgabe des Originalmanuskripts von Paul Klees erstem Vortragszyklus am
+                     Staatlichen Bauhaus Weimar 1921/22</emph>. Basel: Schwabe 1979.</bibl>
+               <bibl>Goethe, Johann Wolfgang von, <emph>Zur Farbenlehre</emph>. 2 Bde. Tübingen
+                  [1810]. Deutsches Textarchiv. Accessed 07.06.2016. <ref
+                     target="http://web.archive.org/web/20150314132007/http://www.deutschestextarchiv.de/book/view/goethe_farbenlehre01_1810?p=10"
+                     >http://web.archive.org/web/20150314132007/http://www.deutschestextarchiv.de/book/view/goethe_farbenlehre01_1810?p=10</ref>. </bibl>
+               <bibl>Huggler, Max, „Die Kunsttheorie von Paul Klee." <emph>Der „Pädagogische
+                     Nachlass" von Paul Klee</emph>. Eds. Kunstmuseum Bern, Ausst.kat. Bern:
+                  Kunstmuseum Bern 1977. 3-19.</bibl>
+               <bibl>Max Beckmann Gesellschaft, ed. <emph>Max Beckmann. Die Skizzenbücher. Ein
+                     Kritischer Katalog</emph>. Ostfildern: Hatje Cantz, 2010.</bibl>
+               <bibl>Sahle, Patrick. 2013. <emph>Digitale Editionsformen. Zum Umgang mit der
+                     Überlieferung unter den Bedingungen des Medienwandels. Teil 2: Befunde, Theorie
+                     und Methodik</emph>. Schriften des Instituts für Dokumentologie und Editorik,
+                  9. Norderstedt: Books on demand.</bibl>
+               <bibl>Spiller, Jürg, <emph>Form- und Gestaltungslehre. 1. Das bildnerische
+                     Denken</emph>. Basel: Schwabe, 1956.</bibl>
+               <bibl>Spiller, Jürg, <emph>Form- und Gestaltungslehre. 2. Unendliche Naturgeschichte:
+                     prinzipielle Ordnung der bildnerischen Mittel, verbunden mit Naturstudium, und
+                     konstruktive Kompositionswege</emph>. Basel: Schwabe, 1970.</bibl>
+               <bibl>Van Gogh Museum und Huygens Institute, <emph>Van Gogh. The Letters</emph>,
+                  2009. <ref
+                     target="http://web.archive.org/web/20150314133717/http://vangoghletters.org/vg/"
+                     >http://web.archive.org/web/20150314133717/http://vangoghletters.org/vg/</ref>.</bibl>
+               <bibl>Workgroup on Genetic Editions. An Encoding Model for Genetic Editions. 2010.
+                     <ref
+                     target="http://web.archive.org/web/20160606070814/http://www.tei-c.org/Activities/Council/Working/tcw19.html"
+                     >http://web.archive.org/web/20160606070814/http://www.tei-c.org/Activities/Council/Working/tcw19.html</ref>.</bibl>
+               <bibl>Zentrum Paul Klee, <emph>Medienmitteilung. Paul Klee – Bildnerische Form- und
+                     Gestaltungslehre online</emph>, Bern: Zentrum Paul Klee 2012. <ref
+                     target="http://web.archive.org/save/http://www.zpk.org/de/service-navigation/medien/medienmitteilungen-2012/paul-klee-n-bildnerische-form-und-gestaltungslehre-481.html"
+                     >http://web.archive.org/save/http://www.zpk.org/de/service-navigation/medien/medienmitteilungen-2012/paul-klee-n-bildnerische-form-und-gestaltungslehre-481.html</ref>.</bibl>
+               <bibl>Zentrum Paul Klee, <emph>Zum Quellenmaterial: Paul Klees
+                     Unterrichtsnotizen</emph>, Bern: Zentrum Paul Klee 2012. Accessed 07.06.2016.
+                     <ref
+                     target="http://www.kleegestaltungslehre.zpk.org/ee/ZPK/Archiv/2011/01/25/00003/"
+                     >http://www.kleegestaltungslehre.zpk.org/ee/ZPK/Archiv/2011/01/25/00003/</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
 </TEI>

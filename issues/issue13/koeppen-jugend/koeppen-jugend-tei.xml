@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">   
-        <teiHeader>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.13.2">
+    <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Wolfgang Koeppen Jugend – Rezension der textgenetischen Edition</title>
-                <author>
+                <author ref="https://orcid.org/0000-0002-6308-2424">
                     <name>
                         <forename>Bastian</forename>
                         <surname>Politycki</surname>
                     </name>
-                    <idno type="ORCID">https://orcid.org/0000-0002-6308-2424</idno>
                     <affiliation>
                         <orgName>University of Wuppertal</orgName>
                         <placeName>Wuppertal</placeName>
@@ -23,19 +24,22 @@
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13/koeppen-jugend</idno>
                 <idno type="DOI">10.18716/ride.a.13.2</idno>
                 <idno type="archive"
-                    >https://github.com/i-d-e/ride/blob/archives/issue13/koeppen-jugend.zip?raw=true</idno>
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue13/koeppen-jugend/koeppen-jugend.pdf</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <seriesStmt>
                 <title level="j">RIDE - A review journal for digital editions and resources</title>
-                <editor>Ulrike Henny-Krahmer</editor>
-                <editor>Frederike Neuber</editor>
-                <editor>Patrick Sahle</editor>
-                <editor role="managing">Ulrike Henny-Krahmer</editor>
-                <editor role="managing">Frederike Neuber</editor>
-                <editor role="technical">Bernhard Assmann</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+                <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
                 <editor role="technical">Jana Klinger</editor>
                 <biblScope unit="issue" n="13">Digital Scholarly Editions</biblScope>
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13</idno>
@@ -1048,13 +1052,9 @@
             </div>
         </front>
         <body>
-            <!-- Ab hier Reviewtext, inkl. Fußnoten/Bilder/etc.; 
-      tei:div, tei:p, tei:figure, tei:note bekommen mit xml:id eine fortlaufende Nummerierung,
-      siehe Review von Victorians und LDM -->
-            <!-- Für die Kodierung von eingerückten Zitaten siehe Template-Datei (tei:cit/quote/bibl) -->
             <div xml:id="div1">
                 <head>Einleitung</head>
-                <p xml:id="p1"> Wolfgang Koeppens Prosatext <emph>Jugend</emph> erschien 1976 als
+                <p xml:id="p1">Wolfgang Koeppens Prosatext <emph>Jugend</emph> erschien 1976 als
                     Band 500 der Suhrkamp-Bibliothek und als erste Buchveröffentlichung nach seinem
                     Wechsel zu jenem Verlag Anfang der 1960er Jahre.<note xml:id="ftn1">Vgl.
                         Schumacher (2016a), S. 1.</note> Statt eines lang erwarteten und vielfach
@@ -1066,26 +1066,26 @@
                     sprechen. Es verwundert daher kaum, dass Koeppen selbst sein Werk in einem Brief
                     an seinen langjährigen Förderer Marcel Reich-Ranicki im Vorfeld der eigentlichen
                     Veröffentlichung und kurz vor Fertigstellung als „Fragmentband“
-                        bezeichnete.<note xml:id="ftn3">Vgl. Schumacher (2016a), S 2.</note>
-                    Dennoch steht dieser Einordnung des eigenen Werks auf der anderen Seite ein
-                    umfassendes Konvolut an ‚Entwurfsseiten‘ gegenüber.<note xml:id="ftn4">Ich
-                        beziehe mich hier und bei allen folgenden allgemeinen Informationen auf die
-                        Angaben der Edition, diese finden sich im Bereich <emph>Über diese
-                            Edition</emph> unter <ref
-                                target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
-                                >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
+                        bezeichnete.<note xml:id="ftn3">Vgl. Schumacher (2016a), S 2.</note> Dennoch
+                    steht dieser Einordnung des eigenen Werks auf der anderen Seite ein umfassendes
+                    Konvolut an ‚Entwurfsseiten‘ gegenüber.<note xml:id="ftn4">Ich beziehe mich hier
+                        und bei allen folgenden allgemeinen Informationen auf die Angaben der
+                        Edition, diese finden sich im Bereich <emph>Über diese Edition</emph> unter
+                            <ref
+                            target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
+                            >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
                 </p>
-                <p xml:id="p2"> So finden sich alleine im Wolfgang-Koeppen-Archiv (WKA) an der
+                <p xml:id="p2">So finden sich alleine im Wolfgang-Koeppen-Archiv (WKA) an der
                     Universität Greifswald mehr als 1.500 Typoskript-Seiten, die vorbereitende
                     Skizzen, Vorstufen oder auch andere literarische Entwürfe und Überlegungen
                     beinhalten und deren Anordnung wohl nicht auf Koeppen selbst, sondern auf den
                     ersten Nachlassverwalter nach Koeppens Tod 1996, zurückgeht. Im Rahmen der
                     textgenetischen Edition liegt diese Materialvielfalt nun erstmals ediert vor und
-                    wird so der Öffentlichkeit zugänglich gemacht. </p>
+                    wird so der Öffentlichkeit zugänglich gemacht.</p>
             </div>
             <div xml:id="div2">
                 <head>Überblick über das Vorhaben</head>
-                <p xml:id="p3"> Die textgenetische Edition verfolgt das Ziel, den Schaffensprozess
+                <p xml:id="p3">ie textgenetische Edition verfolgt das Ziel, den Schaffensprozess
                     Koeppens zu entschlüsseln, zu präsentieren und Nutzer*innen einen
                     multiperspektivischen Zugang zum Werk anzubieten. Dabei wird auf komplexe,
                     synoptisch schichtende Apparate, wie sie zumeist in ähnlichen Editionen im Print
@@ -1099,13 +1099,13 @@
                     Vorarbeiten) zu ergänzen.<note xml:id="ftn5">Vgl. Grésillon (1999), S.
                         26ff.</note> Im Grundsatz verfügt die Edition sowohl über eine online
                     zugängliche wie auch über eine gedruckte Komponente (Hybridedition). </p>
-                <p xml:id="p4"> Die Erschließung, Untersuchung und Erarbeitung der Edition wurde
+                <p xml:id="p4">Die Erschließung, Untersuchung und Erarbeitung der Edition wurde
                     durch die Deutsche Forschungsgemeinschaft von 2011 bis 2015 sowie durch Mittel
                     der Philosophischen Fakultät der Universität Greifswald ermöglicht. Als
                     Herausgeber*innen der Edition zeichnen Katharina Krüger, Elisabetta Mengaldo und
                     Eckhard Schumacher verantwortlich. Die technische Realisation wurde zudem durch
                     das Trier Center for Digital Humanities unterstützt.<note xml:id="ftn6">Siehe
-                        Anmerkung 3.</note>
+                            <ref type="crossref" target="#ftn3">Anmerkung 3</ref>.</note>
                 </p>
                 <div xml:id="div2.1">
                     <head>Zum gedruckten Teil der Edition</head>
@@ -1138,11 +1138,11 @@
                         textgenetischer Materialien sowie auf jegliche Auflistung von Varianten
                         zwischen den verschiedenen Ausgaben von <emph>Jugend</emph> (siehe unten).
                         Analoge und digitale Komponente bilden gemeinsam die Edition und ergänzen
-                        sich dabei gegenseitig. </p>
+                        sich dabei gegenseitig.</p>
                 </div>
                 <div xml:id="div2.2">
                     <head>Inhalt und Ziel der digitalen Edition</head>
-                    <p xml:id="p7"> Komplementär zur Druckausgabe enthält der digitale Teil der
+                    <p xml:id="p7">Komplementär zur Druckausgabe enthält der digitale Teil der
                         Edition neben dem Lesetext zudem auch die Vielzahl der Textträger des
                             <emph>Jugend</emph>-Konvoluts. Dieses umfasst zusätzlich zu den zuvor
                         bereits erwähnten rund 1.500 Seiten aus dem WKA auch die Satzvorlage aus dem
@@ -1161,7 +1161,7 @@
                         direkt am Material auf Grundlage des Nachlasses nachvollziehbar zu
                             machen.<note xml:id="ftn10">Vgl. Schumacher (2016b), S. 122.</note>
                     </p>
-                    <p xml:id="p8"> Der Kommentar im gedruckten Teil der Edition verrät mehr über
+                    <p xml:id="p8">Der Kommentar im gedruckten Teil der Edition verrät mehr über
                         grundlegende Annahmen, die für die genetische Untersuchung des Materials und
                         spätere Präsentation erkenntnisleitend waren. So sei davon auszugehen, dass
                         Wolfgang Koeppen nicht nur zu einem bestimmten Zeitpunkt an
@@ -1175,10 +1175,10 @@
                         unterteilt. Diese sind zwar im Drucktext per se nicht vorhanden, entsprechen
                         jedoch den durch Leerzeilen getrennten Abschnitten.<note xml:id="ftn12">Vgl.
                                 <ref
-                                    target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
-                                    >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
+                                target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
+                                >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
                     </p>
-                    <p xml:id="p9"> Nicht unerwähnt bleiben soll auch die technische Basis der
+                    <p xml:id="p9">Nicht unerwähnt bleiben soll auch die technische Basis der
                         textgenetischen Edition. Diese bildet notwendigerweise den Rahmen für die
                         Möglichkeiten der Darstellung einer digitalen Edition und ist daher ein
                         wichtiges Kriterium, um diese beurteilen zu können. Zu den Details des
@@ -1202,7 +1202,7 @@
                         Abruf der Daten über eine entsprechende Schnittstelle sowie deren
                         Nachnutzung ist nicht möglich. Auf Anfrage konnten die Daten jedoch für den
                         Zweck dieser Rezension eingesehen werden. </p>
-                    <p xml:id="p10"> Bei den zur Verfügung gestellten Datensätzen handelt es sich um
+                    <p xml:id="p10">Bei den zur Verfügung gestellten Datensätzen handelt es sich um
                         Rohdaten, die direkt aus den verwendeten Tools Transcribo und FuD exportiert
                         wurden. Das hier verwendete Datenmodell orientiert sich an den Empfehlungen
                         der <emph>Text Encoding Initiative</emph> und ergänzt dieses durch
@@ -1264,13 +1264,13 @@
                             <graphic
                                 url="http://ride.i-d-e.de/wp-content/uploads/issue_13/koeppen-jugend/pictures/picture-4.png"/>
                             <head type="legend">Facettierungsmöglichkeiten der Suchfunktion.</head>
-                        </figure>Hinter dem Zugang <emph>Texte</emph> verbirgt sich nicht nur die
+                        </figure> Hinter dem Zugang <emph>Texte</emph> verbirgt sich nicht nur die
                         Ansicht einzelner Dokumente, sondern zugleich auch eine <emph>archivalische
                             Gesamtansicht</emph> aller Dokumente, die in die Edition aufgenommen
                             wurden.<note xml:id="ftn16">Dies sind insgesamt 1700 Textträger – siehe
                                 <ref
-                                    target="https://web.archive.org/web/20201203100250/http://www.koeppen-jugend.de/texte"
-                                    >https://web.archive.org/web/20201203100250/http://www.koeppen-jugend.de/texte</ref>.</note>
+                                target="https://web.archive.org/web/20201203100250/http://www.koeppen-jugend.de/texte"
+                                >https://web.archive.org/web/20201203100250/http://www.koeppen-jugend.de/texte</ref>.</note>
                         Dieses Archiv bietet dem Nutzer in der Standardperspektive zunächst eine
                         Übersicht und für jeden Textträger eine Vorschau des Faksimiles, sofern
                         vorhanden, und einige wenige wesentliche Metainformationen, wie den Titel
@@ -1303,19 +1303,20 @@
                 </div>
                 <div xml:id="div3.2">
                     <head>Textgenese als visueller Pfad</head>
-                    <p xml:id="p15"> Um den Nutzer*innen der Edition die Ergebnisse möglichst
+                    <p xml:id="p15">Um den Nutzer*innen der Edition die Ergebnisse möglichst
                         eingängig zu präsentieren, wurden von den Editor*innen je Sequenz sog.
                         genetische Pfade rekonstruiert, die wiederum aus verschiedenen Gruppen
-                        bestehen. Zu einer solchen Gruppen gehören beliebig viele Dokumente, <cit>
+                        bestehen. Zu einer solchen Gruppe gehören beliebig viele Dokumente, <cit>
                             <quote>die aufgrund ausgewiesener textueller und/oder metatextueller
                                 Eigenschaften als zusammengehörig betrachtet werden können, da sie
                                 vermutlich im selben Zeitraum bzw. in derselben Arbeitsphase
                                 entstanden sind.<note xml:id="ftn18">Vgl. <ref
-                                    target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
-                                    >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note></quote>
+                                        target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
+                                        >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
+                            </quote>
                         </cit>
                     </p>
-                    <p xml:id="p16"> Die präsentierte Ordnung ist jedoch weniger als eine definitive
+                    <p xml:id="p16">Die präsentierte Ordnung ist jedoch weniger als eine definitive
                         Chronologie zu verstehen, sondern eher als ein Vorschlag zur Rekonstruktion
                         der genetischen Verhältnisse.<note xml:id="ftn19">Vgl. Krüger (2016), S.
                             178.</note> Vielmehr bildet der einzelne Pfad eine mögliche relative
@@ -1363,7 +1364,7 @@
                 </div>
                 <div xml:id="div3.3">
                     <head>Ansicht einzelner Textträger</head>
-                    <p xml:id="p18"> Eine grundsätzliche Herausforderung, die sich jede digitale
+                    <p xml:id="p18">Eine grundsätzliche Herausforderung, die sich jede digitale
                         Edition stellen muss, ist die Frage nach der dauerhaften und möglichst
                         exakten Referenzierbarkeit ihrer Inhalte. Letztlich also der Frage danach,
                         wie zitierfähig eine Edition ist.<note xml:id="ftn21">Vgl. Sahle (2013), S.
@@ -1373,8 +1374,8 @@
                         häufig vorgefundenen Zitiervorschlags auf Seitenebene, findet sich im
                         Bereich <emph>Über die Edition</emph> lediglich ein allgemeiner Hinweis zur
                         Zitation der Edition.<note xml:id="ftn22">Siehe <ref
-                            target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
-                            >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
+                                target="https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber"
+                                >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
                     </p>
                     <p xml:id="p19">
                         <figure xml:id="img7">
@@ -1405,7 +1406,7 @@
                         </list> Am rechten Rand findet sich neben den Metadaten zudem ein weiteres
                         Navigationselement, welches den Wechsel zu Dokumenten des direkten
                         Textzusammenhangs ermöglicht. </p>
-                    <p xml:id="p20"> Hierauf folgt der Hauptbereich der Einzelseitenansicht. In drei
+                    <p xml:id="p20">Hierauf folgt der Hauptbereich der Einzelseitenansicht. In drei
                         Spalten wird dem Nutzer eine synoptische Ansicht aus Digitalisat und einem
                         zeilengetreu wiedergegebenen transkribierten Text präsentiert (Spalte 1 und
                         2). Die dritte Spalte ermöglicht über verschiedene Reiter die Anpassung der
@@ -1418,7 +1419,7 @@
                             <item>Register</item>
                         </list>
                     </p>
-                    <p xml:id="p21"> So bieten die ersten beiden Reiter die Möglichkeit, die Anzeige
+                    <p xml:id="p21">So bieten die ersten beiden Reiter die Möglichkeit, die Anzeige
                         des Textes nach verschiedensten Kriterien zu modifizieren. Grundsätzlich
                         kann zwischen einer Ansicht des maschinenschriftlichen Grundzustandes und
                         des Endzustandes, inklusive aller handschriftlichen Korrekturen und
@@ -1437,7 +1438,7 @@
                         Informationen bereithalten, auf die im bisherigen Verlauf der Rezension
                         bereits eingegangen wurde, scheint doch ein genauerer Blick auf den Reiter
                             <emph>Kontexte</emph> lohnenswert. </p>
-                    <p xml:id="p22"> Dort bietet die Edition, neben Informationen zu Vorgängern und
+                    <p xml:id="p22">Dort bietet die Edition, neben Informationen zu Vorgängern und
                         Nachfolgern, inklusive entsprechender Verlinkungen, in der Archivmappe auch
                         Hinweise zur Textgenese (ebenfalls Vor- und Nachfolger) an. Die
                         Herausgeber*innen der Edition weisen jedoch darauf hin, dass ein Vor- bzw.
@@ -1448,7 +1449,7 @@
                                 >https://web.archive.org/web/20201203095727/http://www.koeppen-jugend.de/pages/ueber</ref>.</note>
                         Im Falle des Manuskripts MID355-M028-003 wurden keine solchen Vorstufen bzw.
                         folgenden Textstufen identifiziert. </p>
-                    <p xml:id="p23"> Wie genau die Grenzen einer unmittelbaren Vorstufe bzw. einer
+                    <p xml:id="p23">Wie genau die Grenzen einer unmittelbaren Vorstufe bzw. einer
                         folgenden Textstufe definiert sind, ist jedoch nicht weiter erläutert.
                         Festzustellen ist aber, dass sich nur einige wenige Textträger finden, bei
                         denen ein unmittelbarer Vorgänger bzw. Nachfolger im rekonstruierten
@@ -1468,13 +1469,13 @@
                         vermerken die EditorInnen dazu das Folgende: „Es bestehen damit große
                         Analogien zur Satzvorlage. Die Änderungen finden sich jedoch nicht in der
                         Satzvorlage wieder.“<note xml:id="ftn26">Vgl. <ref
-                            target="https://web.archive.org/web/20200121132818/http://koeppen-jugend.de/textgenese/sequenz/53"
-                            >https://web.archive.org/web/20200121132818/http://koeppen-jugend.de/textgenese/sequenz/53</ref>.</note>
+                                target="https://web.archive.org/web/20200121132818/http://koeppen-jugend.de/textgenese/sequenz/53"
+                                >https://web.archive.org/web/20200121132818/http://koeppen-jugend.de/textgenese/sequenz/53</ref>.</note>
                         Aufgrund der fehlenden Zuordnung als unmittelbarer Vorgänger/Nachfolger
                         stellt sich die Frage, welche Änderungen Koeppen hier zunächst erdacht
                         hatte, die zu so starken Unterschieden zwischen den einzelnen Texten der
                         Gruppen führten. Hierauf bietet die textgenetische Edition keine Antwort. </p>
-                    <p xml:id="p24"> Der Vergleich mit anderen Textträgern des Nachlasses oder auch
+                    <p xml:id="p24">Der Vergleich mit anderen Textträgern des Nachlasses oder auch
                         den jeweiligen Teilen der veröffentlichten Fassung bleibt den Nutzer*innen
                         der digitalen Edition überlassen. Andere digitale Editionen bieten hier
                         häufig deutlich mehr Optionen, wie bspw. synoptische Ansichten
@@ -1496,7 +1497,7 @@
                     aufgearbeitet und zugänglich gemacht. Der Edition lässt sich hier ganz ohne
                     Bedenken ein in weiten Teilen erkennbares und die Arbeit bestimmendes digitales
                     Paradigma bescheinigen.</p>
-                <p xml:id="p26"> Die Ergebnisse der Betrachtung zeigen zudem, dass die Darstellung
+                <p xml:id="p26">Die Ergebnisse der Betrachtung zeigen zudem, dass die Darstellung
                     der Textgenese dann besonders gut gelingt, wenn diese losgelöst vom eigentlichen
                     Text visualisiert wird. In der textgenetischen Edition ist dies vor allem anhand
                     der rekonstruierten und klar strukturierten genetischen Pfade erkennbar, die
@@ -1511,7 +1512,7 @@
                     verhält. Wünschenswert wäre es in diesem Zusammenhang auch, mehr über die
                     ‚Dokumentklassen‘ zu erfahren, die sich in der reichhaltigen
                     Nachlassüberlieferung ausmachen lassen. </p>
-                <p xml:id="p27"> Ferner ist hier zu fragen, inwiefern dies eine listenförmige
+                <p xml:id="p27">Ferner ist hier zu fragen, inwiefern dies eine listenförmige
                     Darstellung von Textgenese Eigenart genuin digitaler Darstellung ist. Ähnliche
                     Darstellungen wären durchaus auch in gedruckten Editionen, wenn auch mit einigem
                     Aufwand und einem Mehr an Funktionsverlust (oder auch Komfort in der Benutzung),
@@ -1535,11 +1536,11 @@
                     auch praktischen Modellierung digitaler textgenetischer Editionen zu leisten,
                     welche noch vor einigen ungelösten Aufgaben stehen.<note xml:id="ftn29">Für
                         einen Überblick zu diesem Thema siehe inbesondere Lukas (2019) sowie
-                        Nutt-Kofoth (2019, vor allem Nutt-Kofoth (2019), S. 20f.</note></p>
+                        Nutt-Kofoth (2019, vor allem Nutt-Kofoth (2019), S. 20f.</note>
+                </p>
             </div>
         </body>
         <back>
-            <!-- Ab hier Bibliografie, bitte Kursivierungen mit tei:emph beibehalten -->
             <div type="bibliography">
                 <listBibl>
                     <bibl>Grésillon, Almuth. 1999. <emph>Literarische Handschriften: Einführung in

@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">   
-        <teiHeader>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.13.1">
+    <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Lyrik des deutschen Mittelalters</title>
-                <author>
+                <author ref="https://orcid.org/0000-0002-7461-5820">
                     <name>
                         <forename>Helmut W.</forename>
                         <surname>Klug</surname>
                     </name>
-                    <idno type="ORCID">https://orcid.org/0000-0002-7461-5820</idno>
                     <affiliation>
                         <orgName>University of Graz</orgName>
                         <placeName/>
@@ -23,19 +24,22 @@
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13/ldm</idno>
                 <idno type="DOI">10.18716/ride.a.13.1</idno>
                 <idno type="archive"
-                    >https://github.com/i-d-e/ride/blob/archives/issue13/ldm.zip?raw=true</idno>
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue13/ldm/ldm.pdf</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <seriesStmt>
                 <title level="j">RIDE - A review journal for digital editions and resources</title>
-                <editor>Ulrike Henny-Krahmer</editor>
-                <editor>Frederike Neuber</editor>
-                <editor>Patrick Sahle</editor>
-                <editor role="managing">Ulrike Henny-Krahmer</editor>
-                <editor role="managing">Frederike Neuber</editor>
-                <editor role="technical">Bernhard Assmann</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+                <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
                 <editor role="technical">Jana Klinger</editor>
                 <biblScope unit="issue" n="13">Digital Scholarly Editions</biblScope>
                 <idno type="URI">http://ride.i-d-e.de/issues/issue-13</idno>
@@ -1065,25 +1069,35 @@
                     continuously adapting the editorial standards over time. The editors of the
                         <emph>Lyrik des deutschen Mittelalters</emph> (LDM for short) describe this
                     development very aptly: <cit>
-                        <quote>In medieval studies the belief in the possibility of regaining the author's text, or at least the archetype has declined in the same degree as the scholar’s/field's respect for the materiality of a manuscript has grown.</quote>
+                        <quote>In medieval studies the belief in the possibility of regaining the
+                            author's text, or at least the archetype has declined in the same degree
+                            as the scholar’s/field's respect for the materiality of a manuscript has
+                            grown.</quote>
                         <bibl><ref target="http://www.ldm-digital.de/einfuehrungedition.php"
-                            >Introduction</ref><note xml:id="ftn1"> Translated from German by the author; original version: “Der Glaube an die Möglichkeit, den Autortext oder wenigstens den
-                                Archetypus wiedergewinnen zu können, ist der Mediävistik in dem Maße
-                                abhanden gekommen, wie ihr Respekt für die Materialität der Handschrift
-                                gestiegen ist.”</note></bibl></cit> This statement also summarizes the
-                    editorial aim of the LDM, which puts its focus on both tradition and materiality
-                    but nonetheless concentrates on the two core editorial activities textual
-                    criticism in the scope of historic editions, and providing textual commentary
-                    for better access to the text itself. The scope of the text collection is as
-                    simple as challenging: to newly edit all poetic texts of the German High Middle
-                    Ages from its sources and provide them as an open access online edition (cf.
-                        <ref target="http://www.ldm-digital.de/">home page</ref>) – in the
-                    introduction to the edition the editors describe their aim even more boldly: <cit>
-                        <quote>to newly edit all medieval German lyrical texts from their sources.</quote><bibl><ref
-                                target="http://www.ldm-digital.de/einfuehrungedition.php"
-                            >Introduction</ref><note xml:id="ftn2">Translated from German by the author; original version: “[…] sämtliche lyrische Texte des deutschsprachigen Mittelalters neu
-                                aus den Quellen herauszugeben
-                                […].”</note></bibl></cit></p>
+                                >Introduction</ref>
+                            <note xml:id="ftn1">Translated from German by the author; original
+                                version: “Der Glaube an die Möglichkeit, den Autortext oder
+                                wenigstens den Archetypus wiedergewinnen zu können, ist der
+                                Mediävistik in dem Maße abhanden gekommen, wie ihr Respekt für die
+                                Materialität der Handschrift gestiegen ist”.</note></bibl>
+                    </cit> This statement also summarizes the editorial aim of the LDM, which puts
+                    its focus on both tradition and materiality but nonetheless concentrates on the
+                    two core editorial activities textual criticism in the scope of historic
+                    editions, and providing textual commentary for better access to the text itself.
+                    The scope of the text collection is as simple as challenging: to newly edit all
+                    poetic texts of the German High Middle Ages from its sources and provide them as
+                    an open access online edition (cf. <ref target="http://www.ldm-digital.de/">home
+                        page</ref>) – in the introduction to the edition the editors describe their
+                    aim even more boldly: <cit>
+                        <quote>to newly edit all medieval German lyrical texts from their
+                            sources.</quote>
+                        <bibl><ref target="http://www.ldm-digital.de/einfuehrungedition.php"
+                                >Introduction</ref>
+                            <note xml:id="ftn2">Translated from German by the author; original
+                                version: “[…] sämtliche lyrische Texte des deutschsprachigen
+                                Mittelalters neu aus den Quellen herauszugeben […]”.</note></bibl>
+                    </cit>
+                </p>
             </div>
             <div xml:id="div2">
                 <head>Background</head>
@@ -1117,7 +1131,7 @@
                         <graphic
                             url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ldm/pictures/picture-2.png"/>
                         <head type="legend">The LDM Website provides different text versions.</head>
-                    </figure>Fortunately, the documentation for the web site (editorial concept,
+                    </figure> Fortunately, the documentation for the web site (editorial concept,
                     user manual) is a lot easier to access than the project details as there are
                     links to the relevant information even on the homepage, there is also a
                     corresponding menu item. On the respective documentation pages (cf. <ref
@@ -1146,27 +1160,34 @@
                     because even changes in the markup (etc.) constitute new versions. Recording
                     these changes is important, though, but for the user it would be helpful to get
                     some kind of information on the character of the change.</p>
-
                 <p xml:id="p4">The LDM dares to take the edition of medieval German minnesong into a
                     new medium. For this kind of anthologies there are only few preceding incidents:
                     the most memorable probably is the electronic version of <emph>Minnesangs
                         Frühling</emph> which provided the poems as utf-8 coded plain text files
                     stored on a 3,5” floppy disk. The focus of the LDM therefore is primarily the
-                    editorial work, the aims of the project are clear cut: <cit><quote>The aim of
-                            the project is to transfer this level of understanding [the
-                            text-theoretical and media-historical discussion concerning the
+                    editorial work, the aims of the project are clear cut: <cit>
+                        <quote>The aim of the project is to transfer this level of understanding
+                            [the text-theoretical and media-historical discussion concerning the
                             transmission of minnesong] consequently into editorial practice. The
                             means to achieve this is to replace the printed book with the electronic
                             edition. Only the electronic edition allows for the processing of texts
                             in their different transmissions in such a way that every user can be
-                            provided with exactly the synopsis that is currently
-                                needed.</quote><bibl><ref
+                            provided with exactly the synopsis that is currently needed.</quote>
+                        <bibl><ref
                                 target="https://cris.fau.de/converis/publicweb/project/102091?lang=2"
-                                    >FAU CRIS</ref><note xml:id="ftn3">Translated from German by the author; original version: “Diesen Erkenntnisstand konsequent in die Editionspraxis zu überführen, ist das Ziel des Projekts; das Mittel hierzu ist der Ersatz des gedruckten Buches durch die elektronische Edition. Nur diese ermöglicht es, die Texte in ihren unterschiedlichen Überlieferungszuständen so aufzubereiten, dass jedem Benutzer genau die Synopse an die Hand gegeben werden kann, die er gerade benötigt.”</note></bibl></cit> When finished,
-                    the project will definitely provide a sound text basis of German medieval
-                    poetry, access will be furthered by the provision of the texts under a CC BY-SA
-                    license. To find out if the project data is also suitable for reusing will have
-                    to be seen once all results of the project are online.</p>
+                                >FAU CRIS</ref>
+                            <note xml:id="ftn3">Translated from German by the author; original
+                                version: “Diesen Erkenntnisstand konsequent in die Editionspraxis zu
+                                überführen, ist das Ziel des Projekts; das Mittel hierzu ist der
+                                Ersatz des gedruckten Buches durch die elektronische Edition. Nur
+                                diese ermöglicht es, die Texte in ihren unterschiedlichen
+                                Überlieferungszuständen so aufzubereiten, dass jedem Benutzer genau
+                                die Synopse an die Hand gegeben werden kann, die er gerade
+                                benötigt”.</note></bibl>
+                    </cit> When finished, the project will definitely provide a sound text basis of
+                    German medieval poetry, access will be furthered by the provision of the texts
+                    under a CC BY-SA license. To find out if the project data is also suitable for
+                    reusing will have to be seen once all results of the project are online.</p>
             </div>
             <div xml:id="div3">
                 <head>Technical Aspects</head>
@@ -1189,7 +1210,7 @@
                             url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ldm/pictures/picture-3.png"/>
                         <head type="legend">A closer look at the documentation (screenshot taken in
                             early 2018).</head>
-                    </figure>This review has been conducted in two phases: initially in early 2018
+                    </figure> This review has been conducted in two phases: initially in early 2018
                     and a second time in fall 2019. In the first draft of the review a major point
                     of criticism was that the user documentation is problematic as it leads the user
                     to believe that the texts are modeled in TEI-XML and provided for download in
@@ -1240,7 +1261,7 @@
                             url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ldm/pictures/picture-4.png"/>
                         <head type="legend">Special characters are named differently in the XML file
                             and in the project database.</head>
-                    </figure>Characters special for medieval scripts like the long-s, ligatures or
+                    </figure> Characters special for medieval scripts like the long-s, ligatures or
                     certain text structuring symbols, and modern combined characters like umlaut or
                     vowels with circumflex indicating long vowels are represented by Unicode decimal
                     numeric character references (although using hexadecimal Unicode codepoints,
@@ -1260,8 +1281,7 @@
                         Initiative character recommendation</ref>. With this approach the project
                     data is encoded more transparently. The overall gain for the domain would be a
                     common resource base (character description, fonts, etc.) as well as a common
-                    ground for discussion with neighboring fields of research. </p>
-
+                    ground for discussion with neighboring fields of research.</p>
                 <p xml:id="p10">The downloaded TEI-XML is not valid, by the way, as the code is not
                     TEI compliant in the header. When using detailed markup (here:
                         <code>&lt;publisher&gt;</code>) in the various statements (here:
@@ -1272,25 +1292,24 @@
                     the underlying rules are rather something that has to be discussed with the TEI
                     community at large than with the project staff.</p>
                 <p xml:id="p11">Presenting the edited texts on a web site sure makes up an online
-                    resource (cf. <ref type="crossref" target="#p4">project aims
-                    above</ref><!-- Helmut fragen; richtiger Verweis so? -->) – Digital Scholarly
-                    Editions, though, should convey more of the digital paradigm and consider
-                    sustainability in form of re-usable data, persistent identifiers, and digital
-                    preservation scenarios. This is a serious shortcoming for a present-day digital
-                    edition project. Freely accessible research, meta data, and project data is not
-                    only increasingly called for by funding organizations, it improves any digitally
-                    oriented humanities project in many ways: it adds transparency and
-                    verifiability, improves data life span, allows for reuse of data – for both
-                    humans and machines –, in short, today it should be the common approach (cf.
-                    e.g. DFG 2015; Pierazzo 2016,195; Andorfer 2015; Rubow et al., 2015,28; Birnbaum
-                    et al. 2017,12). At the moment the project orientation is clearly towards
-                    reception through reading, this includes also the text collation views. Digital
-                    resources are limited to the XML-download of individual songs. To really provide
-                    data reusable in different settings there has to be more. Data downloads should
-                    provide at least the whole online corpus, and text collections for the
-                    individual authors, not just the individual songs. For different kinds of
-                    visualization (eg. chronological visualization of sources for songs according to
-                    dialect areas) it would also be useful to have access to the metadata on the
+                    resource (cf. <ref type="crossref" target="#p4">project aims above</ref>) –
+                    Digital Scholarly Editions, though, should convey more of the digital paradigm
+                    and consider sustainability in form of re-usable data, persistent identifiers,
+                    and digital preservation scenarios. This is a serious shortcoming for a
+                    present-day digital edition project. Freely accessible research, meta data, and
+                    project data is not only increasingly called for by funding organizations, it
+                    improves any digitally oriented humanities project in many ways: it adds
+                    transparency and verifiability, improves data life span, allows for reuse of
+                    data – for both humans and machines –, in short, today it should be the common
+                    approach (cf. e.g. DFG 2015; Pierazzo 2016,195; Andorfer 2015; Rubow et al.,
+                    2015,28; Birnbaum et al. 2017,12). At the moment the project orientation is
+                    clearly towards reception through reading, this includes also the text collation
+                    views. Digital resources are limited to the XML-download of individual songs. To
+                    really provide data reusable in different settings there has to be more. Data
+                    downloads should provide at least the whole online corpus, and text collections
+                    for the individual authors, not just the individual songs. For different kinds
+                    of visualization (eg. chronological visualization of sources for songs according
+                    to dialect areas) it would also be useful to have access to the metadata on the
                     texts and the historical manuscripts. Looking at the developments since early
                     2018 to the present day there is hope that more sources will be available at the
                     end of the project term.</p>
@@ -1372,7 +1391,7 @@
                         <head type="legend">The non-responsive web design counteracts editorial
                             intentions. The screenshot from early 2018 also documents the missing
                             TEI download icon.</head>
-                    </figure>The text presentation page is the heart of the web site and it shows
+                    </figure> The text presentation page is the heart of the web site and it shows
                     that much thought has been spent on text presentation: with great success! It
                     presents all relevant information (text, literary commentary, meta data) on a
                     condensed space with putting the focus clearly on the text itself as well as a
@@ -1386,7 +1405,6 @@
                     good intentions of the editors, for example when the verse lines of the
                     transcription should be displayed as in the manuscript but are wrapped
                     automatically (cf. <ref type="crossref" target="#img5">fig. 5</ref>). </p>
-
                 <p xml:id="p17">Revisiting users can even store selected preferences (as cookies). A
                     print icon opens a new page that allows some manipulation of the edited text and
                     features a drop-out menu where the user can select the printing format. The PDF
@@ -1403,14 +1421,13 @@
                     so that the reading experience on handheld devices is not acceptable. Since the
                     web presentation conveys the impression that texts are primarily meant to be
                     received this way, it is a general shortcoming. </p>
-
                 <p xml:id="p18">
                     <figure xml:id="img6">
                         <graphic
                             url="http://ride.i-d-e.de/wp-content/uploads/issue_13/ldm/pictures/picture-6.png"/>
                         <head type="legend">Text presentation in <hi rend="italic">Des Minnesangs
                                 Frühling</hi> (Heinrich von Veldeke, p. 134).</head>
-                    </figure>The layout of the text presentation and the information presented
+                    </figure> The layout of the text presentation and the information presented
                     reminds of the page layout in the <emph>Minnesangs Frühling</emph> anthology
                     (cf. <ref type="crossref" target="#img6">fig. 6</ref>) with its three-part
                     apparatus, information on parallel transmission, and (canonical) reference. But
@@ -1450,11 +1467,15 @@
                     provide reusable data, following the FAIR principles (cf. Wilkinson et al.
                     2016), which goes beyond the download of single XML files. Consequently the RIDE
                         <emph>Criteria for Reviewing Scholarly Digital Editions</emph> should be
-                    applied: <cit><quote>Scholarly digital editions are not merely publications in
-                            digital form; rather, they are information systems which follow a
-                            methodology determined by a digital paradigm, just as traditional print
-                            editions follow a methodology determined by the paradigms of print
-                            culture.</quote><bibl>Sahle 2014</bibl></cit></p>
+                    applied: <cit>
+                        <quote>Scholarly digital editions are not merely publications in digital
+                            form; rather, they are information systems which follow a methodology
+                            determined by a digital paradigm, just as traditional print editions
+                            follow a methodology determined by the paradigms of print
+                            culture.</quote>
+                        <bibl>Sahle 2014</bibl>
+                    </cit>
+                </p>
                 <p xml:id="p21">The LDM in its present state is a respectable edition project that
                     excels in visual data presentation and provides German medieval scholars and
                     students with a sound text collection of digital minnesong. If the project
@@ -1467,36 +1488,35 @@
                 <listBibl>
                     <bibl>Andorfer, Peter. 2015. <emph>Forschungsdaten in den (digitalen)
                             Geisteswissenschaften: Versuch einer Konkretisierung.</emph> DARIAH-DE
-                        Working Papers 14. Accessed July 7 2020. &lt;<ref
+                        Working Papers 14. Accessed July 7 2020. <ref
                             target="http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2015-14.pdf"
-                            >http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2015-14.pdf</ref>&gt;.</bibl>
+                            >http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2015-14.pdf</ref>.</bibl>
                     <bibl>Birnbaum, David J., Sheila Bonde, and Mike Kestemont. 2017. <emph>The
                             Digital Middle Ages: An Introduction.</emph> In: Speculum, Supplement
                         2017, S. 1-38.</bibl>
                     <bibl>
                         <emph>DFG Guidelines on the Handling of Research Data</emph>. 2015. Accessed
-                        July 7 2020. &lt;<ref
+                        July 7 2020. <ref
                             target="http://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/guidelines_research_data.pdf"
-                            >http://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/guidelines_research_data.pdf</ref>&gt;.</bibl>
+                            >http://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/guidelines_research_data.pdf</ref>.</bibl>
                     <bibl>Lachmann, Karl, and Moritz Haupt, ed. 1857. <emph>Des Minnesangs
                             Frühling.</emph> Leipzig: Hierzel.</bibl>
                     <bibl>Pierazzo, Elena, and Matthew James Driscoll. 2016. <emph>Digital Scholarly
                             Editing. Theories and Practices.</emph> OpenBooks Publishers. Accessed
-                        July 7 2020. &lt;<ref
-                            target="https://www.openbookpublishers.com/product/483"
-                            >https://www.openbookpublishers.com/product/483</ref>&gt;.</bibl>
+                        July 7 2020. <ref target="https://www.openbookpublishers.com/product/483"
+                            >https://www.openbookpublishers.com/product/483</ref>.</bibl>
                     <bibl>Putmans, Jean L., ed. 1993. <emph>EDV-Text von
                             "Des Minnesangs Frühling".</emph> Göppingen: Kümmerle.</bibl>
                     <bibl>Rubow, Lexi, Rachael Shen, and Brianna Schofield. 2015.
                             <emph>Understanding Open Access: When, Why, &amp; How to Make Your Work
                             Openly Accessible.</emph> Authors Alliance Guides 2. Authors Alliance.
-                        Accessed July 7 2020. &lt;<ref
+                        Accessed July 7 2020. <ref
                             target="https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf"
-                            >https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf</ref>&gt;.</bibl>
+                            >https://authorsalliance.org/wp-content/uploads/Documents/Guides/Authors%20Alliance%20-%20Understanding%20Open%20Access.pdf</ref>.</bibl>
                     <bibl>Sahle, Patrick. 2014. Criteria for Reviewing Scholarly Digital Editions,
-                        version 1.1. Accessed July 7 2020 &lt;<ref
+                        version 1.1. Accessed July 7 2020. <ref
                             target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
-                            >https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/</ref>&gt;.</bibl>
+                            >https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/</ref>.</bibl>
                     <bibl>von der Hagen, Friedrich Heinrich. 1838. <emph>Minnesinger. Deutsche
                             Liederdichter des zwölften, dreizehnten und vierzehnten Jahrhunderts aus
                             allen bekannten Handschriften und frühen Drucken.</emph> Leipzig:
@@ -1506,9 +1526,9 @@
                         Niemeyer.</bibl>
                     <bibl>Wilkinson, M., Dumontier, M., Aalbersberg, I. <emph>et al.</emph> 2016.
                             <emph>The FAIR Guiding Principles for scientific data management and
-                            stewardship</emph>. In: Sci Data <hi rend="bold">3, </hi>160018.
-                            &lt;<ref target="https://doi.org/10.1038/sdata.2016.18"
-                            >https://doi.org/10.1038/sdata.2016.18</ref>&gt;.</bibl>
+                            stewardship</emph>. In: Sci Data <hi rend="bold">3, </hi>160018. <ref
+                            target="https://doi.org/10.1038/sdata.2016.18"
+                            >https://doi.org/10.1038/sdata.2016.18</ref>.</bibl>
                 </listBibl>
                 <p>All web pages (besides the pages from the University of Erlangen-Nürnberg) have
                     been archived with <ref target="http://archive.org/web/">archive.org</ref> as of

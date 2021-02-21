@@ -1,1783 +1,1844 @@
-<?xml version="1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Rezension von "Europarl"</title>
-        <respStmt>
-          <resp>author</resp>
-          <name>
-            <persName>
-              <forename>Claes</forename>
-              <surname>Neuefeind</surname>
-            </persName>
-            <affiliation>
-              <orgName>Institute for Digital Humanities, University of Cologne</orgName>
-              <placeName>Cologne</placeName>
-            </affiliation>
-            <email>c.neuefeind (at) uni-koeln.de</email>
-          </name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Institut f&#xFC;r Dokumentologie und Editorik</publisher>
-        <date when="2018">2018</date>
-        <idno type="issue">9</idno>
-        <idno type="URI">http://ride.i-d-e.de/issue-9/europarl</idno>
-        <idno type="DOI"/>
-        <availability>
-          <licence>
-            <ref target="http://creativecommons.org/licenses/by/4.0/"/>
-          </licence>
-        </availability>
-      </publicationStmt>
-      <notesStmt>
-        <relatedItem>
-          <biblStruct>
-            <monogr>
-              <title xml:id="resource_title">Europarl</title>
-              <editor xml:id="resource_editors">Philipp Koehn</editor>
-              <respStmt>
-                <resp>Editor</resp>
-                <persName>
-                  <name>Philipp Koehn</name>
-                </persName>
-              </respStmt>
-              <imprint>
-                <date xml:id="resource_date_publication">2001-2012</date>
-              </imprint>
-            </monogr>
-            <idno xml:id="resource_uri">http://www.statmt.org/europarl/</idno>
-          </biblStruct>
-        </relatedItem>
-        <note>
-          <date xml:id="resource_date_access">2018-01-19</date>
-        </note>
-      </notesStmt>
-      <sourceDesc>
-        <p>Auf der Basis von
-            <ref>http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0</ref>
-        </p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy
-          xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/">
-          <category xml:id="general_information">
-            <category xml:id="bibl_desc">
-              <catDesc>
-                <ref target="#K1.1">cf. Catalogue 1.1</ref>
-              </catDesc>
-              <catDesc>Can the text collection be identified in terms similar to traditional
-                bibliographic descriptions (title, responsible editors, institution, date(s) of
-                publication, identifier/address)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="contributors">
-              <catDesc>
-                <ref target="#K1.3">cf. Catalogue 1.3</ref>
-              </catDesc>
-              <catDesc>Are the contributors (editors, institutions, associates) of the project
-                documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="contacts">
-              <catDesc>
-                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-              </catDesc>
-              <catDesc>Is contact information given?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="aims">
-            <category xml:id="doc_contents">
-              <catDesc>
-                <ref target="#K2.1">cf. Catalogue 2.1</ref>
-              </catDesc>
-              <catDesc>Is there a description of the aims and contents of the text
-                collection?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="purpose">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>What is the purpose of the text collection?</catDesc>
-              <category xml:id="research">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="teaching">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_purpose">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="research_type">
-              <catDesc>
-                <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
-              </catDesc>
-              <catDesc>What kind of research does the collection allow to conduct
-                primarily?</catDesc>
-              <category xml:id="qualitative">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="quantitative">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="classification">
-              <catDesc>
-                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-              </catDesc>
-              <catDesc>How does the text collection classify itself (e.g. in its title or
-                documentation)?</catDesc>
-              <category xml:id="collection">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="corpus">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_archive">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_library">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="digital_edition">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="portal">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="database">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="no_classification">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="research_fields">
-              <catDesc>
-                <ref target="#K2.2">cf. Catalogue 2.2</ref>
-              </catDesc>
-              <catDesc>To which field(s) of research does the text collection contribute?</catDesc>
-              <category xml:id="field_history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_literary_studies">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_linguistics">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_musicology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_art_history">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_archaeology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_philosophy">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_religious_studies">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="field_sociology">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss>Language technology</gloss>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="content">
-            <category xml:id="era">
-              <catDesc>
-                <ref target="#K2.5">cf. Catalogue 2.5</ref>
-              </catDesc>
-              <catDesc>What era(s) do the texts belong to?</catDesc>
-              <category xml:id="era_classics">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="era_medieval">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="era_early_modern">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="era_modern">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="era_contemporary">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="language">
-              <catDesc>
-                <ref target="#K2.5">cf. Catalogue 2.5</ref>
-              </catDesc>
-              <catDesc>What languages are the texts in?</catDesc>
-              <category xml:id="arabic">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="chinese">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="danish">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="english">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="finnish">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="french">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="german">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="greek">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="hebrew">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="hindi">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="italian">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="japanese">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="latin">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="norwegian">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="polish">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="portuguese">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="russian">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="spanish">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="swedish">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="turkish">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#free" xml:id="language_note">
-                <gloss>all official languages of the EU</gloss>
-              </category>
-            </category>
-            <category xml:id="text_type">
-              <catDesc>
-                <ref target="#K2.5">cf. Catalogue 2.5</ref>
-              </catDesc>
-              <catDesc>What kind of texts are in the collection?</catDesc>
-              <category xml:id="literary_works">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="private_documents">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="essays">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="newspaper_articles">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="charters">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="inscriptions">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="files_records">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="protocols">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="scientific_papers">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="speech_transcripts">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="add_information">
-              <catDesc>
-                <ref target="#K2.5">cf. Catalogue 2.5</ref>
-              </catDesc>
-              <catDesc>What kind of information is published in addition to the texts?</catDesc>
-              <category xml:id="introduction">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="commentary">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="context_material">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="bibliography">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="facsimile">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-          </category>
-          <category xml:id="composition">
-            <category xml:id="documentation_methods">
-              <catDesc>
-                <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
-              </catDesc>
-              <catDesc>Are the principles and decisions regarding the design of the text collection,
-                its composition and the selection of texts documented?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="selection">
-              <catDesc>
-                <ref target="#K3.1">cf. Catalogue 3.1</ref>
-              </catDesc>
-              <catDesc>What selection criteria have been chosen for the text collection?</catDesc>
-              <category xml:id="selection_language">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_author">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_country">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_epoch">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_genre">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_topic">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_style">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="selection_linguistic_characteristics">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="size">
-              <category xml:id="size_texts">
-                <catDesc>
-                  <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
-                </catDesc>
-                <catDesc>How large is the text collection in number of texts/records?</catDesc>
-                <category xml:id="texts_le10">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="texts_11-50">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="texts_51-100">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="texts_gt100_">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="texts_gt1000">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category corresp="#unknown">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-              <category xml:id="size_tokens">
-                <catDesc>
-                  <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
-                </catDesc>
-                <catDesc>How large is the text collection in number of tokens?</catDesc>
-                <category xml:id="tokens_lt100.000">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="tokens_100.000-1mio">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="tokens_gt1mio">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="tokens_gt10mio">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category corresp="#unknown">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="structure">
-              <catDesc>
-                <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
-              </catDesc>
-              <catDesc>Does the text collection have identifiable sub-collections or
-                components?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="acquisition">
-              <category xml:id="text_recording">
-                <catDesc>
-                  <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
-                </catDesc>
-                <catDesc>Does the text collection record or transcribe the textual data for the
-                  first time?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="text_integration">
-                <catDesc>
-                  <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
-                </catDesc>
-                <catDesc>What kind of material has been taken over from other sources?</catDesc>
-                <category xml:id="full_text">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="reuse_metadata">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="reuse_annotation">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.9.2">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Rezension von „Europarl“</title>
+            <author ref="https://orcid.org/0000-0002-9377-9492">
+               <name>
+                  <forename>Claes</forename>
+                  <surname>Neuefeind</surname>
+               </name>
+               <affiliation>
+                  <orgName>Institute for Digital Humanities, University of Cologne</orgName>
+                  <placeName>Cologne</placeName>
+               </affiliation>
+               <email>c.neuefeind (at) uni-koeln.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+            <date when="2018-11">2018</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-9/europarl</idno>
+            <idno type="DOI">10.18716/ride.a.9.2</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue09/europarl/europarl.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+               Neuber</editor>
+            <biblScope unit="issue" n="9">Digital Text Collections</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-9</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Europarl</title>
+                  <editor>Philipp Koehn</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>
+                        <name>Philipp Koehn</name>
+                     </persName>
+                  </respStmt>
+                  <date type="publication">2001-2012</date>
+                  <idno type="URI">http://www.statmt.org/europarl/</idno>
+                  <date type="accessed">2018-01-19</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/"
+                     >Criteria for Reviewing Digital Text Collections</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/">
+               <category xml:id="general_information">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.1">cf. Catalogue 1.1</ref>
+                     </catDesc>
+                     <catDesc>Can the text collection be identified in terms similar to traditional
+                        bibliographic descriptions (title, responsible editors, institution, date(s)
+                        of publication, identifier/address)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category corresp="#none">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="quality">
-              <catDesc>
-                <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
-              </catDesc>
-              <catDesc>Has the quality of the data (transcriptions, metadata, annotations, etc.)
-                been checked?</catDesc>
-              <catDesc>
-                <num type="boolean" value="3"/>
-              </catDesc>
-            </category>
-            <category xml:id="typology">
-              <catDesc>
-                <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
-              </catDesc>
-              <catDesc>Considering aims and methods of the text collection, how would you classify
-                it further? For definitions please consider the help-texts.</catDesc>
-              <category xml:id="typology_general_purpose">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_corpus">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_collection_records">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_canon">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_oeuvre">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_reference_corpus">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_contrastive_corpus">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_parallel_corpus">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="typology_diachronic_corpus">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="data_modelling">
-            <category xml:id="text_treatment">
-              <catDesc>
-                <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
-              </catDesc>
-              <catDesc>How are the textual sources represented in the digital collection?</catDesc>
-              <category xml:id="normalized_transcription">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="orthographic_transcription">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="phonetic_transcription">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="diplomatic_transcription">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="transliteration">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="edited_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="translated_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="summarized_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="sampled_text">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="basic_format">
-              <catDesc>
-                <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
-              </catDesc>
-              <catDesc>In which basic format are the texts encoded?</catDesc>
-              <category xml:id="plain_text">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="xml">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="html">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-            </category>
-            <category xml:id="annotation">
-              <category xml:id="annotation_type">
-                <catDesc>
-                  <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
-                </catDesc>
-                <catDesc>With what information are the texts further enriched?</catDesc>
-                <category xml:id="semantic_annotations">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="linguistic_annotations">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="editorial_annotations">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="structural_information">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category corresp="#none">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-              <category xml:id="annotation_integration">
-                <catDesc>
-                  <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
-                </catDesc>
-                <catDesc>How are the annotations linked to the texts themselves?</catDesc>
-                <category xml:id="embedded">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category xml:id="stand-off">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Is contact information given?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category corresp="#not_applicable">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="metadata">
-              <category xml:id="metadata_type">
-                <catDesc>
-                  <ref target="#K3.2.3">cf. Catalogue 3.2.3</ref>
-                </catDesc>
-                <catDesc>What kind of metadata are included in the text collection?</catDesc>
-                <category xml:id="descriptive">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="structural">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="administrative">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+               </category>
+               <category xml:id="aims">
+                  <category xml:id="doc_contents">
+                     <catDesc>
+                        <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is there a description of the aims and contents of the text
+                        collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
                   </category>
-                </category>
-                <category corresp="#none">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-              <category xml:id="metadata_level">
-                <catDesc>
-                  <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
-                </catDesc>
-                <catDesc>On which level are the metadata included?</catDesc>
-                <category xml:id="whole_collection">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="collection_parts">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="individual_texts">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="purpose">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>What is the purpose of the text collection?</catDesc>
+                     <category xml:id="research">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="teaching">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
                   </category>
-                </category>
-                <category corresp="#not_applicable">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="data_standards">
-              <category xml:id="data_schema">
-                <catDesc>
-                  <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
-                </catDesc>
-                <catDesc>What kind of data/metadata/annotation schemas are used for the text
-                  collection?</catDesc>
-                <category xml:id="standardized_schema">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="customized_standard_schema">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="project_specific">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#none">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-                <category corresp="#unknown">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-              </category>
-              <category xml:id="standard_format">
-                <catDesc>
-                  <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
-                </catDesc>
-                <catDesc>Which standards for text encoding, metadata and annotation are used in the
-                  text collection?</catDesc>
-                <category xml:id="tei">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="cei">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="ead">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="xces">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="dublin_core">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="edm">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="mets">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="mods">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="skos">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="owl">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="imdi">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="cmdi">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="tcf">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="olac">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="eagles">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="pos_tagsets">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="research_type">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>What kind of research does the collection allow to conduct
+                        primarily?</catDesc>
+                     <category xml:id="qualitative">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="quantitative">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
                   </category>
-                </category>
-                <category corresp="#none">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-          </category>
-          <category xml:id="provision">
-            <category xml:id="basic_data_accessible">
-              <catDesc>
-                <ref target="#K4.1">cf. Catalogue 4.1</ref>
-              </catDesc>
-              <catDesc>Is the textual data accessible in a source format (e.g. XML, TXT)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="download">
-              <catDesc>
-                <ref target="#K4.2">cf. Catalogue 4.2</ref>
-              </catDesc>
-              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="technical_interfaces">
-              <catDesc>
-                <ref target="#K4.2">cf. Catalogue 4.2</ref>
-              </catDesc>
-              <catDesc>Are there technical interfaces which allow the reuse of the data of the text
-                collection in other contexts?</catDesc>
-              <category xml:id="OAI-PMH">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="REST">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="SPARQL_endpoint">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="general_API">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="analytical_data">
-              <catDesc>
-                <ref target="#K4.3">cf. Catalogue 4.3</ref>
-              </catDesc>
-              <catDesc>Besides the textual data, does the project provide analytical data (e.g.
-                statistics) to download or harvest?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="reuse">
-              <catDesc>
-                <ref target="#K4.4">cf. Catalogue 4.4</ref>
-              </catDesc>
-              <catDesc>Can you use the data with other tools useful for this kind of
-                content?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="user_interface">
-            <category xml:id="interface_provision">
-              <catDesc>
-                <ref target="#K5.1">cf. Catalogue 5.1</ref>
-              </catDesc>
-              <catDesc>Does the text collection have a dedicated user interface designed for the
-                collection at hand in which the texts of the collection are represented and/or in
-                which the data is analyzable?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-          </category>
-          <category xml:id="preservation">
-            <category xml:id="documentation_project">
-              <catDesc>
-                <ref target="#K6.1">cf. Catalogue 6.1</ref>
-              </catDesc>
-              <catDesc>Does the text collection provide sufficient documentation about the project
-                in general as well as about the aims, contents and methods of the text
-                collection?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="open_access">
-              <catDesc>
-                <ref target="#K6.2">cf. Catalogue 6.2</ref>
-              </catDesc>
-              <catDesc>Is the text collection Open Access?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="rights">
-              <category xml:id="rights_declared">
-                <catDesc>
-                  <ref target="#K6.2">cf. Catalogue 6.2</ref>
-                </catDesc>
-                <catDesc>Are the rights to (re)use the content declared?</catDesc>
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-              <category xml:id="rights_license">
-                <catDesc>
-                  <ref target="#K6.2">cf. Catalogue 6.2</ref>
-                </catDesc>
-                <catDesc>Under what license are the contents released?</catDesc>
-                <category xml:id="CC0">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY_only">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-ND">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="CC-BY-NC-SA">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category xml:id="PDM">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                </category>
-                <category corresp="#other">
-                  <catDesc>
-                    <num type="boolean" value="0"/>
-                  </catDesc>
-                  <category corresp="#free">
-                    <gloss/>
+                  <category xml:id="classification">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>How does the text collection classify itself (e.g. in its title or
+                        documentation)?</catDesc>
+                     <category xml:id="collection">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_archive">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portal">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="no_classification">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
                   </category>
-                </category>
-                <category xml:id="no_license">
-                  <catDesc>
-                    <num type="boolean" value="1"/>
-                  </catDesc>
-                </category>
-              </category>
-            </category>
-            <category xml:id="persistent_identification">
-              <catDesc>
-                <ref target="#K6.3">cf. Catalogue 6.3</ref>
-              </catDesc>
-              <catDesc>Are there persistent identifiers and an addressing system for the text
-                collection and/or parts/objects of it and which mechanism is used to that
-                end?</catDesc>
-              <category xml:id="DOI">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="ARK">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="URN">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category xml:id="PURL.ORG">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#other">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-                <category corresp="#free">
-                  <gloss/>
-                </category>
-              </category>
-              <category xml:id="persistent_URLs">
-                <catDesc>
-                  <num type="boolean" value="0"/>
-                </catDesc>
-              </category>
-              <category corresp="#none">
-                <catDesc>
-                  <num type="boolean" value="1"/>
-                </catDesc>
-              </category>
-            </category>
-            <category xml:id="citation">
-              <catDesc>
-                <ref target="#K6.3">cf. Catalogue 6.3</ref>
-              </catDesc>
-              <catDesc>Does the text collection supply citation guidelines?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="archiving">
-              <catDesc>
-                <ref target="#K6.4">cf. Catalogue 6.4</ref>
-              </catDesc>
-              <catDesc>Does the documentation include information about the long term sustainability
-                of the basic data (archiving of the data)?</catDesc>
-              <catDesc>
-                <num type="boolean" value="1"/>
-              </catDesc>
-            </category>
-            <category xml:id="curation">
-              <catDesc>
-                <ref target="#K6.4">cf. Catalogue 6.4</ref>
-              </catDesc>
-              <catDesc>Does the project provide information about institutional support for the
-                curation and sustainability of the project?</catDesc>
-              <catDesc>
-                <num type="boolean" value="0"/>
-              </catDesc>
-            </category>
-            <category xml:id="completion">
-              <catDesc>
-                <ref target="#K6.4">cf. Catalogue 6.4</ref>
-              </catDesc>
-              <catDesc>Is the text collection completed?</catDesc>
-              <catDesc>
-                <num type="boolean" value="3"/>
-              </catDesc>
-            </category>
-          </category>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="abstract"> The <emph>Europarl</emph> corpus, short for &#x201E;European Parliament
-        Proceedings Parallel Corpus 1996-2011&#x201C;, is provided by the School of Informatics,
-        University of Edinburgh. <emph>Europarl</emph> was first published in 2001, the latest
-        release (May 15th, 2012) includes the parliament proceedings from 1996-2011. There is no
-        dedicated user interface, since <emph>Europarl</emph> is primarily meant to support research
-        on machine translation, which has to rely on parallel texts. Beyond that, it is well suited
-        for other NLP research involving multilingual issues. The resource is freely downloadable.
-        Being one of the standard resources in the field of statistical machine translation, it
-        comes as a source release with accompaining tools that were used for compiling the resource.
-        The simple annotation and formatting makes the source files easy to use in different
-        contexts of application.</div>
-      <div type="text">
-        <div type="div2">
-          <head>Einleitung</head>
-          <p>Das <emph>Europarl</emph>-Korpus (<ptr target="http://www.statmt.org/europarl"/><note
-              xml:id="ftn1" n="1">Archivierter Link: <ptr
-                target="https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl"
-              /></note>) entstand an der University of Edinburgh unter der Leitung von Philipp
-            Koehn. <emph>Europarl</emph> steht f&#xFC;r &#x201E;European Parliament Proceedings
-            Parallel Corpus&#x201C;, womit die wesentlichen Merkmale der Ressource bereits benannt
-            sind: Es handelt sich um ein Parallelkorpus, das Texte in verschiedenen Sprachversionen
-            bereith&#xE4;lt. Grundlage des Korpus bilden die Sitzungsprotokolle des
-            Europ&#xE4;ischen Parlaments, die regelm&#xE4;&#xDF;ig auf dessen offizieller Website
-            ver&#xF6;ffentlicht werden.<note xml:id="ftn2" n="2"><ptr
-                target="https://web.archive.org/web/20171224050712/http://www.europarl.europa.eu/"
-              /></note> Das Korpus macht sich eine Besonderheit dieser Sitzungsberichte zu Nutze,
-            namentlich deren Mehrsprachigkeit. Diese ist fest verankert in den Europ&#xE4;ischen
-            Vertr&#xE4;gen, die eine vollst&#xE4;ndige Gleichbehandlung aller Amtssprachen der
-            Europ&#xE4;ischen Union (EU) verlangen. Auf dieser Grundlage werden alle wichtigen
-            EU-Dokumente, einschlie&#xDF;lich der parlamentarischen Texte, in den 24 offiziellen
-            Amtssprachen der EU ver&#xF6;ffentlicht, d.h. es existieren zu jedem Text, der
-            ver&#xF6;ffentlicht wird, stets 23 parallel &#xFC;bersetzte Versionen.<note
-              xml:id="ftn3" n="3">Siehe dazu auch die Gesch&#xE4;ftsordnung des Europ&#xE4;ischen
-              Parlaments: <ptr
-                target="https://web.archive.org/web/20171002224154/http://www.europarl.europa.eu/aboutparliament/de/20150201PVL00013/Mehrsprachigkeit"
-              /></note></p>
-        </div>
-        <div type="div2">
-          <head>Eckdaten</head>
-          <p>Das <emph>Europarl</emph>-Korpus wurde erstmals im Jahre 2001 ver&#xF6;ffentlicht.
-            Seither gab es eine Reihe von Aktualisierungen, die immer wieder auch kleinere
-            Format-Anpassungen beinhalten. Die Arbeiten am <emph>Europarl</emph>-Korpus wurden u.a.
-            im Rahmen des <emph>EuroMatrixPlus</emph>-Projekts im 7. Rahmenprogramm der
-            Europ&#xE4;ischen Kommission gef&#xF6;rdert.<note xml:id="ftn4" n="4"><ptr
-                target="https://web.archive.org/web/20170629163336/http://www.euromatrixplus.net"
-              /></note> Die bis heute letzte Version wurde kurz nach dem Ende der
-            Projektf&#xF6;rderung am 15.5.2012 ver&#xF6;ffentlicht und umfasst die
-            Sitzungsprotokolle des Europ&#xE4;ischen Parlaments der Jahre 1996 bis 2011.
-            Gegen&#xFC;ber der ersten Version, die zun&#xE4;chst nur Texte in 11 Sprachen aus dem
-            Zeitraum von April 1996 bis Dezember 2001 umfasste, mit durchschnittlich ca. 20
-            Millionen W&#xF6;rtern bzw. ca. 740.000 S&#xE4;tzen je Sprache, ist das Korpus mit jeder
-            Version weiter angewachsen. Die aktuelle Version <emph>v7</emph> umfasst insgesamt 753
-            Millionen W&#xF6;rter bzw. 30 Millionen S&#xE4;tze, die sich auf Texte in 21 Sprachen
-            mit bis zu 55 Millionen W&#xF6;rtern bzw. mehr als 2 Millionen S&#xE4;tzen verteilen,
-            wobei die Zahlen f&#xFC;r die einzelnen Sprachen zum Teil erheblich voneinander
-              abweichen.<note xml:id="ftn5" n="5">F&#xFC;r eine detaillierte tabellarische
-              Aufstellung siehe <ptr
-                target="https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl"
-              />. &#xDC;ber die Webseite k&#xF6;nnen zudem weiterhin auch die &#xE4;lteren Versionen
-              bezogen werden.</note>
-          </p>
-        </div>
-        <div type="div2">
-          <head>Eigenschaften</head>
-          <p>Die charakteristischen Eigenschaften der Ressource ergeben sich unmittelbar aus dem
-            spezifischen Anwendungsfall, f&#xFC;r den das <emph>Europarl</emph>-Korpus entworfen
-            wurde: Parallelkorpora sind Grundlage und Voraussetzung f&#xFC;r die Entwicklung von
-            Systemen zur statistischen maschinellen &#xDC;bersetzung (<emph>Statistical Machine
-              Translation</emph>, SMT). Dementsprechend bestand die wesentliche Motivation f&#xFC;r
-            die Zusammenstellung des <emph>Europarl</emph>-Korpus darin, Daten f&#xFC;r die
-            Entwicklung und den Test von SMT-Systemen bereitzustellen. SMT galt von den 1990er
-            Jahren bis in die Mitte der 2010er Jahre hinein als <emph>state-of-the-art</emph> im
-            Bereich der Maschinellen &#xDC;bersetzung. Auch wenn neuere Ans&#xE4;tze heute
-            verst&#xE4;rkt auf den Einsatz von K&#xFC;nstlichen Neuronalen Netzen setzen,<note
-              xml:id="ftn6" n="6">Als wohl bekanntestes Beispiel sei hier der
-              &#xDC;bersetzungsservice Google Translate genannt, der seit November 2016 schrittweise
-              von SMT auf einen Deep-Learning-Ansatz umgestellt wird (siehe <ptr
-                target="https://web.archive.org/web/20180104154107/https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate/"
-              />).</note> so ist SMT dennoch nach wie vor die am weitesten verbreitete Methode zur
-            Maschinellen &#xDC;bersetzung. SMT-Systeme basieren auf statistischen Lernverfahren, die
-            auf ausreichend gro&#xDF;e Mengen von Trainings- und Testdaten angewiesen sind, um
-            robuste Ergebnisse zu erzielen und um diese angemessen evaluieren zu k&#xF6;nnen. Als
-            Trainingsdaten dienen dabei Paare von (Teil-)S&#xE4;tzen bzw. Phrasen (je nach konkretem
-            Ansatz), die &#xFC;ber l&#xE4;ngere Textabschnitte hinweg aligniert, d.h. einander
-            parallel zugeordnet werden.</p>
-          <p>Nachdem in den späten 1990er Jahren kaum Ressourcen von ausreichender Größe vorlagen,
-            sollte die Erstellung des <emph>Europarl</emph>-Korpus diese Lücke schließen. Als
-            Ausgangsmaterial f&#xFC;r ein Parallelkorpus sind die Sitzungsberichte des
-            Europ&#xE4;ischen Parlaments in besonderer Weise geeignet, da sie eine der
-            gr&#xF6;&#xDF;ten frei verf&#xFC;gbaren Quellen f&#xFC;r die Akquise parallel
-            &#xFC;bersetzter Texte darstellen. Die Auswahl der <emph>Europarl</emph>-Daten hat dabei
-            gleich eine ganze Reihe positiver Nebeneffekte: Weil die Daten direkt vom
-            Europ&#xE4;ischen Parlament herausgegeben werden, ist zum einen ein Mindestma&#xDF; an
-            Qualit&#xE4;tssicherung in Bezug auf die Zuverl&#xE4;ssigkeit der &#xDC;bersetzungen
-            gegeben, zum anderen ist damit auch die Copyright-Frage gekl&#xE4;rt, da die Texte per
-            Gesetz frei zug&#xE4;nglich sein m&#xFC;ssen. Dar&#xFC;ber hinaus ist durch eine
-            entsprechende Selbstverpflichtung des Europ&#xE4;ischen Parlaments auch die
-            Langzeitarchivierung der Ausgangsdaten gesichert. Solange die zur Erstellung des
-            Europarl-Korpus eingesetzten Tools zur Verf&#xFC;gung stehen, k&#xF6;nnen damit nicht
-            nur die &#xFC;ber die Webseite archivierten Releases im Grunde jederzeit reproduziert
-            werden, sondern es k&#xF6;nnen theoretisch auch eigene, bspw. um neuere Daten erweiterte
-            Versionen des Korpus erstellt werden.</p>
-        </div>
-        <div type="div2">
-          <head>Design und Methodik</head>
-          <p>Bei der Erstellung des Korpus standen in erster Linie die Einfachheit und
-            Kontrollierbarkeit des Verfahrens im Vordergrund. Das in Koehns (2002, 2005)
-            beschriebene Vorgehen gliedert sich im Wesentlichen in die Schritte Datenakquise,
-            Alignierung der Texte sowie die Zerlegung in einzelne S&#xE4;tze und deren parallele
-            Zuordnung. In einem ersten Schritt werden die Texte mithilfe eines Crawlers in Form von
-            HTML-Dateien von der offiziellen Website des Europ&#xE4;ischen Parlaments bezogen.
-            Vorteil ist neben den oben genannten Aspekten (Qualit&#xE4;tskontrolle, Copyright,
-            Langzeitarchivierung) auch die Tatsache, dass die Daten bereits in einem weitgehend
-            homogenen Format vorliegen. Anschlie&#xDF;end werden aus den HTML-Dateien Informationen
-            &#xFC;ber die jeweiligen Sprecher, das Thema (bzw. den thematischen <emph>thread</emph>,
-            in dem ein Redebeitrag steht), die verwendete Sprache und das Datum extrahiert. Die
-            Dokumente werden anhand der enthaltenen Zwischen&#xFC;berschriften automatisiert in
-            thematische Abschnitte gegliedert und durch die Vergabe fortlaufender Ids &#xFC;ber die
-            verschiedenen Sprachversionen hinweg aligniert. In einem weiteren Schritt werden die
-            Texte unter Verwendung eines zusammen mit dem Korpus bereitgestellten Perl-Skriptes
-            automatisiert in einzelne S&#xE4;tze zerlegt, die abschlie&#xDF;end mit einem weiteren
-            Skript auf Basis einer Variante des Algorithmus von Gale und Church (1993) aligniert
-              werden.<note xml:id="ftn7" n="7">Zu Verf&#xFC;gbarkeit und Umfang der mit dem Korpus
-              bereitgestellten Verarbeitungswerkzeuge siehe den nachfolgenden Abschnitt.</note></p>
-          <p>Aus Perspektive der Digital Humanities durchaus kritisch zu bewerten ist die Tatsache,
-            dass im <emph>Europarl</emph>-Korpus teilautomatisiert erstellte Trainingsdaten als
-            Basis f&#xFC;r die Entwicklung eines computerlinguistischen Verfahrens eingesetzt
-            werden. Jedoch ist dieses Vorgehen in der Computerlinguistik durchaus &#xFC;blich,
-            insbesondere im Bereich der SMT, bei der eine sehr umfangreiche Datengrundlage
-            Voraussetzung ist. Um die Fehler bei Tokenisierung und Satztrennung zu minimieren,
-            werden zum einen sprachspezifische Anpassungen vorgenommen, z.B. durch
-            Abk&#xFC;rzungsverzeichnisse. Zum anderen wird durch die vorherige Unterteilung der
-            Dokumente in kurze Abs&#xE4;tze von ca. 2-5 S&#xE4;tzen verhindert, dass sich evtl.
-            auftretende Alignment-Fehler &#xFC;ber Absatzgrenzen hinaus fortsetzen k&#xF6;nnen.
-            Fehlerfreiheit kann zwar auch durch diese Ma&#xDF;nahmen nicht vollst&#xE4;ndig
-            garantiert werden, jedoch k&#xF6;nnen sie aufgrund der Robustheit der eingesetzten
-            statistischen Verfahren in der Regel vernachl&#xE4;ssigt werden. </p>
-        </div>
-        <div type="div2">
-          <head>Korpusstruktur</head>
-          <p>Resultat der verschiedenen Verarbeitungsschritte sind zun&#xE4;chst die alignierten
-            Dokumente, die jeweils in einer eigenen Datei je Sitzungsdatum und Sprache gespeichert
-            werden. In diesen Dateien sind nur rudiment&#xE4;re, f&#xFC;r das paarweise Alignment
-            von (Teil-)Abschnitten ben&#xF6;tigte Annotationen enthalten. Wie in Abb. 1 dargestellt,
-            beschr&#xE4;nken sich diese auf die Markierung des Themas, in dem ein Redebeitrag steht
-            (kodiert als &lt;CHAPTER id&gt;, welche demnach nicht Kapitel, sondern vielmehr
-            thematische Abschnitte bezeichnen), den jeweiligen Sprecher und die Sprache (&lt;SPEAKER
-            id name language&gt;, wobei die Sprachangabe optional ist), sowie die Markierung
-            einzelner Unterabschnitte (&lt;P&gt;). <seg type="code" lang="XML"> &lt;p&gt;&lt;CHAPTER
-              ID=1&gt; Resumption of the session &lt;SPEAKER ID=1 NAME="President"&gt; I declare
-              resumed the session of the European Parliament ... &lt;P&gt; Although, as you will
-              have seen, the dreaded &#x2019;millennium bug&#x2019; ... <label>Beispiel 1:
-                Annotationen im Europarl-Korpus, hier am Beispiel der ersten Zeilen der Datei
-                txt/en/ep-00-01-17.txt des source release in der Version v7, welche das entsprechend
-                aufbereitete Sitzungsprotokoll vom 17. Januar 2000 enth&#xE4;lt (<a
-                  href="https://web.archive.org/web/20170619073042/http://www.statmt.org/europarl/v7/europarl.tgz"
-                  >https://web.archive.org/web/20170619073042/http://www.statmt.org/europarl/v7/europarl.tgz</a>).</label>
-            </seg>
-          </p>
-          <p>Ein weiteres Ergebnis des Erstellungsprozesses sind satzweise alignierte
-            Parallelkorpora, in denen jeder Satz in einer eigenen Zeile steht, so dass die
-            korrespondierenden Sprachversionen anhand der Zeilennummer identifiziert werden
-            k&#xF6;nnen. Im Gegensatz zu den Dokument-Dateien, die als Ausgangsmaterial dienen,
-            enthalten die Parallelkorpora nurmehr die rohen Textdaten, d.h. das minimale Markup der
-            Ausgangsdateien wird vollst&#xE4;ndig entfernt. Das <emph>Europarl</emph>-Korpus wird
-            als sog. <emph>source release</emph> bereitgestellt, welcher zum einen die alignierten
-            Dokumente f&#xFC;r alle 21 ber&#xFC;cksichtigten Sprachen enth&#xE4;lt, zum anderen auch
-            die f&#xFC;r deren Aufbereitung eingesetzten Tools zur satzweisen Alignierung, so dass
-            gewisserma&#xDF;en <emph>on demand</emph> Parallelkorpora f&#xFC;r verschiedene
-            Sprachpaare erstellt werden k&#xF6;nnen (potentiell bis zu 20 f&#xFC;r jede Sprache).
-            Bei den im <emph>source release</emph> enthaltenen Tools handelt es sich um eine Reihe
-            von einfachen Perl-Skripten f&#xFC;r die Korpusaufbereitung, f&#xFC;r deren
-            Ausf&#xFC;hrung eine Perl-Installation vorhanden sein muss. Diese umfassen ein Skript
-            f&#xFC;r die satzweise Alignierung, ein Skript f&#xFC;r die Konversion in XML-Dateien,
-            einen <emph>Sentence-Splitter</emph> und einen <emph>Tokenizer</emph>, die durch ein
-            umfassendes, sprachspezifisch angelegtes Abk&#xFC;rzungsverzeichnis erg&#xE4;nzt werden,
-            das all jene F&#xE4;lle enth&#xE4;lt, in denen Punkte als Bestandteil des Wortes erkannt
-            werden sollen. Zus&#xE4;tzlich zu diesem <emph>source release</emph> stehen &#xFC;ber
-            die Website 20 Parallelkorpora, jeweils ausgehend vom Englischen, in vorbereiteter Form
-            zur Verf&#xFC;gung und k&#xF6;nnen dort einzeln heruntergeladen werden.</p>
-        </div>
-        <div type="div2">
-          <head>Einsatzm&#xF6;glichkeiten</head>
-          <p>Haupteinsatzgebiet f&#xFC;r das <emph>Europarl</emph>-Korpus sind sprachtechnologische
-            Anwendungen, im Besonderen im Kontext der Entwicklung von SMT-Systemen. &#xDC;ber die
-            Arbeiten von Philipp Koehn bzw. der Edinburgh-Gruppe hinaus wird das
-              <emph>Europarl</emph>-Korpus u.a. seit 2005 regelm&#xE4;&#xDF;ig im Rahmen sogenannter
-              <emph>Shared Tasks</emph> bei Konferenzen der <emph>Association for Computational
-              Linguistics</emph> (ACL) f&#xFC;r die kompetitive Entwicklung und Evaluation von
-            SMT-Systemen genutzt.<note xml:id="ftn8" n="8">Eine Aufstellung der entsprechenden
-              ACL-Workshops findet sich unter <ref target="ttp://www.statmt.org"
-                >http://www.statmt.org</ref>.</note> Die Einsatzm&#xF6;glichkeiten gehen jedoch
-            &#xFC;ber die maschinelle &#xDC;bersetzung hinaus. So k&#xF6;nnen die
-              <emph>Europarl</emph>-Daten im Grunde f&#xFC;r alle Arten von NLP-Tasks eingesetzt
-            werden, die multilinguale Daten erfordern; Koehn (2005) verweist hier etwa auf Arbeiten
-            im Bereich der Wortsinndisambiguierung, der Anaphernresolution oder auch der
-              Informationsextraktion.<note xml:id="ftn9" n="9">Speziell f&#xFC;r
-              sprachtechnologische Anwendungen wurde an der Universit&#xE4;t Z&#xFC;rich auch eine
-              bereinigte und mit zus&#xE4;tzlichen Strukturinformationen angereicherte Version des
-                <emph>Europarl</emph>-Korpus erstellt; siehe dazu Gra&#xEB;n et al. (2014) sowie
-                <ptr
-                target="https://web.archive.org/web/20141225132930/http://pub.cl.uzh.ch/purl/costep"
-              />.</note></p>
-          <p> Das <emph>Europarl</emph>-Korpus ist somit prim&#xE4;r als sprachtechnologische
-            Ressource zu verstehen und ist demnach nicht als Datenbasis f&#xFC;r die Recherche oder
-            f&#xFC;r korpuslinguistische Untersuchungen konzipiert. F&#xFC;r die Nutzung der Daten
-            in anderen Anwendungskontexten gibt es jedoch eine Reihe von Alternativen. So findet
-            sich bspw. auf der Webseite des OPUS-Projekts des <emph>Nordic Language Processing
-              Laboratory</emph> (NLPL),<note xml:id="ftn10" n="10"><ptr
-                target="https://web.archive.org/web/20180105145759/http://opus.nlpl.eu/"/></note>
-            das eine Sammlung frei verf&#xFC;gbarer Parallelkorpora bereitstellt, ein Suchinterface
-            f&#xFC;r eine auf Basis der <emph>Open Corpus Workbench</emph> (CWB)<note xml:id="ftn11"
-              n="11"><ptr
-                target="https://web.archive.org/web/20170915061225/http://cwb.sourceforge.net/"
-              /></note> linguistisch aufbereitete Version des Europarl-Korpus. Eine vergleichbare
-            Zugriffsm&#xF6;glichkeit bietet auch die (allerdings kostenpflichtige)
-            Korpusmanagement-Software SketchEngine (vgl. Kilgarriff et al. 2014), in der eine
-            Vielzahl von verschiedenen Korpora geb&#xFC;ndelt sind, darunter auch eine
-            gr&#xF6;&#xDF;ere Anzahl frei verf&#xFC;gbarer Ressourcen wie eben das
-              <emph>Europarl</emph>-Korpus.<note xml:id="ftn12" n="12"><ptr
-                target="https://web.archive.org/web/20171109044747/https://www.sketchengine.co.uk/"
-              /></note></p>
-          <p> Weil die zugrunde gelegten Daten aufgrund ihres Inhalts insbesondere auch f&#xFC;r den
-            Bereich der Politikwissenschaft von gro&#xDF;em Interesse sind, wurde 2014 im Rahmen des
-            Projekts <emph>Talk of Europe</emph> mit dem <emph>LinkedEP Dataset</emph><note
-              xml:id="ftn13" n="13"><ptr
-                target="https://web.archive.org/web/20161230090013/http://www.talkofeurope.eu/data"
-              />/</note> eine alternative Version zu <emph>Europarl</emph> ver&#xF6;ffentlicht, die
-            auf Semantic-Web-Technologien basiert (vgl. van Aggelen et al., 2016). W&#xE4;hrend das
-              <emph>Europarl</emph>-Korpus dezidiert f&#xFC;r den Anwendungsfall der maschinellen
-            &#xDC;bersetzung entworfen wurde, zielt das <emph>LinkedEP Dataset</emph> auf eine
-            inhaltlich orientierte Durchsuchbarkeit der Daten, indem diese mit zus&#xE4;tzlichen
-            Informationen angereichert werden und so eine Kontextualisierung der enthaltenen
-            Informationen erm&#xF6;glichen. Es handelt sich um eine nach Linked Open Data
-            (LOD)-Prinzipien kodierte Ressource, die wie das urspr&#xFC;ngliche
-              <emph>Europarl</emph>-Korpus von den auf der offiziellen Website des Europ&#xE4;ischen
-            Parlaments als HTML-Seiten ver&#xF6;ffentlichten Sitzungsprotokollen ausgeht und diese
-            in RDF &#xFC;berf&#xFC;hrt. Die resultierende Ressource ist zudem mit weiteren
-            LOD-Ressourcen verkn&#xFC;pft, u.a. <emph>GeoNames</emph><note xml:id="ftn14" n="14"
-                ><ptr target="https://web.archive.org/web/20171228152250/http://www.geonames.org"
-              /></note>, <emph>DBPedia</emph><note xml:id="ftn15" n="15"><ptr
-                target="https://web.archive.org/web/20170810113013/http://wiki.dbpedia.org/Datasets"
-              /></note>, sowie der <emph>Automated Database of the European Parliament</emph><note
-              xml:id="ftn16" n="16"><ptr
-                target="https://web.archive.org/web/20170331091345/http://folk.uio.no/bjornkho/MEP"
-              /></note>, die bibliographische Daten der Mitglieder des Europ&#xE4;ischen Parlaments
-            bereitstellt.</p>
-        </div>
-        <div type="div2">
-          <head>Abschlie&#xDF;ende Bemerkungen</head>
-          <p>Die Besonderheit des <emph>Europarl</emph>-Korpus gegen&#xFC;ber anderen
-            Parallelkorpora, wie sie bspw. &#xFC;ber das o.g. OPUS-Projekt bereitgestellt werden,
-            ist neben der hohen Anzahl der m&#xF6;glichen Sprachpaare und dem daraus resultierenden
-            Umfang vor allem die verb&#xFC;rgte Qualit&#xE4;t der &#xDC;bersetzungen sowie die
-            Tatsache, dass aufgrund ihrer Herkunft aus dem Umfeld des Europ&#xE4;ischen Parlaments
-            die oftmals problematischen Fragen bez&#xFC;glich des Copyrights sowie der langfristigen
-            Verf&#xFC;gbarkeit der Daten geregelt sind.</p>
-          <p>Das <emph>Europarl</emph>-Korpus ist zudem eine sehr stark spezialisierte Ressource,
-            die als multilinguales Parallelkorpus dezidiert f&#xFC;r die Entwicklung von Systemen
-            zur statistischen maschinellen &#xDC;bersetzung (<emph>Statistical Machine
-              Translation</emph>, SMT) angelegt wurde. In ihrer Beschr&#xE4;nkung auf einen
-            einzelnen Anwendungsfall stellt das Korpus gegen&#xFC;ber anderen Sprachressourcen
-            sicherlich einen Sonderfall dar, sowohl innerhalb der (Computer-)Linguistik als auch im
-            erweiterten Bereich der Digital Humanities (DH). Insbesondere der sehr sparsame Einsatz
-            von Annotationen mag zun&#xE4;chst sehr minimalistisch anmuten, jedoch hat der geringe
-            Grad an Modellierung der Daten hier durchaus Methode. So ist der weitgehende Verzicht
-            auf Annotationen vor allem dem sprachtechnologischen Anwendungsfall geschuldet: Da in
-            SMT-Systemen allein die alignierten Sprachpaare betrachtet werden, wird jede
-            zus&#xE4;tzliche Information bewusst aus der Verarbeitung herausgehalten. W&#xE4;hrend
-            andere, v.a. korpuslinguistische Ressourcen in der Regel auf verschiedenen Ebenen mit
-            Annotationen angereichert sind und dadurch differenzierte linguistische Analysen
-            erm&#xF6;glichen, zeichnet sich das <emph>Europarl</emph>-Korpus durch den bewussten
-            Verzicht auf solche Auszeichnungen aus. Wenngleich es sich um ein &#xE4;lteres Korpus
-            handelt, so entspricht diese Art der Aufbereitung nach wie vor den &#xFC;blichen
-            Standards zur Erstellung von Parallelkorpora f&#xFC;r die maschinelle &#xDC;bersetzung.
-            Das <emph>Europarl</emph>-Korpus wird dementsprechend noch immer h&#xE4;ufig eingesetzt,
-            etwa als <emph>baseline</emph> bzw. <emph>benchmark</emph> in der Entwicklung und
-            Evaluation klassischer SMT-Systeme, aber auch im Kontext neuerer Ans&#xE4;tze auf
-            Grundlage von K&#xFC;nstlichen Neuronalen Netzen (sog. &#x201E;Neural Machine
-            Translation&#x201C;, NMT),<note xml:id="ftn17" n="17">Ebenso wie bei der SMT basieren
-              auch NMT-Ans&#xE4;tze auf statistischen Verfahren und nutzen damit ebenfalls die
-              latent in den Sprachdaten enthaltenen Informationen. Aufgrund von Unterschieden in der
-              internen Repr&#xE4;sentation der Daten ist eine terminologische Unterscheidung hier
-              dennoch &#xFC;blich.</note> die f&#xFC;r die Erstellung von Sprachmodellen u.a. auch
-            alignierte Parallelkorpora als Input nutzen.<note xml:id="ftn18" n="18">Vgl. dazu z.B.
-              die Modelle des OpenNMT-Systems (<emph>Open Neural Machine Translation</emph>, siehe
-                <ptr target="https://web.archive.org/web/20181024202654/http://opennmt.net/Models/"
-              />), einer <emph>open-source</emph>-Initiative der Harvard University in
-              Zusammenarbeit mit Systran, einem der f&#xFC;hrenden Unternehmen im Bereich der
-              Maschinellen &#xDC;bersetzung.</note></p>
-          <p>F&#xFC;r Anwendungen im Bereich der DH ist das <emph>Europarl</emph>-Korpus in dieser
-            rohen Form dagegen nur bedingt nachnutzbar. Neben der weitgehend fehlenden
-            Datenmodellierung liegt dies nicht zuletzt auch am Fehlen eines Suchzugriffs zu
-            Recherchezwecken. Zwar stehen hier mit dem o.g. OPUS-Suchinterface sowie der
-            Korpusmanagement-Software <emph>SketchEngine</emph> entsprechende Alternativen zur
-            Verf&#xFC;gung, die eine korpuslinguistische Nutzung des Korpus erm&#xF6;glichen; aus
-            Perspektive der DH ist jedoch sicherlich vor allem die st&#xE4;rker inhaltlich
-            motivierte Erschlie&#xDF;ung der Daten durch die Semantic-Web-Ressource
-              <emph>LinkedEP</emph> von gr&#xF6;&#xDF;erem Interesse, da diese deutlich &#xFC;ber
-            den Anwendungsfall der SMT hinausweist, indem sie eine Kontextualisierung des
-            enthaltenen Wissens erm&#xF6;glicht. Nachdem der hierf&#xFC;r n&#xF6;tige Grad an
-            zus&#xE4;tzlicher Datenmodellierung weit &#xFC;ber das urspr&#xFC;ngliche
-              <emph>Europarl</emph>-Korpus hinausgeht, handelt es sich hier jedoch im Grunde um eine
-            unabh&#xE4;ngige Ressource, die zwar von der gleichen Datengrundlage ausgeht, ihrerseits
-            aber ebenfalls nur f&#xFC;r einen spezifischen Anwendungsbereich angelegt ist &#x2013;
-            eine Aufbereitung der Texte, die f&#xFC;r beide Anwendungsbereiche funktionieren
-            w&#xFC;rde, erscheint vor diesem Hintergrund nicht wirklich praktikabel.</p>
-          <p>Vielmehr ist in der Beschr&#xE4;nkung auf den Bereich sprachtechnologischer
-            Anwendungsf&#xE4;lle einer der wesentlichen Gr&#xFC;nde f&#xFC;r die Bekanntheit und
-            Verbreitung des <emph>Europarl</emph>-Korpus zu sehen. Besonders hervorzuheben ist
-            hierbei das Prinzip des <emph>source release</emph>, bei dem die nur minimal
-            aufbereiteten Ausgangsdaten zusammen mit den Tools f&#xFC;r die satzweise Alignierung
-            ver&#xF6;ffentlicht werden, so dass nicht nur die Quellen rekonstruiert werden
-            k&#xF6;nnen, sondern auch die Erstellung von Parallelkorpora f&#xFC;r einzelne
-            Sprachpaare nach Bedarf vorgenommen werden kann. Wenngleich also die Pr&#xE4;sentation
-            der Daten sehr minimalistisch ausf&#xE4;llt und die Website im Vergleich zu anderen
-            korpuslinguistischen Ressourcen vielleicht etwas anachronistisch anmuten mag, so ist das
-              <emph>Europarl</emph>-Korpus dennoch f&#xFC;r den Bereich der maschinellen
-            &#xDC;bersetzung als ein <emph>best practice</emph> f&#xFC;r die Erstellung von
-            Parallelkorpora anzusehen, und wird als solches sicherlich auch weiterhin eine
-            gro&#xDF;e Rolle spielen.</p>
-        </div>
-      </div>
-      <div type="references">
-        <listBibl>
-          <bibl>Van Aggelen, A. E.; Hollink, L.; Kemman, M.; Kleppe, M.; Beunders, H.. 2017.
-            &#x201E;The debates of the European Parliament as Linked Open Data.&#x201C;
-              <emph>Semantic Web &#x2013; Interoperability, Usability, Applicability</emph>, 8(2):
-            271&#x2013;281. doi:10.3233/SW-160227</bibl>
-          <bibl>Gale, W. and Church, K.. 1993. <emph>A program for aligning sentences in bilingual
-              corpora. Computational Linguistics</emph>, 19(1).</bibl>
-          <bibl>Gra&#xEB;n, J.; Batinic, D.; Volk, M.. 2014. &#x201E;Cleaning the Europarl Corpus
-            for Linguistic Applications&#x201C;. In: <emph>Konvens 2014, Hildesheim, 8 October 2014
-              - 10 October 2014</emph>. doi:10.5167/uzh-99005</bibl>
-          <bibl>Kilgarriff, A.; Baisa, V.; Bu&#x161;ta, J.; Jakub&#xED;&#x10D;ek, M.;
-            Kovv&#xE1;&#x159;, V.; Michelfeit, J.; Rychl&#xFD;, P.; Suchomel, V.. 2014. &#x201E;The
-            Sketch Engine: ten years on.&#x201C; <emph>Lexicography</emph>, 1: 7-36.</bibl>
-          <bibl>Koehn, P.. 2005. &#x201E;Europarl: A Parallel Corpus for Statistical Machine
-            Translation.&#x201C; <emph>MT Summit</emph> 5: 79-86.</bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+                  <category xml:id="research_fields">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>To which field(s) of research does the text collection
+                        contribute?</catDesc>
+                     <category xml:id="field_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_linguistics">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_archaeology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_philosophy">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_religious_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_sociology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>Language technology</desc>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="content">
+                  <category xml:id="era">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the texts belong to?</catDesc>
+                     <category xml:id="era_classics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_medieval">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_early_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_contemporary">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="language">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What languages are the texts in?</catDesc>
+                     <category xml:id="arabic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="chinese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="danish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="english">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="finnish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="french">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="german">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="greek">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hebrew">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hindi">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="italian">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="japanese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="latin">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="norwegian">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="polish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portuguese">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="russian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="spanish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="swedish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="turkish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#free" xml:id="language_note">
+                        <desc>all official languages of the EU</desc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of texts are in the collection?</catDesc>
+                     <category xml:id="literary_works">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="private_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="essays">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="newspaper_articles">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="charters">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="inscriptions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="files_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="protocols">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="scientific_papers">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="speech_transcripts">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="add_information">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of information is published in addition to the
+                        texts?</catDesc>
+                     <category xml:id="introduction">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="context_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="bibliography">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="facsimile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="composition">
+                  <category xml:id="documentation_methods">
+                     <catDesc>
+                        <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the principles and decisions regarding the design of the text
+                        collection, its composition and the selection of texts documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>What selection criteria have been chosen for the text
+                        collection?</catDesc>
+                     <category xml:id="selection_language">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_author">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_country">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_epoch">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_genre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_topic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_style">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_linguistic_characteristics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="size">
+                     <category xml:id="size_texts">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of
+                           texts/records?</catDesc>
+                        <category xml:id="texts_le10">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_11-50">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_51-100">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt100_">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt1000">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="size_tokens">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of tokens?</catDesc>
+                        <category xml:id="tokens_lt100.000">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_100.000-1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt10mio">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="structure">
+                     <catDesc>
+                        <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have identifiable sub-collections or
+                        components?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="acquisition">
+                     <category xml:id="text_recording">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection record or transcribe the textual data for
+                           the first time?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_integration">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>What kind of material has been taken over from other
+                           sources?</catDesc>
+                        <category xml:id="full_text">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_metadata">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_annotation">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="quality">
+                     <catDesc>
+                        <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
+                     </catDesc>
+                     <catDesc>Has the quality of the data (transcriptions, metadata, annotations,
+                        etc.) been checked?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="3"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>Considering aims and methods of the text collection, how would you
+                        classify it further? For definitions please consider the
+                        help-texts.</catDesc>
+                     <category xml:id="typology_general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_canon">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_oeuvre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_reference_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_contrastive_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_parallel_corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_diachronic_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="data_modelling">
+                  <category xml:id="text_treatment">
+                     <catDesc>
+                        <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
+                     </catDesc>
+                     <catDesc>How are the textual sources represented in the digital
+                        collection?</catDesc>
+                     <category xml:id="normalized_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="orthographic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="phonetic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="transliteration">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translated_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="summarized_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="sampled_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="basic_format">
+                     <catDesc>
+                        <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                     </catDesc>
+                     <catDesc>In which basic format are the texts encoded?</catDesc>
+                     <category xml:id="plain_text">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="xml">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="html">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="annotation">
+                     <category xml:id="annotation_type">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>With what information are the texts further enriched?</catDesc>
+                        <category xml:id="semantic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="linguistic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="editorial_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural_information">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="annotation_integration">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>How are the annotations linked to the texts themselves?</catDesc>
+                        <category xml:id="embedded">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="stand-off">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="metadata">
+                     <category xml:id="metadata_type">
+                        <catDesc>
+                           <ref target="#K3.2.3">cf. Catalogue 3.2.3</ref>
+                        </catDesc>
+                        <catDesc>What kind of metadata are included in the text
+                           collection?</catDesc>
+                        <category xml:id="descriptive">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="administrative">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="metadata_level">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>On which level are the metadata included?</catDesc>
+                        <category xml:id="whole_collection">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_parts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="individual_texts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="data_standards">
+                     <category xml:id="data_schema">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>What kind of data/metadata/annotation schemas are used for the text
+                           collection?</catDesc>
+                        <category xml:id="standardized_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="customized_standard_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="project_specific">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="standard_format">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>Which standards for text encoding, metadata and annotation are used
+                           in the text collection?</catDesc>
+                        <category xml:id="tei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="ead">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="xces">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="dublin_core">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="edm">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mods">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="skos">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="owl">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="imdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cmdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tcf">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="olac">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="eagles">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="pos_tagsets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="provision">
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>Is the textual data accessible in a source format (e.g. XML,
+                        TXT)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="technical_interfaces">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces which allow the reuse of the data of
+                        the text collection in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="SPARQL_endpoint">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="analytical_data">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Besides the textual data, does the project provide analytical data
+                        (e.g. statistics) to download or harvest?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="user_interface">
+                  <category xml:id="interface_provision">
+                     <catDesc>
+                        <ref target="#K5.1">cf. Catalogue 5.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have a dedicated user interface designed for
+                        the collection at hand in which the texts of the collection are represented
+                        and/or in which the data is analyzable?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="preservation">
+                  <category xml:id="documentation_project">
+                     <catDesc>
+                        <ref target="#K6.1">cf. Catalogue 6.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection provide sufficient documentation about the
+                        project in general as well as about the aims, contents and methods of the
+                        text collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>
+                        <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="rights_declared">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="rights_license">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY_only">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the text
+                        collection and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection supply citation guidelines?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="archiving">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="curation">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="completion">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection completed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="3"/>
+                     </catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>Language Technology</term>
+               <term>multilingual</term>
+               <term>Parallel corpus</term>
+               <term>Statistical Machine Translation</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>The <emph>Europarl</emph> corpus, short for „European Parliament Proceedings Parallel
+               Corpus 1996-2011“, is provided by the School of Informatics, University of Edinburgh.
+                  <emph>Europarl</emph> was first published in 2001, the latest release (May 15th,
+               2012) includes the parliament proceedings from 1996-2011. There is no dedicated user
+               interface, since <emph>Europarl</emph> is primarily meant to support research on
+               machine translation, which has to rely on parallel texts. Beyond that, it is well
+               suited for other NLP research involving multilingual issues. The resource is freely
+               downloadable. Being one of the standard resources in the field of statistical machine
+               translation, it comes as a source release with accompaining tools that were used for
+               compiling the resource. The simple annotation and formatting makes the source files
+               easy to use in different contexts of application.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Einleitung</head>
+            <p xml:id="p1">Das <emph>Europarl</emph>-Korpus (<ref
+                  target="http://www.statmt.org/europarl">http://www.statmt.org/europarl</ref><note
+                  xml:id="ftn1">Archivierter Link: <ref
+                     target="https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl"
+                     >https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl</ref>.
+               </note>) entstand an der University of Edinburgh unter der Leitung von Philipp Koehn.
+                  <emph>Europarl</emph> steht für „European Parliament Proceedings Parallel Corpus“,
+               womit die wesentlichen Merkmale der Ressource bereits benannt sind: Es handelt sich
+               um ein Parallelkorpus, das Texte in verschiedenen Sprachversionen bereithält.
+               Grundlage des Korpus bilden die Sitzungsprotokolle des Europäischen Parlaments, die
+               regelmäßig auf dessen offizieller Website veröffentlicht werden.<note xml:id="ftn2">
+                  <ref
+                     target="https://web.archive.org/web/20171224050712/http://www.europarl.europa.eu/"
+                     >https://web.archive.org/web/20171224050712/http://www.europarl.europa.eu/</ref>.
+               </note> Das Korpus macht sich eine Besonderheit dieser Sitzungsberichte zu Nutze,
+               namentlich deren Mehrsprachigkeit. Diese ist fest verankert in den Europäischen
+               Verträgen, die eine vollständige Gleichbehandlung aller Amtssprachen der Europäischen
+               Union (EU) verlangen. Auf dieser Grundlage werden alle wichtigen EU-Dokumente,
+               einschließlich der parlamentarischen Texte, in den 24 offiziellen Amtssprachen der EU
+               veröffentlicht, d.h. es existieren zu jedem Text, der veröffentlicht wird, stets 23
+               parallel übersetzte Versionen.<note xml:id="ftn3">Siehe dazu auch die
+                  Geschäftsordnung des Europäischen Parlaments: <ref
+                     target="https://web.archive.org/web/20171002224154/http://www.europarl.europa.eu/aboutparliament/de/20150201PVL00013/Mehrsprachigkeit"
+                     >https://web.archive.org/web/20171002224154/http://www.europarl.europa.eu/aboutparliament/de/20150201PVL00013/Mehrsprachigkeit</ref>.
+               </note>
+            </p>
+         </div>
+         <div xml:id="div2">
+            <head>Eckdaten</head>
+            <p xml:id="p2">Das <emph>Europarl</emph>-Korpus wurde erstmals im Jahre 2001
+               veröffentlicht. Seither gab es eine Reihe von Aktualisierungen, die immer wieder auch
+               kleinere Format-Anpassungen beinhalten. Die Arbeiten am <emph>Europarl</emph>-Korpus
+               wurden u.a. im Rahmen des <emph>EuroMatrixPlus</emph>-Projekts im 7. Rahmenprogramm
+               der Europäischen Kommission gefördert.<note xml:id="ftn4">
+                  <ref
+                     target="https://web.archive.org/web/20170629163336/http://www.euromatrixplus.net"
+                     >https://web.archive.org/web/20170629163336/http://www.euromatrixplus.net</ref>.
+               </note> Die bis heute letzte Version wurde kurz nach dem Ende der Projektförderung am
+               15.5.2012 veröffentlicht und umfasst die Sitzungsprotokolle des Europäischen
+               Parlaments der Jahre 1996 bis 2011. Gegenüber der ersten Version, die zunächst nur
+               Texte in 11 Sprachen aus dem Zeitraum von April 1996 bis Dezember 2001 umfasste, mit
+               durchschnittlich ca. 20 Millionen Wörtern bzw. ca. 740.000 Sätzen je Sprache, ist das
+               Korpus mit jeder Version weiter angewachsen. Die aktuelle Version <emph>v7</emph>
+               umfasst insgesamt 753 Millionen Wörter bzw. 30 Millionen Sätze, die sich auf Texte in
+               21 Sprachen mit bis zu 55 Millionen Wörtern bzw. mehr als 2 Millionen Sätzen
+               verteilen, wobei die Zahlen für die einzelnen Sprachen zum Teil erheblich voneinander
+                  abweichen.<note xml:id="ftn5">Für eine detaillierte tabellarische Aufstellung
+                  siehe <ref
+                     target="https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl"
+                     >https://web.archive.org/web/20171228005236/http://www.statmt.org/europarl</ref>.
+                  Über die Webseite können zudem weiterhin auch die älteren Versionen bezogen
+                  werden.</note>
+            </p>
+         </div>
+         <div xml:id="div3">
+            <head>Eigenschaften</head>
+            <p xml:id="p3">Die charakteristischen Eigenschaften der Ressource ergeben sich
+               unmittelbar aus dem spezifischen Anwendungsfall, für den das
+               <emph>Europarl</emph>-Korpus entworfen wurde: Parallelkorpora sind Grundlage und
+               Voraussetzung für die Entwicklung von Systemen zur statistischen maschinellen
+               Übersetzung (<emph>Statistical Machine Translation</emph>, SMT). Dementsprechend
+               bestand die wesentliche Motivation für die Zusammenstellung des
+               <emph>Europarl</emph>-Korpus darin, Daten für die Entwicklung und den Test von
+               SMT-Systemen bereitzustellen. SMT galt von den 1990er Jahren bis in die Mitte der
+               2010er Jahre hinein als <emph>state-of-the-art</emph> im Bereich der Maschinellen
+               Übersetzung. Auch wenn neuere Ansätze heute verstärkt auf den Einsatz von Künstlichen
+               Neuronalen Netzen setzen,<note xml:id="ftn6">Als wohl bekanntestes Beispiel sei hier
+                  der Übersetzungsservice Google Translate genannt, der seit November 2016
+                  schrittweise von SMT auf einen Deep-Learning-Ansatz umgestellt wird (siehe <ref
+                     target="https://web.archive.org/web/20180104154107/https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate/"
+                     >https://web.archive.org/web/20180104154107/https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate/</ref>).</note>
+               so ist SMT dennoch nach wie vor die am weitesten verbreitete Methode zur Maschinellen
+               Übersetzung. SMT-Systeme basieren auf statistischen Lernverfahren, die auf
+               ausreichend große Mengen von Trainings- und Testdaten angewiesen sind, um robuste
+               Ergebnisse zu erzielen und um diese angemessen evaluieren zu können. Als
+               Trainingsdaten dienen dabei Paare von (Teil-)Sätzen bzw. Phrasen (je nach konkretem
+               Ansatz), die über längere Textabschnitte hinweg aligniert, d.h. einander parallel
+               zugeordnet werden.</p>
+            <p xml:id="p4">Nachdem in den späten 1990er Jahren kaum Ressourcen von ausreichender
+               Größe vorlagen, sollte die Erstellung des <emph>Europarl</emph>-Korpus diese Lücke
+               schließen. Als Ausgangsmaterial für ein Parallelkorpus sind die Sitzungsberichte des
+               Europäischen Parlaments in besonderer Weise geeignet, da sie eine der größten frei
+               verfügbaren Quellen für die Akquise parallel übersetzter Texte darstellen. Die
+               Auswahl der <emph>Europarl</emph>-Daten hat dabei gleich eine ganze Reihe positiver
+               Nebeneffekte: Weil die Daten direkt vom Europäischen Parlament herausgegeben werden,
+               ist zum einen ein Mindestmaß an Qualitätssicherung in Bezug auf die Zuverlässigkeit
+               der Übersetzungen gegeben, zum anderen ist damit auch die Copyright-Frage geklärt, da
+               die Texte per Gesetz frei zugänglich sein müssen. Darüber hinaus ist durch eine
+               entsprechende Selbstverpflichtung des Europäischen Parlaments auch die
+               Langzeitarchivierung der Ausgangsdaten gesichert. Solange die zur Erstellung des
+               Europarl-Korpus eingesetzten Tools zur Verfügung stehen, können damit nicht nur die
+               über die Webseite archivierten Releases im Grunde jederzeit reproduziert werden,
+               sondern es können theoretisch auch eigene, bspw. um neuere Daten erweiterte Versionen
+               des Korpus erstellt werden.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Design und Methodik</head>
+            <p xml:id="p5">Bei der Erstellung des Korpus standen in erster Linie die Einfachheit und
+               Kontrollierbarkeit des Verfahrens im Vordergrund. Das in Koehns (2002, 2005)
+               beschriebene Vorgehen gliedert sich im Wesentlichen in die Schritte Datenakquise,
+               Alignierung der Texte sowie die Zerlegung in einzelne Sätze und deren parallele
+               Zuordnung. In einem ersten Schritt werden die Texte mithilfe eines Crawlers in Form
+               von HTML-Dateien von der offiziellen Website des Europäischen Parlaments bezogen.
+               Vorteil ist neben den oben genannten Aspekten (Qualitätskontrolle, Copyright,
+               Langzeitarchivierung) auch die Tatsache, dass die Daten bereits in einem weitgehend
+               homogenen Format vorliegen. Anschließend werden aus den HTML-Dateien Informationen
+               über die jeweiligen Sprecher, das Thema (bzw. den thematischen <emph>thread</emph>,
+               in dem ein Redebeitrag steht), die verwendete Sprache und das Datum extrahiert. Die
+               Dokumente werden anhand der enthaltenen Zwischenüberschriften automatisiert in
+               thematische Abschnitte gegliedert und durch die Vergabe fortlaufender Ids über die
+               verschiedenen Sprachversionen hinweg aligniert. In einem weiteren Schritt werden die
+               Texte unter Verwendung eines zusammen mit dem Korpus bereitgestellten Perl-Skriptes
+               automatisiert in einzelne Sätze zerlegt, die abschließend mit einem weiteren Skript
+               auf Basis einer Variante des Algorithmus von Gale und Church (1993) aligniert
+                  werden.<note xml:id="ftn7">Zu Verfügbarkeit und Umfang der mit dem Korpus
+                  bereitgestellten Verarbeitungswerkzeuge siehe den nachfolgenden Abschnitt.</note>
+            </p>
+            <p xml:id="p6">Aus Perspektive der Digital Humanities durchaus kritisch zu bewerten ist
+               die Tatsache, dass im <emph>Europarl</emph>-Korpus teilautomatisiert erstellte
+               Trainingsdaten als Basis für die Entwicklung eines computerlinguistischen Verfahrens
+               eingesetzt werden. Jedoch ist dieses Vorgehen in der Computerlinguistik durchaus
+               üblich, insbesondere im Bereich der SMT, bei der eine sehr umfangreiche
+               Datengrundlage Voraussetzung ist. Um die Fehler bei Tokenisierung und Satztrennung zu
+               minimieren, werden zum einen sprachspezifische Anpassungen vorgenommen, z.B. durch
+               Abkürzungsverzeichnisse. Zum anderen wird durch die vorherige Unterteilung der
+               Dokumente in kurze Absätze von ca. 2-5 Sätzen verhindert, dass sich evtl. auftretende
+               Alignment-Fehler über Absatzgrenzen hinaus fortsetzen können. Fehlerfreiheit kann
+               zwar auch durch diese Maßnahmen nicht vollständig garantiert werden, jedoch können
+               sie aufgrund der Robustheit der eingesetzten statistischen Verfahren in der Regel
+               vernachlässigt werden.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Korpusstruktur</head>
+            <p xml:id="p7">Resultat der verschiedenen Verarbeitungsschritte sind zunächst die
+               alignierten Dokumente, die jeweils in einer eigenen Datei je Sitzungsdatum und
+               Sprache gespeichert werden. In diesen Dateien sind nur rudimentäre, für das paarweise
+               Alignment von (Teil-)Abschnitten benötigte Annotationen enthalten. Wie in <ref
+                  type="crossref" target="#code1">Code 1</ref> dargestellt, beschränken sich diese
+               auf die Markierung des Themas, in dem ein Redebeitrag steht (kodiert als
+                  <code>&lt;CHAPTER id&gt;</code>, welche demnach nicht Kapitel, sondern vielmehr
+               thematische Abschnitte bezeichnen), den jeweiligen Sprecher und die Sprache
+                  (<code>&lt;SPEAKER id name language&gt;</code>, wobei die Sprachangabe optional
+               ist), sowie die Markierung einzelner Unterabschnitte (<code>&lt;P&gt;</code>).
+                  <figure xml:id="code1">
+                  <eg>&lt;p&gt;&lt;CHAPTER ID=1&gt; Resumption of the session &lt;SPEAKER ID=1
+                     NAME="President"&gt; I declare resumed the session of the European Parliament
+                     ... &lt;P&gt; Although, as you will have seen, the dreaded ’millennium bug’ ... </eg>
+                  <head type="legend">Annotationen im Europarl-Korpus, hier am Beispiel der ersten
+                     Zeilen der Datei txt/en/ep-00-01-17.txt des source release in der Version v7,
+                     welche das entsprechend aufbereitete Sitzungsprotokoll vom 17. Januar 2000
+                     enthält (<ref
+                        target="https://web.archive.org/web/20170619073042/http://www.statmt.org/europarl/v7/europarl.tgz"
+                        >https://web.archive.org/web/20170619073042/http://www.statmt.org/europarl/v7/europarl.tgz</ref>).</head>
+               </figure>
+            </p>
+            <p xml:id="p8">Ein weiteres Ergebnis des Erstellungsprozesses sind satzweise alignierte
+               Parallelkorpora, in denen jeder Satz in einer eigenen Zeile steht, so dass die
+               korrespondierenden Sprachversionen anhand der Zeilennummer identifiziert werden
+               können. Im Gegensatz zu den Dokument-Dateien, die als Ausgangsmaterial dienen,
+               enthalten die Parallelkorpora nurmehr die rohen Textdaten, d.h. das minimale Markup
+               der Ausgangsdateien wird vollständig entfernt. Das <emph>Europarl</emph>-Korpus wird
+               als sog. <emph>source release</emph> bereitgestellt, welcher zum einen die
+               alignierten Dokumente für alle 21 berücksichtigten Sprachen enthält, zum anderen auch
+               die für deren Aufbereitung eingesetzten Tools zur satzweisen Alignierung, so dass
+               gewissermaßen <emph>on demand</emph> Parallelkorpora für verschiedene Sprachpaare
+               erstellt werden können (potentiell bis zu 20 für jede Sprache). Bei den im
+                  <emph>source release</emph> enthaltenen Tools handelt es sich um eine Reihe von
+               einfachen Perl-Skripten für die Korpusaufbereitung, für deren Ausführung eine
+               Perl-Installation vorhanden sein muss. Diese umfassen ein Skript für die satzweise
+               Alignierung, ein Skript für die Konversion in XML-Dateien, einen
+                  <emph>Sentence-Splitter</emph> und einen <emph>Tokenizer</emph>, die durch ein
+               umfassendes, sprachspezifisch angelegtes Abkürzungsverzeichnis ergänzt werden, das
+               all jene Fälle enthält, in denen Punkte als Bestandteil des Wortes erkannt werden
+               sollen. Zusätzlich zu diesem <emph>source release</emph> stehen über die Website 20
+               Parallelkorpora, jeweils ausgehend vom Englischen, in vorbereiteter Form zur
+               Verfügung und können dort einzeln heruntergeladen werden.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Einsatzmöglichkeiten</head>
+            <p xml:id="p9">Haupteinsatzgebiet für das <emph>Europarl</emph>-Korpus sind
+               sprachtechnologische Anwendungen, im Besonderen im Kontext der Entwicklung von
+               SMT-Systemen. Über die Arbeiten von Philipp Koehn bzw. der Edinburgh-Gruppe hinaus
+               wird das <emph>Europarl</emph>-Korpus u.a. seit 2005 regelmäßig im Rahmen sogenannter
+                  <emph>Shared Tasks</emph> bei Konferenzen der <emph>Association for Computational
+                  Linguistics</emph> (ACL) für die kompetitive Entwicklung und Evaluation von
+               SMT-Systemen genutzt.<note xml:id="ftn8">Eine Aufstellung der entsprechenden
+                  ACL-Workshops findet sich unter <ref target="ttp://www.statmt.org"
+                     >http://www.statmt.org</ref>.</note> Die Einsatzmöglichkeiten gehen jedoch über
+               die maschinelle Übersetzung hinaus. So können die <emph>Europarl</emph>-Daten im
+               Grunde für alle Arten von NLP-Tasks eingesetzt werden, die multilinguale Daten
+               erfordern; Koehn (2005) verweist hier etwa auf Arbeiten im Bereich der
+               Wortsinndisambiguierung, der Anaphernresolution oder auch der
+                  Informationsextraktion.<note xml:id="ftn9">Speziell für sprachtechnologische
+                  Anwendungen wurde an der Universität Zürich auch eine bereinigte und mit
+                  zusätzlichen Strukturinformationen angereicherte Version des
+                  <emph>Europarl</emph>-Korpus erstellt; siehe dazu Graën et al. (2014) sowie <ref
+                     target="https://web.archive.org/web/20141225132930/http://pub.cl.uzh.ch/purl/costep"
+                     >https://web.archive.org/web/20141225132930/http://pub.cl.uzh.ch/purl/costep</ref>.</note>
+            </p>
+            <p xml:id="p10">Das <emph>Europarl</emph>-Korpus ist somit primär als
+               sprachtechnologische Ressource zu verstehen und ist demnach nicht als Datenbasis für
+               die Recherche oder für korpuslinguistische Untersuchungen konzipiert. Für die Nutzung
+               der Daten in anderen Anwendungskontexten gibt es jedoch eine Reihe von Alternativen.
+               So findet sich bspw. auf der Webseite des OPUS-Projekts des <emph>Nordic Language
+                  Processing Laboratory</emph> (NLPL),<note xml:id="ftn10">
+                  <ref target="https://web.archive.org/web/20180105145759/http://opus.nlpl.eu/"
+                     >https://web.archive.org/web/20180105145759/http://opus.nlpl.eu/</ref>. </note>
+               das eine Sammlung frei verfügbarer Parallelkorpora bereitstellt, ein Suchinterface
+               für eine auf Basis der <emph>Open Corpus Workbench</emph> (CWB)<note xml:id="ftn11">
+                  <ref
+                     target="https://web.archive.org/web/20170915061225/http://cwb.sourceforge.net/"
+                     >https://web.archive.org/web/20170915061225/http://cwb.sourceforge.net/</ref>.
+               </note> linguistisch aufbereitete Version des Europarl-Korpus. Eine vergleichbare
+               Zugriffsmöglichkeit bietet auch die (allerdings kostenpflichtige)
+               Korpusmanagement-Software SketchEngine (vgl. Kilgarriff et al. 2014), in der eine
+               Vielzahl von verschiedenen Korpora gebündelt sind, darunter auch eine größere Anzahl
+               frei verfügbarer Ressourcen wie eben das <emph>Europarl</emph>-Korpus.<note
+                  xml:id="ftn12">
+                  <ref
+                     target="https://web.archive.org/web/20171109044747/https://www.sketchengine.co.uk/"
+                     >https://web.archive.org/web/20171109044747/https://www.sketchengine.co.uk/</ref>.
+               </note>
+            </p>
+            <p xml:id="p11"> Weil die zugrunde gelegten Daten aufgrund ihres Inhalts insbesondere
+               auch für den Bereich der Politikwissenschaft von großem Interesse sind, wurde 2014 im
+               Rahmen des Projekts <emph>Talk of Europe</emph> mit dem <emph>LinkedEP
+                  Dataset</emph><note xml:id="ftn13">
+                  <ref
+                     target="https://web.archive.org/web/20161230090013/http://www.talkofeurope.eu/data"
+                     >https://web.archive.org/web/20161230090013/http://www.talkofeurope.eu/data</ref>.</note>
+               eine alternative Version zu <emph>Europarl</emph> veröffentlicht, die auf
+               Semantic-Web-Technologien basiert (vgl. van Aggelen et al., 2016). Während das
+                  <emph>Europarl</emph>-Korpus dezidiert für den Anwendungsfall der maschinellen
+               Übersetzung entworfen wurde, zielt das <emph>LinkedEP Dataset</emph> auf eine
+               inhaltlich orientierte Durchsuchbarkeit der Daten, indem diese mit zusätzlichen
+               Informationen angereichert werden und so eine Kontextualisierung der enthaltenen
+               Informationen ermöglichen. Es handelt sich um eine nach Linked Open Data
+               (LOD)-Prinzipien kodierte Ressource, die wie das ursprüngliche
+               <emph>Europarl</emph>-Korpus von den auf der offiziellen Website des Europäischen
+               Parlaments als HTML-Seiten veröffentlichten Sitzungsprotokollen ausgeht und diese in
+               RDF überführt. Die resultierende Ressource ist zudem mit weiteren LOD-Ressourcen
+               verknüpft, u.a. <emph>GeoNames</emph><note xml:id="ftn14">
+                  <ref target="https://web.archive.org/web/20171228152250/http://www.geonames.org"
+                     >https://web.archive.org/web/20171228152250/http://www.geonames.org</ref>.
+               </note>, <emph>DBPedia</emph><note xml:id="ftn15">
+                  <ref
+                     target="https://web.archive.org/web/20170810113013/http://wiki.dbpedia.org/Datasets"
+                     >https://web.archive.org/web/20170810113013/http://wiki.dbpedia.org/Datasets</ref>.
+               </note>, sowie der <emph>Automated Database of the European Parliament</emph><note
+                  xml:id="ftn16">
+                  <ref
+                     target="https://web.archive.org/web/20170331091345/http://folk.uio.no/bjornkho/MEP"
+                     >https://web.archive.org/web/20170331091345/http://folk.uio.no/bjornkho/MEP</ref>.
+               </note>, die bibliographische Daten der Mitglieder des Europäischen Parlaments
+               bereitstellt.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Abschließende Bemerkungen</head>
+            <p xml:id="p12">Die Besonderheit des <emph>Europarl</emph>-Korpus gegenüber anderen
+               Parallelkorpora, wie sie bspw. über das o.g. OPUS-Projekt bereitgestellt werden, ist
+               neben der hohen Anzahl der möglichen Sprachpaare und dem daraus resultierenden Umfang
+               vor allem die verbürgte Qualität der Übersetzungen sowie die Tatsache, dass aufgrund
+               ihrer Herkunft aus dem Umfeld des Europäischen Parlaments die oftmals problematischen
+               Fragen bezüglich des Copyrights sowie der langfristigen Verfügbarkeit der Daten
+               geregelt sind.</p>
+            <p xml:id="p13">Das <emph>Europarl</emph>-Korpus ist zudem eine sehr stark
+               spezialisierte Ressource, die als multilinguales Parallelkorpus dezidiert für die
+               Entwicklung von Systemen zur statistischen maschinellen Übersetzung
+                  (<emph>Statistical Machine Translation</emph>, SMT) angelegt wurde. In ihrer
+               Beschränkung auf einen einzelnen Anwendungsfall stellt das Korpus gegenüber anderen
+               Sprachressourcen sicherlich einen Sonderfall dar, sowohl innerhalb der
+               (Computer-)Linguistik als auch im erweiterten Bereich der Digital Humanities (DH).
+               Insbesondere der sehr sparsame Einsatz von Annotationen mag zunächst sehr
+               minimalistisch anmuten, jedoch hat der geringe Grad an Modellierung der Daten hier
+               durchaus Methode. So ist der weitgehende Verzicht auf Annotationen vor allem dem
+               sprachtechnologischen Anwendungsfall geschuldet: Da in SMT-Systemen allein die
+               alignierten Sprachpaare betrachtet werden, wird jede zusätzliche Information bewusst
+               aus der Verarbeitung herausgehalten. Während andere, v.a. korpuslinguistische
+               Ressourcen in der Regel auf verschiedenen Ebenen mit Annotationen angereichert sind
+               und dadurch differenzierte linguistische Analysen ermöglichen, zeichnet sich das
+                  <emph>Europarl</emph>-Korpus durch den bewussten Verzicht auf solche
+               Auszeichnungen aus. Wenngleich es sich um ein älteres Korpus handelt, so entspricht
+               diese Art der Aufbereitung nach wie vor den üblichen Standards zur Erstellung von
+               Parallelkorpora für die maschinelle Übersetzung. Das <emph>Europarl</emph>-Korpus
+               wird dementsprechend noch immer häufig eingesetzt, etwa als <emph>baseline</emph>
+               bzw. <emph>benchmark</emph> in der Entwicklung und Evaluation klassischer
+               SMT-Systeme, aber auch im Kontext neuerer Ansätze auf Grundlage von Künstlichen
+               Neuronalen Netzen (sog. „Neural Machine Translation“, NMT),<note xml:id="ftn17"
+                  >Ebenso wie bei der SMT basieren auch NMT-Ansätze auf statistischen Verfahren und
+                  nutzen damit ebenfalls die latent in den Sprachdaten enthaltenen Informationen.
+                  Aufgrund von Unterschieden in der internen Repräsentation der Daten ist eine
+                  terminologische Unterscheidung hier dennoch üblich.</note> die für die Erstellung
+               von Sprachmodellen u.a. auch alignierte Parallelkorpora als Input nutzen.<note
+                  xml:id="ftn18">Vgl. dazu z.B. die Modelle des OpenNMT-Systems (<emph>Open Neural
+                     Machine Translation</emph>, siehe <ref
+                     target="https://web.archive.org/web/20181024202654/http://opennmt.net/Models/"
+                     >https://web.archive.org/web/20181024202654/http://opennmt.net/Models/</ref>),
+                  einer <emph>open-source</emph>-Initiative der Harvard University in Zusammenarbeit
+                  mit Systran, einem der führenden Unternehmen im Bereich der Maschinellen
+                  Übersetzung.</note>
+            </p>
+            <p xml:id="p14">Für Anwendungen im Bereich der DH ist das <emph>Europarl</emph>-Korpus
+               in dieser rohen Form dagegen nur bedingt nachnutzbar. Neben der weitgehend fehlenden
+               Datenmodellierung liegt dies nicht zuletzt auch am Fehlen eines Suchzugriffs zu
+               Recherchezwecken. Zwar stehen hier mit dem o.g. OPUS-Suchinterface sowie der
+               Korpusmanagement-Software <emph>SketchEngine</emph> entsprechende Alternativen zur
+               Verfügung, die eine korpuslinguistische Nutzung des Korpus ermöglichen; aus
+               Perspektive der DH ist jedoch sicherlich vor allem die stärker inhaltlich motivierte
+               Erschließung der Daten durch die Semantic-Web-Ressource <emph>LinkedEP</emph> von
+               größerem Interesse, da diese deutlich über den Anwendungsfall der SMT hinausweist,
+               indem sie eine Kontextualisierung des enthaltenen Wissens ermöglicht. Nachdem der
+               hierfür nötige Grad an zusätzlicher Datenmodellierung weit über das ursprüngliche
+                  <emph>Europarl</emph>-Korpus hinausgeht, handelt es sich hier jedoch im Grunde um
+               eine unabhängige Ressource, die zwar von der gleichen Datengrundlage ausgeht,
+               ihrerseits aber ebenfalls nur für einen spezifischen Anwendungsbereich angelegt ist –
+               eine Aufbereitung der Texte, die für beide Anwendungsbereiche funktionieren würde,
+               erscheint vor diesem Hintergrund nicht wirklich praktikabel.</p>
+            <p xml:id="p15">Vielmehr ist in der Beschränkung auf den Bereich sprachtechnologischer
+               Anwendungsfälle einer der wesentlichen Gründe für die Bekanntheit und Verbreitung des
+                  <emph>Europarl</emph>-Korpus zu sehen. Besonders hervorzuheben ist hierbei das
+               Prinzip des <emph>source release</emph>, bei dem die nur minimal aufbereiteten
+               Ausgangsdaten zusammen mit den Tools für die satzweise Alignierung veröffentlicht
+               werden, so dass nicht nur die Quellen rekonstruiert werden können, sondern auch die
+               Erstellung von Parallelkorpora für einzelne Sprachpaare nach Bedarf vorgenommen
+               werden kann. Wenngleich also die Präsentation der Daten sehr minimalistisch ausfällt
+               und die Website im Vergleich zu anderen korpuslinguistischen Ressourcen vielleicht
+               etwas anachronistisch anmuten mag, so ist das <emph>Europarl</emph>-Korpus dennoch
+               für den Bereich der maschinellen Übersetzung als ein <emph>best practice</emph> für
+               die Erstellung von Parallelkorpora anzusehen, und wird als solches sicherlich auch
+               weiterhin eine große Rolle spielen.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Van Aggelen, A. E.; Hollink, L.; Kemman, M.; Kleppe, M.; Beunders, H.. 2017.
+                  „The debates of the European Parliament as Linked Open Data.“ <emph>Semantic Web –
+                     Interoperability, Usability, Applicability</emph>, 8(2): 271–281.
+                  doi:10.3233/SW-160227.</bibl>
+               <bibl>Gale, W. and Church, K.. 1993. <emph>A program for aligning sentences in
+                     bilingual corpora. Computational Linguistics</emph>, 19(1).</bibl>
+               <bibl>Graën, J.; Batinic, D.; Volk, M.. 2014. „Cleaning the Europarl Corpus for
+                  Linguistic Applications“. In: <emph>Konvens 2014, Hildesheim, 8 October 2014 - 10
+                     October 2014</emph>. doi:10.5167/uzh-99005.</bibl>
+               <bibl>Kilgarriff, A.; Baisa, V.; Bušta, J.; Jakubíček, M.; Kovvář, V.; Michelfeit,
+                  J.; Rychlý, P.; Suchomel, V.. 2014. „The Sketch Engine: ten years on.“
+                     <emph>Lexicography</emph>, 1: 7-36.</bibl>
+               <bibl>Koehn, P.. 2005. „Europarl: A Parallel Corpus for Statistical Machine
+                  Translation.“ <emph>MT Summit</emph> 5: 79-86.</bibl>
+            </listBibl>
+         </div>
+      </back>
+
+   </text>
 </TEI>
