@@ -19,7 +19,8 @@ The datasets are provided by the Institute for Documentology and Scholarly Editi
 ## DOIs
 
 * Repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550707)
-* Release v-1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
+* Release v1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
+* Release v2.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4562966.svg)](https://doi.org/10.5281/zenodo.4562966)
 
 ## Contact
 
