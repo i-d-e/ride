@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.5.4">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The 1641 Depositions</title>
+            <author ref="https://orcid.org/0000-0002-9256-0958">
+               <name>
+                  <forename>Walter</forename>
+                  <surname>Scholger</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Graz</orgName>
+                  <placeName>Graz, Austria</placeName>
+               </affiliation>
+               <email>walter.scholger (at) uni-graz.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2017-02">February 2017</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-5/1641-depositions</idno>
+            <idno type="DOI">10.18716/ride.a.5.4</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue05/1641/1641.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-2162-5531">Franz Fischer</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny</editor>
+            <biblScope unit="issue" n="5">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-5</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>1641 Depositions</title>
+                  <editor>Jane Ohlmeyer, Thomas Bartlett, Micheál Ó Siochrú, John Morrill</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Micheál Ó Siochrú</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Thomas Bartlett</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>John Morrill</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Jane H. Ohlmeyer</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Encoder</resp>
+                     <persName>Aidan Clarke</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Edda Frankot</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Annaleigh Margey</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Elaine Murphy</persName>
+                  </respStmt>
+                  <date type="publication">2010</date>
+                  <idno type="URI">http://1641.tcd.ie</idno>
+                  <date type="accessed">2017-02-01</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="2"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>I<ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>event and actor type</desc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>scribal interventions recorded</desc>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>irish history</term>
+               <term>religious history</term>
+               <term>social history</term>
+               <term>transcription</term>
+               <term>witness accounts</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This paper reviews the digital edition of the <emph>1641 Depositions</emph>, a
+               collection of witness accounts related to the Irish rebellion of 1641. An invaluable
+               source for the cultural, social and religious history of Ireland, this collaborative
+               effort of Trinity College Dublin, the University of Aberdeen and the University of
+               Cambridge provides 19,010 pages of original documents online in digital form,
+               alongside valuable background and context information. Despite the significance of
+               the material and the commendable effort at making it available to the public as an
+               online edition, the project suffers from a number of technical failures and design
+               flaws. The most significant flaw, however, is the lacking re-usability of the online
+               material for further research due to the restrictive copyright policy and the
+               unavailability of the TEI-encoded transcription files.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">The fully searchable digital edition of the 1641 Depositions, documenting
+               the experiences of Protestant men and women of all classes following the (Catholic)
+               Irish rebellion in 1641, aims to conserve, digitise, transcribe and make available
+               online 8,000 depositions or witness statements, examinations and associated
+               materials, amounting to 19,010 pages, kept in the Manuscripts and Archives Research
+               Library of Trinity College Dublin (TCD).</p>
+            <p xml:id="p2">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-1.png"/>
+                  <head type="legend">1641 Depositions Website.</head>
+               </figure> The transcription of the depositions is dedicated to the exact and faithful
+               representation of the original documents and was encoded according to the Guidelines
+               of the Text Encoding Initiative (TEI). The project began in 2007 and finished in
+               September 2010 as a collaboration between TCD, the University of Aberdeen and the
+               University of Cambridge, and was officially launched on October 22, 2010, alongside
+               the temporary exhibition "Ireland in Turmoil: the 1641 Depositions", by the
+               then-President of Ireland, Mary McAleese.</p>
+         </div>
+         <div xml:id="div2">
+            <head>The original 1641 Depositions</head>
+            <p xml:id="p3">The 1641 Depositions are witness testimonies collected after the outbreak
+               of the <emph>Irish Rebellion of 1641</emph>. That rising started – in the context of
+               the much larger crisis of the Stuart kingdoms at that time – in the Northern Ulster
+               region and quickly spread throughout the island as Catholic leaders took up arms
+               against what was perceived as English Protestant oppression.</p>
+            <p xml:id="p4">A <emph>Commission for the Despoiled Subject</emph> was set up by the
+               English authorities in Dublin in December 1641 under the auspices of eight clergymen
+               of the Church of Ireland, to collect witness accounts mainly by Protestants refugees,
+               but also some Catholics, from various social backgrounds. Their testimonies document
+               a broad range of topics, from the loss of property to military activity, to the
+               alleged crimes committed by the Irish insurgents against the Protestant subjects,
+               including assault, imprisonment and murder. A first collection of depositions was
+               taken within two years of the alleged events, another in the 1650s as records of
+               judicial interrogations and investigations by government officials gathering evidence
+               against individuals accused of acts of murder or massacre. The latter are therefore
+               both more focused in content as well as more formal in expression than the mostly
+               more verbose and emotional but also more personal accounts right after the rebellion.
+               In all, about 8,000 witness statements, examinations and associated materials,
+               amounting to 19,010 pages bound in 31 volumes, were collected. The majority of the
+               documents are difficult to decipher, since, due to the age and materiality of the
+               originals, the script has faded to virtual illegibility. Furthermore, the spelling of
+               names and places is inconsistent and erratic, as is the use of grammar and
+               punctuation, since many different scribes were involved in the preparation of the
+               documents.</p>
+            <p xml:id="p5">Nevertheless, the resulting corpus provides an unparalleled resource for
+               the social, economic, cultural, religious, and political history of
+               seventeenth-century Ireland, England and Scotland in general, and the causes and
+               events surrounding the 1641 rebellion in particular. The depositions were used in the
+               examinations of the high courts of justice to persecute culprits implicated in the
+               1641 crimes in the decades after the events and eventually came into the possession
+               of a private collector, before being gifted to the Library of TCD in 1741. The
+               alleged atrocities and crimes collected in the original depositions of 1642-43 became
+               the justification for the Cromwellian conquest of Ireland in 1649-53 and have
+               remained part of the narrative underpinning the sectarian division in Northern
+               Ireland. The fact that the publication of the Depositions has been dropped twice in
+               the 20th century (once in the 1930s after the creation of the Free Irish State and
+               another time in the 1960s at the outbreak of the Troubles in Northern Ireland) pays
+               testimony to the ideological and cultural significance of the collection.</p>
+         </div>
+         <div xml:id="div3">
+            <head>The digital Depositions</head>
+            <div xml:id="div3.1">
+               <head>Background</head>
+               <p xml:id="p6">The 1641 Depositions Project was realized as a cooperation between
+                  TCD, the University of Aberdeen and the University of Cambridge, in partnership
+                  with IBM LanguageWare. <ref
+                     target="http://web.archive.org/web/20161110160626/http://www.eneclann.ie"
+                     >http://web.archive.org/web/20161110160626/http://www.eneclann.ie</ref>, a
+                  private company specializing in genealogical research affiliated with Trinity
+                  College, was commissioned to digitize the manuscripts and to design and implement
+                  the technology behind the project. Funding of "over 1 million Euro" was granted by
+                  the <emph>Irish Research Council for the Humanities and Social Sciences</emph>,
+                  the <emph>Arts &amp; Humanities Research Council in the UK and the Library of
+                     TCD</emph>.</p>
+               <p xml:id="p7">The principal investigators on the project were Professor Jane
+                  Ohlmeyer (TCD), Professor Thomas Bartlett (University of Aberdeen), Dr Micheál Ó
+                  Siochrú (TCD) and Professor John Morrill (University of Cambridge), the
+                  transcriptions were edited by Professor Aidan Clarke (TCD), with a much larger
+                  team from the various partner institutions providing further contributions to the
+                  project. All this background information is readily available on the 1641
+                  Depositions website, with detailed attribution and information about individual
+                  contributors.</p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Digitization</head>
+               <p xml:id="p8">The digitization of the delicate original volumes was concluded with
+                  special care to the conservation of the source material. The imaging process was
+                  concluded using an overhead digital array that conforms to archival standards,
+                  employing lamps that emit no harmful UV, infrared light or heat exposure. The
+                  original images were captured as 24-bit full colour scans with 600 DPI resolution,
+                  and saved as uncompressed TIFF files. The surrogate images used on the website are
+                  of considerably lower resolution and saved as compressed JPG files.</p>
+               <p xml:id="p9">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-2.png"/>
+                     <head type="legend">Facsimile view using Zoomify.</head>
+                  </figure> The facsimiles on the website require <emph>Adobe Flash Player 9</emph>
+                  and can be viewed using a <emph>Zoomify</emph> viewer which allows zooming into
+                  the documents on character level. However, the quality of the reproductions
+                  deteriorates with the grade of the zoom, with the images becoming increasingly
+                  blurry. The handling of the Zoomify viewer is simple due to the very limited –
+                  but, in the context of this edition, sufficient – functions (zoom, pan, reset to
+                  full document view). The viewer window can be closed by clicking on a close icon
+                  at the bottom right corner which seems counterintuitive since that icon is usually
+                  found in the top right corner, but proves convenient since all the other viewer
+                  icons are also located at the bottom of the window. The greatest drawback of the
+                  facsimile view, however, is that the viewer window is automatically placed in the
+                  middle of the screen, thereby eclipsing the transcription. Since the viewer window
+                  can be neither moved nor resized, the user can either study the transcription or
+                  the facsimile, but has no possibility to view transcription and facsimile next to
+                  each other. </p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Transcription</head>
+               <p xml:id="p10">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-3.png"/>
+                     <head type="legend">Transcription view.</head>
+                  </figure> The transcriptions of the depositions strive to be exact and faithful to
+                  the originals, observing and replicating spelling or grammatical errors and
+                  different spellings of place or person names. Additionally, scribal interventions
+                  like deletions and additions are thoroughly recorded. A guide to the applied
+                     <emph>transcription conventions</emph> is available on the website as a
+                  distinct page and explains how specific editorial phenomena have been transcribed
+                  (e.g. interlinear words are transcribed in italic type, illegible words appear in
+                  square brackets). Another page provides an overview of abbreviations commonly used
+                  in official documents of that period, providing an explanation of their meaning
+                  and images with exemplary cases. This documentation is quite helpful when dealing
+                  with the actual transcriptions. Unfortunately, however, this additional
+                  information is given on separate webpages and can only be accessed through the
+                  main menu bar and not viewed alongside the actual transcriptions.</p>
+               <p xml:id="p11">It is claimed that the transcriptions were encoded using the TEI/XML
+                  encoding standard. Since the TEI files themselves are neither available for
+                  download nor can they be viewed on the website, there is unfortunately no way to
+                  verify the actual level of annotation.</p>
+               <p xml:id="p12">The depositions were encoded to provide a structured view on the
+                  information contained in the documents, recording information such as the
+                     <emph>people</emph> and <emph>places</emph> involved in each deposition, the
+                     <emph>dates</emph> on which alleged crimes took place and the nature of these
+                     <emph>crimes</emph>. This information is consequently used for various search
+                  functions in the collection and to provide some basic metadata on the webpages
+                  containing the transcriptions of the individual documents. Unfortunately, there is
+                  no further information on either the TEI elements and modules used, the
+                  application of a project-specific schema, or the depth of the annotation in
+                  general. The aforementioned lack of downloadable TEI files of the transcriptions
+                  makes it impossible to further evaluate the encoding.</p>
+               <p xml:id="p13">While it is claimed that ‘the use of TEI to describe the depositions
+                  facilitates the integration of numerous related digital resources with the 1641
+                  Depositions’ (1641 Depositions, How have the 1641 Depositions been marked up?)
+                  there is no mention of such resources, nor are they recognizable on the website
+                  itself. Needless to say, the lack of viewable and especially downloadable (i.e.
+                  re-useable) TEI files of the transcriptions is a capital weakness of this project
+                  and in contradiction to common practice and state-of-the-art of current digital
+                  scholarly editions.</p>
+               <p xml:id="p14">As noted above, the transcription is faithful to the originals and
+                  captures the original script and scribal intervention. While the website includes
+                  a lot of context information on both the collection itself and the historical
+                  background of the events leading to the depositions, that information is only
+                  available on separate webpages through the main menu bar and cannot be accessed
+                  directly from the transcriptions. There is no further information about the acting
+                  protagonists, the persons mentioned in the deposition or the places and dates, and
+                  no reference information to other depositions dealing with the same event or
+                  actors. The addition of editorial comments and references to other related
+                  documents in the collection would constitute an invaluable improvement.</p>
+            </div>
+            <div xml:id="div3.4">
+               <head>User interface and navigation</head>
+               <p xml:id="p15">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-4.png"/>
+                     <head type="legend">Website menus and structure.</head>
+                  </figure> The 1641 Depositions website is embedded in the greater web presence of
+                  TCD and therefore has to adhere to a rather simplistic design and interface in
+                  observance of the TCD <emph>
+                     <ref
+                        target="http://web.archive.org/web/20161110160433/http://www.tcd.ie/accessibility/"
+                        >Web Accessibility Statement</ref>
+                  </emph>. The appearance and navigation of the website is somewhat dated, yet
+                  functional. The combination of colours – largely red, white and grey – is
+                  unproblematic, the fonts are well readable in size and form.</p>
+               <p xml:id="p16">The principal navigation on the website is done via seven menu
+                  buttons – ‘Home’, ‘About’, ‘Using the Depositions’, ‘Historical Background’, ‘The
+                  Project’, ‘Browse the Depositions’ and ‘Contact’, respectively – which are grouped
+                  horizontally at the top of the page. While some of these buttons (‘Home’,
+                  ‘Contact’) are self-explanatory, other menu headers include numerous sub-entries
+                  that fold out on mouse-over. Much useful information can be found on the website,
+                  but the composition of the main menu bar is not always clear and includes several
+                  duplicates and redundancies: ‘About’ contains a list of pages introducing the
+                  origin, nature and content of the depositions, and explaining the relevance of the
+                  source in the historical and cultural context. Other entries point toward further
+                  reading and other related useful online resources.</p>
+               <p xml:id="p17">‘Using the Depositions’ contains several subordinate pages which give
+                  an overview and inventory of the different deposition volumes, the aforementioned
+                  transcription and palaeographic notes, but also an essay on the use of the
+                  depositions in their original context – which should probably rather be placed
+                  under the ‘Historical background’ menu – and an FAQ file which contains
+                  information that is also available, albeit in fragmentary form, through the
+                  ‘About’ and ‘The Project’ menus and seems out of place in this menu.</p>
+               <p xml:id="p18">‘Historical Background’ groups several pages on the historical
+                  context of the 1641 rebellion: the events and political steps that ultimately led
+                  to the escalation of the conflict, the timeline of events connected to the
+                  rebellion, but also the collection itself, and a contextualization of comparable
+                  atrocities in other parts of the world and the significance of the 1641 heritage
+                  for the Protestant/British identity in Ulster (i.e. Northern Ireland).</p>
+               <p xml:id="p19">‘The Project’ points to a number of pages that contain information
+                  about the project itself rather than its content, most notably the funders,
+                  institutions and individuals involved in its realization. There are also notes on
+                  the sustainability of the project, the technologies and standards used in the
+                  process, and the conservation of the original (analogue) collection. Of particular
+                  interest is the indication of two related projects (re-)using the digital edition
+                  of the 1641 Depositions (see below). Unfortunately, there are just short texts
+                  about these projects provided, but no links.</p>
+               <p xml:id="p20">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-5.png"/>
+                     <head type="legend">"Browse" function view.</head>
+                  </figure> ‘Browsing the Depositions’ transfers the user to a listing of the
+                  individual volumes of the Deposition Manuscripts and additionally provides the
+                  County (or Counties) covered in that volume and the number of folios that each
+                  volume contains. Hence, it provides quick, if largely unstructured access to the
+                  transcriptions.</p>
+            </div>
+            <div xml:id="div3.5">
+               <head>Functionalities and Access</head>
+               <p xml:id="p21">While searching the database is possible without registration, access
+                  to the transcriptions or the facsimile images requires the registration of a
+                  dedicated user account. However, the account is immediately created and does not
+                  require any additional verification. Upon successful login to the ‘Members Area’
+                  of the digital edition, users can use various search approaches to access
+                  individual depositions in the collection and – in theory – a number of
+                  functionalities linked to the individual account.</p>
+            </div>
+            <div xml:id="div3.6">
+               <head>Exploring the collection</head>
+               <p xml:id="p22">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-6.png"/>
+                     <head type="legend">"Search" functions.</head>
+                  </figure> In total, there are four different exploration scenarios which allow
+                  users to interact with the collection: <list rend="ordered">
+                     <item>a <emph>simple search</emph> interface enabling the search for forenames,
+                        surnames, counties and a full text search in the transcriptions,</item>
+                     <item>an <emph>advanced search</emph> interface which provides an online form
+                        with 14 different fields like ‘Place’, ‘Name’, ‘Occupation’ or ‘Role’
+                        (victim, suspect, …) in that particular deposition,</item>
+                     <item>an <emph>interactive map</emph> of Ireland which leads to an overview of
+                        depositions by county,</item>
+                     <item>a <emph>Browse</emph> button which – mirrored in the principal navigation
+                        bar – points to a list of the individual 31 volumes of the
+                        depositions.</item>
+                  </list>
+               </p>
+               <p xml:id="p23">
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-7.png"/>
+                     <head type="legend">"Advanced Search" and suggested search terms.</head>
+                  </figure> Both, the simple and the advanced search forms provide assistance in
+                  form of an automatically generated list of terms matching the entered character
+                  string, for example the entry ‘mac’ in the ‘surname’ field would yield a
+                  suggestion of all surnames beginning with ‘Mac’ or ‘mac’.</p>
+               <p xml:id="p24">The search queries are not case-sensitive, but use only the original
+                  spelling. There is also no possibility to use wildcards or fuzzy search. While
+                  that approach is in keeping with the premise of the accurate and exact
+                  transcription of the original documents, it poses several difficulties, since
+                  spellings of the same name may vary due to either actual errors by the scribes or
+                  because of different language versions (Latin, English, Irish, respectively).
+                  Unfortunately, there has been no normalization of place or person names to address
+                  this difficulty.</p>
+               <p xml:id="p25">There are no further possibilities to engage with the material.
+                  Visualisations of statistics, key concepts (e.g. in keeping with the terms used
+                  for the <emph>advanced search</emph>) from the collection and timelines, or the
+                  provision of cross-linked indices would constitute major improvements to the
+                  digital edition and should not be hard to implement based on the existing
+                  data.</p>
+            </div>
+            <div xml:id="div3.7">
+               <head>Transcription view</head>
+               <p xml:id="p26">At the core of this digital edition are the transcriptions of the
+                  individual depositions. Each transcription has a distinct identifier which is also
+                  used for citation. The interface is simple and straightforward: On top of the
+                  page, the title of the document is provided, along with a thumbnail picture of the
+                  corresponding facsimile and a reduced metadata set recording the manuscript number
+                  (‘Reference’), ‘County’, ‘Date’, ‘Type’ and ‘Nature of the Deposition’ in
+                  question. Clicking on the thumbnail launches the Zoomify viewer window which, as
+                  noted above, unfortunately cannot be moved or resized and conceals the
+                  transcription.</p>
+               <p xml:id="p27">As noted, the transcriptions are faithful to the original regarding
+                  the spelling and scriptorial phenomena, but do not intend to recreate the original
+                  layout and appearance of the depositions from a documentary editing perspective.
+                  The font is pleasant enough to read, but since the transcription conventions used
+                  cannot be viewed alongside the transcription on the same page, a fluent perusal
+                  proves challenging. There is no scrollbar embedded next to the transcription, only
+                  the full page can be scrolled which in the case of a longer transcription removes
+                  the navigation bar at the top of the page from view.</p>
+               <p xml:id="p28">A context menu featuring six menu tabs offers a couple of
+                  functionalities to the (logged in) user: ‘Print’ generates a very plain document
+                  for printing which only includes the transcription, but not the related metadata,
+                  and opens a print dialogue. While a preview window opens below that dialogue
+                  window, said preview can neither be resized nor scrolled nor in fact interacted
+                  with (e.g. by highlighting or copying the content).</p>
+               <p xml:id="p29">
+                  <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-8.png"/>
+                     <head type="legend">"How to Cite" popup window: more confusion than
+                        reference.</head>
+                  </figure> ‘How to Cite’ opens a citation suggestion in a pop-up window. However,
+                  that citation method seems insufficient for academic use, especially since the
+                  actual URI of the resource contains a confusing PHP code snippet and does not
+                  correspond to the URL as shown in the browser.</p>
+               <p xml:id="p30">
+                  <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_5/1641/pictures/picture-9.png"/>
+                     <head type="legend">"Comments": bugs prevent customisation.</head>
+                  </figure> The remaining four menu tabs allow the registered user to ‘Add’ and
+                  ‘View’ comments and favourites by saving personal notes regarding a deposition
+                  (‘Add Comment’) or saving a deposition as part of a personal collection (‘Add
+                  Favourite’). These functions would be quite valuable and facilitate actual
+                  research using the depositions. Unfortunately, they do not work: On several
+                  occasions, using different browsers, I tried to access and use these functions but
+                  was not able to add comments or favourites. Despite this, the ‘View’ functions
+                  returned results which were neither related to the transcription currently
+                  displayed, nor originally submitted by me but rather from another user which could
+                  not be identified. Despite the existence of the ‘delete’ option, it was not
+                  possible to remove the faulty data. While the displayed features would
+                  considerably add to the value of this digital edition, they are sadly not
+                  functional. </p>
+            </div>
+            <div xml:id="div3.8">
+               <head>Dissemination and Re-use</head>
+               <p xml:id="p31">In addition to the digital edition of the 1641 Depositions, a hard
+                  copy print edition was commissioned by the Irish Manuscripts Commission in 2014,
+                  edited by Aidan Clarke who is also listed as the responsible editor for the
+                  digital edition. At this point, five volumes have been published (Clark
+                  2013ff.).</p>
+               <p xml:id="p32">The digital objects which were generated as part of the 1641
+                  Depositions project are hosted and sustained within the TCD Library's <emph>
+                     <ref
+                        target="http://web.archive.org/save/_embed/http://digitalcollections.tcd.ie/home/"
+                        >Digital Collections Repository</ref>
+                  </emph>. It is claimed that the medium resolution images would be freely available
+                  there but the reviewer could not find any indication of the 1641 Deposition scans
+                  on the Digital Collections website. High resolution images for long term storage
+                  and digital preservation are reputedly available on a password protected basis to
+                  users with an academic background.</p>
+               <p xml:id="p33">The copyright to the original images of the 1641 Depositions is
+                  claimed by the Board of the Library of TCD. Unfortunately, there is no license
+                  information: to the contrary, the website’s FAQ states that these images ‘are not
+                  available to be downloaded’. Similarly, the copyright to the transcriptions is
+                  jointly held by the 1641 Depositions Project and the Library of TCD, with the
+                  statement that the transcriptions may not be published without express permission.
+                  This restrictive copyright policy is unusual and puzzling, since the original
+                  depositions of course have been in the public domain long since and the entire
+                  collection is owned by the Trinity College Dublin Library which as the
+                  rights-holder to the originals, the digitisations and the transcriptions could
+                  just as well have decided to take an open and sharing approach. The overall
+                  inability to re-use any of the materials produced or collected in the 1641
+                  Depositions project considerably depreciates this digital edition despite the
+                  great historical and cultural significance of the material.</p>
+               <p xml:id="p34">The 1641 Depositions were re-used in two specific related projects
+                  submitted by original partners in the digital edition project: <list
+                     rend="ordered">
+                     <item>
+                        <emph><ref
+                              target="http://web.archive.org/web/20161025013004/http://www.cultura-strep.eu/"
+                              >CULTivating Understanding Through Research and
+                           Adaptivity</ref></emph> (CULTURA) aimed at delivering innovative adaptive
+                        services and an interactive user environment to empower users to
+                        investigate, comprehend and contribute to digital cultural
+                        collections.</item>
+                     <item>
+                        <emph><ref
+                              target="http://web.archive.org/save/_embed/http://www.abdn.ac.uk/1641-depositions/"
+                              >Language and Linguistic Evidence in the 1641
+                        Depositions</ref></emph>, geared towards the creation of a personalised
+                        computer environment in which linguistic researchers can conduct
+                        sophisticated discovery, analysis and visualisation of the digitised 1641
+                        Depositions, and collaborate with other colleagues on these
+                        resources.</item>
+                  </list>
+               </p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Conclusion</head>
+            <p xml:id="p35">The original 1641 Depositions are a unique and invaluable source for the
+               social, economic, cultural, religious, and political history of Ireland (and the
+               Stuart kingdoms as a whole) and questions of Irish and Anglo-Irish identity which are
+               topical to this day. The digitization, transcription and online provision of the
+               corpus is a commendable effort and enables scholars and the general public to engage
+               with a pivotal era in Irish history. </p>
+            <p xml:id="p36">The digital edition itself is somewhat simplistically realized, but
+               provides a lot of valuable contextual information beyond the mere transcription of
+               the original documents. Unfortunately, many of the functionalities offered by the
+               digital edition itself are deficient. The search functions offer different views on
+               the material, but also pose considerable restrictions on the user due to the lack of
+               wildcard operators and the reliance on original spelling. The personalized
+               user-specific features like comments and favourites are faulty and therefore
+               unusable. Furthermore, the facsimile images and the transcriptions can only be viewed
+               individually and not in juxtaposition.</p>
+            <p xml:id="p37">The transcription is true to the source and accurate, but lacks further
+               enrichment in the form of editorial commentary or reference between related documents
+               in the collection. While the academic diligence and applied methods undoubtedly make
+               the 1641 Depositions a <emph>scholarly</emph> digital edition, the mentioned lack of
+               enrichment precludes it from being considered a <emph>critical</emph> digital
+               edition.</p>
+            <p xml:id="p38">The greatest flaw, however, is the lack of any possibility to re-use the
+               online material for further research due to the restrictive copyright policy and the
+               unavailability of the TEI-encoded transcription files. The digital edition of the
+               1641 Depositions provides a thrilling and rich corpus for research, but unfortunately
+               falls short of the largely agreed upon standards for the re-use of research data in
+               the field of Digital Humanities. Despite the noted deficiencies, the digital edition
+               in itself is undoubtedly a useful resource.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>1641 Depositions, How have the 1641 Depositions been marked up?, <ref
+                     target="https://web.archive.org/web/20161220153759/http://www.1641.tcd.ie/project-tech_behind-markup.php"
+                     >http://1641.tcd.ie/project-tech_behind-markup.php</ref>. </bibl>
+               <bibl>Aidan Clarke. 1986. 'The 1641 depositions'. In <emph>Treasures of the
+                     Library</emph> edited by Peter Fox 1986, 111-122, Dublin: Trinity College
+                  Dublin.</bibl>
+               <bibl>Aidan Clarke. ed. 2013. <emph>The 1641 Depositions</emph> (published to date:
+                  Volumes I-V), Dublin: Irish Manuscripts Commission.</bibl>
+               <bibl>Annaleigh Margey, Eamon Darcy, Elaine Murphy, eds. 2016. <emph>The 1641
+                     Depositions and the Irish Rebellion</emph>, Routledge (Reprint edition). </bibl>
+               <bibl>David Edwards, Pádraig Lenihan, Clodagh Tait, eds. 2007. <emph>Age of Atrocity:
+                     Violence and Political Conflict in Early Modern Ireland</emph>, Dublin: Four
+                  Courts Press. </bibl>
+               <bibl>David O’Hara. 2006. <emph>English Newsbooks and the Irish Rebellion</emph>,
+                  1641-1649, Dublin: Four Courts Press. </bibl>
+               <bibl>Eamon Darcy. 2015. <emph>The Irish Rebellion of 1641 and the Wars of the Three
+                     Kingdoms</emph>, Woodbridge: The Boydell Press. </bibl>
+               <bibl>Jane Ohlmeyer. 2002. <emph>Ireland from Independence to Occupation
+                     1641-1660</emph>, Cambridge: Cambridge University Press. </bibl>
+               <bibl>Micheál Ó Siochrú. 2008. <emph>Confederate Ireland, 1642-1649: a Constitutional
+                     and Political Analysis</emph>, Dublin: Four Courts Press. </bibl>
+               <bibl>Sir John Temple. 1646. <emph>The history of the general rebellion in Ireland.
+                     Raised upon the three and twentieth day of October, 1641. Together with the
+                     Barbarous Cruelties and Bloody Massacres which ensued thereupon.</emph>
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

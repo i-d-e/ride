@@ -1,0 +1,2044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.10.5">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Rezension der „Alfred-Escher-Briefedition“</title>
+                <author ref="https://orcid.org/0000-0002-6587-381X">
+                    <name>
+                        <forename>Dominik</forename>
+                        <surname>Kasper</surname>
+                    </name>
+                    <affiliation>
+                        <orgName>Akademie der Wissenschaften und der Literatur Mainz</orgName>
+                        <placeName>Mainz</placeName>
+                    </affiliation>
+                    <email>dominik.kasper (at) adwmainz.de</email>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+                <date when="2019-06">June 2019</date>
+                <idno type="URI"
+                    >https://ride.i-d-e.de/issues/issue-10/alfred-escher-briefedition</idno>
+                <idno type="DOI">10.18716/ride.a.10.5</idno>
+                <idno type="archive"
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue10/escher/escher.pdf</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="j">RIDE - A review journal for digital editions and resources</title>
+                <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
+                <biblScope unit="issue" n="10">Digital Scholarly Editions</biblScope>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-10</idno>
+            </seriesStmt>
+            <notesStmt>
+                <relatedItem type="reviewed_resource">
+                    <bibl>
+                        <title>Alfred Escher-Briefedition</title>
+                        <editor>Joseph Jung</editor>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>
+                                <name>Joseph Jung</name>
+                            </persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Programmer</resp>
+                            <persName>
+                                <name>Ute Recker-Hamm</name>
+                            </persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Advisor</resp>
+                            <persName>
+                                <name>Patrick Sahle</name>
+                            </persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Designer</resp>
+                            <persName>
+                                <name>Wolfgang Vater</name>
+                            </persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Encoder</resp>
+                            <persName>
+                                <name>too many</name>
+                            </persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Contributor</resp>
+                            <persName>
+                                <name>too many</name>
+                            </persName>
+                        </respStmt>
+                        <date type="publication">2015</date>
+                        <idno type="URI">https://www.briefedition.alfred-escher.ch/</idno>
+                        <date type="accessed">2018-05-22</date>
+                    </bibl>
+                </relatedItem>
+                <relatedItem type="reviewing_criteria">
+                    <bibl>
+                        <ref
+                            target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
+                            >Criteria for Reviewing Scholarly Digital Editions</ref>
+                    </bibl>
+                </relatedItem>
+            </notesStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy
+                    xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+                    <category xml:id="documentation">
+                        <category xml:id="bibl_desc">
+                            <catDesc>
+                                <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                            </catDesc>
+                            <catDesc>Is it easily possible to describe the project bibliographically
+                                along the schema "responsible editors, publishing/hosting
+                                institution, year(s) of publishing"?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contributors">
+                            <catDesc>
+                                <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                            </catDesc>
+                            <catDesc>Are the contributors (editors, institutions, associates) of the
+                                project fully documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contacts">
+                            <catDesc>
+                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project list contact persons?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="selection">
+                            <category xml:id="explained">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection of materials of the project explicitly
+                                    documented?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="reasonable">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection by and large reasonable?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="data_archive">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the documentation include information about the long term
+                                sustainability of the basic data (archiving of the data)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="aims">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the aims and purposes of the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="methods">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the methods employed in the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="data_model">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <catDesc>Does the project document which data model (e.g. TEI) has been
+                                used and for what reason?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="help">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts concerning the use of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="citation">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Does the project supply citation guidelines (i.e. how to cite
+                                the project or a part of it)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="complete">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the editon regard itself as a completed project (i.e. not
+                                promise further modifications and additions)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="institutional_curation">
+                            <catDesc>
+                                <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                            </catDesc>
+                            <catDesc>Does the project provide information about institutional
+                                support for the curation and sustainability of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="contents">
+                        <category xml:id="previous_edition">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Has the material been previously edited (in print or
+                                digitally)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="materials_used">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Does the edition make use of these previous editions?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="introduction">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an introduction to the subject-matter
+                                (the author(s), the work, its history, the theme, etc.) of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="bibliography">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a bibliography?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="commentary">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a scholarly commentary (e.g. notes on
+                                unclear passages, interpretation, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contexts">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project include or link to external resources with
+                                contextual material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="images">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of digitised sources?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="image_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of an acceptable
+                                quality?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="transcriptions">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc> Is the text fully transcribed?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="text_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer texts of an acceptable quality (typos,
+                                errors, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="indices">
+                            <catDesc>
+                                <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project feature compilations indices, registers or
+                                visualisations that offer alternative ways to access the
+                                material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="documents">
+                            <category xml:id="doc_type">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>Which kinds of documents are at the basis of the
+                                    project?</catDesc>
+                                <category xml:id="single_manuscript">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="single_work">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collection_of_texts">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collected_works">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="papers">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="archival_holding">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="charters">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="letters">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="diary">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                            </category>
+                            <category xml:id="doc_time">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>What era(s) do the documents belong to?</catDesc>
+                                <category xml:id="classics">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="medieval">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="early_modern">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="modern">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                        <category xml:id="subject">
+                            <catDesc>
+                                <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                            </catDesc>
+                            <catDesc>Which perspective(s) do the editors take towards the edited
+                                material? How can the edition be classified in general
+                                terms?</catDesc>
+                            <category xml:id="history">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philology_literary_studies">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philosophy_theology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="history_of_science">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="musicology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="art_history">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="presentation">
+                        <category xml:id="spin_offs">
+                            <catDesc>
+                                <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer any spin-offs?</catDesc>
+                            <category xml:id="app">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="mobile">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PDF">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>Print (selection)</desc>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="browse_by">
+                            <catDesc>
+                                <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                            </catDesc>
+                            <catDesc>By which categories does the project offer to browse the
+                                contents?</catDesc>
+                            <category xml:id="authors">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="works">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="versions">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="structure">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="pages">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_documents">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="type_of_material">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_images">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="dates">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="persons">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="places">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="search">
+                        <category xml:id="simple">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a simple search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="advanced">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an advanced search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="wildcard">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search support the use of wildcards?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="index">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer an index of the searched field?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="suggest">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer autocompletion or suggest
+                                functionalities?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="helptext">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts for the search?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="aim">
+                        <category xml:id="audience">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>Who is the intended audience of the project?</catDesc>
+                            <category xml:id="scholars">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="interested_public">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="typology">
+                            <catDesc>
+                                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                            </catDesc>
+                            <catDesc>Which type fits best for the reviewed project?</catDesc>
+                            <category xml:id="facsimile_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="archive_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentary_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="genetic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="work_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="text_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="enriched_edition">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="database_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="digital_library">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="typology_collection_of_texts">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="method">
+                        <catDesc rend="label">Method</catDesc>
+                        <category xml:id="critical_editing">
+                            <catDesc>
+                                <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                            </catDesc>
+                            <catDesc>In how far is the text critically edited?</catDesc>
+                            <category xml:id="transmission_examined">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="palaeographic_annotations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="normalization">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="variants">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="emendation">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentary_notes">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="standards">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <category xml:id="XML">
+                                <catDesc>Is the data encoded in XML?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="standardized_data_model">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <catDesc>Is the project employing a standardized data model (e.g.
+                                    TEI)?</catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="text_type">
+                            <catDesc>
+                                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                            </catDesc>
+                            <catDesc>Which kinds or forms of text are presented?</catDesc>
+                            <category xml:id="facsimiles">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_transcription">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="edited_text">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="translations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentaries">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="semantic_data">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="technical_accessability">
+                        <category xml:id="persistent_identification">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Are there persistent identifiers and an addressing system for
+                                the edition and/or parts/objects of it and which mechanism is used
+                                to that end?</catDesc>
+                            <category xml:id="DOI">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="ARK">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="URN">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PURL.ORG">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category xml:id="persistent_URLs">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="interfaces">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which
+                                allow the reuse of the data of the project in other
+                                contexts?</catDesc>
+                            <category xml:id="OAI-PMH">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="REST">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="general_API">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="open_access">
+                            <catDesc>Is the edition Open Access?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="basic_data_accessible">
+                            <catDesc>
+                                <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                            </catDesc>
+                            <catDesc>Is the basic data (e.g. the XML) of the project accessible for
+                                each part of the edition (e.g. for a page)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="download">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can the entire raw data of the project be downloaded (as a
+                                whole)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="reuse">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can you use the data with other tools useful for this kind of
+                                content?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="rights">
+                            <category xml:id="declared">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Under what license are the contents released?</catDesc>
+                                <category xml:id="CC0">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="PDM">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                                <category xml:id="no_license">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="multiple_licenses">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="de"/>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="en">
+                    <term>19th century</term>
+                    <term>correspondence</term>
+                    <term>digital edition</term>
+                    <term>history</term>
+                    <term>letters</term>
+                    <term>Switzerland</term>
+                    <term>TEI</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p>Based on letters from politician and industrialist Alfred Escher (1819–1882), an
+                    important protagonist of Modern Swiss history, and his correspondents, the
+                    Alfred Escher-Briefedition offers central insight into the economic and
+                    political history of Switzerland during the 19th century. At the same time, it
+                    reflects the personal development of Alfred Escher himself. Most of the letters,
+                    which he sent or which were addressed to him, are being published for the first
+                    time in this scholarly edition. Escher’s correspondence is explored via
+                    editorial comments about specific subjects, as well as an index of persons and
+                    places. Extensive commentaries facilitate the placement of a respective source
+                    text in its broader historical context. Whereas only a selection of the letters
+                    written by and sent to Escher was presented within a chronological thematic
+                    arrangement in the six volumes of the 2008–2015 print edition, it is worth
+                    mentioning that the continuously expanded online version, published since July
+                    1st 2015, subsequently closes the gap between the two converging parts of the
+                    entire collection. The online edition also provides further accessibility and an
+                    array of interactive possibilities that go beyond the potential of the print
+                    edition. In this article, aspects of the ‘digital paradigm’ of the Alfred
+                    Escher-Briefedition are reflected upon and explained.</p>
+            </div>
+        </front>
+        <body>
+            <div xml:id="div1">
+                <head>Einführung</head>
+                <p xml:id="p1">Auf Basis von Briefen des Politikers und Unternehmers Alfred Escher
+                    (1819–1882, <ref target="http://d-nb.info/gnd/118830295"
+                        >http://d-nb.info/gnd/118830295</ref>), einem herausragenden Akteur der
+                    jüngeren Schweizer Geschichte, und seiner Korrespondenzpartner, bietet die
+                        <emph>Alfred Escher-Briefedition</emph> zentrale Einblicke sowohl in die
+                    wirtschaftliche als auch in die politische Geschichte der Schweiz im Verlauf des
+                    19. Jahrhunderts. Zugleich reflektiert sie die persönliche Entwicklung von
+                    Alfred Escher selbst. Die Mehrheit der von ihm verschickten oder an ihn
+                    adressierten Briefe wird in dieser Edition zum ersten Mal publiziert und über
+                    Sachkommentare und Register zu Personen und Orten erschlossen. Umfangreiche
+                    Überblickskommentare erleichtern die Einordnung in den breiteren historischen
+                    Kontext. Während in den sechs Bänden der 2008–2015 erschienen Druckausgabe<note
+                        xml:id="ftn1">Jung, Joseph (Hrsg.), Alfred Escher: Briefe: ein Editions- und
+                        Forschungsprojekt der Alfred-Escher-Stiftung. Bd. 1–6, Zürich: Verl. Neue
+                        Zürcher Zeitung 2008–2015 (NZZ Libro). Bibliographische Angaben zu den
+                        einzelnen Druckbänden finden sich im Literaturverzeichnis.</note> der
+                    Edition jeweils nur eine Auswahl der Briefe von und an Escher in
+                    chronologisch-thematischer Anordnung vorgestellt wird, schließt die am 1. Juli
+                        2015<note xml:id="ftn2">Bereits am 21. Februar 2012 wurde ein Prototyp mit
+                        501 Briefe aus dem Zeitraum von 1831 bis 1848 online verfügbar gemacht.
+                        (vgl. <emph>Veröffentlichung</emph> unter <ref
+                            target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                            >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.
+                        Ein Blick in das Internetarchiv mit Hilfe der <emph>Wayback Machine</emph>
+                        bestätigt für den 29. Februar das Vorhandensein einer Website mit einer
+                        Auswahl an Briefen (<ref
+                            target="https://web.archive.org/web/20120229091417/https://www.briefedition.alfred-escher.ch"
+                            >https://web.archive.org/web/20120229091417/https://www.briefedition.alfred-escher.ch</ref>)
+                        Der eigentliche Launch mit allen Briefen erfolgte dann am 1. Juli 2015, was
+                        ebenfalls der Projektbeschreibung entnommen und von der <emph>Wayback
+                            Machine</emph> bestätigt werden kann.</note> offiziell veröffentlichte
+                    und seitdem kontinuierlich erweiterte und verbesserte Onlinefassung<note
+                        xml:id="ftn3">Jung, Joseph (Hrsg.), Digitale Briefedition Alfred Escher,
+                        Launch Juli 2015 (laufend aktualisiert), Zürich: Alfred Escher-Stiftung.
+                            <ref
+                            target="https://web.archive.org/web/20180522105724/https://www.briefedition.alfred-escher.ch/"
+                            >https://web.archive.org/web/20180522105724/https://www.briefedition.alfred-escher.ch/</ref>.
+                        Die Zitation folgt dem Vorschlag auf der Website, zwischen <emph>Jung</emph>
+                        und <emph>Joseph</emph> wurde jedoch ein Komma ergänzt und die URL nach den
+                        RIDE-Vorgaben in einen Snapshot des Internet-Archivs verwandelt. </note> die
+                    Lücken zum Gesamtbestand. Sie stellt außerdem weitere Zugänge und
+                    Benutzungsmöglichkeiten zur Verfügung, die über die Möglichkeiten des
+                    Druckmediums hinausgehen und im Folgenden näher betrachtet werden.</p>
+            </div>
+            <div xml:id="div2">
+                <head>Über die Rezension</head>
+                <p xml:id="p2">Diese Rezension betrachtet schwerpunktmäßig den methodischen Rahmen
+                    und die Umsetzung des digitalen Teils der Edition aus der Digital
+                    Humanities-Perspektive. Angesichts der sachlichen Tiefe und des Umfangs an
+                    Quellenmaterial, das einen wichtigen Teil der Geschichte der Schweiz im 19.
+                    Jahrhundert bezeugt, können inhaltliche Aspekte auch deshalb nur am Rande
+                    berücksichtigt werden, da der Rezensent kein Spezialist für die Geschichte der
+                    Schweiz ist. Es soll hier vielmehr allgemein in den Blick genommen werden, wie
+                    sich der online bereitgestellte Teil der Edition zu den an verschiedenen Orten
+                    formulierten allgemeinen<note xml:id="ftn4">Siehe Sahle (2016) und Hochstrasser
+                        (2014). Hochstrasser war an der Konzeption und dem Projektmanagement des
+                        digitalen Teils der Edition in seiner Funktion als Leiter des Zentralen
+                        Firmenarchivs der Credit Suisse Group beteiligt. Daher verwundert es nicht,
+                        dass die Edition die von ihm erhobenen und in sechs Themenblöcken
+                        gruppierten Kriterien (1. Über die Edition, 2. Inhalt, 3. Kritisches
+                        Material, 4. Zugang und Hypertexte, 5. User-Hilfen und Funktionen, 6.
+                        Technisches Design, vgl. Hochstrasser (2014), S. 266) fast vollständig
+                        umsetzt.</note> und speziellen<note xml:id="ftn5">Siehe Stadler (2012) und
+                        Stadler (2014).</note> Anforderungen an digitale Briefeditionen verhält. Die
+                    Rezension verwendet den „Kriterienkatalog für die Besprechung digitaler
+                        Editionen“<note xml:id="ftn6">Siehe Sahle (2014).</note> als Richtlinie und
+                    untersucht daher Gegenstand und Inhalt der Edition, Ziele und Methoden, deren
+                    Umsetzung und Präsentation sowie die zeitlichen, finanziellen und personellen
+                    Rahmenbedingungen. Wo es notwendig und sinnvoll erscheint, wird auf Unterschiede
+                    zur Druckausgabe hingewiesen.<note xml:id="ftn7">Das betrifft insbesondere die
+                        aufgrund technisch-medialer Faktoren bestehenden Unterschiede im Bereich der
+                        Präsentation/Wiedergabe und – sofern ermittelbar – im Erschließungs- und
+                        Produktionsprozess.</note>
+                </p>
+            </div>
+            <div xml:id="div3">
+                <head>Das Vorhaben im Überblick</head>
+                <p xml:id="p3">Die Alfred Escher-Briefedition kann zunächst grob als
+                    wissenschaftliche, historisch-thematische Briefwechsel-Edition charakterisiert
+                    werden, die sowohl eine gedruckte als auch eine online verfügbare Komponente hat
+                    (Hybridedition). Eine engere Charakterisierung bzw. Einordnung der Edition wird
+                    im Folgenden vorgenommen.</p>
+                <div xml:id="div3.1">
+                    <head>Zu den Druckbänden</head>
+                    <p xml:id="p4">Im gedruckten Teil wird jeweils nur eine Auswahl der
+                        Korrespondenz Eschers aus einem bestimmten Zeitraum und zu einem bestimmten
+                        Thema publiziert.<note xml:id="ftn8">Es handelt sich um insgesamt 798 Briefe
+                            (ein Telegramm inklusive): 208 von Escher, 591 an ihn gerichtet. Der
+                            Anteil an Briefen von Escher selbst liegt also bei etwa 26 %.</note> Die
+                        inhaltliche und chronologische Einteilung der Druckbände sowie die Anzahl
+                        der Briefe werden im Folgenden tabellarisch zusammengefasst. <table>
+                            <row role="label">
+                                <cell>Bd.</cell>
+                                <cell>Untertitel</cell>
+                                <cell>Zeitraum</cell>
+                                <cell>Anzahl Briefe</cell>
+                                <cell>Bemerkungen</cell>
+                            </row>
+                            <row>
+                                <cell>1,1</cell>
+                                <cell>Briefe zur schweizerischen Alpenbahnfrage</cell>
+                                <cell>1850–1882</cell>
+                                <cell>427 (115 von, 312 an Escher) mit 88 Korrespondenten</cell>
+                                <cell>Auswahl aus insgesamt 2080 Von- und An-Briefen, die sich ganz
+                                    oder in Teilen mit dem Thema Alpenbahn befassen.<note
+                                        xml:id="ftn9">Escher (2008c), S. 709f. Innerhalb der
+                                        weiteren Chronologie kommt dem Band eine Sonderrolle zu, wie
+                                        an der Spalte „Zeitraum“ der obigen Übersichtstabelle der
+                                        Druckbände ersichtlich wird.</note>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>1,2</cell>
+                                <cell>s. 1,1</cell>
+                                <cell>s. 1,1</cell>
+                                <cell>s. 1,1</cell>
+                                <cell>s. 1,1</cell>
+                            </row>
+                            <row>
+                                <cell>1,3</cell>
+                                <cell>s. 1,1</cell>
+                                <cell>s. 1,1</cell>
+                                <cell>-</cell>
+                                <cell>Keine Briefe, sondern Begleittexte, Karten, Verzeichnisse und
+                                    Register.</cell>
+                            </row>
+                            <row>
+                                <cell>2</cell>
+                                <cell>Alfred Eschers Briefe aus der Jugend und Studentenzeit</cell>
+                                <cell>1831–1843</cell>
+                                <cell>68 (19 von, 49 an Escher) mit 26 Korrespondenten</cell>
+                                <cell>Auswahl aus „Rund 200“ Von- und An-Briefen, die aus seiner
+                                    Jugend und Studentenzeit stammen.<note xml:id="ftn10">Escher
+                                        (2010), S. 7f.</note>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>3</cell>
+                                <cell>Alfred Eschers Briefwechsel. Jesuiten, Freischaren,
+                                    Sonderbund, Bundesrevision</cell>
+                                <cell>1843–1848</cell>
+                                <cell>86 (18 von, 68 an Escher) mit 43 Korrespondenten</cell>
+                                <cell>Auswahl aus „Rund 300“ Von- und An-Briefen von 01.08.1843 bis
+                                    31.10.1848. Im Titel des Bandes wird hier erstmals von
+                                    „Briefwechsel“ gesprochen.<note xml:id="ftn11">Escher (2011), S.
+                                        9.</note>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>4</cell>
+                                <cell>Alfred Eschers Briefwechsel. Aufbau des jungen Bundesstaates,
+                                    politische Flüchtlinge und Neutralität</cell>
+                                <cell>1848–1852</cell>
+                                <cell>83 (10 von, 73 an Escher) mit 40 Korrespondenten</cell>
+                                <cell>Auswahl aus „Rund 440“ Von- und An-Briefen vom 01.11.1848 bis
+                                        31.07.1852.<note xml:id="ftn12">Escher (2012), S. 7.</note>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>5</cell>
+                                <cell>Alfred Eschers Briefwechsel. Wirtschaftsliberales Zeitfenster,
+                                    Gründungen, Aussenpolitik</cell>
+                                <cell>1852–1866</cell>
+                                <cell>106 (30 von, 76 an Escher) mit 51 Korrespondenten</cell>
+                                <cell>Auswahl von „Rund 1670 Briefe[n] und 590 Telegramme[n]“ von
+                                    und an Escher aus dem Zeitraum 01.08.1852 bis 31.12.1866. In
+                                    diesem Band sind auch die einleitenden Texte nach hinten
+                                        gestellt.<note xml:id="ftn13">Escher (2013), S. 347.</note>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>6</cell>
+                                <cell>Alfred Eschers Briefwechsel. Private Eisenbahngesellschaften
+                                    in der Krise, Gotthardbahn, politische Opposition</cell>
+                                <cell>1866–1882</cell>
+                                <cell>28 Briefe und ein Telegramm (15 und das Telegramm von, 13 an
+                                    Escher) mit 16 Korrespondenten. Drei der Briefe stammen aus dem
+                                    Jahr 1864 und wurden aus thematischen Gründen hier
+                                    aufgenommen</cell>
+                                <cell>Auswahl aus „Rund 2540 Briefe[n] und 1940 Telegramme[n]“ von
+                                    und an Escher aus dem Zeitraum 01.01.1866 bis 06.12.1882.<note
+                                        xml:id="ftn14">Escher (2015), S. 266.</note>
+                                </cell>
+                            </row>
+                        </table></p>
+                </div>
+                <div xml:id="div3.2">
+                    <head>Zum digitalen Teil</head>
+                    <p xml:id="p5">Der digitale Teil ist als „Edition sämtlicher bekannter Briefe
+                        von und an Alfred Escher“<note xml:id="ftn15">Vgl.
+                                <emph>Veröffentlichung</emph> unter <ref
+                                target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                                >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.</note>
+                        angelegt. Insgesamt werden online 5018 überlieferte Briefe bereitgestellt,
+                        1196 stammen von Escher, 3822 sind an ihn gerichtet.<note xml:id="ftn16"
+                            >Insgesamt liegt der Anteil an Escher-Briefen in der Edition also bei
+                            etwa 24 %. Im Herbst 2013 gibt Jung die Anzahl der identifizierten
+                            Briefe noch mit 5360 an, vgl. Escher (2013), S. 347.</note>. Davon
+                        ausgenommen sind die ca. 2200 identifizierten Telegramme und die gesamte
+                            Geschäftskorrespondenz.<note xml:id="ftn17">Vgl.
+                                <emph>Briefbestand</emph> unter <ref
+                                target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                                >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.
+                            Die Unterscheidungskriterien zwischen privater und geschäftlicher
+                            Korrespondenz liegen in Unterschrift und Anrede, erklärt an einem
+                            Beispiel im Abschnitt <emph>Briefe und weitere Schreiben</emph> unter
+                                <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                        Nicht aufgenommen werden den Briefen beigefügte Materialien.<note
+                            xml:id="ftn18">Vgl. <emph>Briefelemente</emph> unter <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                        Escher selbst hat die an ihn gerichteten Briefe zum größten Teil aufbewahrt,
+                        unglücklicherweise gilt das nur selten für die Briefe, die er selbst
+                        versandt hat.<note xml:id="ftn19">Vgl. Escher (2008c), S. 709.</note> Daraus
+                        erklärt sich die große Differenz in der Korrespondenz.</p>
+                    <p xml:id="p6">Neben den zusätzlichen Inhalten bietet die Website weitere
+                        (visuelle) Zugänge sowie Funktionen, die dem Benutzer das Speichern und
+                        Teilen von Briefen erlauben. Die digitale Komponente bezeichnet sich selbst
+                        als „Digitale Briefedition“<note xml:id="ftn20">Der allgemeine
+                            Zitiervorschlag für die Gesamtedition sieht wie folgt aus: Jung Joseph
+                            (Hrsg.), Digitale Briefedition Alfred Escher, Launch Juli 2015 (laufend
+                            aktualisiert), Zürich: Alfred Escher-Stiftung. Bei einem
+                            Einzelbrief-Zitat wird dieser Vorschlag lediglich um die URL ergänzt. In
+                            dieser Rezension wird dem Vorschlag gefolgt, obzwar kritisch anzumerken
+                            ist, dass im Sinne der leichteren Erkennbarkeit der zitierten Ressource
+                            auch die Angabe des Brieftitels zu empfehlen wäre.</note>, während in
+                        den Titeleien der Druckbände von einem „Editions- und Forschungsprojekt“
+                        gesprochen wird. Die Emanzipation der Website vom Druckband verdeutlicht
+                        bereits ein fehlender Direktzugang zu den Briefen über die inhärente Logik
+                        des Druckbandes (Briefnummern, Seiten). Das digitale Angebot steht also für
+                        sich selbst; Druckort und Briefnummer im Band werden zwar bei den
+                        entsprechenden Briefen oberhalb des editorischen Briefkopfs zusammen mit den
+                        projektspezifischen und archivalischen Signaturen als Druckorte
+                            erwähnt,<note xml:id="ftn21">Siehe bspw. <ref
+                                target="https://web.archive.org/web/20180522111116/https://www.briefedition.alfred-escher.ch/briefe/B0356/"
+                                >https://web.archive.org/web/20180522111116/https://www.briefedition.alfred-escher.ch/briefe/B0356/</ref>.</note>
+                        stellen die digitale Edition aber nicht in ein abgeleitetes oder sonst wie
+                        abhängiges Verhältnis zur Druckedition. Dass die digitale Fassung mehr als
+                        nur die elektronische Ausgabe einer Druckedition darstellt, d. h. einem
+                        digitalen Paradigma<note xml:id="ftn22">Vgl. Sahle (2016), besonders Absatz
+                            18–24.</note> folgt und daher – unter anderem – nicht einfach ohne
+                        Funktionsverlust ausgedruckt werden kann, ist bereits nach wenigen
+                        vergleichenden Blicken zwischen Buch und Website ersichtlich.<note
+                            xml:id="ftn23">In Patrick Sahles Onlinekatalog für „Digital Scholarly
+                            Editions“ (Sahle 2008–2018) wird die Alfred Escher-Briefedition unter „…
+                            some particularly interesting editions / projects“ positiv
+                            herausgestellt und angesichts ihrer vielen Zugänge und Funktionen als
+                            „state-of-the-art in digitaler Editorik“ bezeichnet (<ref
+                                target="https://web.archive.org/web/20180522102919/http://digitale-edition.de/vlet_interesting.html"
+                                >https://web.archive.org/web/20180522102919/http://digitale-edition.de/vlet_interesting.html</ref>).
+                            Diese Einschätzung verwundert nicht, da Sahle selbst zumindest
+                            konzeptionell involviert war, wie oben im Kapitel Organisatorische
+                            Rahmenbedingung ersichtlich wird.</note> Weitere Aspekte zur Praxis und
+                        Theorie der Digitalität der Edition werden im Folgenden genannt.</p>
+                </div>
+            </div>
+            <div xml:id="div4">
+                <head>Organisatorische Rahmenbedingungen</head>
+                <p xml:id="p7">Zum zeitlichen und organisatorischen Ablauf des Projekts, dem
+                    Gegenstand und den Arbeiten an der gedruckten und digitalen Edition stellt das
+                    Vorhaben verständliche, nachvollziehbare und sofort auffindbare Informationen
+                    auf seiner Website unter <ref
+                        target="https://www.briefedition.alfred-escher.ch/uber-die-edition/"
+                        >https://www.briefedition.alfred-escher.ch/uber-die-edition/</ref>
+                    bereit.</p>
+                <p xml:id="p8">Am Anfang des Vorhabens standen die
+                    Korrespondenz-Transkriptionsarbeiten für die erste Auflage der Alfred
+                        Escher-Biographie<note xml:id="ftn24">Siehe Jung (2006).</note> des späteren
+                    Editionsprojektsleiters Joseph Jung.<note xml:id="ftn25">Vgl. Escher (2008c), S.
+                        709.</note> Der erste Druckband der Edition wurde 2008 veröffentlicht, worin
+                    auf bereits für eine biographische Publikation zu Escher gemachte Vorarbeiten
+                    zurückgegriffen werden konnte. Im selben Jahr begann die systematische
+                    Transkription sämtlicher Briefe. Bis 2015 erschienen in hoher Taktung weitere
+                    Druckbände. Die erste Vorstellung des digitalen Vorhabens erfolgte im August
+                    2010 auf einer Expertentagung in Zürich. Die daran anschließende
+                    Konzeptentwicklung wurde von Patrick Sahle vom <emph>Cologne Center for
+                        eHumanities</emph> unterstützt und im Januar 2011 auf einem Workshop an der
+                    Universität Köln Experten verschiedener Fachrichtungen zur kritischen Diskussion
+                    vorgestellt. Bereits am 21. Februar 2012 konnte eine Pilot-Edition von 501
+                    Briefen aus dem Zeitraum 1831–1848 online gestellt werden. Die Freischaltung der
+                    übrigen Briefe erfolgte dann am 1. Juli 2015.</p>
+                <p xml:id="p9">Die beeindruckend hohe Geschwindigkeit zeigt den großen Vorteil des
+                    „Single-Source-Prinzips“ bei der Herstellung von verschiedenen Ausgabeformaten
+                    oder anders formuliert: der Transmedialisierung von Editionen.<note
+                        xml:id="ftn26">Vgl. Sahle (2017), S. 241.</note> So wurden sowohl die
+                    Druck-PDFs als auch die Webansichten auf der Basis von grundlegenden XML-Dateien
+                    erstellt, für deren Erstellung und Modellierung die Firma <emph>swissedit</emph>
+                    <note xml:id="ftn27">Vgl. <ref
+                            target="https://web.archive.org/web/20180522111328/http://www.swissedit.ch/"
+                            >https://web.archive.org/web/20180522111328/http://www.swissedit.ch/</ref>.</note>
+                    verantwortlich zeichnet.<note xml:id="ftn28">Vgl. <emph>Gedruckte Edition</emph>
+                        unter <ref
+                            target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                            >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.</note>
+                </p>
+                <p xml:id="p10">Die herausragend gute personelle Ausstattung war für die schnelle
+                    Publikation höchstwahrscheinlich ebenfalls ein zentraler Faktor. So konnte das
+                    Vorhaben auf über 130 Personen zugreifen, die – teils zu verschiedenen Zeiten –
+                    aktiv oder beratend an den verschiedenen Arbeitsprozessen beteiligt waren.<note
+                        xml:id="ftn29">Mitarbeiter, Berater und Förderer werden auf der folgenden
+                        Webseite differenziert aufgelistet: <ref
+                            target="https://web.archive.org/web/20180522111715/https://www.briefedition.alfred-escher.ch/uber-die-edition/credits/"
+                            >https://web.archive.org/web/20180522111715/https://www.briefedition.alfred-escher.ch/uber-die-edition/credits/</ref>.</note>
+                    Über 33.000 Arbeitsstunden in den Bereichen Transkription, Personenrecherche und
+                    Auszeichnung wurden dabei von insgesamt 60 Studierenden verschiedener
+                    Universitäten in Sommercamps durchgeführt, 9 wissenschaftliche Mitarbeiter
+                    sicherten die Betreuung und führten Qualitätskontrollen durch.<note
+                        xml:id="ftn30">Vgl. <emph>Transkription und Briefbearbeitung</emph> unter
+                            <ref
+                            target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                            >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.</note>
+                    Finanziell gefördert wurde das Projekt der Alfred Escher-Stiftung von Banken,
+                    Kantonen, Versicherungen, Fonds und anderen Stiftungen.<note xml:id="ftn31">Vgl.
+                            <ref
+                            target="https://web.archive.org/web/20180522111715/https://www.briefedition.alfred-escher.ch/uber-die-edition/credits/"
+                            >https://web.archive.org/web/20180522111715/https://www.briefedition.alfred-escher.ch/uber-die-edition/credits/</ref>.</note>
+                </p>
+            </div>
+            <div xml:id="div5">
+                <head>Ziele und Grundsätze des Projekts</head>
+                <p xml:id="p11">Mit der Bereitstellung der Edition verfolgt die Alfred
+                    Escher-Stiftung das wissenschaftliche Ziel, der Alfred Escher-Forschung diese
+                    wichtigen Quellen zur Verfügung zu stellen und verspricht zugleich „reiche neue
+                    Erkenntnisse hinsichtlich wichtiger Ereignisse und Entwicklungen in der
+                    Schweizer Wirtschafts-, Kultur- und Parteiengeschichte“.<note xml:id="ftn32"
+                        >Vgl. <emph>Projektbeschrieb</emph> unter <ref
+                            target="https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/"
+                            >https://web.archive.org/web/20180522110202/https://www.briefedition.alfred-escher.ch/uber-die-edition/projektbeschrieb/</ref>.</note>
+                    Der Herausgeber hat außerdem an anderer Stelle die gegenwartsbezogene
+                    Interpretation und Neubelebung von Eschers „liberale[m] Pioniergeist“<note
+                        xml:id="ftn33">Joseph Jung in einem Interview, zitiert nach Hafner
+                        (2010).</note> als gesellschaftliches Ziel der Edition genannt.</p>
+                <p xml:id="p12">Insgesamt werden editorische Entscheidungen verständlich und
+                    nachvollziehbar begründet. Auf der Website des Vorhabens und in jedem Druckband
+                    finden sich genaue Angaben zu den Transkriptionsprinzipien.<note xml:id="ftn34"
+                        >Sehr umfangreich online: <emph>Transkription</emph> unter <ref
+                            target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                            >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>;
+                        in jedem Druckband ebenfalls, aber etwas knapper, siehe bspw. Escher
+                        (2008c), S. 711f. Stichprobenartig konnten keine Widersprüche ermittelt
+                        werden. Die Onlinefassung ist allerdings an vielen Stellen präziser und
+                        notwendigerweise umfangreicher, da die sich der Bestand erheblich vergrößert
+                        hat.</note> Die Erschließung der Inhalte durch Stellenkommentare, Register
+                    (Personen und Orte)<note xml:id="ftn35">Der erste Druckband enthält zusätzlich
+                        ein Register der Eisenbahngesellschaften, das offenbar nicht als
+                        eigenständiges Verzeichnis in die digitale Ausgabe aufgenommen wurde.</note>
+                    und Schlagworte sowie die historische Einordnung stehen gegenüber einer streng
+                    philologischen Textkonstitution klar im Vordergrund, was sowohl in
+                    dokumentierten editorischen Entscheidungen als auch in der
+                    Informationsarchitektur der Website deutlich wird. So heißt es zwar, dass die
+                    Briefe „grundsätzlich buchstaben- und zeichengetreu transkribiert“<note
+                        xml:id="ftn36"><emph>Grundsätzliches</emph> unter <ref
+                            target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                            >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                    werden, zahlreiche Abweichungen von einer zeichengenauen Übertragung sind aber
+                    ebenfalls dokumentiert und betreffen z. B. bestimmte Sonderzeichen,
+                    Interpunktion (die am Ende der Zeile stillschweigend ergänzt wird), Leerzeichen
+                    und Trennstriche am Zeilenende. In den Einleitungen der Druckbände wird die
+                    historisch-thematische Ausrichtung noch einmal deutlich hervorgehoben: <cit>
+                        <quote>Auf eine vollständige diplomatische Wiedergabe einschliesslich aller
+                            textgenetischen Eigenheiten (Verortung und genau Darstellung von
+                            Textzusatz, -ersatz und -umstellung) wird zugunsten einer leichteren
+                            Lesbarkeit verzichtet. Eine ausdifferenzierte philologische
+                            Textdarstellung wird für das vorliegende, in erster Linie in
+                            historischer Hinsicht interessierende Textkorpus als nicht angemessen
+                            erachtet.</quote>
+                        <bibl>Escher (2008c), S. 711. Diese Passage findet sich auch in den übrigen
+                            Druckbänden.</bibl>
+                    </cit>
+                </p>
+                <p xml:id="p13">
+                    <figure xml:id="img1">
+                        <graphic
+                            url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-1.png"/>
+                        <head type="legend">Diplomatischer Text und Bild.</head>
+                    </figure> Trotz dieser Einschränkung bietet die Onlineausgabe (die auf den
+                    gleichen Transkriptionsarbeiten in XML basiert) eine Präsentationsform der
+                    Briefe mit dem Titel „Diplomatischer Text und Bild“ (und umgekehrt) (<ref
+                        type="crossref" target="#img1">Abb. 1</ref>). Die Bezeichnung ist hier wohl
+                    nicht im strengen Sinne zu verstehen,<note xml:id="ftn38">Zur inflationären
+                        Verwendung von „diplomatisch“, vgl. Radecke et al. (2015), S. 280, Anm.
+                        12.</note> sondern meint im Wesentlichen, dass hier gegenüber dem edierten
+                    (Lese-)Text – der Seitenumbrüche markiert und Absätze pauschal einrückt –,
+                    zusätzlich auch Streichungen, Ergänzungen, Hervorhebungen im Original, die
+                    grundsätzliche Absatzausrichtung sowie die Zeilenumbrüche erhalten bleiben.<note
+                        xml:id="ftn39">Vgl. die Kapitel <emph>Edierter Brief </emph>und
+                            <emph>Diplomatischer Text und Bild </emph>unter <ref
+                            target="https://web.archive.org/web/20181102135407/https://www.briefedition.alfred-escher.ch/uber-die-edition/benutzeroberflache/"
+                            >https://web.archive.org/web/20181102135407/https://www.briefedition.alfred-escher.ch/uber-die-edition/benutzeroberflache/</ref>.
+                        Hier wird u. A. auch die standardisierte Wiedergabe typischer Briefelemente
+                        (Grußformel, Datumszeile, Unterschrift, Postskriptum …) dokumentiert.</note>
+                    Letztere wurden aber offenbar nicht nur aus dokumentarischen Gründen, die
+                    Materialität betreffend, erfasst, sondern dienen auch der Orientierung bei einer
+                    synoptischen Darstellung von Text und Handschriftendigitalisat. Mit Hilfe eines
+                    auf Farbkontrast- und Abstandserkennung basierenden automatischen
+                    Schwellenwertverfahrens wurden die zeilengenauen Transkriptionen den
+                    entsprechenden Bereichen der digitalen Faksimiles direkt zugeordnet
+                        (<emph>mapping</emph>) und anschließend manuell kontrolliert und
+                        bearbeitet.<note xml:id="ftn40">Vgl. <emph>Grafikinhalte</emph> unter <ref
+                            target="https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/"
+                            >https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/</ref>
+                        –Danke an Ute Recker-Hamm für die näheren Informationen zum technischen
+                        Hintergrund des Text-Bild-<emph>mapping</emph>-Verfahrens.</note> Auf diese
+                    Weise ist es dem Projekt möglich, transkribierte Textzeilen in Form eines
+                    grafischen Overlays, das per Mauszeigerbewegung aktiviert und per Klick fixiert
+                    werden kann, direkt auf dem digitalen Faksimile darzustellen.</p>
+                <p xml:id="p14">Auch umgekehrt können Ausschnitte des Digitalisats auf dem zeilen-
+                    und seitengenauen Text abgebildet werden. Beide Ansichten können in jeder
+                    Brief-Einzelansicht über die Auswahl „Diplomatischer Text und Bild“ bzw. „Bild
+                    und diplomatischer Text“ eingenommen werden.</p>
+            </div>
+            <div xml:id="div6">
+                <head>Umsetzung der Website und Präsentation der Inhalte</head>
+                <div xml:id="div6.1">
+                    <head>Zugänge</head>
+                    <p xml:id="p15">
+                        <figure xml:id="img2">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-2.png"/>
+                            <head type="legend">Startseite.</head>
+                        </figure>
+                        <figure xml:id="img3">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-3.png"/>
+                            <head type="legend">Zugang Ereignisse (Chronologie).</head>
+                        </figure> Die im <emph>flat</emph>-Design<note xml:id="ftn41">Für eine
+                            Begriffserläuterung vgl. May 2018.</note> gestaltete Startseite eröffnet
+                        vier prominent platzierte und auf den ersten Blick wahrnehmbare Zugänge zu
+                        den edierten Briefen: Ereignisse, Briefe, Personen, Orte (<ref
+                            type="crossref" target="#img2">Abb. 2</ref>). Die Ziele der Anreißer
+                        oder <emph>Teaser</emph> sind auch über die Hauptnavigation erreichbar, die
+                        sich unterhalb des im Hauptfokus des Benutzers platzierten Logos der Alfred
+                        Escher-Stiftung befindet. Überraschenderweise steht nur dort, nicht aber bei
+                        den Teasern, der Direktzugang zu einer Briefliste an erster Stelle (im Sinne
+                        der westlichen Leseerwartung von oben links nach unten rechts). Die erste
+                        Position unter den Teasern nimmt der Zugang <emph>Ereignisse</emph> ein. Er
+                        führt zu einer chronologischen Übersicht wichtiger Ereignisse (<ref
+                            type="crossref" target="#img3">Abb. 3</ref>), in Kontext gesetzt mit den
+                        Lebensjahren Alfred Eschers. Die Zeiträume von Ereignissen werden als
+                        horizontale Balken dargestellt. Etwas schlecht zu erkennen sind die
+                        vertikalen Balken auf Jahresebene, deren Höhe mit der Anzahl an Briefen im
+                        entsprechenden Jahr korrespondiert. Der Tooltip zeigt die Briefanzahl. Mit
+                        einem Klick gelangt man in eine Übersicht des aktuellen Jahres mit einer
+                        Monats-Navigation. Die Briefe werden in einer gewohnten Kalenderansicht am
+                        Tag des ermittelten Briefdatums erreichbar gemacht.</p>
+                    <p xml:id="p16">
+                        <figure xml:id="img4">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-4.png"/>
+                            <head type="legend">Zugang Briefe.</head>
+                        </figure> Der Zugang über den Startseiten-Teaser „Briefe“ bzw. den ersten
+                        Punkt des Hauptmenüs führt zu einer auf unterschiedliche Weise sortierbaren
+                        Liste mit allen Brieftiteln – verlinkt zum entsprechenden Brief (<ref
+                            type="crossref" target="#img4">Abb. 4</ref>). Im oberen Bereich befinden
+                        sich Facettierungsmöglichkeiten nach Sender, Empfänger und Datierung.
+                        Letztere kann über ein grafisches Element mit Balkenauswahl auf
+                        Jahresbereiche und mithilfe manueller Eingabefelder bis auf Tagesebene
+                        eingegrenzt werden. In der linken Spalte findet sich eine Auswahl an
+                        thematischen Schlagworten, die zur weiteren Einschränkung der Auswahlmenge
+                        genutzt werden können. Da hier alle Briefe gelistet wurden, dient die
+                        Schlagwortliste gleichsam als thematische Navigation innerhalb der
+                            Briefe.<note xml:id="ftn42">Die Schlagworte wurden manuell vergeben und
+                            eigens erstellt. Es wurde kein kontrolliertes Vokabular im Sinne einer
+                            projektübergreifenden Ontologie verwendet, vgl. <emph>Metadaten</emph>
+                            unter <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                        Im Gegensatz zu den im Folgenden noch näher erläuterten registerartigen
+                        Zugängen über Personen und Orte, ist dieser Zugang allerdings auf die
+                        eigentlichen Briefe beschränkt und berücksichtigt keine Vorkommen in
+                        Überblickskommentaren oder Biographien. Die alphabetische Schlagwort-Liste
+                        ist zudem etwas unübersichtlich, eine Gewichtung durch unterschiedliche
+                        Schriftgrößen erleichtert die Orientierung aber.</p>
+                    <p xml:id="p17">
+                        <figure xml:id="img5">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-5.png"/>
+                            <head type="legend">Zugang Orte.</head>
+                        </figure> Von der Startseite aus ist es auch möglich, sich den Inhalten über
+                        einen geographischen Zugang zu nähern. Ein Klick auf Orte führt zu einer
+                        eingebundenen, interaktiven Karte, die in Briefen, Überblickskommentaren und
+                        Biographien kodierte Orte in ihrer entsprechenden Funktion verzeichnet (<ref
+                            type="crossref" target="#img5">Abb. 5</ref>). <emph>Orte</emph> fungiert
+                        dabei als Überbegriff für (Wohn-)Orte, Territorien, Gebirge und Gewässer.
+                        Eine Legende erklärt die durch unterschiedliche Fähnchensymbole
+                        georeferenzierten Ortsnamen. Von jedem anklickbaren Fähnchen aus lassen sich
+                        zugeordnete Briefe, Personenbiographien oder Kommentare erreichen. Eine
+                        Buchstabennavigation oberhalb der Karte ermöglicht den Zugang via Ort auch
+                        über eine alphabetische Liste.</p>
+                    <p xml:id="p18">
+                        <figure xml:id="img6">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-6.png"/>
+                            <head type="legend">Zugang Personen.</head>
+                        </figure>
+                        <figure xml:id="img7">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-7.png"/>
+                            <head type="legend">Kurzbiographie.</head>
+                        </figure> Der Startseiten-Teaser „Personen“ führt direkt zu einer
+                        alphabetischen Liste (<ref type="crossref" target="#img6">Abb. 6</ref>).
+                        Hier ist es möglich, sich eine Liste der Korrespondenten oder eine Liste von
+                        Korrespondenten und erwähnten Personen anzeigen zu lassen. Nicht möglich ist
+                        eine Einschränkung auf die lediglich erwähnten Personen, was wünschenswert
+                        wäre und sich wohl leicht ergänzen ließe.</p>
+                    <p xml:id="p19">Der eigentliche Personeneintrag (<ref type="crossref"
+                            target="#img7">Abb. 7</ref>) liefert eine Kurzbiographie und listet
+                        außerdem Briefe, Überblickskommentare und Biographien, in denen die Person
+                        erwähnt wird sowie Briefe, in denen sie als Sender respektive Empfänger
+                        fungiert. Externe Links in der linken Spalte verweisen via Metagrid, einem
+                        Konkordanz-System für Normdaten, automatisch auf Angebote mit weiteren
+                        biographische Informationen zur Person.<note xml:id="ftn43">Vgl.
+                                <emph>Metagrid</emph> unter <ref
+                                target="https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/"
+                                >https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/</ref>.
+                            Eine Erklärung für eine automatische Verfahrensweise zur Verknüpfung von
+                            Datensätzen via Normdatenangaben findet sich bei Stadler (2012), S.
+                            177f.</note> Dies ist möglich, da die Personendatensätze der Edition mit
+                        einer GND-Nummer versehen wurden.<note xml:id="ftn44">Vgl.
+                                <emph>Kurzbiographien </emph>unter <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                        Allerdings finden sich nicht bei allen Personen externe Links, so fehlen
+                        diese beispielsweise bei Alfred Escher selbst.<note xml:id="ftn45">Vgl. <ref
+                                target="https://web.archive.org/web/20181102141519/https://www.briefedition.alfred-escher.ch/kontexte/personen/korrespondenten-und-erwahnte-personen/E/Escher%2520%2528vom%2520Glas%2529%2520Alfred/"
+                                >https://web.archive.org/web/20181102141519/https://www.briefedition.alfred-escher.ch/kontexte/personen/korrespondenten-und-erwahnte-personen/E/Escher%2520%2528vom%2520Glas%2529%2520Alfred/</ref>.</note>
+                        Unterhalb der externen Links werden noch zwei Facettierungsmöglichkeiten
+                        angeboten, allerdings nur für die gelisteten Briefe, in denen die Person als
+                        Sender oder Empfänger auftritt: nach den darin erwähnten Personen und nach
+                        thematischen Schlagworten.</p>
+                    <p xml:id="p20">Bei einem genaueren Blick in die Brieftexte fällt auf, dass in
+                        Entitäten wie „Neuen Glarner Zeitung“ oder „St. Gallen-Zeitung“ nicht die
+                        Zeitung als Ganzes, sondern lediglich der Ort ausgezeichnet wurde.<note
+                            xml:id="ftn46">Vgl. Jung Joseph (Hrsg.), Digitale Briefedition Alfred
+                            Escher, Launch Juli 2015 (laufend aktualisiert), Zürich: Alfred
+                            Escher-Stiftung. <ref
+                                target="https://web.archive.org/web/20181109104007/https://www.briefedition.alfred-escher.ch/briefe/B2037/"
+                                >https://web.archive.org/web/20181109104007/https://www.briefedition.alfred-escher.ch/briefe/B2037/</ref>.</note>
+                        Und das Register der Eisenbahngesellschaften aus dem ersten Band findet zwar
+                        Eingang in die Schlagworte, nach denen ein Suchergebnis facettiert werden
+                        kann. Allerdings ist es in der digitalen Fassung nicht als direkte
+                        Zugangsmöglichkeit vorgesehen. Es ist lediglich möglich, über die in den
+                        Schlagworten genannten Eisenbahngesellschaften innerhalb der Briefe zu
+                        navigieren. In Entitäten vom Typ „Eisenbahngesellschaft“ wie
+                        „Gotthardbahn-Gesellschaft“ werden Ortsbezeichnungen, die Teil des Namens
+                        sind, offenbar nicht kodiert – im Gegensatz zu der vorherigen Praxis bei den
+                            Zeitungen.<note xml:id="ftn47">Vgl. Jung Joseph (Hrsg.), Digitale
+                            Briefedition Alfred Escher, Launch Juli 2015 (laufend aktualisiert),
+                            Zürich: Alfred Escher-Stiftung. <ref
+                                target="https://web.archive.org/web/20181109111526/https://www.briefedition.alfred-escher.ch/briefe/B8136/"
+                                >https://web.archive.org/web/20181109111526/https://www.briefedition.alfred-escher.ch/briefe/B8136/</ref>
+                            und <ref
+                                target="https://web.archive.org/web/20181109111745/https://www.briefedition.alfred-escher.ch/briefe/B4593/"
+                                >https://web.archive.org/web/20181109111745/https://www.briefedition.alfred-escher.ch/briefe/B4593/</ref>.</note>
+                        Steht „Gotthardbahn“ dagegen für sich alleine, so wurde der aus dem Ort
+                        hervorgegangene Teil des Namens („Gotthard“) als Ort ausgezeichnet.<note
+                            xml:id="ftn48">Vgl. ebenda.</note> In den Editionsprinzipien heißt es
+                        dazu: „Erwähnte Orte werden bei expliziter Erwähnung indexiert. […] Bei
+                        Nennungen von Eisenbahnen werden die Ortsbezeichnungen nicht indexiert, wenn
+                        mit der Nennung eindeutig die juristische Person bezeichnet ist. Diese sind
+                        über die Beschlagwortung auffindbar.“<note xml:id="ftn49"
+                                ><emph>Auszeichnung</emph> unter <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>
+                        Insbesondere bei der Indexierung von jeder „expliziten Erwähnung“ eines
+                        Ortsnamens, unabhängig von seiner Funktion bzw. seinem Bedeutungswandel zu
+                        einem Namensbestandteil hin, besteht in Editionen grundsätzlich die Gefahr
+                        von „Verzerrungseffekten“, man denke an Adelsgeschlechter. Des Weiteren
+                        ließe sich auch argumentieren, dass in solchen Fällen eher von einer
+                        impliziten Erwähnung gesprochen werden sollte, selbst wenn der Ortsname
+                        zeichengenau oder flektiert im Namen der Entität vorkommt.</p>
+                    <p xml:id="p21">Die über das Hauptmenü erreichbare Volltextsuche bietet nach dem
+                        Absenden eines Suchbegriffs die gleichen Facettierungsmöglichkeiten wie sie
+                        beim Zugang über die Liste der Brieftitel bereitgestellt werden. Es kann
+                        hier noch zusätzlich nach Provenienz und dem Kommentierungsstatus eines
+                        Briefes gefiltert werden. Die Volltextsuche lässt sich außerdem vor dem
+                        Absenden per Checkbox auf bestimmte Bereiche beschränken oder ausdehnen:
+                        Briefe, Überblickskommentare, Kurzbiographien, Chronologie, Ortsregister und
+                        Bibliographie. Bewegt man die Maus über das Hauptsuchfeld, wird ein Tooltip
+                        eingeblendet, der mögliche Suchoptionen erklärt (logische Operatoren AND,
+                        OR, NOT, Trunkierung, Phrasensuche, Mindestlänge der Zeichenkette usw.).</p>
+                </div>
+                <div xml:id="div6.2">
+                    <head>Aufbau eines edierten Briefs</head>
+                    <p xml:id="p22">
+                        <figure xml:id="img8">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-8.png"/>
+                            <head type="legend">Brief (edierter Text).</head>
+                        </figure> Alle Einzelbriefe sind mit einer persistenten URL versehen,
+                        verwenden aber keinen institutionellen persistenten Identifikator wie URN
+                        oder DOI. Öffentlich zugängliche Permalinkleitlinien konnten allerdings
+                        keine gefunden werden, sodass hier unklar bleibt, wie die Persistenz
+                        gesichert wird, insbesondere mit Blick auf die im Zitierhinweis genannte
+                        laufende Aktualisierung.<note xml:id="ftn50">Klar ist, dass die Persistenz
+                            einer URL nur von der bereitstellenden Institution gewährleistet werden
+                            kann. Daraus lässt sich nun mit Recht folgern: „Permalinks erkennt man
+                            daran, dass der Bereitsteller ihre Permanenz durch öffentlich
+                            zugängliche Permalinkleitlinien ausdrücklich zusichert.“ (Arnold/Müller
+                            (2017)). Über die Kooperation mit Metagrid hat sich das Vorhaben aber
+                            implizit verpflichtet, zumindest die URLs seiner Entitäten stabil zu
+                            halten, da dies von allen Partnern erwartet wird, vgl.
+                                <emph>Verhaltenskodex – 4. Pflichten der Projektpartner</emph> unter
+                                <ref
+                                target="https://web.archive.org/web/20181109162448/https://www.metagrid.ch/verhaltenskodex/"
+                                >https://web.archive.org/web/20181109162448/https://www.metagrid.ch/verhaltenskodex/</ref>.</note>
+                    </p>
+                    <p xml:id="p23">Im oberen Bereich fallen zunächst zwei zusätzliche
+                        Navigationsbalken auf. Der rein textlich gestaltete erste Balken ermöglicht
+                        das Blättern zum nächsten oder vorherigen Brief im chronologisch sortierten
+                        Gesamtangebot. Darunter befindet sich eine in Zeitstrahlform visualisierte
+                        Blätterfunktion zum nächsten und vorherigen Brief in der aktuellen
+                        Korrespondenz. Am Beispiel des Briefes mit dem internen Bezeichner
+                            B0356<note xml:id="ftn51">Erreichbar unter Jung Joseph (Hrsg.), Digitale
+                            Briefedition Alfred Escher, Launch Juli 2015 (laufend aktualisiert),
+                            Zürich: Alfred Escher-Stiftung. <ref
+                                target="https://web.archive.org/web/20180522111116/https://www.briefedition.alfred-escher.ch/briefe/B0356/"
+                                >https://web.archive.org/web/20180522111116/https://www.briefedition.alfred-escher.ch/briefe/B0356/</ref>.</note>
+                        wird der Aufbau einer Brief-Einzelansicht hier zusammengefasst (<ref
+                            type="crossref" target="#img8">Abb. 8</ref>). Im Kopfbereich finden sich
+                        die folgenden Metadaten (in dieser Reihenfolge): <list rend="bulleted">
+                            <item>Die interne Signatur der Alfred Escher-Stiftung und ggfs. eine
+                                externe Archivsignatur</item>
+                            <item>Druckort(e)</item>
+                            <item>Sender, Empfänger, auf dem Brief genannter Ort, Wochentag, Tag,
+                                Monat und Jahr (erschlossene Informationen werden in eckige Klammern
+                                gefasst)</item>
+                            <item>Eine Liste der dem Brief zugeordneten thematischen
+                                Schlagwörter</item>
+                        </list></p>
+                    <p xml:id="p24">Es folgt ein Navigationsbalken, der neben dem edierten Text drei
+                        weitere Ansichten ermöglicht: Zu den bereits erwähnten und oben näher
+                        erläuterten synoptischen Darstellungen mit Overlay von diplomatischem Text
+                        und Digitalisat (sowie umgekehrt) kommt hier noch eine einfache Wiedergabe
+                        aller digitalen Faksimiles der Handschriften hinzu. Ob hierbei auch
+                        Leerseiten aufgenommen wurden, konnte nicht ermittelt werden.
+                        Stichprobenartig wurden keine gefunden. Da auch keine Folierung der Blätter
+                        oder Nummerierung im Rahmen der Edition vorgenommen wurde, wird die
+                        Referenzierbarkeit und die Orientierung des Benutzers hier etwas erschwert,
+                        Vorder- und Rückseite eines Blattes können (gerade bei fehlenden Leerseiten)
+                        nicht identifiziert werden.</p>
+                    <p xml:id="p25">Der edierte Brieftext selbst präsentiert die Anrede einheitlich
+                        auf der linken Seite, die Datumszeile mit Ort – sofern vorhanden – wird
+                        immer rechts oben wiedergeben. Die Absätze des Originals bleiben erhalten.
+                        Ist der Brief unterzeichnet, wird die Unterschrift einheitlich rechts
+                        wiedergegeben. Stichproben haben gezeigt, dass diese Regeln bisweilen auch
+                        im diplomatischen Text angewandt wurden: So müsste die Anrede in der
+                        diplomatischen Fassung von B0938<note xml:id="ftn52">Vgl. Jung Joseph
+                            (Hrsg.), Digitale Briefedition Alfred Escher, Launch Juli 2015 (laufend
+                            aktualisiert), Zürich: Alfred Escher-Stiftung. <ref
+                                target="https://web.archive.org/web/20181109141922/https://www.briefedition.alfred-escher.ch/briefe/B0938/diplomatischer-text-und-bild/"
+                                >https://web.archive.org/web/20181109141922/https://www.briefedition.alfred-escher.ch/briefe/B0938/diplomatischer-text-und-bild/</ref>.</note>
+                        eigentlich leicht eingerückt sein (wie in B0900<note xml:id="ftn53">Vgl.
+                            Jung Joseph (Hrsg.), Digitale Briefedition Alfred Escher, Launch Juli
+                            2015 (laufend aktualisiert), Zürich: Alfred Escher-Stiftung. <ref
+                                target="https://web.archive.org/web/20181109142014/https://www.briefedition.alfred-escher.ch/briefe/B0900/diplomatischer-text-und-bild/"
+                                >https://web.archive.org/web/20181109142014/https://www.briefedition.alfred-escher.ch/briefe/B0900/diplomatischer-text-und-bild/</ref>.
+                        </note>), was aber nicht der Fall ist, um nur ein Beispiel zu nennen.</p>
+                    <p xml:id="p26">Innerhalb des Brieftexts ist man mit zahlreichen Markierungen
+                        konfrontiert, von denen sich unterstrichene Personen- und Ortsnamen sowie
+                        ebenfalls durch Unterstreichung gekennzeichnete aufgelöste Abkürzungen per
+                        Klick auf eine Checkbox in der rechten Spalte ausblenden lassen. Bestehen
+                        bleiben die mit den Einzelstellenkommentaren unterhalb des Brieftextes
+                        verlinkten Endnotenziffern, die senkrechten Striche zur Markierung des
+                        Seitenumbruchs im Original und die Verweiszeichen auf Überblickskommentare
+                        und andere Briefe. Diese sprechend gestalteten <emph>Icons</emph> sind
+                        direkt mit den entsprechenden Stellen im Kommentar bzw. anderen
+                        Brief-Einzelansichten verlinkt. Weiterführend kommentiert, d. h. mit
+                        Einzelstellenkommentaren und Verweisen zu anderen Briefen sowie
+                        Überblickskommentaren versehen, scheinen aber aktuell leider nur die auch
+                        gedruckt vorliegenden Briefe zu sein, wie Stichproben ergaben. Ein Blick in
+                        die Briefliste, worin die Signatur von weiterführend kommentierten Briefen
+                        mit einem Plus-Zeichen versehen ist<note xml:id="ftn54">Vgl.
+                                <emph>Stellenkommentar</emph> unter <ref
+                                target="https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/"
+                                >https://web.archive.org/web/20180522110418/https://www.briefedition.alfred-escher.ch/uber-die-edition/editionsprinzipien/</ref>.</note>,
+                        bestätigt diese Vermutung. Eine Zählung ergab 779 Signaturen mit Pluszeichen
+                        von insgesamt 5018 online bereitgestellten Briefen, davon 798 bereits
+                        gedruckt.</p>
+                    <p xml:id="p27">Die gesamte rechte Spalte unterhalb des Navigationsbalkens ist
+                        für Metadaten reserviert. Von hier aus kann zu den Biographien der
+                        Korrespondenten gesprungen und über das verlinkte Datum in die
+                        chronologische Gesamtübersicht gewechselt werden (siehe Kapitel Zugänge –
+                            <emph>Ereignisse</emph>). Sämtliche erwähnte Orte und Personen sind hier
+                        außerdem gelistet, per Checkbox im Text durch ein zusätzliches Highlighting
+                        mit Hintergrundfarbe markierbar und mit den zugehörigen Einzeleinträgen der
+                        erschlossenen Entitäten verlinkt. Auch die innerhalb des Brieftexts durch
+                        kleine Verweiszeichen in Form von Icons verlinkten Briefe und
+                        Überblickskommentare werden hier noch einmal erreichbar gemacht. Insgesamt
+                        können die Briefe hypertextlich als sehr gut <emph>intern</emph> miteinander
+                        verbunden betrachtet werden. Dies geschieht ausgehend von der digitalen
+                        Erschließung von Person (Sender, Empfänger, erwähnt), Orten, Datierungen,
+                        Briefen (erwähnt) und Überblickskommentaren, die ebenfalls vielfach
+                        miteinander verlinkt sind. Von den Personeneinträgen aus vernetzt sich die
+                        Alfred Escher-Briefedition mit externen Angeboten.</p>
+                </div>
+                <div xml:id="div6.3">
+                    <head>Technische Umsetzung der Website</head>
+                    <p xml:id="p28">
+                        <figure xml:id="img9">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-9.png"/>
+                            <head type="legend">Schaubild des technischen Aufbaus.</head>
+                        </figure> Das Vorhaben macht auf seiner Website umfangreiche Angaben zum
+                        technischen Hintergrund.<note xml:id="ftn55">Siehe <ref
+                                target="https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/"
+                                >https://web.archive.org/web/20180522112118/https://www.briefedition.alfred-escher.ch/uber-die-edition/technische-grundlagen/</ref>.
+                            Alle folgenden Informationen zur Datenmodellierung, zur
+                            Datenbearbeitung, zur Website und zu den Schnittstellen stammen aus
+                            dieser Übersicht.</note> Die in dieser Hinsicht hervorragende
+                        Dokumentation nennt die beteiligten Technologien vom internen Herzstück, dem
+                        Speicher- und Abfrageort der XML-Forschungsdaten (native XML-Datenbank
+                        eXist) und den Bearbeitungswerkzeugen für die Editoren (XML Spy, Oxygen XML
+                        Editor), über die Realisierung der Briefpräsentation in Pythons Webframework
+                        Django und der Benutzerverwaltung in einer relationalen Datenbank (MySQL)
+                        bis hin zu den mit JavaScript realisierten Funktionen, die direkt im Browser
+                        des externen Nutzers (client) ausgeführt werden. Nähere Auskunft zur
+                        verwendeten Suchtechnologie findet sich nicht, in eXist-db ist aber Apache
+                        Lucene als Modul nativ eingebunden. Die verwendeten Technologien kommen
+                        sowohl in der allgemeinen Webentwicklung als auch in den <emph>Digital
+                            Humanities</emph> häufig zur Anwendung und können daher als nachhaltig
+                        gelten. Das Schaubild in <ref type="crossref" target="#img9">Abb. 9</ref>
+                        zeigt die technische Umsetzung auf einen Blick.<note xml:id="ftn56"
+                            >Recker-Hamm (2015), Folie 14. Danke an Ute Recker-Hamm für die
+                            Genehmigung zur Verwendung der Abbildung.</note>
+                    </p>
+                </div>
+                <div xml:id="div6.4">
+                    <head>Daten und Export</head>
+                    <p xml:id="p29">Zur Auszeichnung der einzelnen Briefe wurde ein XML-basiertes
+                        Datenmodell entwickelt, dass sich an die von der <emph>Text Encoding
+                            Initiative</emph> definierten Auszeichnungsvorschläge anlehnt, ihnen
+                        aber nicht entspricht. Ein Blick in die bereitgestellte „Spezifikation“<note
+                            xml:id="ftn57">Siehe <ref
+                                target="https://web.archive.org/web/20180522112251/https://www.briefedition.alfred-escher.ch/media/documents/Spezifikationen_der_XML-Dokumente.pdf"
+                                >https://web.archive.org/web/20180522112251/https://www.briefedition.alfred-escher.ch/media/documents/Spezifikationen_der_XML-Dokumente.pdf</ref>.</note>,
+                        eine Liste der verwendeten XML-Elemente und Attribute, lässt sowohl
+                        strukturelle als auch inhaltliche Nähe zur TEI-Vorstellung von
+                        Briefmodellierung erkennen. Eine Möglichkeit, die den Briefen
+                        zugrundeliegenden XML-Daten direkt oder bspw. über eine REST-Schnittstelle
+                        herunterzuladen und <emph>open data</emph>-lizensiert zu nutzen, stellt das
+                        Vorhaben aber leider nicht zur Verfügung. Rechteinhaber und Geldgeber hatten
+                        sich hier deutlich dagegen ausgesprochen.<note xml:id="ftn58">Vielen Dank an
+                            Ute Recker-Hamm für diese Information.</note> Eine Nachnutzung der Daten
+                        ohne Kontaktaufnahme beim Herausgeber ist daher leider nicht möglich,
+                        obgleich die Möglichkeit besteht, auf Anfrage XML-Daten zu bekommen.<note
+                            xml:id="ftn59">Der Verfasser erhielt auf Anfrage die einem bestimmten
+                            Brief zugrundeliegende XML-Datei im editionseigenen XML-Dialekt, aber
+                            keine TEI-Datei.</note> Angesichts der umfangreich dokumentierten
+                        Editionsrichtlinien und der bereitgestellten Spezifikation sollte eine
+                        Transformation in TEI oder die Anpassung an eine bestimmte Arbeitsumgebung
+                        unproblematisch sein.<note xml:id="ftn60">Zu den von Syd Baumann
+                            aufgestellten und von Peter Stadler an Briefeditionen adaptierten
+                            Kriterien für die höchste Form der Nachnutzbarkeit – Interoperabilität –
+                            vgl. Stadler (2014), S. 279f.</note> In jedem Anzeigekontext der
+                        Zugangsoption „Briefliste“ ist aber der Export der zugehörigen Kopfdaten im
+                        csv- oder xslx-Format möglich – auch für die gesamte Sammlung. Die im Rahmen
+                        der Personenrecherche erhobenen Normdateien stellt das Vorhaben ebenfalls
+                        über einen Link im dafür entwickelten BEACON-Format bereit.<note
+                            xml:id="ftn61">Zur Bereitstellung der erschlossenen Personennormdaten im
+                            BEACON-Format vgl. Stadler (2012), S. 178.</note> Für den Webservice
+                            <emph>correspSearch</emph>
+                        <note xml:id="ftn62">Der Webservice ist unter <ref
+                                target="https://web.archive.org/web/20181031155814/https://correspsearch.net/"
+                                >https://web.archive.org/web/20181031155814/https://correspsearch.net/</ref>
+                            zu erreichen. Eine Vorstellung und Einführung liefert Dumont (2016),
+                            passim.</note> wurden Briefmetadaten im CMI-Format aufbereitet, die
+                        jeder unter den Bedingungen der CC-BY 4.0 Lizenz nutzen kann.<note
+                            xml:id="ftn63">Die Daten sind hier als XML-Datei abrufbar: <ref
+                                target="https://www.briefedition.alfred-escher.ch/cmi/CMI-AES.xml"
+                                >https://www.briefedition.alfred-escher.ch/cmi/CMI-AES.xml</ref>.</note>
+                        In einer Reihe mit den im nächsten Kapitel erwähnten <emph>social
+                            media</emph>-Buttons findet sich auch ein Drucksymbol.</p>
+                </div>
+                <div xml:id="div6.5">
+                    <head>Personalisierung und Social Edition</head>
+                    <p xml:id="p30">Buttons zum Teilen von Inhalten bei Facebook und Google Plus und
+                        der „Weiterempfehlen“-Button mit E-Mail-Formular sind erste
+                        Anknüpfungspunkte für das digitale Konzept der <emph>social
+                            edition</emph>.<note xml:id="ftn64">Siehe dazu weitergehend Siemens et
+                            al. (2012).</note> Ebenso wie die Möglichkeit der digitalen Gruppierung,
+                        Speicherung und Verbreitung von individuell zusammengestellten Briefen der
+                        Edition in individuell benennbaren „Arbeitsmappen“ handelt es sich hier um
+                        deutliche Merkmale eines digitalen Paradigmas. Für eine weitere Einbindung
+                        der Fach-Community wäre es aber zumindest notwendig, auch die XML-Rohdaten
+                        zur Verfügung zu stellen. Geschähe dies bspw. in einem Github-Repository
+                        könnten Feedback-, Verbesserungs- und auch Nachnutzungsprozesse leicht
+                        organisiert werden.</p>
+                    <p xml:id="p31">
+                        <figure xml:id="img10">
+                            <graphic
+                                url="http://ride.i-d-e.de/wp-content/uploads/issue_10/escher/pictures/picture-10.png"/>
+                            <head type="legend">Benutzerkonto.</head>
+                        </figure> Um die obengenannten, sehr praktischen Funktionen nutzen zu
+                        können, ist ein Benutzerkonto erforderlich, das über eine einfache
+                        Registrierung angelegt werden kann. Ist man dort eingeloggt, wird bei der
+                        Briefvollanzeige rechts oberhalb des editorischen Briefkopfs ein Button mit
+                        dem Titel „In die Arbeitsmappe“ angezeigt. Eine Notizfunktion im unteren
+                        Bereich der Einzelbriefansicht kann für eigene Bemerkungen genutzt werden.
+                        Allerdings kann pro Brief lediglich eine Notiz gespeichert werden und der
+                        Inhalt des Textfeldes lässt sich zwar später noch ändern, aber nicht
+                        abspeichern. Dies scheint so nicht beabsichtigt zu sein, da nach einmaligem
+                        Abspeichern auch ein zusätzlicher Rahmen gezogen wurde und das Textfeld nun
+                        plötzlich die englische Überschrift „Comment*“ trägt, während man vergeblich
+                        nach einem Speichern- bzw. Aktualisieren-Button sucht.</p>
+                    <p xml:id="p32">Im Benutzerkonto wird außerdem der Verlauf der besuchten
+                        Brief-Webseiten aufgezeichnet. Die Ergebnisliste einer Suche kann hier
+                        ebenfalls gespeichert und wiederverwendet werden.</p>
+                </div>
+                <div xml:id="div6.6">
+                    <head>Rahmendesign</head>
+                    <p xml:id="p33">Das Design ist ästhetisch ansprechend und zugleich funktional
+                        gehalten und umrahmt eine nachvollziehbare Informationsinfrastruktur. Trotz
+                        des geringen Alters bietet die Website aber nur eine geringfügige
+                        Unterstützung für mobile Endgeräte. Gerade angesichts des starken digitalen
+                        Paradigmas des Angebots wäre die volle Responsivität der Edition
+                            wünschenswert.<note xml:id="ftn65">Zur Forderung nach der Unterstützung
+                            aller gängigen Gerätetypen und Browser sowie zur grundsätzlichen
+                            Umsetzung von Webstandards siehe Hochstrasser (2014), S. 272.</note>
+                    </p>
+                </div>
+            </div>
+            <div xml:id="div7">
+                <head>Fazit</head>
+                <p xml:id="p34">Da die Edition historische Dokumente in edierter Form und als
+                    digitale Faksimiles präsentiert, (text-)kritisch vorgeht und die geschichtlich
+                    bedingte Verständnislücke<note xml:id="ftn66">Vgl. Sahle (2016), Absatz
+                        13.</note> durch vielfältige Erschließung (Kommentare, Biographien,
+                    Register, chronologische Übersichten usw.) überbrückt, kann der digitalen Alfred
+                    Escher-Briefedition ein an vielen Stellen erkennbares digitales Paradigma
+                    attestiert werden. Dies ist auch insofern bemerkenswert, da das Vorhaben als
+                    Druckedition gestartet ist und die digitale Orientierung erst im laufenden
+                    Projektbetrieb entwickelt hat. Allerdings gibt es bei der Auflösung der
+                    historisch bedingten Verständnislücke mit Blick auf die Stellenkommentare noch
+                    Desiderate: Eine weiterführende Kommentierung der ausschließlich online
+                    publizierten Briefe wäre dazu zu leisten und würde auch deren Einordnung in den
+                    Gesamtkontext noch weiter verbessern.</p>
+                <p xml:id="p35">Die Einbeziehung von verschiedenen Studierendengruppen in die
+                    Transkriptionsarbeit und die damit einhergehend kollaborativ zu gestaltenden
+                    Arbeitsprozesse illustrieren auf positive Weise die pragmatische und
+                    ergebnisorientierte Einstellung des Vorhabens. Die klare Zielgruppenorientierung
+                    – den an der jüngeren Schweizer (Eisenbahn-)Geschichte im Allgemeinen oder an
+                    Alfred Eschers politisch-unternehmerischer Biographie im Besonderen
+                    interessierten Forscher oder wissenschaftlichen Laien – erklärt die in
+                    geringerem Maße als möglich geschehene Aufarbeitung der persönlichen
+                    (Korrespondenz-)Beziehungen zwischen Escher und seinen Korrespondenten, welche
+                    sich aus längeren Briefwechseln wohl noch tiefergehender hätte herausarbeiten
+                    lassen. An letzter Stelle sei noch einmal erwähnt, dass das Projekt an
+                    Interoperabilität gewänne, d. h. eine über die intendierte Nutzung hinausgehende
+                    Verwendung („Nachnutzung“) stärker unterstützen würde, wenn seine
+                    zugrundeliegenden XML-Daten über eine offene Schnittstelle und unter einer
+                        <emph>open data</emph>-Lizenz zur Verfügung stünden. Auf diese Weise ließe
+                    sich auch außerhalb der sehr gelungenen Onlinepublikation mit den annotierten
+                    Biographica weiterforschen.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl>Arnold, Eckhart; Müller, Stefan. 2017. „Wie permanent sind Permalinks?“
+                        Informationspraxis 3 (1). <ref
+                            target="https://doi.org/10.11588/ip.2016.2.33483"
+                            >https://doi.org/10.11588/ip.2016.2.33483</ref>. </bibl>
+                    <bibl>Dumont, Stefan. 2016 „correspSearch – Connecting Scholarly Editions of
+                        Letters“. Journal of the Text Encoding Initiative (10). Online since 14
+                        February 2018, connection on 31 October 2018. <ref
+                            target="https://doi.org/10.4000/jtei.1742"
+                            >https://doi.org/10.4000/jtei.1742</ref>.</bibl>
+                    <bibl>Escher, Alfred. 2008a. Briefe. Bd. 1, Teil 1. Alfred Escher zwischen
+                        Lukmanier und Gotthard. Briefe zur schweizerischen Alpenbahnfrage 1850–1882.
+                        Herausgegeben von Joseph Jung. Zürich: Verl. Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2008b. Briefe. Bd. 1, Teil 2. Alfred Escher zwischen Lukmanier und
+                        Gotthard. Briefe zur schweizerischen Alpenbahnfrage 1850–1882. Zürich: Verl.
+                        Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2008c. Briefe. Bd. 1, Teil 3. Alfred Escher zwischen Lukmanier und
+                        Gotthard. Briefe zur schweizerischen Alpenbahnfrage 1850–1882. Zürich: Verl.
+                        Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2010. Briefe. Bd. 2: Alfred Eschers Briefe aus der Jugend- und
+                        Studentenzeit 1831–1843. Herausgegeben von Joseph Jung. Zürich: Verl. Neue
+                        Zürcher Zeitung.</bibl>
+                    <bibl>———. 2011. Briefe. Bd. 3: Alfred Eschers Briefwechsel 1843–1848: Jesuiten,
+                        Freischaren, Sonderbund, Bundesrevision. Herausgegeben von Joseph Jung und
+                        Sandra Wiederkehr. Zürich: Verl. Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2012. Briefe. Bd. 4: Alfred Eschers Briefwechsel 1848–1852: Aufbau
+                        des jungen Bundesstaates, politische Flüchtlinge und Neutralität.
+                        Herausgegeben von Joseph Jung. Zürich: Verl. Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2013. Briefe. Bd. 5: Alfred Eschers Briefwechsel 1852–1866:
+                        wirtschaftsliberales Zeitfenster, Gründungen, Aussenpolitik. Herausgegeben
+                        von Joseph Jung. Zürich: Verl. Neue Zürcher Zeitung.</bibl>
+                    <bibl>———. 2015. Briefe. Bd. 6: Alfred Eschers Briefwechsel 1866–1882: private
+                        Eisenbahngesellschaften in der Krise, Gotthardbahn, politische Opposition.
+                        Herausgegeben von Joseph Jung. Zürich: Verl. Neue Zürcher Zeitung.</bibl>
+                    <bibl>Hafner, Urs. 2010. „Die Schweiz als Vision | NZZ“. Neue Zürcher Zeitung,
+                        19. September 2010. <ref
+                            target="https://web.archive.org/web/20180522102546/https://www.nzz.ch/die_schweiz_als_vision-1.7614918"
+                            >https://web.archive.org/web/20180522102546/https://www.nzz.ch/die_schweiz_als_vision-1.7614918</ref>.</bibl>
+                    <bibl>Hochstrasser, Daniel. 2014. „Anforderungen an digitale Briefeditionen“. In
+                        Fontanes Briefe ediert. Internationale wissenschaftliche Tagung des
+                        Theodor-Fontane-Archivs Potsdam, 18. bis 20. September 2013. Fontaneana 12,
+                        herausgegeben von Hanna Delf von Wolzogen und Rainer Falk. Würzburg:
+                        Königshausen &amp; Neumann, 266–277.</bibl>
+                    <bibl>Jung, Joseph. 2006. Alfred Escher. 1819–1882. Der Aufbruch zur modernen
+                        Schweiz. Bd. 4. Bde. Zürich.</bibl>
+                    <bibl>———. 2017. Alfred Escher, 1819–1882 – Aufstieg, Macht, Tragik. 6. Auflage.
+                        Zürich: NZZ Libro.</bibl>
+                    <bibl>May, Tom. 2018. The beginner's guide to flat design. Creative Blog. <ref
+                            target="https://web.archive.org/web/20190613111636/https://www.creativebloq.com/graphic-design/what-flat-design-3132112"
+                            >https://web.archive.org/web/20190613111636/https://www.creativebloq.com/graphic-design/what-flat-design-3132112</ref>.</bibl>
+                    <bibl>Radecke, Gabriele, Heike Neuroth, Martin de la Iglesia, und Mathias Göbel.
+                        2015. „Vom Nutzen digitaler Editionen. Die Genetisch-kritische
+                        Hybrid-Edition von Theodor Fontanes Notizbüchern erstellt mit der Virtuellen
+                        Forschungsumgebung TextGrid“. In Vom Nutzen der Editionen. Zur Bedeutung
+                        moderner Editorik für die Erforschung von Literatur- und Kulturgeschichte,
+                        herausgegeben von Thomas Bein. Berlin, Boston: De Gruyter, 277–296. <ref
+                            target="https://doi.org/10.1515/9783110418255-022"
+                            >https://doi.org/10.1515/9783110418255-022</ref>.</bibl>
+                    <bibl>Recker-Hamm, Ute. 2015. „Technische Aspekte der digitalen Alfred
+                        Escher-Briefedition“. Konferenzbeitrag, Weimar. <ref
+                            target="https://web.archive.org/web/20180522112416/http://itug.de/files/download/ITUG2015/Recker.pdf"
+                            >https://web.archive.org/web/20180522112416/http://itug.de/files/download/ITUG2015/Recker.pdf</ref>.</bibl>
+                    <bibl>Sahle, Patrick. 2008–2018. „A catalog of Digital Scholarly Editions. v
+                        3.0“. <ref
+                            target="https://web.archive.org/web/20181031144954/http://digitale-edition.de/"
+                            >https://web.archive.org/web/20181031144954/http://digitale-edition.de/</ref>.</bibl>
+                    <bibl>———. 2014. „Kriterien für die Besprechung digitaler Editionen, Version
+                        1.1“. Juni 2014. <ref
+                            target="https://web.archive.org/web/20180522103407/https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/"
+                            >https://web.archive.org/web/20180522103407/https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/</ref>.</bibl>
+                    <bibl>———. 2016. „2. What is a Scholarly Digital Edition?“ In Digital Scholarly
+                        Editing: Theories and Practices, herausgegeben von Matthew James Driscoll
+                        und Elena Pierazzo. Open Book Publishers. <ref
+                            target="https://doi.org/10.11647/OBP.0095.02"
+                            >https://doi.org/10.11647/OBP.0095.02</ref>.</bibl>
+                    <bibl>———. 2017 „Digitale Edition“ In Digital Humanities. Eine Einführung,
+                        herausgegebenen von Fotis Jannidis, Hubertus Kohle und Malte Rehbein.
+                        Stuttgart: J. B. Metzler, 234–249.</bibl>
+                    <bibl>Siemens, Ray; Timney, Meagan; Leitch, Cara; Koolen, Corina und Garnett,
+                        Alex. 2012. „Toward Modeling the Social Edition: An Approach to
+                        Understanding the Electronic Scholarly Edition in the Context of New and
+                        Emerging Social Media“. Literary and Linguistic Computing 27 (4): 445–61.
+                            <ref target="https://doi.org/10.1093/llc/fqs013"
+                            >https://doi.org/10.1093/llc/fqs013</ref>.</bibl>
+                    <bibl>Stadler, Peter. 2012. „Normdateien in der Edition“. Editio 26 (1):
+                        174–183. <ref target="https://doi.org/10.1515/editio-2012-0013"
+                            >https://doi.org/10.1515/editio-2012-0013</ref>.</bibl>
+                    <bibl>———. 2014. „Interoperabilität von digitalen Briefeditionen“. In Fontanes
+                        Briefe ediert. Internationale wissenschaftliche Tagung des
+                        Theodor-Fontane-Archivs Potsdam, 18. bis 20. September 2013. Fontaneana 12,
+                        herausgegeben von Hanna Delf von Wolzogen und Rainer Falk. Würzburg:
+                        Königshausen &amp; Neumann, 278–87.</bibl>
+                </listBibl>
+            </div>
+        </back>
+
+    </text>
+</TEI>

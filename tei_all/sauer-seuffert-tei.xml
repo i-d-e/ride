@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.12.3">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Briefwechsel Sauer-Seuffert. A ‘Web Platform’ for a Scholars Correspondence
+                    (on Editions, among other things)</title>
+                <author ref="https://orcid.org/0000-0003-2546-2570">
+                    <name>
+                        <forename>Stephan</forename>
+                        <surname>Kurz</surname>
+                    </name>
+                    <affiliation>
+                        <orgName>Österreichische Akademie der Wissenschaften, Institute for Habsburg
+                            and Balkan Studies</orgName>
+                        <placeName>Wien</placeName>
+                    </affiliation>
+                    <email>stephan.kurz@oeaw.ac.at</email>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+                <date when="2020-07">July 2020</date>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-12/sauer-seuffert</idno>
+                <idno type="DOI">10.18716/ride.a.12.3</idno>
+                <idno type="archive"
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue12/sauer-seuffert/sauer-seuffert.pdf</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="j">RIDE - A review journal for digital editions and resources</title>
+                <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
+                <biblScope unit="issue" n="12">Digital Scholarly Editions</biblScope>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-12</idno>
+            </seriesStmt>
+            <notesStmt>
+                <relatedItem type="reviewed_resource">
+                    <bibl>
+                        <title>Briefwechsel Sauer-Seuffert</title>
+                        <editor>Bernhard Fetz, Desiree Hebenstreit, Marcel Illetschko, Hans Harald
+                            Müller, Mirko Nottscheid</editor>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Bernhard Fetz</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Desiree Hebenstreit</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Marcel Illetschko</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Hans Harald Müller</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Mirko Nottscheid</persName>
+                        </respStmt>
+                        <date type="publication">2015</date>
+                        <idno type="URI">http://sauer-seuffert.onb.ac.at/</idno>
+                        <date type="accessed">2019-11-05</date>
+                    </bibl>
+                </relatedItem>
+                <relatedItem type="reviewing_criteria">
+                    <bibl>
+                        <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for
+                            Reviewing Scholarly Digital Editions</ref>
+                    </bibl>
+                </relatedItem>
+            </notesStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy
+                    xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+                    <category xml:id="documentation">
+                        <category xml:id="bibl_desc">
+                            <catDesc>
+                                <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                            </catDesc>
+                            <catDesc>Is it easily possible to describe the project bibliographically
+                                along the schema "responsible editors, publishing/hosting
+                                institution, year(s) of publishing"?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contributors">
+                            <catDesc>
+                                <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                            </catDesc>
+                            <catDesc>Are the contributors (editors, institutions, associates) of the
+                                project fully documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contacts">
+                            <catDesc>
+                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project list contact persons?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="selection">
+                            <category xml:id="explained">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection of materials of the project explicitly
+                                    documented?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="reasonable">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection by and large reasonable?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="data_archive">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the documentation include information about the long term
+                                sustainability of the basic data (archiving of the data)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="aims">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the aims and purposes of the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="methods">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the methods employed in the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="data_model">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <catDesc>Does the project document which data model (e.g. TEI) has been
+                                used and for what reason?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="help">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts concerning the use of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="citation">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Does the project supply citation guidelines (i.e. how to cite
+                                the project or a part of it)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="complete">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the editon regard itself as a completed project (i.e. not
+                                promise further modifications and additions)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="institutional_curation">
+                            <catDesc>
+                                <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                            </catDesc>
+                            <catDesc>Does the project provide information about institutional
+                                support for the curation and sustainability of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="contents">
+                        <category xml:id="previous_edition">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Has the material been previously edited (in print or
+                                digitally)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="materials_used">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Does the edition make use of these previous editions?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="2"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="introduction">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an introduction to the subject-matter
+                                (the author(s), the work, its history, the theme, etc.) of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="bibliography">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a bibliography?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="commentary">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a scholarly commentary (e.g. notes on
+                                unclear passages, interpretation, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contexts">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project include or link to external resources with
+                                contextual material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="images">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of digitised sources?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="image_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of an acceptable
+                                quality?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="transcriptions">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc> Is the text fully transcribed?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="text_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer texts of an acceptable quality (typos,
+                                errors, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="indices">
+                            <catDesc>
+                                <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project feature compilations indices, registers or
+                                visualisations that offer alternative ways to access the
+                                material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="documents">
+                            <category xml:id="doc_type">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>Which kinds of documents are at the basis of the
+                                    project?</catDesc>
+                                <category xml:id="single_manuscript">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="single_work">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collection_of_texts">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collected_works">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="papers">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="archival_holding">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="charters">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="letters">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="diary">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                            </category>
+                            <category xml:id="doc_time">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>What era(s) do the documents belong to?</catDesc>
+                                <category xml:id="classics">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="medieval">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="early_modern">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="modern">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                        <category xml:id="subject">
+                            <catDesc>
+                                <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                            </catDesc>
+                            <catDesc>Which perspective(s) do the editors take towards the edited
+                                material? How can the edition be classified in general
+                                terms?</catDesc>
+                            <category xml:id="history">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philology_literary_studies">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philosophy_theology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="history_of_science">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="musicology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="art_history">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>history of philology</desc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="presentation">
+                        <category xml:id="spin_offs">
+                            <catDesc>
+                                <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer any spin-offs?</catDesc>
+                            <category xml:id="app">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="mobile">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PDF">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>The project is in itself a spin-off of a promised printed
+                                        edition, although with different scope</desc>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="browse_by">
+                            <catDesc>
+                                <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                            </catDesc>
+                            <catDesc>By which categories does the project offer to browse the
+                                contents?</catDesc>
+                            <category xml:id="authors">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="works">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="versions">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="structure">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="pages">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_documents">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="type_of_material">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_images">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="dates">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="persons">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="places">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>topic lines, relevance</desc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="search">
+                        <category xml:id="simple">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a simple search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="advanced">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an advanced search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="wildcard">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search support the use of wildcards?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="index">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer an index of the searched field?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="2"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="suggest">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer autocompletion or suggest
+                                functionalities?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="helptext">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts for the search?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="aim">
+                        <category xml:id="audience">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>Who is the intended audience of the project?</catDesc>
+                            <category xml:id="scholars">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="interested_public">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="typology">
+                            <catDesc>
+                                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                            </catDesc>
+                            <catDesc>Which type fits best for the reviewed project?</catDesc>
+                            <category xml:id="facsimile_edition">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="archive_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentary_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="genetic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="work_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="text_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="enriched_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="database_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="digital_library">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="typology_collection_of_texts">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="method">
+                        <catDesc rend="label">Method</catDesc>
+                        <category xml:id="critical_editing">
+                            <catDesc>
+                                <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                            </catDesc>
+                            <catDesc>In how far is the text critically edited?</catDesc>
+                            <category xml:id="transmission_examined">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="palaeographic_annotations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="normalization">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="variants">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="emendation">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentary_notes">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>unique sources with raw transcriptions</desc>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="standards">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <category xml:id="XML">
+                                <catDesc>Is the data encoded in XML?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="standardized_data_model">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <catDesc>Is the project employing a standardized data model (e.g.
+                                    TEI)?</catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="text_type">
+                            <catDesc>
+                                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                            </catDesc>
+                            <catDesc>Which kinds or forms of text are presented?</catDesc>
+                            <category xml:id="facsimiles">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_transcription">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="edited_text">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="translations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentaries">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="semantic_data">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="technical_accessability">
+                        <category xml:id="persistent_identification">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Are there persistent identifiers and an addressing system for
+                                the edition and/or parts/objects of it and which mechanism is used
+                                to that end?</catDesc>
+                            <category xml:id="DOI">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="ARK">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="URN">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PURL.ORG">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category xml:id="persistent_URLs">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="interfaces">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which
+                                allow the reuse of the data of the project in other
+                                contexts?</catDesc>
+                            <category xml:id="OAI-PMH">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="REST">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="general_API">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>none or not documented</desc>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="open_access">
+                            <catDesc>Is the edition Open Access?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="basic_data_accessible">
+                            <catDesc>
+                                <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                            </catDesc>
+                            <catDesc>Is the basic data (e.g. the XML) of the project accessible for
+                                each part of the edition (e.g. for a page)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="download">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can the entire raw data of the project be downloaded (as a
+                                whole)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="reuse">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can you use the data with other tools useful for this kind of
+                                content?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="rights">
+                            <category xml:id="declared">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Under what license are the contents released?</catDesc>
+                                <category xml:id="CC0">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="PDM">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                                <category xml:id="no_license">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="multiple_licenses">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en"/>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="en">
+                    <term>19th century</term>
+                    <term> 20th century</term>
+                    <term>correspondence</term>
+                    <term>german philology</term>
+                    <term>history of science</term>
+                    <term>letters</term>
+                    <term>TEI</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p>The “web platform” for the correspondence between August Sauer and Bernhard
+                    Seuffert offers facsimiles and transcriptions of 436 letters, 811 post cards and
+                    one telegram exchanged by two eminent German studies scholars between 7<hi
+                        rend="sup">th</hi> of July, 1880 and 2<hi rend="sup">nd</hi> of September,
+                    1926 (two weeks before August Sauer’s death in Prague), with varying – yet
+                    annotated – reliability. Since the correspondence covers a timespan of more than
+                    46 years, it gives important insights into both the academic careers and the
+                    socio-cultural context, while covering personal matters of two academics’ lives.
+                    This review examines the digital spin-off project to a print edition as it
+                    existed until 2nd July 2020, when the site underwent a migration in a new
+                    infrastructure.</p>
+            </div>
+        </front>
+        <body>
+            <div xml:id="div1">
+                <head>Editorial note</head>
+                <p xml:id="p1">The digital edition of the Sauer-Seuffert correspondence reviewed
+                    here was migrated into the ÖNB editions infrastructure and published as version
+                    2.0 on 2nd July 2020 – i.e. immediately before the review was published. This
+                    review only targets the previous version of the Sauer-Seuffert correspondence
+                    edition, which can in part be accessed via the Internet Archive Wayback
+                        Machine.<note xml:id="ftn1">
+                        <ref target="https://web.archive.org/"
+                        >https://web.archive.org/</ref>.</note>
+                </p>
+                <p xml:id="p2">This planned but not specifically dated migration was already
+                    mentioned – prospectively and in general – in the review, which had been
+                    submitted to the editor in its first version in October 2018. Its publication –
+                    after a peer review and revision phase – was designated for the second RIDE
+                    issue concerning scholarly editions of correspondence, scheduled for autumn
+                    2019. Unfortunately, the publication process of this RIDE issue was delayed so
+                    that this overlap occurred. </p>
+                <p xml:id="p3">The ÖNB’s goal with the migration<note xml:id="ftn2">
+                        <ref
+                            target="https://edition.onb.ac.at/sauer-seuffert/o:bss.red-projectinformation/methods/sdef:TEI/get?mode=info#toc-5"
+                            >https://edition.onb.ac.at/sauer-seuffert/o:bss.red-projectinformation/methods/sdef:TEI/get?mode=info#toc-5</ref>.
+                    </note> was to preserve the digital edition as good as possible in its original
+                    state. Therefore, the transcriptions as well as the encoding were not
+                        revised<note xml:id="ftn3">The only exception to this is the correction of
+                            <code>correspDesc</code> in the <code>teiHeader</code>, this element was
+                        moved to <code>profileDesc</code> during the migration, as specified by the
+                        TEI guidelines.</note> and no major new features were added<note
+                        xml:id="ftn4">On the start page, the section “Brief des Tages” (letter of
+                        the day) as well as a reference to the print edition, published in 2020, was
+                        added.</note>. In fact, two filters in the person index and the search
+                    function had to be dropped (the latter only for the time being) due to technical
+                    reasons. </p>
+                <p xml:id="p4">The most important changes result from the use of the new
+                    infrastructure: TEI-XML data can now be downloaded correctly per letter and also
+                    in bulk via the GitLab instance of the ÖNB<note xml:id="ftn5">
+                        <ref
+                            target="https://labs.onb.ac.at/gitlab/digital-editions/sauer-seuffert-public"
+                            >https://labs.onb.ac.at/gitlab/digital-editions/sauer-seuffert-public</ref>.</note>,
+                    which greatly increases transparency and reusability. Furthermore, the digital
+                    facsimiles are now integrated via an IIIF API and all pages have been provided
+                    with a citation note. Finally, the design of the Sauer-Seuffert digital edition
+                    has been adapted to the generic infrastructure’s look and feel, which also
+                    “solved” the issue with an outdated font mentioned in the review.</p>
+                <p xml:id="p5">Essential parts of the review are still valid and can be verified
+                    through the linked archived pages. Therefore, the reviewer and the editor have
+                    decided to publish the review nevertheless, without revising it to reflect the
+                    new version. </p>
+                <p xml:id="p6">It is a characteristic of digital editions in general that they can
+                    be further developed and improved. In this respect, any review of a digital
+                    edition is created with regard to one particular version, which can be altered
+                    or replaced in the future. As a result, content, encoding, presentation, and
+                    functions - including errors and shortcomings - may or may not change. To the
+                    same extent, reviews concerning former versions of digital editions can still
+                    partially be applicable. Besides that, reviews of particular digital editions
+                    may also involve the discussion of more general methodological problems and
+                    solutions, which remain relevant also beyond project cycles.<note xml:id="ftn6"
+                        >Cf. Henny-Krahmer, Ulrike; Neuber, Frederike; Sahle, Patrick; Fischer,
+                        Franz: “Nachlese zum Panel ‘Alles ist im Fluss – Ressourcen und Rezensionen
+                        in den Digital Humanities’ #dhd2018.” In: DHd-Blog. <ref
+                            target="https://dhd-blog.org/?p=9750"
+                        >https://dhd-blog.org/?p=9750</ref>.</note>
+                </p>
+            </div>
+            <div xml:id="div2">
+                <head>Introduction</head>
+                <p xml:id="p7">The names of both August Sauer<note xml:id="ftn7">
+                        <ref target="https://d-nb.info/gnd/118605747"
+                            >https://d-nb.info/gnd/118605747</ref>, accessed: 19 June 2020.</note>
+                    and, perhaps to a slightly lesser extent, also of Bernhard Seuffert<note
+                        xml:id="ftn8">
+                        <ref target="https://d-nb.info/gnd/117470902"
+                            >https://d-nb.info/gnd/117470902</ref>, accessed: 19 June 2020.</note>,
+                    are well-known among German studies scholars in general, and in particular among
+                    those who study the history of their own discipline. Both are considered Wilhelm
+                        Scherer’s<note xml:id="ftn9">
+                        <ref target="https://d-nb.info/gnd/118607200"
+                            >https://d-nb.info/gnd/118607200</ref>, accessed: 19 June 2020.</note>
+                    prominent disciples. Sauer (1855–1926), focussing his work mostly on Austrian
+                    authors (in the contemporary sense of the Austro-Hungarian Monarchy; most
+                    prominently Grillparzer and Stifter), taught at the universities of Lemberg,
+                    Graz, and Prague, where he succeeded Jakob Minor<note xml:id="ftn10">
+                        <ref target="https://d-nb.info/gnd/117048526"
+                            >https://d-nb.info/gnd/117048526</ref>, accessed: 19 June 2020. Cf.
+                        König (2003), 1568-1572. </note> Seuffert (1853–1938) first taught at his
+                    Würzburg home university, later succeeding Sauer in Graz from 1886. His
+                    contribution to the scholarship on both Christoph Martin Wieland and Goethe is
+                    widely recognized, as is his special interest in the epistolary novel genre (in
+                    conjunction with Scherer’s Berlin successor Erich Schmidt<note xml:id="ftn11">
+                        <ref target="https://d-nb.info/gnd/118608746"
+                            >https://d-nb.info/gnd/118608746</ref>, accessed: 19 June 2020. Cf.
+                        König (2003), 1719-1720.</note> Both are part of a group of scholars that
+                    essentially ‘invented’ the <emph>Neugermanistik/Neuere Deutsche Literatur</emph>
+                    branch that adopted goals and methods of the medieval literary scholarship that
+                    had formed the main base of ‘Deutsche Philologie’.</p>
+                <p xml:id="p8">The publishing of the correspondence of Sauer and Seuffert (funded by
+                    DFG and FWF)<note xml:id="ftn12">The Austrian Science Fund (FWF) was the lead
+                        funding agency. Its project database lists the project’s runtime as
+                        01.09.2012-31.08.2016, cf. <ref
+                            target="https://pf.fwf.ac.at/de/wissenschaft-konkret/project-finder?search%5Bwhat%5D=I+730"
+                            >https://pf.fwf.ac.at/de/wissenschaft-konkret/project-finder?search%5Bwhat%5D=I+730</ref>
+                        (accessed: 19 June 2020).</note>, which is held in major parts by the
+                    Austrian National Library (Österreichisches Literaturarchiv)<note xml:id="ftn13">
+                        <ref target="https://onb.ac.at/bibliothek/sammlungen/literatur"
+                            >https://onb.ac.at/bibliothek/sammlungen/literatur</ref>, accessed: 19
+                        June 2020.</note>, the Würzburg State Archive<note xml:id="ftn14">
+                        <ref target="https://www.gda.bayern.de/wuerzburg/"
+                            >https://www.gda.bayern.de/wuerzburg/</ref>, accessed: 19 June
+                        2020.</note>, and other archives, among them the Deutsches Literaturarchiv
+                        Marbach<note xml:id="ftn15">
+                        <ref target="https://www.dla-marbach.de/">https://www.dla-marbach.de/</ref>,
+                        accessed: 19 June 2020.</note>, was the goal of the publication that its
+                    editors - Bernhard Fetz, Desiree Hebenstreit, Marcel Illetschko, Hans Harald
+                    Müller and Mirko Nottscheid.<note xml:id="ftn16">The first three of the editors
+                        are/were affiliated with the ÖNB’s Literaturarchiv, the latter two with the
+                        German department at Hamburg University.</note> intended to do in hybrid
+                    form (print and web).<note xml:id="ftn17">Illetschko and Nottscheid (2017), 265.
+                        In a previous description of the research enterprise, the editors state that
+                        they do not aim for a hybrid edition but rather two separate approaches that
+                        are entangled (“fließende Verschränkung”), cf. Nottscheid, Hebenstreit and
+                        Illetschko (2014), 198.</note> Furthermore, it is embedded in a larger
+                    research undertaking by the Hamburg based editors who published a number of
+                    related correspondences in recent years, unveiling a (postal) academic network
+                    that revolves around Wilhelm Scherer as the Berlin based central figure of the
+                    emerging “Neugermanistik” field.<note xml:id="ftn18">Scherer (2005), Müller,
+                        Richter and Payer (2013), Nottscheid (2013), Müller and Nottscheid (2016).
+                        The latter includes an introduction both into the Scherer school and the
+                        research efforts to unveil the history of its impact on late 19<hi
+                            rend="sup">th</hi> century German studies.</note> While the
+                    Sauer/Seuffert project was, within that larger framework, aimed at providing
+                    both a printed edition and a “web platform”, this review only deals with the
+                    latter. The extensive <ref
+                        target="https://web.archive.org/web/20191105132949/http:/sauer-seuffert.onb.ac.at/projektbeschreibung/publikationen"
+                        >publications section</ref> lists Müller and Nottscheid (2016) as the most
+                    recent publication. At the same time this book is as close as one can get to a
+                    printed edition of the Sauer Seuffert correspondence, as it includes select
+                    correspondence of Scherer with both Sauer and Seuffert. The printed excerpt
+                    edition of the <emph>Sauer-Seuffert</emph> correspondence is not yet available
+                    on the book market.<note xml:id="ftn19">During the editing process of this RIDE
+                        issue, the publication was transferred to another publishing house and is
+                        now available both in digital (PDF licenced under CC-BY 4.0, DOI: <ref
+                            target="https://doi.org/10.7767/9783205232780"
+                            >10.7767/9783205232780</ref>) and physical form (ISBN: 9783205232797).
+                        For this review this part of the edition project could not be
+                        considered.</note> Still, the sheer existence of a publication list related
+                    to the project points to a desirable level of reflection and methodological
+                    discussion that is not always met when an institution’s ‘digital first’ (or even
+                    an institution’s outline of what would become a digital first in hindsight) is
+                    published.</p>
+                <p xml:id="p9">
+                    <emph>Sauer-Seuffert</emph> deals with a genuine “Gelehrtenbriefwechsel” type of
+                    correspondence, depicting an exchange of letters between two important figures
+                    involved with the beginnings of the “Neugermanistik” discipline. The web portal
+                    was – judging from the <ref
+                        target="https://web.archive.org/web/20191105133047/https:/pf.fwf.ac.at/project_pdfs/pdf_abstracts/i730e.pdf"
+                        >project abstract</ref> – planned from the beginning to incorporate
+                    “electronically accessible transcriptions of the entire correspondence”,
+                    although the technical description remains vague in these early traces of the
+                    project and the relation between the printed edition and its digital by-product
+                    is not explicitly discussed.</p>
+                <p xml:id="p10">It is important to note that the web platform’s <ref
+                        target="https://web.archive.org/web/20191105133129/http:/sauer-seuffert.onb.ac.at/projektbeschreibung#Webplattform"
+                        >project description</ref> is open about its status, even when it comes to
+                    the shortcomings. Judging from the reviewer’s correspondence with project team
+                    members, there was also little time and funding allocated to the digital part of
+                    the project – which is to be taken into account when putting the outcome’s
+                    achievements into perspective while still considering as many criteria as
+                    applicable out of RIDE’s “Criteria for Reviewing Digital Editions”<note
+                        xml:id="ftn20">
+                        <ref
+                            target="https://ride.i-d-e.de/reviewers/catalogue-criteria-for-reviewing-digital-editions-and-resources/"
+                            >https://ride.i-d-e.de/reviewers/catalogue-criteria-for-reviewing-digital-editions-and-resources/</ref>,
+                        accessed: 19 June 2020.</note> catalogue. Due to the extent of the
+                    correspondence, and a self-imposed focus on the technical and infrastructural
+                    surroundings in line with said catalogue, this review cannot capture much of the
+                    edition’s content, which the distinguished reader is left to uncover on their
+                    own…</p>
+            </div>
+            <div xml:id="div3">
+                <head>The implementation</head>
+                <p xml:id="p11">The <ref
+                        target="https://web.archive.org/web/20191105133129/http:/sauer-seuffert.onb.ac.at/projektbeschreibung#Webplattform"
+                        >project description</ref> gives a straightforward introduction into what
+                    the project team intended to provide with the “web portal”: <cit>
+                        <quote>Diese „digitale Edition“ ist weder als umfassende Einzeldarstellung
+                            noch als facettenreiche Ergänzung der Druckausgabe zu verstehen. Sie
+                            bietet jedoch ansonsten meist nicht zugängliches editorisches
+                            Arbeitsmaterial. Sowohl die Reintranskripte der Korrespondenzstücke der
+                            Druckausgabe als auch die noch nicht vollständig kollationierten
+                            Arbeitstranskripte der übrigen Korrespondenzstücke werden zugänglich
+                            gemacht. Außerdem wurden Teile des Textes nach TEI-Standards codiert, um
+                            das Editionsprojekt mit den aktuellen Entwicklungen der Digital
+                            Humanities zu verbinden.<note xml:id="ftn21">Translation by the
+                                reviewer: “This ‘digital edition’ is not to be taken as a
+                                comprehensive [online] monograph or a multifarious supplement to the
+                                printed edition, yet it presents material that would otherwise not
+                                be accessible. It presents both the collated transcripts of
+                                correspondence items to from the print edition and the raw
+                                transcripts of all other items. Moreover, parts of the texts have
+                                been encoded using TEI standards in order to connect the edition
+                                project with current developments in Digital Humanities”.</note>
+                        </quote>
+                    </cit>
+                </p>
+                <p xml:id="p12">The actual ‘correspondence edition’ part of the “web portal” offers
+                    exactly what it indicates: Digital imagery (which is not explicitly mentioned in
+                    the project abstract, so it seems noteworthy as a really useful addendum that
+                    enhances the web platform) and transcriptions of the Sauer-Seuffert
+                    correspondence material plus metadata necessary to identify the material’s
+                    holding organisation.</p>
+                <div xml:id="div3.1">
+                    <head>correspDesc</head>
+                    <p xml:id="p13">Major effort went into the encoding of the correspondence’s
+                        mechanics. A search for a suitable metadata format spawned a collaboration
+                        of the <emph>Sauer-Seuffert</emph> project group with and within the TEI
+                        community via the <ref
+                            target="https://web.archive.org/web/20191105155444/https:/tei-c.org/activities/sig/correspondence/"
+                            >Correspondence Special Interest Group</ref>, resulting in the
+                            <code>correspDesc</code> effort to create a schema for encoding
+                        correspondences (cf. Stadler, Illetschko and Seifert (2016)).<note
+                            xml:id="ftn22">Cf. <code>correspDesc</code>’s <ref
+                                target="https://wiki.tei-c.org/index.php/SIG:Correspondence/task-force-correspDesc"
+                                >Wiki page</ref> and <ref
+                                target="https://github.com/TEI-Correspondence-SIG/correspDesc">Git
+                                Hub repository</ref>, accessed: 19 June 2020.</note>
+                        <code>CorrespDesc</code> has since been added to TEI P5<note xml:id="ftn23">
+                            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/"
+                                >http://www.tei-c.org/release/doc/tei-p5-doc/en/html/</ref>,
+                            accessed: 19 June 2020.</note> in version 2.8 (see the commit history of
+                        the header chapter<note xml:id="ftn24">
+                            <ref
+                                target="https://github.com/TEIC/TEI/commits/dev/P5/Source/Guidelines/en/HD-Header.xml"
+                                >https://github.com/TEIC/TEI/commits/dev/P5/Source/Guidelines/en/HD-Header.xml</ref>,
+                            accessed: 19 June 2020.</note>), although in a different place within
+                        the <code>teiHeader</code> as the <emph>Sauer-Seuffert</emph> representation
+                        of the correspondence suggests. The underlying interchange format developed
+                        on top of <code>correspDesc</code>, CMIF – Correspondence Metadata
+                        Interchange Format<note xml:id="ftn25">
+                            <ref target="https://github.com/TEI-Correspondence-SIG/CMIF"
+                                >https://github.com/TEI-Correspondence-SIG/CMIF</ref>, accessed: 19
+                            June 2020.</note>, is the data source for web services like the
+                        correspSearch website<note xml:id="ftn26">
+                            <ref target="https://correspsearch.net/"
+                                >https://correspsearch.net/</ref>, accessed: 19 June 2020.</note>.
+                        Of course, <emph>Sauer-Seuffert</emph> is also indexed and ‘linked’ to the
+                        correspSearch data set (<ref
+                            target="https://web.archive.org/save/https://correspsearch.net/search.xql?publication=ONBSASE&amp;correspondent=all"
+                            >click here for an empty example search</ref>). During writing this
+                        review, hints were placed with the editing team to update the markup to be
+                        consistent with the TEI specifications they themselves established. The
+                        metadata centred approach of the correspondence greatly facilitates
+                        discovering and finding single pieces of correspondence.</p>
+                </div>
+                <div xml:id="div3.2">
+                    <head>Transcription quality</head>
+                    <p xml:id="p14">The transcripts have been made in TEI P5 and later on included
+                        into a Drupal-based presentation layer that combines the multiple views:
+                        image, transcription (rendered text) and TEI code. All three of them are
+                        vertically segmented by the transcribed pages, which gives a good overview
+                        of one letter/postcard/telegram. The user interface is clean and useful for
+                        the purposes of reading and browsing the letters and their contents (not
+                        taking into account headings that contain “ff”, see below).</p>
+                    <p xml:id="p15">The transcripts are not perfect in all cases, which on the one
+                        hand is understandable given the demands of a project that ran for ‘only
+                        four years’ and had to build its own infrastructure as well on little
+                        funding as a side project to a project aimed at a print publication. On the
+                        other hand it is an unlucky coincidence to publish uncollated material that
+                        in itself deals with the quality of transcriptions: Sauer and Seuffert do
+                        intensively discuss their efforts for both their respective reprint series,
+                        and also for the Goethe edition they were both contributing to: <cit>
+                            <quote>Der Werther ist noch nocht [sic!] fertig</quote>
+                            <bibl>Seuffert addressing Sauer, 4. October 1898, <ref
+                                    target="https://web.archive.org/web/20191105160442/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-bernhard-seuffert-august-sauer-prag-am-4-oktober-1898-dienstag"
+                                    >https://web.archive.org/web/20191105160442/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-bernhard-seuffert-august-sauer-prag-am-4-oktober-1898-dienstag</ref>
+                            </bibl>
+                        </cit>
+                        <cit>
+                            <quote>Ich hatte keine Ahnung davon, daß der einzelne Herausgeber sich
+                                soweit [v]on den Grundsätzen entfernen dürfe, sonst hätte ich diese
+                                Fülle der Apostrophe niemals über den Götztext ausgegossen; Suphans
+                                Bedenken sind sind [sic!] sehr gegründet; aber wo ist die Grenze für
+                                die Abweichung?</quote>
+                            <bibl>Sauer addressing Seuffert, 29. March 1889, <ref
+                                    target="https://web.archive.org/web/20191105160526/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-august-sauer-bernhard-seuffert-graz-am-29-maerz-1889-freitag"
+                                    >https://web.archive.org/web/20191105160526/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-august-sauer-bernhard-seuffert-graz-am-29-maerz-1889-freitag</ref>
+                            </bibl>
+                        </cit>
+                    </p>
+                    <p xml:id="p16">The project indicates missing collation elegantly by introducing
+                        a ‘traffic lights’ system (translations by reviewer): <list rend="bulleted">
+                            <item>red for “raw transcription, text partially tagged”</item>
+                            <item>yellow for “transcription checked multiply, text partially
+                                tagged”</item>
+                            <item>green for “transcription checked multiply, text completely
+                                    tagged”<note xml:id="ftn27">The <ref
+                                        target="https://web.archive.org/web/20191105133129/http:/sauer-seuffert.onb.ac.at/projektbeschreibung#Webplattform"
+                                        >project description</ref> states that the green indicator
+                                    is unused as of November 2016.</note>
+                            </item>
+                        </list>
+                    </p>
+                    <p xml:id="p17">Yet, there is currently no public way to see the respective
+                        amounts, as the TEI code only refers to one single
+                            <emph>revisionDesc//@status="approved"</emph> element per item that does
+                        not hold this information. It is unclear where the status indicator data is
+                        stored (this is information that needs to be available in order to be able
+                        to judge the status of the individual transcription, and it is apparently
+                        not saved together with the text itself).</p>
+                    <p xml:id="p18">While it may be strategically legitimate to publish preliminary
+                        transcriptions and encourage the community to improve their quality over
+                        time, <emph>Sauer-Seuffert</emph> lacks any means to put such a
+                        collaborative approach into practice (be it as simple as a public GitHub
+                        repository). In addition, the most obvious way to communicate such
+                        transcription errors to the project team – via the contact form on the web
+                        platform – did not yield any response.</p>
+                </div>
+                <div xml:id="div3.3">
+                    <head>TEI representation and access</head>
+                    <p xml:id="p19">An obstacle to reusing the <emph>Sauer-Seuffert</emph> documents
+                        is the lack of a data dump or an API. One can think of numerous reasons why
+                        this could be useful, e.g. to obtain the edition text for further analysis –
+                        or even just to transform the correspondence into a handy .epub file to read
+                        the sources in the backwoods without an internet connection.<note
+                            xml:id="ftn28">The only viable alternative to clicking a couple of
+                            thousand times is to just <emph>curl</emph> or <emph>wget</emph> all
+                            linked HTML. But hold on: Does the licence of
+                                <emph>Sauer-Seuffert</emph> actually allow this? The bibliographic
+                            data identifying the “web platform” is evident from the start page or
+                            from the “project description” section and the imprint, respectively.
+                            The TEI transcriptions carry a <code>licence</code> tag referring to
+                            CC-BY 3.0 DE, while the whole “web platform” announces “(c) Copyright
+                            2015 Österreichische Nationalbibliothek”. From the copyright notice,
+                            also the date for the bibliographical reference was assumed. Apart from
+                            that the year 2015 is only mentioned in the TEI-XML
+                                (<emph>//revisionDesc/change</emph>) source files and not
+                            explicitly. in its footer. This might be interpreted as the source data
+                            being reusable while the presentation software part remaining under the
+                            host (and hosting) institution’s curatele.</note> The sources are not
+                        always validating, e.g. some letters’ TEI code is not well-formed (e.g. <ref
+                            target="https://web.archive.org/web/20191105161641/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-august-sauer-bernhard-seuffert-graz-am-25-januar-1894-donnerstag"
+                            >1894-01-25</ref> or <ref
+                            target="https://web.archive.org/web/20191105161710/http:/sauer-seuffert.onb.ac.at/briefwechsel/brief-von-august-sauer-bernhard-seuffert-graz-am-11-november-1901-montag"
+                            >1901-11-11</ref>, among a few others that took about 2 hours to
+                        manually clean up). The TEI data presented is useful yet basic, as it only
+                        includes <code>pb</code>, <code>lb</code>, <code>supplied</code>,
+                            <code>unclear</code>, <code>hi</code>, <code>damage</code> and two
+                            <code>span</code>s within <code>p</code>, <code>div</code> and
+                            <code>body</code> elements. Moreover, the TEI transcriptions are hidden
+                        in the HTML code served by Drupal, and escaped within a non-displayed
+                            <code>div</code> element, which makes it hard to programmatically take a
+                        look at the project’s underlying markup. An example for the first line of a
+                        ‘TEI file’: <figure xml:id="code1">
+                            <eg>&lt;span style="color: #009900;"&gt;&lt;span style="color: #000000;
+                                font-weight: bold;"&gt;&amp;lt;TEI&lt;/span&gt; &lt;span
+                                style="color: #000066;"&gt;xmlns&lt;/span&gt;=&lt;span style="color:
+                                #ff0000;"&gt;&amp;quot;http://www.tei-c.org/ns/1.0&amp;quot;&lt;/span&gt;&lt;span
+                                style="color: #000000; font-weight:
+                                bold;"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;</eg>
+                            <head type="legend"/>
+                        </figure>
+                    </p>
+                    <p xml:id="p20">A couple of useful common TEI elements for manuscript
+                        transcription remain unused, among them <code>choice</code>,
+                            <code>subst</code>, <code>add</code>, <code>del</code>,
+                            <code>note</code> (which is only used as a container for
+                            <code>supplied</code> information that there is no facsimile available),
+                        and all the important content of <code>msDesc</code> elements: Any textual
+                        critique (apart from regular punch holes encoded by
+                            <code>supplied</code>/<code>damage</code>) or scientific comment (which
+                        is due to be published in the print edition) that might have been part of
+                        the edition project is not part of the online presentation layer of
+                            <emph>Sauer-Seuffert</emph>. Both textual critique and comments would be
+                        core functions of any scholarly edition (by the standards that editors like
+                        August Sauer and Bernhard Seuffert themselves established in a ‘positivist’
+                            phase<note xml:id="ftn29">For positivism in German studies, see e.g.
+                            Rosenberg 2007, 132. The epoch’s methods even extend into statistical
+                            analysis of commata distribution, which Seuffert suggested as a means of
+                            textual critique and stylometry (<ref
+                                target="https://web.archive.org/web/20191105161829/http:/sauer-seuffert.onb.ac.at/briefwechsel?query=statistik"
+                                >query for “statistik”</ref>). The Digital Humanities’ backlash of
+                            positivist methods is not highlighted in the “web platform” for a
+                            purpose, as this would have led to a distasteful historic echo
+                            chamber.</note>). To be fair, the rudimentary markup is clearly
+                        mentioned in the <ref
+                            target="https://web.archive.org/web/20191105133129/http:/sauer-seuffert.onb.ac.at/projektbeschreibung#Webplattform"
+                            >project description</ref>.</p>
+                </div>
+                <div xml:id="div3.4">
+                    <head>In search for a search function</head>
+                    <p xml:id="p21">
+                        <emph>Sauer-Seuffert</emph> search functions are not exactly
+                        self-explanatory, nor are they documented or offer advanced features. The
+                        search results page offers a number of useful facet filters (by type of
+                        document, by year, by places of sender/receiver at the time, and by the
+                        dates of birth and death of people in the person index), but being
+                        undocumented it is hard to grasp what exactly the filters do (try searching
+                        for a random stopword!).</p>
+                    <p xml:id="p22">In its current state, the search function is still a functioning
+                        alternative to searching through some search engine’s index limiting by
+                            <emph>site:sauer-seuffert.onb.ac.at</emph> for purposes related to the
+                        content of the “web platform”, although it is not possible to query it
+                        automatically (e.g. via an API). It might suffice for a full text search,
+                        but at the same time lacks basic functionality like wildcard search.</p>
+                </div>
+                <div xml:id="div3.5">
+                    <head>Other tools of navigation (person index, subject index, timeline)</head>
+                    <p xml:id="p23">The <ref
+                            target="https://web.archive.org/web/20191105160820/http:/sauer-seuffert.onb.ac.at/personen"
+                            >person index</ref> can be browsed by surname (in alphabetical
+                            order),<note xml:id="ftn30">The German umlauts äöü are sorted after aou,
+                            following the so-called “Österreichische Sortierung” (<ref
+                                target="https://de.wikipedia.org/w/index.php?title=Alphabetische_Sortierung&amp;oldid=193527541"
+                                >Austrian Sorting</ref> Order), yet ß only appears after z (see e.g.
+                            “Reuß”).</note> but also in ascending and descending order of birth and
+                        death dates of all indexed people. From there, it seems that authority file
+                        records mostly from the <ref
+                            target="https://web.archive.org/web/20190517085633/https:/www.dnb.de/DE/Standardisierung/GND/gnd_node.html"
+                            >GND</ref> have been used to construct brief biographies, with added
+                        links to ADB/NDB, ÖBL and Wikipedia, using the GND id as a common identifier
+                        seemingly in cases where a GND entry existed at the time of creating the
+                        person index.<note xml:id="ftn31">The Austrian National Library as one of
+                            the project partners – being a key node in maintaining the authority
+                            file – would have been in a good position to add the research findings
+                            from the <emph>Sauer-Seuffert</emph> project to the GND and accurately
+                            identify the persons involved that are not yet mentioned in the GND:
+                            Just a few obscure examples: <ref
+                                target="https://web.archive.org/web/20191105161054/http:/sauer-seuffert.onb.ac.at/personen/auersperg-theodor-ignaz-graf-von"
+                                >Theodor Ignaz Graf von Auersperg</ref>, <ref
+                                target="https://web.archive.org/web/20191105161148/http:/sauer-seuffert.onb.ac.at/personen/karajan-auguste-von"
+                                >Auguste von Karajan</ref>, <ref
+                                target="https://web.archive.org/web/20191105161223/http:/sauer-seuffert.onb.ac.at/personen/verlag-des-kaiserlich-koeniglichen-obergymnasiums-laibach"
+                                >Verlag des kaiserlich-königlichen Obergymnasiums Laibach</ref> and
+                                <ref
+                                target="https://web.archive.org/web/20191105161249/http:/sauer-seuffert.onb.ac.at/personen/vogl-franz"
+                                >Franz Vogl</ref>.</note>
+                    </p>
+                    <p xml:id="p24">Currently, another search operation is necessary to find textual
+                        mentions of a person mentioned in the index, as there are no backlinks
+                        included in situ. This significantly increases the reader’s effort,
+                        especially in cases where names are abbreviated or indirectly referenced
+                        (“her daughter”) and will not be found (considering that wildcard search is
+                        not possible).</p>
+                    <p xml:id="p25">A <ref
+                            target="https://web.archive.org/web/20191105161556/https://sauer-seuffert.onb.ac.at/themen"
+                            >subject index</ref> is definitely not an easy undertaking in general
+                        (depending on various variables that are hard to reconcile). Following two
+                        bright minds through their correspondence over almost a lifetime hinders
+                        building a useful subject index quite a bit. <emph>Sauer-Seuffert</emph>
+                        tackles this challenge by offering what they call “Themenlinien” (thematic
+                        lines). That notion for subject categories is likely not by chance very
+                        vague – as its implementation is highly subjective and seems to depend on
+                        what was interesting to the editors (especially with respect to the Hamburg
+                        team’s <emph>history of Germanistik</emph> approach). The list of subjects –
+                        in its entirety – consists of: <list rend="bulleted">
+                            <item>Vierteljahrschrift für Litteraturgeschichte (15)</item>
+                            <item>Freundschaft Sauer - Seuffert (19)</item>
+                            <item>Wiener Neudrucke (10)</item>
+                            <item>Euphorion (27)</item>
+                            <item>Grillparzerforschung (22)</item>
+                            <item>Akademischer Werdegang (19)</item>
+                            <item>Beziehung zu Wilhelm Scherer (9)</item>
+                            <item>Deutsche Arbeit (4)</item>
+                            <item>Projekte zur Österreichischen Literatur (15)</item>
+                            <item>Stifterausgabe (7)</item>
+                            <item>Deutsche Litteraturdenkmale (12)</item>
+                            <item>Weimarer Goetheausgabe (8)</item>
+                            <item>Wielandforschung (19)</item>
+                        </list> The numbers in parentheses refer to a count of correspondence items
+                        that apply to the subjects <ref
+                            target="https://web.archive.org/web/20191105161433/http:/sauer-seuffert.onb.ac.at/briefwechsel"
+                            >in the whole transcribed corpus</ref> – and point to a slight
+                        disproportion: only 177 instances of 13 subjects (non-exclusive) would be
+                        mentioned in 1248 correspondence items?</p>
+                    <p xml:id="p26">A very brief check revealed that e.g. “Weimarer Goetheausgabe”
+                        does not refer to either the <emph>Werther</emph><note xml:id="ftn32">
+                            <ref target="http://www.archive.org/details/werkegoeth19goetuoft"
+                                >http://www.archive.org/details/werkegoeth19goetuoft</ref>,
+                            accessed: 19 June 2020.</note> volume of the “Weimarer Ausgabe” edited
+                        by Seuffert or to the <emph>Götz</emph><note xml:id="ftn33">
+                            <ref target="http://www.archive.org/details/werkegoeth08goetuoft"
+                                >http://www.archive.org/details/werkegoeth08goetuoft</ref>,
+                            accessed: 19 June 2020.</note> volume edited by Sauer. In the current
+                        state, this subject index does not help much and for sure does not replace a
+                        detailed reading of the <emph>Sauer-Seuffert</emph> correspondence or a
+                        full-text search.<note xml:id="ftn34">While others try to get their heads
+                            around topic modelling or build extensive thesauri to guess subjects
+                            from bags of words: (Those specific) scholars (and their technical
+                            overlords) do favour ‘close reading’ approaches.</note>
+                    </p>
+                    <p xml:id="p27">Following the hint in the <ref
+                            target="https://web.archive.org/web/20191105161513/https:/pf.fwf.ac.at/project_pdfs/pdf_final_reports/i730d.pdf"
+                            >project’s final report</ref>, one of the project’s major developments
+                        is the <ref
+                            target="https://web.archive.org/web/20191105161556/http:/sauer-seuffert.onb.ac.at/themen"
+                            >timeline</ref> prominently featured on the start page. This might be
+                        one of the major contributions for outreach and popularizing the importance
+                        of the whole endeavour, which in turn more than satisfies the notion of a
+                        “web platform”. The timeline’s initial view draws from biographical data
+                        without direct connection to the correspondence’s texts, but offers access
+                        to the topic fragments mentioned above and respective quotations on clicking
+                        into the topic bar. This definitely is a nice feature (although user
+                        experience-wise, it is easy to miss) as it relates the correspondents’
+                        biographies with some of their letters.</p>
+                </div>
+                <div xml:id="div3.6">
+                    <head>Contact form (and font issues)</head>
+                    <p xml:id="p28">The web platform does feature a contact form<note xml:id="ftn35">
+                            <ref target="http://sauer-seuffert.onb.ac.at/content/kontakt"
+                                >http://sauer-seuffert.onb.ac.at/content/kontakt</ref>, accessed: 19
+                            June 2020.</note>, but upon trying to contact the editors this way there
+                        was no reaction (even after talking to two involved people). This might have
+                        to do with the web platform being a ‘finished’ project – which in fact is
+                        not communicated on the website but might be inferred from the project
+                        runtime dates –, and nobody specific is to blame for the fact, but still it
+                        leaves a stale impression of an orphaned website. On the other hand the fact
+                        may be seen as a reminder for similar projects – and, above all,
+                        institutions planning to host DH projects! – to think ahead and plan
+                        responsibilities for the time after the funded project phase. There is a
+                        definite need not only to keep a service up and running, but also to
+                        minimize both technical and editorial errors.</p>
+                    <p xml:id="p29">A design decision lead the <emph>Sauer-Seuffert</emph> team to
+                        use a special font. They selected <emph>Born</emph> by <ref
+                            target="https://web.archive.org/web/20190727235847/https:/carlosdetoro.com/"
+                            >Carlos de Toro</ref>. The reason for the reviewer to contact the type
+                        designer was to ask about the strange-looking ﬀ ligature in his font that
+                        resembles a double long-s (ſſ) ligature. Of course, this small error gets
+                        seen if it is put in the header of a web portal like the
+                            <emph>Sauer-Seuffert</emph> correspondence. A <ref
+                            target="https://web.archive.org/web/20180820111348/http://sauer-seuffert.onb.ac.at/"
+                            >snapshot of the landing page is available here</ref>. Carlos de Toro
+                        had already spotted the ligature error in <emph>Born</emph> years ago, but
+                        did not get around to fixing it in the public version(s) of the font.<note
+                            xml:id="ftn36">
+                            <emph>Born</emph> was de Toro’s first font; since then, he has graduated
+                            from the type class at <ref
+                                target="https://web.archive.org/web/20191105161321/https:/www.kabk.nl/en/programmes/master/type-and-media"
+                                >KABK</ref> in The Hague. A font file containing a corrected ff
+                            ligature is available on request.</note> While the font has been pulled
+                        from distribution by its creator since, copies still float around on various
+                        (mostly illicit) websites. Some of these violate the font licence that
+                        clearly states “You can’t: -Redistribute this typography by other way or
+                        different websites (except if you have the author’s permission)”. The
+                        project team repeated this mistake by hosting its own copy of
+                            <emph>Born</emph> on their web server. Yet, upon request by the reviewer
+                        the font’s creator acknowledged the project’s use of his typeface and
+                        granted permission in retrospect.</p>
+                </div>
+            </div>
+            <div xml:id="div4">
+                <head>Is it a Digital Scholarly Edition?</head>
+                <p xml:id="p30">RIDE’s Criteria for Reviewing Scholarly Digital Editions<note
+                        xml:id="ftn37">
+                        <ref
+                            target="https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/"
+                            >https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/</ref>,
+                        accessed: 19 June 2020.</note> adopt a clear framework for answering that
+                    simple question. They list three “necessary conditions”: <list rend="bulleted">
+                        <item>a justification of the editorial method adopted and a clear
+                            description of the rules that guided the edition,</item>
+                        <item>compliance with scholarly requirements towards content and quality,
+                            which includes that the self-stated rules are followed,</item>
+                        <item>and an editorial concept that is not restricted to the technological
+                            limitations of print technology but that implements a “digital
+                            paradigm”</item>
+                    </list>
+                </p>
+                <p xml:id="p31">Applying this to the web platform yields that: <list rend="bulleted">
+                        <item>
+                            <emph>Sauer-Seuffert</emph> does indeed justify their methods and
+                            editorial vision (in the <ref
+                                target="https://web.archive.org/web/20191105161753/http:/sauer-seuffert.onb.ac.at/projektbeschreibung/projektbeschreibung/zur-edition-des-briefwechsels"
+                                >“Zur Edition des Briefwechsels” section on the edition</ref>), but
+                            they fall behind it in the HTML representation of what might once have
+                            been TEI source files.</item>
+                        <item>The rules from the quoted section are mostly followed, TEI standards
+                            only partially. For requirements coming from German studies and/or
+                            scholarly editing, the web platform does delegate all questions to the
+                            printed edition.</item>
+                        <item>The third condition is the most questionable for
+                                <emph>Sauer-Seuffert</emph>, as their editorial concept was firstly
+                            informed by print technology (the other pillar of the project, which has
+                            not yet ripened to fruition), and secondly by technological limitations
+                            of a “digital paradigm” not quite in alignment with the digital editions
+                            that are sprawling elsewhere. Putting commented-out and escaped XML
+                            fragments in HTML served by Drupal is in fact counter-intuitive. Most
+                            other DSE use native XML databases (the ‘easy way’). It would of course
+                            have been possible to create a TEI-first workflow with Drupal allowing
+                            for similar functionalities compared to an XML database, but
+                                <emph>Sauer-Seuffert</emph> went the other way and integrated TEI
+                            data as a side effect. Putting out scans and raw transcriptions without
+                            either an API for others to build on the material or at least some kind
+                            of working feedback mechanism (e.g. crowdsourcing raw transcripts<note
+                                xml:id="ftn38">
+                                <ref target="http://letters1916.maynoothuniversity.ie/"
+                                    >http://letters1916.maynoothuniversity.ie/</ref>, accessed: 19
+                                June 2020.</note>) would not answer to the specific demands of the
+                                <emph>particular</emph> “digital paradigm” that the Criteria refer
+                            to. In contrast, the <emph>Sauer-Seuffert</emph> timeline does indeed
+                            instantiate a “digital paradigm”, even if it only does so for 177 source
+                            items.</item>
+                    </list>
+                </p>
+            </div>
+            <div xml:id="div5">
+                <head>Good news on ÖNB infrastructure for digital scholarly editions</head>
+                <p xml:id="p32">The Austrian National Library has already launched their next
+                    Digital Edition, the Andreas Okopenko Diary Edition<note xml:id="ftn39">
+                        <ref
+                            target="https://edition.onb.ac.at/okopenko/context:okopenko/methods/sdef:Context/get"
+                            >https://edition.onb.ac.at/okopenko/context:okopenko/methods/sdef:Context/get</ref>,
+                        accessed: 19 June 2020.</note> (project descriptions: univie<note
+                        xml:id="ftn40">
+                        <ref
+                            target="https://www.univie.ac.at/germanistik/projekt/andreas-okopenko-tagebuecher-nachlass/"
+                            >https://www.univie.ac.at/germanistik/projekt/andreas-okopenko-tagebuecher-nachlass/</ref>,
+                        accessed: 19 June 2020.</note> | ONB<note xml:id="ftn41">
+                        <ref
+                            target="https://www.onb.ac.at/bibliothek/sammlungen/literatur/forschung/projekte/andreas-okopenko-tagebuecher-aus-dem-nachlass-hybridedition/"
+                            >https://www.onb.ac.at/bibliothek/sammlungen/literatur/forschung/projekte/andreas-okopenko-tagebuecher-aus-dem-nachlass-hybridedition/</ref>,
+                        accessed: 19 June 2020.</note>, funded by the FWF<note xml:id="ftn42">
+                        <ref
+                            target="https://pf.fwf.ac.at/de/wissenschaft-konkret/project-finder/?search%5Bwhat%5D=P28344"
+                            >https://pf.fwf.ac.at/de/wissenschaft-konkret/project-finder/?search%5Bwhat%5D=P28344</ref>,
+                        accessed: 19 June 2020.</note>).<note xml:id="ftn43">Like
+                            <emph>Sauer-Seuffert</emph>, the Okopenko diary project will be dually
+                        published with a printed part, which has yet to be published.</note> With
+                    this edition, the Austrian National Library started an edition platform that
+                    should take existing standards and best practices even more seriously.
+                    Technically, it is based on the Fedora<note xml:id="ftn44">
+                        <ref target="https://www.fedora-commons.org/"
+                            >https://www.fedora-commons.org/</ref>, accessed: 19 June 2020.</note>
+                    Commons implementation by Graz University<note xml:id="ftn45">
+                        <ref target="https://www.uni-graz.at/">https://www.uni-graz.at/</ref>,
+                        accessed: 19 June 2020.</note> (Seuffert’s academic home institution for
+                    many years) called GAMS<note xml:id="ftn46">
+                        <ref target="https://gams.uni-graz.at/">https://gams.uni-graz.at/</ref>,
+                        accessed: 19 June 2020.</note>. Efforts to integrate or completely migrate
+                        <emph>Sauer-Seuffert</emph> into this technical infrastructure remain to be
+                    seen, with the likely effect of the result being a Digital Scholarly Edition
+                    proper. With their GAMS implementation and the Okopenko material, the ONB took a
+                    further step in the right direction, as they enable access in a sense even
+                    exceeding the understanding of the funding bodies’ (sometimes legally unclear)
+                    Open Access policies (FWF recently co-founded cOAlition-s<note xml:id="ftn47">
+                        <ref target="https://www.scienceeurope.org/coalition-s/"
+                            >https://www.scienceeurope.org/coalition-s/</ref>, accessed: 19 June
+                        2020.</note>), as they are sharing all TEI XML data in downloadable form
+                    under a CC-BY-SA 4.0 licence. This goes hand in hand with the recent convergence
+                    of reusable platforms and modules that some Austrian institutions (including the
+                    Austrian National Library itself) already do with the Kompetenznetzwerk Digitale
+                    Edition (KONDE)<note xml:id="ftn48">
+                        <ref target="http://www.digitale-edition.at/"
+                            >http://www.digitale-edition.at/</ref>, accessed: 19 June 2020.</note>
+                    (funded as a “Hochschulraum-Strukturmittel-Projekt”). A big challenge for these
+                    undertakings is the integration of e.g. prosopographical data such as places,
+                    people and institutions which would facilitate Linked Data integration beyond
+                    correspDesc in order to avoid building parallel insular resources. It might
+                    still need some time to set up and implement the various components, but the
+                    vision is already in place, planted by projects like the
+                        <emph>Sauer-Seuffert</emph> edition.</p>
+            </div>
+            <div xml:id="div6">
+                <head>Conclusion</head>
+                <p xml:id="p33">All in all, the <emph>Sauer-Seuffert</emph> correspondence “online
+                    platform” (they avoid the term “Digital Edition” for a reason) is one of the
+                    project’s most visible deliverables to this day, although it was created only as
+                    a spin-off without extra funds. Furthermore, it captures <emph>the whole
+                        of</emph> the available correspondence (approx. 1200 pieces), where the
+                    selection to be printed will only cover some 300. As such, the platform is an
+                    invaluable addition to the whole field of history of Neugermanistik and saves
+                    the correspondence from being buried in the archives again (especially after a
+                    select edition became available hardly anybody would have thought about looking
+                    at the portion of archive material that its editors left out). On the negative
+                    side, the platform suffers from the same problems other “finished” Digital
+                    Humanities projects are facing after their funding period: They get abandoned
+                    and do not follow up even on full-bodied promises. Also, and beyond this ‘DH
+                    problem’ (which, strangely enough, connects to the problem of “connatale
+                    Vergreisung” [connatal senescence] mentioned in the title of one of the
+                    project’s other <ref
+                        target="https://web.archive.org/web/20191105132949/http:/sauer-seuffert.onb.ac.at/projektbeschreibung/publikationen"
+                        >publications (Illetschko and Nottscheid 2017)</ref> and that originally
+                    refers to the aporiae of big scholarly editions as the Weimar Sophienausgabe of
+                    Goethe’s works), the printed book featuring a selection of the most interesting
+                    parts of the correspondence has been promised to be published “soon” by Hirzel
+                    Verlag, but remains to be brought to the light of publication.<note
+                        xml:id="ftn49">Cf. note <ref target="#ftn19">19</ref>.</note> On the
+                    positive side, the <emph>Sauer-Seuffert</emph> project had serious impact on the
+                    development of the correspDesc metadata set, which is such an important addition
+                    to the TEI’s standards that it recently was awarded the <ref
+                        target="https://web.archive.org/web/20191105161954/https:/tei-c.org/activities/rahtz-prize-for-tei-ingenuity/"
+                        >Rahtz Prize for TEI Ingenuity 2018</ref> together with CMIF and
+                    correspSearch. Judging the ‘web platform’ as an institutional-level Digital
+                    Scholarly Edition ‘digital first’ of at least two large institutions – from the
+                    distance of six years (the project started in 2012), which is a long period in
+                    the quickly changing Digital Humanities field –, it is important to highlight
+                    the value and effort that the <emph>Sauer-Seuffert</emph> project contributed
+                    and continues to contribute to the Digital Edition eco-system as a whole.</p>
+                <p xml:id="p34">The bottom line for research institutions and funding agencies alike
+                    would be that proper scholarly editions (this especially applies to digital
+                    editions, but holds true for other – even ‘old’ media as well) need proper
+                    funding – especially dedicated funding for technical implementations, proper
+                    technology, proper oversight, and proper provisions for the time after edition
+                    projects are ‘finished’. The separate tasks of curating data and ‘keeping it
+                    alive’ both cannot be given over solely to the individual researchers (in times
+                    of short term contracts). All of this will not be possible without allocating
+                    effort – and funds.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl>Illetschko, Marcel and Mirko Nottscheid. 2017. Textkritik und connatale
+                        Vergreisung: Überlegungen zu born‐digital‐ und Printeditionen anlässlich
+                        einer Ausgabe des Briefwechsels zwischen August Sauer und Bernhard Seuffert
+                        samt einer kurzen Einführung in die TEI‐Briefkodierung. In:
+                            <emph>Aufgehoben? Speicherorte, -diskurse und -medien von
+                            Literatur</emph>, ed. by Susanne Eichhorn, Bernhard Oberreither, Marina
+                        Rauchenbacher, Isabella Schwentner, and Katharina Serles, 249–270. Würzburg:
+                        Königshausen &amp; Neumann.</bibl>
+                    <bibl>König, Christoph, ed. 2003. <emph>Internationales Germanistenlexikon
+                            1800–1950</emph>. Berlin; New York: Walter de Gruyter.</bibl>
+                    <bibl>Müller, Hans-Harald and Mirko Nottscheid, eds. 2016.
+                            <emph>Disziplinentwicklung als „community of practice“: Der Briefwechsel
+                            Wilhelm Scherers mit August Sauer, Bernhard Seuffert und Richard Maria
+                            Werner aus den Jahren 1876 bis 1886</emph>. Beiträge zur Geschichte der
+                        Germanistik 6. Stuttgart: S. Hirzel Verlag.</bibl>
+                    <bibl>Müller, Hans-Harald, Myriam Richter and Margarete Payer, eds. 2013.
+                            <emph>Praktizierte Germanistik: Die Berichte des Seminars für deutsche
+                            Philologie der Universität Graz 1873-1918</emph>. Beiträge zur
+                        Geschichte der Germanistik 5. Stuttgart: Hirzel.</bibl>
+                    <bibl>Nottscheid, Mirko. 2013. „vorbild und muster“. Praxeologische Aspekte in
+                        Wilhelm Scherers Korrespondenz mit deutschen und österreichischen Schülern
+                        in der Konstitutionsphase der Neueren deutschen Literaturgeschichte
+                        (1876–1886). <emph>Zeitschrift für Germanistik</emph> 23, Nr. 2: 374–389.
+                            <ref target="http://www.jstor.org/stable/23978934"
+                            >http://www.jstor.org/stable/23978934</ref>.</bibl>
+                    <bibl>Nottscheid, Mirko, Desiree Hebenstreit and Marcel Illetschko. 2014.
+                        Forschungsbericht: Der Briefwechsel zwischen August Sauer und Bernhard
+                        Seuffert (1880 bis 1926): Ein wissenschaftsgeschichtliches Forschungsprojekt
+                        untersucht die Anfänge der modernen Neugermanistik in Deutschland und
+                        Österreich. <emph>Jahrbuch für Internationale Germanistik</emph>, Nr. 1:
+                        191–202.</bibl>
+                    <bibl>Nottscheid, Mirko, Marcel Illetschko and Desiree Hebenstreit, together
+                        with Bernhard Fetz and Hans-Harald Müller. 2020. <emph>Der Briefwechsel
+                            zwischen August Sauer und Bernhard Seuffert 1880 bis 1926</emph>. Wien,
+                        Köln, Weimar: Böhlau. DOI: <ref
+                            target="https://doi.org/10.7767/9783205232780"
+                            >https://doi.org/10.7767/9783205232780</ref>.</bibl>
+                    <bibl>Rosenberg, Rainer. 2007. „Positivismus“. In: Reallexikon der deutschen
+                        Literaturwissenschaft, ed. by Georg Braungart et al., Berlin/New York: De
+                        Gruyter, Vol. III, 131–134.</bibl>
+                    <bibl>Scherer, Wilhelm. 2005. <emph>Briefe und Dokumente aus den Jahren 1853 bis
+                            1886</emph>. Ed. by Mirko Nottscheid, Hans-Harald Müller, and Myriam
+                        Richter. Marbacher Wissenschaftsgeschichte 5. Göttingen: Wallstein.</bibl>
+                    <bibl>Stadler, Peter, Marcel Illetschko and Sabine Seifert. 2016. Towards a
+                        Model for Encoding Correspondence in the TEI: Developing and Implementing
+                        &lt;correspDesc&gt;. <emph>Journal of the Text Encoding Initiative</emph>,
+                        Nr. Issue 9 (September). DOI: <ref
+                            target="https://doi.org/10.4000/jtei.1433"
+                        >10.4000/jtei.1433</ref>.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

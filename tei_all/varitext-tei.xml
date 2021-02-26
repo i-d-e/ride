@@ -1,0 +1,2047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.6.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Varitext</title>
+            <author ref="http://viaf.org/viaf/107106790">
+               <name>
+                  <forename>Julia</forename>
+                  <surname>Burkhardt</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Leipzig</orgName>
+                  <placeName>Leipzig, Germany</placeName>
+               </affiliation>
+               <email>jburk (at) rz.uni-leipzig.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2017-09">September 2017</date>
+            <idno type="URI"
+               >https://ride.i-d-e.de/issues/issue-6/varitext-und-das-corpus-des-varietes-nationales-du-francais/</idno>
+            <idno type="DOI">10.18716/ride.a.6.3</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue06/varitext/varitext.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+               Neuber</editor>
+            <biblScope unit="issue" n="6">Digital Text Collections</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-6</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Varitext</title>
+                  <editor>Sascha Diwersy, Peter Blumenthal, Salah Mejri</editor>
+                  <respStmt>
+                     <resp>Designer</resp>
+                     <persName>Sascha Diversy</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Peter Blumenthal</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Salah Mejri</persName>
+                  </respStmt>
+                  <date type="publication">2013</date>
+                  <idno type="URI">http://syrah.uni-koeln.de/varitext/</idno>
+                  <date type="accessed">2017-08-15</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-text-collections-version-1-0">Criteria
+                     for Reviewing Digital Text Collections, version 1.0</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-text-collections-version-1-0">
+               <category xml:id="general_information">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.1">cf. Catalogue 1.1</ref>
+                     </catDesc>
+                     <catDesc>Can the text collection be identified in terms similar to traditional
+                        bibliographic descriptions (title, responsible editors, institution, date(s)
+                        of publication, identifier/address)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Is contact information given?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aims">
+                  <category xml:id="doc_contents">
+                     <catDesc>
+                        <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is there a description of the aims and contents of the text
+                        collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="purpose">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>What is the purpose of the text collection?</catDesc>
+                     <category xml:id="research">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="teaching">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_type">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>What kind of research does the collection allow to conduct
+                        primarily?</catDesc>
+                     <category xml:id="qualitative">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="quantitative">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="classification">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>How does the text collection classify itself (e.g. in its title or
+                        documentation)?</catDesc>
+                     <category xml:id="collection">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_archive">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portal">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="no_classification">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_fields">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>To which field(s) of research does the text collection
+                        contribute?</catDesc>
+                     <category xml:id="field_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_linguistics">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_archaeology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_philosophy">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_religious_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_sociology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="content">
+                  <category xml:id="era">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the texts belong to?</catDesc>
+                     <category xml:id="era_classics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_medieval">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_early_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_contemporary">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="language">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What languages are the texts in?</catDesc>
+                     <category xml:id="arabic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="chinese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="danish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="english">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="finnish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="french">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="german">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="greek">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hebrew">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hindi">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="italian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="japanese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="latin">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="norwegian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="polish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portuguese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="russian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="spanish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="swedish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="turkish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#free" xml:id="language_note">
+                        <desc/>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of texts are in the collection?</catDesc>
+                     <category xml:id="literary_works">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="private_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="essays">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="newspaper_articles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="charters">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="inscriptions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="files_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="protocols">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="scientific_papers">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="speech_transcripts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="add_information">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of information is published in addition to the
+                        texts?</catDesc>
+                     <category xml:id="introduction">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="context_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="bibliography">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="facsimile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="composition">
+                  <category xml:id="documentation_methods">
+                     <catDesc>
+                        <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the principles and decisions regarding the design of the text
+                        collection, its composition and the selection of texts documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>What selection criteria have been chosen for the text
+                        collection?</catDesc>
+                     <category xml:id="selection_language">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_author">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_country">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_epoch">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_genre">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_topic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_style">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_linguistic_characteristics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="size">
+                     <category xml:id="size_texts">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of
+                           texts/records?</catDesc>
+                        <category xml:id="texts_le10">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_11-50">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_51-100">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt100_">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt1000">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="size_tokens">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of tokens?</catDesc>
+                        <category xml:id="tokens_lt100.000">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_100.000-1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt10mio">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="structure">
+                     <catDesc>
+                        <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have identifiable sub-collections or
+                        components?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="acquisition">
+                     <category xml:id="text_recording">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection record or transcribe the textual data for
+                           the first time?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_integration">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>What kind of material has been taken over from other
+                           sources?</catDesc>
+                        <category xml:id="full_text">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_metadata">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_annotation">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="quality">
+                     <catDesc>
+                        <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
+                     </catDesc>
+                     <catDesc>Has the quality of the data (transcriptions, metadata, annotations,
+                        etc.) been checked?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="3"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>Considering aims and methods of the text collection, how would you
+                        classify it further? For definitions please consider the
+                        help-texts.</catDesc>
+                     <category xml:id="typology_general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_canon">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_oeuvre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_reference_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_contrastive_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_parallel_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_diachronic_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="data_modelling">
+                  <category xml:id="text_treatment">
+                     <catDesc>
+                        <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
+                     </catDesc>
+                     <catDesc>How are the textual sources represented in the digital
+                        collection?</catDesc>
+                     <category xml:id="normalized_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="orthographic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="phonetic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="transliteration">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translated_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="summarized_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="sampled_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="basic_format">
+                     <catDesc>
+                        <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                     </catDesc>
+                     <catDesc>In which basic format are the texts encoded?</catDesc>
+                     <category xml:id="plain_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="xml">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="html">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="annotation">
+                     <category xml:id="annotation_type">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>With what information are the texts further enriched?</catDesc>
+                        <category xml:id="semantic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="linguistic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="editorial_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural_information">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="annotation_integration">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>How are the annotations linked to the texts themselves?</catDesc>
+                        <category xml:id="embedded">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="stand-off">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="metadata">
+                     <category xml:id="metadata_type">
+                        <catDesc>
+                           <ref target="#K3.2.3">cf. Catalogue 3.2.3</ref>
+                        </catDesc>
+                        <catDesc>What kind of metadata are included in the text
+                           collection?</catDesc>
+                        <category xml:id="descriptive">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="administrative">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="metadata_level">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>On which level are the metadata included?</catDesc>
+                        <category xml:id="whole_collection">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_parts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="individual_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="data_standards">
+                     <category xml:id="data_schema">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>What kind of data/metadata/annotation schemas are used for the text
+                           collection?</catDesc>
+                        <category xml:id="standardized_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="customized_standard_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="project_specific">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="standard_format">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>Which standards for text encoding, metadata and annotation are used
+                           in the text collection?</catDesc>
+                        <category xml:id="tei">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="ead">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="xces">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="dublin_core">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="edm">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mods">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="skos">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="owl">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="imdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cmdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tcf">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="olac">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="eagles">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="pos_tagsets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="provision">
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>Is the textual data accessible in a source format (e.g. XML,
+                        TXT)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="technical_interfaces">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces which allow the reuse of the data of
+                        the text collection in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="SPARQL_endpoint">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="analytical_data">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Besides the textual data, does the project provide analytical data
+                        (e.g. statistics) to download or harvest?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="user_interface">
+                  <category xml:id="interface_provision">
+                     <catDesc>
+                        <ref target="#K5.1">cf. Catalogue 5.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have a dedicated user interface designed for
+                        the collection at hand in which the texts of the collection are represented
+                        and/or in which the data is analyzable?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="user_interface_sub">
+                     <category xml:id="usability">
+                        <catDesc>
+                           <ref target="#K5.3">cf. Catalogue 5.3</ref>
+                        </catDesc>
+                        <catDesc>From your point of view, is the interface of the text collection
+                           clearly arranged and easy to navigate so that the user can quickly
+                           identify the purpose, the content and the main access methods of the
+                           resource?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="access_modes">
+                        <category xml:id="browsing">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer the possibility to browse the contents by
+                              simple browsing options or advanced structured access via indices
+                              (e.g. by author, year, genre)?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="full_text_search">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer a fulltext search?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="advanced_search">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer an advanced search?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="analysis">
+                        <category xml:id="analysis_tools">
+                           <catDesc>
+                              <ref target="#K5.5">cf. Catalogue 5.5</ref>
+                           </catDesc>
+                           <catDesc>Does the text collection integrate tools for analyses of the
+                              data?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="analysis_customization">
+                           <catDesc>
+                              <ref target="#K5.5">cf. Catalogue 5.5</ref>
+                           </catDesc>
+                           <catDesc>Can the user alter the interface in order to affect the outcomes
+                              of representation and analysis of the text collection (besides basic
+                              search functionalities), e.g. by applying his or her own queries or by
+                              choosing analysis parameters?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="visualization">
+                        <catDesc>
+                           <ref target="#K5.6">cf. Catalogue 5.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection provide particular visualizations of the
+                           data?</catDesc>
+                        <category xml:id="networks">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="treemaps">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="wordclouds">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_visualization">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="personalization">
+                        <catDesc>
+                           <ref target="#K5.7">cf. Catalogue 5.7</ref>
+                        </catDesc>
+                        <catDesc>Is there a personalisation mode that enables the users e.g. to
+                           create their own sub-collections of the existing text
+                           collection?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="preservation">
+                  <category xml:id="documentation_project">
+                     <catDesc>
+                        <ref target="#K6.1">cf. Catalogue 6.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection provide sufficient documentation about the
+                        project in general as well as about the aims, contents and methods of the
+                        text collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>
+                        <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="rights_declared">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="rights_license">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY_only">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the text
+                        collection and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection supply citation guidelines?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="archiving">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="curation">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="completion">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection completed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+
+
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+
+               <term>corpus analysis</term>
+               <term>daily press</term>
+               <term>french</term>
+               <term>linguistic search</term>
+               <term>PoS-tagging</term>
+               <term>standard variety</term>
+               <term>text collection</term>
+
+            </keywords>
+         </textClass>
+      </profileDesc>
+
+
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This review discusses the web-based platform <emph>Varitext</emph> that up to now
+               provides free-of-charge access to the <emph>Corpus des variétés nationales du
+                  français (CoVaNa-FR)</emph> and is designed to assimilate further linguistic
+               corpora of other languages in the future. The aim of <emph>Varitext</emph> is to make
+               available large-scale resources of so-called ‘pluricentric’ languages focussing on
+               the national variations of the respective standard languages. At present French
+               standard varieties in CoVaNa-FR are represented by texts of the francophone daily
+               press. <emph>Varitext</emph> offers a working environment making it possible to
+               analyse the corpus of standard varieties with primary regard to lexical and
+               statistical aspects.</p>
+         </div>
+      </front>
+      <body>
+         <p xml:id="p1">
+            <figure xml:id="img1">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-1.png"/>
+               <head type="legend">Die webbasierte Plattform <emph>Varitext</emph>.</head>
+            </figure> Das Projekt <emph>Varitext</emph> hat zum Ziel, Textressourcen, und zwar
+            konkret linguistische Korpora, sowie eine online zugängliche Arbeitsumgebung für deren
+            Analyse bereitzustellen. Dabei sei unter Textressourcen allgemein jede beliebige Art von
+            digitaler Textsammlung verstanden, unter einem linguistischen Korpus hingegen speziell
+            eine zu sprachwissenschaftlichen Zwecken zusammengestellte und aufbereitete digitale
+            Textsammlung (s. u.). <emph>Varitext</emph> ist zugleich jene webbasierte
+            Arbeitsumgebung (<emph>platforme</emph>), die Zugang zu den Korpora und den damit
+            verknüpften Analysetools verschafft (siehe <ref type="crossref" target="#img1">Abb.
+               1</ref>).</p>
+         <p xml:id="p2">Ins Leben gerufen und getragen ist das Projekt laut Internetseite vom
+            Romanischen Seminar der Universität zu Köln und vom <emph>Laboratoire Lexique,
+               Dictionnaire, Informatique</emph> (LDI) der Universität Paris 13. Hauptsächlich
+            gestaltet und betreut wird <emph>Varitext</emph> von Sascha Diwersy. Zielgruppe sind
+            laut Webseite Forschende, Lehrende und Studierende, die sich für die Erforschung und
+            Analyse sprachlicher Varietäten interessieren. Zum Entstehungskontext und zu den
+            Bedingungen, unter denen das Projekt realisiert wird und wurde, werden leider keine
+            Angaben gemacht. Ebenso finden sich bedauerlicherweise keine Angaben dazu, in welchem
+            konkreten finanziellen und institutionellen Rahmen das Projekt weiter verfolgt wird.
+            Beschreibungen, Hilfstexte und Arbeitsoberfläche sind bislang ausschließlich in
+            französischer Sprache gehalten. <emph>Varitext</emph> ist einfach und frei online
+            erreichbar und verwendbar; es genügen eine Registrierung und die Bestätigung durch das
+            Team hinter <emph>Varitext</emph>.</p>
+         <p xml:id="p3">Das Fernziel von <emph>Varitext</emph> ist es, Korpora zu
+            (Standard-)Varietäten unterschiedlicher (und durchaus nicht nur romanischer) Sprachen zu
+            sammeln und für die Analyse zugänglich zu machen: „As is indicated by its name, it is
+            open to host corpora for other languages compiled according to the same rationale of
+            large scale variationist research in a pluricentric perspective.“ (Diwersy 2014, 51).
+            Bisher bietet die Plattform Zugang zu einem französischen Korpus, dem CoVaNa-FR:
+               <emph>Corpus des variétés nationales du français</emph>. Die Integration eines Korpus
+            spanischer Texte ist Diwersy (2014, 51) zufolge in Arbeit und die Zusammenstellung
+            weiterer Korpora (Portugiesisch, Russisch, Arabisch) zumindest geplant. Zu Anpassungen
+            der Plattform, z. B. sprachlicher oder technischer Art, die durch eine solche
+            Erweiterung durch andere Sprachen notwendig werden können, sind derzeit noch keine
+            Informationen verfügbar.</p>
+         <p xml:id="p4">Über den genauen Inhalt des Korpus CoVaNa-FR, die Aufbereitung, die
+            Annotation und die linguistische Einordnung des Korpus informiert ein Aufsatz Sascha
+            Diwersys (2014) (leider nicht <emph>Varitext</emph> selbst, s. u.). CoVaNa-FR stellt ein
+            schriftsprachliches Korpus dar und setzt sich (bislang) aus Texten der frankophonen
+            Presse in Frankreich, Kanada, der Schweiz sowie mehreren afrikanischen Staaten zusammen,
+            und zwar: Elfenbeinküste, Marokko, Algerien, der Demokratischen Republik Kongo, Mali,
+            Kamerun, Senegal und Tunesien. Geplant ist eine Erweiterung um andere
+            schriftsprachliche, nämlich fiktionale und akademische Texte. Mit einer solchen
+            Ressource wird in der Tat, wie Sascha Diwersy (2014, 48) meint, ein wichtiges Desiderat
+            innerhalb der Dokumentation und Erforschung des Französischen angegangen. Zwar ist das
+            Französische durch diverse Korpora dokumentiert:<note xml:id="ftn1">Zum Französischen
+               steht bislang kein ausgewogenes Referenzkorpus in dem Sinne zur Verfügung, wie es
+               z.B. für das Deutsche mit dem DeReKo (Deutsches Referenzkorpus) des Instituts für
+               deutsche Sprache der Fall ist. An einem <emph>Corpus de référence du français
+                  contemporain</emph> arbeiten jedoch Dirk Siepmann, Christoph Bürgel und Sascha
+               Diwersy (2016).</note> so bietet die Ressource <emph>Frantext</emph> z. B. einen
+            „panchronen“ (Pusch 2014, 183) Zugang zu französischen Texten mehrerer Jahrhunderte, bei
+            denen es sich im Kern um literarische, essayistische, philosophische und
+            wissenschaftliche Werke handelt; zum Teil lässt sich die Textsammlung als linguistisches
+            Korpus im engeren Sinne nutzen. Eine Vielzahl größerer und kleinerer Projekte
+            dokumentieren unterdessen das gesprochene Französisch, wie z. B. <emph>Corpus de
+               Référence du Français Parlé</emph> oder <emph>Corpus de Langue parlée en
+               interaction</emph> (CLAPI). Ein umfangreiches linguistisches Korpus zur Variation des
+            (Standard-)Französischen im internationalen frankophonen Raum, das zudem einfach und
+            kostenlos zugänglich ist, gibt es allerdings bislang, soweit ich sehe, nicht (siehe z.
+            B. den Überblick von Pusch 2014).</p>
+         <p xml:id="p5">Aus fast jedem der angegebenen frankophonen Staaten sind mindestens zwei
+            verschiedene Angebote der nationalen Tagespresse vertreten (z. B. <emph>Le Temps</emph>
+            und <emph>La Tribune de Genève</emph> für die Schweiz, <emph>Fraternité Matin</emph> und
+               <emph>Notre Voie</emph> für die Elfenbeinküste). Erhoben wurden für jede Zeitung
+            jeweils alle Ausgaben eines ganzen Jahres oder mehrerer Jahre. Schwerpunktmäßig sind die
+            Jahre 2007 und 2008 vertreten, das heißt, dass fast jedes Presseteilkorpus<note
+               xml:id="ftn2">Das Gesamtkorpus CoVaNa-FR besteht aus Subkorpora auf der Ebene der
+               Länder und ihrer jeweiligen Presse (<emph>presse hexagonale</emph>, <emph>presse
+                  suisse</emph>, <emph>presse maroccaine</emph>…). Diese wiederum bestehen aus den
+               Subkorpora, die sich durch die Sammlung der Ausgaben eines bestimmten Jahres ergeben
+               (z.B. <emph>Le Monde</emph> 2007). Ich bezeichne die Subkorpora der ersten Ebene als
+               Presseteilkorpus. Die Subkorpora der zweiten Ebene als Ausgabenteilkorpus.</note> die
+            Ausgaben dieser beiden oder eines dieser beiden Jahre umfasst. Insgesamt reicht die
+            Zeitspanne, aus der Texte erhoben wurden, von 2003 bis 2009. Presse- und
+            Ausgabenteilkorpora können also in dieser Hinsicht als vergleichbar angenommen werden.
+            Derzeit umfasst CoVaNa-FR ungefähr 419.700.000 Token. Die Größe der Presseteilkorpora
+            variiert zwischen 18,8 Mio. (Elfenbeinküste) und 53,5 Mio. Token (Kanada) (Diwersy 2014,
+            49), in Abhängigkeit von der Anzahl der verzeichneten Jahrgänge und sicher auch vom
+            jeweiligen Angebot der Tageszeitungen.</p>
+         <p xml:id="p6">Laut Diwersy (2014, 51) liegt das Korpus in XML vor und ist nach Subkorpus,
+            Einzeltext, Absatz und Satz strukturiert. Da mit der <emph>Open Corpus Workbench</emph>
+            gearbeitet wird, sind die Daten vertikalisiert, also in einer Art Tabelle mit XML-Tags,
+            formatiert. Inwieweit die Annotationen kompatibel mit den Empfehlungen der <emph>Text
+               Encoding Initiative</emph> sind, wird nicht expliziert. Das Korpus ist mit
+            morphosyntaktischen (<emph>Part-of-Speech</emph>) und syntaktischen Informationen
+               (<emph>Parsing</emph>) angereichert und darüber hinaus lemmatisiert. Die Aufbereitung
+            der Texte ist mit Hilfe von <emph>Connexor</emph> Tools (Tagger) realisiert worden.
+               <emph>Varitext</emph> liefert eine benutzungsfreundliche graphische Oberfläche und
+            umfangreiche Auswertungsoptionen, für deren Aufbau die <emph>Open Corpus Workbench, UCS
+               toolkit</emph> 0.6 sowie <emph>R</emph> verwendet wurden (Diwersy 2014, 49-52). Die
+            Art der Aufbereitung und Strukturierung der Daten erlaubt eine differenzierte,
+            individuelle Korpuskomposition und vielfältige Analysen und Auswertungen. Die
+            Arbeitsumgebung ermöglicht Konkordanz- (KWIC-Konkordanzen), Frequenz- und
+            Kookkurenzanalysen (s. u.).</p>
+         <p xml:id="p7">
+            <figure xml:id="img2">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-2.png"/>
+               <head type="legend">Zusammenstellung des Untersuchungskorpus. Wahl der
+                  Presseteilkorpora.</head>
+            </figure>
+            <figure xml:id="img3">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-3.png"/>
+               <head type="legend">Zusammenstellung des Untersuchungskorpus. Wahl der
+                  Ausgabenteilkorpora.</head>
+            </figure> Um Analysen durchführen zu können, wird zunächst, unterstützt von der
+            Arbeitsoberfläche, ein Untersuchungskorpus zusammengestellt (<emph>créer ou ajouter un
+               sous-corpus</emph>, siehe <ref type="crossref" target="#img2">Abb. 2</ref> und <ref
+               type="crossref" target="#img3">3</ref>).<note xml:id="ftn3">Alternativ kann für die
+               Erstellung des Untersuchungskorpus die Variante <emph>créer un échantillon à
+                  partition</emph> gewählt werden. Die Varianten unterscheiden sich im Wesentlichen
+               darin, dass die erste (créer un copus) einem top-down-Prozess entspricht: das
+               Gesamtkorpus wird durch immer detailliertere Kriterien gegliedert. Unterdessen bietet
+               die zweite einen schnelleren Zugang zu einem beliebig großen Teilkorpus, das nach
+               einem präzisen Kriterium wie z. B. Datum gefiltert wurde.</note> Es kann jederzeit
+            verfeinert und erweitert, aber leider nicht für einen späteren Gebrauch gespeichert
+            werden. Über die Presse- und Ausgabenteilkorpora hinaus kann das Untersuchungskorpus
+            nach einem genaueren Datum (<emph>Date</emph>), nach Themen bzw. Sparten
+               (<emph>section</emph>) und AutorInnen (<emph>Auteur</emph>) präzisiert werden.<note
+               xml:id="ftn4">Das ebenfalls mögliche Kriterium <emph>Titre du Texte</emph> liefert
+               keine Ergebnisse. Weitere Filterkriterien sind <emph>code géographique</emph> und
+                  <emph>code sous-échantillon</emph>, da jedem Presseteilkorpus ein geographischer
+               Code (z. B. CAN für Kanada) sowie ein Korpus-Code (z. B. PRESSE_CAN) zugeordnet ist.
+               Jedes Ausgabenteilkorpus hat ebenfalls einen Code (z. B. DEV_CAN07 für <emph>Le
+                  Devoir</emph> 2007, Kanada).</note> Höchst problematisch ist allerdings, dass der
+            genaue Inhalt, die Größe und der zeitliche Kontext des Gesamtkorpus sowie seiner
+            Subkorpora innerhalb der Arbeitsumgebung <emph>Varitext</emph> an keiner Stelle genau
+            beschrieben werden. Die erste Zusammenstellung eines Untersuchungskorpus gleicht demnach
+            einer Entdeckungsreise, weil erst im Verlaufe dieses Prozesses nach und nach erschlossen
+            werden kann, wie CoVaNa-FR im Einzelnen aufgebaut ist.</p>
+         <p xml:id="p8">
+            <figure xml:id="img4">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-4.png"/>
+               <head type="legend">Eingabe und Differenzierung der gesuchten Wörter oder
+                  Ausdrücke.</head>
+            </figure>
+            <figure xml:id="img5">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-5.png"/>
+               <head type="legend">Präzisierung der Anfrage. Auswahl der Analysefunktion
+                  (KWIC-Konkordanz, Frequenz, Kookkurrenz), ggf. Regulierung der Ergebnisanzeige und
+                  des Kotextes.</head>
+            </figure>
+            <figure xml:id="img6">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-6.png"/>
+               <head type="legend">Einfache Frequenzanalyse: Lexicogramme von
+                     <emph>la</emph>+<emph>femme</emph>.</head>
+            </figure>
+            <figure xml:id="img7">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-7.png"/>
+               <head type="legend">Kookkurrenzanalyse zu „la femme“, zeigt häufigste linke (_L) und
+                  rechte (_R) Kollokatoren aus und gibt entsprechend den Einstellungen in der
+                  Anfrage statistische Werte aus.</head>
+            </figure> Steht das (vorläufige) Untersuchungskorpus fest, können detaillierte
+            Suchanfragen formuliert und entschieden werden, welche Art der Auswertung
+            (KWIC-Konkordanzen, Frequenz-, Kookkurrenzanalysen) durchgeführt werden soll (siehe <ref
+               type="crossref" target="#img4">Abb. 4</ref> und <ref type="crossref" target="#img5"
+               >5</ref>). Die Bearbeitung der zugrundeliegenden Textbasis (s. o.) erlaubt die Suche
+            von exakten Wortformen, Lemmata, Kollokationen und die Verwendung von regulären
+            Ausdrücken. Suchwörter und –phrasen können morphosyntaktisch spezifiziert werden, und
+            zwar nach Wortart und nach syntaktischen Relationen und Funktionen (z. B.
+               <emph>sujet</emph>, <emph>attribut de l’objet</emph>, <emph>auxiliaire</emph>). Eine
+            Kombination verschiedener Kriterien ist möglich und ermöglicht komplexe Abfragen.
+            Kookkurrenz- und Frequenzanalyse bieten umfangreiche statistische Auswertungen, die in
+            verschiedenen Formaten (Lexikogramm, Tabelle, Graphik) dargestellt werden (siehe <ref
+               type="crossref" target="#img6">Abb. 6</ref> und <ref type="crossref" target="#img7"
+               >7</ref>).</p>
+         <p xml:id="p9">
+            <figure xml:id="img8">
+               <graphic
+                  url="http://ride.i-d-e.de/wp-content/uploads/issue_6/varitext/pictures/picture-8.png"/>
+               <head type="legend">Anzeige der Ergebnisse. Ergebnisse für KWIC-Konkordanzen zu
+                     <emph>la</emph>+<emph>femme</emph>.</head>
+            </figure> Die Ausgabe der KWIC-Konkordanzen (möglich bis maximal 10.000 Ergebnisse)
+            erfolgt in einer Tabelle, die das Suchwort, die unmittelbaren linken und rechten
+            Nachbarn sowie den linksseitigen und rechtsseitigen Kotext (bis zu 50 Wörter)
+            übersichtlich präsentiert. Zudem können ggf. die jeweiligen Presseteilkorpora, aus denen
+            die Belege stammen, nachvollzogen und weitere Metadaten abgerufen werden (siehe <ref
+               type="crossref" target="#img8">Abb. 8</ref>). Die Inhalte der Tabellenspalten können
+            zusätzlich sortiert und gefiltert werden. Die Ergebnisse sind in Form einer csv-Datei
+            herunterladbar, stehen also bei Bedarf für eine weitere Verarbeitung zur Verfügung. Ein
+            Zugriff auf die Volltexte ist jedoch nicht möglich. Die Zugriffsbeschränkungen
+            verschiedener Art werden nur ungenau erläutert und begründet; so finden sich im
+            Hilfetext lediglich recht allgemeine Hinweise dazu, dass die Ausgabe von Konkordanzen
+            oder der Umfang des Kotextes „pour des raison d’ordre juridique (et technique)“ begrenzt
+            ist. Deutlich gesagt wird, dass aus Gründen des Copyrights CoVaNa-FR nicht als komplette
+            Ressource heruntergeladen werden kann, sondern ausschließlich in Teilen und über die
+            graphische Benutzungsoberfläche zur Verfügung steht (Diwersy 2014, 49).</p>
+         <p xml:id="p10">Es können hier nicht alle Funktionen ausführlich beschrieben werden:
+               <emph>Varitext</emph> ist in jeder Hinsicht ein wertvolles Arbeitsinstrument für die
+            Analyse der französischen Sprache. Die drei genannten Auswertungsfunktionen
+            qualifizieren es insbesondere für Fragestellungen im Zusammenhang mit dem Lexikon, die
+            Textzusammenstellung für den Vergleich innerhalb der Frankophonie. Das Hilfemenü
+               (<emph>Aide</emph>) gibt zu allen Analysefunktionen eine verständliche und
+            detaillierte Anleitung (in französischer Sprache), und die übersichtliche, teils
+            anschauliche Darstellung der Ergebnisse erleichtert die Untersuchung und / oder
+            Interpretation der Daten. So können die Möglichkeiten von <emph>Varitext</emph> auch von
+            z. B. Studierenden mit vergleichsweise wenig Aufwand ausgeschöpft werden. Gleichzeitig
+            bietet die Arbeitsplattform fortgeschrittenen Nutzenden ausreichend
+            Differenzierungsmöglichkeiten bei der statistischen Auswertung.</p>
+         <p xml:id="p11">Problematisch, da mehr als lückenhaft, ist leider insgesamt die
+            Dokumentation und Beschreibung der Plattform <emph>Varitext</emph> und des Korpus
+            CoVaNa-FR sowie seiner Voraussetzungen, konzeptionellen Verortung und genauen
+            Zielstellung. Dies gilt in korpusmethodischer ebenso wie in variationslinguistischer
+            Hinsicht. Zwar hat Sascha Diwersy in seinem 2014 veröffentlichten Beitrag zu den
+               <emph>Proceedings of the First Workshop on Applying NLP Tools to Similar Languages,
+               Varieties and Dialects</emph> Vieles zu einer solchen Dokumentation beigetragen;
+            jedoch ist fast nichts davon auf der Internetseite selbst nachvollziehbar und ist die
+            Publikation dort auch nicht abgelegt oder zumindest verlinkt; es findet sich auch kein
+            Hinweis darauf.</p>
+         <p xml:id="p12">Aus (varietäten-)linguistischer Sicht fehlt eine Beschreibung und
+            Einordnung von CoVaNa-FR im Rahmen der Plattform <emph>Varitext</emph> fast vollständig.
+            Die Kurzvorstellung (<emph>Accueil</emph>, siehe <ref type="crossref" target="#img1"
+               >Abb. 1</ref>) und die Nutzungsbedingungen (<emph>Charte Varitext</emph>) benennen
+            als Inhalt der Textbasis geographische Varietäten der afrikanischen und europäischen
+            Frankophonie: „la base <emph>Varitext</emph> couvrent une aire géographique importante
+            dans l'espace francophone africain et européen“<note xml:id="ftn5">Hier wurde Kanada
+               vergessen.</note>. In diesem Zusammenhang findet der Begriff ‚variétés nationales‘
+            Verwendung, der auf der Webseite nicht weiter expliziert wird, sich aber auch im Namen
+            der konkreten Textbasis wiederfindet: <emph>COVANA-FR – Corpus des variétés nationales
+               du français</emph>. Es ist davon auszugehen, und das bestätigt Diwersy (2014, 48-49),
+            dass damit auf das Konzept der ‚nationalen Varietäten‘ sogenannter plurizentrischer
+            Sprachen abgehoben wird. In dessen Sinne versteht z. B. Bernhard Pöll unter nationalen
+            Varietäten „Ausprägungen der jeweiligen Standardvarietät in einem Gebiet, das entweder
+            mit einem Staat oder mit einem staatsähnlichen Gebilde zusammenfällt“ (Pöll 2000, 51).
+            Dies vorausgesetzt, bezieht <emph>CoVaNa-FR</emph> sich also auf diejenigen Varietäten
+            des Französischen, die in den jeweiligen frankophonen Staaten als „internes
+            Standardfranzösisch“ anerkannt und als solches zum hexagonalen Standard in Beziehung
+            gesetzt werden können (Diwersy 2014, 48). Dies birgt jedoch verschiedene Probleme und
+            sollte deshalb keinesfalls unkommentiert bleiben. Die fraglichen Punkte sollen hier
+            angedeutet werden:</p>
+         <p xml:id="p13">Erstens ist die Identifikation von Variations- und Nationengrenze, den der
+            Begriff <emph>variétés nationales</emph> impliziert, nicht unproblematisch (siehe z. B.
+            die Diskussion des Begriffs bei Reiffenstein 2001). Diwersy zufolge fokussiert die
+            Korpuskonstruktion allerdings „elements of endonormative differentiation, i.e. the
+            emergence of regionally specific norms compared to a supposed metropolitan standard
+            variety of French“ (Diwersy 2014, 48). Ob solche „regionalspezifischen Normen“ mit dem
+            Begriff ‚variété nationale‘ passend erfasst sind, wäre zu diskutieren. Diwersy findet
+            hier eine Formulierung, die eigentlich für eine viel offenere begriffliche Konzeption
+            steht und in der Lage wäre, Heterogenität innerhalb frankophoner Regionen zu
+            integrieren. Die höchst komplexen und je eigenen Verhältnisse gerade in den
+            multiethnischen und multilingualen afrikanischen Staaten lassen überhaupt die Einordnung
+            des Französischen als ‚nationale‘ Sprache / Varietät in diesen ehemaligen Kolonien
+            diskutabel erscheinen.</p>
+         <p xml:id="p14">Zumal sich zweitens diese „nationalen Standardvarietäten“ in ihren
+            Funktionen für die Sprachgemeinschaften und in ihrer Reichweite durchaus stark
+            unterscheiden können (cf. Bickel 2000); Standardsprachen bilden also nicht
+            notwendigerweise ein einheitliches und auch kein selbsterklärendes Phänomen. In den
+            frankophonen Staaten Afrikas hängt, wie Pöll zu entnehmen ist (1998, 95 ff.), die
+            Reichweite des Französischen, zumal des Standardfranzösischen, nicht selten von Status,
+            Bildung und ethnischer Zugehörigkeit der einzelnen Sprechenden ab. Bisweilen ist
+            Französisch reine Schrift- und Verwaltungssprache. Das trifft so jedoch natürlich nicht
+            für alle frankophonen Regionen zu. Die hiesige Konzeption von Standardsprache und -norm
+            bezieht sich aber ganz offensichtlich allein auf die geschriebene Sprache und
+            identifiziert diese mit Standardvarietäten: „It should be obvious, then, that our
+            present activities focus on diversifying the corpus resources, especially with regard to
+            other written genres.“ (Diwersy 2014, 55). Dies wird in <emph>Varitext</emph> weder
+            erwähnt noch begründet.</p>
+         <p xml:id="p15">Drittens ergibt sich aus der (rudimentären) Beschreibung des Korpus auf der
+            Internetseite einerseits und dem manifesten Inhalt des Korpus andererseits zunächst der
+            Eindruck, dass hier stillschweigend vorausgesetzt wird, diese ‚nationalen
+            (Standard-)Varietäten‘ würden durch die jeweilige überregionale Tagespresse
+            repräsentiert. Das ist sicher keine abwegige Annahme, sie sollte aber dennoch begründet
+            sein. In seinem Konferenzbeitrag verweist Diwersy (2014, 49) auf entsprechende
+            Überlegungen zum Verhältnis zwischen Presse und Norm und betont auch, dass ein Ausbau
+            des Korpus um weitere Textsorten vorgesehen ist: <cit>
+               <quote>Due to its focus on endonormative differentiation, the CoVaNa-FR is less
+                  balanced with respect to genre than similar corpora for other languages […] The
+                  initial version of the CoVaNa-FR, accessible on the Varitext platform, is made up
+                  of journalistic texts published by national newspapers in different Francophone
+                  countries in Africa, Europe and North America. The choice of national newspapers
+                  as primary sources is based on the assumption made by Glessgen (2007: 97) that
+                  these are particularly representative of contemporary standard varieties
+                  (…).</quote>
+               <bibl>Diwersy 2014, 49.</bibl>
+            </cit>
+         </p>
+         <p xml:id="p16">Es lässt sich diskutieren, ob Pressetexte Standardvarietäten
+            „repräsentieren“ oder ob nicht vielmehr eine enge, wechselseitige Beziehung zwischen der
+            Sprache überregionaler Presseerzeugnisse und sprachlichen Normen angenommen werden muss
+            (siehe hierzu z. B. Burr 2004; Burkhardt et al. in Vorbereitung); und es muss gefragt
+            werden, ob Pressetexte <emph>allein</emph> in der Lage sind für Standardvarietäten zu
+            stehen, auch wenn das nur vorübergehend der Fall ist. Die Bezeichnung des bisherigen
+            Korpus oder / und dessen Beschreibung sollten diesen Einschränkungen gegebenenfalls
+            Rechnung tragen.<note xml:id="ftn6">Da sich das Korpus ausdrücklich auch an Studierende
+               richtet, sollte das schon aus didaktischen Gründen geschehen.</note>
+         </p>
+         <p xml:id="p17">Insgesamt wäre für die Nutzung der Ressource als linguistisches Korpus im
+            engeren Sinne die Dokumentation <list rend="labeled">
+               <item>
+                  <label>a)</label> der linguistischen Verortung,</item>
+               <item>
+                  <label>b)</label> des Korpusdesigns in Bezug auf die linguistische
+                  Konzeption,</item>
+               <item>
+                  <label>c)</label> der Einschränkungen und (vorübergehenden) Lücken</item>
+            </list>
+            <emph>unmittelbar im Rahmen der Präsentation des Korpus</emph> mehr als wünschenswert.
+            Dies gilt ebenso für eine Beschreibung <list rend="labeled">
+               <item>
+                  <label>d)</label> der genauen Korpuszusammensetzung (Inhalt, Größe,
+                  Formate),</item>
+               <item>
+                  <label>e)</label> seiner Aufbereitung und Annotation und</item>
+               <item>
+                  <label>f)</label> der daraus resultierenden Potentiale.</item>
+            </list> Tatsächlich findet sich nur in den Nutzungsbedingungen von <emph>Varitext</emph>
+            ein knapper Hinweis auf das XML-Format sowie auf PoS-Tagging, Lemmatisierung und
+            Parsing. Dass das Korpus überhaupt und ausschließlich Pressetexte enthält, „entdeckt“
+            die Nutzerin des Korpus erst, wenn sie beginnt, ein Untersuchungskorpus
+            zusammenzustellen (s. o.).</p>
+         <p xml:id="p18">Dass CoVaNa-FR nicht nur als linguistisches Korpus gedacht ist (dies
+            vermittelt zumindest der Name), sondern als solches nutzbar ist, steht dabei außer
+            Frage. Unter einem linguistischen Korpus im engeren Sinne verstehe ich in Anlehnung an
+            Biber, Conrad und Reppen (1998, 246) sowie Burr (2004, 136-137) eine Sammlung
+            elektronisch vorliegender Texte, die a) authentischen sozialen Kontexten entstammen, b)
+            genau so, wie sie dort vorkamen, in das Korpus aufgenommen worden sind und c) mit
+            Annotationen versehen sind, die mindestens die Zuordnung der Daten zu ihrem (zeitlichen,
+            räumlichen usw.) Kontext erlauben. Ein linguistisches Korpus unterscheidet sich zudem
+            von anderen ‚Textkollektionen‘ durch seine überlegte Zusammenstellung und Bearbeitung
+            für linguistische Untersuchungen. In diesem Sinne definiert John Sinclair: <cit>
+               <quote>A corpus is a collection of pieces of language text in electronic form,
+                  selected according to external criteria to represent, as far as possible, a
+                  language or language variety as a source of data for linguistic research.</quote>
+               <bibl>Sinclair 2005, o. S.</bibl>
+            </cit> Das drückt sich im Falle der Textbasis von <emph>Varitext</emph> nicht nur in der
+            Zusammenstellung nach externen Kriterien aus, wie es Sinclair fordert,<note
+               xml:id="ftn7">Mit externen Kriterien ist die kommunikative Funktion von Texten
+               gemeint, mit internen konkrete sprachliche Merkmale, die Sinclair (2005) zufolge
+               jedoch nicht Auswahlkriterium, sondern vielmehr Gegenstand der Untersuchung sein
+               sollen.</note> sondern eben auch in der umfangreichen linguistischen Annotation, die
+            konkrete sprachwissenschaftliche Analysen stützt.</p>
+         <p xml:id="p19">Ein wichtiges Kriterium ist darüber hinaus aber auch, dass das Korpus
+            ausgewählte und beschreibbare Sprachausschnitte enthält, die geeignet sind, eine Sprache
+            oder einen bestimmten Teil der Sprache (z. B. eine Varietät) in gewisser Hinsicht zu
+            repräsentieren; die sich daraus ergebende Zusammensetzung bestimmt erheblich mit, welche
+            Fragestellungen mit Hilfe des Korpus bearbeitet werden können: „The representativeness
+            of the corpus, in turn, determines the kinds of research questions that can be addressed
+            and the generalizability of the results of the research.“ (Biber, Conrad, and Reppen
+            1998, 246). Jedoch erfordert sowohl die Beurteilung der ‚Repräsentativität‘ eines Korpus
+            in Bezug auf eine bestimmte Varietät als auch die Einschätzung, inwieweit die Ergebnisse
+            von Datenanalysen verallgemeinerbar sein werden, als auch die Antizipation möglicher
+            Fragestellungen, die mit Hilfe eines Korpus beantwortet werden könnten, gerade eine
+            transparente, umfangreiche und methodisch wie konzeptionell fundierte Dokumentation.</p>
+         <p xml:id="p20">Die Arbeitsplattform <emph>Varitext</emph> und das bisher enthaltene
+            linguistische Korpus <emph>Corpus des variétés nationales du français</emph> stellen
+            eine vielversprechende Ressource für die linguistische, und zwar insbesondere
+            lexikalische und lexikologische Analyse französischer Varietäten in Europa, Afrika und
+            Nordamerika dar. Zum jetzigen Zeitpunkt lässt sich das Korpus dabei in erster Linie als
+            ‚Korpus frankophoner Pressesprachen‘ nutzen. Die Arbeitsumgebung <emph>Varitext</emph>
+            bietet einen vergleichsweise benutzungsfreundlichen Zugang zum Textkorpus und stellt
+            erhellende automatische Analysen sowie statistische Auswertungen bereit. Als dringend
+            erforderlich erweist sich eine transparentere Darstellung und Beschreibung des Projekts,
+            der Plattform und vor allem des Korpus; dies gilt sowohl in Hinsicht auf die methodische
+            und inhaltliche Korpuskonstruktion als auch auf die sprachwissenschaftliche Verortung
+            seines Inhalts. Eine solche Dokumentation stellt (einmal ganz abgesehen von ihrem
+            Interessantheitswert) aus korpuslinguistischer Sicht die Voraussetzung für eine adäquate
+            Nutzung der Ressource und die anschließende Bewertung der Ergebnisse dar.</p>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Analyse et traitement informatique de la langue française. 2017. “Base
+                  textuelle FRANTEXT.“ Accessed 30.05.2017. <ref target="http://www.frantext.fr/"
+                     >http://www.frantext.fr/</ref>.</bibl>
+               <bibl>Biber, Douglas, Susan Conrad, and Randi Reppen. 1998. <emph>Corpus Linguistics:
+                     Investigating language structure end use.</emph> Cambridge: Cambridge
+                  University Press.</bibl>
+               <bibl>Bickel, Hans. 2000. “Deutsch in der Schweiz als nationale Varietät des
+                  Deutschen.“ <emph>Sprachreport</emph> (4): 21-27.</bibl>
+               <bibl>Burkhardt, Julia, Elena Potapenko, Rebekka Sierig, and Aramís Concepción Durán.
+                  In Vorbereitung. “Leipziger FrItz-Korpus: Das Korpus französischer und
+                  italienischer Zeitungssprache und seine Auszeichnung.“ <emph>Romanische
+                     Studien.</emph>
+               </bibl>
+               <bibl>Burr, Elisabeth. 2004. “Das Korpus romanischer Zeitungssprachen in Forschung
+                  und Lehre.“ In <emph>Romanistik und neue Medien: Romanistisches Kolloquium
+                     XVI</emph>, edited by Wolfgang Dahmen, Günter Holtus, Johannes Kramer, Michael
+                  Metzeltin, Wolfgang Schweickard, and Otto Winkelmann, 133-162. Tübingen:
+                  Narr.</bibl>
+               <bibl>Laboratoire ICAR. 2014. “Corpus de Langue parlée en interaction.“ <ref
+                     target="https://web.archive.org/save/_embed/http://clapi.ish-lyon.cnrs.fr/"
+                     >https://web.archive.org/save/_embed/http://clapi.ish-lyon.cnrs.fr/</ref>.</bibl>
+               <bibl>Diwersy, Sascha. 2014. “The Varitext platform and the Corpus des variétés
+                  nationales du français (CoVaNa-FR) as resources for the study of French from a
+                  pluricentric perspective.“ <emph>Proceedings of the First Workshop on Applying NLP
+                     Tools to Similar Languages, Varieties and Dialects</emph>: 48-57. doi:
+                  10.3115/v1/W14-5306.</bibl>
+               <bibl>Pöll, Bernhard. 1998. <emph>Französisch außerhalb Frankreichs: Geschichte,
+                     Status und Profil regionaler und nationaler Varietäten.</emph> Tübingen:
+                  Niemeyer.</bibl>
+               <bibl>Pöll, Bernhard. 2000. “Plurizentrische Sprachen im Fremdsprachenunterricht (am
+                  Beispiel des Französischen)“ In <emph>Normen im Fremdsprachenunterricht</emph>,
+                  edited by Wolfgang Börner, Wolfgang and Klaus Vogel, 51-63. Tübingen: Narr.</bibl>
+               <bibl>Pusch, Claus D. 2014. “Les corpus romans contemporains.“ In <emph>Manuels des
+                     languges romanes</emph>, edited by Andre Klump, Johannes Kramer and Aline
+                  Willems, 173-196. Berlin / Boston: de Gruyter.</bibl>
+               <bibl>Reiffenstein, Ingo. 2010. “Das Problem der nationalen Varietäten.
+                  Rezensionsaufsatz zu Ulrich Ammon: Die deutsche Sprache in Deutschland, Österreich
+                  und der Schweiz. Das Problem der nationalen Varietäten, Berlin/New York 1995.“
+                     <emph>Zeitschrift für Deutsche Philologie</emph> 1: 78-89. Accessed 10.04.2017.
+                     <ref target="https://www.zfdphdigital.de/ZFDPH.01.2001.078"
+                     >https://www.zfdphdigital.de/ZFDPH.01.2001.078</ref>.</bibl>
+               <bibl>Siepmann, Dirk, Christoph Bürgel, and Sascha Diwersy. 2016. “Le Corpus de
+                  référence du français contemporain (CRFC), un corpus massif du français largement
+                  diversifié par genres.” In <emph>SHS Web of Conferences</emph> (27): 11002. doi:
+                  10.1051/shsconf/20162711002.</bibl>
+               <bibl>Sinclair, John. 2005. “Corpus and Text: Basic Principles.“ In <emph>Developing
+                     Linguistic Corpora: a Guide to Good Practice</emph>, edited by Martin Wynne.
+                  Oxford: Oxbow Books <ref
+                     target="https://web.archive.org/web/20170530110622/http://ota.ox.ac.uk/documents/creating/dlc/"
+                     >https://web.archive.org/web/20170530110622/http://ota.ox.ac.uk/documents/creating/dlc/</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+
+   </text>
+</TEI>

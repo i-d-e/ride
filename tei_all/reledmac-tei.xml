@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.11.1">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Reledmac. Typesetting technology-independent critical editions with
+                    LaTeX</title>
+                <author ref="https://orcid.org/0000-0003-0464-5036">
+                    <name>
+                        <forename>Andrew N. J.</forename>
+                        <surname>Dunning</surname>
+                    </name>
+                    <affiliation>
+                        <orgName>Bodleian Library, University of Oxford</orgName>
+                        <placeName>Oxford, UK</placeName>
+                    </affiliation>
+                    <email>andrew.dunning@bodleian.ox.ac.uk</email>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+                <date when="2020-01">Januar 2020</date>
+                <idno type="URI">https://ride.i-d-e.de/issue-11/reledmac/</idno>
+                <idno type="DOI">10.18716/ride.a.11.1</idno>
+                <idno type="archive"
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue11/reledmac/reledmac.pdf</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="j">RIDE - A review journal for digital editions and resources</title>
+                <editor ref="https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+                <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+                <editor ref="https://orcid.org/0000-0002-2162-5531" role="managing">Franz
+                    Fischer</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="https://orcid.org/0000-0003-1438-3236" role="technical">Martina
+                    Scholger</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+                    Neuber</editor>
+                <biblScope unit="issue" n="11">Tools and Environments</biblScope>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-11</idno>
+            </seriesStmt>
+            <notesStmt>
+                <relatedItem type="reviewed_resource">
+                    <bibl>
+                        <title>Reledmac</title>
+                        <editor>Maïeul Rouquette</editor>
+                        <date type="publication">1987-2019</date>
+                        <idno type="URI">https://ctan.org/pkg/reledmac</idno>
+                        <date type="accessed">2019-07-21</date>
+                    </bibl>
+                </relatedItem>
+                <relatedItem type="reviewing_criteria">
+                    <bibl>
+                        <ref
+                            target="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/"
+                            >Criteria for Reviewing Digital Text Collections</ref>
+                    </bibl>
+                </relatedItem>
+            </notesStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en"/>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="en">
+                    <term>critical apparatus</term>
+                    <term>open-source</term>
+                    <term>print editions</term>
+                    <term>typesetting</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy
+                    xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+                    <category xml:id="general_information">
+                        <category xml:id="software_type">
+                            <catDesc>
+                                <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                            </catDesc>
+                            <catDesc>What type of software is it?</catDesc>
+                            <category xml:id="software_tool">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="software_vre">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="identification_environment">
+                            <catDesc>
+                                <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                            </catDesc>
+                            <catDesc>On which platform runs the tool?</catDesc>
+                            <category xml:id="identification_os">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="identification_browser">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="identification_other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="purpose">
+                            <catDesc>
+                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                            </catDesc>
+                            <catDesc>For what purpose was the tool developed?</catDesc>
+                            <category xml:id="purpose_general">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="purpose_specific">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="funding">
+                            <catDesc>
+                                <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                            </catDesc>
+                            <catDesc>Which is the financial model of the tool?</catDesc>
+                            <category xml:id="funding_free">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="funding_support">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="funding_paywall">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="maturity">
+                            <catDesc>
+                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                            </catDesc>
+                            <catDesc>What is the development stage of the tool?</catDesc>
+                            <category xml:id="maturity_release">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="maturity_beta">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="maturity_alpha">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="methods">
+                        <category xml:id="programming_lang">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Which programming languages and technologies are
+                                used?</catDesc>
+                            <category xml:id="programming_lang_c">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_java">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_python">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_php">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_r">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_ruby">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="programming_lang_xslt">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>TeX</desc>
+                                </category>
+                            </category>
+                            <category corresp="#unknown">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="reuse">
+                            <catDesc>
+                                <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the tool reuse portions of other existing
+                                software?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="input_format">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                            </catDesc>
+                            <catDesc>Which programming languages and technologies are
+                                used?</catDesc>
+                            <category xml:id="input_format_xml">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_xml-tei">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_txt">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_pdf">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_csv">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_html">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_json">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="input_format_rdf">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                        <category xml:id="output_format">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                            </catDesc>
+                            <catDesc>Which programming languages and technologies are
+                                used?</catDesc>
+                            <category xml:id="output_format_xml">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_xml-tei">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_txt">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_pdf">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_csv">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_html">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_json">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="output_format_rdf">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                        <category xml:id="encoding">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                            </catDesc>
+                            <catDesc>Which character encoding formats are supported?</catDesc>
+                            <category xml:id="encoding_latin-1">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="encoding_utf-8">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="encoding_utf-16">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#unknown">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="encoding_preprocessing">
+                            <catDesc>Is a pre-processing conversion included?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="dependencies">
+                            <catDesc>
+                                <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                            </catDesc>
+                            <catDesc>Does the documentation list dependencies on other software,
+                                libraries or hardware?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="dependencies_installation">
+                            <catDesc>If yes, is the software handling the installation of
+                                dependencies during the general installation process (you don't have
+                                to install them manually before the installation)?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="usability">
+                        <category xml:id="documentation">
+                            <catDesc>
+                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                            </catDesc>
+                            <catDesc>Is documentation and/or a manual available? (tool website,
+                                wiki, blog, documentation, or tutorial)</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="documentation_format">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>Which format has the documentation?</catDesc>
+                            <category xml:id="documentation_format_readme">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_format_txt">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_format_html">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_format_pdf">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="documentation_section">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>Which of the following sections does the documentation
+                                contain?</catDesc>
+                            <category xml:id="documentation_section_getting">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_step">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_example">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_troubleshooting">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_faq">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_support">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_section_api">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="documentation_language">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>In what languages is the documentation available?</catDesc>
+                            <category xml:id="documentation_language_arabic">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_chinese">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_danish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_english">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_finnish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_french">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_german">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_greek">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_hebrew">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_hindi">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_italian">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_japanese">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_latin">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_norwegian">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_polish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_portuguese">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_russian">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_spanish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_swedish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentation_language_turkish">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="support">
+                            <catDesc>
+                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                            </catDesc>
+                            <catDesc>Is there a method to get active support from the developer(s)
+                                or from the community?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="support_form">
+                            <catDesc>
+                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                            </catDesc>
+                            <catDesc>Which form of support is offered?</catDesc>
+                            <category xml:id="support_form_help">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="support_form_forum">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="support_form_mailinglist">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="tracker">
+                            <catDesc>
+                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                            </catDesc>
+                            <catDesc>Is it possible to post bugs or issue using issue tracker
+                                mechanisms?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="build">
+                            <catDesc>
+                                <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                            </catDesc>
+                            <catDesc>Grade how straightforward it is to build or install the tool on
+                                a supported platform:</catDesc>
+                            <category xml:id="build_straightforward">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="build_normal">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="build_tricky">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="test">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <catDesc>Is there a test suite, covering the core functionality in order
+                                to check that the tool has been correctly built or
+                                installed?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="platform_deploy">
+                            <catDesc>
+                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                            </catDesc>
+                            <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                            <category xml:id="platform_deploy_linux">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="platform_deploy_mac">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="platform_deploy_android">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="platform_deploy_ios">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="platform_deploy_windows">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="devices_deploy">
+                            <catDesc>
+                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                            </catDesc>
+                            <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                            <category xml:id="devices_deploy_desktop">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="devices_deploy_laptop">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="devices_deploy_smartphone">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="devices_deploy_tablet">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="devices_deploy_smartboard">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#unknown">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="browser_deploy">
+                            <catDesc>
+                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                            </catDesc>
+                            <catDesc>If the tool is web-based: On which browsers can the
+                                tool/software be deployed?</catDesc>
+                            <category xml:id="browser_deploy_mozilla">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browser_deploy_chrome">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browser_deploy_safari">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#unknown">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#not_applicable">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="browser_plugin">
+                            <catDesc>
+                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                            </catDesc>
+                            <catDesc>If the tool is web-based: Does the tool rely on browser
+                                plugins?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="2"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="api">
+                            <catDesc>
+                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                            </catDesc>
+                            <catDesc>Is there an API for the tool?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="code">
+                            <catDesc>
+                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                            </catDesc>
+                            <catDesc>Is the source code open?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="license">
+                            <catDesc>
+                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                            </catDesc>
+                            <catDesc>Under what license is the tool released?</catDesc>
+                            <category xml:id="license_gpl">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_lgpl">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_apache">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_mit">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_mozilla">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_cc0">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccby">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccbynd">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccbync">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccbysa">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccbyncnd">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license_ccbyncsa">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>LaTeX Project Public Licence</desc>
+                                </category>
+                            </category>
+                            <category xml:id="license_notexplicit">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="credit">
+                            <catDesc>
+                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                            </catDesc>
+                            <catDesc>Does the software make adequate acknowledgement and credit to
+                                the project contributors?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="registered">
+                            <catDesc>
+                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                            </catDesc>
+                            <catDesc>Is the tool/software registered in a software
+                                repository?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="registered_contribute">
+                            <catDesc>If yes, can you contribute to the software development via the
+                                repository/development platform?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="analyzed">
+                            <catDesc>
+                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                            </catDesc>
+                            <catDesc>Can the code be analyzed easily (is it structured, commented,
+                                following standards)?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="extended">
+                            <catDesc>
+                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                            </catDesc>
+                            <catDesc>Can the code be extended easily (because there are contribution
+                                mechanisms, attribution for changes and backward
+                                compatibility)?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="reused">
+                            <catDesc>
+                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                            </catDesc>
+                            <catDesc>Can the code be reused easily in other contexts (because there
+                                are appropriate interfaces and/or a modular architecture)?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="security">
+                            <catDesc>
+                                <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                            </catDesc>
+                            <catDesc>Does the software provide sufficient information about the
+                                treatment of the data entered by the users?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="maintenance">
+                            <catDesc>
+                                <ref target="#K3.12">cf. Catalogue 3.12</ref>
+                            </catDesc>
+                            <catDesc>Is there information available whether the tool will be
+                                supported currently and in the future?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="citability">
+                            <catDesc>
+                                <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                            </catDesc>
+                            <catDesc>Does the tool supply citation guidelines (e.g. using the
+                                Citation File Format)? </catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="interaction">
+                        <category xml:id="user">
+                            <catDesc>
+                                <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                            </catDesc>
+                            <catDesc>What kind of users are expected?</catDesc>
+                            <category xml:id="user_researcher">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_scientist">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_humanist">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_public">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="user_interaction">
+                            <catDesc>
+                                <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                            </catDesc>
+                            <catDesc>What kind of user interactions are expected?</catDesc>
+                            <category xml:id="user_interaction_reading">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_text">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_analysis">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_image">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_searching">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_visualization">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_comparing">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interaction_compiling">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="user_interface">
+                            <catDesc>
+                                <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                            </catDesc>
+                            <catDesc>What kind of interface does the tool provide? </catDesc>
+                            <category xml:id="user_interface_gui">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interface_cli">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="user_interface_api">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="visualization">
+                            <catDesc>
+                                <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                            </catDesc>
+                            <catDesc>Does the tool provide a particular visualizations (in terms of
+                                analysis) of the input and/or the output data?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="empowerment">
+                            <catDesc>
+                                <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Is the user allowed to customize the functioning of the tool
+                                and the output configuration?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="accessibility">
+                            <catDesc>
+                                <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                            </catDesc>
+                            <catDesc>Does the tool provide particular features for improving
+                                accessibility, allowing „people with the widest range of
+                                characteristics and capabilities" to use it?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p>Reledmac, an open-source package for the LaTeX typesetting system, offers a
+                    reliable method to arrange text on a page with multiple levels of scholarly
+                    apparatus and commentary. Its straightforward interface and wide availability
+                    has allowed its use in several projects aiming to visualize an edition encoded
+                    in TEI XML in a printed format.</p>
+            </div>
+        </front>
+        <body>
+            <div xml:id="div1">
+                <head>Introduction</head>
+                <p xml:id="p1">It is questionable whether anyone is happy with the traditional
+                    format of the critical printed edition. The critical apparatus was designed
+                    around the constraints of typesetting in the eighteenth century, and leaves much
+                    to be desired as a method of visualizing textual variation. Researchers rely
+                    daily on being able to search primary sources, but most public corpora are based
+                    on editions from the nineteenth century, since few series of critical editions
+                    make their texts openly available in digital form. Nonetheless, many academics
+                    view printed books as the most reasonable method of publishing critical editions
+                    in light of concerns over digital publications’ stability, readability, and
+                    authority. If we wish to encourage more scholars to start editing texts in ways
+                    that exploit the computing resources available to us, we need to provide ways to
+                    produce editions that give the best possible presentations of a text in both
+                    digital and print forms – editions that are designed for humans to read as well
+                    as our machines.</p>
+                <p xml:id="p2">There is not yet a reusable solution to editing texts in such a
+                    technology-independent form, but one of the key pieces in this puzzle has
+                    existed for decades: software for automatically typesetting texts with a
+                    scholarly apparatus. Maïeul Rouquette’s Reledmac, a package for the venerable
+                    LaTeX typesetting system, has emerged as a readily available program that, used
+                    correctly, can produce professional results. A non-comprehensive bibliography
+                    lists almost seventy publications that have used it with a multitude of
+                    languages, including contributions from leading scholars (Wujastyk and Rouquette
+                    2013). Although the package’s gestation over more than three decades has
+                    resulted in some quirks, the wide support for LaTeX and its portability to
+                    nearly any system has made Reledmac’s adoption possible by several digital
+                    editing projects, showing its potential as a key piece of scholarly
+                    infrastructure.</p>
+                <p xml:id="p3">
+                    <figure xml:id="img1">
+                        <graphic
+                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/reledmac/pictures/picture-1.png"/>
+                        <head type="legend">Toronto Medieval Latin Texts edition and commentary,
+                            typeset using Reledmac.</head>
+                    </figure> This review addresses Reledmac<note xml:id="ftn1">
+                        <ref
+                            target="https://web.archive.org/web/20191211173320/https://ctan.org/pkg/reledmac"
+                            >https://web.archive.org/web/20191211173320/https://ctan.org/pkg/reledmac</ref>.
+                    </note> 2.32.1, released 21 July 2019. It is based in part on my experience
+                    using it to typeset my own work encoded using the Text Encoding Initiative (TEI)
+                    guidelines. Reledmac’s greatest potential is as a mechanism for typesetting
+                    structured editions, but the TEI community has left this route underdeveloped
+                    and poorly documented. It remains less work to interact with the package
+                    directly if one’s primary goal is a short printed edition. I used Reledmac in
+                    this way when I typeset a student edition and commentary for the Toronto
+                    Medieval Latin Texts series (Robins 2019), which gave ample opportunity to
+                    explore its features. (Philippa M. W. Matheson had previously set my own edition
+                    in the series using plain TeX: Dunning 2016.) Robins wrote the edition in
+                    Microsoft Word, which I initially converted into LaTeX using Pandoc<note
+                        xml:id="ftn2">
+                        <ref target="https://web.archive.org/web/20191211173409/https://pandoc.org/"
+                            >https://web.archive.org/web/20191211173409/https://pandoc.org/</ref>.</note>
+                    before making manual adjustments (MacFarlane; cf. Krewinkel and Winkler 2017). I
+                    encountered several minor bugs in the package over the course of this project,
+                    which Rouquette was kind enough to address. I also submitted minor improvements
+                    to the package via its GitHub repository. The options available in Reledmac
+                    facilitated improvements on several aspects of the series design (<ref
+                        type="crossref" target="#img1">Fig. 1</ref> shows the final result),
+                    accommodating practically any layout for a commentary or apparatus.</p>
+            </div>
+            <div xml:id="div2">
+                <head>Reviving typography with TeX</head>
+                <p xml:id="p4">Reledmac is a mature tool with a long gestation; to understand its
+                    advantages, success, and idiosyncrasies, one needs to consider it within the
+                    development of the TeX typesetting system, which is sometimes called ‘plain TeX’
+                    to distinguish it from the typesetting systems based on it such as LaTeX. Donald
+                    Knuth, a computer scientist and mathematician, first released this program in
+                    1978 in reaction to the poor quality of early digitally typeset books (Knuth
+                    1986 is his comprehensive guide). This program quickly became popular in
+                    academic circles, and is particularly respected for the Knuth-Plass line
+                    breaking algorithm (Knuth and Plass 1981), which composes text as a paragraph to
+                    minimize hyphenation and other typesetting problems. By contrast, standard word
+                    processors and Web browsers still compose text on a line-by-line basis, which
+                    produces a distinctly mechanical feel and reduces reading comprehension.</p>
+                <p xml:id="p5">Both medieval scribes and early printers aimed for evenness in what
+                    designers now call ‘type colour’, producing text blocks that look almost grey
+                    when one squints at them, without distracting gaps or abrupt combinations of
+                    heavy and light text. The industrialization of typesetting beginning in the
+                    nineteenth century gradually eroded this principle. The developers of
+                    phototypeset books, beginning in the 1950s, almost completely ignored it. This
+                    underlies much of the poor quality of a digitally produced book from the 1970s
+                    in comparison to its equivalent from earlier centuries.</p>
+                <p xml:id="p6">The celebrated typographer Hermann Zapf further advanced the state of
+                    automated typesetting with his Hz-program, introducing what is sometimes called
+                    ‘microtypography’. This software implemented the techniques of scribes and the
+                    first type compositors to produce consistent type colour by using narrower or
+                    wider versions of characters (Zapf 1993; Bringhurst 2013). This was far more
+                    laborious to produce in print than in manuscript, and quickly fell by the
+                    wayside, but this does not make the underlying concept less useful. It has been
+                    used for many recent books after Adobe Systems acquired Zapf’s software for
+                    integration in its page layout software, InDesign. The principles have also been
+                    implemented for TeX, and can be easily included in any document using the
+                    Microtype package (Schlicht 2004–2019). It is this approach to paragraph
+                    composition that allows the TeX family of software to produce such excellent
+                    results.</p>
+            </div>
+            <div xml:id="div3">
+                <head>The LaTeX ecosystem</head>
+                <p xml:id="p7">Few people now use TeX directly, instead using a derivative such that
+                    facilitates a structured approach to typesetting. Leslie Lamport released LaTeX
+                    in 1983, abstracting much of TeX behind macros centred on the organization of a
+                    document. For example, it provides a <code>\chapter{Chapter Title}</code>
+                    command to begin a new book chapter. A team of volunteers continues to maintain
+                    this program. LaTeX works around the principle of a <emph>document class,</emph>
+                    which allows one to specify a module that provides a starting design for a
+                    typical type of publication, such as an article, book, or letter. Developers
+                    have produced a wide range of classes that cover various scenarios, as well as
+                        <emph>packages</emph> that add extra capabilities to other classes –
+                    Reledmac is one of these.</p>
+                <p xml:id="p8">These additions are both the greatest strength and weakness of LaTeX.
+                    Individual volunteers write most packages, which provide additional TeX
+                    programming that exists on the same level as LaTeX itself. They can produce
+                    unexpected results when combined. The creators of packages often cease to
+                    maintain them, and old packages are rarely pruned from CTAN, the standard
+                    repository for TeX-related software, leaving traps for users who might
+                    accidentally use one of these packages after finding an old reference to it.
+                    This situation has been remedied in part through the creation of KOMA-Script
+                    (Kohm 1994–2019) and Memoir (Wilson and Madsen 2001–2018), providing versatile
+                    and carefully conceived classes that eliminate the need for many packages and
+                    provide their own reference manuals covering most aspects of LaTeX. It is such
+                    packages, combined with the generous community of users that maintain online
+                    help forums, that has sustained LaTeX over so many years in spite of many
+                    shortcomings in its design.</p>
+                <p xml:id="p9">The final complication of using TeX is the series of different
+                        <emph>engines</emph> that can turn its files into a PDF: there are three
+                    different options, each with limitations. TeX predates both PDF files and the
+                    need to display formatted documents on a screen: it originally produced its own
+                    format to be fed into a printer. An engine emerged by the late 1990s for
+                    producing a PDF from a TeX file, called pdfTeX; but it cannot handle many
+                    Unicode characters or normal system fonts. XeTeX is the second engine typically
+                    used today, implementing Unicode and modern font technologies, but in a way that
+                    broke compatibility with earlier LaTeX packages (including Microtype). LuaTeX is
+                    gradually emerging as a replacement for both, maintaining compatibility with
+                    pdfTeX alongside the innovations of XeTeX. It has not yet caught on universally,
+                    however, because it is much slower than the other two engines. Some linguistic
+                    support available for XeTeX (especially for right-to-left languages) is not yet
+                    complete for LuaTeX. As a result, the seemingly simple operation of turning a
+                    LaTeX file into a PDF can be fraught with complications.</p>
+                <p xml:id="p10">An attempt to streamline this complex situation exists in ConTeXt, a
+                    more recent abstraction of TeX independent of LaTeX. In spite of its many
+                    improvements, it has yet to gain comparable traction because it lacks the
+                    ready-made classes and packages that allow one to quickly produce good results
+                    with LaTeX, as long as one is working within its paradigm. LaTeX is truly a
+                    reflection of humanity, showing the beauty that collective generosity can
+                    produce, but also the confusion that results from a lack of coordination.</p>
+            </div>
+            <div xml:id="div4">
+                <head>Typesetting an edition with Reledmac</head>
+                <p xml:id="p11">It is within this web of packages and different interfaces for TeX
+                    that Reledmac exists, and its history defines both its strengths and
+                    limitations. Reledmac originates in Edmac (short for ‘editing macros’), which
+                    John Lavagnino (a Shakespearean and systems manager then at Brandeis University,
+                    now at King’s College London) and Dominik Wujastyk (a Sanskrit scholar, then at
+                    the Wellcome Institute for the History of Medicine, now at the University of
+                    Alberta) designed in 1987–89, developing it in their spare time to support their
+                    own editing work (Lavagnino and Wujastyk 1990; Wujastyk 1993). LaTeX had not yet
+                    become widespread, and they designed the package to interact directly with plain
+                    TeX without taking LaTeX functionality into account. Beginning in 1994, Peter
+                    Wilson (a specialist in information modelling) ported the package to LaTeX as a
+                    pure labour of love, renaming it Ledmac (Walden 2006). Wilson was responsible
+                    for a large number of LaTeX packages, leaving a maintenance gap on his
+                    retirement that took several people to fill (Robertson 2009).</p>
+                <p xml:id="p12">Maïeul Rouquette, a scholar of early Christianity at the University
+                    of Lausanne, took over Ledmac in 2011 when he was using it to write his doctoral
+                    thesis (Rouquette 2017), renaming it first Eledmac and then Reledmac, which
+                    allowed him to revise the interface and functionality without affecting projects
+                    that used older versions. He has since continued to improve the package’s
+                    functionality beyond the scope of his own research. Rouquette has also put
+                    significant energy into writing thorough documentation, alongside a general
+                    introduction to LaTeX for humanists that discusses Reledmac alongside Reledpar,
+                    its sister package for setting parallel texts (Rouquette 2012). The project’s
+                    GitHub repository lists fourteen other minor contributors. The culture of
+                    open-source software created out of goodwill for a practical end without
+                    explicit funding is typical for LaTeX packages. This haphazard model often
+                    produces useful results, but it is not clear that it is sustainable, especially
+                    as the employment of early-career researchers becomes increasingly unstable.</p>
+                <p xml:id="p13">The legacy of the original Edmac and the process of its transition
+                    to LaTeX remains evident in the package as it now exists. Wilson had only the
+                    goal of making the package functional, and did not rewrite it to use the logic
+                    of LaTeX. As a result, the package must emulate the functionality of many basic
+                    LaTeX macros such as headings and block quotations rather than use them
+                    directly, and they often do not behave in the way one expects. For instance,
+                    although KOMA-Script and Wilson’s own Memoir class include environments for
+                    setting verse, they give unexpected results in Reledmac, and one instead needs
+                    to use its internal mechanism. One needs to treat Reledmac almost as a separate
+                    system from LaTeX, and the package would need to be rewritten to resolve this
+                    situation. The Ednotes package began this effort (Lück 2003), but it never
+                    reached equal functionality and development ceased in 2006. This situation is
+                    not the fault of the package’s authors, but it increases the challenge of
+                    converting text for typesetting in LaTeX with Reledmac, as well as the learning
+                    curve.</p>
+                <p xml:id="p14">
+                    <figure xml:id="img2">
+                        <graphic
+                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/reledmac/pictures/picture-2.png"/>
+                        <head type="legend">A simple Reledmac document.</head>
+                    </figure> Once one understands Reledmac’s limitations, and its methodological
+                    focus on visualizing textual variants using traditional mechanisms developed for
+                    print, its interface is nearly as simple as one can achieve. A critical edition
+                    involves a complex dataset, and the LaTeX format imposes further constraints
+                    similar to those of the XML format underlying TEI. The software works from
+                    encoding for critical notes that focuses on typography rather than semantics,
+                    running its own TeX code to arrange notes and line numbers according to LaTeX’s
+                    positioning of the text. This is a basic document with critical notes (see also
+                        <ref type="crossref" target="#img2">Fig. 2</ref>): <figure xml:id="code1">
+                        <eg> \documentclass{scrbook} % KOMA-Script book class <lb/>
+                            \usepackage{microtype} % improves justification <lb/>
+                            \usepackage[pdfusetitle,hidelinks]{hyperref} % adds links from apparatus
+                            to text <lb/> \usepackage[series={A,B}]{reledmac} % enables two levels
+                            of apparatus <lb/> \title{Sample Edition} <lb/> \author{Andrew Dunning}
+                            <lb/> \begin{document} % begin LaTeX document <lb/> \maketitle <lb/>
+                            \chapter{Introduction} <lb/> Introductory text. <lb/> \chapter{Edition}
+                            <lb/> % text outside \beginnumbering … \endnumbering works as normal
+                            LaTeX <lb/> \beginnumbering % begins Reledmac numbered section <lb/>
+                            \pstart % begin a paragraph in Reledmac; or use the \autopar command
+                            <lb/> This is a \edtext{test}{\Afootnote{experimental \emph{L}}} <lb/>
+                            \edtext{sentence}{\Bfootnote{Introduced to English via Old French <lb/>
+                            from Latin \emph{sententia} 'opinion'.}}. <lb/> \pend % end a paragraph
+                            in Reledmac <lb/> \endnumbering % end Reledmac numbered section <lb/>
+                            \end{document} % end LaTeX document </eg>
+                        <head type="legend"/>
+                    </figure>
+                </p>
+                <p xml:id="p15">Files using Reledmac can be rendered using any LaTeX engine. It
+                    results in slightly longer compilation times than normal, because it needs to
+                    generate extra temporary files. The example above enables two series of critical
+                    notes with Reledmac. (One can instead use standard numbered footnotes or
+                    endnotes.) The <code>\edtext{text}{commands}</code> command marks a word or
+                    phrase for comment; one can add as many commands as necessary in the second set
+                    of braces for a critical apparatus, source apparatus, or whatever else the
+                    edition requires. One can have multiple notes on the same word using
+                        <code>\Afootnote</code>, <code>\Bfootnote</code>, and so forth.</p>
+                <p xml:id="p16">
+                    <figure xml:id="img3">
+                        <graphic
+                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/reledmac/pictures/picture-3.png"/>
+                        <head type="legend">Usage of the <code>\lemma</code> command.</head>
+                    </figure> Reledmac demonstrates a few minor shortcomings in facilitating
+                    features of high-quality editions, though there are usually ways to achieve the
+                    desired results by hand. When making a note on a long passage, most editors will
+                    refer only to its first and last words. In Reledmac, this requires the
+                        <code>\lemma</code> command to truncate the text (see also <ref
+                        type="crossref" target="#img3">Fig. 3</ref>): <figure xml:id="code2">
+                        <eg> \edtext{Arma uirumque cano}{\lemma{arma … cano} <lb/> \Bfootnote{The
+                            opening line of Virgil, \emph{Aeneid.}}} </eg>
+                        <head type="legend"/>
+                    </figure>
+                </p>
+                <p xml:id="p17">This must be done by hand for every note that does not quote the
+                    full lemma. In some cases, this is advantageous. For commentaries in particular,
+                    the ability to write one’s own lemma to focus on the precise passage in question
+                    is a great help. On the other hand, it would be a great service if Reledmac
+                    could borrow Classical Text Editor’s options for setting document-wide styles to
+                    automatically process lemmata by truncating a phrase to the first and last
+                    words; removing punctuation and other specified characters; making the text
+                    lowercase; and transliterating text as appropriate, for example from V to u in
+                    Latin. Similarly, it would be useful to have an option to abbreviate number
+                    ranges automatically (e.g. changing ‘107–108’ to ‘107–8’). These, however, are
+                    among the few obvious examples of missing functionality in the package.</p>
+                <p xml:id="p18">
+                    <figure xml:id="img4">
+                        <graphic
+                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/reledmac/pictures/picture-4.png"/>
+                        <head type="legend">Example of automatic cross references.</head>
+                    </figure>Reledmac also includes a powerful cross referencing system, allowing
+                    one to add references to page and line numbers and have them remain accurate
+                    through any changes to the document (see also <ref type="crossref"
+                        target="#img4">Fig. 4</ref>): <figure xml:id="code3">
+                        <eg> \documentclass{scrbook} <lb/> \usepackage{microtype} <lb/>
+                            \usepackage[pdfusetitle,hidelinks]{hyperref} <lb/>
+                            \usepackage[series={A,B}]{reledmac} <lb/> % Add labels to cross
+                            references <lb/> \setapprefprefixsingle{line } <lb/>
+                            \setapprefprefixmore{lines } <lb/> \setSErefprefixsingle{line } <lb/>
+                            \setSErefprefixmore{lines } <lb/> \setSErefonlypageprefixsingle{p.~}
+                            <lb/> \setSErefonlypageprefixmore{pp.~} <lb/> \title{Sample Edition}
+                            <lb/> \author{Andrew Dunning} <lb/> \begin{document} <lb/> \maketitle
+                            <lb/> \chapter{Introduction} <lb/> Introductory text: see
+                            \SEref{sentence} and note to \appref{test}. <lb/> \chapter{Edition}
+                            <lb/> \beginnumbering <lb/> \pstart <lb/> \edlabelS{sentence}This is a
+                            \edtext{test}{\applabel{test} <lb/> \Afootnote{experimental \emph{L}}}
+                            \edtext{sentence}{\Bfootnote{Introduced to English via Old French from
+                            Latin \emph{sententia} `opinion'.}}.\edlabelE{sentence} <lb/> \pend
+                            <lb/> \endnumbering <lb/> \end{document} </eg>
+                        <head type="legend"/>
+                    </figure>
+                </p>
+                <p xml:id="p19">Reledmac has several commands for creating cross references, but
+                    most users will only need two. The <code>\SEref{label}</code> command allows one
+                    to refer to a range of text between <code>\edlabelS{label}</code> and
+                        <code>\edlabelE{label}</code> (or <code>\edlabelSE{label}</code> for a
+                    single point in the text). The <code>\appref{label}</code> allows one to refer
+                    to the lines to which a critical note labelled with
+                        <code>\applabel{label}</code> refers.</p>
+            </div>
+            <div xml:id="div5">
+                <head>Using Reledmac with TEI</head>
+                <p xml:id="p20">LaTeX syntax is less verbose than XML, and I have known several
+                    colleagues who have found it initially much easier to understand than TEI. Over
+                    the long term, however, writing an edition in TEI rather than directly in LaTeX
+                    is more sustainable, even if it is intended purely for print publication. From a
+                    practical perspective, XML validation allows one to find errors more quickly: a
+                    missing bracket can cause LaTeX to fall over itself in reporting obtuse error
+                    messages through its logs, which themselves are more difficult to read than
+                    necessary. Reledmac is focused purely on typesetting, making it difficult to
+                    develop mechanical checks for one’s editorial work. TEI’s focus on semantic
+                    markup is highly useful in this respect, and a number of researchers have taken
+                    advantage of this on a project-level basis. It is crucial that the TEI community
+                    seize this opportunity if it wishes to be viewed as a serious publishing
+                    option.</p>
+                <p xml:id="p21">There are a number of scripts available for typesetting TEI editions
+                    with LaTeX and Reledmac, most of them developed to fit the needs of specific
+                    projects. The earliest of these is part of the TEI Consortium’s official
+                    stylesheets (Rahtz et al. 2011–2019). These stylesheets do not render text
+                    following any scholarly convention for a printed critical edition, and are
+                    complex to modify. As a result, implementations for individual projects are
+                    usually written from scratch (e.g. Witt 2018; Camps 2017; McLean 2015–2016).
+                    None yet offer a general-purpose tool that renders TEI elements into the form
+                    one would normally expect for printed editions of premodern texts.</p>
+                <p xml:id="p22">
+                    <figure xml:id="img5">
+                        <graphic
+                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/reledmac/pictures/picture-5.png"/>
+                        <head type="legend">TEI Critical Apparatus Toolbox.</head>
+                    </figure> Marjorie Burghart’s TEI Critical Apparatus Toolbox<note xml:id="ftn3">
+                        <ref
+                            target="https://web.archive.org/web/20191211173459/http://teicat.huma-num.fr/"
+                            >https://web.archive.org/web/20191211173459/http://teicat.huma-num.fr/</ref>.</note>
+                    (see <ref type="crossref" target="#img5">Fig. 5</ref>) is an especially
+                    promising use of an automated typesetting tool as one of several elements for
+                    supporting the creation of editions (Burghart 2016). This web application
+                    provides tools for finding common errors in a critical apparatus (such as an
+                    unaccounted source), extracting the text of a particular witness, finding
+                    statistics on a document, and turning a standard TEI critical apparatus into a
+                    PDF using Reledmac. It provides an interface for most of Reledmac’s options,
+                    making them much easier to find than by sorting through its manual. Although it
+                    is not yet finished, this is an excellent demonstration of the role both TEI and
+                    Reledmac could play in developing a solution for creating any type of edition,
+                    and not merely one geared to a particular format.</p>
+                <p xml:id="p23">Such attempts are achievable because of the wide support for
+                    integrating LaTeX into other environments and its portability. Any full LaTeX
+                        distribution<note xml:id="ftn4">
+                        <ref
+                            target="https://web.archive.org/web/20191211173609/https://www.latex-project.org/get/"
+                            >https://web.archive.org/web/20191211173609/https://www.latex-project.org/get/</ref>.
+                    </note> includes Reledmac, ranging from versions for every common platform to
+                    editions that work inside a browser such as Overleaf<note xml:id="ftn5">
+                        <ref
+                            target="https://web.archive.org/web/20191211173826/https://www.overleaf.com/"
+                            >https://web.archive.org/web/20191211173826/https://www.overleaf.com/</ref>.
+                    </note>. Rouquette has made a concentrated effort to document the package’s
+                    options, alongside his introductory book to LaTeX. There is also an active
+                    community of users that provide support for one another in the Reledmac section
+                    on TeX Stack Exchange<note xml:id="ftn6">
+                        <ref
+                            target="https://web.archive.org/web/20191211173909/https://tex.stackexchange.com/questions/tagged/reledmac"
+                            >https://web.archive.org/web/20191211173909/https://tex.stackexchange.com/questions/tagged/reledmac</ref>.
+                    </note>. The plethora of online tutorials for LaTeX and the wide availability of
+                    the software, including on mobile platforms, makes it much easier to gain usable
+                    results from it than from TEI if one is working independently.</p>
+                <p xml:id="p24">At the same time, LaTeX has a number of oddities that can make
+                    transformation from XML somewhat complex. For example, there is no standard
+                    mechanism for changing the language, as there are two mutually incompatible
+                    packages for achieving this (Babel<note xml:id="ftn7">
+                        <ref
+                            target="https://web.archive.org/web/20191211173953/https://ctan.org/pkg/babel"
+                            >https://web.archive.org/web/20191211173953/https://ctan.org/pkg/babel</ref>.
+                    </note> and Polyglossia<note xml:id="ftn8">
+                        <ref
+                            target="https://web.archive.org/web/20191211174040/https://ctan.org/pkg/polyglossia"
+                            >https://web.archive.org/web/20191211174040/https://ctan.org/pkg/polyglossia</ref>.
+                    </note>). Reledmac also poses its own difficulties. For the historical reasons
+                    noted above, it is necessary to encode text (including headings and paragraphs)
+                    slightly differently from normal LaTeX. It also cannot automatically index
+                    identical words in a single line. In a critical apparatus, if one has two
+                    instances of ‘et’ in a single line, one would refer to them as ‘et1’ and ‘et2’.
+                    An extra script can mostly remedy this, but there remain some situations in
+                    which it must be checked by hand (Christensen 2018). In short, LaTeX is not the
+                    solution we would create today if we were developing it again from scratch – but
+                    it is the one we have, and it can produce excellent results when used
+                    carefully.</p>
+            </div>
+            <div xml:id="div6">
+                <head>Future directions</head>
+                <p xml:id="p25">Given this history of software cobbled together by a series of
+                    programmers, humanists, and non-specialists in spare time over three decades, it
+                    is a small miracle that LaTeX with Reledmac is not merely functional but has
+                    become the most reliable method of automatic typesetting for critical editions.
+                    It is to be hoped that one day the editing community will band together to give
+                    the project more support and ensure its sustainability, for it is clear that
+                    Rouquette could create a much more functional package if he had the time,
+                    resources, and desire to redesign it from the ground up. Both using the package
+                    directly and typesetting critical editions from TEI XML would be much more
+                    straightforward with a package designed from the outset to work with LaTeX.
+                    Alternatively, there might be more promise in creating a critical editing module
+                    for ConTeXt, a rationalized competitor to LaTeX that has a focus on typesetting
+                    XML directly without the need to first transform it into a different markup
+                    language. There have been some forays down this path (Hamid 2007), but nothing
+                    has yet seen the light of day.</p>
+                <p xml:id="p26">In the small field of software for critical editing, Reledmac fills
+                    a helpful niche alongside the more complex TUSTEP (Ott 1979; Schälkle and Ott
+                    2018) and the commercial Classical Text Editor (Hagel 2007), focusing on
+                    providing a key element of a publishing workflow rather than an all-encompassing
+                    editing environment. Its interface is as user-friendly as one can achieve in
+                    LaTeX code; its clear documentation and examples mean that one can reasonably
+                    expect to learn it oneself; and it can produce documents of the highest quality.
+                    One can hardly ask for more, and our community is indebted to Rouquette and his
+                    predecessors for putting so much of their energy into the basic digital
+                    infrastructure for the humanities that often goes unacknowledged.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl>Bringhurst, Robert. 2013. <emph>The Elements of Typographic Style</emph>.
+                        4th ed. Vancouver, BC: Hartley &amp; Marks.</bibl>
+                    <bibl>Burghart, Marjorie. 2016. ‘The TEI Critical Apparatus Toolbox: Empowering
+                        Textual Scholars Through Display, Control, and Comparison Features’.
+                            <emph>Journal of the Text Encoding Initiative</emph> 10 (December). <ref
+                            target="https://doi.org/10.4000/jtei.1520"
+                            >https://doi.org/10.4000/jtei.1520</ref>.</bibl>
+                    <bibl>Camps, Jean-Baptiste. 2017. <emph>TEItoLaTeX</emph>. <ref
+                            target="https://github.com/Jean-Baptiste-Camps/TEItoLaTeX"
+                            >https://github.com/Jean-Baptiste-Camps/TEItoLaTeX</ref>.</bibl>
+                    <bibl>Christensen, Michael Stenskjær. 2018. <emph>Samewords: Word Disambiguation
+                            in Critical Text Editions</emph>. <ref
+                            target="https://doi.org/10.5281/zenodo.1306292"
+                            >https://doi.org/10.5281/zenodo.1306292</ref>.</bibl>
+                    <bibl>Dekker, Dirk-Jan. 2012. ‘Typesetting Critical Editions with LaTeX: Ledmac,
+                        Ledpar and Ledarab’. 11 November 2012. <ref
+                            target="http://www.djdekker.net/ledmac/"
+                            >http://www.djdekker.net/ledmac/</ref>.</bibl>
+                    <bibl>Dunning, Andrew N. J. 2016. <emph>Samuel Presbiter: Notes from the School
+                            of William de Montibus</emph>. Toronto Medieval Latin Texts 33. Toronto:
+                        Pontifical Institute of Mediaeval Studies.</bibl>
+                    <bibl>Hagel, Stefan. 2007. ‘The Classical Text Editor. An Attempt to Provide for
+                        Both Printed and Digital Editions’. In <emph>Digital Philology and Medieval
+                            Texts</emph>, edited by Arianna Ciula and Francesco Stella, 77–84.
+                        Ospedaletto: Pacini. <ref
+                            target="http://www.infotext.unisi.it/upload/DIGIMED06/book/hagel.pdf"
+                            >http://www.infotext.unisi.it/upload/DIGIMED06/book/hagel.pdf</ref>.</bibl>
+                    <bibl>Hamid, Idris. 2007. ‘A Short Introduction to Critical Editions’. In
+                            <emph>ConTeXt User Meeting</emph>. Epen, Netherlands. <ref
+                            target="https://meeting.contextgarden.net/2007/share/idris/cr-apparatus.pdf"
+                            >https://meeting.contextgarden.net/2007/share/idris/cr-apparatus.pdf</ref>.</bibl>
+                    <bibl>Knuth, Donald E. 1986. <emph>The TeXbook</emph>. Computers &amp;
+                        Typesetting, A. Reading, MA: Addison-Wesley.</bibl>
+                    <bibl>Knuth, Donald E., and Michael F. Plass. 1981. ‘Breaking Paragraphs into
+                        Lines’. <emph>Software: Practice and Experience</emph> 11 (11): 1119–84.
+                            <ref target="https://doi.org/10.1002/spe.4380111102"
+                            >https://doi.org/10.1002/spe.4380111102</ref>.</bibl>
+                    <bibl>Kohm, Markus. 1994–2019. <emph>KOMA-Script: A Versatile LaTeX2ε
+                            Bundle</emph>. <ref target="https://ctan.org/pkg/koma-script"
+                            >https://ctan.org/pkg/koma-script</ref>.</bibl>
+                    <bibl>Krewinkel, Albert, and Robert Winkler. 2017. ‘Formatting Open Science:
+                        Agilely Creating Multiple Document Formats for Academic Manuscripts with
+                        Pandoc Scholar’. <emph>PeerJ Computer Science</emph> 3 (May): e112. <ref
+                            target="https://doi.org/10.7717/peerj-cs.112"
+                            >https://doi.org/10.7717/peerj-cs.112</ref>.</bibl>
+                    <bibl>Lavagnino, John, and Dominik Wujastyk. 1990. ‘An Overview of EDMAC: A
+                        Plain TeX Format for Critical Editions’. <emph>TUGboat</emph> 11 (4):
+                        623–43. <ref target="https://doi.org/10.7939/r3416td5f"
+                            >https://doi.org/10.7939/r3416td5f</ref>.</bibl>
+                    <bibl>Lück, Uwe. 2003. ‘Ednotes — Critical Edition Typesetting with LaTeX’.
+                            <emph>TUGboat</emph> 24 (2): 224–36. <ref
+                            target="https://tug.org/TUGboat/tb24-2/tb77lueck.pdf"
+                            >https://tug.org/TUGboat/tb24-2/tb77lueck.pdf</ref>.</bibl>
+                    <bibl>MacFarlane, John. 2006–2019. <emph>Pandoc</emph>. <ref
+                            target="https://pandoc.org/">https://pandoc.org/</ref>.</bibl>
+                    <bibl>McLean, Tom. 2015–2016. <emph>Tei_transformer</emph>. <ref
+                            target="https://github.com/fizzbucket/tei_transformer"
+                            >https://github.com/fizzbucket/tei_transformer</ref>.</bibl>
+                    <bibl>Ott, Wilhelm. 1979. ‘A Text Processing System for the Preparation of
+                        Critical Editions’. <emph>Computers and the Humanities</emph> 13 (1): 29–35.
+                            <ref target="https://doi.org/10.1007/bf02744990"
+                            >https://doi.org/10.1007/bf02744990</ref>.</bibl>
+                    <bibl>Rahtz, Sebastian, Martin D. Holmes, Hugh Cayless, and Syd Baumann.
+                        2011–2019. <emph>TEI XSL Stylesheets</emph>. Text Encoding Initiative
+                        Consortium. <ref target="https://github.com/TEIC/Stylesheets"
+                            >https://github.com/TEIC/Stylesheets</ref>.</bibl>
+                    <bibl>Robertson, Will. 2009. ‘Peter Wilson’s Herries Press Packages’.
+                            <emph>TUGboat</emph> 30 (2): 290–92. <ref
+                            target="https://www.tug.org/TUGboat/tb30-2/tb95robertson.pdf"
+                            >https://www.tug.org/TUGboat/tb30-2/tb95robertson.pdf</ref>.</bibl>
+                    <bibl>Robins, William. 2019. <emph>Historia Apollonii regis Tyri: A
+                            Fourteenth-Century Version of a Late Antique Romance</emph>. Toronto
+                        Medieval Latin Texts 36. Toronto: Pontifical Institute of Mediaeval
+                        Studies.</bibl>
+                    <bibl>Rouquette, Maïeul. 2012. <emph>(Xe)LaTeX appliqué aux science
+                            humaines</emph>. Tampere: Atramenta. <ref
+                            target="https://halshs.archives-ouvertes.fr/halshs-00924546"
+                            >https://halshs.archives-ouvertes.fr/halshs-00924546</ref>.</bibl>
+                    <bibl>———. 2017. ‘Étude comparée sur la construction des origines apostoliques
+                        des Églises de Crète et de Chypre à travers les figures de Tite et de
+                        Barnabé’. PhD thesis, Université de Lausanne.</bibl>
+                    <bibl>Schälkle, Kuno, and Wilhelm Ott. 2018. <emph>TUSTEP: Tübinger System von
+                            Textverarbeitungs-Programmen</emph>. Tübingen: Pagina. <ref
+                            target="http://www.tustep.uni-tuebingen.de/pdf/handbuch.pdf"
+                            >http://www.tustep.uni-tuebingen.de/pdf/handbuch.pdf</ref>.</bibl>
+                    <bibl>Schlicht, Robert. 2004–2019. <emph>The Microtype Package</emph>. <ref
+                            target="https://ctan.org/pkg/microtype"
+                            >https://ctan.org/pkg/microtype</ref>.</bibl>
+                    <bibl>Walden, David. 2006. ‘Peter Wilson: Interview’. TeX Users Group. 8
+                        November 2006. <ref target="https://tug.org/interviews/wilson.html"
+                            >https://tug.org/interviews/wilson.html</ref>.</bibl>
+                    <bibl>Wilson, Peter R., and Lars Madsen. 2001–2018. <emph>The Memoir
+                            Class</emph>. <ref target="https://www.ctan.org/pkg/memoir"
+                            >https://www.ctan.org/pkg/memoir</ref>.</bibl>
+                    <bibl>Witt, Jeffrey C. 2018. ‘Digital Scholarly Editions and API-Consuming
+                        Applications’. In <emph>Digital Scholarly Editions as Interfaces</emph>,
+                        edited by Roman Bleier, Martina Bürgermeister, Helmut W. Klug, Frederike
+                        Neuber, and Gerlinde Schneider, 219–47. Schriften des Instituts für
+                        Dokumentologie und Editorik 12. Norderstedt: Books on Demand. <ref
+                            target="https://nbn-resolving.org/urn:nbn:de:hbz:38-91182"
+                            >https://nbn-resolving.org/urn:nbn:de:hbz:38-91182</ref>.</bibl>
+                    <bibl>Wujastyk, Dominik. 1993. <emph>Metarules of Pāṇinian Grammar: The
+                            Vyāḍīyaparibhāṣāvṛtti Critically Edited with Translation and
+                            Commentary</emph>. 2 vols. Groningen Oriental Studies 5. Groningen:
+                        Forsten.</bibl>
+                    <bibl>Wujastyk, Dominik, and Maïeul Rouquette. 2013. ‘Critical Editions Typeset
+                        with EDMAC, LEDMAC, eLEDMAC and reLEDMAC’. Zotero. 2013. <ref
+                            target="https://www.zotero.org/groups/209265/critical_editions_typeset_with_edmac_ledmac_eledmac_and_reledmac"
+                            >https://www.zotero.org/groups/209265/critical_editions_typeset_with_edmac_ledmac_eledmac_and_reledmac</ref>.</bibl>
+                    <bibl>Zapf, Hermann. 1993. ‘About Micro-Typography and the Hz-Program’.
+                            <emph>Electronic Publishing</emph> 6: 283–88. <ref
+                            target="http://cajun.cs.nott.ac.uk/compsci/epo/papers/volume6/issue3/zapf.pdf"
+                            >http://cajun.cs.nott.ac.uk/compsci/epo/papers/volume6/issue3/zapf.pdf</ref>.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

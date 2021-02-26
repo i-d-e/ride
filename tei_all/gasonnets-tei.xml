@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.6.4">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Corpus of Spanish Golden-Age Sonnets</title>
+            <author ref="https://orcid.org/0000-0002-1129-5604">
+               <name>
+                  <forename>José</forename>
+                  <surname>Calvo Tello</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Würzburg</orgName>
+                  <placeName>Würzburg, Germany</placeName>
+               </affiliation>
+               <email>jose.calvo (at) morethanbooks.eu</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2017-09">September 2017</date>
+            <idno type="URI"
+               >https://ride.i-d-e.de/issues/issue-6/corpus-of-spanish-golden-age-sonnets/</idno>
+            <idno type="DOI">10.18716/ride.a.6.4</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue06/GASonnets/GASonnets.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+               Neuber</editor>
+            <biblScope unit="issue" n="6">Digital Text Collections</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-6</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Corpus of Spanish Golden-Age Sonnets</title>
+                  <editor>Borja Navarro Colorado, María Ribes Lafoz and Noelia Sánchez</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Borja Navarro Colorado</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>María Ribes Lafoz</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Noelia Sánchez</persName>
+                  </respStmt>
+                  <date type="publication">2015</date>
+                  <idno type="URI">https://github.com/bncolorado/CorpusSonetosSigloDeOro</idno>
+                  <date type="accessed">2017-05-01</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-text-collections-version-1-0">Criteria
+                     for Reviewing Digital Text Collections, version 1.0</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/criteria-text-collections-version-1-0">
+               <category xml:id="general_information">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.1">cf. Catalogue 1.1</ref>
+                     </catDesc>
+                     <catDesc>Can the text collection be identified in terms similar to traditional
+                        bibliographic descriptions (title, responsible editors, institution, date(s)
+                        of publication, identifier/address)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Is contact information given?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aims">
+                  <category xml:id="doc_contents">
+                     <catDesc>
+                        <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is there a description of the aims and contents of the text
+                        collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="purpose">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>What is the purpose of the text collection?</catDesc>
+                     <category xml:id="research">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="teaching">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_type">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>What kind of research does the collection allow to conduct
+                        primarily?</catDesc>
+                     <category xml:id="qualitative">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="quantitative">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="classification">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>How does the text collection classify itself (e.g. in its title or
+                        documentation)?</catDesc>
+                     <category xml:id="collection">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_archive">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portal">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="no_classification">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_fields">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>To which field(s) of research does the text collection
+                        contribute?</catDesc>
+                     <category xml:id="field_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_linguistics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_archaeology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_philosophy">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_religious_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_sociology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="content">
+                  <category xml:id="era">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the texts belong to?</catDesc>
+                     <category xml:id="era_classics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_medieval">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_early_modern">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_contemporary">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="language">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What languages are the texts in?</catDesc>
+                     <category xml:id="arabic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="chinese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="danish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="english">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="finnish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="french">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="german">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="greek">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hebrew">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hindi">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="italian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="japanese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="latin">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="norwegian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="polish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portuguese">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="russian">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="spanish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="swedish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="turkish">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#free" xml:id="language_note">
+                        <desc/>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of texts are in the collection?</catDesc>
+                     <category xml:id="literary_works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="private_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="essays">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="newspaper_articles">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="charters">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="inscriptions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="files_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="protocols">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="scientific_papers">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="speech_transcripts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="add_information">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of information is published in addition to the
+                        texts?</catDesc>
+                     <category xml:id="introduction">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="context_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="bibliography">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="facsimile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="composition">
+                  <category xml:id="documentation_methods">
+                     <catDesc>
+                        <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the principles and decisions regarding the design of the text
+                        collection, its composition and the selection of texts documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>What selection criteria have been chosen for the text
+                        collection?</catDesc>
+                     <category xml:id="selection_language">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_author">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_country">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_epoch">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_genre">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_topic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_style">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_linguistic_characteristics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="size">
+                     <category xml:id="size_texts">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of
+                           texts/records?</catDesc>
+                        <category xml:id="texts_le10">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_11-50">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_51-100">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt100_">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt1000">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="size_tokens">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of tokens?</catDesc>
+                        <category xml:id="tokens_lt100.000">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_100.000-1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt10mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="structure">
+                     <catDesc>
+                        <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have identifiable sub-collections or
+                        components?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="acquisition">
+                     <category xml:id="text_recording">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection record or transcribe the textual data for
+                           the first time?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_integration">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>What kind of material has been taken over from other
+                           sources?</catDesc>
+                        <category xml:id="full_text">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_metadata">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_annotation">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="quality">
+                     <catDesc>
+                        <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
+                     </catDesc>
+                     <catDesc>Has the quality of the data (transcriptions, metadata, annotations,
+                        etc.) been checked?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>Considering aims and methods of the text collection, how would you
+                        classify it further? For definitions please consider the
+                        help-texts.</catDesc>
+                     <category xml:id="typology_general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_canon">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_oeuvre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_reference_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_contrastive_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_parallel_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_diachronic_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="data_modelling">
+                  <category xml:id="text_treatment">
+                     <catDesc>
+                        <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
+                     </catDesc>
+                     <catDesc>How are the textual sources represented in the digital
+                        collection?</catDesc>
+                     <category xml:id="normalized_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="orthographic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="phonetic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="transliteration">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translated_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="summarized_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="sampled_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="basic_format">
+                     <catDesc>
+                        <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                     </catDesc>
+                     <catDesc>In which basic format are the texts encoded?</catDesc>
+                     <category xml:id="plain_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="xml">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="html">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="annotation">
+                     <category xml:id="annotation_type">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>With what information are the texts further enriched?</catDesc>
+                        <category xml:id="semantic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="linguistic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="editorial_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural_information">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc>metric annotation</desc>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="annotation_integration">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>How are the annotations linked to the texts themselves?</catDesc>
+                        <category xml:id="embedded">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="stand-off">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="metadata">
+                     <category xml:id="metadata_type">
+                        <catDesc>
+                           <ref target="#K3.2.3">cf. Catalogue 3.2.3</ref>
+                        </catDesc>
+                        <catDesc>What kind of metadata are included in the text
+                           collection?</catDesc>
+                        <category xml:id="descriptive">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="administrative">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="metadata_level">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>On which level are the metadata included?</catDesc>
+                        <category xml:id="whole_collection">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_parts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="individual_texts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="data_standards">
+                     <category xml:id="data_schema">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>What kind of data/metadata/annotation schemas are used for the text
+                           collection?</catDesc>
+                        <category xml:id="standardized_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="customized_standard_schema">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="project_specific">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="standard_format">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>Which standards for text encoding, metadata and annotation are used
+                           in the text collection?</catDesc>
+                        <category xml:id="tei">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="ead">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="xces">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="dublin_core">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="edm">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mods">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="skos">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="owl">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="imdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cmdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tcf">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="olac">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="eagles">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="pos_tagsets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="provision">
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>Is the textual data accessible in a source format (e.g. XML,
+                        TXT)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="technical_interfaces">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces which allow the reuse of the data of
+                        the text collection in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="SPARQL_endpoint">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>Interface</desc>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="analytical_data">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Besides the textual data, does the project provide analytical data
+                        (e.g. statistics) to download or harvest?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="user_interface">
+                  <category xml:id="interface_provision">
+                     <catDesc>
+                        <ref target="#K5.1">cf. Catalogue 5.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have a dedicated user interface designed for
+                        the collection at hand in which the texts of the collection are represented
+                        and/or in which the data is analyzable?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="preservation">
+                  <category xml:id="documentation_project">
+                     <catDesc>
+                        <ref target="#K6.1">cf. Catalogue 6.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection provide sufficient documentation about the
+                        project in general as well as about the aims, contents and methods of the
+                        text collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>
+                        <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="rights_declared">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="rights_license">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY_only">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc>Structure in CC-NC, texts under Copyright</desc>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the text
+                        collection and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection supply citation guidelines?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="archiving">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="curation">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="completion">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection completed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+
+               <term>poetry</term>
+               <term>Siglo de Oro</term>
+               <term>sonnets</term>
+               <term>spanish</term>
+               <term>TEI</term>
+               <term>text collection</term>
+
+            </keywords>
+         </textClass>
+      </profileDesc>
+
+
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>In this paper a TEI corpus with sonnets from the Spanish Golden-Age is reviewed. Some
+               of the 52 authors represented in the collection are Cervantes, Lope, Quevedo, Tirso,
+               Calderón or Góngora. In total, the corpus contains more than 5000 sonnets. The
+               project is currently under development at the University of Alicante, Spain. One of
+               the strongest aspects of this corpus is the metrical annotation of each verse. The
+               researchers have already analysed the corpus using topic modelling, a suitable
+               technique for the structure of the collection and the size of the texts. The weakest
+               aspect of this collection is the metadata of the files: the majority of them are
+               redundant and some important aspects (e.g. identifiers of texts, author, collection,
+               source) are missing. The corpus is available as a GitHub repository, a good practice
+               that facilitates cloning all the data, the track of changes and the preservation of
+               the corpus.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>General information</head>
+            <p xml:id="p1">The <emph>Corpus of Spanish Golden-Age Sonnets</emph> is a collection of
+               sonnets in TEI that covers the main canonical Spanish authors from the Golden-Age of
+               the Spanish Literature (16th and 17th Centuries). The Golden-Age or <emph>Siglo de
+                  Oro</emph> (also called <emph>Edad de Oro</emph> or <emph>Siglos de Oro</emph>)
+               encompasses some of the most important authors of the Spanish Literature like
+               Cervantes, Lope, Quevedo, Tirso, Calderón, Góngora, etc. The sonnet represents one of
+               the most important lyric genres of this period.</p>
+            <p xml:id="p2">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_6/gasonnets/pictures/picture-1.png"/>
+                  <head type="legend">Website of the project.</head>
+               </figure> The project has been created under the leadership of Borja Navarro
+               Colorado, together with María Ribes Lafoz and Noelia Sánchez at the University of
+               Alicante, Spain. After the publication of the first version, the project got private
+               funding for the next years (2016–2018) from a private foundation for the analysis,
+               annotation and revision of the corpus with the name <emph>Análisis distante del
+                  soneto castellano de los Siglos de Oro</emph> (ADSO). The main website of the
+               project (see <ref type="crossref" target="#img1">Fig. 1</ref>), which is not the
+               focus of this review, is reachable at <ref target="http://adso.gplsi.es"
+                  >http://adso.gplsi.es</ref>. The TEI version of the corpus is available as a
+               repository on GitHub.<note xml:id="ftn1">
+                  <ref target="https://github.com/bncolorado/CorpusSonetosSigloDeOro"
+                     >https://github.com/bncolorado/CorpusSonetosSigloDeOro</ref> Accessed: June 1,
+                  2017.</note></p>
+         </div>
+         <div xml:id="div2">
+            <head>The collection</head>
+            <p xml:id="p3">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_6/gasonnets/pictures/picture-2.png"/>
+                  <head type="legend">Folders for each author of the corpus.</head>
+               </figure> The basic documentation of the project is available through the
+                  <emph>readme</emph> file of the GitHub repository and through the project’s
+                  website.<note xml:id="ftn2">
+                  <ref
+                     target="https://web.archive.org/web/20170909164015/http://adso.gplsi.es/index.php/es/corpus-de-metrica/"
+                     >https://web.archive.org/web/20170909164015/http://adso.gplsi.es/index.php/es/corpus-de-metrica/</ref>.
+               </note> The rhythmical annotation is documented in more detail in a PDF file in the
+                  repository<note xml:id="ftn3">
+                  <ref
+                     target="https://github.com/bncolorado/CorpusSonetosSigloDeOro/blob/master/GuiaAnotacionMetrica.pdf"
+                     >https://github.com/bncolorado/CorpusSonetosSigloDeOro/blob/master/GuiaAnotacionMetrica.pdf</ref>.
+                  Accessed: June 1, 2017.</note> which also explains specific aspects of the corpus.
+               The structure of the folders and files clearly indicates the names of the sonnet’s
+               authors (see <ref type="crossref" target="#img2">Fig. 2</ref>). Even if the project
+               is documented, as I will explain in the next sections, I miss specific information
+               about the corpus design, its creation and the distribution of sonnets over
+               authors.</p>
+            <p xml:id="p4">The creators decided to encode every sonnet as a single file, grouping
+               the works of the same author in a single folder (two folders in the case of Lope, who
+               has 1346 sonnets). Thinking of usage scenarios, this makes the collection a perfect
+               use case for Topic Modeling, for instance, since the texts are already offered in
+               small and homogeneous units. The authors have already published a paper on the topic
+               (Navarro Colorado 2015) that shows what kind of research questions could be applied:
+               topical patterns in groups of authors or periods, or an analysis of the outcome of
+               clustering each author's sonnets. Other kinds of analysis, e.g. stylometry for
+               authorship attribution, or ways of utilization such as reading would require to
+               combine different files into a single file or a conversion to other formats. But
+               since the corpus is available and uses standard technologies, a researcher with
+               programming skills wouldn't have many troubles.</p>
+            <p xml:id="p5">This corpus aims to create the most representative collection of sonnets
+               for the Spanish 16th and 17th centuries in order to analyse them, especially their
+               rhythmical structure. Unlike similar repositories for other subgenres created in
+               Spain, this repository has published all its data in the TEI format.</p>
+         </div>
+         <div xml:id="div3">
+            <head>Structure of the corpus</head>
+            <p xml:id="p6">Regarding the structure of the corpus, the only criterion mentioned in
+               the documentation is that for every author at least 10 sonnets are included, which
+               could be found in the section "Biblioteca del Soneto"<note xml:id="ftn4">
+                  <ref
+                     target="https://web.archive.org/web/20161226203745/http://www.cervantesvirtual.com/bib/portal/bibliotecasoneto/"
+                     >https://web.archive.org/web/20161226203745/http://www.cervantesvirtual.com/bib/portal/bibliotecasoneto/</ref>.
+               </note> of the <emph>Biblioteca Digital Cervantes Virtual</emph> (that I will just
+               call <emph>Cervantes Virtual</emph> from now on), and which is one of the biggest
+               collections of Spanish texts in HTML created on the basis of digitizations. That
+               makes this corpus a compilation of the sonnets found in <emph>Cervantes
+                  Virtual</emph> where a specific but arbitrary print edition of a work is
+               digitized, encoded in TEI and published only as HTML. So one of the main selection
+               criteria of this corpus is the opportunism of having all these texts already
+               published and available from a single source. Under these terms, it is questionable
+               whether this collection actually represents the population of the sonnets of the
+               period. The corpus contains more than 5000 sonnets from 52 authors. The amount of
+               tokens is not given, but the fixed structure of the genre makes this information less
+               important than for other genres (e.g. novel). The size of the collection seems
+               appropriate in order to analyse it with quantitative methods and it represents the
+               largest collection of Spanish poetry that I am aware of.</p>
+            <p xml:id="p7">The corpus is divided into subcorpora of single authors, whose names are
+               encoded in both the names of the folders and the XML files, the latter together with
+               a numerical identification. The amount of sonnets for each author varies greatly,
+               from 10 (e.g. of Cristobal de Virués, Fray Luis de León) to several hundreds (e.g. of
+               Fernando de Herrera, Quevedo or Lope de Vega).</p>
+         </div>
+         <div xml:id="div4">
+            <head>Structure of the files</head>
+            <p xml:id="p8">As mentioned before, the fact that all the texts come from
+                  <emph>Cervantes Virtual</emph>, is described very briefly on the project website.
+               For that digital library, a large amount of texts has been encoded in TEI over the
+               years, but <emph>Cervantes Virtual</emph> has been always reluctant either to publish
+               it in other formats than HTML or to facilitate the TEI to other researchers. Although
+               the ADSO project and <emph>Cervantes Virtual</emph> are based at the same university,
+               it seems that the texts have been processed directly from the HTML published on the
+               web, probably transformed with regular expressions (as many other projects working
+               with Spanish texts do) and converted to TEI, even though this is not clearly
+               explained. Thanks to this corpus, the research community has won access to data that
+               was already encoded in TEI but was inaccessible. The project has also isolated every
+               sonnet, identified the kind of stanzas and numbered the verses. The most interesting
+               enrichment that has been done by the project is without doubt the formal annotation
+               of the rhythmical structure of every verse. Sadly, the recollection of the texts has
+               also caused the loss of some metadata: in the source, the sonnets are normally
+               published as a part of a collection of sonnets and usually every sonnet is numbered.
+               Here, the relations between the different sonnets are only kept in the source
+               description (<code>sourceDesc</code>) in the TEI header. For instance, the link to
+               the primary source in <emph>Cervantes Virtual</emph> is missing.</p>
+            <p xml:id="p9">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_6/gasonnets/pictures/picture-3.png"/>
+                  <head type="legend">Example of the TEI header of a sonnet from Cervantes.</head>
+               </figure> The authors don't communicate if there has been any quality check of the
+               texts. Again, because of the very specific structure that sonnets have in general, it
+               would be very simple to check if all files have specific features (four stanzas, 14
+               verses, etc.). Since the project has been managed with GitHub, one can see that they
+               have been correcting their own rhythmical annotation since the start of the project,
+               which is also kept in the TEI header in <code>metDecl</code>.</p>
+            <p xml:id="p10">Information about the metrical structure is encoded in every
+                  <code>l</code> element in the corresponding <code>@met</code> attribute with a
+               combination of pluses and slashes, which is explained in the TEI header and follows
+               the recommendation of the TEI Guidelines. This information has been added
+               automatically and it is being corrected manually. The editors of the text collection
+               have published a paper about the the method of scansion (Navarro Colorado 2017).</p>
+            <p xml:id="p11">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_6/gasonnets/pictures/picture-4.png"/>
+                  <head type="legend">Text of the same sonnet from Cervantes.</head>
+               </figure> The great majority of the metadata of every file is shared by the rest of
+               the files. According to this approach, the metadata is converted into general
+               information about the project, rather than about the files themselves. In general,
+               the only places where the metadata vary are the <code>sourceDesc</code> and the
+                  <code>metDecl</code> elements (if the text has been corrected manually). This
+               brings up several questions: Should the title in the <code>titleStmt</code> contain
+               only the title of the whole corpus instead of the text encoded in each file (e.g. of
+               each sonnet)? Shouldn't the name of the author also be kept in the
+                  <code>titleStmt</code> and not only in the name of the file? Why is there no
+                  <code>revisionDesc</code>?</p>
+            <p xml:id="p12">Other metadata which would be very useful when working with the
+               collection are missing: the original link to the source at <emph>Cervantes
+                  Virtual</emph>; information and identifiers (through standards like VIAF) about
+               the different stages of the publications (the publication of the digital edition in
+                  <emph>Cervantes Virtual</emph>, the publication of the printed edition digitized
+               by <emph>Cervantes Virtual</emph>, the publication of the first edition of the text)
+               with the corresponding publication dates; the explicit identification of the number
+               of the poem according to its position in the digitized anthology; and also an
+               identifier that the project itself defines (which could be the same as the name of
+               the file).</p>
+            <p xml:id="p13">The basic text in this project is the sonnet, so each sonnet is encoded
+               in a separate TEI file. This is a different structure from the one of <emph>Cervantes
+                  Virtual</emph>, where a collection of sonnets already published as a book was
+               digitized and encoded as one file and shown in HTML as a group of sonnets, connected
+               by links. These two models have advantages and disadvantages.</p>
+            <p xml:id="p14">On the one hand, the model of one file for each collection organizes the
+               sonnets of each author in their publication context and order. Like this, the works
+               of one author are represented only by some files and not by hundreds of files. In
+               this model the sonnet can still be accessed individually and, through XML
+               technologies like XPath and XSLT, all the sonnets can easily be isolated as single
+               files. The biggest disadvantage of this model is that using a single text element for
+               all the sonnets makes it impossible to encode metadata for each poem.</p>
+            <p xml:id="p15">On the other hand, the model of one file for each sonnet, which has been
+               used for the text collection discussed here, reinforces the individuality of the
+               sonnet and reduces the importance of the collections of the sonnets (as there might
+               be several different collections, some of them created years after the death of the
+               author). Plus, if all the texts have an homogeneous structure and length, it is
+               easier to analyse them for example with techniques like Topic Modeling. One of the
+               biggest disadvantages of this model is that it is harder to keep the information
+               about the original collection each sonnet belonged to, and about where the sonnet was
+               placed in that collection. In the way the collection is structured right now, it
+               would probably be possible but really hard to recreate the structure of whole
+               collections. This could be done by using the name of the collection given in the
+               header of a single sonnet file to associate the sonnet with the corresponding
+               collection and to place it in the collection according to the Roman number given in
+               the header of the text. If the collection would have sub parts grouping some of the
+               sonnets closer together, that information would most probably be lost. In addition,
+               the greatest advantage of this model is actually not exploited by this project: to
+               give specific metadata about each sonnet in the TEI header. In the current state of
+               the corpus (and as I have already said, the project is still ongoing), all the
+               sonnets of a certain published collection share all their metadata, so that all their
+               TEI headers are redundant.</p>
+            <p xml:id="p16">There are different possibilities to fully exploit the advantages and to
+               balance the disadvantages of these two structural models. First, grouping all the
+               sonnets originating from the same published collection in a single file, structuring
+               of course each sonnet as an individual poem. Besides, it would be possible to offer
+               each poem as a single file as an export version in plain text to facilitate its
+               analysis. This could be a good way if it is not planned to add specific metadata
+               about each poem. Secondly: Keeping the structure of a single file for each poem but
+               add some metadata that identify in an unequivocal way the published collections it
+               belongs to, its section in the collection (if there are any), and its exact position
+               in it. Thirdly, and probably the most flexible and structured option, structuring all
+               the collections of the same writer in a single TEI file with a <code>teiCorpus</code>
+               element as root element; this would contain other <code>teiCorpus</code> elements for
+               each collection of sonnets written by this author. Finally, each sonnet can be
+               encoded as a dedicated element TEI. In doing so, it is possible to add extra metadata
+               in the child element <code>teiHeader</code> if needed.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Publication</head>
+            <p xml:id="p17">All the data is available through GitHub, which means that the
+               researcher can download everything at once and keep track of every change easily.
+               This reflects a major and laudable change in a positive direction in the way that DH
+               projects have published their data in Spain. The corpus doesn't provide any other
+               format of the data. What would be of great help are metadata in tabular form, ideally
+               one table for authors (with the amount of sonnets and the information about their
+               original publication contexts) and one for the sonnets (with an identifier, the
+               author, the original published collection, the sonnet's number, etc.).</p>
+            <p xml:id="p18">It is very easy to think of re-use scenarios for these data, especially
+               since the Golden Age is the period of the Spanish Literature for which most texts
+               have been digitized, for example in the corpora <emph>IMPACT-es diachronic
+                  corpus</emph> and <emph>TESO</emph> (amongst others).</p>
+         </div>
+         <div xml:id="div6">
+            <head>Interface (beta)</head>
+            <p xml:id="p19">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_6/gasonnets/pictures/picture-5.png"/>
+                  <head type="legend">Search using metrical structure and the word “amor”.</head>
+               </figure> The project also offers an interesting interface available via the menus of
+               the website of the project ("Corpus métrica" &gt; "Consultar").<note xml:id="ftn5">
+                  <ref
+                     target="https://web.archive.org/web/20170909165825/http://goldenage.cervantesvirtual.com/"
+                     >https://web.archive.org/web/20170909165825/http://goldenage.cervantesvirtual.com/</ref>.
+               </note> Currently, the main function of this interface is to make querying the data
+               easier using the information about author, title, poem, verse, metrical structure or
+               stanza. The search results are always given as verses and give the possibility to
+               read the verse, export the result as a CSV table or navigate to the original digital
+               version in <emph>Cervantes Virtual</emph> (see <ref type="crossref" target="#img5"
+                  >Fig. 5</ref>). This last function is surprising since, as already mentioned, this
+               link is not given in the TEI. The creator of the project has explained to us that the
+               position of every sonnet in <emph>Cervantes Virtual</emph> has been searched again
+               and that each URI has been kept in a database for use in the interface. Another
+               interesting aspect is to be found in the URI: the subdomain is actually part of
+                  <emph>Cervantes Virtual</emph>. As confirmed through personal communication, both
+               projects are currently working together. In any case, this part is announced as beta
+               and is only linked to from the menu, so its maintenance is unclear.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Preservation</head>
+            <p xml:id="p20">On the GitHub page and on the website of the project, basic
+               documentation is given, although some questions about the creation and its design
+               remain unanswered, as I have already pointed out.</p>
+            <p xml:id="p21">The metrical annotation is under a Creative Commons Attribution-Non
+               Commercial 4.0 International License and the digital texts remain under the copyright
+               of <emph>Cervantes Virtual</emph>. This double licence situation could confuse people
+               from other projects who want to reuse the data about what exactly they are allowed to
+               do with the corpus as a whole.</p>
+            <p xml:id="p22">The URI of the GitHub repository can be used as a unique identifier to
+               quote the repository, and the version control system of this platform allows to quote
+               or to access any specific state of it. Sadly, the repository doesn't offer a DOI,
+               which would be possible using the integration of GitHub releases and Zenodo DOIs. The
+               project also offers a recommendation about how to cite it, proposing to cite a
+               conference paper (Navarro-Colorado, Ribes Lafoz, Sánchez 2016).</p>
+            <p xml:id="p23">Since the start of the project last year the project members have
+               corrected the annotation of some poems. It can be expected that this corpus will grow
+               or that its metadata will be enriched. GitHub is a good place to keep things in the
+               long term, although the already mentioned integration with Zenodo would improve the
+               archiving of the text collection.</p>
+         </div>
+         <div xml:id="div8">
+            <head>Conclusion</head>
+            <p xml:id="p24">In conclusion, even if it is an ongoing project with expected progress
+               in the next months, this is already a very valuable resource, which allows to analyse
+               the sonnets of the Spanish Literature of the Golden Age, of considerable size and
+               using standard technologies. The researchers have published their data in TEI using
+               GitHub and best practices that can be considered a pioneer work in the year 2015 in
+               the field of Spanish Literature. Its publication is a milestone for the DH landscape
+               in Spanish language and I hope that it will raise expectations for this kind of
+               resources in the field. The project offers a resource of good quality to other
+               researchers wishing to use it: it is open, accessible and citable. However, the
+               documentation of the project is inconsistent: some aspects, like the metrical
+               annotation, have been documented extensively; other aspects, like the design and
+               creation of the corpus, rather poorly. It is one of the biggest open access
+               collections of encoded TEI texts in Spanish, and one of the biggest collections of
+               poetic texts in European languages. The most exceptional feature of this corpus is
+               the metrical annotation of each verse, which is currently under human revision.</p>
+            <p xml:id="p25">Some suggestions have been pointed out in previous sections of this
+               review: more documentation about the design and composition of the corpus is needed.
+               The authors, collections and poems should be identified unequivocally and, if
+               possible, using standards and authority files. In general, the TEI header should
+               offer more metadata (an identifier of the file, chronological information, changes…).
+               The current way of using a single file for each sonnet either leads to the loss of or
+               makes it difficult to access some information, so other ways of structuring the texts
+               would be beneficial.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>
+                  <emph>Biblioteca Cervantes Virtual.</emph> Alicante: Universidad de Alicante,
+                  1999. Web.</bibl>
+               <bibl>IMPACT-es: Sánchez-Martínez, Felipe et al. ‘An Open Diachronic Corpus of
+                  Historical Spanish.’ <emph>Language Resources and Evaluation</emph> 47.4 (2013):
+                  1327–1342. <emph>link.springer.com.</emph> Web. Accessed: June 1, 2017. <ref
+                     target="http://www.digitisation.eu/tools-resources/language-resources/impact-es/"
+                     >http://www.digitisation.eu/tools-resources/language-resources/impact-es/</ref>. </bibl>
+               <bibl>Navarro Colorado, Borja. ‘A Computational Linguistic Approach to Spanish Golden
+                  Age Sonnets: Metrical and Semantic Aspects.’ <emph>Proceedings of the Fourth
+                     Workshop on Computational Linguistics for Literature.</emph> Denver: N.p.,
+                  2015. Web.</bibl>
+               <bibl>Navarro Colorado, Borja. ‘A Metrical Scansion System for Fixed-Metre Spanish
+                  Poetry.’ <emph>Digital Scholarship in the Humanities</emph> (2017): n. pag.
+                     <emph>CrossRef.</emph> Web. 4 May 2017.</bibl>
+               <bibl>Navarro Colorado, Borja, María Ribes Lafoz, and Noelia Sánchez. ‘Metrical
+                  Annotation of a Large Corpus of Spanish Sonnets: Representation, Scansion and
+                  Evaluation.’ <emph>Proceedings of the 10th Edition of the Language Resources and
+                     Evaluation Conference (LREC 2016).</emph> Portorož (Slovenia): N.p., 2016.
+                  Web.</bibl>
+               <bibl>TESO: Simón Palmer, María del Carmen. <emph>Teatro Español Del Siglo de
+                     Oro.</emph> Ann Arbor: ProQuest, 1997. Web. <ref
+                     target="https://web.archive.org/web/20161025093021/http://teso.chadwyck.com:80/"
+                     >https://web.archive.org/web/20161025093021/http://teso.chadwyck.com:80/</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+
+   </text>
+</TEI>

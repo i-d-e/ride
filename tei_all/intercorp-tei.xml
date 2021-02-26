@@ -1,0 +1,2482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.9.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Rezension von „InterCorp – Ein mehrsprachiges Parallelkorpus des Tschechischen
+               Nationalkorpus“ (Český národní korpus)</title>
+            <author ref="https://orcid.org/0000-0003-4841-9161">
+               <name>
+                  <forename>Agnes</forename>
+                  <surname>Kim</surname>
+               </name>
+               <affiliation>
+                  <orgName>Institut für Slawistik, Universität Wien</orgName>
+                  <placeName>Vienna</placeName>
+               </affiliation>
+               <email>agnes.kim (at) univie.ac.at </email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+            <date when="2018-11">2018</date>
+            <idno type="URI">http://ride.i-d-e.de/issue-9/intercorp-2</idno>
+            <idno type="DOI">10.18716/ride.a.9.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue09/intercorp/intercorp.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="technical">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+               Neuber</editor>
+            <biblScope unit="issue" n="9">Digital Text Collections</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-9</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>InterCorp</title>
+                  <editor>Alexandr Rosen, Martin Vavřín, Adrian Zasina</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>
+                        <name>Alexandr Rosen</name>
+                     </persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>
+                        <name>Martin Vavřín</name>
+                     </persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>
+                        <name>Adrian Zasina</name>
+                     </persName>
+                  </respStmt>
+                  <date type="publication">2008-2017</date>
+                  <idno type="URI">http://www.korpus.cz/</idno>
+                  <date type="accessed">2018-03-09</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/"
+                     >Criteria for Reviewing Digital Text Collections</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/">
+               <category xml:id="general_information">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.1">cf. Catalogue 1.1</ref>
+                     </catDesc>
+                     <catDesc>Can the text collection be identified in terms similar to traditional
+                        bibliographic descriptions (title, responsible editors, institution, date(s)
+                        of publication, identifier/address)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Is contact information given?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aims">
+                  <category xml:id="doc_contents">
+                     <catDesc>
+                        <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is there a description of the aims and contents of the text
+                        collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="purpose">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>What is the purpose of the text collection?</catDesc>
+                     <category xml:id="research">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="teaching">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>translation</desc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_type">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>What kind of research does the collection allow to conduct
+                        primarily?</catDesc>
+                     <category xml:id="qualitative">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="quantitative">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="classification">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>How does the text collection classify itself (e.g. in its title or
+                        documentation)?</catDesc>
+                     <category xml:id="collection">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_archive">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portal">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="no_classification">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="research_fields">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>To which field(s) of research does the text collection
+                        contribute?</catDesc>
+                     <category xml:id="field_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_linguistics">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_art_history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_archaeology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_philosophy">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_religious_studies">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="field_sociology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>Translation studies</desc>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="content">
+                  <category xml:id="era">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the texts belong to?</catDesc>
+                     <category xml:id="era_classics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_medieval">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_early_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_modern">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="era_contemporary">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="language">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What languages are the texts in?</catDesc>
+                     <category xml:id="arabic">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="chinese">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="danish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="english">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="finnish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="french">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="german">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="greek">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hebrew">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="hindi">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="italian">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="japanese">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="latin">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="norwegian">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="polish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="portuguese">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="russian">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="spanish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="swedish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="turkish">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>Albanian, Belarusian, Bulgarian, Catalan, Croatian, Czech, Dutch,
+                              Estonian, Hungarian, Icelandic, Latvian, Lithuanian, Macedonian,
+                              Malay, Maltese, Romani, Romanian, Serbian, Slovak, Slovene, Ukrainian,
+                              Vietnamese</desc>
+                        </category>
+                     </category>
+                     <category corresp="#free" xml:id="language_note">
+                        <desc>40 different languages</desc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of texts are in the collection?</catDesc>
+                     <category xml:id="literary_works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="private_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="essays">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="newspaper_articles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="charters">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="inscriptions">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="files_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="protocols">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="scientific_papers">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="speech_transcripts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>Subtitles, Bible translations</desc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="add_information">
+                     <catDesc>
+                        <ref target="#K2.5">cf. Catalogue 2.5</ref>
+                     </catDesc>
+                     <catDesc>What kind of information is published in addition to the
+                        texts?</catDesc>
+                     <category xml:id="introduction">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="context_material">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="bibliography">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="facsimile">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="composition">
+                  <category xml:id="documentation_methods">
+                     <catDesc>
+                        <ref target="#K3.1.1">cf. Catalogue 3.1.1-3.1.3</ref>
+                     </catDesc>
+                     <catDesc>Are the principles and decisions regarding the design of the text
+                        collection, its composition and the selection of texts documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>What selection criteria have been chosen for the text
+                        collection?</catDesc>
+                     <category xml:id="selection_language">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_author">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_country">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_epoch">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_genre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_topic">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_style">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="selection_linguistic_characteristics">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>available Czech bitext</desc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="size">
+                     <category xml:id="size_texts">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of
+                           texts/records?</catDesc>
+                        <category xml:id="texts_le10">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_11-50">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_51-100">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt100_">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="texts_gt1000">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="size_tokens">
+                        <catDesc>
+                           <ref target="#K3.1.4">cf. Catalogue 3.1.4</ref>
+                        </catDesc>
+                        <catDesc>How large is the text collection in number of tokens?</catDesc>
+                        <category xml:id="tokens_lt100.000">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_100.000-1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt1mio">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tokens_gt10mio">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="structure">
+                     <catDesc>
+                        <ref target="#K3.1.5">cf. Catalogue 3.1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have identifiable sub-collections or
+                        components?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="acquisition">
+                     <category xml:id="text_recording">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection record or transcribe the textual data for
+                           the first time?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_integration">
+                        <catDesc>
+                           <ref target="#K3.1.6">cf. Catalogue 3.1.6</ref>
+                        </catDesc>
+                        <catDesc>What kind of material has been taken over from other
+                           sources?</catDesc>
+                        <category xml:id="full_text">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_metadata">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="reuse_annotation">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="quality">
+                     <catDesc>
+                        <ref target="#K3.1.7">cf. Catalogue 3.1.7</ref>
+                     </catDesc>
+                     <catDesc>Has the quality of the data (transcriptions, metadata, annotations,
+                        etc.) been checked?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.1.8">cf. Catalogue 3.1.8</ref>
+                     </catDesc>
+                     <catDesc>Considering aims and methods of the text collection, how would you
+                        classify it further? For definitions please consider the
+                        help-texts.</catDesc>
+                     <category xml:id="typology_general_purpose">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_records">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_canon">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_oeuvre">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_reference_corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_contrastive_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_parallel_corpus">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_diachronic_corpus">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="data_modelling">
+                  <category xml:id="text_treatment">
+                     <catDesc>
+                        <ref target="#K3.2.1">cf. Catalogue 3.2.1</ref>
+                     </catDesc>
+                     <catDesc>How are the textual sources represented in the digital
+                        collection?</catDesc>
+                     <category xml:id="normalized_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="orthographic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="phonetic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="transliteration">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translated_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="summarized_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="sampled_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc>according to the original sources</desc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="basic_format">
+                     <catDesc>
+                        <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                     </catDesc>
+                     <catDesc>In which basic format are the texts encoded?</catDesc>
+                     <category xml:id="plain_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="xml">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="html">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="annotation">
+                     <category xml:id="annotation_type">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>With what information are the texts further enriched?</catDesc>
+                        <category xml:id="semantic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="linguistic_annotations">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="editorial_annotations">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural_information">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="annotation_integration">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>How are the annotations linked to the texts themselves?</catDesc>
+                        <category xml:id="embedded">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="stand-off">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="metadata">
+                     <category xml:id="metadata_type">
+                        <catDesc>
+                           <ref target="#K3.2.3">cf. Catalogue 3.2.3</ref>
+                        </catDesc>
+                        <catDesc>What kind of metadata are included in the text
+                           collection?</catDesc>
+                        <category xml:id="descriptive">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="structural">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="administrative">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="metadata_level">
+                        <catDesc>
+                           <ref target="#K3.2.2">cf. Catalogue 3.2.2</ref>
+                        </catDesc>
+                        <catDesc>On which level are the metadata included?</catDesc>
+                        <category xml:id="whole_collection">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_parts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="individual_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#not_applicable">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="data_standards">
+                     <category xml:id="data_schema">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>What kind of data/metadata/annotation schemas are used for the text
+                           collection?</catDesc>
+                        <category xml:id="standardized_schema">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="customized_standard_schema">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="project_specific">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#unknown">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="standard_format">
+                        <catDesc>
+                           <ref target="#K3.2.4">cf. Catalogue 3.2.4</ref>
+                        </catDesc>
+                        <catDesc>Which standards for text encoding, metadata and annotation are used
+                           in the text collection?</catDesc>
+                        <category xml:id="tei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cei">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="ead">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="xces">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="dublin_core">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="edm">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mets">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="mods">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="skos">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="owl">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="imdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="cmdi">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="tcf">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="olac">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="eagles">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="pos_tagsets">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category corresp="#none">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="provision">
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>Is the textual data accessible in a source format (e.g. XML,
+                        TXT)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="technical_interfaces">
+                     <catDesc>
+                        <ref target="#K4.2">cf. Catalogue 4.2</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces which allow the reuse of the data of
+                        the text collection in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="SPARQL_endpoint">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="analytical_data">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Besides the textual data, does the project provide analytical data
+                        (e.g. statistics) to download or harvest?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="user_interface">
+                  <category xml:id="interface_provision">
+                     <catDesc>
+                        <ref target="#K5.1">cf. Catalogue 5.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection have a dedicated user interface designed for
+                        the collection at hand in which the texts of the collection are represented
+                        and/or in which the data is analyzable?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="user_interface_sub">
+                     <category xml:id="usability">
+                        <catDesc>
+                           <ref target="#K5.3">cf. Catalogue 5.3</ref>
+                        </catDesc>
+                        <catDesc>From your point of view, is the interface of the text collection
+                           clearly arranged and easy to navigate so that the user can quickly
+                           identify the purpose, the content and the main access methods of the
+                           resource?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="access_modes">
+                        <category xml:id="browsing">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer the possibility to browse the contents by
+                              simple browsing options or advanced structured access via indices
+                              (e.g. by author, year, genre)?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="full_text_search">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer a fulltext search?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="advanced_search">
+                           <catDesc>
+                              <ref target="#K5.4">cf. Catalogue 5.4</ref>
+                           </catDesc>
+                           <catDesc>Does the project offer an advanced search?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="analysis">
+                        <category xml:id="analysis_tools">
+                           <catDesc>
+                              <ref target="#K5.5">cf. Catalogue 5.5</ref>
+                           </catDesc>
+                           <catDesc>Does the text collection integrate tools for analyses of the
+                              data?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="analysis_customization">
+                           <catDesc>
+                              <ref target="#K5.5">cf. Catalogue 5.5</ref>
+                           </catDesc>
+                           <catDesc>Can the user alter the interface in order to affect the outcomes
+                              of representation and analysis of the text collection (besides basic
+                              search functionalities), e.g. by applying his or her own queries or by
+                              choosing analysis parameters?</catDesc>
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="visualization">
+                        <catDesc>
+                           <ref target="#K5.6">cf. Catalogue 5.6</ref>
+                        </catDesc>
+                        <catDesc>Does the text collection provide particular visualizations of the
+                           data?</catDesc>
+                        <category xml:id="networks">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charts">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="treemaps">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="wordclouds">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_visualization">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                     <category xml:id="personalization">
+                        <catDesc>
+                           <ref target="#K5.7">cf. Catalogue 5.7</ref>
+                        </catDesc>
+                        <catDesc>Is there a personalisation mode that enables the users e.g. to
+                           create their own sub-collections of the existing text
+                           collection?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="preservation">
+                  <category xml:id="documentation_project">
+                     <catDesc>
+                        <ref target="#K6.1">cf. Catalogue 6.1</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection provide sufficient documentation about the
+                        project in general as well as about the aims, contents and methods of the
+                        text collection?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>
+                        <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="rights_declared">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="rights_license">
+                        <catDesc>
+                           <ref target="#K6.2">cf. Catalogue 6.2</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY_only">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the text
+                        collection and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K6.3">cf. Catalogue 6.3</ref>
+                     </catDesc>
+                     <catDesc>Does the text collection supply citation guidelines?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="archiving">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="curation">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="completion">
+                     <catDesc>
+                        <ref target="#K6.4">cf. Catalogue 6.4</ref>
+                     </catDesc>
+                     <catDesc>Is the text collection completed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="3"/>
+                     </catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>multi-genre corpus</term>
+               <term>multilingual</term>
+               <term>Parallel corpus</term>
+               <term>text collection</term>
+               <term>translation</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This review describes and evaluates the InterCorp, a multilingual parallel corpus
+               with referential character, developed by the Institute of the Czech National Corpus
+               and the Institute of Theoretical and Computer Linguistics at the Charles University
+               (Prague). In its current version 10, which was published in 2017, it comprises 2 108
+               703 589 tokens of language data in 40 different languages. It is developed according
+               to the <emph>translation</emph>-principle with Czech as its pivot language.
+               Therefore, each integrated text is available in Czech and at least one other
+               language. A substantial part of the corpus, the <emph>core</emph>, which comprises
+               mostly fiction, is aligned manually in the project itself. Other parts of the corpus,
+               the so-called <emph>collections</emph>, are integrated from other projects, where
+               they have been aligned automatically. Besides a detailed description of the structure
+               and content of the InterCorp, this review focuses the accessiblitiy via the online
+               corpus manager <emph>KonText</emph> and assesses the value of the corpus for research
+               questions that do not primarily focus Czech.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Überblick</head>
+            <div xml:id="div1.1">
+               <head>Allgemeine Charakterisierung, Ziele und Zielgruppe</head>
+               <p xml:id="p1">Das InterCorp ist ein mehrsprachiges, nach dem Translationsprinzip
+                  aufgebautes Parallelkorpus, das seit 2005 am Institut des tschechischen
+                  Nationalkorpus (<emph>Ústav Českého národního korpusu</emph><note xml:id="ftn1">
+                     <ref
+                        target="https://web.archive.org/web/20180930073325/http://wanthalf.saga.cz/intertext"
+                        >https://web.archive.org/web/20180930072009/https://ucnk.ff.cuni.cz/en/</ref>.</note>)
+                  in Kooperation mit dem Institut für theoretische und Computerlinguistik
+                     (<emph>Ústav teoretické a komputační lingvistiky</emph><note xml:id="ftn2">Vgl.
+                        <ref
+                        target="https://web.archive.org/web/20180930072202/http://utkl.ff.cuni.cz/en/index.php"
+                        >https://web.archive.org/web/20180930072202/http://utkl.ff.cuni.cz/en/index.php</ref>.</note>)
+                  der Philosophischen Fakultät der Karlsuniversität (Prag) aufgebaut wird. Seit der
+                  2013 veröffentlichten 6. Version hat es den Charakter eines Referenzkorpus – die
+                  Vorgängerversionen bleiben seitdem nach ihrem Publikationszeitpunkt jeweils
+                  unverändert und können auch nach Erscheinen der nächsten, aktualisierten Version
+                  abgerufen werden. Diese Rezension bezieht sich hauptsächlich auf die zum
+                  Rezensionszeitpunkt im März 2018 jüngste verfügbare Version, nämlich Version 10,
+                  die 2017 veröffentlicht wurde.</p>
+               <p xml:id="p2">Das Korpus richtet sich einerseits explizit an ein wissenschaftliches,
+                  linguistisches wie translationswissenschaftliches Zielpublikum, ist andererseits
+                  jedoch durch die online, nicht nur im intuitiv aufgebauten Korpusmanager
+                     <emph>KonText</emph>,<note xml:id="ftn3">Vgl. <ref
+                        target="https://web.archive.org/web/20180930072239/https://kontext.korpus.cz/first_form"
+                        >https://web.archive.org/web/20180930072239/https://kontext.korpus.cz/first_form</ref>.</note>
+                  sondern auch durch die niederschwellige, auf dem InterCorp aufgebaute Applikation
+                     <emph>Treq</emph><note xml:id="ftn4">Vgl. <ref
+                        target="https://web.archive.org/web/20180930072318/http://treq.korpus.cz/"
+                        >https://web.archive.org/web/20180930072318/http://treq.korpus.cz/</ref>.</note>
+                  gegebene Verfüg- und Durchsuchbarkeit für eine breitere Öffentlichkeit nutzbar.
+                  Besonders in der praktischen Translation und im Fremdsprachenunterricht sind
+                  Anwendungsgebiete gegeben. Das InterCorp richtet sich damit explizit an
+                  menschliche NutzerInnen und versucht deren Bedürfnissen nachzukommen, womit es
+                  sich von anderen multilingualen Parallelkorpora wie <emph>Opus</emph><note
+                     xml:id="ftn5">Vgl. <ref
+                        target="https://web.archive.org/web/20180930072433/http://opus.nlpl.eu/"
+                        >https://web.archive.org/web/20180930072433/http://opus.nlpl.eu/</ref>.</note>
+                  und <emph>JRC</emph>-<emph>Acquis</emph><note xml:id="ftn6">Vgl. <ref
+                        target="https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis"
+                        >https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis</ref> (letzter
+                     Zugriff: 08. 03. 2018).</note> unterscheidet, die (auch) für die maschinelle
+                  Verarbeitung aufgebaut wurden und für diese genutzt werden.</p>
+               <p xml:id="p3">Da das Tschechische als Pivotsprache fungiert, jeder
+                  nicht-tschechischsprachige Text also ein tschechisches Gegenstück enthält und mit
+                  diesem aligniert ist, eignet sich das InterCorp primär für Fragestellungen, die
+                  sich auf das Tschechische beziehen. František Čermák – Begründer des Instituts des
+                  Tschechischen Nationalkorpus – und Alexandr Rosen beschreiben die Idee hinter dem
+                  InterCorp in diesem Sinn: „[…] having one’s own language amply covered by
+                  monolingual corpora may not be enough – the language must also be studied from the
+                  outside” (Čermák und Rosen 2012: 414). In dem Teil der Rezension, der sich mit der
+                  Struktur des Korpus beschäftigt, soll jedoch gezeigt werden, dass das InterCorp
+                  auch für andere Sprachenpaare eingesetzt werden kann und auch für diese eine
+                  wertvolle Quelle darstellt.</p>
+            </div>
+            <div xml:id="div1.2">
+               <head>Institutionelle Einbettung</head>
+               <p xml:id="p4">Der Auf- und Ausbau des InterCorp wird als Teil des Tschechischen
+                  Nationalkorpus (Český národní korpus) seit 2005 durchgängig von diversen Grants
+                  des tschechischen Ministeriums für Unterricht, Jugend und Sport (Ministerstvo
+                  školství, mládeže a tělovýchovy) finanziert. Seit 2012 findet die Förderung im
+                  Rahmen eines Programmes mit Namen Large Research, Development and Innovation
+                     Infrastructures<note xml:id="ftn7">2005–2011: <emph>The Czech National Corpus
+                        and Corpora of Other Languages</emph> (0021620823), 2012–2015: Czech
+                     National Corpus (LM2011023), 2016–2019: Czech National Corpus (LM2015044).
+                     Detaillierte Informationen zu diesem Projekt, die auch Auskunft über die Höhe
+                     der Förderungen geben, finden sich unter <ref
+                        target="https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&amp;ss=detail&amp;n=0&amp;h=LM2015044"
+                        >https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&amp;ss=detail&amp;n=0&amp;h=LM2015044</ref>
+                     (letzter Zugriff: 03. 03. 2018).</note> statt. Ausführende Institutionen sind
+                  zwei Institute der Philosophischen Fakultät der Prager Karlsuniversität, nämlich
+                  das Institut des tschechischen Nationalkorpus (Ústav Českého národního korpusu)
+                  sowie das Institut für theoretische und Computerlinguistik (Ústav teoretické a
+                  komputační lingvistiky). Alexandr Rosen, der derzeit leitend für das InterCorp
+                  verantwortlich ist, ist institutionell dem zweiten Institut zugeordnet, Software
+                  und Technik werden durch Martin Vavřín und Adrian Zasina von ersterem Institut
+                  beigesteuert. Die inhaltliche Gestaltung – also die Auswahl und Verarbeitung der
+                  Texte – wird durch für spezifische Sprachen zuständige KoordinatorInnen,<note
+                     xml:id="ftn8">Vgl. die Auflistung auf <ref
+                        target="https://web.archive.org/web/20180301203839/http://wiki.korpus.cz/doku.php/en:cnk:intercorp#coordinators_for_specific_languages"
+                        >https://web.archive.org/web/20180301203839/http://wiki.korpus.cz/doku.php/en:cnk:intercorp#coordinators_for_specific_languages</ref>.</note>
+                  die primär von tschechischen Universitäten stammen, vorgenommen (vgl. auch Rosen
+                  2016: 23).</p>
+            </div>
+            <div xml:id="div1.3">
+               <head>Entwicklung und Umfang</head>
+               <p xml:id="p5">
+                  <figure xml:id="img1">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-1.png"/>
+                     <head type="legend">Im InterCorp enthaltene Fremdsprachen (Vgl. <ref
+                           target="https://web.archive.org/web/20180304154547/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts.png?id=en%3Acnk%3Aintercorp%3Averze10"
+                           >https://web.archive.org/web/20180304154547/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts.png?id=en%3Acnk%3Aintercorp%3Averze10</ref>).</head>
+                  </figure> Die erste Version des InterCorp (Version 0) wurde 2008 publiziert und
+                  umfasste Texte in insgesamt 20 Sprachen, von denen jedoch noch keine lemmatisiert
+                  oder annotiert waren. Seitdem wurden jährlich ein bis zwei aktualisierte Versionen
+                  veröffentlicht, die sich von den vorhergehenden jeweils in der Größe des Korpus,
+                  der Anzahl der abgedeckten Sprachen sowie in den Verarbeitungsschritten
+                  (Lemmatisierung und morphosyntaktische Annotation) unterscheiden. Version 10 des
+                  InterCorp enthält bereits Texte in insgesamt 40 Sprachen,<note xml:id="ftn9">Inkl.
+                     Tschechisch, das auf den Seiten des Tschechischen Nationalkorpus üblicherweise
+                     nicht zu den vorhandenen Sprachen gezählt wird.</note> von denen – abhängig vom
+                  Vorhandensein entsprechender Programme – 23 morphosyntaktisch annotiert und 22
+                  lemmatisiert sind.</p>
+               <p xml:id="p6">Die Größe des Korpus wird für diese Version 10 mit insgesamt
+                  2 108 703 589 Token angegeben,<note xml:id="ftn10">Diese Größe ergibt sich aus der
+                     Summe der unter <ref
+                        target="https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10"
+                        >https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10</ref>
+                     angegebenen Korpusgröße der tschechischsprachigen wie
+                     nicht-tschechischsprachigen Teile.</note> wobei 11,5%, nämlich 245 483 234
+                  Token auf das Tschechische entfallen. Die Größe der nicht-tschechischsprachigen
+                  Teile kann <ref type="crossref" target="#img1">Abb. 1</ref> entnommen werden, die
+                  zeigt, dass das InterCorp die meisten Sprachdaten für das Englische (123 172 000
+                  Token), Spanische (108 377 000 Token) und Portugiesische (94 930 000 Token)
+                  enthält. Auf die Teilkorpora, auf die durch die Legende verwiesen wird, geht das
+                  entsprechende Kapitel dieser Besprechung ein.</p>
+            </div>
+         </div>
+         <div xml:id="div2">
+            <head>Korpusaufbau</head>
+            <div xml:id="div2.1">
+               <head>Kriterien für die Textauswahl</head>
+               <p xml:id="p7">Das InterCorp ist, wie eingangs erwähnt, nach dem
+                     <emph>Translationsprinzip</emph> rund um die Pivotsprache Tschechisch
+                  aufgebaut, woraus als primäres Selektionskriterium zur Textauswahl folgt, dass für
+                  jeden integrierten Text eine tschechischsprachige Version verfügbar sein muss. Aus
+                  pragmatischen Gründen, die v. a. mit der Verfügbarkeit von Paralleltexten für
+                  Sprachenpaare (bestehend aus Tschechisch und einer anderen Sprache) zweier
+                  „kleiner“ Sprachen zusammenhängen, werden auch Texte für ein bestimmtes
+                  Sprachenpaar integriert, in denen keine der beiden Sprachen die Originalsprache
+                  darstellt (vgl. Čermák und Rosen 2012: 417). Tschechisch wird von den
+                  Verantwortlichen als Beispiel für eine solche „kleine“ Sprache genannt (vgl. ebd.:
+                  414), wodurch die Virulenz dieser Problematik für den Aufbau des Korpus deutlich
+                  wird: Um eine ausreichende Korpusgröße für ein aus Tschechisch und einer anderen
+                  Sprache bestehendes Paar zu erzielen, werden Texte integriert, die in beiden
+                  dieser Sprachen Übersetzungen darstellen. In der Nutzung des InterCorp muss dieser
+                  Umstand insofern Berücksichtigung finden, als sich Originaltexte und
+                  Übersetzungstexte in einer Sprache linguistisch deutlich unterscheiden (vgl.
+                  Chlumská 2017 für das Tschechische).</p>
+               <p xml:id="p8">Weitere zentrale Aufnahmekriterien ergeben sich aus dem Ziel,
+                     <emph>allgemeine</emph>
+                  <emph>Gegenwartssprache</emph> abzudecken, um das Korpus für ein möglichst breites
+                  Spektrum verschiedener Fragestellungen nutzbar zu machen. Daher werden nur Texte
+                  aufgenommen, die nach dem Jahr 1945 entstanden sind (vgl. Čermák und Rosen 2012:
+                  417).</p>
+               <p xml:id="p9">Dem Anspruch, ein möglichst <emph>balanciertes Parallelkorpus</emph>
+                  aufzubauen, gerecht zu werden, ist deutlich schwerer. Auf Grund mangelnder
+                  Übersetzungen mündlicher Äußerungen in der notwendigen Zahl werden nämlich nur
+                  geschriebene Texte aufgenommen. Der zentrale Fokus des InterCorp-Projekts selbst
+                  liegt auf fiktionalen Texten, v. a. Romanen. Nicht-fiktionale Textsorten werden
+                  jedoch durch den Rückgriff auf und die Integration von anderen Korpora und Quellen
+                  abgedeckt (vgl. ebd.).</p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Die <emph>Collections</emph> im InterCorp</head>
+               <p xml:id="p10">Innerhalb InterCorp wird also grundsätzlich zwischen dem sogenannten
+                     <emph>Core</emph> und den <emph>Collections</emph> unterschieden, wobei sich
+                  diese beiden Teile durch die in ihnen enthaltenen Textsorten und darin, ob die
+                  Alignierung mit der jeweiligen tschechischen Version manuell überprüft wird,
+                  unterscheiden. Bei den <emph>Collections</emph> handelt es sich um jene
+                  größtenteils nicht-fiktionalen, aus externen Projekten integrierten Texte, die oft
+                  bereits in diesen automatisch aligniert wurden. Auf die sich aus diesem Vorgehen
+                  ergebenden Probleme, die v. a. die höhere Zahl falsch alignierter Segmente und
+                  fehlende Metadaten in den originalen Ressourcen betreffen, wird im Wiki des
+                  InterCorp – und damit für die breite Nutzerschaft gut sichtbar – explizit
+                     hingewiesen.<note xml:id="ftn11">
+                     <ref
+                        target="https://web.archive.org/web/20180930073325/http://wanthalf.saga.cz/intertext"
+                        >https://web.archive.org/web/20180303193412/http://ucnk.korpus.cz/intercorp/?lang=en</ref>.</note>
+                  Teilweise wurden die integrierten Ressourcen auch geringfügig verändert, etwa
+                  Texte getilgt, für die keine tschechische Version verfügbar war. In Version 10
+                  sind die folgenden <emph>Collections</emph> enthalten, durch die etwa
+                  Pressesprache, aber auch der gesprochenen Sprache näherstehende Texttypen
+                  abgedeckt werden: <list rend="bulleted">
+                     <item>politische Kommentare, publiziert von <emph>Project Syndicate</emph>
+                        <note xml:id="ftn12">Bei <emph>Project Syndicate</emph> handelt es sich um
+                           ein Medienunternehmen mit Sitz in der Tschechischen Republik, das
+                           journalistische Meinungsartikel auf Englisch erstellt und laut eigener
+                           Aussage in 12 verschiedene Sprachen, nämlich Arabisch, Bahasa,
+                           Tschechisch, Niederländisch, Französisch, Deutsch, Hindi, Italienisch,
+                           Mandarin, Portugiesisch, Russisch und Spranisch übersetzt (vgl. <ref
+                              target="https://web.archive.org/web/20180303205213/https://www.project-syndicate.org/about)"
+                              >https://web.archive.org/web/20180303205213/https://www.project-syndicate.org/about)</ref>.</note>
+                        und <emph>VoxEurop</emph>
+                        <note xml:id="ftn13">Ähnlich ist <emph>VoxEurope</emph> eine Nachrichten-
+                           und Diskussionswebsite mit Basis in Frankreich, die sich mit europäischen
+                           Themen auseinandersetzt und seine Inhalte in 10 europäische Sprachen –
+                           Tschechisch, Deutsch, Englisch, Spanisch, Französisch, Italienisch,
+                           Niederländisch, Polnisch, Portugiesisch und Rumänisch – übersetzt (vgl.
+                              <ref
+                              target="https://web.archive.org/web/20180303210343/http://www.voxeurop.eu/de/about)"
+                              >https://web.archive.org/web/20180303210343/http://www.voxeurop.eu/de/about)</ref>.</note>
+                        (früher: <emph>PressEurop</emph>)</item>
+                     <item>Rechtstexte der Europäsichen Union aus dem <emph>Acquis
+                           Communautaire</emph>-Korpus<note xml:id="ftn14">Vgl. <ref
+                              target="https://web.archive.org/web/20180303210916/https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis"
+                              >https://web.archive.org/web/20180303210916/https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis</ref>
+                           sowie Steinberger et al. (2014).</note>
+                     </item>
+                     <item>Verhandlungen des Europäischen Parlaments aus den Jahren 2007–2011 aus
+                        dem <emph>Europarl</emph>-Korpus<note xml:id="ftn15">Vgl. <ref
+                              target="https://web.archive.org/web/20180303211410/http://www.statmt.org/europarl/"
+                              >https://web.archive.org/web/20180303211410/http://www.statmt.org/europarl/</ref>
+                           sowie Koehn (2005).</note>
+                     </item>
+                     <item>Filmuntertitel aus der <emph>Open Subtitles database</emph>
+                        <note xml:id="ftn16">Vgl. <ref
+                              target="https://web.archive.org/web/20180930072919/https://www.opensubtitles.org/de"
+                              >https://web.archive.org/web/20180930072919/https://www.opensubtitles.org/de</ref>.</note>
+                     </item>
+                     <item>Bibelübersetzungen</item>
+                  </list>
+               </p>
+               <p xml:id="p11">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-2.png"/>
+                     <head type="legend">Collections nach Fremdsprachen im InterCorp (aus: <ref
+                           target="https://web.archive.org/web/20180303213216/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts3.png?id=en%3Acnk%3Aintercorp%3Averze10"
+                           >https://web.archive.org/web/20180303213216/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts3.png?id=en%3Acnk%3Aintercorp%3Averze10</ref>).</head>
+                  </figure>
+                  <ref type="crossref" target="#img2">Abb. 2</ref> bezieht sich nur auf die
+                  nicht-tschechischsprachigen <emph>Collections</emph> und zeigt die Verfügbarkeit
+                  und Größe dieser automatisch alignierten, ins InterCorp integrierten Texte. Aus
+                  ihr wird ersichtlich, dass – wie auch im gesamten Korpus – das Englische
+                  (96 605 000 Token), Portugiesische (94 931 000 Token) und Spanische (87 342 000
+                  Token) nach der Wortanzahl gemessen<note xml:id="ftn17">Vgl. die Angaben zur Größe
+                     der einzelnen Korpusteile für jede der Sprachen auf <ref
+                        target="https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#corpus_size_in_thousands_of_words"
+                        >https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#corpus_size_in_thousands_of_words</ref>.</note>
+                  die in den <emph>Collections</emph> des InterCorp am stärksten vertretenen
+                  Fremdsprachen sind. Den größten Anteil nehmen bei diesen Sprachen wiederum die
+                  Filmuntertitel ein.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Der <emph>Core</emph> im InterCorp</head>
+               <p xml:id="p12">Der <emph>Core</emph> ist – wie bereits sein Name suggeriert – das
+                  eigentliche Herzstück des InterCorp, das sich aus manuell alignierten und
+                  überprüften, fiktionalen Texten zusammensetzt. In der Praxis handelt es sich bei
+                  diesen Texten auf Grund ihres Tokenumfangs meist um Romane. Die in der Konzeption
+                  des Korpus ursprünglich geäußerte Annahme, dass eine „nicht-triviale Grundmenge an
+                     Titeln“<note xml:id="ftn18">Čermák und Rosen (2012: 415) definieren nicht
+                     näher, was sie unter einer „nicht-trivialen Grundmenge an Titeln“ verstehen.
+                     Möglich ist, dass in der Konzeptionsphase des Projekts die Annahme bestand,
+                     dass es eine ausreichende Menge an kanonischen Titeln der Weltliteratur des 20.
+                     Jahrhunderts gäbe, die in (fast) alle der im InterCorp enthaltenen Sprachen
+                     übersetzt seien. Zumindest in dem erwarteten Ausmaß dürfte sich diese nicht
+                     bewahrheitet haben.</note> bestünde, die in mehreren, wenn nicht allen Sprachen
+                  vorläge, hat sich nicht bestätigt, weshalb die meisten Texte nur als Bitexte für
+                  ein Sprachenpaar (Tschechisch und eine andere Sprache) verfügbar sind (vgl. Čermák
+                  und Rosen 2012: 415).</p>
+               <p xml:id="p13"> Für viele, allgemeinlinguistische und auch komparative
+                  Fragestellungen sind jedoch Paralleltexte in mehr als nur zwei Sprachen
+                  wünschenswert, wenn nicht unumgänglich. Aus diesem Grund hält das Institut des
+                  Tschechischen Nationalkorpus die für die Textaquise und Verarbeitung
+                  verantwortlichen sprachspezifischen KoordinatorInnen dazu an, bereits in anderen
+                  Sprachen vorhandene Titel bevorzugt zu inkludieren (vgl. ebd: 417). Die
+                  aktuellsten, sich auf die 2015 veröffentlichte Version 8 beziehenden Informationen
+                  zu den durch die meisten Sprachen abgedeckten Einzeltiteln sind in Rosen (2016:
+                  26–27) zu finden. Die drei, in den meisten Sprachen vorhandenen Werke waren in
+                  dieser Version: <list rend="bulleted">
+                     <item>J. K. Rowling: <emph>Harry Potter and the Philosopher’s Stone</emph> (26
+                        Sprachen)</item>
+                     <item> Saint-Exupéry: <emph>Le petit prince</emph> (26 Sprachen)</item>
+                     <item> L. Carroll: <emph>Alice in Wonderland</emph> (23 Sprachen)</item>
+                  </list>
+               </p>
+               <p xml:id="p14">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-3.png"/>
+                     <head type="legend">Cores für alle Fremdsprachen (vgl. <ref
+                           target="https://web.archive.org/web/20180304083141/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts2.png?id=en%3Acnk%3Aintercorp%3Averze10"
+                           >https://web.archive.org/web/20180304083141/https://wiki.korpus.cz/lib/exe/detail.php/cnk:intercorp:intercorp_wordcounts2.png?id=en%3Acnk%3Aintercorp%3Averze10</ref>).</head>
+                  </figure> In der Liste der durch die meisten Sprachen abgedeckten Titel finden
+                  sich v. a. im Original englischsprachige Romane, darunter mehrere aus der
+                     <emph>Harry Potter</emph>-Serie von J. K. Rowling. Die Verantwortlichen sind
+                  sich der damit einhergehenden Unausgewogenheit des Korpus bewusst und reflektieren
+                  sie (vgl. ebd.). In der für die NutzerInnen einfach zugänglichen
+                  Wiki-Dokumentation wird auf diesen, für manche Forschungsfragen problematischen
+                  Umstand jedoch nicht hingewiesen.</p>
+               <p xml:id="p15"> Aus <ref type="crossref" target="#img3">Abb. 3</ref> ist die Größe
+                  der für alle Sprachen außer Tschechisch vorhandenen <emph>Cores</emph> in der
+                  aktuellen Version 10 des InterCorp ersichtlich. Für das Deutsche sind Texte im
+                  Umfang von 33 053 000 Token, für das Englische von 24 567 000 Token vorhanden. Den
+                  dritten Rang nach Größe des <emph>Cores</emph> nimmt das Polnische mit 23 238 000
+                  Token ein.<note xml:id="ftn19">Vgl. die Angaben zur Größe der einzelnen
+                     Korpusteile für jede der Sprachen auf <ref
+                        target="https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#corpus_size_in_thousands_of_words"
+                        >https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#corpus_size_in_thousands_of_words</ref>.</note>
+               </p>
+               <p xml:id="p16">Da der Korpusmanager des Tschechischen Nationalkorpus die Erstellung
+                  personalisierter Subkorpora erlaubt, können der <emph>Core</emph> und die
+                     <emph>Collections</emph> getrennt voneinander bzw. in beliebigen Kombinationen
+                  durchsucht werden, wodurch die Vor- und Nachteile der jeweiligen Teilkorpora des
+                  InterCorp spezifisch für jede (Forschungs-)Frage abgewogen und dann auch
+                  berücksichtigt werden können. Auch die Erstellung von Subkorpora anhand anderer,
+                  textspezifischer Metadaten ist möglich, wodurch z. B. auch bestimmte Romane und
+                  ihre Übersetzungen in eine oder mehrere Sprachen untersucht werden können. Auf
+                  diese Funktionen wird im Teil der Rezension, die sich mit dem Korpusmanager
+                  auseinandersetzt, näher eingegangen.</p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Nutzbarkeit für Einzelsprachen, Sprachenpaare ohne Tschechisch und mehr als
+                  zwei Sprachen</head>
+               <p xml:id="p17">Der Korpusmanager ermöglicht es auch, einzelsprachliche Teile des
+                  Parallelkorpus alleine, ohne eine Vergleichssprache oder die Pivotsprache
+                  Tschechisch, zu durchsuchen. Diese Möglichkeit mag für die im InterCorp am
+                  stärksten repräsentierten anderen Sprachen als Tschechisch auf Grund vorhandener,
+                  einfach zugänglicher (National-)Korpusprojekte von untergeordneter Relevanz sein.
+                  Für manche der enthaltenen Sprachen, etwa das Ukrainische oder Mazedonische, für
+                  das nur wenige, einfach zugängliche elektronische Ressourcen vorliegen, können
+                  diese Teile des InterCorp dagegen sehr wohl eine wertvolle Quelle darstellen.</p>
+               <p xml:id="p18">Außerdem lässt der Korpusmanager die Option offen, nicht nur aus
+                  Tschechisch und einer anderen Sprache bestehende Sprachenpaare zu durchsuchen,
+                  sondern – scheinbar – z. B. ein deutsch-ukrainisches Parallelkorpus zu erstellen.
+                  Dabei sollte immer die Struktur des Korpus und die Funktion des Tschechischen als
+                  Pivotsprache berücksichtigt werden: Die deutsche und die ukrainische Version des
+                  Textes sind in diesem nicht unmittelbar miteinander aligniert, sondern vermittelt
+                  über das Tschechische, was bei komplexen Suchanfragen und besonders, wenn die
+                  nicht manuell überprüften <emph>Collections</emph> herangezogen werden, zu einer
+                  erhöhten Wahrscheinlichkeit falsch alignierter Ergebnisse führt. Rosen (2016: 29)
+                  führt eine Tabelle an, aus der die Größe der <emph>Core</emph>-Bitexte für alle
+                  Sprachenpaare entnommen werden kann. Mit dem Deutschen bildeten etwa in der
+                  Version 8 (2015) neben dem Tschechischen (27 656 000 Token) das Kroatische
+                  (7 069 000 Token), Polnische (6 942 000 Token) und Englische (6 692 000 Token) die
+                  größten Parallelkorpora. Von diesen können besonders die kroatisch-deutschen und
+                  polnisch-deutschen als wertvolle Ressourcen eingestuft werden.</p>
+               <p xml:id="p19">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-4.png"/>
+                     <head type="legend">Schnittmenge DE/CS/UK.</head>
+                  </figure>
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-5.png"/>
+                     <head type="legend">Schnittmenge DE/CS/EL.</head>
+                  </figure> Prinzipiell können auch mehr als nur zwei Sprachen durchsucht werden,
+                  wobei bei der Evaluation der Eignung des InterCorp für spezifische
+                  Forschungsfragen die Größe der Schnittmenge dieser Sprachen sowie die in dieser
+                  enthaltenen Texttypen berücksichtigt werden müssen. Zur Illustration zeigen <ref
+                     type="crossref" target="#img4">Abb. 4</ref> und 5 eine Kombination der Sprachen
+                  Deutsch und Tschechisch mit Ukrainisch bzw. Griechisch in Version 10 des
+                     InterCorp.<note xml:id="ftn20">Es handelt sich um Screenshots aus dem
+                     Suchanfragenmenü des Korpusmanagers <emph>KonText</emph> (<ref
+                        target="https://web.archive.org/web/20180930072239/https://kontext.korpus.cz/first_form"
+                        >https://web.archive.org/web/20180930072239/https://kontext.korpus.cz/first_form</ref>),
+                     in dem auch die Einschränkung des zu durchsuchenden Korpus nach diversen
+                     Metadaten möglich ist. Erstellt wurden sie am 05.03.2018.</note>
+               </p>
+               <p xml:id="p20">Die unterschiedliche Quantität und Zusammensetzung dieser
+                  Schnittmengen ist augenscheinlich: Für die Kombination
+                  Deutsch/Tschechisch/Ukrainisch können nur 9 432 527 Token durchsucht werden, die
+                  zu einem großen Teil jedoch aus den fiktionalen Textsorten des manuell überprüften
+                     <emph>Cores</emph> bestehen. Soll das InterCorp zum Vergleich des Deutschen mit
+                  dem Tschechischen und Griechischen genutzt werden, ist dies hingegen nur für die
+                  Rechtstexte aus dem <emph>Acquis Communautaire</emph>, die Verhandlungen des
+                  Europäischen Parlaments und Filmsubtitel – also nur für automatisch verarbeitete
+                  Korpusteile – möglich. Im Gegenzug ist das durchsuchbare Korpus mit 47 080 676
+                  Wörtern deutlich umfangreicher.</p>
+            </div>
+            <div xml:id="div2.5">
+               <head>Technische Aufbereitung und Modellierung: Methodische Aspekte</head>
+               <p xml:id="p21">In den Schwerpunkten der technischen Aufbereitung und Modellierung
+                  der Texte – und dabei insbesondere der <emph>Core</emph>-Texte, die vom Institut
+                  des Tschechischen Nationalkorpus in Kooperation mit den SprachkoordinatorInnen
+                  selbst verarbeitet werden – ist eindeutig die linguistische Ausrichtung des
+                  Gesamtprojekts erkennbar: Ziel ist es, die Sprache der Texte linguistisch zu
+                  erschließen. In Abhängigkeit von der Verfügbarkeit entsprechender Tools für die
+                  einzelnen Sprachen werden die Texte daher lemmatisiert und/oder morphosyntaktisch
+                  annotiert.</p>
+               <p xml:id="p22"> Wenig berücksichtigt wird im Korpusdesign derzeit noch die
+                  Unterscheidung von übersetzten Texten und Originalen, wenngleich angenommen werden
+                  muss, dass es zwischen diesen Differenzen in Bezug auf die Komplexität etc. gibt.
+                  Für das Tschechische werden entsprechende Studien auch am Institut des
+                  Tschechischen Nationalkorpus anhand eines eigens erstellten Korpus (JEROME<note
+                     xml:id="ftn21">Vgl. <ref
+                        target="https://web.archive.org/web/20180305202555/http://wiki.korpus.cz/doku.php/en:cnk:jerome"
+                        >https://web.archive.org/web/20180305202555/http://wiki.korpus.cz/doku.php/en:cnk:jerome</ref>.</note>)
+                  durchgeführt (vgl. Chlumská 2017). Rosen (2016: 37) identifiziert diesen Umstand
+                  auch als ein Desiderat für das InterCorp, möglichst alle Originale, zu denen
+                  Übersetzungen in einem oder in mehreren Sprachenpaaren im InterCorp vorliegen,
+                  ebenfalls zu inkludieren. Zumindest für Version 8 war dies noch nicht der Fall.
+                  Derzeit ist es im Suchinterface des Korpusmanagers <emph>KonText</emph> möglich,
+                  ein Subkorpus aus nur übersetzten Texte oder nur Originalen zu erstellen.</p>
+            </div>
+            <div xml:id="div2.6">
+               <head>Alignierung der Bitexte</head>
+               <p xml:id="p23">Der gesamte Verarbeitungsprozess der Texte im <emph>Core</emph> ist
+                  bei Rosen (2016: 35f.) sowie Rosen und Vavřín (2012: 2448f.) detailliert
+                  beschreiben, aber nicht Teil der Dokumentation im Wiki. Das Hauptaugenmerk in der
+                  technischen Aufbereitung der Texte liegt eindeutig auf der Alignierung der
+                  nicht-tschechischsprachigen mit den tschechischsprachigen Versionen auf Satzebene,
+                  für das natürlich eine Segmentierung in Sätze Voraussetzung ist. Zu diesem Zweck
+                  kommt ein Tool namens <emph>Punkt</emph> zum Einsatz (Kiss und Strunk 2006:
+                  485–525). Die Alignierung wird in einem ersten Schritt automatisch mit dem
+                  Programm <emph>Hunalign</emph><note xml:id="ftn22">Vgl. <ref
+                        target="https://web.archive.org/web/20180930073237/http://mokk.bme.hu/en/resources/hunalign/"
+                        >https://web.archive.org/web/20180930073237/http://mokk.bme.hu/en/resources/hunalign/</ref>.
+                  </note> vorgenommen, in einem weiteren dann manuell im, vom Projekt selbst
+                  entwickelten Paralleltexteditor <emph>InterText</emph><note xml:id="ftn23">Vgl.
+                        <ref
+                        target="https://web.archive.org/web/20180930073325/http://wanthalf.saga.cz/intertext"
+                        >https://web.archive.org/web/20180930073325/http://wanthalf.saga.cz/intertext</ref>.
+                     Der Editor ist spezifisch für das InterCorp entwickelt worden, nachdem in einer
+                     Frühphase auf proprietäre Programme wie <emph>ParaConc</emph> (vgl. <ref
+                        target="http://www.paraconc.com/">http://www.paraconc.com/</ref> [letzter
+                     Zugriff: 05. 03. 2018]) zurückgegriffen worden sein dürfte. Der Code des
+                     Editors ist auf GitHub erhältlich.</note> (Vondřička 2014) überprüft und
+                  korrigiert. Das InterCorp verwendet XML als das zentrale Datenformat.</p>
+            </div>
+            <div xml:id="div2.7">
+               <head>Linguistische Annotationen und Community Standards</head>
+               <p xml:id="p24">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-6.png"/>
+                     <head type="legend">Verschiedene Tagsets im Intercorp (05. 03. 2018).</head>
+                  </figure> Abhängig von der Verfügbarkeit entsprechender Tools für einzelne
+                  Sprachen werden die Texte auch lemmatisiert bzw. annotiert. Die entsprechende
+                  Liste der zum Einsatz kommenden Tools findet sich im Wiki,<note xml:id="ftn24"
+                     >Vgl. <ref
+                        target="https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#morphosyntactic_annotation"
+                        >https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10#morphosyntactic_annotation</ref>.</note>
+                  versehen mit dem Hinweis, dass die im Korpus tatsächlich verwendeten Tagsets von
+                  den für die einzelnen Sprachen und Tools beschriebenen abweichen können. Ein
+                  Inventar solcher Änderungen wird nur für manche Sprachen angedeutet, ansonsten
+                  wird auf die Ansichtsfunktion (<emph>View</emph>/<emph>Corpus specific
+                     settings</emph>) im Korpusmanager, über die die Tags in den Konkordanzen
+                  angezeigt werden können, verwiesen. Die morphosyntaktischen Annotationen sind in
+                  den Text eingebettet und können im Korpusmanager angezeigt, aber auch in der
+                  CQL-Suchfunktion zum Erstellen spezifischer Suchabfragen genutzt werden.</p>
+               <p xml:id="p25">Aus dem opportunistischen Einsatz verschiedener Tools folgt jedoch
+                  auch, dass im InterCorp verschiedene, sprachspezifische Tagsets zum Einsatz
+                  kommen. Dieser Umstand muss bei der Erstellung komplexer Suchabfragen
+                  berücksichtigt werden, wobei gesammelte Informationen nicht im Wiki oder einer
+                  anderen Dokumentation des InterCorp selbst vorliegen, sondern den zum
+                  Rezensionszeitpunkt teilweise nicht funktionierenden Links auf der in Endnote 29
+                  verlinkten Seite der Wiki-Dokumentation entnommen werden müssen. <ref
+                     type="crossref" target="#img6">Abb. 6</ref> zeigt beispielhaft drei Screenshots
+                  aus Suchabfragen aus dem tschechischen, deutschen und englischen Teil des
+                  InterCorp in der Version 10 (erstellt am 05. 03. 2018) mit Anzeige der
+                  morphosyntaktischen Tags, um den Grad der möglichen Abweichungen darzustellen. Es
+                  handelt sich um die Ergebnisse einer Suchabfrage nach dem Lemma des jeweiligen
+                  Äquivalents zu dt. <emph>Bücherregal</emph> (n.) (engl. <emph>bookshelf</emph>,
+                  tsch. <emph>police</emph> [f.]).</p>
+               <p xml:id="p26">Am tschechischen Beispiel ist gut das positionelle Annotationssystem
+                  erkennbar, das sich in der tschechischen Korpuslinguistik als <emph>de
+                     facto</emph>-Standard etabliert hat (vgl. Hajič 2004), wohingegen für das
+                  Deutsche mit einer leicht adaptierten Version des Stuttgart-Tübingen-Tagsets
+                  (STTS, Schiller et al. 1999), ebenfalls einem etablierten <emph>community
+                     standard</emph>, gearbeitet wird. Für das Englische wird das Tagset der
+                     <emph>Penn Treebank</emph><note xml:id="ftn25">Vgl. <ref
+                        target="https://web.archive.org/web/20180930073512/https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html"
+                        >https://web.archive.org/web/20180930073512/https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html</ref>.</note>
+                  leicht modifiziert verwendet. Aus AnwenderInnenperspektive wäre in diesem Bereich
+                  eine zentrale Dokumentation, z. B. im Wiki hilfreich.</p>
+            </div>
+            <div xml:id="div2.8">
+               <head>Textspezifische Metadaten</head>
+               <p xml:id="p27">Die Anzahl der für einzelne Korpusteile vorhandenen Metadaten
+                  divergiert relativ stark. Gerade bei den von dritten Projekten akquirierten
+                     <emph>Collections</emph> sind teilweise nur minimale textbezogene Metadaten
+                  vorhanden, was wohl mit dem Aufbauprinzip der zugrundeliegenden Korpora (v. a.
+                  beim <emph>Acquis</emph>- und <emph>Europarl</emph>-Korpus) und/oder dem Prinzip
+                  ihrer Integration ins InterCorp zusammenhängt. Die Beschreibung der Größe des
+                  InterCorp in Version 10 im Wiki<note xml:id="ftn26">Vgl. <ref
+                        target="https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10"
+                        >https://web.archive.org/web/20180303214506/https://wiki.korpus.cz/doku.php/en:cnk:intercorp:verze10</ref>.</note>
+                  legt nahe, dass jede der <emph>Collections</emph> als ein einziges XML-Dokument in
+                  die Datenbank integriert wurde, im <emph>Core</emph> jedoch jedes einzelne Werk
+                  ein eigenes solches XML-Dokument bildet und damit jedes Dokument
+                  (<emph>doc</emph>) mit einem Abschnitt (<emph>div</emph>) übereinstimmt. Auf diese
+                  beiden Gliederungsebenen im Korpus beziehen sich jeweils die folgenden Metadaten,
+                  die sämtlich im Korpusmanager angezeigt oder für die Erstellung von Suchabfragen
+                  genutzt werden können. <table>
+                     <head>Verfügbare textbezogene Metadaten</head>
+                     <row role="label">
+                        <cell>Metadaten bezogen auf das Dokument (<emph>doc</emph>)</cell>
+                        <cell>Metadaten bezogen auf den Abschnitt (<emph>div</emph>)</cell>
+                     </row>
+                     <row>
+                        <cell>
+                           <list rend="bulleted">
+                              <item>Sprache</item>
+                              <item>Version</item>
+                              <item>Größe in Wörtern</item>
+                           </list>
+                        </cell>
+                        <cell>
+                           <list rend="bulleted">
+                              <item>Teil von: <emph>Core</emph> oder einer bestimmten
+                                    <emph>Collection</emph>
+                              </item>
+                              <item>Größe in Wörtern</item>
+                              <item>AutorIn</item>
+                              <item>voller Titel</item>
+                              <item>Verlag</item>
+                              <item>Erscheinungsort</item>
+                              <item>Erscheinungsjahr</item>
+                              <item>Texttyp</item>
+                              <item>Original oder Übersetzung</item>
+                              <item>Sprache des Originals</item>
+                              <item>ÜbersetzerIn</item>
+                              <item>Geschlecht des/der ÜbersetzerIn</item>
+                              <item>Geschlecht des/der AutorIn</item>
+                           </list>
+                        </cell>
+                     </row>
+                  </table></p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Nutzbarkeit, Zugänglichkeit und Archivierung</head>
+            <p xml:id="p28">Das InterCorp ist wie die anderen Korpora des Tschechischen
+               Nationalkorpus für nicht-kommerzielle Zwecke, unentgeltlich und nach Registrierung
+               und Freischaltung des Nutzerkontos online im Korpusmanager <emph>KonText</emph>
+               zugänglich. Eine sich auf diesen beziehende, englische Dokumentation ist im Wiki des
+               Tschechischen Nationalkorpus abrufbar.<note xml:id="ftn27">Vgl. <ref
+                     target="https://web.archive.org/web/20180930073610/https://wiki.korpus.cz/doku.php/en:manualy:kontext:index"
+                     >https://web.archive.org/web/20180930073610/https://wiki.korpus.cz/doku.php/en:manualy:kontext:index</ref>.</note>
+            </p>
+            <p xml:id="p29"> Das Korpus ist aus urheberrechtlichen Gründen nicht in seiner
+               Gesamtheit herunterladbar, sondern kann nur über diesen Korpusmanager durchsucht
+               werden. Sollten für eine bestimmte Forschungsfrage oder z. B. für die Entwicklung von
+               NLP-Anwendungen alignierte Texte und nicht nur Konkordanzen benötigt werden, können
+               diese vom Institut nach Unterzeichnung eines nicht-kommerziellen Lizenzvertrags in
+               bilingualen Dateien angefordert werden. Auch dabei werden aus Urheberrechtsgründen
+               die Originaltexte in Einzelteile zu max. 100 Wörtern pro Sprache aufgebrochen. Die
+               entsprechenden Informationen über dieses Vorgehen sind in der Online-Dokumentation
+               nicht zugänglich, sondern Rosen (2016) entnommen.</p>
+            <div xml:id="div3.1">
+               <head>Dokumentation</head>
+               <p xml:id="p30">Das InterCorp ist gemeinsam mit den anderen Korpora des
+                     <emph>Tschechischen Nationalkorpus</emph> im unmittelbar von der Startseite
+                     <ref target="http://www.korpus.cz/">http://www.korpus.cz/</ref> abrufbaren Wiki
+                  des Projekts<note xml:id="ftn28"
+                     >https://web.archive.org/web/20180930073653/http://wiki.korpus.cz/doku.php/en:start.</note>
+                  dokumentiert, das auf Tschechisch und – zumindest für die Beschreibungen der
+                  Korpora und einiger Applikationen – auf Englisch zur Verfügung steht. Die sich auf
+                  das gesamte InterCorp beziehende Seite<note xml:id="ftn29"
+                     >https://web.archive.org/web/20180303191928/https://wiki.korpus.cz/doku.php/en:cnk:intercorp.</note>
+                  ist zum Rezensionszeitpunkt mit dem Vermerk, dass es sich um eine alte Version des
+                  Dokuments handle, überschrieben, enthält jedoch übersichtlich zusammengestellt
+                  alle zentralen Informationen zu Zielen und Nutzbarkeit, Größe und Aufbau des
+                  Korpus sowie zur Förderung des Projekts, den an ihm beteiligten Institutionen und
+                  die Namen der Kontaktpersonen. Auch die konkreten Änderungen zwischen den
+                  veröffentlichten Versionen sind dokumentiert. Richtlinien zur Zitation werden
+                  hervorgehoben angegeben.</p>
+               <p xml:id="p31"> Die als weiterführender Link angegebene, sogenannte „ursprüngliche“
+                  Seite des Projekts<note xml:id="ftn30"
+                     >https://web.archive.org/web/20180303193412/http://ucnk.korpus.cz/intercorp/?lang=en.</note>
+                  verweist an zahlreichen Stellen wieder zurück auf das aktuellere Wiki und erweist
+                  sich somit als keine substantiellen, aktualisierenden Informationen bringend. Dies
+                  gilt für die englischen wie tschechischen Versionen im gleichen Ausmaß. Im
+                  Allgemeinen wird der Anschein erweckt, dass sich die Dokumentation des InterCorp
+                  gerade im Umbau befindet, wodurch die Bereitstellung der maßgeblichen
+                  Grundinformationen jedoch nicht beeinträchtigt ist. Lücken in der intuitiv im Wiki
+                  abrufbaren Dokumentation betreffen die exakte Beschreibung der
+                  Textauswahlkriterien sowie bestimmte technisch-methodische Aspekte, auf die in den
+                  entsprechenden Kapiteln dieser Rezension näher eingegangen wird. Sie sind in
+                  Einzelpublikationen detailliert erläutert (Čermák und Rosen 2012; Rosen und Vavřín
+                  2012; Rosen 2016).</p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Der Online-Korpusmanager <emph>KonText</emph></head>
+               <p xml:id="p32">
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-7.png"/>
+                     <head type="legend">Auswahl des InterCorp im Korpusmanager KonText.</head>
+                  </figure> Derzeit ist das InterCorp gemeinsam mit den anderen Korpora des
+                  Instituts des Tschechischen Nationalkorpus über den Online-Korpusmanager
+                     <emph>KonText</emph> abrufbar, in den zu diesem Zweck zentrale Funktionen der
+                  ursprünglich für das InterCorp entworfenen Suchoberfläche <emph>Park</emph>, wie
+                  sie Čermák und Rosen (2012) und Rosen und Vavřín (2012) zeigen, integriert wurden.
+                  Neben der jahrzehntelangen Expertise des Instituts des tschechischen
+                  Nationalkorpus im Aufbau und der Weiterentwicklung von Programmen und Anwendungen
+                  nicht nur zum Korpusaufbau, sondern auch zur Korpusanalyse könnten auch
+                  Copyright-Belange eine Rolle dabei gespielt haben, sich für einen internen
+                  Korpusmanager zu entscheiden. Dieser ist sehr gut an die Bedürfnisse des InterCorp
+                  angepasst und leicht bzw. für Personen mit grundlegenden Erfahrungen in der
+                  Korpuslinguistik sogar intuitiv anwendbar.<note xml:id="ftn31">Eine detaillierte
+                     deutschsprachige Anleitung zur Verwendung des Korpusmanagers KonText findet
+                     sich in Káňa (2014: 81–104).</note>
+               </p>
+               <p xml:id="p33">Beim Abruf des Korpusmanagers über den Link <ref
+                     target="https://kontext.korpus.cz/">https://kontext.korpus.cz/</ref> (letzter
+                  Zugriff: 08. 03. 2018) ist prinzipiell das repräsentative (balancierte)
+                  tschechische Referenzkorpus SYN2015<note xml:id="ftn32">Vgl. <ref
+                        target="https://web.archive.org/web/20180307140237/https://wiki.korpus.cz/doku.php/en:cnk:syn2015"
+                        >https://web.archive.org/web/20180307140237/https://wiki.korpus.cz/doku.php/en:cnk:syn2015</ref>.</note>
+                  als zu durchsuchendes Korpus eingestellt. <ref type="crossref" target="#img7">Abb.
+                     7</ref> zeigt das Suchmenü, über das nach Klick auf den Titel des Korpus (hier:
+                  syn2015) das gewünschte Korpus ‒ z. B. die deutschsprachige Version des InterCorp
+                  ‒ gesucht und ausgewählt werden kann.<note xml:id="ftn33">Die in <ref
+                        type="crossref" target="#img7">Abb. 7</ref>, <ref type="crossref"
+                        target="#img8">8</ref>, <ref type="crossref" target="#img9">9</ref> und <ref
+                        type="crossref" target="#img10">10</ref> gezeigten Screenshots wurden am 07.
+                     03. 2018 von der Verfasserin erstellt.</note> Die Größe des Korpus wird neben
+                  dem Titel schon in dieser Ansicht angezeigt. Angemeldete NutzerInnen können
+                  einzelne, häufig durchsuchte Korpora als Favoriten markieren, um einfacher auf sie
+                  Zugriff zu haben.</p>
+               <p xml:id="p34">
+                  <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-8.png"/>
+                     <head type="legend">InterCorp-spezifisches Suchabfragemenü im KonText.</head>
+                  </figure> Nach der Auswahl des gewünschten Primärkorpus kann auf dem restlichen
+                  Bildschirm die Suchabfrage definiert werden. Ein oder mehrere Parallelkorpora (s.
+                     <emph>aligned corpora</emph>) werden mit Hilfe des zentrierten Drop-Down-Menüs
+                  zugeschalten und können über die Schaltfläche links außen neben dem Titel
+                     (<emph>InterCorp v10 - Czech</emph> in <ref type="crossref" target="#img8">Abb.
+                     8</ref>) wieder entfernt werden. Für alle Korpora ist die Eingabe einer
+                  Suchabfrage nach verschiedenen Typen möglich: einfache Suche, Suche nach Lemmata
+                  (bei lemmatisierten Korpora), (Mehrwort-)Phrasen, Wortformen, Wortteilen oder eben
+                  eine komplexe Suchabfrage mit der <emph>Corpus Query Language</emph> (CQL),<note
+                     xml:id="ftn34">Vgl. <ref
+                        target="https://web.archive.org/web/20180930073843/https://www.sketchengine.eu/documentation/corpus-querying/"
+                        >https://web.archive.org/web/20180930073843/https://www.sketchengine.eu/documentation/corpus-querying/</ref>.</note>
+                  wie sie in <ref type="crossref" target="#img8">Abb. 8</ref> für das deutsche
+                  InterCorp im oberen Bereich gezeigt wird.</p>
+               <p xml:id="p35">Die Suchanfragen in den beiden Sprachen können aufeinander bezogen
+                  werden, wie etwa im abgebildeten Beispiel, das nach Konkordanzen sucht, in deren
+                  deutscher Version das Lemma <emph>stellen</emph> im Abstand von null bis fünf
+                  Wörtern auf ein auf -<emph>regal</emph> endendes Lemma folgt, deren tschechische
+                  Version jedoch das Lemma (hier kommt nur die Suchfunktion „Lemma“ zum Einsatz)
+                     <emph>dát</emph> ‚geben‘ NICHT enthält.</p>
+               <p xml:id="p36">
+                  <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-9.png"/>
+                     <head type="legend">Beschränkung einer Suchabfrage auf bestimmte
+                        Korpusteile.</head>
+                  </figure> Unter dem Menüpunkt „Restrict search“, der durch Klick auf den blauen
+                  Pfeil expandiert werden kann, ist eine Einschränkung des durchsuchten Korpus nach
+                  bestimmten Korpusteilen und nach allen textspezifischen Metadaten möglich. Wie
+                  oben illustriert, sollte gerade bei der Kombination verschiedener Parallelkorpora
+                  sowie bei der Einschränkung auf bestimmte Textsorten (in <ref type="crossref"
+                     target="#img9">Abb. 9</ref> z. B. auf den <emph>Core</emph>) zunächst die Größe
+                  des zu durchsuchenden Korpus überprüft werden. Dies geschieht durch Auswahl der
+                  gewünschten Kriterien und anschließenden Klick auf „Refine selection“, woraufhin
+                  die Größe des durchsuchbaren Subkorpus in der Anzahl der Token angegeben wird
+                  (hier: 40 107 380 Token).</p>
+               <p xml:id="p37">
+                  <figure xml:id="img10">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-10.png"/>
+                     <head type="legend">Konkordanzanzeige im Korpusmanager KonText.</head>
+                  </figure>
+                  <ref type="crossref" target="#img10">Abb. 10</ref> zeigt die Konkordanzanzeige für
+                  die in <ref type="crossref" target="#img8">Abb. 8</ref> dargestellte komplexe
+                  Suchabfrage und illustriert gleichzeitig die übersichtliche horizontale Anordnung
+                  des Menüs, das <emph>drop down</emph>-Charakter hat und beim Bewegen des Cursors
+                  auf die gewünschte Anzeige- oder Analysefunktion spezifizierte Optionen öffnet.
+                  Die Suche ergab zwei Treffer, wobei der erste zeigt, dass eine weitere
+                  Einschränkung auf Lemmata innerhalb eines Satzes in der CQL-Anfrage für das
+                  deutsche InterCorp von Vorteil gewesen wäre. Die Alignierung auf Satzebene kann
+                  gut nachvollzogen werden. Direkt über den Konkordanzen werden grundlegende Angaben
+                  zur Frequenz in verschiedenen Maßen (<emph>words per million</emph> und
+                     <emph>average reduced frequency</emph>) gemacht.</p>
+               <p xml:id="p38">Für das InterCorp ist standardisiert die durch den geteilten
+                  Bildschirm übersichtlichere satzweise Anzeige eingestellt. Unter dem Menüpunkt
+                  „View“ kann jedoch einfach auch auf die KWIC-Ansicht umgestellt werden. Auch eine
+                  weitergehende Personalisierung bzw. Adaption der Anzeige ist unter diesem Punkt
+                  möglich: Die Größe des angezeigten Kontexts kann ebenso verändert werden, wie die
+                  Anzahl der maximal auf einer Seite angezeigten Konkordanzen („general settings“).
+                  Außerdem ist es möglich, bestimmte Metadaten und die morphosyntaktischen
+                  Annotationen anzeigen zu lassen („corpus-specific settings“). Auch die Menüpunkte
+                  „Concordance“ und „Filter“ bieten Anzeigeoptionen im weitesten Sinn, da sie
+                  erlauben, festzulegen, ob bzw. nach welchem Muster die Konkordanzen angezeigt
+                  werden sollen.</p>
+               <p xml:id="p39">Zentrale korpuslinguistische Analysemethoden sind über die Menüpuntke
+                  „Frequency“ und „Collocations“ abrufbar. Unter „Save“ können entweder alle oder
+                  ausgewählte Konkordanzen als .csv-, .xlsx-, .xml- oder .txt-file heruntergeladen
+                  werden, was eine einfache Weiterverarbeitung dieser Daten für verschiedene
+                  Forschungszwecke und auch für Personen mit unterschiedlichen technischen
+                  Anforderungen ermöglicht. Visualisierungen, wie sie etwa für die
+                  tschechischsprachigen Korpora durch Tools wie <emph>SyD</emph>,<note
+                     xml:id="ftn35">Vgl. <ref target="https://syd.korpus.cz/"
+                        >https://syd.korpus.cz/</ref> (letzter Zugriff: 09. 03. 2018).</note> mit
+                  dem morphologische Varianten in verschiedenen tschechischen Korpora des
+                  tschechischen Nationalkorpus verglichen werden können, möglich sind, gibt es für
+                  das InterCorp nicht.</p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Andere Auswertungsmöglichkeiten und Anwendungen</head>
+               <p xml:id="p40">
+                  <figure xml:id="img11">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_9/intercorp/pictures/picture-11.png"/>
+                     <head type="legend">Screenshot aus TREQ (angefertigt am 06. 03. 2018).</head>
+                  </figure> Neben <emph>KonText</emph> wurde auf Basis der 1:1 alignierten Sätze im
+                  InterCorp eine Webapplikation namens <emph>Treq</emph> (<emph>TRanslation
+                     EQuivalents</emph>) entwickelt, die ohne Registrierung genutzt werden kann und
+                  als Reihe zweisprachiger Wörterbücher dient, wobei jeweils das Tschechische oder
+                  Englische Teil des Sprachenpaares sein müssen.<note xml:id="ftn36">
+                     <emph>TREQ</emph> ist zugänglich über: <ref
+                        target="https://web.archive.org/web/20180930074010/http://treq.korpus.cz/"
+                        >https://web.archive.org/web/20180930074010/http://treq.korpus.cz/</ref>,
+                     die Dokumentation unter: <ref
+                        target="https://web.archive.org/web/20180306155552/https://wiki.korpus.cz/doku.php/en:manualy:treq"
+                        >https://web.archive.org/web/20180306155552/https://wiki.korpus.cz/doku.php/en:manualy:treq</ref>
+                     sowie in Škrabal und Vavřín 2017.</note>
+                  <ref type="crossref" target="#img11">Abb. 11</ref> zeigt einen Screenshot aus
+                  einer deutsch-englischen Suchabfrage in <emph>Treq</emph> und auch die
+                  Abfragemöglichkeiten, die die Anwendung bietet: Einerseits ist eine Beschränkung
+                  auf bestimmte Teile des InterCorp (<emph>Core</emph> oder
+                  <emph>Collections</emph>) möglich, andererseits können auch unterschiedliche
+                  Komplexitätsgrade in der Formulierung der Suchabfrage bis hin zum Einsatz von
+                     <emph>regular expressions</emph> gewählt werden.</p>
+               <p xml:id="p41">Die Frequenzanalysen, die die Anwendung auf diesen ersten Blick
+                  bietet, sind sehr beschränkt: Es wird nur die absolute Frequenz sowie der
+                  prozentuelle Anteil eines bestimmten Äquivalents relativ zu dieser absoluten
+                  Frequenz angegeben. Rückschlüsse auf die Größe des zugrunde liegenden Korpus
+                  können von dieser Ansicht nicht gezogen werden. Durch Klick auf ein
+                  entsprechendes, blau unterlegtes Äquivalent gelangt man jedoch zu den
+                  entsprechenden Konkordanzen, die im <emph>KonText</emph> angezeigt werden, in dem
+                  auch weitere Analysen möglich sind.</p>
+               <p xml:id="p42">
+                  <emph>Treq</emph> weist also ähnliche Funktionen auf wie Plattformen wie
+                     <emph>Linguee</emph><note xml:id="ftn37">Vgl. <ref
+                        target="https://www.linguee.de/">https://www.linguee.de/</ref> (letzter
+                     Zugriff: 07. 03. 2018).</note>, ist jedoch für linguistische Untersuchungen als
+                  Quelle insofern deutlich besser geeignet, als die Zusammensetzung und Größe des
+                  zugrundeliegenden Korpus bekannt ist und standardisierte Metadaten zu den
+                  Konkordanzen vorliegen. Ein detaillierter Vergleich der beiden Systeme für die
+                  praktische Übersetzung bzw. in ihren Funktionen als korpusbasiertes,
+                  elektronisches Wörterbuch, steht bislang aus.</p>
+            </div>
+            <div xml:id="div3.4">
+               <head>Archivierung und Weiterverwendung</head>
+               <p xml:id="p43">Das InterCorp ist aktuell nicht wie manche andere Korpora des
+                  Tschechischen Nationalkorpus im <emph>Language Resource Inventory</emph> von
+                     CLARIN<note xml:id="ftn38">Vgl. <ref
+                        target="https://web.archive.org/web/20180930074120/https://lindat.mff.cuni.cz/en/"
+                        >https://web.archive.org/web/20180930074120/https://lindat.mff.cuni.cz/en/</ref>.</note>
+                  gelistet und auch der Online-Dokumentation des InterCorp oder der sich auf es
+                  beziehenden Forschungsliteratur (Čermák und Rosen 2012; Rosen 2012; Rosen und
+                  Vavřín 2012) kann keine Information zur Langzeitachrivierung der Metadaten oder
+                  des Korpus entnommen werden. Gleichzeitig kann jedoch durch die
+                  Langzeitfinanzierung des gesamten Instituts des tschechischen Nationalkorpus und
+                  die zentrale Verankerung der Korpus- und Computerlinguistik in der tschechischen
+                  wissenschaftlichen Landschaft davon ausgegangen werden, dass das InterCorp
+                  langfristig zur Verfügung stehen und auch weiter ausgebaut und optimiert werden
+                  wird.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Schlussfolgerungen</head>
+            <p xml:id="p44">Abschließend kann ein durchwegs positives Fazit gezogen werden: Das
+               InterCorp hebt sich von anderen Parallelkorpora in mehreren Punkten ab, durch die
+               eine besonders hohe Usabilitiy insbesondere für Forschende, Studierende und auch
+               ÜbersetzerInnen erreicht werden kann. Eine zentrale Rolle nimmt dabei mit Sicherheit
+               die institutionelle Verankerung des Projekts ein. Am Institut des Tschechischen
+               Nationalkorpus wird das InterCorp in enger Kooperation von Forschenden, Lehrenden und
+               TechnikerInnen entwickelt – eine Tatsache, die sich sowohl im Aufbau und Inhalt des
+               Korpus als auch seiner technischen Umsetzung zeigt:</p>
+            <p xml:id="p45">Hinsichtlich des Aufbaus und Inhalts des InterCorp muss sein Umfang
+               sowohl in Bezug auf die Sprachen als auch die Texttypen, die es enthält,
+               hervorgehoben werden. Das Korpus geht den schmalen Grat zwischen Quantität und
+               Qualität, die der Anspruch, ein Parallelkorpus mit Texten aus 40 Sprachen für
+               menschliche Nutzung in den Bereichen Linguistik, Sprachdidaktik und Translation zu
+               erstellen, mit sich bringt, überzeugend: Einerseits werden primär belletristische
+               Quellen vom Projekt und seinen Partnerinstitutionen zusammengestellt und manuell
+               aligniert, um hohe Qualität zu garantieren. Andererseits werden gleichzeitig
+               maschinell verarbeitete Bitexte aus anderen Korpusprojekten integriert, wodurch die
+               Quantität, sprich der Umfang an Texten aber auch an verschiedenen Textsorten und
+               Sprachen, erhöht wird.</p>
+            <p xml:id="p46">An der technischen Umsetzung überzeugt auf den ersten Blick der
+               Online-Korpusmanager <emph>KonText</emph>. Er ist nicht nur nutzerfreundlich
+               aufgebaut, sondern bietet auch ein umfangreiches Repertoire an Filter-, Anzeige- und
+               Analysemöglichkeiten, die die Arbeit mit dem Korpus unterstützen. Dahinter steht
+               offensichtlich nicht nur umfangreiche Entwicklungsarbeit am Institut des
+               Tschechischen Nationalkorpus sondern auch die Nutzung zahlreicher, oft
+               sprachenspezifisch gewählter Tools wie Lemmatizer oder POS-Tagger, durch die große
+               Teile des InterCorp auch unabhängig von der Pivotsprache Tschechisch für komplexe
+               Suchanfragen nutzbar gemacht werden können.</p>
+            <p xml:id="p47">Aktuell können in Bezug auf das InterCorp einige Lücken in der
+               Dokumentation ausgemacht werden. Zwar enthalt das Wiki des Tschechischen
+               Nationalkorpus die zentralen Eckdaten zum Aufbau und Inhalt des Korpus auf
+               Tschechisch und Englisch, doch erfordert es z. B. intensive Recherche, sich mit den
+               diversen, für die Einzelsprachen verwendeten Tagsets vertraut zu machen. Auch Details
+               zum technischen Framework, also etwa dem Datenmodell oder den verwendeten
+               Dateiformaten sind nur den begleitend erscheinenden wissenschaftlichen Artikeln
+               entnehmbar, auf die allerdings prominent verwiesen wird. Informationen zur
+               Archivierung und langfristigen Zugänglichkeit fehlen gänzlich.</p>
+            <p xml:id="p48">Ein Schließen dieser Lücken würde es potentiellen, auch internationalen
+               NutzerInnen erlauben, die Eignung des InterCorp für ihre Forschungszwecke noch besser
+               zu evaluieren. Außerdem könnte dadurch sowie etwa durch eine Listung im
+               CLARIN-Inventory die Sichtbarkeit dieses Parallelkorpus außerhalb der Bohemistik und
+               der slawischsprachigen korpuslinguistischen Öffentlichkeit, innerhalb derer es sich
+               eines hohen Bekanntheitsgrads erfreut, erhöht werden. Wie oben gezeigt, kann das
+               Korpus nämlich nicht nur für Forschungsfragen, die sich unmittelbar auf das
+               Tschechische beziehen, als wertvolle Quelle dienen. Dies ist einerseits der Fall,
+               weil es für bestimmte Sprachen oder Sprachenpaare kaum entsprechend einfach und auch
+               auf Englisch zugängliche Korpora gibt, und andererseits auch auf Grund der z. B. für
+               Studierende und Personen ohne große korpuslinguistische Erfahrung gegebenen
+               Zugänglichkeit über den strukturiert und intuitiv aufgebauten Korpusmanager
+                  <emph>KonText </emph>bzw. der ebenfalls auf dem InterCorp basierenden Anwendung
+                  <emph>TREQ</emph>.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Čermák, František und Alexandr Rosen. 2012. “The case of InterCorp, a
+                  multilingual parallel corpus.” <emph>International Journal of Corpus Linguistics
+                     17</emph> (3): 411–427.</bibl>
+               <bibl>Chlumská, Lucie. 2017. <emph>Překladová čeština a její charakteristiky</emph>.
+                  Praha: Nakladatelství Lidové noviny.</bibl>
+               <bibl>Hajič, Jan. 2004. <emph>Disambiguation of Rich Inflection
+                     </emph>(<emph>Computational Morphology of Czech</emph>). Praha:
+                  Karolinum.</bibl>
+               <bibl>Káňa, Tomáš. 2014. <emph>Sprachkorpora in Unterricht und Forschung
+                     DaF</emph>/<emph>DaZ</emph>. Brno: Masarykova univerzita.</bibl>
+               <bibl>Kiss, Tibor und Jan Strunk. 2006. Unsupervised multilingual sentence boundary
+                  detection. <emph>Computational Linguistics</emph>, 32(4), 485–525.</bibl>
+               <bibl>Koehn, Philipp. 2005. “Europarl: A Parallel Corpus for Statistical Machine
+                  Translation.” <emph>MT Summit 2005</emph>. Letzter Zugriff: 03. 03. 2018.
+                  http://www.mt-archive.info/MTS-2005-Koehn.pdf.</bibl>
+               <bibl>Rosen, Alexandr. 2012. “InterCorp – a look behind the façade of a parallel
+                  corpus.” In: Ewa Gruszczyńska und Agnieszka Leńko-Szymańska. <emph>Polskojęzyczne
+                     korpusy równoległe</emph>.<emph> Polish</emph>-<emph>language Parallel
+                     Corpora</emph>. Warsawa: Instytut Lingwistyki Stosowanej, 21–40.</bibl>
+               <bibl>Rosen, Alexandr und Martin Vavřín. 2012. “Building a multilingual parallel
+                  corpus for human users.” In: Nicoletta Calzolari, Khalid Choukri, Thierry
+                  Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan
+                  Odijk, Stelios Piperidis (eds.): <emph>Proceedings of the Eight International
+                     Conference on Language Resources and Evaluation </emph>(<emph>LREC
+                  2012</emph>). Istanbul: European Language Resources Association (ELRA),
+                  2447–2452.</bibl>
+               <bibl>Schiller, A., Teufel, S., Stöckert, C. und Thielen, C. 1999. <emph>Guidelines
+                     für das Tagging deutscher Textcorpora mit STTS</emph>. Technischer Bericht,
+                  Universitäten Stuttgart und Tübingen.</bibl>
+               <bibl>Steinberger, Ralf, Mohamed Ebrahim, Alexandros Poulis, Manuel Carrasco-Benitez,
+                  Patrick Schlüter, Marek Przybyszewski und Signe Gilbro. 2014. “An overview of the
+                  European Union’s highly multilingual parallel corpora.” <emph>Language Resources
+                     and Evaluation</emph> 48: 679–707.
+                  https://doi.org/10.1007/s10579-014-9277-0.</bibl>
+               <bibl>Škrabal, Michal und Martin Vavřín. 2017. Databáze překladových ekvivalentů
+                  Treq. <emph>Časopis pro moderní filologii </emph>99 (2), 245–260.</bibl>
+               <bibl>Vondřička, Pavel. 2014. Aligning parallel texts with InterText. In: Calzolari,
+                  N. et al. (ed.): <emph>Proceedings of the Ninth International Conference on
+                     Language Resources and Evaluation </emph>(<emph>LREC</emph>'<emph>14</emph>).
+                  European Language Resources Association (ELRA): 1875-1879.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

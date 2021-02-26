@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.7.5">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The William Blake Archive (Upgrade)</title>
+            <author>
+               <name>
+                  <forename>Kendal</forename>
+                  <surname>Crawford</surname>
+               </name>
+               <affiliation>
+                  <orgName>Simon Fraser University</orgName>
+                  <placeName>Burnaby, BC, Canada</placeName>
+               </affiliation>
+               <email>kendal_crawford (at) sfu.ca</email>
+            </author>
+            <author ref="https://orcid.org/0000-0002-2375-2059">
+               <name>
+                  <forename>Michelle</forename>
+                  <surname>Levy</surname>
+               </name>
+               <affiliation>
+                  <orgName>Simon Fraser University</orgName>
+                  <placeName>Burnaby, BC, Canada</placeName>
+               </affiliation>
+               <email>mnl (at) sfu.ca</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+            <date when="2017-12">December 2017</date>
+            <idno type="URI">https://ride.i-d-e.de/issues/issue-7/the-william-blake-archive-upgrade/</idno>
+            <idno type="DOI">10.18716/ride.a.7.5</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue07/wba_upgrade/wba_upgrade.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-6457-0913">Philipp Steinkrüger</editor>
+            <editor ref="https://orcid.org/0000-0002-6457-0913" role="managing">Philipp
+               Steinkrüger</editor>
+            <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard Assmann</editor>
+            <biblScope unit="issue" n="7">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-7</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>The William Blake Archive</title>
+                  <editor>Morris Eaves, Robert Essick, and Joseph Viscomi</editor>
+                  <date type="publication">1996-2017</date>
+                  <idno type="URI">http://www.blakearchive.org</idno>
+                  <date type="accessed">2017-09-23</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
+                     >Criteria for Reviewing Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category xml:id="documentation">
+                  <category xml:id="bibl_desc">
+                     <catDesc>
+                        <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contributors">
+                     <catDesc>
+                        <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contacts">
+                     <catDesc>
+                        <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="selection">
+                     <category xml:id="explained">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection of materials of the project explicitly
+                           documented?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="reasonable">
+                        <catDesc>
+                           <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                        </catDesc>
+                        <catDesc>Is the selection by and large reasonable?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="data_archive">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="aims">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="methods">
+                     <catDesc>
+                        <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="data_model">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="help">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="citation">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="complete">
+                     <catDesc>
+                        <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="institutional_curation">
+                     <catDesc>
+                        <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="contents">
+                  <category xml:id="previous_edition">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="materials_used">
+                     <catDesc>
+                        <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="introduction">
+                     <catDesc>
+                        <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="bibliography">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="commentary">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="contexts">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="images">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="image_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="transcriptions">
+                     <catDesc>
+                        <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc> Is the text fully transcribed?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="text_quality">
+                     <catDesc>
+                        <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="indices">
+                     <catDesc>
+                        <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="documents">
+                     <category xml:id="doc_type">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                        <category xml:id="single_manuscript">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="single_work">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collection_of_texts">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="collected_works">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="papers">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="archival_holding">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="charters">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="letters">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="diary">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc>illuminated books, commercial engravings, prints, drawings and
+                                 paintings</desc>
+                           </category>
+                        </category>
+                     </category>
+                     <category xml:id="doc_time">
+                        <catDesc>
+                           <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                        </catDesc>
+                        <catDesc>What era(s) do the documents belong to?</catDesc>
+                        <category xml:id="classics">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="medieval">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="early_modern">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="modern">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+                  <category xml:id="subject">
+                     <catDesc>
+                        <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="history">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philology_literary_studies">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="philosophy_theology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="history_of_science">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="musicology">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="art_history">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="presentation">
+                  <category xml:id="spin_offs">
+                     <catDesc>
+                        <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="app">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="mobile">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PDF">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="browse_by">
+                     <catDesc>
+                        <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="authors">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="works">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="versions">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="structure">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="pages">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_documents">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="type_of_material">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="browse_by_images">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="dates">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="persons">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="places">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="search">
+                  <category xml:id="simple">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="advanced">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="wildcard">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="index">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="suggest">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="helptext">
+                     <catDesc>
+                        <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <catDesc>
+                        <num type="booleanX" value="1"/>
+                     </catDesc>
+                  </category>
+               </category>
+               <category xml:id="aim">
+                  <category xml:id="audience">
+                     <catDesc>
+                        <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="scholars">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="interested_public">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="typology">
+                     <catDesc>
+                        <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="facsimile_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="archive_edition">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="documentary_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="genetic_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="work_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="text_critical_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="enriched_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="database_edition">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="digital_library">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="typology_collection_of_texts">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="method">
+                  <catDesc rend="label">Method</catDesc>
+                  <category xml:id="critical_editing">
+                     <catDesc>
+                        <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="transmission_examined">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="palaeographic_annotations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="normalization">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="variants">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="emendation">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentary_notes">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="standards">
+                     <catDesc>
+                        <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <category xml:id="XML">
+                        <catDesc>Is the data encoded in XML?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="standardized_data_model">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>Is the project employing a standardized data model (e.g.
+                           TEI)?</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="text_type">
+                     <catDesc>
+                        <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="facsimiles">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="diplomatic_transcription">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="edited_text">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="translations">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="commentaries">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="semantic_data">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="technical_accessability">
+                  <category xml:id="persistent_identification">
+                     <catDesc>
+                        <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="DOI">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="ARK">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="URN">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="PURL.ORG">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category xml:id="persistent_URLs">
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="interfaces">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="OAI-PMH">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="REST">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="general_API">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category corresp="#other">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <category corresp="#free">
+                           <desc/>
+                        </category>
+                     </category>
+                     <category corresp="#none">
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="open_access">
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="basic_data_accessible">
+                     <catDesc>
+                        <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="download">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="0"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="reuse">
+                     <catDesc>
+                        <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <catDesc>
+                        <num type="boolean" value="1"/>
+                     </catDesc>
+                  </category>
+                  <category xml:id="rights">
+                     <category xml:id="declared">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="license">
+                        <catDesc>
+                           <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                        </catDesc>
+                        <catDesc>Under what license are the contents released?</catDesc>
+                        <category xml:id="CC0">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-ND">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="CC-BY-NC-SA">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="PDM">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                        <category corresp="#other">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                           <category corresp="#free">
+                              <desc/>
+                           </category>
+                        </category>
+                        <category xml:id="no_license">
+                           <catDesc>
+                              <num type="boolean" value="1"/>
+                           </catDesc>
+                        </category>
+                        <category xml:id="multiple_licenses">
+                           <catDesc>
+                              <num type="boolean" value="0"/>
+                           </catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>19th century</term>
+               <term>annotation</term>
+               <term>archive</term>
+               <term>Blake</term>
+               <term>collation</term>
+               <term>collected works</term>
+               <term>comparative edition</term>
+               <term>critical edition</term>
+               <term>digitization</term>
+               <term>diplomatic transcription</term>
+               <term>documentation</term>
+               <term>english</term>
+               <term>facsimile</term>
+               <term>help</term>
+               <term>iconography</term>
+               <term>illustration description</term>
+               <term>illustrations</term>
+               <term>image search</term>
+               <term>indices</term>
+               <term>interactive edition</term>
+               <term>legacy</term>
+               <term>materiality</term>
+               <term>multi-generic</term>
+               <term>redesign</term>
+               <term>romantic</term>
+               <term>TEI</term>
+               <term>virtual workspace</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This review addresses the redesign of the William Blake Archive (WBA), which launched
+               12 December 2016, updating our <ref
+                  target="http://ride.i-d-e.de/issues/issue-5/the-william-blake-archive/">previous
+                  review</ref> of the Archive, published in early 2017. Through this update,
+               described as ‘a complete and transformative redesign,’ all of the content of the
+               previous site has been retained, with improvements to the overall aesthetic appeal
+               and functionality. These functionality updates principally consist of a modernized
+               navigation system; a redesigned Object View page that organizes WBA’s scholarly tools
+               within a matrix of panels; and a more comprehensive archival search engine. These new
+               features provide users with enhanced opportunities for interacting with the objects
+               contained in the archive. The notable shortcoming of this update is that the many of
+               WBA’s formerly comprehensive help documentation and tutorial features have not been
+               updated. Both new and veteran users would benefit from the reintroduction of clear,
+               organized documentation to explain the Archive’s new features.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">On December 12 2016, the William Blake Archive (WBA) released a
+               substantial update to its website, described as ‘a complete and transformative
+               redesign.’ This redesign retains all content of the previous site (as described in
+               our <ref target="http://ride.i-d-e.de/issues/issue-5/the-william-blake-archive/"
+                  >pre-update review</ref>) while improving upon its overall aesthetic appeal and
+               several key issues of functionality. These functionality updates principally consist
+               of: <list rend="bulleted">
+                  <item>a modernized navigation system,</item>
+                  <item>a redesigned Object View page that organizes WBA’s scholarly tools within a
+                     matrix of panels, and</item>
+                  <item>a more comprehensive archival search engine, which integrates the formerly
+                     separate image description and text-based search methods.</item>
+               </list>
+            </p>
+            <p xml:id="p2">The notable shortcoming of this update is that the WBA’s formerly
+               comprehensive help documentation and tutorial features were not fully updated at the
+               time of the site’s relaunch. While some of the user interface improvements are
+               intuitive enough to require no explanation, others are considerably more complex –
+               such as the new Object View page and its dual viewing ‘modes.’ As this review goes to
+               press, we are pleased to see some <ref
+                  target="http://www.blakearchive.org/staticpage/archiveataglance?p=techsummary"
+                  >additional technical documentation</ref> has been added to the site’s Technical
+               Summary, including some discussion of the two viewing modes. We believe this
+               information should be highlighted and made more accessible for users. Guidance for
+               non-technical users is currently provided through the help (‘?’) icon, but its detail
+               is limited. Both new and veteran users would benefit from the reintroduction of
+               clear, non-technical documentation to explain the Archive’s features and new system
+               of organization. Improvements in this area would enable WBA’s considerable aesthetic
+               and functional updates to become fully accessible and useful to its audience as an
+               improved Scholarly Digital Edition (SDE).</p>
+         </div>
+         <div xml:id="div2">
+            <head>Upgrade strategy and execution</head>
+            <p xml:id="p3">The Archive’s redesign team was headed by co-editor Joseph Viscomi.
+               Ashley Reed served as the Consultant on Special Projects and former Project Manager,
+               Joseph Fletcher as the Managing Editor, and Michael Fox as the Assistant Editor and
+               system architect of the upgrade’s front and back end. For more information on the
+               individuals and organizations involved in the upgrade, please see WBA’s <ref
+                  target="http://www.blakearchive.org/staticpage/update?p=update-2016-12-16">formal
+                  update announcement</ref> from 12 December 2016.</p>
+            <p xml:id="p4">The Editors began directing the process of architecting a new site in
+               late 2013, and in early 2014 partnered with UNC’s Libraries and ITS Research
+               Computing to re-conceptualize the public face of the Archive so that it would ‘again
+               set the gold standard for digital humanities projects’ (WBA, <ref
+                  target="http://www.blakearchive.org/staticpage/update?p=update-2016-12-16">12 Dec
+                  2016</ref>). The new back end was built using the open source, object-relational
+               database system, <ref
+                  target="https://web.archive.org/web/20170509010458/https://www.postgresql.org/about/"
+                  >PostgreSQL</ref>, in combination with the open source enterprise search platform,
+               Solr. The new front end was created using the <ref
+                  target="https://docs.angularjs.org/misc/faq">AngularJS framework</ref>, a
+               structural framework meant to assist developers in building dynamic, single-page
+               applications. In recent months, WBA published a more detailed summary on its new
+               system architecture and basic front-end navigation in its <ref
+                  target="http://www.blakearchive.org/staticpage/archiveataglance?p=techsummary"
+                  >Technical Summary</ref>.</p>
+         </div>
+         <div xml:id="div3">
+            <head>Overview of changes to user experience</head>
+            <p xml:id="p5">The updated WBA features a visually appealing, high-quality colour
+               homepage, with a rotating series of images from Blake’s work displayed in a tiled
+               form. One of the greatest improvements to the site is its static drop-down top menu
+               (and anchored bottom screen menu), now accessible from the homepage and every other
+               page within the site. The reading and gallery modes offer two different systems for
+               interacting with the objects in the archive, enabling various scholarly tasks.</p>
+            <p xml:id="p6">There is no longer a separate page for help documentation; instead,
+               navigational instructions, searching instructions, or an explanation regarding the
+               use of different viewing modes is available in the help (‘?’) icon depending upon
+               which page-type the user is visiting. It was not clear to us immediately that the
+               information contained in the help icon was dynamic, changing based on wherever one
+               was on the site. Although this dynamic icon provides important information, we
+               believe it would be useful to have all site documentation gathered in a single place
+               as well, including both site-usage methods and terminology. A series of short video
+               tutorials could also greatly enhance user accessibility and full utilization of the
+               archive.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Changes to publication and presentation</head>
+            <div xml:id="div4.1">
+               <head>Site appearance and structure</head>
+               <p xml:id="p7">
+                  <figure xml:id="img1">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/wba_upgrade/pictures/picture-1.png"/>
+                     <head type="legend">The new homepage.</head>
+                  </figure> Aesthetically, the front-facing user interface has greatly improved. It
+                  has a modern and responsive page layout, an attractive color scheme, and a dynamic
+                  homepage which loads a freshly randomized gallery of artifact thumbnails with each
+                  user visit.</p>
+               <p xml:id="p8">Structurally, the AngularJS framework has been leveraged to improve
+                  upon the Object View page. Each artifact’s scholarly tools and editorial
+                  supplementation are now accessible within the Object View page, organized in a
+                  matrix of panels. This change addresses our primary criticism of the original
+                  site, which was programmed to open these features in new, individual browser
+                  windows. Now, rather than having to navigate and arrange many additional windows
+                  in order to view comprehensive information about an object, informed users are
+                  able to quickly and easily navigate between panels and view all object-associated
+                  information within a single page. This transformation allows the complexities of
+                  Blake's works to be better viewed, explored, and compared.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Navigation</head>
+               <p xml:id="p9">Another major shortcoming of the former WBA site was its lack
+                  consistent navigation features. With this upgrade, the problem has been addressed.
+                  New to WBA are two banner menus, permanently anchored to the top and bottom of the
+                  site at all times. The top menu helps users navigate archival content, while the
+                  bottom links users to the WBA’s associated works, meta writings, and scholarly
+                  material.</p>
+               <p xml:id="p10">The top menu is now the user’s sole navigatory tool to explore WBA’s
+                  archive of digital artifacts. It consists of the following: <list rend="bulleted">
+                     <item>A search bar, which requires the user to enter a keyword in order to
+                        initiate a search and be redirected to the the filter-reliant Search Results
+                        page.</item>
+                     <item>An expandable hamburger menu of five main tabs (illuminated books,
+                        commercial book illustrations, separate prints and prints in series,
+                        drawings and paintings, manuscripts and typographic works) that usefully
+                        organize Blake’s works. Within each submenu are chronological indices of
+                        Blake’s works, divided into the Editor’s medium-based categories. Clicking
+                        on the title of a work will open its Work Information page, from which
+                        individual copies/objects can be opened in the Object View page.</item>
+                     <item>A toggle button between the letters ‘G’ and ‘R’ that allows the user to
+                        alternate between two ‘modes’ for experiencing the Object View page –
+                        Gallery mode and Reading mode.</item>
+                     <item>A help icon, demarcated by a question mark (‘?’). When clicked, this icon
+                        will open a panel which contains explanatory information about Gallery and
+                        Reading mode, and additional information specific to the type of page the
+                        user currently has loaded. This means the contents of the help icon panel
+                        changes based on whether the user is on the homepage, the Object View page,
+                        the Search Results page, etc.</item>
+                  </list>
+               </p>
+               <p xml:id="p11">The bottom menu directs users to the Archive’s supplementary
+                  scholarly material and information about the site, highlighting: <list
+                     rend="bulleted">
+                     <item>WBA’s official blog, which has also received a substantial UI
+                        update</item>
+                     <item>The ‘Blake / An Illustrated Quarterly’ archive</item>
+                     <item>‘The Complete Poetry And Prose Of William Blake, David Erdman’: an
+                        electronic version of Erdman’s revised 1998 scholarly edition of Blake’s
+                        poetical works, and a feature of the original site which has been given new
+                        prominence here</item>
+                  </list>
+               </p>
+               <p xml:id="p12">The bottom menu also sub-hierarchically links to the site’s other
+                  features, such as its biographical information on Blake, the detailed and
+                  important ‘About the Archive’ section, WBA’s recommended resources for further
+                  research, and so on. All content of the original site appears to have been
+                  preserved in these static pages, with the exception of the site’s Virtual Lightbox
+                  applet, Help page, and now outdated java-based tutorial, the ‘Tour of the
+                  Archive.’ At the time of update, there was no indication if or when the Virtual
+                  Lightbox and/or its function as a digital workspace would be redeveloped and
+                  reintroduced to the updated site. In September 2017, however WBA appended a note
+                  to their Technical Summary section announcing that in the near future it will be
+                  adding two substantive additions to the site: A revamped Lightbox application and
+                  a new exhibition space for the publication of peer-reviewed exhibitions.
+                  Meanwhile, the absence of a renewed Help page is more immediately concerning. The
+                  help documentation provided by the help icon panel is considerably more limited
+                  than its historical precedent. Hopefully this issue will be addressed in the near
+                  future to help new and old users become acquainted with the new site’s design.</p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Object View</head>
+               <p xml:id="p13">Objects in the Archive now open in the central panel of the website’s
+                  responsive page layout. As mentioned, there are two different ‘modes’ of view that
+                  can be toggled between on the Object View page. These modes represent two
+                  different remediations of the editorial features affixed to its archived objects.
+                  Rather than isolating an object’s relevant editorial features into individual
+                  pop-up windows, as was previously the case, the site’s new framework-based model
+                  allows users to mix and match the information they want to see within a matrix of
+                  panels and according to a ‘Gallery’ or ‘Reading’-based visual ‘mode.’</p>
+               <p xml:id="p14">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/wba_upgrade/pictures/picture-2.png"/>
+                     <head type="legend">Gallery Mode.</head>
+                  </figure> In Gallery mode, the digital facsimile of the selected object opens in
+                  the central panel. Located at the left and right edges of the central panel are
+                  clickable thumbnails of the previous and subsequent objects in the copy – allowing
+                  users to progress forwards and backwards through the work. Directly beneath the
+                  facsimile is a line of copyright information, and a toolbar that allows users to
+                  visually manipulate the image for closer examination – offering them the option
+                  to: rotate, magnify, restore to true size, enlarge in a new window, and open the
+                  object’s diplomatic transcription at right.</p>
+               <p xml:id="p15">Below the central panel is a container that allows the user to tab
+                  between the following panels: <list rend="bulleted">
+                     <item>Objects in Copy – this panel presents thumbnails of all the objects that
+                        exist in the open copy of the work. These objects will open in the central
+                        panel when clicked.</item>
+                     <item>Object from the Same Matrix – if multiple copies of an object exist, this
+                        panel is present and showcases the thumbnails of all its existing copies
+                        (openable in the central panel when clicked). These thumbnails can also be
+                        selected via a corner checkbox for side-by-side comparison in the central
+                        panel – a remediation of the former WBA’s important ‘Compare’
+                        feature.</item>
+                     <item>Copy Information – this panel presents the available bibliographic
+                        information of the copy to which the object belongs.</item>
+                     <item>Electronic Edition Information – this panel presents the copy’s full
+                        digitization record.</item>
+                  </list>
+               </p>
+               <p xml:id="p16">The rest of WBA’s scholarly features are appended to the left of the
+                  page within a small yellow ‘i’ tab (presumably for ‘Information’). When clicked
+                  upon, this tab expands a panel on the left containing the object’s Illustration
+                  Description, Editor’s Notes, and (in its second placement on this page) the
+                  Diplomatic Transcription. As the name suggests, by design Gallery Mode treats the
+                  digital photo-facsimiles as central, and makes readily available the tools that
+                  assist with viewing (rotate, magnify, view full size) and descriptions relevant
+                  (such as the “illustration description) and editor’s note on the original object
+                  itself. The Gallery Mode allows for the diplomatic transcription to be viewed
+                  either to the right (when the bottom diplomatic display button is displayed) and
+                  to the left (when the left-hand button is clicked). It is not clear why this
+                  redundancy has been introduced.</p>
+               <p xml:id="p17">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/wba_upgrade/pictures/picture-3.png"/>
+                     <head type="legend">Reading Mode.</head>
+                  </figure> In Reading mode, objects open alongside their diplomatic transcription
+                  in a horizontally-scrollable central panel which contains the fully-loaded work.
+                  Scrolling left to right lets users pass through all objects of their selected copy
+                  in sequential order (backwards or forwards) without clicking on a new object to
+                  open (as happens in Gallery Mode). This allows for continuous reading and a truer
+                  experience of engaging with the original material. The centrality of the
+                  diplomatic transcription (where relevant) also emphasizes that this mode has been
+                  designed for reading. </p>
+               <p xml:id="p18">Reading mode also has a line of buttons along the bottom of the
+                  central panel that gives users the option to replace the default Diplomatic
+                  Transcription with the following features: <list rend="bulleted">
+                     <item>Illustration Description</item>
+                     <item>Editors’ Notes</item>
+                     <item>Images Only</item>
+                     <item>Compare with another Copy. Here, the Compare feature acts by presenting
+                        all selected copies of each object uncollated and in chronological
+                        order.</item>
+                  </list> There is also a button to view the current object at its true size, and a
+                  localized magnifying glass feature that can be directed using the mouse. These
+                  options reintroduce some elements that are accessible in Gallery mode.</p>
+               <p xml:id="p19">Reading mode excludes some of the object-based critical tools of
+                  Gallery mode: most noticeably the Copy Information and Electronic Edition
+                  Information, as well as the extent of its image manipulation tools. However, in
+                  the case of Blake’s illuminated books, it allows users to read through the entire
+                  copy of a work in a closer format to how it was meant to be consumed. The
+                  horizontal, scrollable format makes an optical ‘reading’ of Blake a much more
+                  feasible and authentic experience than the formerly object-isolating iteration of
+                  the Archive allowed.</p>
+               <p xml:id="p20">WBA presents these two modes without suggestion as to how either
+                  might be used for distinctive activities, but according to our assessment: <list
+                     rend="bulleted">
+                     <item>Gallery mode appears to be intended for material scholars who want to
+                        engage with Blake on an artifact-by-artifact level, and who want to be able
+                        to examine his creative objects with all the scholarly tools and material
+                        associated them.</item>
+                  </list> and <list rend="bulleted">
+                     <item>Reading mode appears to exist for scholarship that involves viewing a
+                        work as a whole, and for consuming Blake’s works as literature and/or in
+                        their entirety.</item>
+                  </list>
+               </p>
+            </div>
+            <div xml:id="div4.4">
+               <head>Search engine</head>
+               <p xml:id="p21">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_7/wba_upgrade/pictures/picture-4.png"/>
+                     <head type="legend">Search.</head>
+                  </figure> The WBA’s previously separate text and image search functions are now
+                  combined into a single engine that is accessible from site’s top-anchored search
+                  bar. The search results now return objects that contain the search query in any of
+                  their attached editorial information fields. These results are then presented in
+                  separate sections according to the type of field the keywords were found in (e.g.
+                  Title, Transcription, Illustration Description, etc.). As this review goes to
+                  print, a button labeled ‘IT’ for ‘Image Tags’ has also been added to the right of
+                  the search bar. When clicked, the IT button opens a panel featuring a list of all
+                  searchable image keywords for user reference. After submitting one or more
+                  keywords in the search bar, users are given the option to craft a more advanced
+                  search query, by being provided with a three filter system to sift through their
+                  initial search results. The filters work as follows: <list rend="bulleted">
+                     <item>Date – Restricts the results by composition and/or printing date, or
+                        range of dates.</item>
+                     <item>Type – Limits the search for the user’s keywords to one or more of the
+                        following information fields: Title, Transcription, Image Tag, Editors’
+                        Note, Illustration Description, Copy Information, and Work
+                        Information.</item>
+                     <item>Medium – Limits the search results to one or more of the medium-based
+                        categories of Blake’s works that appear in the upper menu: Illuminated
+                        Books, Commercial Book Illustrations, Separate Prints, Drawings and
+                        Paintings, Manuscripts and Typographic Editions.</item>
+                  </list> Selecting an object from the search results will then open a preview
+                  panel, which contains the object’s digital facsimile on the left, and the
+                  information field in which the keyword was found on the right (with the search
+                  keyword(s) specially highlighted). In this preview panel, users can move between
+                  matching objects from multiple copies, and switch copies as desired. By clicking
+                  directly on the previewed text or facsimile thumbnail, user’s can navigate to
+                  either the Work or Object View page.</p>
+            </div>
+            <div xml:id="div4.5">
+               <head>Help documentation and tutorials</head>
+               <p xml:id="p22">The most prominent shortcoming of the new site is its lack of a
+                  centralized location for help documentation and best practices. The Help page and
+                  Tour of the Archive tutorial from the site’s previous iteration were both removed,
+                  rather than updated. All that exists in terms of explicit help documentation now
+                  is an anchored help icon with dynamic contents. When clicked, this help icon
+                  expands an overlay panel onto the page with a short explanation of the Mode toggle
+                  and a short explanation of how to use whichever page the user is currently using.
+                  Specifically, these contents change according to three different page types – the
+                  Homepage, Object View, Search Results, Work Information, and the Archive’s static
+                  pages (e.g. ‘About of the Archive’, ‘About Blake’, etc.). Unfortunately, the icon
+                  gives no written or visual indication to the user that its contents change based
+                  on the page-type, which can preclude users from bothering to open the function
+                  again when they get lost or confused.</p>
+               <p xml:id="p23">While intuitive interface design has been for the most part
+                  successfully employed in the site update, the lack of a new introduction to and
+                  thorough explanation of WBA’s scholarly tools and their placement in its user
+                  interface creates an unneeded barrier for both new and old users attempting to
+                  find their bearings.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Mobile</head>
+            <p xml:id="p24">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_7/wba_upgrade/pictures/picture-5.png"/>
+                  <head type="legend">On mobile devices.</head>
+               </figure> The site can now be used on mobile, albeit with certain limitations. On
+               mobile, Gallery Mode is stripped of the visual manipulation toolbar and the
+               information tab, although the four tabs below the central panel (Objects in Copy,
+               Objects from the Same Matrix, Copy Information, and Electronic Information) are still
+               present. The ‘Compare’ feature still functions, but its usefulness is limited due to
+               the fact that one must swipe between the ‘compared’ objects in the central panel, and
+               cannot view them side-by-side simultaneously. Reading mode is stripped of all its
+               supplementary button options and consists solely of each object paired with its
+               Diplomatic Transcription and presented in a vertical scrolling format, not
+               horizontal, regardless of one’s phone-orientation. There are also several formatting
+               bugs and loading issues that crop up from time to time based on one’s page location,
+               browser, or mobile device, so optimization still has a way to go in this area.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Technical Accessibility</head>
+            <p xml:id="p25">While not readily apparent upon its initial upgrade, WBA has revealed
+               improved technical accessibility several months into its new iteration. XML files are
+               now directly attached to each object for view under its Electronic Edition
+               Information, and an <ref
+                  target="http://www.blakearchive.org/staticpage/archiveataglance?p=api">API
+                  tab</ref> has been added to the About the Archive section for users who wish to
+               mine WBA’s data. Finally, in its Technical Summary, WBA now links to the open source
+               repositories of its <ref target="https://github.com/blakearchive/">github
+                  organization, blakearchive</ref>. This improved access to basic site data is a
+               boon both to web developers and data analysts in the digital humanities field.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Questions of Legacy</head>
+            <p xml:id="p26">This upgrade was not formerly announced to the public until the new site
+               was launched on December 12, 2016, entirely replacing the previous iteration of the
+               site. While some of the Archive’s static pages have been preserved and are accessible
+               via entries on <ref target="https://web.archive.org/">Internet Archive's Wayback
+                  Machine</ref> (some of which are linked in our review of the old site) WBA has not
+               made it clear if a legacy version of the website pre-upgrade still exists, and/or if
+               it will ever again be accessible by public users. The removal of the old site raises
+               certain questions about the conservation of legacy digital projects: might it have
+               been beneficial for the longest running iteration of one of digital humanities’
+               longest running SDEs to still be accessible, even if it is no longer the most up to
+               date iteration of the project? While outdated in terms of modern website standards,
+               WBA’s former incarnation was a powerful and fascinating demonstration of early SDE
+               development. Arguably, the decision to take down one of the earliest and most
+               influential work of digital humanities’ scholarship represents a loss. An appending
+               question of legacy relates to the fact that due to its current programming and
+               design, WBA’s current incarnation prevents its web pages from being easily archived
+               by the public using Internet Archive’s Wayback Machine. With this development, how
+               difficult will it be for most public observers to track changes and progress in WBA
+               and similar digital humanities projects? And is this something the field should be
+               concerned about?</p>
+         </div>
+         <div xml:id="div8">
+            <head>Conclusion</head>
+            <p xml:id="p27">This upgrade to the WBA preserves the project’s extensive and rigorous
+               collection of scholarly-mediated objects, while radically reinventing its front-end
+               into a framework-based structure. This structure remediates scholarly features
+               previously openable in pop-up windows into a collection of mix-and-match panels or
+               tabs—better presenting WBA’s archived objects in tandem with their scholarly context.
+               Many of the site’s new features, like horizontal scrolling and large image display,
+               deliver appreciable improvements for the academic study of Blake as an artist and
+               poet. However, the site requires renewed documentation to provide new and continuing
+               users with clear instructions on how to use the site.</p>
+            <p xml:id="p28">The upgrade has also improved WBA’s technical accessibility - improving
+               access to object XML, introducing a site API for data mining, and making public its
+               open-source github repositories. These additions provide digital humanities
+               technologists with new ways to inspect and interact with the WBA project. The removal
+               of the old site also raises important questions about the cultural legacy of digital
+               humanities sites, and whether elements of the original interface should be preserved
+               along with the project’s data.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

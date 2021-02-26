@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.13.3">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Songs of the Victorians</title>
+                <author ref="https://orcid.org/0000-0003-4512-1992">
+                    <name>
+                        <forename>Eva</forename>
+                        <surname>Moreda Rodriguez</surname>
+                    </name>
+                    <affiliation>
+                        <orgName>University of Glasgow</orgName>
+                        <placeName>Glasgow</placeName>
+                    </affiliation>
+                    <email>Eva.MoredaRodriguez@glasgow.ac.uk</email>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+                <date when="2020-12">December 2020</date>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-13/victorians</idno>
+                <idno type="DOI">10.18716/ride.a.13.3</idno>
+                <idno type="archive"
+                    >https://github.com/i-d-e/ride/raw/master/issues/issue13/victorians/victorians.pdf</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title level="j">RIDE - A review journal for digital editions and resources</title>
+                <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+                <editor ref="https://orcid.org/0000-0002-8648-2033">Patrick Sahle</editor>
+                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+                    Henny-Krahmer</editor>
+                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+                    Neuber</editor>
+                <editor ref="http://viaf.org/viaf/80243768" role="technical">Bernhard
+                    Assmann</editor>
+                <editor role="technical">Jana Klinger</editor>
+                <biblScope unit="issue" n="13">Digital Scholarly Editions</biblScope>
+                <idno type="URI">http://ride.i-d-e.de/issues/issue-13</idno>
+            </seriesStmt>
+            <notesStmt>
+                <relatedItem type="reviewed_resource">
+                    <bibl>
+                        <title>Songs of the Victorians</title>
+                        <editor>Joanna Swafford</editor>
+                        <respStmt>
+                            <resp>Editor</resp>
+                            <persName>Joanna Swafford</persName>
+                        </respStmt>
+                        <date type="publication">2013–2020</date>
+                        <idno type="URI">http://www.songsofthevictorians.com/index.html</idno>
+                        <date type="accessed">2020-09-14</date>
+                    </bibl>
+                </relatedItem>
+                <relatedItem type="reviewing_criteria">
+                    <bibl>
+                        <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for
+                            Reviewing Scholarly Digital Editions</ref>
+                    </bibl>
+                </relatedItem>
+            </notesStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy
+                    xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+                    <category xml:id="documentation">
+                        <category xml:id="bibl_desc">
+                            <catDesc>
+                                <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                            </catDesc>
+                            <catDesc>Is it easily possible to describe the project bibliographically
+                                along the schema "responsible editors, publishing/hosting
+                                institution, year(s) of publishing"?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contributors">
+                            <catDesc>
+                                <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                            </catDesc>
+                            <catDesc>Are the contributors (editors, institutions, associates) of the
+                                project fully documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contacts">
+                            <catDesc>
+                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project list contact persons?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="selection">
+                            <category xml:id="explained">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection of materials of the project explicitly
+                                    documented?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="reasonable">
+                                <catDesc>
+                                    <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                                </catDesc>
+                                <catDesc>Is the selection by and large reasonable?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="data_archive">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the documentation include information about the long term
+                                sustainability of the basic data (archiving of the data)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="aims">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the aims and purposes of the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="methods">
+                            <catDesc>
+                                <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                            </catDesc>
+                            <catDesc>Are the methods employed in the project explicitly
+                                documented?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="data_model">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <catDesc>Does the project document which data model (e.g. TEI) has been
+                                used and for what reason?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="help">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts concerning the use of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="citation">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Does the project supply citation guidelines (i.e. how to cite
+                                the project or a part of it)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="complete">
+                            <catDesc>
+                                <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                            </catDesc>
+                            <catDesc>Does the editon regard itself as a completed project (i.e. not
+                                promise further modifications and additions)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="institutional_curation">
+                            <catDesc>
+                                <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                            </catDesc>
+                            <catDesc>Does the project provide information about institutional
+                                support for the curation and sustainability of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="contents">
+                        <category xml:id="previous_edition">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Has the material been previously edited (in print or
+                                digitally)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="materials_used">
+                            <catDesc>
+                                <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                            </catDesc>
+                            <catDesc>Does the edition make use of these previous editions?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="introduction">
+                            <catDesc>
+                                <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an introduction to the subject-matter
+                                (the author(s), the work, its history, the theme, etc.) of the
+                                project?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="bibliography">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a bibliography?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="commentary">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a scholarly commentary (e.g. notes on
+                                unclear passages, interpretation, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="contexts">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project include or link to external resources with
+                                contextual material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="images">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of digitised sources?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="image_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer images of an acceptable
+                                quality?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="transcriptions">
+                            <catDesc>
+                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                            </catDesc>
+                            <catDesc> Is the text fully transcribed?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="text_quality">
+                            <catDesc>
+                                <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer texts of an acceptable quality (typos,
+                                errors, etc.)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="indices">
+                            <catDesc>
+                                <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                            </catDesc>
+                            <catDesc>Does the project feature compilations indices, registers or
+                                visualisations that offer alternative ways to access the
+                                material?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="documents">
+                            <category xml:id="doc_type">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>Which kinds of documents are at the basis of the
+                                    project?</catDesc>
+                                <category xml:id="single_manuscript">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="single_work">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collection_of_texts">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="collected_works">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="papers">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="archival_holding">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="charters">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="letters">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="diary">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                            </category>
+                            <category xml:id="doc_time">
+                                <catDesc>
+                                    <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                                </catDesc>
+                                <catDesc>What era(s) do the documents belong to?</catDesc>
+                                <category xml:id="classics">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="medieval">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="early_modern">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="modern">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                        <category xml:id="subject">
+                            <catDesc>
+                                <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                            </catDesc>
+                            <catDesc>Which perspective(s) do the editors take towards the edited
+                                material? How can the edition be classified in general
+                                terms?</catDesc>
+                            <category xml:id="history">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philology_literary_studies">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="philosophy_theology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="history_of_science">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="musicology">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="art_history">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="presentation">
+                        <category xml:id="spin_offs">
+                            <catDesc>
+                                <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer any spin-offs?</catDesc>
+                            <category xml:id="app">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="mobile">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PDF">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="browse_by">
+                            <catDesc>
+                                <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                            </catDesc>
+                            <catDesc>By which categories does the project offer to browse the
+                                contents?</catDesc>
+                            <category xml:id="authors">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="works">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="versions">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="structure">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="pages">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_documents">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="type_of_material">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="browse_by_images">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="dates">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="persons">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="places">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="search">
+                        <category xml:id="simple">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer a simple search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="advanced">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer an advanced search?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="wildcard">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search support the use of wildcards?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="index">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer an index of the searched field?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="suggest">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the search offer autocompletion or suggest
+                                functionalities?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="helptext">
+                            <catDesc>
+                                <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                            </catDesc>
+                            <catDesc>Does the project offer help texts for the search?</catDesc>
+                            <catDesc>
+                                <num type="booleanX" value="1"/>
+                            </catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="aim">
+                        <category xml:id="audience">
+                            <catDesc>
+                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                            </catDesc>
+                            <catDesc>Who is the intended audience of the project?</catDesc>
+                            <category xml:id="scholars">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="interested_public">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="typology">
+                            <catDesc>
+                                <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                            </catDesc>
+                            <catDesc>Which type fits best for the reviewed project?</catDesc>
+                            <category xml:id="facsimile_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="archive_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="documentary_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="genetic_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="work_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="text_critical_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="enriched_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="database_edition">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="digital_library">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="typology_collection_of_texts">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc>Multimedia edition</desc>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="method">
+                        <catDesc rend="label">Method</catDesc>
+                        <category xml:id="critical_editing">
+                            <catDesc>
+                                <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                            </catDesc>
+                            <catDesc>In how far is the text critically edited?</catDesc>
+                            <category xml:id="transmission_examined">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="palaeographic_annotations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="normalization">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="variants">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="emendation">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentary_notes">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="standards">
+                            <catDesc>
+                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                            </catDesc>
+                            <category xml:id="XML">
+                                <catDesc>Is the data encoded in XML?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="standardized_data_model">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <catDesc>Is the project employing a standardized data model (e.g.
+                                    TEI)?</catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="text_type">
+                            <catDesc>
+                                <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                            </catDesc>
+                            <catDesc>Which kinds or forms of text are presented?</catDesc>
+                            <category xml:id="facsimiles">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="diplomatic_transcription">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="edited_text">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="translations">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="commentaries">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="semantic_data">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                    </category>
+                    <category xml:id="technical_accessability">
+                        <category xml:id="persistent_identification">
+                            <catDesc>
+                                <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                            </catDesc>
+                            <catDesc>Are there persistent identifiers and an addressing system for
+                                the edition and/or parts/objects of it and which mechanism is used
+                                to that end?</catDesc>
+                            <category xml:id="DOI">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="ARK">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="URN">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="PURL.ORG">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category xml:id="persistent_URLs">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="interfaces">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which
+                                allow the reuse of the data of the project in other
+                                contexts?</catDesc>
+                            <category xml:id="OAI-PMH">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="REST">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="general_API">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                            </category>
+                            <category corresp="#other">
+                                <catDesc>
+                                    <num type="boolean" value="0"/>
+                                </catDesc>
+                                <category corresp="#free">
+                                    <desc/>
+                                </category>
+                            </category>
+                            <category corresp="#none">
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="open_access">
+                            <catDesc>Is the edition Open Access?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="basic_data_accessible">
+                            <catDesc>
+                                <ref target="#K4.12">cf. Catalogue 4.12</ref>
+                            </catDesc>
+                            <catDesc>Is the basic data (e.g. the XML) of the project accessible for
+                                each part of the edition (e.g. for a page)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="download">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can the entire raw data of the project be downloaded (as a
+                                whole)?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="0"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="reuse">
+                            <catDesc>
+                                <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                            </catDesc>
+                            <catDesc>Can you use the data with other tools useful for this kind of
+                                content?</catDesc>
+                            <catDesc>
+                                <num type="boolean" value="1"/>
+                            </catDesc>
+                        </category>
+                        <category xml:id="rights">
+                            <category xml:id="declared">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                                <catDesc>
+                                    <num type="boolean" value="1"/>
+                                </catDesc>
+                            </category>
+                            <category xml:id="license">
+                                <catDesc>
+                                    <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                                </catDesc>
+                                <catDesc>Under what license are the contents released?</catDesc>
+                                <category xml:id="CC0">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY">
+                                    <catDesc>
+                                        <num type="boolean" value="1"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-ND">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="CC-BY-NC-SA">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="PDM">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category corresp="#other">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                    <category corresp="#free">
+                                        <desc/>
+                                    </category>
+                                </category>
+                                <category xml:id="no_license">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                                <category xml:id="multiple_licenses">
+                                    <catDesc>
+                                        <num type="boolean" value="0"/>
+                                    </catDesc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en"/>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="en">
+                    <term>music history</term>
+                    <term>music analysis</term>
+                    <term>Victorian era</term>
+                    <term>archive</term>
+                    <term>music score visualization</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p>The present review occupies itself with the project <emph>Songs of the
+                        Victorians</emph>, developed by Joanna Swafford, which intends to provide
+                    both an archive (of reduced size as of yet) of parlor and art sort settings of
+                    Victorian poems, and an analytical tool for the study of the relationship
+                    between music and poetry in this neglected repertoire. The project partly
+                    delivers on its objectives, namely through its hierarchical but intuitive
+                    interface and through the use of the <emph>Augmented Notes</emph> software
+                    (developed by Swafford herself) to provide synchronizations of the original
+                    scores with performances of the songs (some of them recorded specifically for
+                    the project). The main limitation to the project, however, comes from the fact
+                    that it contains only four examples of the repertoire, which makes large-scale
+                    comparisons and analysis difficult.</p>
+            </div>
+        </front>
+        <body>
+            <div xml:id="div1">
+                <p xml:id="p1">
+                    <emph>Songs of the Victorians</emph> intends to provide both an archive (of
+                    reduced size as of yet) of parlor and art sort settings of Victorian poems, and
+                    an analytical tool for the study of the relationship between music and poetry in
+                    this neglected repertoire (and, potentially, elsewhere). Indeed, the resource’s
+                    sole editor, Joanna Swafford, writes in the ‘About’ section of the site that the
+                    archive’s aim is to challenge the assumption that the composers of such songs –
+                    intended to be performed by women, with piano accompaniment and in domestic
+                    settings – were lacking in the sophisticated text-setting skills normally
+                    associated with the ‘high’ art song repertoire. The site thus inserts itself
+                    within a by now well-established current in musicology that, in looking at music
+                    as part of the cultural fabric of its time and not simply as a series of
+                    composers and works, aims to question the notion that rigid barriers have always
+                    existed between ‘high’ and ‘low music’; an obvious precedent to Swafford’s work
+                    is Derek Scott’s<emph> The Singing Bourgeois: Songs of the Victorian Drawing
+                        Room and Parlour</emph> (Milton Keynes: The Open University Press,
+                    1989).</p>
+                <p xml:id="p2">Although not recognized as such in the ‘About’ section, a further aim
+                    of the project appears to be to provide a testing ground for Augmented Notes, a
+                    tool developed by Swafford itself which allows the visualization of scores for
+                    research, teaching and dissemination purposes. <emph>Songs of the
+                        Victorians</emph> was developed under the aegis of the University of
+                    Virginia’s Scholars’ Lab, with primary sources coming from The British Library,
+                    The National Library of Australia, San Francisco Public Library and others, as
+                    indicated in the ‘Special thanks’ section of the site.</p>
+                <p xml:id="p3">
+                    <figure xml:id="img1">
+                        <graphic
+                            url="http://ride.i-d-e.de/wp-content/uploads/issue_13/victorians/pictures/picture-1.png"/>
+                        <head type="legend">View of ‘Songs’, with the complete list of pieces
+                            currently included in the project.</head>
+                    </figure> The site’s interface is rather hierarchical but, generally speaking,
+                    very intuitive, with the main menu consisting of only four links; a
+                    Victorian-inspired design theme makes the site very distinctive. The section
+                    ‘Songs’ lists each of the pieces presented with the corresponding links to
+                    further three sub-sections for each: ‘Archive’, ‘Music Analysis’, and (in the
+                    case of the two settings of ‘Maud’) ‘Poem Analysis’.</p>
+                <p xml:id="p4">As might have been inferred from the image above, the main limitation
+                    at present of Songs of the Victorians , and the main obstacle to ascertain
+                    whether its scholarly aims have been met or will be met in the near-future, is
+                    the fact that the archive includes only four songs.<note xml:id="ftn1"
+                        >‘Juanita’, by Caroline Norton (1853); ‘Come into the Garden Maud’, by
+                        Michael William Balfe (1857); ‘Come into the Garden Maud’, by Arthur
+                        Somervell (1898); ‘The Lost Chord’, by Arthur Sullivan (1877).</note>
+                    Nevertheless, the selection of songs has certainly been made with great
+                    scholarly expertise: the sample covers almost half a century, key composers of
+                    the era (Sullivan, Somervell, Balfe) are represented, the two settings of Alfred
+                    Lord Tennyson’s poem ‘Maud’ facilitate comparison, and the inclusion of Caroline
+                    Norton provides a much-welcome gender perspective (which is one of Swafford’s
+                    research interests). Moreover, due to the generally ephemeral nature of this
+                    corpus, no modern editions of these songs exist, with scholars generally needing
+                    to travel to libraries and archives to consult the hard-copy original editions,
+                    so the project also marks a step towards facilitating access to thus-far
+                    neglected repertoires, in the vein of Juilliard’s <emph>Ruth Dana Collection
+                        Liszt editions</emph><note xml:id="ftn2">
+                        <ref target="https://archive.is/6ycPI">https://archive.is/6ycPI</ref>.
+                    </note> and Biblioteca Digital Hispánica’s ‘Teatro lírico’ collection<note
+                        xml:id="ftn3">
+                        <ref target="https://archive.is/nYIW9">https://archive.is/nYIW9</ref>.
+                    </note> (just to limit myself to music of the nineteenth century).</p>
+                <p xml:id="p5">The ‘Archive’ section contains images of the original editions of the
+                    songs synchronised with sound recordings (some of which are professional ones
+                    provided by permission of their respective recording label, and others were made
+                    specifically for the project employing non-professional performers). Clicking on
+                    the title of each of the songs, the user is presented with one page at a time,
+                    in .jpg format (and not the best resolution), as well as an audio player
+                    interface. The user can click on ‘Play’ to start playing the recording, and a
+                    box is superimposed on the score highlighting the measure that is being played
+                    at any given time, allowing the user to follow the music easily. It is plausible
+                    to imagine that this section of the site will appeal to musicians, music
+                    students and the general public who might be interested in approaching this
+                    repertoire, but would perhaps rather skip the scholarly analysis contained in
+                    the sections ‘Music Analysis’ and ‘Poem Analysis’. The synchronization between
+                    music and score is enabled by <emph>Augmented Notes</emph>, a tool developed by
+                    Swafford itself.</p>
+                <p xml:id="p6">
+                    <figure xml:id="img2">
+                        <graphic
+                            url="http://ride.i-d-e.de/wp-content/uploads/issue_13/victorians/pictures/picture-2.png"/>
+                        <head type="legend">
+                            <emph>Augmented Notes</emph> visualization in action.</head>
+                    </figure> Although not strictly part of the <emph>Songs of the Victorians</emph>
+                    site but hosted on a separate site<note xml:id="ftn4">
+                        <ref target="https://archive.is/82YfZ">https://archive.is/82YfZ</ref>.
+                    </note> (a link to which is provided in the main page of <emph>Songs of the
+                        Victorians</emph>), <emph>Augmented Notes</emph> is clearly one of the most
+                    valuable aspects of this project. It is innovative in that it allows other
+                    scholars to easily create synchronizations of their own musical examples. In
+                    order to do so, they need to upload, through the <emph>Augmented Notes</emph>
+                    site, <code>.mp3</code> and <code>.ogg</code> versions of their audio files, as
+                    well as an image file of the score (and, optionally, a MEI file of the same).
+                    The site then prompts the user to manually synchronize the sound with the score;
+                    at the end of the process, a <code>.zip</code> file is provided with the
+                    synchronized examples that the user can then upload for free to her own webpage
+                    or resource. The process is simple and step-by-step instructions are provided,
+                    although it will surely be time-consuming for longer pieces of music.
+                    Nevertheless, this is a tool that might greatly assist other projects concerned
+                    with the visualization of scores, and for which no comparable alternative, to my
+                    knowledge, exists.</p>
+                <p xml:id="p7">
+                    <emph>Augmented Notes</emph>, however, remains a visualization tool – and one
+                    aimed at providing one specific type of visualization, as described above –, and
+                    its computational and analytical capabilities are otherwise limited.
+                    Possibilities for navigating and analysing the scores and audio files other than
+                    through the synchronisations provided by Swafford are extremely scarce. For
+                    example, the editions cannot be downloaded easily: the user would have to listen
+                    to the song from the beginning and download the pages successively as separate
+                        <code>.jpg</code> files as they appear on the screen. Similarly, it is not
+                    possible to annotate, extract or download the synchronisations or the audio, and
+                    so, even though the site is provided under a CC-BY-license and the materials
+                    provided can therefore be adapted, it is difficult to imagine how this might
+                    work in practice.</p>
+                <p xml:id="p8">The more scholarly content of <emph>Songs of the Victorians</emph> is
+                    contained in the ‘Music Analysis’ and ‘Poem Analysis’ sections. We should not
+                    expect to engage here with the advanced computational, analytical and
+                    visualization tools that we find, for example, in the more ambitious Josquin
+                    Research Project,<note xml:id="ftn5">
+                        <ref target="https://archive.is/CGC1z">http://archive.is/ngcV3</ref>.
+                    </note> which makes use of the possibilities afforded by the Music Encoding
+                    Initiative (MEI) to encode musical notation in a way that allows a range of
+                    scholarly uses and re-uses. Here, this scholarly content is presented in a more
+                    traditional format: through short essays written by Swafford herself, very much
+                    along the lines of what one would find printed in a journal article or book
+                    chapter, complete with a bibliography and footnotes. <emph>Augmented
+                        Notes</emph> is used here to great effect, too: references to specific
+                    moments of the song are followed through with a link which both displays and
+                    plays the passage under discussion. This is, again, a simple but effective use
+                    of digital tools to enhance what is really rather traditional analysis.</p>
+                <p xml:id="p9">Even though <emph>Songs of the Victorians</emph> does indeed take
+                    some steps in both illuminating the repertoire it focuses on and opening up
+                    avenues of enquiry for the application of digital tools to the analysis of music
+                    that falls outside the Western canon, its potential remains limited because of
+                    the small size of the archive. It would indeed be transformative to scholars of
+                    Victorian music and culture to have access to a large archive of digitized
+                    parlor songs, in a multiplicity of formats, and complete with exhaustive
+                    metadata. Similarly, the broader critical questions raised by the project and
+                    concerning text-setting techniques and musical form necessitate from more
+                    extensive comparison than is provided here: one can easily imagine how many
+                    possibilities would be opened up by comparisons between settings of poems with
+                    the same type of metre, or between musical passages which intended to express
+                    the same types of rhetorical emotions. Perhaps the addition of further songs
+                    could also accommodate the use of advanced analytical and visualization tools:
+                    at present, the user must make any connections and comparisons herself, or use
+                    the existing analyses as invitations to undertake her own research, rather than
+                    the project enabling research in a more involved, practical way.</p>
+                <p xml:id="p10">Swafford indicates in the ‘About’ section that the resource will
+                    continue adding new songs and it may even accept submissions from external
+                    contributors, but no timeline is given and no guidelines are provided as to how
+                    the crowdsourcing aspect will be managed. It is indeed reasonable to harbour
+                    concerns as to whether the site will indeed be further developed, considering
+                    that a long time has lapsed since it was last updated. The site itself is
+                    dateless, but the Internet Wayback Archive reveals that the earliest archived
+                    version is from May 2013<note xml:id="ftn6">
+                        <ref
+                            target="https://web.archive.org/web/20130516030210/http://www.songsofthevictorians.com/"
+                            >https://web.archive.org/web/20130516030210/http://www.songsofthevictorians.com/</ref>.
+                    </note>, containing two songs. By October 2013 two more songs had been
+                        added<note xml:id="ftn7">
+                        <ref
+                            target="https://web.archive.org/web/20131026214323/http://www.songsofthevictorians.com/"
+                            >https://web.archive.org/web/20131026214323/http://www.songsofthevictorians.com/</ref>.
+                    </note>, and as of September 2019, no changes or updates had been made with
+                    respect to the October 2013 version of the site. The University of Virginia
+                    Scholars’ Lab has not announced any plans either to further expand the archive
+                    (Swafford, who set up the resource as a graduate student at the University of
+                    Virginia, has since moved institutions).</p>
+                <p xml:id="p11">
+                    <emph>Songs of the Victorians</emph> cannot be considered as a traditional
+                    scholarly digital edition: indeed, the site does not allow the user to navigate,
+                    download or annotate the scores; these can only be visualized in synchrony with
+                    the music, and there is no engagement with the manuscript or editorial tradition
+                    behind a given work, following the classical examples provided by the
+                        <emph>Online Chopin Variorum Edition</emph><note xml:id="ftn8">
+                        <ref target="http://archive.is/IfUXy">http://archive.is/IfUXy</ref>. </note>
+                    and <emph>Beethovens Werkstatt</emph><note xml:id="ftn9">
+                        <ref target="https://archive.is/on5Wd">http://archive.is/ULQ5S</ref>.
+                    </note> – both of which provide several versions, both printed and manuscript,
+                    of the same work, allow the user to navigate between them and provide other
+                    tools to help in the forming of the research conclusions. Perhaps this
+                    predominantly philological approach is not suitable to a repertoire like the one
+                    at hand, where such a rich and controversial tradition of manuscripts and
+                    editions is unlikely to have existed, or to have engaged the interest of
+                    scholars and performers as Chopin and Beethoven had. Nevertheless, this is
+                    perhaps not what a site like this sets itself to do or should be expected to do:
+                    indeed, it is more directly related to digital initiatives concerning the
+                    visualization, archiving and analysis of material and data. In this regard, and
+                    while we wait for the archive to be expanded, the site provides a glimpse of
+                    what such initiatives might do for lesser known or lesser appreciated musical
+                    repertoires. Swafford has made examples from one such repertoire accessible
+                    through a user-friendly synchronization of high-quality scores and professional
+                    recordings, and provides scholarly research which effectively uses (although in
+                    a somewhat limited way at present) the possibilities of visualizations.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
