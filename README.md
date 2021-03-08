@@ -10,7 +10,7 @@ This GitHub repository provides the data from the reviewing journal RIDE (http:/
 
 ## License
 
-The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even http://ride.i-d-e.de/about/copyright/.
+The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even https://ride.i-d-e.de/publishing-policies/.
 
 ## Contributors
 
