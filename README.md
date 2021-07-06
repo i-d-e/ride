@@ -1,4 +1,4 @@
-# RIDE - A review journal for digital editions and resources
+# Datasets of RIDE (A review journal for digital editions and resources)
 
 This GitHub repository provides the data from the reviewing journal RIDE (http://ride.i-d-e.de). Since 2014, RIDE has been published by the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For a complete list of all issues and reviews that have been published so far, see https://ride.i-d-e.de/issues/.
 
@@ -12,21 +12,25 @@ This GitHub repository provides the data from the reviewing journal RIDE (http:/
 
 The contents of this repository are published under CC-BY license. For a summary of the license and the rights granted to you, please see: https://creativecommons.org/licenses/by/4.0/ or even https://ride.i-d-e.de/publishing-policies/.
 
-## Contributors
-
-The datasets are provided by the Institute for Documentology and Scholarly Editing. The modeling, recording, conversion and curation of the data was carried out mainly by Bernhard Assmann, Ulrike Henny-Krahmer, Frederike Neuber, Martina Scholger and Philipp Steinkrüger.
-
 ## DOIs
 
 * Repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550707)
 * Release v1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
 * Release v2.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4562966.svg)](https://doi.org/10.5281/zenodo.4562966)
 
+## Contributors
+
+The datasets are provided by the Institute for Documentology and Scholarly Editing. The modeling, recording, conversion and curation of the data was carried out mainly by Bernhard Assmann, Ulrike Henny-Krahmer, Frederike Neuber, Martina Scholger and Philipp Steinkrüger.
+
 ## Contact
 
 The repository is run by members of the Institute for Documentology and Scholarly Editing (https://www.i-d-e.de/). For questions and information please contact the managing editor of RIDE: ride-editor@i-d-e.de
 
+## Citation
 
+If you use the RIDE datasets, we kindly ask you to cite them as suggested here:
+
+Institut für Dokumentologie und Editorik (ed.) (2021). “Datasets of RIDE (A Review journal for digital editions and resources).” Version 2.0.0. GitHub.com. https://github.com/i-d-e/ride. DOI: https://doi.org/10.5281/zenodo.4562966.
 
 
 
