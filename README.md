@@ -6,7 +6,7 @@ This GitHub repository provides the data from the reviewing journal RIDE (http:/
 
 * issues: Complete datasets of all issues sorted by issues, including a file in XML/TEI (with review text and questionnaire) and images and/or illustrations that are part of the publication
 * tei_all: The XML/TEI files of all the reviews in one place
-* schema: The relaxNG schema of the XML/TEI files
+* schema: The ODD and corresponding relaxNG schema of the XML/TEI files
 
 ## License
 
