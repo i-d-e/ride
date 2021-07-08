@@ -17,6 +17,7 @@ The contents of this repository are published under CC-BY license. For a summary
 * Repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550707)
 * Release v1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
 * Release v2.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4562966.svg)](https://doi.org/10.5281/zenodo.4562966)
+* Release v2.1.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5081646.svg)](https://doi.org/10.5281/zenodo.5081646)
 
 ## Contributors
 
@@ -30,7 +31,7 @@ The repository is run by members of the Institute for Documentology and Scholarl
 
 If you use the RIDE datasets, we kindly ask you to cite them as suggested here:
 
-Institut für Dokumentologie und Editorik (ed.) (2021). “Datasets of RIDE (A Review journal for digital editions and resources).” Version 2.0.0. GitHub.com. https://github.com/i-d-e/ride. DOI: https://doi.org/10.5281/zenodo.4562966.
+Institut für Dokumentologie und Editorik (ed.) (2021). “Datasets of RIDE (A Review journal for digital editions and resources).” Version 2.1.0. GitHub.com. https://github.com/i-d-e/ride. DOI: https://doi.org/10.5281/zenodo.5081646.
 
 
 
