@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+  xmlns:eg="http://www.tei-c.org/ns/Examples" xmlns:egXML="http://www.tei-c.org/ns/Examples"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>RIDE customization</title>
+        <author xml:id="IDE">
+          <name>Institute for Documentology and Scholarly Editing</name>
+        </author>
+        <author xml:id="RvdB"><name>Ron Van den Branden</name>
+          <email>ron.vandenbranden@kantl.be</email></author>
+        <author xml:id="MDH"><name>Martin Holmes</name>
+          <email>mholmes@uvic.ca</email></author>
+      </titleStmt>
+      <editionStmt>
+        <edition>Originally generated on <date>2014-01-30T13:29:15Z</date> using oddbyexample.xsl.
+          Progressively modified after that. </edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Institute for Documentology and Scholarly Editing</publisher>
+        <date when="2020-08">August 2020</date>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Based on the <ref target="https://tei-c.org/release/xml/tei/custom/odd/tei_jtei.odd"
+            >customization</ref> of the <ref target="https://journals.openedition.org/jtei/">Journal
+            of the Text Encoding Initiative</ref> developed by <name type="person" ref="#MDH">Martin
+            Holmes</name> and <name type="person" ref="#RvdB">Ron Van den Branden</name>. Originally
+          generated on <date>2014-01-30T13:29:15Z</date> using oddbyexample.xsl. Adoption and
+          modification of the schema for <ref target="https://ride.i-d-e.de/">RIDE</ref>, a review
+          journal for digital editions and resources published by the Institute for Documentology
+          and Scholarly Editing.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <tagsDecl>
+        <rendition xml:id="italic">font-style:italic;</rendition>
+        <rendition xml:id="el-emph">font-style: italic;</rendition>
+        <rendition xml:id="el-term">font-style: italic;</rendition>
+        <rendition xml:id="el-foreign">font-style: italic;</rendition>
+        <rendition xml:id="el-mentioned">font-style: italic;</rendition>
+        <rendition xml:id="mono">font-family:Courier;</rendition>
+        <rendition xml:id="el-att">font-family:Courier;</rendition>
+        <rendition xml:id="el-code">font-family:Courier;</rendition>
+        <rendition xml:id="el-gi">font-family:Courier;</rendition>
+        <rendition xml:id="el-ident">font-family:Courier;</rendition>
+        <rendition xml:id="el-val">font-family:Courier;</rendition>
+        <rendition xml:id="el-tag">font-family:Courier;</rendition>
+        <rendition xml:id="sup">vertical-align:super;</rendition>
+        <rendition xml:id="border">border: 1px solid black;</rendition>
+        <rendition xml:id="table">width: 100%;</rendition>
+        <rendition xml:id="el-quotation">margin-left:2em;display:block;</rendition>
+        <rendition xml:id="h1">font-weight: bold; font-size: 120%;display: block;</rendition>
+        <rendition xml:id="generic-head">font-weight: bold;display: block;</rendition>
+        <rendition xml:id="pre">white-space:preserve;</rendition>
+      </tagsDecl>
+    </encodingDesc>
+    <revisionDesc>
+      <change who="IDE" from="2020-01" to="2021-02">Modifications for <ref
+          target="https://ride.i-d-e.de/">RIDE</ref></change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <titlePage>
+        <docTitle>
+          <titlePart type="main">RIDE Schema</titlePart>
+          <titlePart type="sub">Schema and Guidelines for encoding an article for the review journal
+            for digital editions and resources</titlePart>
+        </docTitle>
+        <docAuthor>Institute for Documentology and Scholarly Editing</docAuthor>
+        <docDate>2021</docDate>
+      </titlePage>
+    </front>
+    <body>
+      <div xml:id="introduction">
+        <head>Introduction</head>
+        <p>rideTEI is, as the name suggests, a customized TEI schema that has been developed for
+          reviews published in the reviewing journal <title level="j">RIDE</title>. The schema is
+          essentially based on the jTEI schema. Since jTEI has been developed primarily for
+          "conventional" research articles it does not meet certain requirements that the "genre of
+          reviewing" poses to the encoding. In addition, the review components of RIDE (especially
+          the factsheet) require some extensions of the jTEI schema.
+          <!--Any such deviations from jTEI
+          will be specifically pointed out in the following. UH: rausnehmen? wollen/können wir das im Detail wirklich nachvollziehen? --></p>
+      </div>
+      <div xml:id="structure">
+        <head>Basic Structure</head>
+        <p>A RIDE article is a relatively simple TEI document consisting of a <gi>teiHeader</gi> and
+          a <gi>text</gi>. This is an example of the basic strucuture:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <TEI>
+            <teiHeader>
+              <fileDesc>
+                <titleStmt>
+                  <!-- title of review, information about the author  -->
+                </titleStmt>
+                <publicationStmt>
+                  <!-- publishing information (publisher, date, uri, doi), licence  -->
+                </publicationStmt>
+                <seriesStmt>
+                  <!-- volume of series, editors with their respective roles -->
+                </seriesStmt>
+                <notesStmt>
+                  <!-- information about the reviewed resource and the reviewing criteria applied -->
+                </notesStmt>
+                <sourceDesc>
+                  <!-- born digital by default -->
+                </sourceDesc>
+              </fileDesc>
+              <encodingDesc>
+                <!-- inclusion of the factsheet as taxonomy -->
+              </encodingDesc>
+              <profileDesc>
+                <!-- Language of the review and keywords -->
+              </profileDesc>
+            </teiHeader>
+            <text>
+              <body>
+                <div type="abstract">
+                  <!-- Short abstract in English -->
+                  <div type="text">
+                    <!-- Review -->
+                  </div>
+                  <div type="bibliography">
+                    <!-- Bibliography -->
+                  </div>
+                </div>
+              </body>
+            </text>
+          </TEI>
+        </egXML>
+      </div>
+      <div xml:id="header">
+        <head>TEI Header</head>
+        <div xml:id="titleStmt">
+          <head>Title statement</head>
+          <p>The titleStmt must contain the title of the review as given by the author.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <titleStmt>
+              <title>Digital Thoreau</title>
+              <author ref="https://orcid.org/0000-0001-8279-9298">
+                <name>
+                  <forename>Aodhán</forename>
+                  <surname>Kelly</surname>
+                </name>
+                <affiliation>
+                  <orgName>University of Antwerp</orgName>
+                  <placeName>Antwerp, Belgium</placeName>
+                </affiliation>
+                <email>aodhan.kelly@antwerpen.be</email>
+              </author>
+            </titleStmt>
+          </egXML>
+        </div>
+      </div>
+      <div>
+        <schemaSpec ident="tei_ride" start="TEI"
+          defaultExceptions="http://www.tei-c.org/ns/1.0 eg:egXML">
+          <moduleRef key="tei"/>
+          <moduleRef key="core"
+            include="abbr add author bibl biblScope cit date del desc editor email emph foreign gap graphic head hi item label lb list listBibl mentioned name note num p pubPlace publisher q quote ref relatedItem resp respStmt series soCalled term title"/>
+          <moduleRef key="corpus" include="particDesc"/>
+          <moduleRef key="figures" include="cell figure row table"/>
+          <moduleRef key="header"
+            include="appInfo availability category catDesc catRef change classCode classDecl edition encodingDesc fileDesc idno keywords langUsage language licence listChange notesStmt profileDesc projectDesc publicationStmt rendition revisionDesc seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt"/>
+          <moduleRef key="namesdates"
+            include="affiliation forename listPerson person placeName persName orgName roleName surname"/>
+          <moduleRef key="tagdocs" include="att code eg egXML gi ident tag val"/>
+          <moduleRef key="textstructure" include="TEI back body div front text"/>
+          <moduleRef key="transcr" include="subst add del mod space"/>
+          <elementSpec ident="TEI" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="version" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="version" mode="delete"/>
+              <attDef ident="xml:id" mode="change" usage="req">
+                <constraintSpec ident="ride.sch-tei" scheme="schematron">
+                  <constraint>
+                    <sch:rule context="tei:TEI/@xml:id">
+                      <sch:assert test="matches(., 'ride.\d{1,2}.\d{1,2}$')"> The xml:id is required
+                        and must have the format [ride].[issue-number].[review-number] </sch:assert>
+                    </sch:rule>
+                  </constraint>
+                </constraintSpec>
+              </attDef>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="titleStmt" module="header" mode="change">
+            <gloss versionDate="2005-01-14" xml:lang="en">title statement</gloss>
+            <desc versionDate="2020-08-06" xml:lang="en">groups information about the title of a
+              work and those responsible for its content. In RIDE, this must include a
+                <gi>title</gi> and an <gi>author</gi> element for each author of the paper, which in
+              turn must include <gi>name</gi>, <gi>affiliation</gi> and <gi>email</gi>.</desc>
+            <content resp="#RvdB">
+              <!-- [RvdB] sequence wrapper seems necessary to keep ODD2DTD happy -->
+              <sequence>
+                <elementRef key="title" minOccurs="1" maxOccurs="1"/>
+                <elementRef key="author" minOccurs="1" maxOccurs="unbounded"/>
+              </sequence>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="publicationStmt" module="header" mode="change">
+            <gloss versionDate="2005-01-14" xml:lang="en">publication statement</gloss>
+            <desc versionDate="2020-08-06" xml:lang="en">groups information about the publication.
+              In RIDE, this must include a title and an <gi>author</gi> element for each author of
+              the paper, which in turn must include <gi>name</gi>, <gi>affiliation</gi> and
+                <gi>email</gi>.</desc>
+
+            <content>
+              <sequence minOccurs="1" maxOccurs="1">
+                <classRef key="model.publicationStmtPart.agency" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="date" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="availability" minOccurs="1" maxOccurs="unbounded"/>
+              </sequence>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="seriesStmt" module="header" mode="change">
+
+            <content>
+              <sequence>
+                <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="editor" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="biblScope" minOccurs="1" maxOccurs="unbounded"/>
+                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
+
+              </sequence>
+            </content>
+            <constraintSpec ident="ride.sch-editor" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:seriesStmt/tei:editor[1]">
+                  <sch:assert test="not(@role)"> the first <sch:name/> should note hava a role
+                    attribute. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+          </elementSpec>
+
+          <elementSpec ident="listChange" module="header" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="ordered" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="type" mode="change" usage="req">
+                <valList mode="change" type="closed">
+                  <valItem ident="post-publication">
+                    <desc>Changes have been made in the review after the publication.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="change" module="header" mode="change">
+            <content>
+              <alternate minOccurs="0" maxOccurs="unbounded">
+                <textNode/>
+                <elementRef key="note"/>
+              </alternate>
+            </content>
+            <attList>
+              <attDef ident="target" mode="delete"/>
+              <attDef ident="who" mode="delete"/>
+              <attDef ident="notBefore" mode="delete"/>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="when" mode="change" usage="req"/>
+              <attDef ident="resp" mode="change" usage="req">
+                <valList mode="change" type="closed">
+                  <valItem ident="author">
+                    <desc>The subsequent change has been made by the author. </desc>
+                  </valItem>
+                  <valItem ident="editor">
+                    <desc>The subsequent change has been made by the editor. </desc>
+                  </valItem>
+                </valList>
+              </attDef>
+              <!--<attDef ident="type" mode="change" usage="req">
+                <valList mode="change" type="closed">
+                  <valItem ident="addition">
+                    <desc>The subsequent change is an addition. </desc>
+                  </valItem>
+                  <valItem ident="deletion">
+                    <desc>The subsequent change is a deletion.  </desc>
+                  </valItem>
+                  <valItem ident="substitution">
+                    <desc>The subsequent change is a substitution.  </desc>
+                  </valItem>
+                </valList>
+              </attDef>-->
+              <attDef ident="xml:id" mode="change" usage="req"/>
+
+            </attList>
+
+          </elementSpec>
+
+          <elementSpec ident="respStmt" module="header" mode="change">
+            <constraintSpec ident="ride.sch-respSmt" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:respStmt">
+                  <sch:assert test="ancestor::tei:notesStmt">
+                    <sch:name/> can only be used in the context of notesStmt. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <elementSpec ident="textClass" module="header" mode="change">
+            <content>
+              <elementRef key="keywords"/>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="keywords" module="header" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="scheme" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="change" usage="req">
+                <valList mode="change" type="closed">
+                  <valItem ident="en"/>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="affiliation" mode="change">
+            <attList>
+              <attDef ident="from" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="notBefore" mode="delete"/>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="to" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="scheme" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="when" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+
+          <elementSpec ident="att" module="tagdocs" mode="change">
+            <constraintSpec ident="jtei.sch-att" scheme="schematron" resp="#MDH #RvdB">
+              <constraint>
+                <sch:rule context="tei:att">
+                  <sch:assert test="not(matches(., '^@'))"> Attribute delimiters are not allowed for
+                    <sch:name/>: they are completed at processing time via XSLT. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="scheme" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <classSpec ident="att.breaking" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.canonical" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.citing" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="from" mode="delete"/>
+              <attDef ident="to" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.combinable" module="tagdocs" type="atts" mode="change">
+            <attList>
+              <attDef ident="mode" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete"/>
+          <classSpec ident="att.damaged" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="hand" mode="delete"/>
+              <attDef ident="agent" mode="delete"/>
+              <attDef ident="degree" mode="delete"/>
+              <attDef ident="group" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.datable" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="calendar" mode="delete"/>
+              <attDef ident="period" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete"/>
+          <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete"/>
+          <classSpec ident="att.datcat" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.declarable" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.declaring" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.deprecated" module="tagdocs" type="atts" mode="delete"/>
+          <classSpec ident="att.dimensions" module="tei" type="atts" mode="change">
+            <attList>
+              <!--
+              <attDef ident="unit" mode="delete"/>
+              <attDef ident="quantity" mode="delete"/>-->
+              <attDef ident="extent" mode="delete"/>
+              <attDef ident="precision" mode="delete"/>
+              <attDef ident="scope" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.divLike" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="org" mode="delete"/>
+              <attDef ident="sample" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.docStatus" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.duration.iso" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.duration.w3c" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.editLike" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="evidence" mode="delete"/>
+              <attDef ident="instant" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.edition" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.fragmentable" module="tei" type="atts" mode="delete"/>
+          <!-- MS: not in JTEI -->
+          <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.global.rendition" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="style" mode="delete"/>
+              <!-- MS: not in JTEI -->
+              <attDef ident="rendition" mode="delete"/>
+            </attList>
+          </classSpec>
+          <!-- MS: not in JTEI -->
+          <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="cert" mode="delete"/>
+            </attList>
+          </classSpec>
+
+          <!-- FN  <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete"/>-->
+          <classSpec ident="att.global.facs" type="atts" mode="delete"/>
+          <classSpec ident="att.global.source" type="atts" mode="delete"/>
+
+          <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.identified" module="tagdocs" type="atts" mode="change">
+            <attList>
+              <attDef ident="predeclare" mode="delete"/>
+              <attDef ident="module" mode="delete"/>
+              <attDef ident="status" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.interpLike" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="inst" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.media" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="scale" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.measurement" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.metrical" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete"/>
+          <classSpec ident="att.naming" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="nymRef" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete"/>
+          <classSpec ident="att.personal" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="full" mode="delete"/>
+              <attDef ident="sort" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.pointing" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="targetLang" mode="delete"/>
+              <attDef ident="evaluate" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.pointing.group" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="domains" mode="delete"/>
+              <attDef ident="targFunc" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.ranging" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.repeatable" module="tagdocs" type="atts" mode="delete"/>
+          <classSpec ident="att.responsibility" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.scoping" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.segLike" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="function" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.sortable" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.spanning" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.styleDef" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="schemeVersion" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.tableDecoration" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="role" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="data"/>
+                  <valItem ident="label"/>
+                </valList>
+              </attDef>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.timed" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.transcriptional" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="hand" mode="delete"/>
+              <attDef ident="status" mode="delete"/>
+              <attDef ident="cause" mode="delete"/>
+              <attDef ident="seq" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.translatable" module="tei" type="atts" mode="delete"/>
+          <classSpec ident="att.typed" module="tei" type="atts" mode="change">
+            <attList>
+              <attDef ident="subtype" mode="delete"/>
+            </attList>
+          </classSpec>
+          <classSpec ident="att.written" module="tei" type="atts" mode="delete"/>
+
+          <elementSpec ident="add" mode="change">
+            <constraintSpec ident="ride.sch-add-context" scheme="schematron" resp="#IDE">
+              <constraint>
+                <sch:rule context="tei:add">
+                  <sch:assert test="ancestor::tei:mod">
+                    <sch:name/> may only occur inside modifications. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="author" mode="change" module="core">
+            <constraintSpec ident="jtei.sch-author" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:titleStmt/tei:author">
+                  <sch:assert test="tei:name and tei:affiliation and tei:email"> Author information
+                    in the &lt;titleStmt&gt; must include &lt;name&gt;, &lt;affiliation&gt; and
+                    &lt;email&gt;. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="ref" usage="opt">
+                <desc>Link to norm data, ORCID, GND or VIAF.</desc>
+                <datatype>
+                  <dataRef name="anyURI"/>
+                </datatype>
+              </attDef>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="availability" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="status" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="bibl" mode="change" module="core">
+            <!-- MS: <constraintSpec ident="jtei.sch-bibl-id" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:back/tei:div[@type eq 'bibliography']//tei:bibl"
+                  role="warning">
+                  <sch:assert test="@xml:id"> A bibliographic entry should have a unique value for
+                    @xml:id. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+            <!-- MS: <constraintSpec ident="jtei.sch-bibl-orphan" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:back/tei:div[@type eq 'bibliography']//tei:bibl"
+                  role="warning">
+                  <sch:assert test="key('idrefs', @xml:id)/parent::tei:ref[@type='bibl']"> This
+                    bibliographic entry is an orphan: no ref[@type="bibl"] references to it occur in
+                    the text. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+            <constraintSpec ident="jtei.sch-bibl-endpunctuation" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:back/tei:div[@type eq 'bibliography']//tei:bibl">
+                  <sch:assert role="warning" test="ends-with(normalize-space(), '.')"> A
+                    bibliographic entry should end with a period. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="biblScope" mode="change">
+            <attList>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="unit" mode="change" usage="req">
+                <valList mode="add" type="closed">
+                  <valItem ident="issue"/>
+                </valList>
+              </attDef>
+              <attDef ident="n" mode="change" usage="req">
+                <datatype>
+                  <dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
+                </datatype>
+              </attDef>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="cit" mode="change" module="core">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <!--MS: <elementSpec ident="cit" mode="change" module="core">
+            <gloss versionDate="2014-03-01" xml:lang="en">cited block quotation</gloss>
+            <desc versionDate="2014-03-01" xml:lang="en">contains a quotation from some other
+              document, together with a bibliographic reference to its source. In jTEI, this is used
+              only for block quotations, and it will be rendered as a block. For inline quotations,
+              use the <gi>quote</gi> element and link it to a reference using
+              <att>source</att>.</desc>
+            <content>
+              <alternate minOccurs="1" maxOccurs="unbounded">
+                <elementRef key="quote"/>
+                <classRef key="model.biblLike"/>
+                <classRef key="model.ptrLike"/>
+              </alternate>
+            </content>
+            <constraintSpec ident="jtei.sch-cit" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:cit" role="warning">
+                  <sch:assert test="tei:ref">
+                    <sch:name/> is normally expected to have a bibliographic reference
+                    (ref[@type="bibl"]). Please make sure you intended not to add one here.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+-->
+          <elementSpec ident="date" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="from" mode="delete"/>
+              <attDef ident="to" mode="delete"/>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="notBefore" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="publication"/>
+                  <valItem ident="accessed"/>
+                </valList>
+              </attDef>
+              <attDef ident="when" mode="change">
+                <datatype>
+                  <dataRef key="date-yearMonth"/>
+                </datatype>
+              </attDef>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <dataSpec ident="date-yearMonth">
+            <content>
+
+              <dataRef name="gYearMonth"/>
+
+            </content>
+          </dataSpec>
+
+          <elementSpec ident="del" mode="change">
+
+            <constraintSpec ident="ride.sch-del-context" scheme="schematron" resp="#IDE">
+              <constraint>
+                <sch:rule context="tei:del">
+                  <sch:assert test="ancestor::tei:mod">
+                    <sch:name/> may only occur inside modifications. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <attList>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="desc" mode="change">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="div" mode="change">
+            <content>
+              <sequence>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <elementRef key="head"/>
+                  <elementRef key="lb"/>
+                  <classRef key="model.noteLike"/>
+                </alternate>
+                <sequence minOccurs="0">
+                  <alternate>
+                    <sequence minOccurs="1" maxOccurs="unbounded">
+                      <classRef key="model.divLike"/>
+                      <elementRef key="lb"/>
+                      <classRef key="model.noteLike"/>
+                    </sequence>
+                    <sequence>
+                      <sequence minOccurs="1" maxOccurs="unbounded">
+                        <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="listBibl" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="lb" minOccurs="0" maxOccurs="unbounded"/>
+                        <classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                      <sequence minOccurs="0" maxOccurs="unbounded">
+                        <classRef key="model.divLike"/>
+                        <elementRef key="lb" minOccurs="0" maxOccurs="unbounded"/>
+                        <classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                    </sequence>
+                  </alternate>
+                  <sequence minOccurs="0" maxOccurs="unbounded">
+                    <elementRef key="lb"/>
+                    <classRef key="model.noteLike"/>
+                  </sequence>
+                </sequence>
+              </sequence>
+            </content>
+            <constraintSpec ident="jtei.sch-divtypes-front" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:div[@type = $div.types.front]">
+                  <sch:assert test="parent::tei:front"> A text division of type <sch:value-of
+                      select="@type"/> may only occur inside front. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-divtypes-front2" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:front/tei:div">
+                  <sch:assert test="@type = $div.types.front"> Only text divisions of type
+                      <sch:value-of
+                      select="string-join(for $i in $div.types.front return concat(if (index-of($div.types.front, $i) = count($div.types.front)) then 'or ' else (), '&quot;', $i, '&quot;'), ', ')"
+                    /> may appear in the &lt;front&gt;. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-divtypes-back" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:div[@type = ('bibliography', 'appendix')]">
+                  <sch:assert test="parent::tei:back"> Bibliography
+                    (<sch:name/>[@type="bibliography"]) and appendices
+                    (<sch:name/>[@type="appendix"]) may only occur inside back. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <constraintSpec ident="jtei.sch-divtypes-body" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:div[@type = ('editorialIntroduction')]">
+                  <sch:assert test="parent::tei:body"> An editorial introduction
+                    (<sch:name/>[@type="editorialIntroduction"]) may only occur inside body.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-div-head" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:body//tei:div[not(position()=1)][not(contains(lower-case(//tei:titleStmt/tei:title),'editorial'))]"><!-- UH: angepasst -->
+                  <sch:assert test="tei:head"> A <sch:name/> must contain a head. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="ride.div-nesting" scheme="schematron" resp="#IDE">
+              <constraint>
+                <sch:rule context="tei:div[parent::tei:div]">
+                  <sch:report test="count(ancestor::tei:div) gt 2"> maximum three levels of nested
+                    <sch:name/> elements are allowed </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="subtype" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="abstract">
+                    <gloss xml:lang="en" versionDate="2015-03-03">Abstract for the article,
+                      appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Every article must include an
+                      abstract, consisting of one or two paragraphs. This appears in the
+                      &lt;front&gt; element and may not appear anywhere else.</desc>
+                  </valItem>
+                  <valItem ident="acknowledgements">
+                    <gloss xml:lang="en" versionDate="2015-03-03">Acknowledgements for the article,
+                      appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">If an article includes a section
+                      for acknowledgements (for funders, supporters, etc.), it should be as brief as
+                      possible, and must appear in the &lt;front&gt; element and nowhere
+                      else.</desc>
+                  </valItem>
+                  <valItem ident="authorNotes">
+                    <gloss xml:lang="en" versionDate="2017-08-31">Author's notes for the article,
+                      appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2017-08-31">If an article includes a section
+                      for author notes, it should be as brief as possible, and must appear in the
+                      &lt;front&gt; element and nowhere else.)</desc>
+                  </valItem>
+                  <valItem ident="dedication">
+                    <gloss xml:lang="en" versionDate="2017-08-31">A dedication for the article,
+                      appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2017-08-31">If an article includes a section
+                      for a dedication, it should be as brief as possible, and must appear in the
+                      &lt;front&gt; element and nowhere else.)</desc>
+                  </valItem>
+                  <valItem ident="appendix">
+                    <gloss xml:lang="en" versionDate="2015-03-03">Appendix to the article, appearing
+                      inside &lt;back&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Any appendices must appear in the
+                      &lt;back&gt; of the article, following the bibliography.</desc>
+                  </valItem>
+                  <valItem ident="bibliography">
+                    <gloss xml:lang="en" versionDate="2015-03-03">Bibliography, appearing inside
+                      &lt;back&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Every article must include a
+                      bibliography, which appears as the first component of the &lt;back&gt;
+                      element, followed by any appendices.</desc>
+                  </valItem>
+                  <valItem ident="editorialIntroduction">
+                    <gloss xml:lang="en" versionDate="2015-03-03">Editorial introduction, appearing
+                      inside &lt;body&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">[Reserved <emph>for editors
+                        only</emph>: An editorial introduction to an issue must contain a &lt;div
+                      type="editorialIntroduction"&gt;, which must appear in the &lt;body&gt;
+                      element and may not appear anywhere else.]</desc>
+                  </valItem>
+                  <valItem ident="editorNotes">
+                    <gloss xml:lang="en" versionDate="2017-08-31">Editor notes for the article,
+                      appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2017-08-31">[Reserved <emph>for editors
+                        only</emph>: if an article includes a section for editor notes, it should be
+                      as brief as possible, and must appear in the &lt;front&gt; element and nowhere
+                      else.]</desc>
+                  </valItem>
+                  <valItem ident="corrections">
+                    <gloss xml:lang="en" versionDate="2017-08-31">Statement of corrections to the
+                      article, appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2017-08-31">[Reserved <emph>for editors
+                        only</emph>: if an article needs corrections, those must be stated in this
+                      section, which must appear in the &lt;front&gt; element and nowhere
+                      else.]</desc>
+                  </valItem>
+
+                  <valItem ident="text">
+                    <gloss xml:lang="en" versionDate="2017-08-31">Statement of corrections to the
+                      article, appearing inside &lt;front&gt;.</gloss>
+                    <desc xml:lang="en" versionDate="2017-08-31">[Reserved <emph>for editors
+                        only</emph>: if an article needs corrections, those must be stated in this
+                      section, which must appear in the &lt;front&gt; element and nowhere
+                      else.]</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+
+              <attDef ident="xml:id" mode="change">
+                <constraintSpec ident="ride.sch-tei" scheme="schematron" resp="#IDE">
+                  <constraint>
+                    <sch:rule context="tei:div[ancestor::tei:body]/@xml:id">
+                      <sch:assert test="matches(., 'div(\d{1,2})(.\d{1,2}){0,2}$')">The xml:id must
+                        have the format div[chapter].[subchapter].[subsubchapter] </sch:assert>
+                    </sch:rule>
+                  </constraint>
+                </constraintSpec>
+              </attDef>
+
+            </attList>
+
+          </elementSpec>
+
+          <elementSpec ident="editor" mode="change">
+            <attList>
+              <attDef ident="ref" usage="opt">
+                <desc>Link to norm data, ORCID, GND or VIAF.</desc>
+                <datatype>
+                  <dataRef name="anyURI"/>
+                </datatype>
+              </attDef>
+              <attDef ident="role" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="translator"/>
+                  <valItem ident="guest"/>
+                  <valItem ident="chief"/>
+                  <valItem ident="managing"/>
+                  <valItem ident="technical"/>
+                  <valItem ident="assistant" resp="#IDE"/>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="emph" module="core" mode="change">
+            <gloss xml:lang="en" versionDate="2015-03-03">Emphasis (italicization)</gloss>
+            <desc xml:lang="en" versionDate="2015-03-03"> The <gi>emph</gi> element is used for
+              emphasized text, and will be rendered in italics. </desc>
+
+            <attList>
+
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="rendition" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="subtype" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+
+            </attList>
+
+          </elementSpec>
+          <elementSpec ident="figure" mode="change" xmlns:rng="http://relaxng.org/ns/structure/1.0">
+            <gloss xml:lang="en" versionDate="2015-03-03">figure</gloss>
+            <desc xml:lang="en" versionDate="2015-03-03">groups elements representing or containing
+              graphic information such as a graphic illustration, or a block of example code. Figure
+              must contain either <gi>graphic</gi>, <gi>egXML</gi> (for example XML code) or
+                <gi>eg</gi> (for non-XML code), and a mandatory <gi>head</gi> element containing the
+              caption for the figure. Inline code examples may be provided through <gi>egXML</gi>
+              and <gi>eg</gi> without the <gi>figure</gi> wrapper. </desc>
+            <content>
+              <!-- [RvdB] sequence wrapper seems necessary to keep ODD2DTD happy -->
+              <sequence>
+                <alternate>
+                  <elementRef key="graphic"/>
+                  <elementRef key="egXML"/>
+                  <elementRef key="eg"/>
+                </alternate>
+                <elementRef key="head" minOccurs="1" maxOccurs="unbounded"/>
+              </sequence>
+            </content>
+            <attList>
+
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="place" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+
+            </attList>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <figure>
+                  <graphic url="http://www.example.org/fig1.png" width="100px" height="750px"/>
+                  <head type="legend">The View from the Bridge</head>
+                  <head type="license">Used with permission</head>
+                </figure>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <figure>
+                  <eg>if ((err = SSLHashSHA1.update(&amp;hashCtx, &amp;serverRandom)) != 0) goto
+                    fail; if ((err = SSLHashSHA1.update(&amp;hashCtx, &amp;signedParams)) != 0) goto
+                    fail; goto fail; if ((err = SSLHashSHA1.final(&amp;hashCtx, &amp;hashOut)) != 0)
+                    goto fail; </eg>
+                  <head type="legend">An embarrassing error for Apple</head>
+                </figure>
+              </egXML>
+            </exemplum>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <figure> &lt;egXML xmlns="http://www.tei-c.org/ns/Examples"&gt; &lt;list
+                  rend="bulleted"&gt; &lt;item&gt;Life&lt;/item&gt; &lt;item&gt;The
+                  Universe&lt;/item&gt; &lt;item&gt;Everything&lt;/item&gt; &lt;/list&gt;
+                  &lt;/egXML&gt; <head type="legend">A book title rendered as a list</head>
+                </figure>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+          <elementSpec ident="forename" mode="change">
+            <attList>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="head" mode="change">
+            <attList>
+              <!-- att.global -->
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="resp" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="ident" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="label" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="place" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="language" mode="change">
+            <attList>
+              <attDef ident="usage" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="langUsage" mode="change">
+            <content>
+              <elementRef key="language" minOccurs="1" maxOccurs="1"/>
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="lb" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="list" mode="change" module="core">
+            <attList>
+              <attDef ident="type" mode="change" usage="opt">
+                <valList mode="change" type="closed">
+                  <valItem ident="gloss"/>
+                  <valItem ident="simple"/>
+                </valList>
+              </attDef>
+              <attDef ident="rend" mode="change" usage="opt">
+                <desc versionDate="2014-03-20" xml:lang="en">describes the way the list should be
+                  rendered. </desc>
+                <datatype maxOccurs="unbounded">
+                  <dataRef key="teidata.enumerated"/>
+                </datatype>
+                <valList mode="replace" type="closed">
+                  <valItem ident="bulleted">
+                    <gloss xml:lang="en" versionDate="2015-03-03">A bulleted list</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Bulleted lists will appear with
+                      each item preceded by a leading dot.</desc>
+                  </valItem>
+                  <valItem ident="ordered">
+                    <gloss xml:lang="en" versionDate="2015-03-03">A numbered list</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Items in a numbered list will be
+                      preceded by a number. If the list is inline, then the number will be enclosed
+                      in parentheses, but if it is a block-level list (the default), the number will
+                      be followed by a period. </desc>
+                  </valItem>
+                  <valItem ident="labeled">
+                    <gloss xml:lang="en" versionDate="2020-08-07">A labeled list</gloss>
+                    <desc xml:lang="en" versionDate="2020-08-07">List items with a label containing
+                      the original list style type.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+            </attList>
+            <exemplum versionDate="2014-03-20" xml:lang="fr">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <list rend="bulleted">
+                  <item>Bacon</item>
+                  <item>Eggs</item>
+                  <item>Mushrooms</item>
+                  <item>Spam</item>
+                  <item>Spam</item>
+                  <item>Spam</item>
+                  <item>Spam</item>
+                </list>
+              </egXML>
+            </exemplum>
+
+            <exemplum versionDate="2014-03-20" xml:lang="fr">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <p> There are three kinds of list: <list rend="inline ordered">
+                    <item>simple, </item><item>bulleted</item> and <item>ordered</item></list>. </p>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+
+          <elementSpec ident="listBibl" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="name" mode="change">
+            <attList>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="note" mode="change">
+            <constraintSpec ident="jtei.sch-note-punctuation" scheme="schematron">
+              <constraint>
+                <!-- <sch:rule context="tei:note">
+                  <sch:assert
+                    test="not(following::text()[not(ancestor::tei:note)][1][matches(., '^[,\.:;!?\]]')])"
+                    > Footnotes should follow punctuation marks, not precede them. Place your
+                    &lt;<sch:name/>&gt; element after the punctuation mark. </sch:assert>
+                </sch:rule>
+                <sch:rule context="tei:note">
+                  <sch:report test="preceding::text()[not(ancestor::tei:note)][1][matches(., '—$')]"
+                    > Footnotes should precede the dash, not follow it. Place your
+                    &lt;<sch:name/>&gt; element before the dash. </sch:report>
+                </sch:rule>
+                <sch:rule context="tei:note" role="warning">
+                  <sch:report
+                    test="following::text()[not(ancestor::tei:note)][1][matches(normalize-space(), '^\)')]"
+                    > Footnotes may be placed before closing parentheses, though this is
+                    exceptional. Please check if this note's placement is correct. Otherwise, move
+                    it after the closing parenthesis. </sch:report>
+                </sch:rule>-->
+                <sch:rule context="tei:note">
+                  <sch:assert role="warning" test="matches(normalize-space(), '[.?!]$')"> A footnote
+                    should end with closing punctuation. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-note-blocks" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:note">
+                  <sch:report
+                    test=".//(tei:cit|tei:table|tei:list[not(tokenize(@rend, '\s+')[. eq 'inline'])]|tei:figure|eg:egXML|tei:eg)"
+                    > No block-level elements are allowed inside note. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="anchored" mode="delete"/>
+              <attDef ident="targetEnd" mode="delete"/>
+              <attDef ident="place" mode="delete"/>
+              <attDef ident="target" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="head" module="core" mode="change">
+            <constraintSpec ident="jtei.sch-head-number" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:head">
+                  <sch:report test="matches(., '^\s*((Fig|Code|Abb)\.\s?)\d', 'i')"><!-- UH: angepasst gegenüber jtei -->
+                    Headings are numbered and labeled automatically, please remove the hard-coded
+                    label from the text. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-figure-head" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:figure/tei:head">
+                  <sch:assert test="@type = ('legend', 'license')"> Figure titles must have a type
+                    'legend' or 'license'. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-legend-punctuation" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:figure/tei:head[@type='legend']">
+                  <sch:assert role="warning" test=". = '' or matches(normalize-space(), '[.?!]$')"><!-- UH: angepasst gegenüber jtei --> A head
+                    with the type attribute legend should end with closing punctuation.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="type" usage="opt" mode="change">
+                <desc versionDate="2014-03-18" xml:lang="en">indicates the type of heading. In jTEI,
+                  we only use this attribute in the context of a <gi>head</gi> element in
+                    <gi>figure</gi>, where it must have one of two values.</desc>
+                <datatype>
+                  <dataRef key="teidata.enumerated"/>
+                </datatype>
+                <valList type="closed">
+                  <valItem ident="legend">
+                    <desc versionDate="2014-03-18" xml:lang="en">the caption for a figure.</desc>
+                  </valItem>
+                  <valItem ident="license">
+                    <desc versionDate="2014-03-18" xml:lang="en">licensing information that must be
+                      shown alongside the figure.</desc>
+                  </valItem>
+
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="num" mode="change" module="core">
+            <attList>
+              <attDef ident="type" usage="opt" mode="change">
+                <desc versionDate="2014-06-12" xml:lang="en">indicates the type of numeric value. In
+                  jTEI, we particularly use num[@type='ordinal'] for e.g. <q>21st</q> or <q>2nd</q>;
+                  in rendering, this results in the non-numeric suffix to the number being output as
+                  superscript. Note, however, that ordinals for centuries should be spelled out, not
+                  written using digits (<q>nineteenth century</q>, not <q>19th century</q>).</desc>
+                <datatype>
+                  <dataRef key="teidata.enumerated"/>
+                </datatype>
+                <valList type="closed">
+                  <valItem ident="cardinal">
+                    <desc versionDate="2007-06-27" xml:lang="en">absolute number, e.g. 21,
+                      21.5</desc>
+                  </valItem>
+                  <valItem ident="ordinal">
+                    <desc versionDate="2007-06-27" xml:lang="en">ordinal number, e.g. 21st. This
+                      will be rendered with the non-numeric component superscripted.</desc>
+                  </valItem>
+                  <valItem ident="fraction">
+                    <desc versionDate="2007-06-27" xml:lang="en">fraction, e.g. one half or
+                      three-quarters</desc>
+                  </valItem>
+                  <valItem ident="percentage">
+                    <desc versionDate="2007-06-27" xml:lang="en">a percentage</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="orgName" mode="change">
+            <attList>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+
+          <elementSpec ident="p" mode="change">
+
+            <attList>
+
+              <!-- att.global -->
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+
+
+            </attList>
+
+          </elementSpec>
+
+
+
+          <elementSpec ident="pubPlace" mode="change">
+            <attList>
+              <attDef ident="role" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="ptr" mode="change">
+            <constraintSpec ident="jtei.sch-ptr-multipleTargets" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:ptr[not(@type='crossref')]">
+                  <sch:report test="count(tokenize(normalize-space(@target), '\s+')) > 1"> Multiple
+                    targets are only allowed for <sch:name/>[@type='crossref']. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="target" mode="change" usage="req"/>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="crossref">
+                    <gloss xml:lang="en" versionDate="2015-03-03">A cross-reference (reference to
+                      another part of the article).</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">To link to another part of your
+                      article, use <tag>ptr type="crossref"</tag>, and point to the
+                        <att>xml:id</att> value of the target location: <tag>ptr type="crossref"
+                        target="#intro"</tag>. The <gi>ptr</gi> element will be expanded to create
+                      an appropriate link to the target location. </desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="q" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="quote" mode="change" module="core">
+            <attList>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="notation" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <!--MS: <elementSpec ident="quote" mode="change" module="core">
+            <constraintSpec ident="jtei.sch-core" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:quote">
+                  <sch:assert
+                    test="id(substring-after(@source, '#'))/(self::tei:ref[@type eq 'bibl']|self::tei:bibl[ancestor::tei:body])">
+                    <sch:name/> must be accompanied by a bibliographic reference (ref[@type="bibl"])
+                    or a bibliographic description in the running text. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>-->
+          <elementSpec ident="ref" mode="change" module="core">
+            <!--<constraintSpec ident="jtei.sch-ref-multipleTargets" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:ref">
+                  <sch:report test="count(tokenize(normalize-space(@target), '\s+')) > 1">
+                    <sch:name/> with multiple targets is not supported. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+            <constraintSpec ident="jtei.sch-biblref-parentheses" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:ref[@type eq 'bibl']">
+                  <sch:assert test="not(matches(., '^\(.*\)$'))"> Parentheses are not part of
+                    bibliographic references. Please move them out of <sch:name/>. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-biblref-target" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:ref[@type eq 'bibl']">
+                  <sch:assert
+                    test="id(substring-after(@target, '#'))/(self::tei:bibl|self::tei:person[ancestor::tei:particDesc/parent::tei:profileDesc])"
+                    > A bibliographic reference must point to an entry in the bibliography.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-biblref-type" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:ref[id(substring-after(@target, '#'))/self::tei:bibl]">
+                  <sch:assert test="@type eq 'bibl'" sqf:fix="bibltype.add"> A bibliographic
+                    reference must be typed as @type="bibl". </sch:assert>
+                  <sqf:fix id="bibltype.add">
+                    <sqf:description>
+                      <sqf:title>Add @type='bibl'.</sqf:title>
+                    </sqf:description>
+                    <sqf:add match="." node-type="attribute" target="type" select="'bibl'"/>
+                  </sqf:fix>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+
+              <attDef ident="target" mode="change" usage="req"/>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="crossref">
+                    <gloss xml:lang="en" versionDate="2015-03-03">A cross-reference (reference to
+                      another part of the article).</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">To link to another part of your
+                      article, use <tag>ref type="crossref"</tag>, and point to the
+                        <att>xml:id</att> value of the target location: <tag>ref type="crossref"
+                        target="#intro"</tag>.</desc>
+                  </valItem>
+                  <valItem ident="bibl">
+                    <gloss xml:lang="en" versionDate="2015-03-03">A bibliographic reference
+                      (reference to an entry in the bibliography).</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">To link to a bibliographic
+                      description in the bibliography, use <tag>ref type="bibl"</tag>, and point to
+                      the <att>xml:id</att> value of the target location: <tag>ref type="bibl"
+                        target="#ide88"</tag>.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="rendition" mode="change" module="header">
+            <constraintSpec ident="jtei.sch-rendition" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:rendition">
+                  <sch:assert test="key('idrefs', @xml:id) instance of attribute(rendition)"> Please
+                    remove all <sch:name/> definitions that aren't actually being used in the
+                    article. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="scope" mode="delete"/>
+              <attDef ident="scheme" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="css"/>
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="roleName" mode="change">
+            <attList>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="surname" mode="change">
+            <attList>
+              <attDef ident="role" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="teiHeader" mode="change">
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="term" mode="change">
+            <attList>
+              <attDef ident="target" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="text" module="textstructure" mode="change">
+            <gloss xml:lang="en" versionDate="2015-03-03">text</gloss>
+            <desc xml:lang="en" versionDate="2015-03-03">contains the complete text of the article.
+              Must include a <gi>front</gi> containing an abstract, a <gi>body</gi> containing the
+              main text, and a <gi>back</gi> containing the bibliography and any appendices.</desc>
+            <constraintSpec ident="jtei.sch-article-keywords" scheme="schematron">
+              <constraint>
+                <sch:rule
+                  context="tei:text[not(tei:body/tei:div[@type = ('editorialIntroduction')])]">
+                  <sch:assert
+                    test="parent::tei:TEI/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords">
+                    An article must have a keyword list in the header. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-article-abstract" scheme="schematron">
+              <constraint>
+                <sch:rule
+                  context="tei:text[not(contains(lower-case(//tei:titleStmt/tei:title),'editorial'))]"><!-- UH: angepasst -->
+                  <sch:assert test="tei:front/tei:div[@type='abstract']"> An article must have a
+                    front section with an abstract. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <!--<constraintSpec ident="jtei.sch-article-back" scheme="schematron">
+              <constraint>
+                <sch:rule
+                  context="tei:text[not(contains(lower-case(//tei:titleStmt/tei:title),'editorial'))]">
+                  <sch:assert test="tei:back/tei:div[@type='bibliography']/tei:listBibl"> An article
+                    must have a back section with a bibliography. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+            <attList>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+            <exemplum xml:lang="en">
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <text>
+                  <front>
+                    <div type="abstract" xml:id="abstract">
+                      <p>This article is about...</p>
+                    </div>
+                  </front>
+                  <body>
+                    <div xml:id="intro">
+                      <head>Introduction</head>
+                      <p>A great deal of previous research...</p>
+                    </div>
+                    <div xml:id="method">
+                      <head>Method</head>
+                      <p>This project was undertaken...</p>
+                    </div>
+                  </body>
+                  <back>
+                    <div type="bibliography">
+                      <listBibl>
+                        <bibl>[...]</bibl>
+                      </listBibl>
+                    </div>
+                  </back>
+                </text>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+          <elementSpec ident="title" mode="change">
+            <attList>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="main">
+                    <gloss xml:lang="en" versionDate="2015-03-03">The main title of your
+                      article.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Academic articles often have a main
+                      title followed by a subtitle (sometimes with a colon separating them). If you
+                      have two such components in your article title, then in the
+                      <gi>titleStmt</gi>, use <tag>title type="main"</tag> and <tag>title
+                        type="sub"</tag> to encode the two components of your title.</desc>
+                  </valItem>
+                  <!-- MS: <valItem ident="sub">
+                    <gloss xml:lang="en" versionDate="2015-03-03">The subtitle of your article.</gloss>
+                    <desc xml:lang="en" versionDate="2015-03-03">Academic articles often have a main title followed by a subtitle
+                      (sometimes with a colon separating them). If you have two such components in
+                      your article title, then in the <gi>titleStmt</gi>, use <tag>title
+                        type="main"</tag> and <tag>title type="sub"</tag> to encode the two
+                      components of your title.</desc>
+                  </valItem>-->
+                </valList>
+              </attDef>
+            </attList>
+          </elementSpec>
+          <elementSpec ident="body" module="textstructure" mode="change">
+            <content>
+              <!--           MDH 2015-03-04: LB wants a more sophisticated content model allowing no 
+              divs at all instead of a single div. This has proved problematic, 
+              so we're abandoning it at this stage to enable integration into 
+              P5; we'll revisit this later. -->
+              <!--              <alternate>-->
+              <sequence>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                  <classRef key="model.divTop"/>
+                  <classRef key="model.global"/>
+                </alternate>
+                <sequence minOccurs="0">
+                  <alternate>
+                    <sequence minOccurs="1" maxOccurs="unbounded">
+                      <alternate>
+                        <classRef key="model.divLike"/>
+                        <classRef key="model.divGenLike"/>
+                      </alternate>
+                      <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                    <sequence>
+                      <sequence minOccurs="1" maxOccurs="unbounded">
+                        <classRef key="model.common"/>
+                        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                      <sequence minOccurs="0" maxOccurs="unbounded">
+                        <alternate>
+                          <classRef key="model.divLike"/>
+                          <classRef key="model.divGenLike"/>
+                        </alternate>
+                        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                      </sequence>
+                    </sequence>
+                  </alternate>
+                  <sequence minOccurs="0" maxOccurs="unbounded">
+                    <classRef key="model.divBottom"/>
+                    <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                  </sequence>
+                </sequence>
+              </sequence>
+              <!--                 
+                <classRef key="model.divLike" minOccurs="1" maxOccurs="unbounded"/>
+-->
+              <!--</alternate>-->
+            </content>
+            <!--
+              MS auskommentiert: 
+              <constraintSpec ident="jtei.sch-body" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:body[child::tei:div[not(@type=('editorialIntroduction'))]]">
+                  <sch:assert test="count(child::tei:div) gt 1">
+                    If <sch:name/> contains a div, and that div is not an editorial introduction, then there should be 
+                    more than one div. Rather than using only a single div, you may place the content directly
+                    in the <sch:name/> element.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+          </elementSpec>
+          <elementSpec ident="back" module="textstructure" mode="change">
+            <constraintSpec ident="jtei.sch-back" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:back">
+                  <sch:assert test="tei:div[@type='bibliography']/tei:listBibl">
+                    <sch:name/> must have a bibliography (div[@type="bibliography"]), which must be
+                    organized inside a listBibl element. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <constraintSpec ident="jtei.sch-ns" scheme="schematron">
+            <constraint>
+              <sch:ns prefix="sch" uri="http://purl.oclc.org/dsdl/schematron"/>
+              <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+              <sch:ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+              <sch:ns prefix="xsl" uri="http://www.w3.org/1999/XSL/Transform"/>
+              <sch:ns prefix="eg" uri="http://www.tei-c.org/ns/Examples"/>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-variables" scheme="schematron">
+            <constraint>
+              <sch:pattern>
+                <xsl:key name="idrefs"
+                  match="@target[starts-with(normalize-space(.), '#')]|@rendition[starts-with(normalize-space(.), '#')]"
+                  use="for $i in tokenize(., '\s+') return substring-after($i, '#')"/>
+                <sch:let name="double.quotes" value="'[&quot;“”]'"/>
+                <sch:let name="apos.typographic" value="'[‘’]'"/>
+                <sch:let name="apos.straight" value="''''"/>
+                <sch:let name="quotes" value="concat('[', $apos.straight, '&quot;]')"/>
+                <sch:let name="div.types.front"
+                  value="('abstract', 'acknowledgements', 'authorNotes', 'editorNotes', 'corrections', 'dedication')"/>
+                <!-- http://www.tei-c.org/release/doc/tei-p5-doc/VERSION produces 
+                     429 "Too Many Requests" errors -->
+                <sch:let name="tei.version.url"
+                  value="'https://jenkins.tei-c.org/job/TEIP5/lastStableBuild/artifact/P5/release/doc/tei-p5-doc/VERSION'"/>
+                <sch:let name="tei.version"
+                  value="if (unparsed-text-available($tei.version.url)) then normalize-space(unparsed-text($tei.version.url)) else ()"
+                />
+              </sch:pattern>
+            </constraint>
+          </constraintSpec>
+          <elementSpec ident="tag" module="tagdocs" mode="change">
+            <constraintSpec ident="jtei.sch-tag" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:tag">
+                  <sch:assert test="not(matches(., '^[&lt;!?-]|[&gt;/?\-]$'))"> Tag delimiters such
+                    as angle brackets and tag-closing slashes are not allowed for <sch:name/>: they
+                    are completed at processing time via XSLT. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <elementSpec ident="val" module="tagdocs" mode="change">
+            <constraintSpec ident="jtei.sch-att" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:val">
+                  <sch:assert test="not(matches(., concat('^', $quotes, '|', $quotes, '$')))">
+                    Attribute value delimiters are not allowed for <sch:name/>: they are completed
+                    at processing time via XSLT. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+          <!-- FN: kommt bei RIDE nicht vor <elementSpec ident="supplied" module="transcr" mode="change">
+            <constraintSpec ident="jtei.sch-supplied" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:supplied">
+                  <sch:assert test="not(matches(., '^\[|\]$'))"> Please remove square brackets from
+                    <sch:name/>: they are completed at processing time via XSLT. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>-->
+
+          <elementSpec ident="idno" module="header" mode="change">
+            <constraintSpec ident="jtei.sch-doi-order" scheme="schematron" resp="#MDH #RvdB">
+              <constraint>
+                <sch:rule
+                  context="tei:back/tei:div[@type eq 'bibliography']//tei:idno[@type eq 'doi']">
+                  <sch:report test="following-sibling::tei:ref"> If a bibliographic entry has a
+                    formal DOI code, it should be placed at the very end of the bibliographic
+                    description. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <constraintSpec ident="ride.sch-idno-author" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:author/tei:idno">
+                  <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
+                    ORCID, GND, or VIAF is allowed. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <constraintSpec ident="ride.sch-idno-author" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:author/tei:idno">
+                  <sch:assert test="@type='ORCID' or @type='GND' or @type='VIAF'"> Only the type
+                    ORCID, GND, or VIAF is allowed. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <constraintSpec ident="ride.sch-idno-publicationStmt" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:publicationStmt/tei:idno">
+                  <sch:assert test="@type='URI' or @type='DOI' or @type='archive'"> Only the type
+                    URI, DOI, or archive is allowed. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <attList>
+              <attDef ident="type" usage="req" mode="replace">
+                <valList mode="replace" type="closed">
+                  <valItem ident="ORCID">
+                    <gloss versionDate="2020-08-07">ORCID</gloss>
+                    <desc versionDate="2020-08-07">Open Researcher and Contributor ID: a
+                      alphanumeric code to uniquely identify scientific and other academic authors
+                      and contributors.</desc>
+                  </valItem>
+                  <valItem ident="GND">
+                    <gloss versionDate="2020-08-07">GND</gloss>
+                    <desc versionDate="2020-08-07">Authority file for the organisation of personal
+                      names, subject headings, and corporate bodies from catalogue, managed by the
+                      German National Library.</desc>
+                  </valItem>
+                  <valItem ident="VIAF">
+                    <gloss versionDate="2020-08-07">VIAF</gloss>
+                    <desc versionDate="2020-08-07">A data number in the Virtual Internet Authority
+                      File assigned to link different names in catalogs around the world for the
+                      same entity.</desc>
+                  </valItem>
+                  <valItem ident="DOI">
+                    <gloss versionDate="2020-08-07">DOI</gloss>
+                    <desc versionDate="2020-08-07">Digital Object Identifier: a unique string of
+                      letters and numbers assigned to an electronic document.</desc>
+                  </valItem>
+                  <valItem ident="URI">
+                    <gloss versionDate="2020-08-07">URI</gloss>
+                    <desc versionDate="2020-08-07">Uniform Resource Identifier: a string of
+                      characters to uniquely identify a resource which usually contains indication
+                      of the means of accessing that resource, the name of its host, and its
+                      filepath.</desc>
+                  </valItem>
+                  <valItem ident="archive">
+                    <gloss versionDate="2020-08-07">archive</gloss>
+                    <desc versionDate="2020-08-07">zip archive of the full review in a github
+                      repository.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+
+          </elementSpec>
+
+          <elementSpec ident="graphic" module="core" mode="change">
+
+            <!-- MS: Abweichung von JTEI: <constraintSpec ident="jtei.sch-graphic-dimensions" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:graphic">
+                  <sch:assert test="matches(@width, '\d+px') and matches(@height, '\d+px')">
+                    Width and height in pixels must be specified for any <sch:name/>.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>-->
+
+            <constraintSpec ident="jtei.sch-graphic-context" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:graphic">
+                  <sch:assert test="parent::tei:figure">
+                    <sch:name/> may only occur inside figure. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <attList>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="height" mode="delete"/>
+              <attDef ident="width" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="front" module="textstructure" mode="change">
+            <constraintSpec ident="jtei.sch-front-abstract" scheme="schematron" resp="#RvdB #MDH">
+              <constraint>
+                <sch:rule context="tei:front">
+                  <sch:assert test="tei:div[@type='abstract']">
+                    <sch:name/> must have an abstract (div[@type='abstract']). </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <attList>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="type" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="encodingDesc" module="header" mode="change">
+            <content>
+              <elementRef key="classDecl" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <attList>
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="classDecl" module="header" mode="change">
+            <content>
+              <elementRef key="taxonomy" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <attList>
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <elementSpec ident="taxonomy" module="header" mode="change">
+            <attList>
+              <!--<attDef ident="n" mode="delete"/>-->
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="change" mode="change" usage="opt"/>
+              <attDef ident="xml:base" mode="change" usage="req"/>
+            </attList>
+          </elementSpec>
+
+          <!-- 
+          <elementSpec ident="taxonomy" module="header" mode="change">
+            <content>
+              <alternate>
+                <alternate>
+                    <elementRef key="category" minOccurs="1" maxOccurs="unbounded"/>
+                  </alternate>
+                  <sequence>
+                    <alternate minOccurs="1"
+                      maxOccurs="unbounded">
+                      <classRef key="model.glossLike"/>
+                      <classRef key="model.descLike"/>
+                    </alternate>
+                    <alternate minOccurs="0"
+                      maxOccurs="unbounded">
+                      <elementRef key="category"/>
+                      <elementRef key="taxonomy"/>
+                    </alternate>
+                  </sequence>
+                </alternate>
+                <sequence>
+                  <classRef key="model.biblLike"/>
+                  <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <elementRef key="category"/>
+                    <elementRef key="taxonomy"/>
+                  </alternate>
+                </sequence>
+              </alternate>
+            </content>
+            <attList>
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="rend" mode="delete"/>
+              <attDef ident="rendition" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+              <attDef ident="source" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+            </attList>
+          </elementSpec>
+          -->
+
+          <elementSpec ident="category" module="header" mode="change">
+            <content>
+              <sequence>
+                <alternate>
+                  <elementRef key="catDesc" minOccurs="1" maxOccurs="unbounded"/>
+                  <alternate minOccurs="0" maxOccurs="unbounded">
+                    <classRef key="model.descLike"/>
+                    <classRef key="model.glossLike"/>
+                  </alternate>
+                </alternate>
+                <elementRef key="category" minOccurs="0" maxOccurs="unbounded"/>
+              </sequence>
+            </content>
+
+            <attList>
+
+              <!-- att.global -->
+              <!--<attDef ident="xml:base" mode="delete"/>-->
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <!--<attDef ident="xml:id" mode="delete"/>-->
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <attDef ident="corresp" usage="opt" mode="add">
+
+                <datatype>
+                  <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="datatype.Pointer"/>
+                </datatype>
+
+              </attDef>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="cert" mode="delete"/>
+              <attDef ident="resp" mode="delete"/>
+
+            </attList>
+
+          </elementSpec>
+
+          <elementSpec ident="catDesc" module="header" mode="change">
+            <content>
+              <alternate minOccurs="0" maxOccurs="unbounded">
+                <elementRef key="ref"/>
+                <textNode/>
+                <elementRef key="num"/>
+              </alternate>
+            </content>
+
+            <attList>
+              <!-- att.global -->
+              <!--<attDef ident="xml:base" mode="delete"/>-->
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="resp" mode="delete"/>
+
+
+            </attList>
+
+          </elementSpec>
+
+
+
+          <elementSpec ident="change" module="header" mode="change">
+
+            <attList>
+
+              <!-- att.ascribed -->
+              <attDef ident="who" mode="delete"/>
+
+              <!-- att.datable -->
+              <attDef ident="calendar" mode="delete"/>
+              <attDef ident="period" mode="delete"/>
+
+              <!-- att.datable.w3c -->
+              <!--<attDef ident="when" mode="delete"/>-->
+              <attDef ident="notBefore" mode="delete"/>
+              <attDef ident="notAfter" mode="delete"/>
+              <attDef ident="from" mode="delete"/>
+              <attDef ident="to" mode="delete"/>
+
+              <!-- att.datable.iso -->
+              <attDef ident="when-iso" mode="delete"/>
+              <attDef ident="notBefore-iso" mode="delete"/>
+              <attDef ident="notAfter-iso" mode="delete"/>
+              <attDef ident="from-iso" mode="delete"/>
+              <attDef ident="to-iso" mode="delete"/>
+
+              <!-- att.datable.custom -->
+              <attDef ident="when-custom" mode="delete"/>
+              <attDef ident="notBefore-custom" mode="delete"/>
+              <attDef ident="notAfter-custom" mode="delete"/>
+              <attDef ident="from-custom" mode="delete"/>
+              <attDef ident="to-custom" mode="delete"/>
+              <attDef ident="datingPoint" mode="delete"/>
+              <attDef ident="datingMethod" mode="delete"/>
+
+              <!-- att.docStatus  -->
+              <attDef ident="status" mode="delete"/>
+
+              <!-- att.global -->
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <!-- att.typed  -->
+              <!--<attDef ident="type" mode="delete"/>-->
+              <attDef ident="subtype" mode="delete"/>
+
+              <attDef ident="corresp" usage="opt" mode="add">
+                <datatype>
+                  <rng:ref xmlns:rng="http://relaxng.org/ns/structure/1.0" name="datatype.Pointer"/>
+                </datatype>
+              </attDef>
+            </attList>
+          </elementSpec>
+
+
+          <elementSpec ident="table" module="figures" mode="change">
+            <constraintSpec ident="jtei.sch-table" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:table">
+                  <sch:assert test="not(ancestor::tei:list)"> No tables are are allowed inside
+                    lists. </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <attList>
+              <!-- att.global -->
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="resp" mode="delete"/>
+
+              <!-- att.typed -->
+              <attDef ident="type" mode="delete"/>
+              <attDef ident="subtype" mode="delete"/>
+
+            </attList>
+
+          </elementSpec>
+          <elementSpec ident="gap" module="core" mode="change">
+            <constraintSpec ident="jtei.sch-gap" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:gap">
+                  <sch:report
+                    test="following-sibling::node()[1][self::text()] and starts-with(following-sibling::node()[1], '.')"
+                    > A <sch:name/> element should follow a period rather than precede it when an
+                    ellipsis follows the end of a sentence. </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="jtei.sch-gap-ws" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:gap">
+                  <sch:report
+                    test="preceding-sibling::node()[1][self::text()][matches(., '\.\s+$')]"> A
+                    <sch:name/> should follow a period directly, without preceding whitespace.
+                  </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+
+            <attList>
+              <!-- att.global -->
+              <attDef ident="xml:base" mode="delete"/>
+              <attDef ident="xml:lang" mode="delete"/>
+              <attDef ident="xml:space" mode="delete"/>
+              <attDef ident="n" mode="delete"/>
+              <attDef ident="xml:id" mode="delete"/>
+
+              <!-- att.global.rendition -->
+              <attDef ident="rend" mode="delete"/>
+
+              <!-- att.global.responsibility  -->
+              <attDef ident="resp" mode="delete"/>
+
+
+            </attList>
+
+          </elementSpec>
+
+
+          <constraintSpec ident="jtei.sch-localLinkTarget" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="@*[self::attribute(corresp)|self::attribute(target)|self::attribute(from)|self::attribute(to)|self::attribute(ref)|self::attribute(rendition)|self::attribute(resp)|self::attribute(source)][not(ancestor::eg:egXML)][not(ancestor::tei:category)][some $i in tokenize(., '\s+') satisfies starts-with($i, '#')]">
+                <sch:let name="orphan.pointers"
+                  value="for $p in tokenize(., '\s+')[starts-with(., '#')] return if (not(id(substring-after($p, '#')))) then $p else ()"/>
+                <sch:report test="exists($orphan.pointers)"> There's no local target for
+                    <sch:value-of
+                    select="if (count($orphan.pointers) > 1) then 'these pointers' else 'this pointer'"
+                  />: <sch:value-of select="string-join($orphan.pointers, ', ')"/>. Please make sure
+                  you're referring to an existing @xml:id value. </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+
+          <constraintSpec ident="jtei.sch-renditionTarget" scheme="schematron">
+            <constraint>
+              <sch:rule context="@rendition">
+                <sch:let name="orphan.pointers"
+                  value="for $p in tokenize(., '\s+')[starts-with(., '#')] return for $id in id(substring-after($p, '#'))[not(self::tei:rendition)] return $p"/>
+                <sch:report test="exists($orphan.pointers)">
+                  <sch:value-of
+                    select="if (count($orphan.pointers) > 1) then 'These pointers don''t' else 'This pointer doesn''t'"
+                  /> point to a &lt;rendition&gt; target: <sch:value-of
+                    select="string-join($orphan.pointers, ', ')"/>. </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-quoteDelim" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="tei:title[@level eq 'a']|tei:mentioned|tei:soCalled|tei:quote|tei:q">
+                <sch:assert
+                  test="not(matches(., concat('^', $double.quotes, '|', $double.quotes, '$')))"
+                  sqf:fix="quotation.remove"> Quotation mark delimiters are not allowed for
+                  <sch:name/>: they are completed at processing time via XSLT. </sch:assert>
+                <sqf:fix id="quotation.remove">
+                  <sqf:description>
+                    <sqf:title>Remove quotation marks.</sqf:title>
+                  </sqf:description>
+                  <sqf:stringReplace regex="{concat('^', $double.quotes, '|', $double.quotes, '$')}"
+                  />
+                </sqf:fix>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-crossref-id" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="tei:body//tei:div[not(@type='editorialIntroduction')]|tei:figure" 
+                role="warning"><!-- UH: angepasst -->
+                <sch:assert test="@xml:id"> You're strongly advised to add an @xml:id attribute to
+                  <sch:name/> to ease formal cross-referencing with (ptr|ref)[@type='crossref']
+                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-formalCrossref" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="text()[not(ancestor::tei:eg|ancestor::eg:egXML|ancestor::tei:code|ancestor::tei:tag|ancestor::tei:ref[not(@type='crossref')])]"
+                role="warning">
+                <sch:assert
+                  test="not(matches(., '(table|figure|example|section) \d+([.,]\d+)* ((above)|(below))', 'i'))"
+                  > Please replace literal references to tables, figures, examples, and sections
+                  with a formal crosslink: (ptr|ref)[@type="crossref"] </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-crossrefTargetType" scheme="schematron">
+            <constraint>
+              <sch:rule context="tei:ptr[@type='crossref']|tei:ref[@type='crossref']">
+                <sch:let name="orphan.pointers"
+                  value="for $p in tokenize(@target, '\s+')[starts-with(., '#')] return for $id in id(substring-after($p, '#'))[not(self::tei:div or self::tei:figure or self::tei:table or self::tei:note or self::tei:p)] return $p"/>
+                <sch:report test="exists($orphan.pointers)"> Cross-links
+                  (<sch:name/>[@type="crossref"]) should be targeted at div, figure, table, or note
+                  elements. The target of <sch:value-of
+                    select="if (count($orphan.pointers) > 1) then 'these pointers' else 'this pointer'"
+                  /> doesn't satisfy this condition: <sch:value-of
+                    select="string-join($orphan.pointers, ', ')"/>. </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="jtei.sch-crossrefType" scheme="schematron">
+            <constraint>
+              <sch:rule context="tei:ptr[not(@type='crossref')]|tei:ref[not(@type='crossref')]">
+                <sch:report
+                  test="id(substring-after(@target, '#'))/(self::tei:div|self::tei:figure|self::tei:table)"
+                  sqf:fix="crossreftype.add"> Please type internal cross-references as 'crossref'
+                  (<sch:name/>[@type="crossref"]). </sch:report>
+                <sqf:fix id="crossreftype.add">
+                  <sqf:description>
+                    <sqf:title>Add @type='crossref'.</sqf:title>
+                  </sqf:description>
+                  <sqf:add match="." node-type="attribute" target="type" select="'crossref'"/>
+                </sqf:fix>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <!--<constraintSpec ident="jtei.sch-centuries" scheme="schematron">
+            <constraint>
+              <sch:rule context="text()[not(ancestor::tei:quote or ancestor::tei:title)]">
+                <sch:assert
+                  test="not(matches(., '\d\d?((th)|(st)|(rd)|(nd))[- ]centur((y)|(ies))', 'i'))">
+                  Centuries such as "the nineteenth century" should be spelled out, not written with
+                  digits. </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>-->
+        </schemaSpec>
+      </div>
+    </body>
+  </text>
+</TEI>
