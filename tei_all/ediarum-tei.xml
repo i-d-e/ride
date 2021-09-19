@@ -2,1193 +2,1562 @@
 <?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.11.4">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Ediarum. A toolbox for editors and developers</title>
-                <author ref="https://orcid.org/0000-0003-4665-2226">
-                    <name>
-                        <forename>Andreas</forename>
-                        <surname>Mertgens</surname>
-                    </name>
-                    <affiliation>
-                        <orgName>University of Cologne</orgName>
-                        <placeName>Cologne</placeName>
-                    </affiliation>
-                    <email>a.mertgens@uni-koeln.de</email>
-                </author>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
-                <date when="2020-01">Januar 2020</date>
-                <idno type="URI">https://ride.i-d-e.de/issue-11/ediarum/</idno>
-                <idno type="DOI">10.18716/ride.a.11.4</idno>
-                <idno type="archive"
-                    >https://github.com/i-d-e/ride/raw/master/issues/issue11/ediarum/ediarum.pdf</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/"/>
-                </availability>
-            </publicationStmt>
-            <seriesStmt>
-                <title level="j">RIDE - A review journal for digital editions and resources</title>
-                <editor ref="https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
-                <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
-                <editor ref="https://orcid.org/0000-0002-2162-5531" role="managing">Franz
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Ediarum. A toolbox for editors and developers</title>
+            <author ref="https://orcid.org/0000-0003-4665-2226">
+               <name>
+                  <forename>Andreas</forename>
+                  <surname>Mertgens</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Cologne</orgName>
+                  <placeName>Cologne</placeName>
+               </affiliation>
+               <email>a.mertgens@uni-koeln.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e. V.</publisher>
+            <date when="2020-01">Januar 2020</date>
+            <idno type="URI">https://ride.i-d-e.de/issue-11/ediarum/</idno>
+            <idno type="DOI">10.18716/ride.a.11.4</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue11/ediarum/ediarum.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+            <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+            <editor ref="https://orcid.org/0000-0002-2162-5531" role="managing">Franz
                     Fischer</editor>
-                <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
                     Henny-Krahmer</editor>
-                <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
                     Neuber</editor>
-                <editor ref="https://orcid.org/0000-0003-1438-3236" role="technical">Martina
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="technical">Martina
                     Scholger</editor>
-                <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
                     Neuber</editor>
-                <biblScope unit="issue" n="11">Tools and Environments</biblScope>
-                <idno type="URI">http://ride.i-d-e.de/issues/issue-11</idno>
-            </seriesStmt>
-            <notesStmt>
-                <relatedItem type="reviewed_resource">
-                    <bibl>
-                        <title>ediarum</title>
-                        <editor>Stefan Dumont, Martin Fechner, Sascha Grabsch</editor>
-                        <date type="publication">2018</date>
-                        <idno type="URI">http://www.bbaw.de/telota/software/ediarum</idno>
-                        <date type="accessed">2019-10-15</date>
-                    </bibl>
-                </relatedItem>
-                <relatedItem type="reviewing_criteria">
-                    <bibl>
-                        <ref
-                            target="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/"
-                            >Criteria for Reviewing Digital Text Collections</ref>
-                    </bibl>
-                </relatedItem>
-            </notesStmt>
-            <sourceDesc>
-                <p>born digital</p>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <classDecl>
-                <taxonomy
-                    xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
-                    <category xml:id="general_information">
-                        <category xml:id="software_type">
-                            <catDesc>
-                                <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
-                            </catDesc>
-                            <catDesc>What type of software is it?</catDesc>
-                            <category xml:id="software_tool">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="software_vre">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="identification_environment">
-                            <catDesc>
-                                <ref target="#K1.4">cf. Catalogue 1.4</ref>
-                            </catDesc>
-                            <catDesc>On which platform runs the tool?</catDesc>
-                            <category xml:id="identification_os">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="identification_browser">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="identification_other">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="purpose">
-                            <catDesc>
-                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-                            </catDesc>
-                            <catDesc>For what purpose was the tool developed?</catDesc>
-                            <category xml:id="purpose_general">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="purpose_specific">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="funding">
-                            <catDesc>
-                                <ref target="#K1.6">cf. Catalogue 1.6</ref>
-                            </catDesc>
-                            <catDesc>Which is the financial model of the tool?</catDesc>
-                            <category xml:id="funding_free">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="funding_support">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="funding_paywall">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="maturity">
-                            <catDesc>
-                                <ref target="#K1.5">cf. Catalogue 1.5</ref>
-                            </catDesc>
-                            <catDesc>What is the development stage of the tool?</catDesc>
-                            <category xml:id="maturity_release">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="maturity_beta">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="maturity_alpha">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                    </category>
-                    <category xml:id="methods">
-                        <category xml:id="programming_lang">
-                            <catDesc>
-                                <ref target="#K2.3">cf. Catalogue 2.3</ref>
-                            </catDesc>
-                            <catDesc>Which programming languages and technologies are
-                                used?</catDesc>
-                            <category xml:id="programming_lang_c">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_java">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_python">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_php">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_r">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_ruby">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="programming_lang_xslt">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#unknown">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="reuse">
-                            <catDesc>
-                                <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
-                            </catDesc>
-                            <catDesc>Does the tool reuse portions of other existing
-                                software?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="input_format">
-                            <catDesc>
-                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
-                            </catDesc>
-                            <catDesc>Which programming languages and technologies are
-                                used?</catDesc>
-                            <category xml:id="input_format_xml">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_xml-tei">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_txt">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_pdf">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_csv">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_html">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_json">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="input_format_rdf">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                        </category>
-                        <category xml:id="output_format">
-                            <catDesc>
-                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
-                            </catDesc>
-                            <catDesc>Which programming languages and technologies are
-                                used?</catDesc>
-                            <category xml:id="output_format_xml">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_xml-tei">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_txt">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_pdf">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_csv">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_html">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_json">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="output_format_rdf">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                        </category>
-                        <category xml:id="encoding">
-                            <catDesc>
-                                <ref target="#K2.3">cf. Catalogue 2.4</ref>
-                            </catDesc>
-                            <catDesc>Which character encoding formats are supported?</catDesc>
-                            <category xml:id="encoding_latin-1">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="encoding_utf-8">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="encoding_utf-16">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#unknown">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="encoding_preprocessing">
-                            <catDesc>Is a pre-processing conversion included?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="dependencies">
-                            <catDesc>
-                                <ref target="#K3.2">cf. Catalogue 3.2</ref>
-                            </catDesc>
-                            <catDesc>Does the documentation list dependencies on other software,
-                                libraries or hardware?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="dependencies_installation">
-                            <catDesc>If yes, is the software handling the installation of
-                                dependencies during the general installation process (you don't have
-                                to install them manually before the installation)?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="0"/>
-                            </catDesc>
-                        </category>
-                    </category>
-                    <category xml:id="usability">
-                        <category xml:id="documentation">
-                            <catDesc>
-                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
-                            </catDesc>
-                            <catDesc>Is documentation and/or a manual available? (tool website,
-                                wiki, blog, documentation, or tutorial)</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="documentation_format">
-                            <catDesc>
-                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-                            </catDesc>
-                            <catDesc>Which format has the documentation?</catDesc>
-                            <category xml:id="documentation_format_readme">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_format_txt">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_format_html">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_format_pdf">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="documentation_section">
-                            <catDesc>
-                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-                            </catDesc>
-                            <catDesc>Which of the following sections does the documentation
-                                contain?</catDesc>
-                            <category xml:id="documentation_section_getting">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_step">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_example">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_troubleshooting">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_faq">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_support">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_section_api">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="documentation_language">
-                            <catDesc>
-                                <ref target="#K3.3">cf. Catalogue 3.3</ref>
-                            </catDesc>
-                            <catDesc>In what languages is the documentation available?</catDesc>
-                            <category xml:id="documentation_language_arabic">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_chinese">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_danish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_english">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_finnish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_french">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_german">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_greek">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_hebrew">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_hindi">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_italian">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_japanese">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_latin">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_norwegian">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_polish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_portuguese">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_russian">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_spanish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_swedish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="documentation_language_turkish">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="support">
-                            <catDesc>
-                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
-                            </catDesc>
-                            <catDesc>Is there a method to get active support from the developer(s)
-                                or from the community?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="support_form">
-                            <catDesc>
-                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
-                            </catDesc>
-                            <catDesc>Which form of support is offered?</catDesc>
-                            <category xml:id="support_form_help">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="support_form_forum">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="support_form_mailinglist">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="tracker">
-                            <catDesc>
-                                <ref target="#K3.4">cf. Catalogue 3.4</ref>
-                            </catDesc>
-                            <catDesc>Is it possible to post bugs or issue using issue tracker
-                                mechanisms?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="build">
-                            <catDesc>
-                                <ref target="#K3.6">cf. Catalogue 3.6</ref>
-                            </catDesc>
-                            <catDesc>Grade how straightforward it is to build or install the tool on
-                                a supported platform:</catDesc>
-                            <category xml:id="build_straightforward">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="build_normal">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="build_tricky">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="test">
-                            <catDesc>
-                                <ref target="#K3.7">cf. Catalogue 3.7</ref>
-                            </catDesc>
-                            <catDesc>Is there a test suite, covering the core functionality in order
-                                to check that the tool has been correctly built or
-                                installed?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="platform_deploy">
-                            <catDesc>
-                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
-                            </catDesc>
-                            <catDesc>On which platforms can the tool/software be deployed?</catDesc>
-                            <category xml:id="platform_deploy_linux">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="platform_deploy_mac">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="platform_deploy_android">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="platform_deploy_ios">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="platform_deploy_windows">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="devices_deploy">
-                            <catDesc>
-                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
-                            </catDesc>
-                            <catDesc>On which devices can the tool/software be deployed?</catDesc>
-                            <category xml:id="devices_deploy_desktop">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="devices_deploy_laptop">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="devices_deploy_smartphone">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="devices_deploy_tablet">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="devices_deploy_smartboard">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#unknown">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="browser_deploy">
-                            <catDesc>
-                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
-                            </catDesc>
-                            <catDesc>If the tool is web-based: On which browsers can the
-                                tool/software be deployed?</catDesc>
-                            <category xml:id="browser_deploy_mozilla">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="browser_deploy_chrome">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="browser_deploy_safari">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category corresp="#unknown">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#not_applicable">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="browser_plugin">
-                            <catDesc>
-                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
-                            </catDesc>
-                            <catDesc>If the tool is web-based: Does the tool rely on browser
-                                plugins?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="api">
-                            <catDesc>
-                                <ref target="#K3.8">cf. Catalogue 3.8</ref>
-                            </catDesc>
-                            <catDesc>Is there an API for the tool?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="code">
-                            <catDesc>
-                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
-                            </catDesc>
-                            <catDesc>Is the source code open?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="license">
-                            <catDesc>
-                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
-                            </catDesc>
-                            <catDesc>Under what license is the tool released?</catDesc>
-                            <category xml:id="license_gpl">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_lgpl">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_apache">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_mit">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_mozilla">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_cc0">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccby">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccbynd">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccbync">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccbysa">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccbyncnd">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="license_ccbyncsa">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category corresp="#other">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                                <category corresp="#free">
-                                    <desc/>
-                                </category>
-                            </category>
-                            <category xml:id="license_notexplicit">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="credit">
-                            <catDesc>
-                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
-                            </catDesc>
-                            <catDesc>Does the software make adequate acknowledgement and credit to
-                                the project contributors?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="registered">
-                            <catDesc>
-                                <ref target="#K3.9">cf. Catalogue 3.9</ref>
-                            </catDesc>
-                            <catDesc>Is the tool/software registered in a software
-                                repository?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="registered_contribute">
-                            <catDesc>If yes, can you contribute to the software development via the
-                                repository/development platform?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="analyzed">
-                            <catDesc>
-                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
-                            </catDesc>
-                            <catDesc>Can the code be analyzed easily (is it structured, commented,
-                                following standards)?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="extended">
-                            <catDesc>
-                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
-                            </catDesc>
-                            <catDesc>Can the code be extended easily (because there are contribution
-                                mechanisms, attribution for changes and backward
-                                compatibility)?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="reused">
-                            <catDesc>
-                                <ref target="#K3.10">cf. Catalogue 3.10</ref>
-                            </catDesc>
-                            <catDesc>Can the code be reused easily in other contexts (because there
-                                are appropriate interfaces and/or a modular architecture)?</catDesc>
-                            <catDesc>
-                                <num type="booleanX" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="security">
-                            <catDesc>
-                                <ref target="#K3.11">cf. Catalogue 3.11</ref>
-                            </catDesc>
-                            <catDesc>Does the software provide sufficient information about the
-                                treatment of the data entered by the users?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="maintenance">
-                            <catDesc>
-                                <ref target="#K3.12">cf. Catalogue 3.12</ref>
-                            </catDesc>
-                            <catDesc>Is there information available whether the tool will be
-                                supported currently and in the future?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="citability">
-                            <catDesc>
-                                <ref target="#K3.13">cf. Catalogue 3.13</ref>
-                            </catDesc>
-                            <catDesc>Does the tool supply citation guidelines (e.g. using the
-                                Citation File Format)? </catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                    </category>
-                    <category xml:id="interaction">
-                        <category xml:id="user">
-                            <catDesc>
-                                <ref target="#K4.1">cf. Catalogue 4.1</ref>
-                            </catDesc>
-                            <catDesc>What kind of users are expected?</catDesc>
-                            <category xml:id="user_researcher">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_scientist">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_humanist">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_public">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="user_interaction">
-                            <catDesc>
-                                <ref target="#K4.1">cf. Catalogue 4.1</ref>
-                            </catDesc>
-                            <catDesc>What kind of user interactions are expected?</catDesc>
-                            <category xml:id="user_interaction_reading">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_text">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_analysis">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_image">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_searching">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_visualization">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_comparing">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interaction_compiling">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="user_interface">
-                            <catDesc>
-                                <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
-                            </catDesc>
-                            <catDesc>What kind of interface does the tool provide? </catDesc>
-                            <category xml:id="user_interface_gui">
-                                <catDesc>
-                                    <num type="boolean" value="1"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interface_cli">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                            <category xml:id="user_interface_api">
-                                <catDesc>
-                                    <num type="boolean" value="0"/>
-                                </catDesc>
-                            </category>
-                        </category>
-                        <category xml:id="visualization">
-                            <catDesc>
-                                <ref target="#K3.13">cf. Catalogue 4.3</ref>
-                            </catDesc>
-                            <catDesc>Does the tool provide a particular visualizations (in terms of
-                                analysis) of the input and/or the output data?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="empowerment">
-                            <catDesc>
-                                <ref target="#K3.13">cf. Catalogue 4.4</ref>
-                            </catDesc>
-                            <catDesc>Is the user allowed to customize the functioning of the tool
-                                and the output configuration?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="1"/>
-                            </catDesc>
-                        </category>
-                        <category xml:id="accessibility">
-                            <catDesc>
-                                <ref target="#K4.5">cf. Catalogue 4.5</ref>
-                            </catDesc>
-                            <catDesc>Does the tool provide particular features for improving
-                                accessibility, allowing „people with the widest range of
-                                characteristics and capabilities" to use it?</catDesc>
-                            <catDesc>
-                                <num type="boolean" value="0"/>
-                            </catDesc>
-                        </category>
-                    </category>
-                </taxonomy>
-            </classDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en"/>
-            </langUsage>
-            <textClass>
-                <keywords xml:lang="en">
-                    <term>digital edition</term>
-                    <term>environment</term>
-                    <term>exist-db</term>
-                    <term>markup</term>
-                    <term>open-source</term>
-                    <term>oxygen xml editor</term>
-                    <term>plugin</term>
-                    <term>toolbox</term>
-                    <term>transcription</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-    </teiHeader>
-    <text>
-        <front>
-            <div type="abstract">
-                <p>
-                    <emph>ediarum.DB</emph>, <emph>ediarum.BASE.edit</emph> and
+            <biblScope unit="issue" n="11">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-11</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>ediarum</title>
+                  <editor>Stefan Dumont, Martin Fechner, Sascha Grabsch</editor>
+                  <date type="publication">2018</date>
+                  <idno type="URI">http://www.bbaw.de/telota/software/ediarum</idno>
+                  <date type="accessed">2019-10-15</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/">Criteria for Reviewing Digital Text Collections</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy 
+                      xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>digital edition</term>
+               <term>environment</term>
+               <term>exist-db</term>
+               <term>markup</term>
+               <term>open-source</term>
+               <term>oxygen xml editor</term>
+               <term>plugin</term>
+               <term>toolbox</term>
+               <term>transcription</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>ediarum.DB</emph>, <emph>ediarum.BASE.edit</emph> and
                         <emph>ediarum.REGISTER.edit</emph> are the three currently released modules
                     of the ediarum editing environment developed by the TELOTA initiative at the
                     BBAW in Berlin. The set of two frameworks for the <emph>Oxygen XML Editor</emph>
@@ -1202,29 +1571,28 @@
                     of this moment, and some need for improved documentation, the ediarum modules
                     already offer a flexible and open way for researchers to edit their TEI data and
                     a resource for other developers to build upon in their projects.</p>
-            </div>
-        </front>
-        <body>
-            <div xml:id="div1">
-                <head>Introduction</head>
-                <p xml:id="p1">This review examines three tools: <emph>ediarum.DB</emph>,
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">This review examines three tools: <emph>ediarum.DB</emph>,
                         <emph>ediarum.BASE.edit</emph> and <emph>ediarum.REGISTER.edit</emph>, which
                     are part of the continuously developed "work and publication environment for
-                    scholarly editing" <emph>ediarum</emph><note xml:id="ftn1">
-                        <ref
-                            target="https://web.archive.org/web/20190531085527/http://www.bbaw.de/telota/software/ediarum"
-                            >https://web.archive.org/web/20190531085527/http://www.bbaw.de/telota/software/ediarum</ref>.</note>
+                    scholarly editing" <emph>ediarum</emph>
+               <note xml:id="ftn1">
+                  <ref target="https://web.archive.org/web/20190531085527/http://www.bbaw.de/telota/software/ediarum">https://web.archive.org/web/20190531085527/http://www.bbaw.de/telota/software/ediarum</ref>.</note>
                     developed by the Berlin-Brandenburg Academy of Sciences and Humanities
                     (Berlin-Brandenburgische Akademie der Wissenschaften, BBAW). The first release
                     from the ediarum software environment was <emph>ediarum.JAR</emph> in December
                     2013, a module which is now integrated into the three modules reviewed. The
                     modules discussed here were released throughout 2018. For this review I am using
-                        <emph>ediarum.DB 3.2.5</emph><note xml:id="ftn2">
-                        <ref target="https://doi.org/10.5281/zenodo.2594779"
-                            >https://doi.org/10.5281/zenodo.2594779</ref>.</note>,
-                        <emph>ediarum.BASE.edit 1.1.1</emph><note xml:id="ftn3">
-                        <ref target="https://doi.org/10.5281/zenodo.2598148"
-                            >https://doi.org/10.5281/zenodo.2598148</ref>.</note>, and
+                        <emph>ediarum.DB 3.2.5</emph>
+               <note xml:id="ftn2">
+                  <ref target="https://doi.org/10.5281/zenodo.2594779">https://doi.org/10.5281/zenodo.2594779</ref>.</note>,
+                        <emph>ediarum.BASE.edit 1.1.1</emph>
+               <note xml:id="ftn3">
+                  <ref target="https://doi.org/10.5281/zenodo.2598148">https://doi.org/10.5281/zenodo.2598148</ref>.</note>, and
                         <emph>ediarum.REGISTER.edit 1.0.1</emph>. Integrated into those modules is
                         <emph>ediarum.JAR 3.1.0</emph>. As indicated by the leading version number,
                     they can be considered as ‘ready for production’, although, as is the nature of
@@ -1237,15 +1605,14 @@
                     referring to as <emph>ediarum</emph> in this article. For the purpose of this
                     review, I used a MacOS 10 System with Java Runtime Environment 8, <emph>Oxygen
                         XML Editor</emph> version 21 and <emph>eXist-db</emph> version 4.4.</p>
-                <p xml:id="p2">
-                    <emph>Ediarum</emph>, at its core, is a set of extensions for two other
-                    applications, namely the <emph>Oxygen XML Editor</emph><note xml:id="ftn4">
-                        <ref
-                            target="http://web.archive.org/web/20190606184223/https://www.oxygenxml.com/"
-                            >http://web.archive.org/web/20190606184223/https://www.oxygenxml.com/</ref>.</note>
-                    and <emph>eXist-db</emph><note xml:id="ftn5">
-                        <ref target="http://exist-db.org/exist/apps/homepage/news.xql"
-                            >http://exist-db.org/exist/apps/homepage/news.xql (last accessed: May
+            <p xml:id="p2">
+               <emph>Ediarum</emph>, at its core, is a set of extensions for two other
+                    applications, namely the <emph>Oxygen XML Editor</emph>
+               <note xml:id="ftn4">
+                  <ref target="http://web.archive.org/web/20190606184223/https://www.oxygenxml.com/">http://web.archive.org/web/20190606184223/https://www.oxygenxml.com/</ref>.</note>
+                    and <emph>eXist-db</emph>
+               <note xml:id="ftn5">
+                  <ref target="http://exist-db.org/exist/apps/homepage/news.xql">http://exist-db.org/exist/apps/homepage/news.xql (last accessed: May
                             30, 2019)</ref>.</note>. These two applications are widely used by
                     projects in the context of digital scholarly editions and <emph>ediarum</emph>
                     aims to provide an environment optimized for working with transcriptions and the
@@ -1266,8 +1633,7 @@
                     sharing of this data via a REST API or via WebDAV. It should be noted that
                         <emph>ediarum</emph> is not intended and marketed as a plug-and-play
                     solution for any particular usecase, but rather a toolbox<note xml:id="ftn6">
-                        <ref target="https://doi.org/10.5281/zenodo.2621061"
-                            >https://doi.org/10.5281/zenodo.2621061 (last accessed: May 30,
+                  <ref target="https://doi.org/10.5281/zenodo.2621061">https://doi.org/10.5281/zenodo.2621061 (last accessed: May 30,
                             2019)</ref>.</note> that can be adapted for the specific uses of any one
                         project.<note xml:id="ftn7">My academic background is in Scholarly Editing
                         and Documentology but I have been working as a developer on various DH and
@@ -1276,19 +1642,19 @@
                         documents as a humanities scholar and of someone who is building an
                         environment for other researchers to perform these tasks. In my development
                         work, I have been using parts of ediarum for some years.</note>
-                </p>
-                <p xml:id="p3">It is being developed by the TELOTA (The Electronic Life Of The
+            </p>
+            <p xml:id="p3">It is being developed by the TELOTA (The Electronic Life Of The
                     Academy) initiative at the BBAW in Berlin by lead developers Stefan Dumont,
                     Martin Fechner, and Sascha Grabsch. After being used for projects at the BBAW
                     internally for many years, modules are released successively to the public via a
                     GitHub repository<note xml:id="ftn8">
-                        <ref target="https://github.com/ediarum">https://github.com/ediarum (last
+                  <ref target="https://github.com/ediarum">https://github.com/ediarum (last
                             accessed: May 30, 2019)</ref>.</note>, which includes all relevant
                     contact information, licenses, and acknowledgments.</p>
-            </div>
-            <div xml:id="div2">
-                <head>Methodology and Implementation</head>
-                <p xml:id="p4">At a high level of methodological abstraction, one can ask in what
+         </div>
+         <div xml:id="div2">
+            <head>Methodology and Implementation</head>
+            <p xml:id="p4">At a high level of methodological abstraction, one can ask in what
                     part of the scientific, in this instance, the editorial process a tool attempts
                     to support the researcher. In the case of <emph>ediarum</emph>, it is the idea
                     of generating knowledge by explicating information present in source documents.
@@ -1310,28 +1676,21 @@
                     perform the above-mentioned task of explicating and adding information to
                     documents without having to familiarize themselves with the technicalities of
                     XML and TEI.</p>
-                <p xml:id="p5">Comparing <emph>ediarum</emph> in relation to other tools that tackle
+            <p xml:id="p5">Comparing <emph>ediarum</emph> in relation to other tools that tackle
                     this problem, it becomes evident that its solution is a unique one. While there
                     are many text annotation tools, the majority focuses on linguistic annotation
                     for Natural Language Processing (NLP) and Machine Learning. Others like
                     Annotation Studio<note xml:id="ftn9">
-                        <ref
-                            target="https://web.archive.org/web/20190612163247/https://www.annotationstudio.org/"
-                            >https://web.archive.org/web/20190612163247/https://www.annotationstudio.org/</ref>.</note>
+                  <ref target="https://web.archive.org/web/20190612163247/https://www.annotationstudio.org/">https://web.archive.org/web/20190612163247/https://www.annotationstudio.org/</ref>.</note>
                     offers only very simplistic text annotation for literary/archival texts in a web
                     interface. The Classical Text Editor<note xml:id="ftn10">
-                        <ref
-                            target="https://web.archive.org/web/20190612191653/http://cte.oeaw.ac.at/"
-                            >https://web.archive.org/web/20190612191653/http://cte.oeaw.ac.at/
+                  <ref target="https://web.archive.org/web/20190612191653/http://cte.oeaw.ac.at/">https://web.archive.org/web/20190612191653/http://cte.oeaw.ac.at/
                             s</ref>.</note> offers a vast array of possibilities for editors in a
                     related field, but is a closed commercial application with the option to export
                     TEI/XML. A tool that, on the surface, has some similarities is <emph>FuD</emph>,
-                    the research environment developed by the University of Trier.<note
-                        xml:id="ftn11">
-                        <ref
-                            target="https://web.archive.org/web/20190613055623/https://fud.uni-trier.de/"
-                            >https://web.archive.org/web/20190613055623/https://fud.uni-trier.de/</ref>.</note>
-                    <emph>FuD</emph> is a stand-alone piece of software which intentions far exceed
+                    the research environment developed by the University of Trier.<note xml:id="ftn11">
+                  <ref target="https://web.archive.org/web/20190613055623/https://fud.uni-trier.de/">https://web.archive.org/web/20190613055623/https://fud.uni-trier.de/</ref>.</note>
+               <emph>FuD</emph> is a stand-alone piece of software which intentions far exceed
                     those of <emph>ediarum</emph> but it also includes a central repository for data
                     and indexes, metadata input on file creation and text markup and annotation. As
                     opposed to <emph>ediarum</emph>, <emph>FuD</emph>, developed by a large team
@@ -1348,7 +1707,7 @@
                     researchers, that do not have a background or an affinity to XML code. It offers
                     a cleaner way to working with the texts while at the same keeping the entire
                     depth of complexity of XML Data at close reach. </p>
-                <p xml:id="p6">Looking at the work of developers in DH projects, instead of editors
+            <p xml:id="p6">Looking at the work of developers in DH projects, instead of editors
                     and researchers, one can see another process that <emph>ediarum</emph>
                     potentially can have an impact on. Staying within the ‘toolbox’ metaphor,
                         <emph>ediarum</emph> not only can be seen as a toolbox for editors but also
@@ -1361,7 +1720,7 @@
                     encouraged. Therefore the paradigm at play here is not that of software as a
                     fully packaged service or solution shipped to consumers, but as tools and
                     smaller applications to be integrated into individual workflows.</p>
-                <p xml:id="p7">As mentioned before, the tools are extensions of the pre-existing
+            <p xml:id="p7">As mentioned before, the tools are extensions of the pre-existing
                     software and thus obviously have a dependency on both. While
                         <emph>eXist-db</emph> is fully open source, <emph>Oxygen XML Editor</emph>
                     is a closed source commercial application. It seems at first problematic to make
@@ -1381,20 +1740,18 @@
                     ‘written by hand’ and thus all the possibilities of conversion, character
                     encoding, export and import functions into other workflows are those of
                         <emph>Oxygen</emph> and <emph>eXist-db</emph> respectively. </p>
-                <p xml:id="p8">In addition to that, the <emph>ediarum.DB</emph> application for
+            <p xml:id="p8">In addition to that, the <emph>ediarum.DB</emph> application for
                         <emph>eXist-db</emph> offers the possibility of interfacing with the indexes
                     by means of a REST API, so any other web application can make use of the indexes
                     created with <emph>ediarum</emph> as they are being created. Another possibility
                     of interoperability is the interface that exists with <emph>Zotero </emph>
-                    bibliographies which can be synchronized with the indexes (<ref type="crossref"
-                        target="#img1">Fig. 1</ref>).</p>
-                <p xml:id="p9">
-                    <figure xml:id="img1">
-                        <graphic
-                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-1.png"/>
-                        <head type="legend">The three ediarum modules in relation to their base
+                    bibliographies which can be synchronized with the indexes (<ref type="crossref" target="#img1">Fig. 1</ref>).</p>
+            <p xml:id="p9">
+               <figure xml:id="img1">
+                  <graphic url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-1.png"/>
+                  <head type="legend">The three ediarum modules in relation to their base
                             software and to each other.</head>
-                    </figure> In terms of versioning, logging, and performance, <emph>ediarum</emph>
+               </figure> In terms of versioning, logging, and performance, <emph>ediarum</emph>
                     also depends on the features of <emph>Oxygen</emph> and <emph>eXist-db</emph>.
                     The Author mode frameworks do not seem to impact the performance of the
                         <emph>Oxygen XML Editor</emph> at all compared to the text editor and
@@ -1403,21 +1760,16 @@
                     very large indexes. In a test with 25.000 person names and ids, there was a
                     short delay of about two seconds noticeable before the list was displayed and
                     one could interact with it.</p>
-                <p xml:id="p10">Due to its history as an internal tool of the BBAW,
+            <p xml:id="p10">Due to its history as an internal tool of the BBAW,
                         <emph>ediarum</emph> has been employed in many of their academy projects
                     such as: ‘Schleiermacher in Berlin 1808-1834. Briefwechsel, Tageskalender,
                         Vorlesungen’<note xml:id="ftn12">
-                        <ref target="https://schleiermacher-digital.de/index.xql"
-                            >https://schleiermacher-digital.de/index.xql (last accessed: June 10,
+                  <ref target="https://schleiermacher-digital.de/index.xql">https://schleiermacher-digital.de/index.xql (last accessed: June 10,
                             2019)</ref>.</note>, ‘Alexander von Humboldt auf Reisen. Wissenschaft
                     aus der Bewegung’<note xml:id="ftn13">
-                        <ref
-                            target="https://web.archive.org/web/20190612201610/https://edition-humboldt.de/"
-                            >https://web.archive.org/web/20190612201610/https://edition-humboldt.de/</ref>.</note>
+                  <ref target="https://web.archive.org/web/20190612201610/https://edition-humboldt.de/">https://web.archive.org/web/20190612201610/https://edition-humboldt.de/</ref>.</note>
                     and the ‘Marx-Engels-Gesamtausgabe’<note xml:id="ftn14">
-                        <ref
-                            target="https://web.archive.org/web/20190612201339/http://megadigital.bbaw.de/index.xql"
-                            >https://web.archive.org/web/20190612201339/http://megadigital.
+                  <ref target="https://web.archive.org/web/20190612201339/http://megadigital.bbaw.de/index.xql">https://web.archive.org/web/20190612201339/http://megadigital.
                             bbaw.de/index.xql</ref>.</note> to name a few. In those cases, other
                     modules e.g. for web publication have also been used that have, as of yet, not
                     been released to the public. Beyond those internal projects, it is unclear if
@@ -1426,10 +1778,10 @@
                     likely see further application. I have personally used some of the functions of
                     the <emph>ediarum.JAR</emph> modules in my development of a custom framework
                     even before the three more fully developed modules were released. </p>
-            </div>
-            <div xml:id="div3">
-                <head>An example usecase </head>
-                <p xml:id="p11">Let us assume the following usecase. A project that already includes
+         </div>
+         <div xml:id="div3">
+            <head>An example usecase </head>
+            <p xml:id="p11">Let us assume the following usecase. A project that already includes
                     some letters and indexes of places or persons. The editor now wants to add a new
                     transcription to the project. They will use the Data Source Explorer within
                         <emph>Oxygen</emph> to create a new file by selecting the ‘letter’ template
@@ -1437,14 +1789,12 @@
                     template for introductory texts, and manuscripts). Before the file is created,
                     the editor can enter the name of the archive and collection and the signature of
                     the letter. This will then create an XML file with the basic elements like the
-                    teiHeader and body elements like ‘opener’, ‘salute’ etc. already in place (<ref
-                        type="crossref" target="#img2">Fig. 2</ref>).</p>
-                <p xml:id="p12">
-                    <figure xml:id="img2">
-                        <graphic
-                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-2.png"/>
-                        <head type="legend">The empty template of a letter.</head>
-                    </figure> Further metadata can be added through the menus ‘Metadaten’ and
+                    teiHeader and body elements like ‘opener’, ‘salute’ etc. already in place (<ref type="crossref" target="#img2">Fig. 2</ref>).</p>
+            <p xml:id="p12">
+               <figure xml:id="img2">
+                  <graphic url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-2.png"/>
+                  <head type="legend">The empty template of a letter.</head>
+               </figure> Further metadata can be added through the menus ‘Metadaten’ and
                     ‘Briefmetadaten’ in the toolbar directly above the editor window. These
                     correspond to the ‘fileDesc’ and ‘profileDesc’ information of the teiHeader. For
                     simple metadata fields, these functions will prompt pop-up windows prompting the
@@ -1454,28 +1804,27 @@
                     index in the <emph>ediarum.DB</emph>. application which will be displayed as a
                     list of names. Selecting one, will insert both the name and the corresponding
                     xml:id into the document. </p>
-                <p xml:id="p13">The text of the letter can be inserted into the pre-existing
+            <p xml:id="p13">The text of the letter can be inserted into the pre-existing
                     structural elements. Once the raw text has been copied into the file, the
                     mark-up functions can be used. These include different types of deletions and
                     additions, types of emphasis and comments. The indexes can also be used here to
                     markup entities in the text, by selecting them in the editor and then selecting
                     the corresponding entry from the index (<ref type="crossref" target="#img3">Fig.
                         3</ref>).</p>
-                <p xml:id="p14">
-                    <figure xml:id="img3">
-                        <graphic
-                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-3.png"/>
-                        <head type="legend">Different kinds of markup can be seen in the letter with
+            <p xml:id="p14">
+               <figure xml:id="img3">
+                  <graphic url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-3.png"/>
+                  <head type="legend">Different kinds of markup can be seen in the letter with
                             the selection window for the person index open.</head>
-                    </figure> These indexes can also be edited from within Oxygen through the
+               </figure> These indexes can also be edited from within Oxygen through the
                         <emph>ediarum.REGISTER.edit</emph> framework which operates analogously to
                     this example. In this way, a new person can be added to the index of persons and
                     immediately be referenced in a letter without having to leave the graphical
                     interface or application.</p>
-            </div>
-            <div xml:id="div4">
-                <head>Deployment and learning curve</head>
-                <p xml:id="p15">The modules are available on individual public GitHub repositories.
+         </div>
+         <div xml:id="div4">
+            <head>Deployment and learning curve</head>
+            <p xml:id="p15">The modules are available on individual public GitHub repositories.
                     The <emph>ediarum.DB</emph> repository includes a documentation that explains
                     the installation process, the integration into <emph>eXist-db</emph> as well as
                     the GUI and how to implement advanced functionality. Assuming prior experience
@@ -1487,16 +1836,14 @@
                     specifics of how the frameworks have to be integrated into the local
                         <emph>Oxygen</emph> installation, how to connect and interface with the
                     database are not documented.<note xml:id="ftn15">A module called ediarum.GUIDE
-                        has been announced that will hopefully fill this gap. <ref
-                            target="https://doi.org/10.5281/zenodo.2621061"
-                            >https://doi.org/10.5281/zenodo.2621061</ref>.</note> A developer
+                        has been announced that will hopefully fill this gap. <ref target="https://doi.org/10.5281/zenodo.2621061">https://doi.org/10.5281/zenodo.2621061</ref>.</note> A developer
                     attempting to set-up or customize <emph>ediarum.BASE.edit</emph> and
                         <emph>REGISTER.edit</emph> will need to have solid knowledge of the
                         <emph>Oxygen Author mode</emph> and CSS to be able to adapt the frameworks
                     for a specific usecase. By means of GitHub technical support can easily be found
                     by using the issue system. The developers seem to respond quickly on these
                     channels and also offer an additional mailing list.</p>
-                <p xml:id="p16">Looking at the learning curve of the tools, let’s consider first the
+            <p xml:id="p16">Looking at the learning curve of the tools, let’s consider first the
                     developer, who wants to install and/or customize <emph>ediarum</emph> for their
                     project. The initial set-up of the database portion is straight forward thanks
                     to the documentation. The <emph>eXist-db</emph> module in the form of a ‘.xar’
@@ -1513,14 +1860,14 @@
                     testing and customization, and combined with a study of the source code will
                     give developer insight into how they can add and modify the framework for their
                     purposes.</p>
-                <p xml:id="p17">From the point of view of the ‘end user’, the non-DH researcher and
+            <p xml:id="p17">From the point of view of the ‘end user’, the non-DH researcher and
                     editor, navigation and use of the framework, once it is installed, is largely
                     self-explanatory and intuitive. All specific additional functionality is
                     available through the <emph>Oxygen</emph> GUI, primarily a custom toolbar
                     through which the various functions are available. Even a user with no
                     experience in using <emph>Oxygen</emph> will quickly find themselves at home, as
                     similar toolbars and icons are found in any office suite. </p>
-                <p xml:id="p18">Due to the nature of both <emph>Oxygen </emph> and
+            <p xml:id="p18">Due to the nature of both <emph>Oxygen </emph> and
                         <emph>eXist-db</emph> as JAVA-based and cross-platform applications, the
                     user experience is identical across Windows, MacOS and Linux. Any system
                     supported by the <emph>Oxygen XML Editor</emph> will be able to run
@@ -1532,33 +1879,28 @@
                         <emph>eXist-db</emph> through which the indexes can be accessed. There is
                     also a specific API connection to Zotero provided which will keep indexes in
                     synchronization with Zotero bibliographies.</p>
-            </div>
-            <div xml:id="div5">
-                <head>Open Source and extensibility</head>
-                <p xml:id="p19">The source code is openly available on GitHub<note xml:id="ftn16">
-                        <ref target="https://github.com/ediarum">https://github.com/ediarum (last
+         </div>
+         <div xml:id="div5">
+            <head>Open Source and extensibility</head>
+            <p xml:id="p19">The source code is openly available on GitHub<note xml:id="ftn16">
+                  <ref target="https://github.com/ediarum">https://github.com/ediarum (last
                             accessed: May 30, 2019)</ref>.</note> and is distributed under and the
                     terms of the GNU General Public License 3<note xml:id="ftn17">
-                        <ref target="https://www.gnu.org/licenses/licenses.en.html"
-                            >https://www.gnu.org/licenses/licenses.en.html</ref>.</note> (or &gt;
+                  <ref target="https://www.gnu.org/licenses/licenses.en.html">https://www.gnu.org/licenses/licenses.en.html</ref>.</note> (or &gt;
                     later) although it makes use of some third-party software that is separately
                     licensed under different terms, such as Bootstrap (MIT License) or the ‘tei.jar’
                     module and licenses under the 3-clause BSD licenses.<note xml:id="ftn18">
-                        <ref target="https://opensource.org/licenses/BSD-3-Clause"
-                            >https://opensource.org/licenses/BSD-3-Clause</ref>.</note> This is
+                  <ref target="https://opensource.org/licenses/BSD-3-Clause">https://opensource.org/licenses/BSD-3-Clause</ref>.</note> This is
                     clearly and properly stated in the readme files /&gt; as well as license files
                     included in the repository. In addition to GitHub,
                         <emph>ediarum.BASE.edit</emph> and <emph>ediarum.DB</emph> are also
                     available on the research repository Zenodo using their system of software
                         citation.<note xml:id="ftn19">
-                        <ref target="https://doi.org/10.5281/zenodo.2598148"
-                            >https://doi.org/10.5281/zenodo.2598148</ref> and <ref
-                            target="https://doi.org/10.5281/zenodo.2594779"
-                            >https://doi.org/10.5281/zenodo.2594779</ref>.</note> This ensures &gt;
+                  <ref target="https://doi.org/10.5281/zenodo.2598148">https://doi.org/10.5281/zenodo.2598148</ref> and <ref target="https://doi.org/10.5281/zenodo.2594779">https://doi.org/10.5281/zenodo.2594779</ref>.</note> This ensures &gt;
                     that specific versions of the tools have unique DOI and thus can be referred to
                     and cited precisely and equivalently to written research contributions.</p>
-                <p xml:id="p20">
-                    <emph>Ediarum</emph> is explicitly intended to be extensible and reusable. Even
+            <p xml:id="p20">
+               <emph>Ediarum</emph> is explicitly intended to be extensible and reusable. Even
                     through the use of the <emph>eXist-db</emph> GUI, as well as the
                         <emph>Oxygen</emph> Author mode menus, significant customization can be
                     achieved (e.g. setting up new indexes of entities and allowing reference to
@@ -1573,7 +1915,7 @@
                         <emph>Oxygen</emph> Author mode actions with function related to inserting
                     data from indexes. These actions can be used in any framework build for the
                     Author mode. </p>
-                <p xml:id="p21">As the code is complex, it will still require some studying and
+            <p xml:id="p21">As the code is complex, it will still require some studying and
                     analysis but a developer fluent in the relevant languages (X-technologies, CSS,
                     potentially also JAVA) will know where to inject custom functionalities and how
                     to integrate it with existing functions. Again, it has to be noted that the
@@ -1582,10 +1924,10 @@
                     presentations (Dumont and Fechner 2019), the three modules that have so far been
                     the focus of this review will be accompanied in the future by further modules
                     that will provide functionality related to publication in web and print. </p>
-            </div>
-            <div xml:id="div6">
-                <head>User interaction &amp; GUI</head>
-                <p xml:id="p22">Both Author mode frameworks employ the GUI of the <emph>Oxygen XML
+         </div>
+         <div xml:id="div6">
+            <head>User interaction &amp; GUI</head>
+            <p xml:id="p22">Both Author mode frameworks employ the GUI of the <emph>Oxygen XML
                         Editor</emph>, specifically, they provide their functionality by using menus
                     and toolbars. The main toolbar (see <ref type="crossref" target="#img4">Fig.
                         4</ref>) contains both icons and text, most of which intuitively represent
@@ -1594,28 +1936,26 @@
                     in the text will allow the user to specify if the deletion was by eraser, by
                     strikethrough or by overwriting). These will then create the corresponding TEI
                     Element and/or attributes.</p>
-                <p xml:id="p23">
-                    <figure xml:id="img4">
-                        <graphic
-                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-4.png"/>
-                        <head type="legend">The two toolbars of the <emph>ediarum.BASE.edit</emph>
+            <p xml:id="p23">
+               <figure xml:id="img4">
+                  <graphic url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-4.png"/>
+                  <head type="legend">The two toolbars of the <emph>ediarum.BASE.edit</emph>
                             module integrate into the regular <emph>Oxygen</emph> toolbars. The
                             functions are also accessible through the ‘ediarum’ menu in the top menu
                             bar.</head>
-                    </figure> In the current version, all text elements of the GUI are exclusively
+               </figure> In the current version, all text elements of the GUI are exclusively
                     German. Due to the origin of <emph>ediarum</emph> as an internal tool at the
                     BBAW that is only now successively being made public, this is understandable.
                     Nevertheless, this limits the possible use and reach of these tools, as within
                     the <emph>Oxygen</emph> Framework only a part of the functionalities is
                     visualized by icons. Many deeper markup and editing functions are only described
                     in German text.</p>
-                <p xml:id="p24">
-                    <figure xml:id="img5">
-                        <graphic
-                            url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-5.png"/>
-                        <head type="legend">The purely text-based administrative ‘dashboard’ of
+            <p xml:id="p24">
+               <figure xml:id="img5">
+                  <graphic url="https://ride.i-d-e.de/wp-content/uploads/issue_11/ediarum/pictures/picture-5.png"/>
+                  <head type="legend">The purely text-based administrative ‘dashboard’ of
                                 <emph>ediarum.DB</emph>.</head>
-                    </figure> The module <emph>ediarum.DB</emph> uses a custom GUI based on a simple
+               </figure> The module <emph>ediarum.DB</emph> uses a custom GUI based on a simple
                     and clear bootstrap framework. This GUI is exclusively text-based and allows
                     easy and structured access to the administrative functions of the database
                     module (<ref type="crossref" target="#img5">Fig. 5</ref>). This text, also, is
@@ -1623,10 +1963,10 @@
                         <emph>ediarum</emph> to dedicate a certain effort to translate those
                     text-elements of the GUI both in the <emph>eXist-db</emph> and
                         <emph>Oxygen</emph> portions of the tools. </p>
-            </div>
-            <div xml:id="div7">
-                <head>Conclusion</head>
-                <p xml:id="p25">Recalling the stated intention of <emph>ediarum</emph> to be a
+         </div>
+         <div xml:id="div7">
+            <head>Conclusion</head>
+            <p xml:id="p25">Recalling the stated intention of <emph>ediarum</emph> to be a
                     ‘toolbox’ for scholarly editors and their project teams, one must acknowledge
                     that, despite its only partial release, these tools still manage to go very far
                     in providing just that. Projects dealing with the transcription of corpora of
@@ -1645,7 +1985,7 @@
                     can exploit some functionality from <emph>ediarum</emph>, as the core functions
                     offered by the core <emph>ediarum.JAR</emph> module will work for any XML data
                     standard.</p>
-                <p xml:id="p26">While forms for data input and even basic transcription/markup tools
+            <p xml:id="p26">While forms for data input and even basic transcription/markup tools
                     are nothing new, the key advantage and contribution is the fact that this
                     interface is integrated as a layer on top of <emph>Oxygen XML Editor</emph>,
                     which is, of course, an extremely powerful tool. This allows for and encourages
@@ -1658,7 +1998,7 @@
                     that seems tailor-made for digital humanities projects as they often include
                     researchers that possess varying degrees of technical knowledge and have varying
                     need for complexity all working on the same dataset. </p>
-                <p xml:id="p27">What is holding back <emph>ediarum</emph> in its current state, is
+            <p xml:id="p27">What is holding back <emph>ediarum</emph> in its current state, is
                     the lack of an English language interface for the default configuration and the
                     lack of documentation for the two main modules. Non-German language projects
                     either have to restrict themselves to using only the core JAVA functions
@@ -1671,32 +2011,25 @@
                     already been hinted at, like <emph>ediarum.GUIDE</emph>, or
                         <emph>ediarum.WEB</emph>. Such further development would make this ‘toolbox’
                     even more versatile and accessible.</p>
-            </div>
-        </body>
-        <back>
-            <div type="bibliography">
-                <listBibl>
-                    <bibl>Dumont, Stefan, and Martin Fechner. 2015. “Bridging the Gap: Greater
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl>Dumont, Stefan, and Martin Fechner. 2015. “Bridging the Gap: Greater
                         Usability for TEI encoding”, <emph>Journal of the Text Encoding Initiative
                             [Online], Issue 8</emph> | December 2014 - December 2015, Online since
-                        09 June 2015, connection on 31 May 2019. DOI: 10.4000/jtei.1242. URL: <ref
-                            target="http://journals.openedition.org/jtei/1242"
-                            >http://journals.openedition.org/jtei/1242</ref>. </bibl>
-                    <bibl>Dumont, Stefan, and Martin Fechner. 2019. “ediarum – Arbeits- und
+                        09 June 2015, connection on 31 May 2019. DOI: 10.4000/jtei.1242. URL: <ref target="http://journals.openedition.org/jtei/1242">http://journals.openedition.org/jtei/1242</ref>. </bibl>
+               <bibl>Dumont, Stefan, and Martin Fechner. 2019. “ediarum – Arbeits- und
                         Publikationsumgebung für digitale Editionsvorhaben” last modified April 2.
-                        Zenodo. <ref target="http://doi.org/10.5281/zenodo.2621062"
-                            >http://doi.org/10.5281/zenodo.2621062</ref>. </bibl>
-                    <bibl>Dumont, Stefan, Sascha Grabsch, and Martin Fechner. 2019, March 19.
+                        Zenodo. <ref target="http://doi.org/10.5281/zenodo.2621062">http://doi.org/10.5281/zenodo.2621062</ref>. </bibl>
+               <bibl>Dumont, Stefan, Sascha Grabsch, and Martin Fechner. 2019, March 19.
                             <emph>ediarum/ediarum.BASE.edit: ediarum.BASE.edit 1.1.1 (Version
-                            v1.1.1)</emph>. Zenodo. <ref
-                            target="http://doi.org/10.5281/zenodo.2598148"
-                            >http://doi.org/10.5281/zenodo.2598148</ref>. </bibl>
-                    <bibl>Fechner, Martin. 2019, March 15. <emph>ediarum/ediarum.DB: ediarum.DB
-                            3.2.5 (Version v3.2.5)</emph>. Zenodo. <ref
-                            target="http://doi.org/10.5281/zenodo.25947"
-                            >http://doi.org/10.5281/zenodo.25947</ref>. </bibl>
-                </listBibl>
-            </div>
-        </back>
-    </text>
+                            v1.1.1)</emph>. Zenodo. <ref target="http://doi.org/10.5281/zenodo.2598148">http://doi.org/10.5281/zenodo.2598148</ref>. </bibl>
+               <bibl>Fechner, Martin. 2019, March 15. <emph>ediarum/ediarum.DB: ediarum.DB
+                            3.2.5 (Version v3.2.5)</emph>. Zenodo. <ref target="http://doi.org/10.5281/zenodo.25947">http://doi.org/10.5281/zenodo.25947</ref>. </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
 </TEI>
