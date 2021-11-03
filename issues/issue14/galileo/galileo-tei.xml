@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.14.2">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Galileo Galilei’s Notes on Motion</title>
+            <author ref="https://orcid.org/0000-0002-0266-3452">
+               <name>
+                  <forename>Anna Sofia</forename>
+                  <surname>Lippolis</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bologna</orgName>
+                  <placeName>Bologna, Italy</placeName>
+               </affiliation>
+               <email>annasofia.lippolis@studio.unibo.it</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2021-11">November 2021</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-14/galileo</idno>
+            <idno type="DOI">10.18716/ride.a.14.2</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue14/galileo/galileo.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-7043-7820">Torsten Roeder</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike Neuber</editor>
+            <biblScope unit="issue" n="14">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-14</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Galileo Galilei’s Notes on Motion</title>
+                  <editor>Paolo Galluzzi, Jürgen Renn, Isabella Truci</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Galluzzi, Paolo</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Renn, Jürgen</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Truci, Isabella.</persName>
+                  </respStmt>
+                  <date type="publication">1998</date>
+                  <idno type="URI">http://www.imss.fi.it/ms72/INDEX.HTM</idno>
+                  <date type="accessed">2021-01-17</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for
+                            Reviewing Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue
+                                    1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically
+                                along the schema "responsible editors, publishing/hosting
+                                institution, year(s) of publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                                project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                                documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection<ref target="#K2.1">cf. Catalogue
+                                    2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                                sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                                documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                                documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been
+                                used and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                                project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite
+                                the project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not
+                                promise further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue
+                                    4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional
+                                support for the curation and sustainability of the
+                                project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                                digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter
+                                (the author(s), the work, its history, the theme, etc.) of the
+                                project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on
+                                unclear passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with
+                                contextual material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable
+                                quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos,
+                                errors, etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                                visualisations that offer alternative ways to access the
+                                material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3
+                                    and 2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the
+                                project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                                    2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited
+                                material? How can the edition be classified in general
+                                terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                                contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Language, calculation, list of propositions</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue
+                                    4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                                functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and
+                                    5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue
+                                    3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                                TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue
+                                    4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for
+                                the edition and/or parts/objects of it and which mechanism is used
+                                to that end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which
+                                allow the reuse of the data of the project in other
+                                contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf.
+                                    Catalogue 4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for
+                                each part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                                whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                                content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue
+                                    4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>No explicit license, but explicitly stated that 
+the work may not be used for publication or for commercial purposes 
+without explicit and written permission by the Biblioteca Nazionale 
+Centrale, Florence </gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>manuscript</term>
+               <term>galileo galilei</term>
+               <term>scholarly digital edition</term>
+               <term>early editions</term>
+               <term>early modern</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>Galileo Galilei’s Notes on Motion</emph> is a diplomatic digital
+                    edition most recently updated in 1999 that results from a joint collaboration
+                    between the Biblioteca Nazionale Centrale and the Istituto e Museo di Storia
+                    della Scienza, both in Florence, and the Max Planck Institute for the History of
+                    Science in Berlin. It provides the digital edition of Galilei’s Codex Ms. Gal.
+                    72, displaying folios 33 to 196, along with relevant propositions from <emph>Discorsi e dimostrazioni matematiche intorno a due nuove
+                        scienze</emph> (1638) related to the manuscript. The aim of this review is to
+                    evaluate the presentation and the contents of the edition, along with its
+                    effectiveness related to the academic purpose. In this essay, different
+                    assessment measures will be taken into account, all relating to the date in
+                    which the edition was published, along with the possible implementations that
+                    were not addressed at the time to provide a long-lasting scholarly work on the
+                    manuscript. As a result, the review considers the edition groundbreaking both
+                    for the functionalities and contents available at the time it was published, but
+                    the interface seems too outdated to be used in the modern digital world.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">The coincidence of the birth of modern science with Galileo Galilei’s
+                        discoveries and rigorous method of research has been noted by many scholars
+                        of the Twentieth Century (<ref type="crossref" target="#renn2020">Renn 2020, 86</ref>). As
+                        a matter of fact, the Italian scientist’s contributions ranged from
+                        astronomy to studies of motion that influenced, among others, Isaac Newton
+                        and Leonhard Euler. In this regard, the <emph>Discorsi e
+                            dimostrazioni matematiche intorno a due nuove scienze</emph> (<ref type="crossref" target="#galilei1950">Galilei [1638] 1950</ref>) is a groundbreaking
+                        work that witnesses a change of approach towards natural phenomena, from an
+                        antique and medieval conceptual background, grounded in Aristotelian natural
+                        philosophy and Archimedean mechanics, to new considerations based on the
+                        practical knowledge of the time and at the foundation of classical
+                        mechanics. </p>
+            <p xml:id="p2">According to Jürgen Renn, though, there is no such thing as a scientific
+                        revolution. Every new conceptual system arises out of preexisting ones,
+                        through a progressive accumulation of notions that deviate from traditional
+                        assumptions, so that “under appropriate circumstance, an originally marginal
+                        concept within a given system may eventually find itself at the center of a
+                        new conceptual system” (<ref type="crossref" target="#renn2020">2020, 28</ref>). As a
+                        natural consequence, new core principles of scientific theory can only be
+                        secured through a disruptive reorganization of knowledge. It comes as no
+                        surprise that in this operation Galileo saved the drafts of the <emph>Discorsi</emph>, Codex Ms. Gal. 72, as they were more
+                        representative of the conceptual shift than the published version, due to a
+                        detailed study supported by propositions, geometric drawings and
+                        calculations (<ref type="crossref" target="#renn1998">Renn 1998, 193</ref>). </p>
+            <p xml:id="p3">
+               <emph>Galileo Galilei’s Notes on Motion</emph> had the primary
+                        purpose of innovatively displaying and analyzing the over 300 pages long
+                        codex, physically kept in the archives of the Biblioteca Nazionale Centrale
+                        of Florence (hereafter BNF). As such, it is believed to be the first
+                        significant scholarly digital edition (hereafter SDE) of the history of
+                        science (<ref type="crossref" target="#abbott1998">Abbott 1998</ref>). The project is the
+               outcome of a joint team effort between different institutions – the BNF
+                        provided the digital images of the manuscript’s pages, while the Istituto e
+                        Museo di Storia della Scienza, based in Florence as well, along with the Max
+                        Planck Institute for the History of Science in Berlin, embedded the codex in
+                        an appropriate electronic environment, free and easy to use, in accordance
+                        with the scholarly work that had to be carried out.<note xml:id="ftn1">Cf. <ref target="https://web.archive.org/web/19990424094058/http://www.imss.fi.it/ms72/MAIN/STAFF.HTM">https://web.archive.org/web/19990424094058/http://www.imss.fi.it/ms72/MAIN/STAFF.HTM</ref>.</note>
+                        Unfortunately, contact information of the project representatives has not
+                        been made public. The homepage of the website also mentions the edition
+                        winning the Pirelli International Award in 1998, an annual prize assigned to
+                        the best works of genius on the Web.<note xml:id="ftn2">Cf. <ref target="https://web.archive.org/web/20010418185357/http://www.pirelliaward.com/">https://web.archive.org/web/20010418185357/http://www.pirelliaward.com/</ref>.</note>
+            </p>
+         </div>
+         <div xml:id="div2">
+            <head>The project and its goals</head>
+            <p xml:id="p4">
+               <emph>Galileo Galilei’s Notes on Motion</emph> can be considered a
+                        forerunner in the field of digital editions. Although it is 23 years old, it
+                        explicitly carries the fundamental message that traditional editorial
+                        techniques may not be sufficient to convey an exhaustive interpretation of a
+                        text. Because of both its fragmentary nature and the difficulty to access
+                        the original folder of manuscripts before it was digitized, Ms. Gal. 72 was
+                        academically neglected for centuries, as it was accessible exclusively at
+                        the BNF (<ref type="crossref" target="#renn1998">Renn 1998, 194</ref>).
+                        Furthermore, previous works on the codex such as the <emph>National Edition</emph> by Antonio Favaro (<ref type="crossref" target="#galilei1909">Galilei 1909</ref>) and the article published by Stillman Drake in <emph>Annali di Storia della Scienza</emph> (<ref type="crossref" target="#drake1980">Drake 1980</ref>) were reductive when compared to
+                        their academic scope, in that they deliberately omitted or corrected parts
+                        of the document (<ref type="crossref" target="#renn1998">Renn 1998, 193</ref>).
+                        Because these scholars did not have the possibility to see what an integral
+                        folio looked like and could not draw conclusions on the date of the
+                        manuscripts through physical elements like watermarks, ink or type of paper,
+                        their approach overlooked the chronological order of the pages. Such a
+                        problem should not be underestimated, as the actual placement of the notes
+                        points to the conceptual evolution of Galileo’s thinking process over
+                        time.</p>
+            <p xml:id="p5">The re-evaluation of the codex through an online edition shed light on its
+                        complexity of content, chaotic and extremely varied, and on the possible
+                        ways to address it properly on a brand-new platform. <emph>Galileo Galilei’s Notes on Motion</emph> was, in fact, a pilot project
+                        connected to the endeavor of BNF to make the entire Florentine Galileo
+                        collection digitally accessible. With that approach in mind, such diverse
+                        material clearly needed a thorough work on, so that it could be represented
+                        in its entirety as a new tool for further research.<note xml:id="ftn3">The feasibility study,
+                                initially the ‘Galileo Einstein Electronic Archives’ was funded by
+                                the US National Science Foundation (NSF). However, the project
+                                related to Einstein failed due to copyright issues and the NSF
+                                decided to interrupt all research on the matter, as the project was
+                                thought to be ‘unrealistic’. At that time, the institutions involved
+                                in the SDE did not even exist, but the scholars involved kept on
+                                working on the project and made it possible to publish it ten years
+                                later.</note> The concept of an “electronic representation”
+                        opens Ms. Gal. 72 to many interpretative perspectives, becoming so
+                        successful that it is still used as a metric for the very definition of
+                        digital edition as something that “cannot be given in print without
+                        significant loss of content and functionality” (<ref type="crossref" target="#sahle2016">Sahle 2016, 27</ref>). </p>
+            <p xml:id="p6">Another strength of the digital edition concerns hyperlinks, which make it
+                        easy to navigate through internal and external references of the manuscript.
+                        This feature gives to the user an enhanced insight into Galileo’s mindset,
+                        as opposed to the previous printed editions of the document. In fact, such a
+                        modularized structure offers a “fluid publication”, a process defined as the
+                        possibility to “connect various forms of representation with editorial
+                        knowledge and contextual material” (<ref type="crossref" target="#sahle2016">Sahle 2016, 29</ref>).</p>
+            <p xml:id="p7">Apart from interactivity, the main characteristics of <emph>Galileo Galilei’s Notes on Motion</emph> are ease of access and
+                        open-endedness. In fact, as Peter Damerow and Jürgen Renn write:<cit>
+                  <quote>[…] Since the manuscript is accessible through the Internet,
+                        no scholar is forced anymore to first apply for a travel grant to go to
+                        Florence in order to study it. The second element is, however, really new
+                        […]. Once the book is printed, there is no longer any possibility of
+                        improving the edition except by starting all over again and producing a new
+                            edition.
+                  </quote>
+                           <bibl><ref type="crossref" target="#damerowrenn">Damerow and Renn n.d.</ref></bibl>
+               </cit>
+            </p>
+            <p xml:id="p8">Indeed, <emph>Galileo Galilei’s Notes on Motion</emph> is a “tool
+               for the future” (<ref type="crossref" target="#damerowrenn">Damerow and Renn n.d.</ref>), as it would facilitate the
+                        creation of a new version of the edition. That being said, the most recent
+                        update dates back to 1999,<note xml:id="ftn4">Cf. <ref target="https://web.archive.org/web/19990128203948/http://www.imss.fi.it/ms72/INDEX.HTM">https://web.archive.org/web/19990128203948/http://www.imss.fi.it/ms72/INDEX.HTM</ref>.</note>
+                        so the SDE cannot be considered representative of this view. Another
+                        noteworthy aspect is that this project was meant to be a starting point for
+                        further research through an open call invitation on the website, in order to
+                        develop a joint collaboration among Galileo’s scholars. In fact, two of the
+                        founders claim: “The aim was not only to provide easy access to the codex,
+                        but also to support further research on it” (<ref type="crossref" target="#damerowrenn">Damerow and Renn n.d.</ref>).
+            </p>
+            <p xml:id="p9">As a result, the target audience is made of scholars who may deepen their
+                        interest in Galileo’s works, but also, and most importantly, of researchers
+                        needing a complete understanding of the codex – a consequence of making the
+                        document easily accessible and searchable. This democratic character has
+                        been fundamental for the definition of an SDE from the beginning: <cit>
+                  <quote>We all know that in the print world, few of us have been able to afford the full-scale <emph>scholarly</emph> edition of all the works we study. Even our libraries have trouble supplying a whole intellectual community with all the full-scale scholarly editions they should have purchased.</quote>
+                           <bibl><ref type="crossref" target="#shillingsburg1993">Shillingsburg 1993</ref></bibl>
+               </cit>
+            </p>
+         </div>
+         <div xml:id="div3">
+            <head>The importance of reviewing an ‘early SDE’ edition</head>
+            <p xml:id="p10">The transformations of the Web since the 1990s, which have turned it from an
+                        environment of passive use of content where production was reserved to
+                        professionals to a space of active involvement, have led to an
+                        infrastructure that allowed users to take advantage of the many
+                        computational possibilities of the machine. Digital Humanities have played a
+                        fundamental role in the acquisition and dissemination of the possibilities
+                        opened by this model, contributing to spread a new epistemological paradigm
+                        of culture production and use through new access systems and models of
+                        document representation and manipulation. </p>
+            <p xml:id="p11">While digital edition technology and terminology have changed over time
+                        according to new technical advances, for instance undergoing a shift of
+                        focus from the affirmation of hypertext in 1996-2005 to interoperability and
+                        the semantic web (<ref type="crossref" target="#mancinellipierazzo2020">Mancinelli and Pierazzo 2020</ref>), scholarly requirements have
+                        remained the same. This is clear when looking at the principles for the
+                        evaluation of Electronic Scholarly Editions provided in 1993 by the Modern
+                        Language Association (<ref type="crossref" target="#shillingsburg1993">Shillingsburg 1993</ref>), which
+                        apart from the technical requirements of usability, platform independency,
+                        security, design and expandability that have become common for SDEs, already
+                        discuss the need for interoperability between systems, like in the case of
+                        the choice of an encoding standard.</p>
+            <p xml:id="p12">As it is possible to see from the current RIDE criteria for reviewing what
+               are now called digital editions (<ref type="crossref" target="#sahle2014">Sahle 2014</ref>),
+                        these principles have not changed <emph>per se</emph>. However,
+                        SDEs are often perceived as mere tools whose importance is tied to
+                        technological progress, rather than to their status of authoritative
+                        information resources. </p>
+            <p xml:id="p13">According to Pierazzo (<ref type="crossref" target="#pierazzo2015">2015, 75</ref>), it is the
+               inherent “Heraclitean”, unstable nature of a digital edition, as it
+                        challenges the traditional principle of <emph>reductio at
+                            unum</emph> at the core of scholarly editing, that is mainly responsible
+                        for the distrust of the scholarly community. The consequent lack of common
+                        assessment methods led Fotis Jannidis to state in 1999 that digital editions
+                        are as variable as the criteria used to evaluate them (<ref type="crossref" target="#jannidis1999">Jannidis 1999</ref>),
+                        but still, 18 years later, Peter Shillingsburg (<ref type="crossref" target="#shillingsburg2017">2017, VII</ref>) highlighted the need for
+                        knowledge production to be primarily driven by evidence – shared standards among scholars to verify
+                        sources, authoritativeness of the institution, editorial declarations on the
+                        principles adopted for digital editions, and the absence of errors. </p>
+            <p xml:id="p14">As a result, “the challenges ahead are more scholarly than they are
+                        technical, since technical solutions and infrastructures already exist in
+                        practice; what is missing is a cultural shift capable of making these
+                        initiatives scholarly sound” (<ref type="crossref" target="#pierazzo2019">Pierazzo 2019, 220</ref>).
+                        In the same way as Galileo’s operation of progressive knowledge
+                        reorganization was misunderstood for a sudden scientific revolution, the
+                        affirmation of SDEs in the scholarly community should not be made to
+                        coincide with the concept of a brand-new approach derived from the
+                        outstanding advent of the digital environment, but rather with a
+                        progressively redesigned shared basis of evaluation. Only in consequence of
+                        this cultural shift editions like <emph>Galileo Galilei’s Notes
+                            on Motion</emph> will be considered reliable thanks to their age, rather
+                        than in spite of it.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Content and structure</head>
+            <p xml:id="p15">Codex Ms. Gal. 72 includes 241 folios, numbered from 1 to 196<note xml:id="ftn5">Cf. <ref target="http://web.archive.org/web/20200205020359/http:/www.imss.fi.it/ms72/MAIN/NUMFOL.HTM">http://web.archive.org/web/20200205020359/http://www.imss.fi.it/ms72/MAIN/NUMFOL.HTM</ref>.</note>,
+                        written by Galileo or his disciples Mario Guiducci and Niccolò Arrighetti.
+                        On the website, the sections concerning the documents are immediately clear.
+                        The most prominent link of the homepage provides information on how to use
+                        the electronic representation of the manuscript. Beneath it, it is possible
+                        to access Ms. Gal. 72 on different levels: (1) as a list of folio
+                            pages,<note xml:id="ftn6">Cf. <ref target="https://web.archive.org/web/20200205015656/http://www.imss.fi.it/ms72/MAIN/LIST.HTM">https://web.archive.org/web/20200205015656/http://www.imss.fi.it/ms72/MAIN/LIST.HTM</ref>.</note>
+                        (2) through an index of Italian and Latin words, calculations, drawings and
+                            propositions,<note xml:id="ftn7">Cf. <ref target="https://web.archive.org/web/20200216120114/http://www.imss.fi.it/ms72/MAIN/INDECE.HTM">https://web.archive.org/web/20200216120114/http://www.imss.fi.it/ms72/MAIN/INDECE.HTM</ref>.</note>
+               and (3) through a record of propositions<note xml:id="ftn8">Cf. <ref target="https://web.archive.org/web/20200205125110/http://www.imss.fi.it/ms72/MAIN/PROP.HTM">https://web.archive.org/web/20200205125110/http://www.imss.fi.it/ms72/MAIN/PROP.HTM</ref>.</note> that
+                        links the archival references of the mathematical elaborations in the
+                        manuscripts to those published in the <emph>Discorsi</emph>. </p>
+            <div xml:id="div4.1">
+               <head>List of folio pages</head>
+               <p xml:id="p16">
+                  <figure xml:id="img1">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_14/galileo/pictures/picture-1.png"/>
+                     <head type="legend">Menu bar on the top
+                            and on the bottom of the page.</head>
+                  </figure>From the list of folio pages, the user can choose between either an
+                            individual or a ‘survey view’ of all the folios except the first 32,
+                            which are not displayed for unknown reasons. In the ‘survey view’, an
+                            overview of folio pages is given, briefly described and displayed in a
+                            small preview. Each manuscript is then visible on four levels of
+                            representation: ‘Overview level’, ‘Working level’, ‘High resolution
+                            level’, and an additional level with full transcriptions of text blocks
+                            and reproductions of drawings and calculations accessible via links from
+                            the first two levels, navigable thanks to top and bottom page bars (<ref type="crossref" target="#img1">Fig. 1</ref>).</p>
+               <p xml:id="p17">At the ‘Overview level’, the user accesses a facsimile of the folio,
+                            below a table with variable contextual information: a summary of its
+                            contents, information on paper size, watermarks, handwriting, relevant
+                            references and, where possible, links to pages of the <emph>Discorsi</emph> the text refers to. For instance, for folio 43r are
+                            specified size, watermark (and who has identified it), a brief
+                            description of its content and a bibliographic reference for further
+                            information. The right side displays the transcription of the ‘final
+                            text’.</p>
+               <p xml:id="p18">
+                  <figure xml:id="img2">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_14/galileo/pictures/picture-2.png"/>
+                     <head type="legend">‘Working level’ for
+                            text, with different text versions, final text and editorial
+                            markup.</head>
+                  </figure>The ‘Working level’ takes users to a higher resolution display of the
+                            folio page, allowing also to flip it, as well as the text versions that
+                            have been worked on. Furthermore, the page is interactive – there are
+                            hyperlinks for each text block or drawing visible on the facsimile, so
+                            that the clicked section will appear in another window. If a written
+                            part is selected, the page will display the ‘final text’ whose accurate
+                            reconstruction of orthography makes <emph>Galileo Galilei’s
+                                Notes on Motion</emph> a diplomatic edition, as well as its previous
+                            versions and the related editorial markup. Here, additions and deletions
+                            of the folio pages are included, when present, with variants highlighted
+                            in different colors to facilitate the comparison between the final
+                            version of the text and the preceding ones (<ref type="crossref" target="#img2">Fig.
+                                2</ref>). The editorial markup is explained in another section.</p>
+               <p xml:id="p19">The last working level for Ms. Gal. 72 is the best facsimile among all
+                            the other levels, displayed in what was considered high resolution back
+                            in 1999. Although the images are still well usable for today’s
+                            standards, the quality of the reproduction is still not high enough and
+                            it is therefore quite difficult to properly decipher the text,
+                            especially because the transcription is referred to as a “reading
+                            aid”.<note xml:id="ftn9">Cf. <ref target="https://web.archive.org/web/20200205045844/http://www.imss.fi.it/ms72/MAIN/EDITOR.HTM">https://web.archive.org/web/20200205045844/http://www.imss.fi.it/ms72/MAIN/EDITOR.HTM</ref>.</note>
+                            A necessary improvement should concern the inclusion of magnifying
+                            functionality on the folio page, and a feature that would allow to
+                            search through the text word-by-word. </p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Editorial and technical principles</head>
+               <p xml:id="p20">‘Editorial and technical principles’ presents a selection of general
+                            bullet points explaining how the digital edition is different from a
+                            traditional printed one. However, while the source for the scholarly
+                            work is clear – the codex –, it is not explicit here what the editorial
+                            principles and the underlying model are. The only textual edits taken
+                            into consideration are additions and deletions, it seems that no TEI
+                            encoding principles have been used in this regard. Instead, it reads:
+                            “text characteristics are converted in a suggestive way into the
+                            standard features of the HTML format. Thus, for instance, Galileo’s
+                            underlinings of text are represented by bold face text. Colored text is
+                            used to indicate intended and realized corrections”.<note xml:id="ftn10">Cf. <ref target="https://web.archive.org/web/20200205045844/http://www.imss.fi.it/ms72/MAIN/EDITOR.HTM">https://web.archive.org/web/20200205045844/http://www.imss.fi.it/ms72/MAIN/EDITOR.HTM</ref>.</note>
+                            This last remark is also ambiguous, as every version of the text
+                            inherently portrays a realized intention of the author. A TEI encoding
+                            of the text would clarify equivocal statements and improve both
+                            usability and interoperability, as unlike HTML, it provides sets of tags
+                            and attributes specifically designed for different documents and textual
+                            phenomena (<ref type="crossref" target="#tei2021">TEI Consortium 2021</ref>).</p>
+               <p xml:id="p21">On the other hand, drawings and geometric calculations are represented in
+                            box drawings and transcriptions. A very interesting aspect of the SDE
+                            is, therefore, its effort towards transparency, which allows the user to
+                            make positive considerations on its reliability.</p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Indices and list of propositions</head>
+               <p xml:id="p22">The ‘Indices’ are divided into the categories of words, numbers and
+                            variables. These are further separated into ‘Latin’, ‘Italian’,
+                            ‘Calculations’, ‘Drawings’, and ‘Propositions’ (both of the <emph>Discorsi</emph> and other propositions). When clicking
+                            on the selected area of research, an alphabetical list of occurrences
+                            appears along with the number of references found for each word, number
+                            or variable name. This tool is very helpful, but could be further
+                            extended adding a choice based on the topics dealt with by Galileo (e.g.
+                            investigations about acceleration and free fall).</p>
+               <p xml:id="p23">As part of the index, Ms. Gal. 72 is directly linked to <emph>Discorsi</emph> through the essay on motion <emph>De motu
+                                locali</emph> contained in the book. As a result, <emph>Galileo Galilei’s Notes on Motion</emph> provides a list of the
+                            propositions of the treatise, which set the foundation of the ‘two new
+                            sciences’ in the <emph>Discorsi</emph>, theoretical mechanics
+                            and resistance of material. The propositions of the codex are linked to
+                            both their full text contained in the <emph>Discorsi</emph>
+                            and other theories that are useful to understand the deductive structure
+                            of the theorems without needing external sources. </p>
+            </div>
+            <div xml:id="div4.4">
+               <head>Other sections of the website</head>
+               <p xml:id="p24">There are other three sections to browse through on the website: ‘About
+                            the Manuscript 72 of Galileo Galilei’, ‘About the Electronic Archive
+                            Project’ and ‘About the Present Version of the Electronic
+                                Representation’.<note xml:id="ftn11">Cf. <ref target="https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM">https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM</ref>.</note>
+                            The first one includes links to a detailed but concise summary of the
+                            manuscript (‘Contents of the Manuscript’); its relationships to <emph>Discorsi</emph> (‘Relation of the Manuscript to the <emph>Discorsi</emph>’); its history for each century from the
+                                17th to the 19th century and changes that have been made on the document by
+                            the different collectors over time (‘History of the Manuscript’); a
+                            short list of biographies relevant to the study of the manuscript
+                            (‘Biographies relevant to the Manuscript’) and, most importantly, the
+                            bibliography used. The second section examines the project in more
+                            detail both in its structure and the technical principles adopted, as
+                            well as its history and the staff involved. Finally, the last section
+                            ‘About the Present Version of the Electronic Representation’, includes
+                            links to system requirement specifications and a call for scholarly
+                            participation. This is the only place where a contact of some kind can
+                            be found – the project’s email address. All webpages are interlinked with
+                            other relevant sections and references. </p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>User interface of the digital edition</head>
+            <p xml:id="p25">
+               <emph>Galileo Galilei’s Notes on Motion</emph> struggles to find an
+                        identity since the very first glance: when the user searches the SDE, the
+                        results are confusing. Among the two webpages that are referring to the
+                        electronic representation,<note xml:id="ftn12">Cf. <ref target="https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM">https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM</ref>
+                                and <ref target="https://web.archive.org/web/20201007180344/https://www.mpiwg-berlin.mpg.de/Galileo_Prototype/MAIN.HTM">https://web.archive.org/web/20201007180344/https://www.mpiwg-berlin.mpg.de/Galileo_Prototype/MAIN.HTM</ref>.</note>
+                        only the first one directly accesses the website. Büttner et al. (<ref type="crossref" target="#buettnerdamerowrenn2004">2004, 140</ref>) state that the choice
+                        of the double access point was deliberate, but it is misleading as, by
+                        definition, a URL uniquely identifies one single resource.<note xml:id="ftn13">Cf. <ref target="https://web.archive.org/web/20210114184940/https://url.spec.whatwg.org/">https://web.archive.org/web/20210114184940/https://url.spec.whatwg.org/</ref>.</note>
+            </p>
+            <p xml:id="p26">
+               <figure xml:id="img3">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_14/galileo/pictures/picture-3.png"/>
+                  <head type="legend">Example of missing
+                        white spaces.</head>
+               </figure>The design is functional but lacks decorative elements other than the logo.
+                        In fact, the data format was kept simple because of the constant development
+                        of markup languages and their relationship with the ever-growing number of
+                        different browsers and related updates. However, especially when in the
+                        navigation bar small images are used for hyperlinks, simple effects like
+                        hover for links and text blocks, would not have been difficult to implement,
+                        and they could have highly improved the SDE’s usability. A test on the
+                        Google Search Console<note xml:id="ftn14">Cf. <ref target="https://search.google.com/search-console/welcome?hl=it">https://search.google.com/search-console/welcome?hl=it</ref>.</note>
+                        confirms that the website is decently displayed on mobile, although it
+                        cannot be considered responsive in modern terms. Furthermore, throughout the
+                        website, occasional missing white spaces between words are an immediately
+                        noticeable issue (<ref type="crossref" target="#img3">Fig. 3</ref>).</p>
+            <p xml:id="p27">Finally, although the division into three working levels mirrors the various
+                        degrees a scholar can explore the manuscripts, it would be interesting to
+                        add a function that makes it possible to compare two pages and the related
+                        markup on the same webpage. This way, the user would not have to go back and
+                        forth between different links and pages. Moreover, the possibility to
+                        download both search results of the ‘Indices’ and the editorial markup for
+                        selected folio pages would encourage further research on the text.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Sustainability of the edition</head>
+            <p xml:id="p28">
+               <figure xml:id="img4">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_14/galileo/pictures/picture-4.png"/>
+                  <head type="legend">Number of works that
+                        cite Galileo Galilei’s Notes on Motion (domain of
+                        Istituto e Museo di Storia della Scienza).</head>
+               </figure>
+               <figure xml:id="img5">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_14/galileo/pictures/picture-5.png"/>
+                  <head type="legend">Number of works that
+                        cite Galileo Galilei’s Notes on Motion (domain of Max
+                        Planck Institute for History of Science).</head>
+               </figure>The main issue with the edition is that it has not been updated since 1999. A
+                        possible explanation is that <emph>Galileo Galilei’s Notes on
+                            Motion</emph> remained a pilot project, but the maintenance has become of
+                        secondary importance after the website of the Istituto e Museo di Storia
+                        della Scienza of Florence changed its domain. This is clearly a loss, since
+                        the new website, which does not mention <emph>Gaileo Galilei’s
+                            Notes on Motion</emph>, has the stated goal to make the Florentine Galileo
+                        collection an online database accessible to anyone having an Internet
+                            connection.<note xml:id="ftn15">Cf. <ref target="https://web.archive.org/web/20190607090234/https://www.museogalileo.it/en/library-and-research-institute/projects/databases-and-bibliographies.html">https://web.archive.org/web/20190607090234/https://www.museogalileo.it/en/library-and-research-institute/projects/databases-and-bibliographies.html</ref>.</note>
+                        It is possible to witness the extent of such a problem in <ref type="crossref" target="#img4">Fig. 4</ref> and <ref type="crossref" target="#img5">Fig. 5</ref>: the project has very
+               few mentions by other researchers. “While the electronic representation may
+                        appear odd compared with the sophisticated transcription systems of
+                        traditional critical editions, its unprecedented opportunities for further
+                        scholarly work justify the deviation from traditional editorial standards.
+                        The new medium combines a powerful intelligent working environment for
+                        scholarly work with a flexible and open-ended account of its results.”<note xml:id="ftn16">Cf. <ref target="https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM">https://web.archive.org/web/20201127015451/http://www.imss.fi.it/ms72/INDEX.HTM</ref>.</note>
+            </p>
+            <p xml:id="p29">This claim is now true to some extent. In fact, not only does the user have
+                        access to <emph>indices </emph>that are
+                        fundamental tools to the scholarly work, but they can also consult the list
+                        of propositions of Galileo’s <emph>Discorsi</emph> for further
+                        possibilities of comparison between the two documents. At the same time,
+                        however, the design is so austere that it is visually difficult to browse
+                        through all the pages for a long working session, especially when it comes
+                        to reproductions of drawings and formulas. </p>
+            <p xml:id="p30">Furthermore, real open-ended access should mean at least consistency with the
+                        languages of the edition: English and vernacular. In fact, the propositions
+                        of the <emph>Discorsi</emph> have been translated into English,
+                        but as the authors state on the website,<note xml:id="ftn17">Cf. <ref target="https://web.archive.org/web/20200216153230/http://www.imss.fi.it/ms72/MAIN/CONTENTS.HTM">https://web.archive.org/web/20200216153230/http://www.imss.fi.it/ms72/MAIN/CONTENTS.HTM</ref>.</note>
+                        it has not been the same for Ms. Gal. 72. In this way, scholars who do not
+                        know vernacular can only partially benefit from the edition. For what
+                        concerns copyright status, the reusability of the edition is still very
+                        similar to the classical print edition: only for scientific use, no copies
+                        allowed. Lastly, what is missing in this SDE is a mention of the results of
+                        the call for scholarly participation, as a proof of its open-endedness. </p>
+         </div>
+         <div xml:id="div7">
+            <head>Conclusion</head>
+            <p xml:id="p31">
+               <emph>Galileo Galilei’s Notes on Motion</emph> is a groundbreaking
+                        scholarly digital edition whose editorial principles and aims highly overlap
+                        with contemporary ones. The study of Codex 72 is ‘fluid’ in a sense that it
+                        can be updated at any given moment, while the connections among its contents
+                        are modelled by a well-designed, but complex network of hyperlinks. From the
+                        start, the digital edition allowed its target audience to benefit from easy
+                        access and open-endedness while encouraging users to contact the staff for
+                        any kind of personal contribution. </p>
+            <p xml:id="p32">The SDE presents, however, many issues: it lacks
+                        interoperability, graphics are outdated, there is no mention of the outcome
+                        of the call for scholarly participation. There is also too little
+                        information about contacts, the SDE is not included in the institutions’
+                        collection of scientific projects, and, most importantly, it has not been
+                        updated since 1999. Despite these problems, it is fundamental to keep in
+                        mind the initial purposes and methods of the institutions involved, in order
+                        to compare them to what we are familiar with today. The potential for
+                        improvement of <emph>Galileo Galilei’s Notes on Motion</emph> is
+                        clear from its survival for such a long time. If the SDE was translated into
+                        a modernized interface, it would certainly reach a wider audience through
+                        the ever-present principles of open access and open-endedness.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="abbott1998">Abbott, Isabel. 1998.
+                        ‘Galileo’s manuscripts go on the internet.’ <emph>Nature</emph>
+                  (11 June 1998). <ref target="https://www.nature.com/articles/31049">https://www.nature.com/articles/31049</ref>.</bibl>
+               <bibl xml:id="buettnerdamerowrenn2004">Büttner,
+                        Jochen, Peter Damerow, and Jürgen Renn. 2004. ‘Galileo’s unpublished
+                        treatises.’ In <emph>The Reception of the Galilean Science of
+                            Motion in Seventeenth-Century Europe</emph>, edited by C.R. Palmerino and
+                        J.M.M.H. Thijssen. Boston Studies in the Philosophy of Science, vol 239.
+                        Dordrecht: Springer. <ref target="https://doi.org/10.1007/978-1-4020-2455-9_6">https://doi.org/10.1007/978-1-4020-2455-9_6</ref>. </bibl>
+               <bibl xml:id="damerowrenn">Damerow, Peter, and
+                        Jürgen Renn, n.d. ‘Galileo at Work: His Complete Notes on Motion in an
+                        Electronic Representation.’ <ref target="https://web.archive.org/web/19990209174712/https://www.mpiwg-berlin.mpg.de/texts/Galileo.Nuncius.html">https://web.archive.org/web/19990209174712/https://www.mpiwg-berlin.mpg.de/texts/Galileo.Nuncius.html</ref>.</bibl>
+               <bibl xml:id="drake1980">Drake, Stillman. 1980.
+                        ‘Galileo’s notes on motion’. <emph>Supplemento agli annali
+                            dell’Istituto e Museo di Storia della Scienza</emph>, no. 2. Firenze:
+                        Istituto e museo di storia della scienza.</bibl>
+               <bibl xml:id="galilei1950">Galilei, Galileo. 1950.
+                            <emph>Opere</emph>. Edited by Franz Brunetti. Torino:
+                        Utet.</bibl>
+               <bibl xml:id="galilei1909">Galilei, Galileo. 1909.
+                        Le opere di Galileo Galilei: edizione nazionale sotto gli auspicii di sua
+                        maestà il re d’Italia, Vol. 17. Edited by Antonio Favaro. Firenze:
+                        Tipografia Barbera.</bibl>
+               <bibl xml:id="istitutomuseo">Istituto e Museo di
+                        Storia della Scienza, n.d. ‘Museo Galileo Digital Library’. <ref target="http://web.archive.org/web/20190609090111/https://www.museogalileo.it/en/library-and-research-institute/digital-library/information-digital-library.html">http://web.archive.org/web/20190609090111/https://www.museogalileo.it/en/library-and-research-institute/digital-library/information-digital-library.html</ref>.</bibl>
+               <bibl xml:id="jannidis1999">Jannidis, Fotis. 1999.
+                        ‘Bewertungskriterien für elektronische Editionen’. <ref target="https://web.archive.org/web/20200219004005/http://www.iasl.uni-muenchen.de/discuss/lisforen/jannidis.htm">https://web.archive.org/web/20200219004005/http://www.iasl.uni-muenchen.de/discuss/lisforen/jannidis.htm</ref>.</bibl>
+               <bibl xml:id="mancinellipierazzo2020">Mancinelli,
+                        Tiziana, and Elena Pierazzo. 2020. <emph>Che cos’è un’edizione
+                            scientifica digitale</emph>. Roma: Carocci.</bibl>
+               <bibl xml:id="pierazzo2015">Pierazzo, Elena. 2015.
+                        Digital Scholarly Editing: Theories, Models and Methods. Farnham, Surrey:
+                        Ashgate.</bibl>
+               <bibl xml:id="pierazzo2019">Pierazzo, Elena. 2019.
+                        What future for digital scholarly editions? From Haute Couture to
+                        Prêt-à-Porter. <emph>International Journal of Digital
+                            Humanities</emph> 1 : 209-220. <ref target="https://doi.org/10.1007/s42803-019-00019-3">https://doi.org/10.1007/s42803-019-00019-3</ref>.</bibl>
+               <bibl xml:id="renn1998">Renn, Jürgen. 1998.
+                        ‘Galileo’s manuscript on mechanics. The project of an edition with full
+                        critical apparatus of Mss. Gal. Codex 72’. <emph>Nuncius</emph>,
+                        no. 3: 193-241. Firenze: Istituto e museo di storia della scienza.</bibl>
+               <bibl xml:id="renn2020">Renn, Jürgen. 2020. The
+                        Evolution of Knowledge. Rethinking science for the Anthropocene. Princeton:
+                        Princeton University.</bibl>
+               <bibl xml:id="sahle2014">Sahle, Patrick. 2014. ‘Criteria for Reviewing Scholarly Digital Editions. Version 1.1’. <ref target="https://web.archive.org/web/20211013085211/https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/">https://web.archive.org/web/20211013085211/https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/</ref>.</bibl>
+               <bibl xml:id="sahle2016">Sahle, Patrick. 2016.
+                        ‘What is a Scholarly Digital Edition?’. In
+                        <emph>Digital Scholarly Editing. Theories and </emph>practices,
+                        edited by James Driscoll and Elena Pierazzo, 19-41. Cambridge: Open Book
+                        Publishers.</bibl>
+               <bibl xml:id="shillingsburg1993">Shillingsburg,
+                        Peter. 1993. ‘General principles for Electronic Scholarly Editions’. <ref target="https://web.archive.org/web/20200923010129/http://sunsite.berkeley.edu/MLA/principles.html">https://web.archive.org/web/20200923010129/http://sunsite.berkeley.edu/MLA/principles.html</ref>.</bibl>
+               <bibl xml:id="shillingsburg2017">Shillingsburg,
+                        Peter. 2017. <emph>Textuality and knowledge</emph>. University
+                        Park: Pennsylvania State University Press.</bibl>
+               <bibl xml:id="tei2021">TEI Consortium. 2021. ‘TEI P5: Guidelines for Electronic Text Encoding and Interchange. 4.2.2’. <ref target="https://web.archive.org/web/20210914185537/https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://web.archive.org/web/20210914185537/https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</ref>.</bibl>
+               
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
