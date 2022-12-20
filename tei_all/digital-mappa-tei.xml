@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.15.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Digital Mappa – Simple and Web-based Annotations</title>
+            <author ref="https://orcid.org/0000-0002-2071-6407">
+               <name>
+                  <forename>Tobias</forename>
+                  <surname>Hodel</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bern</orgName>
+                  <placeName>Bern</placeName>
+               </affiliation>
+               <email>tobias.hodel@unibe.ch</email>
+            </author>
+            <author ref="https://orcid.org/0000-0003-4995-8730">
+               <name>
+                  <forename>Anna</forename>
+                  <surname>Janka</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bern</orgName>
+                  <placeName>Bern</placeName>
+               </affiliation>
+               <email>anna.janka@unibe.ch</email>
+            </author>
+            <author ref="https://orcid.org/0000-0001-9690-5645">
+               <name>
+                  <forename>Jonas</forename>
+                  <surname>Widmer</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bern</orgName>
+                  <placeName>Bern</placeName>
+               </affiliation>
+               <email>jonas.widmer@unibe.ch</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2022-12">December 2022</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15/digital-mappa</idno>
+            <idno type="DOI">10.18716/ride.a.15.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue15/digital-mappa/digital-mappa.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+            <editor ref="https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="15">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Digital Mappa – Simple and Web-based Annotations</title>
+                  <editor>(unclear, not properly defined) University of Wisconsin - Madison’s Center for the History of Print and Digital Culture</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Martin, Foys</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Ben, Silverman</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Nick, Laiacona</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Andy Kelleher, Stuhl</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Derek, Leadbetter</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>David, Kreis</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Martin, Foys</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Jonah, Tobias</persName>
+                  </respStmt>
+                  <date type="publication">14.07.2022</date>
+                  <idno type="URI">https://www.digitalmappa.org/</idno>
+                  <date type="accessed">2022-11-14</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>JavaScript, CSS, HTML</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Discord Channel</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>editing</term>
+               <term>text edition</term>
+               <term>annotation</term>
+               <term>crowdsourcing</term>
+               <term>linking</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p rend="Metadata-Categories">How does Digital Mappa, a browser-based annotation tool, fit into the
+               current landscape of Virtual Research Environments? How is an intuitive
+               WYSIWYG graphical user interface suited for simple (scholarly) editions and
+               image-text representations? What about involving different users via
+               crowdsourcing? For this review, we took three distinct perspectives (user,
+               teacher, and backend admin) and tested the tool for text annotation but
+               furthermore for linking images with text. Digital Mappa proves to be a
+               stable, not-so-easy-to-set-up tool that covers a lot of ground concerning
+               annotation and image linking. Subsuming, we describe a mature system that
+               allows for easy editing, suitable in the classroom. Critically, it has been
+               assessed that the tool refrains from standards (such as TEI XML) and lacks
+               capabilities to involve larger groups (e.g. for crowdsourcing).</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Opening the review</head>
+            <div xml:id="div1.1">
+               <head>The reviewer </head>
+               <p xml:id="p1">This review aims to look from a multitude of perspectives at Digital
+                  Mappa 2.0 (henceforth DM). For this reason, we assembled a group of people that
+                  wanted to work with the tool as annotator (Anna Janka), scholar and teacher
+                  (Tobias Hodel), as well as system administrator and developer (Jonas Widmer).</p>
+            </div>
+            <div xml:id="div1.2">
+               <head>Identification of the reviewed tool</head>
+               <p xml:id="p2">Digital Mappa 2.0 is an open-source DH platform for open-access
+                  workspaces, projects, collaborations, and scholarly publications/digital edition
+                  platforms, focusing on linking of images and text annotations. DM is well
+                  documented, and the descriptions on its <ref
+                     target="https://www.digitalmappa.org/">website</ref> are exhaustive, it is
+                  hosted on <ref target="https://github.com/performant-software/dm-2"
+                  >GitHub</ref>.</p>
+            </div>
+            <div xml:id="div1.3">
+               <head>Stage of development</head>
+               <p xml:id="p3">The first version of Digital Mappa was released in 2018 after more
+                  than a decade of development and early releases. In 2020 version 2.0 with an
+                  entirely refactored platform was released. Currently, bugs are being fixed.</p>
+               <p xml:id="p4">Due to the very recent release: This review did not take the latest
+                  features of version 2.1 (especially layering of annotations) into account!</p>
+            </div>
+            <div xml:id="div1.4">
+               <head>Identification of the reviewing platform </head>
+               <p xml:id="p5">We tried to install DM on a virtual server of our own (based on Ubuntu
+                  20.04 LTS) but failed to do so due to miscommunication between the front- and the
+                  backend. Furthermore, the proposed installation involving the use of AWS as a
+                  storage hub did not lead to a working system. In the end and for this evaluation,
+                  we relied on an already running installation of the University of Zurich, hosted
+                  by “<ref type="crossref"
+                     target="#https://web.archive.org/web/20221026163923/https:/dlf.uzh.ch/"
+                     >Digitale Lehre und Forschung</ref>”. The front end of DM was accessed through
+                  state-of-the-art browsers such as Chrome (version 94.0.4606.71) and Firefox
+                  (version 92.0.1).</p>
+            </div>
+            <div xml:id="div1.5">
+               <head>General introduction</head>
+               <p xml:id="p6">Digital Mappa has been developed in order to allow for the annotation
+                  of (historical) maps. Due to the simple graphical user interface, developers as
+                  well as involved scholars quickly realized that DM could not only be used for this
+                  task but, in general, to create annotated data on any image files and even texts.
+                  This led to the development of DM with the idea of providing an exhaustive digital
+                  scholarly edition environment (in the sense of an IDE: integrated development
+                  environment). The goal of the tool remains to offer easy-to-use annotation
+                  capabilities within web browsers.</p>
+               <p xml:id="p7">The tool is thus not only suited for very specific projects (focusing
+                  on maps) but addresses, in general, the needs of the edition community, especially
+                  if the annotation of facsimile is involved. As an end-user, any scholar and
+                  student independent of pre-existing knowledge and technical expertise are
+                  envisioned.</p>
+            </div>
+            <div xml:id="div1.6">
+               <head>Credit and funding</head>
+               <p xml:id="p8">The tool has been created and is <ref
+                     target="https://www.digitalmappa.org/contactus">maintained</ref> by Martin Foys
+                  (University of Wisconsin-Madison) as project director in collaboration with the
+                     <ref
+                     target="https://web.archive.org/web/20221026124351/http:/www.wiscprintdigital.org/"
+                     >Center for the History of Print and Digital Culture</ref> (also at the
+                  University of Wisconsin-Madison) as well as the Schoenberg Institute for
+                  Manuscript Studies (University of Pennsylvania).</p>
+               <p xml:id="p9">Most of the refactoring for version 2.0, which is the focus of this
+                  review, seems to be carried out by <ref
+                     target="https://web.archive.org/web/20221026124800/https:/www.performantsoftware.com/"
+                     >Performant Software Solutions</ref>, a digital humanities-close software
+                  development company. The tool is available open-source and hosted on <ref
+                     target="https://github.com/performant-software/dm-2">GitHub</ref>. Digital
+                  Mappa and its <ref target="https://www.digitalmappa.org/history">history and
+                     development</ref> are comprehensible and well documented.</p>
+            </div>
+            <div xml:id="div1.7">
+               <head>Transparency</head>
+               <p xml:id="p10">Information about the installation is available as readme on GitHub.
+                  Further information about the project is available on its <ref
+                     target="https://www.digitalmappa.org">website</ref>. Digital Mappa is licensed
+                  under a <ref
+                     target="https://github.com/performant-software/dm-2/blob/master/LICENSE">GPL
+                     3.0-License</ref>.</p>
+            </div>
+         </div>
+         <div xml:id="div2">
+            <head>Methods and Implementation</head>
+            <div xml:id="div2.1">
+               <head>State of the art</head>
+               <p xml:id="p11">Currently and very broadly speaking, there exist two ways to create
+                  scholarly editions: On the one hand, digital editions based on TEI XML are often
+                  carried out in interdisciplinary teams creating back- and front-end parallel to
+                  the mark-up of text. On the other hand, there are also text editor-based (e. g.,
+                  MS Word or LaTeX) editions in use that mimic the typesetting of print and are –
+                  after preparation of the text – exported to professional layout and printing
+                  companies.</p>
+               <p xml:id="p12">DM has to be located in-between these two approaches, as it allows to
+                  annotate images and textual entities. For annotation and linking, no knowledge
+                  about mark-up languages is necessary. At the same time, advantages of mark-up
+                  languages (ontologies in the broadest sense) are not provided but need to be
+                  defined on a project basis. From another perspective, DM offers a WYSIWYG (what
+                  you see is what you get) approach, and all information can be accessed online
+                  right after entry. </p>
+               <p xml:id="p13">DM is a self-sufficient platform that was not built to export
+                  annotated documents. Its data model does not rely on TEI XML and DM is therefore
+                  not part of the TEI community. Very simple mark-up for text (mostly focusing on
+                  formatting, like bold/italicized) can be added, but the focus lies on marking
+                  images and connecting them to textual structures. Of course, from a technical
+                  point of view, it would be possible to export annotations, but this would require
+                  several transformation processes that needed to be prepared by future users.</p>
+               <p xml:id="p14">Very loosely, we can identify relations to manual text annotation
+                  tools (like <ref
+                     target="https://web.archive.org/web/20221026164953/https:/catma.de/"
+                     >CATMA</ref> or <ref target="https://app.annotationstudio.org/">Annotation
+                     Studio</ref>) as well as image annotation tools (e. g. within <ref
+                     target="https://github.com/ProjectMirador/mirador-annotations">Mirador</ref>).
+                  The map annotation capability is comparable to <ref
+                     target="https://web.archive.org/web/20221006204214/https:/recogito.pelagios.org/"
+                     >Recogito</ref> but doesn’t offer the linking to norm data. There is no
+                  automatization (e. g. recognition of named entities, identification of visual
+                  structures) currently included in Digital Mappa. The combination of text and image
+                  annotation is still a rather unique mix and, thus, a unique selling point of
+                  DM.</p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Discipline and methodology</head>
+               <p xml:id="p15">The tool facilitates the annotation and interlinking of images and
+                  textual entries. This again allows marking certain aspects, for example, on a
+                  historical, digitized map. Already during the development of DM 1.0, it has been
+                  realized that with the toolset also editions can be obtained that are tightly
+                  intertwined and create a close connection between a documentary edition as well as
+                  annotated images. Although such a simple, visual edition can be created through
+                  the offered toolset, certain design decisions (shortcomings for certain
+                  approaches) need to be taken into account: In order to add an apparatus, it would
+                  be necessary to either use manually added footnotes (not semantically annotated)
+                  or link text entries (which is possible but doesn’t really add to the usability of
+                  an edition). </p>
+            </div>
+            <div xml:id="div2.3">
+               <head>How it works</head>
+               <p xml:id="p16">
+                  <figure xml:id="img1">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_15/digital-mappa/pictures/picture-1.png"/>
+                     <head type="legend">Screenshot of image annotation (right frame), text entity
+                        (left frame), and connecting annotation (pop-up right frame), provided on
+                        the DM web-page.</head>
+                  </figure>As already stated, DM focuses on annotation and interlinking images with
+                  textual entities, which can be done by marking certain image areas and linking
+                  them to text boxes (<ref type="crossref" target="#img1">fig. 1</ref>). A check-out
+                  functionality stops the parallel processing of images or textual entities on the
+                  level of one document or one image. The functionality ensures that no entries get
+                  lost and no parallel editing occurs. The check-out modus also limits the
+                  possibility to use DM as a crowdsourcing application, since certain entries could
+                  be locked from adding text/annotations, which could be demotivating.</p>
+               <p xml:id="p17">From a technical point-of-view, DM uses Ruby-on-Rails and embeds it
+                  in a Heroku-App. Since a browser-based web solution was envisioned from the start
+                  of the project, the choice to release DM as a Heroku-App seems sensible and
+                  supports (thanks to the environment) a relatively quick setup. Right after
+                  finishing this review, further updates of DM were made which are not covered in
+                  this review; amongst other things, a docker-compose/docker-images was released to
+                  the GitHub repository.</p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Input, output, and data modeling</head>
+               <p xml:id="p18">Input is very limited, and images can be imported as JPEG.
+                  IIIF-compliant images can be imported directly as well. Text is typically imported
+                  through copy and paste. Output in other formats, other than in the form of the
+                  web-page, is not foreseen. Therefore, the data model of DM cannot be compared to
+                  scholarly digital editions based on TEI XML or Linked Data knowledge graphs.
+                  Unicode (UTF-8) is supported, which makes the DM language independently usable and
+                  interesting for projects involving non-western character sets.</p>
+            </div>
+            <div xml:id="div2.5">
+               <head>Performance</head>
+               <p xml:id="p19">Once installed, the tool performs even on ‘slim’ virtual machines (a
+                  2 CPU, 4 GB setup was used) decently and without any problems regarding loading or
+                  processing time. Access to rather large JPEG files (~15 MB) does not pose any
+                  problems. Technically, it would be possible to embed images stored on other
+                  servers and made available via IIIF manifests. Access times to such (larger) files
+                  have not been tested.</p>
+               <p xml:id="p20">With regards to accuracy, no negative experiences were observed or
+                  have been reported by instructors or students. The website reacts as intended,
+                  clicks get recorded, and polygons (or other shapes) get drawn according to mouse
+                  movements.</p>
+            </div>
+            <div xml:id="div2.6">
+               <head>Logs and trackability</head>
+               <p xml:id="p21">Logs are being generated for the installation process. Besides that,
+                  we couldn’t identify any logs.</p>
+            </div>
+            <div xml:id="div2.7">
+               <head>Application and results </head>
+               <p xml:id="p22">DM features a <ref
+                     target="https://www.digitalmappa.org/showcase-projects">few showcase
+                     projects</ref> on their web-page. Besides that, we did not identify further
+                  publicly available use cases. The showcases already demonstrate a wide variety of
+                  possible scenarios to use DM. From “<ref
+                     target="https://sims2.digitalmappa.org/36">Virtual Mappa</ref>” (the classical
+                  use-case of DM), to a facsimile annotation of <ref
+                     target="https://oepoetryfacsimile.org/">old English poetry</ref> and
+                  furthermore a <ref target="https://uw.digitalmappa.org/63">library of stains</ref>
+                  that have been analysed using spectral analysis. In respect of the last example,
+                  DM was used as closely interlinked documentation with visual as well as textual
+                  components.</p>
+               <p xml:id="p23">Overall, it becomes evident that with some creativity, DM should not
+                  only be used in the intended context (annotation of images, esp. maps), as more
+                  pathways need to be explored. For art history classes (as an invented example), DM
+                  could be used to produce annotated image corpora and thus replace traditional
+                  seminar papers.</p>
+            </div>
+            <div xml:id="div2.8">
+               <head>Example</head>
+               <p xml:id="p24">Using DM, our team of four people partially marked and annotated a
+                  historical map of the Bernese territorial dominion in the 16th century. In order
+                  to work with the map, a user could check out a single document file on DM (e. g.
+                  the part of the map or a textual annotation), which was then blocked for the other
+                  team members. Our map consisted of nine pages, and therefore nine single documents
+                  on DM, and because of that, our team could still work collaboratively.</p>
+               <p xml:id="p25">Our goal was to tag different geographical elements, like mountains,
+                  lakes, rivers, or woodland, as well as cities and villages under Bernese reign at
+                  the time. The tools on DM function very intuitively. Users can choose between
+                  eight colors, draw lines with the drawing tool, or select pre-made shapes
+                  (rectangle or circle) to drag and drop on the map. A difficulty our team
+                  encountered was highlighting longer entities (like rivers) because they were
+                  separated into different parts (e. g. interrupted by bridges). DM then generated different
+                  tags for every part of the river, and we had to add the annotation to every part
+                  of the river since one annotation could not be linked to multiple markings.</p>
+               <p xml:id="p26">After marking our geographical elements and localities, our team
+                  annotated them by referencing relevant text documents about the elements from the
+                  same century and websites from the present day. The annotations were relatively
+                  easy to create since the elements of the annotation tool were very basic and
+                  limited but sufficient. One could only choose between 5 different font sizes,
+                  bold/italicize/underline/highlight text, and choose between different fonts. While
+                  writing our text, we could embed website links directly in the annotation tool.
+                  The icons were the same as in well-known word processors (like MS Word or
+                  GoogleDocs), making the use very easy, straightforward, and intuitive.</p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Usability, sustainability and maintainability</head>
+            <div xml:id="div3.1">
+               <head>Access</head>
+               <p xml:id="p27">As already mentioned before, a <ref
+                     target="https://github.com/performant-software/dm-2">GitHub Repository</ref>
+                  gives access to all necessary files, deployment as a Heroku App is foreseen.</p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Dependencies</head>
+               <p xml:id="p28">The GitHub-readme describes DM as a Ruby-on-Rails 5.x application.
+                  Since DM is available for deployment on Heroku, there is a good description of how
+                  to install and configure it. For Heroku deployment, the Heroku-18 stack is
+                  required.</p>
+               <p xml:id="p29">The local installation as a development environment indicates the
+                  required installation of PostgreSQL v11.1, Ruby 2.5.7, and Bundler 2.2.23. Since
+                  there are plenty of online descriptions on how to set up this stack, it is not
+                  described in the GitHub-readme. All backend dependencies are in the Gemfile
+                  (installation with Bundler). Front-end JavaScript dependencies can be installed
+                  through Yarn. Unfortunately, several dependencies are not up-to-date or
+                  deprecated, and there is the need to find fitting and working versions.</p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Documentation</head>
+               <p xml:id="p30">The online documentation for viewers and creators on the DM
+                  web-page is useful and accurate. The main features are described in video
+                  sequences. Some known issues and workarounds are listed, fixes in future versions
+                  are noted.</p>
+               <p xml:id="p31">The documentation and step-by-step instructions for installation and
+                  configuration focus on the Heroku deployment and are available in the
+                  GitHub-readme. As mentioned in “<ref type="crossref" target="#p28"
+                     >Dependencies</ref>”, the Ruby-on-Rails stack installation for local
+                  deployments is not described. The local development environment deployment
+                  instructions are not well documented, and there are some skills (like setting up a
+                  PostgreSQL database) required to successfully assemble the platform.</p>
+            </div>
+            <div xml:id="div3.4">
+               <head>Support </head>
+               <p xml:id="p32">For our small experiment, and since we didn’t plan to deploy the
+                  platform, we did not rely on support from the developers. The community is being
+                  maintained through a <ref target="https://twitter.com/digitalmappa">Twitter
+                     account</ref> and a <ref
+                     target="https://www.facebook.com/Digital-Mappa-127983461258938/">Facebook
+                     group</ref>. Due to the publication on GitHub, it is always possible to report
+                  bugs right at the source. </p>
+            </div>
+            <div xml:id="div3.5">
+               <head>Learnability</head>
+               <p xml:id="p33">DM works intuitively and does not require a lot of explanation (cf.
+                  also the chapter “<ref type="crossref" target="#p24">Example</ref>”). Within a
+                  classroom setting, DM can be easily introduced and tested out in a 60-minute slot.
+                  Although no proper error messages are being shown (if clicks or draws are not
+                  allowed), users become quickly aware of shortcomings due to no reaction by the
+                  platform. The design follows state-of-the-art expectancies and symbols that guide
+                  users to possible pathways.</p>
+            </div>
+            <div xml:id="div3.6">
+               <head>Build and install</head>
+               <p xml:id="p34">As soon as the indicated stack is fitting the current DM-version, the
+                  deployment on Heroku is simple and needs a few configurations. For local
+                  deployment, there is specific experience required, as the installation of DM is
+                  challenging. Dependencies have to be modified since they are not up-to-date: In
+                  March 2021, the dependency files were from November 2019. As already mentioned,
+                  some bug fixes were released between August and October 2021; it is, therefore,
+                  possible that the mentioned shortcomings are already fixed. Uninstallation has not
+                  been tested.</p>
+            </div>
+            <div xml:id="div3.7">
+               <head>Test </head>
+               <p xml:id="p35">A basic template for testing the main features is implemented, but it
+                  is necessary to write case-specific tests. For our case, we didn’t use the test
+                  function.</p>
+            </div>
+            <div xml:id="div3.8">
+               <head>Portability and interoperability </head>
+               <p xml:id="p36">As stated already, Digital Mappa is run as a webserver on a Heroku
+                  App. Heroku allows the integration of different programming languages, and in the
+                  case of Digital Mappa, the well-established Ruby-on-Rails has been chosen. Due to
+                  this, the setup ought to be highly portable and interoperable. End-user access to
+                  the platform is possible through any recent web browser (Mozilla Firefox, Google
+                  Chrome, Safari, etc.). During our evaluation, no problems from this site have been
+                  encountered.</p>
+               <p xml:id="p37">At the moment, we are not aware of any other tools that have been
+                  developed to add to the functionality of DM. We are also unsure if this is
+                  necessary since the tool is constructed as a stand-alone edition platform.</p>
+            </div>
+            <div xml:id="div3.9">
+               <head>Source, license, and credits </head>
+               <p xml:id="p38">Digital Mappa 2.0 is provided open source under a <ref
+                     target="https://github.com/performant-software/dm-2/blob/master/LICENSE"
+                     >GPL-3.0 Licence</ref>. A free installation on any infrastructure allowing to
+                  set up a Heroku app is possible. As far as we can see, development is entirely
+                  taking place on GitHub. At this moment (October 2021), eleven branches have been
+                  created, hinting at a somewhat active but not very big community of
+                  developers. Due to the fact that most contributors are mentioned on the web page,
+                  there is no indication on who contributed in what manner (except, of course, that
+                  it would be possible to track past pushes in order to get an idea).</p>
+            </div>
+            <div xml:id="div3.10">
+               <head>Analysability, extensibility, reusability of the code</head>
+               <p xml:id="p39">For this review, we didn’t analyse the provided code.</p>
+            </div>
+            <div xml:id="div3.11">
+               <head>Security and privacy</head>
+               <p xml:id="p40">There is no information about data handling provided to the users,
+                  and we get no clear indication of where DM is deployed and which services are used
+                  (e. g., Heroku, AWS S3 bucket). Accordingly, we recommend deploying the system of
+                  its own servers or using DM setup by known providers (like university libraries)
+                  in order to not risk misuse of provided data. From the point of the structure of
+                  the provided framework, there is not a high risk of losing data due to
+                  breaches. </p>
+            </div>
+            <div xml:id="div3.12">
+               <head>Supportability and maintenance</head>
+               <p xml:id="p41">Due to recent updates in August and October 2021 (the first part of
+                  this review was prepared in spring, the second part in autumn 2021), we reckon
+                  that version 2.1.0 (which would be called 1.0 of DM2) will fix certain problems
+                  and allow for easier deployment.</p>
+            </div>
+            <div xml:id="div3.13">
+               <head>Citability</head>
+               <p xml:id="p42">The tool does not offer citations or citation guidelines.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>User interaction, GUI, and visualization</head>
+            <div xml:id="div4.1">
+               <head>User profile </head>
+               <p xml:id="p43">The proto-typical user/contributor is probably a humanities scholar
+                  or student who does not want to deal with technical requirements and standards
+                  in-depth. The classroom setting has already been mentioned and allows for the
+                  quick introduction of fundamental approaches to the (digital) humanities.
+                  Annotations and especially the need to annotate images or texts is the main
+                  capability realized within the platform.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Technical interfaces and GUI</head>
+               <p xml:id="p44">The core idea of DM is to offer an easy and intuitive way to annotate
+                  images and provide textual information that can be formatted and enhanced with
+                  embedded images. The tool is web-based and offers a graphical user interface (GUI)
+                  that can be accessed through common browsers. The GUI is oriented towards current
+                  web practices and is easily understandable. In general, it needs to be stressed
+                  that the visual components of DM are its main advantages, which makes the tool
+                  ready for use in teaching and outreach settings.</p>
+               <p xml:id="p45">On the left side of the interface is a list of all the different
+                  documents in one collection. By clicking on a document, it gets displayed on the
+                  right side. The menu on the left cannot be hidden while working on or looking at a
+                  document. If one wants to work on a single page, there is a check-out box next to
+                  every file that the user can click. There are two main tools the user can work
+                  with on DM, a tagging and an annotation tool. </p>
+               <p xml:id="p46">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_15/digital-mappa/pictures/picture-2.png"/>
+                     <head type="legend">On the left side of the interface are nine documents, of
+                        which the user chose to edit document 7. In the middle is the marking tool
+                        with the hand symbol selected (highlighted in light blue), and on the right
+                        is the annotation tool.</head>
+                  </figure>While tagging an element on the document, the toolbar is always visible
+                  and cannot be hidden, except for the color choices. Once one of the eight
+                  available colors is selected, the color selection can be hidden, and only the
+                  selected color appears in the toolbar. When a marking tool is selected, it is
+                  highlighted in blue, making it easy to see which tool is in use (<ref
+                     type="crossref" target="#img2">fig. 2</ref>). Before deleting a mark on the
+                  document, a warning pops up, the same for deleting a whole document. This enables
+                  the user to overthink his/her choice(s). On the contrary, there is no error
+                  prevention in deleting annotations. Once the user clicks on the delete button, the
+                  annotation disappears without further warning and any chance of reparation. One of
+                  the main disadvantages of the tool is that there is no Undo-Button in general, one
+                  cannot go back to previous document versions, and all changes are
+                  irreversible. </p>
+               <p xml:id="p47">The toolbars of the annotation and marking tools consist of standard
+                  symbols used in other programs, and the variety of tools is wide enough to
+                  individualize an annotation or differentiate different markings, but not too
+                  extensive. For example, a user can select between four different font sizes to
+                  write an annotation. When the user goes over a symbol with his/her mouse, the
+                  symbol's function gets explained (B = “bold selected type”). After the documents
+                  have been edited and annotations were added, the user can search for different
+                  keywords in the top right of the interface. All documents are included in the
+                  search. Once a keyword is selected, the corresponding document pops up on the
+                  screen.</p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Visualization</head>
+               <p xml:id="p48">DM does not provide specific visualizations. However, we would not
+                  expect such a thing in a platform like DM in the first place. Nevertheless, it is
+                  an easily individualizable tool. As a user, one can display documents and
+                  annotations that are important and hide more irrelevant parts. Additionally, the
+                  different documents can easily be moved around on the interface, and therefore it
+                  is possible to display, for example, documents 1 and 4 next to each other to
+                  compare them with each other and visualize the data in different ways.</p>
+            </div>
+            <div xml:id="div4.4">
+               <head>User empowerment</head>
+               <p xml:id="p49">There is not one fixed workflow defined for the use of DM. Also, no
+                  ontologies or gazetteers are implemented in DM that need to be used. On the one
+                  hand, we encounter this as formidable liberty towards use in quite different
+                  settings. On the other hand, this means that there is no support of existing
+                  standards and solutions, e. g., towards norm data, given.</p>
+            </div>
+            <div xml:id="div4.5">
+               <head>Accessibility</head>
+               <p xml:id="p50">All browser-based tools (e. g., zooming, read out loud) are
+                  supported. Besides this, we were not able to identify particular features.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Conclusion</head>
+            <div xml:id="div5.1">
+               <head>General characteristics and realization of aims</head>
+               <p xml:id="p51">DM is a mature and performant system that allows for easy and
+                  barrier-free use in different settings: from simple digital editions to in-depth
+                  text annotations, DM offers a general approach that leads to pragmatic as well as
+                  presentable results. Since it is an annotation and publication system in one,
+                  contributors will be able to inspect and share their results right away and
+                  directly through the platform. </p>
+            </div>
+            <div xml:id="div5.2">
+               <head>Achievements and scholarly contributions</head>
+               <p xml:id="p52">Opposed to a multitude of recently developed tools, workbenches, and
+                  standards (e. g., ontologies), DM aims at a very general but active user group in
+                  need of easy-to-use annotation and publication tools. Specialization and
+                  implementation of the latest technological developments (read, e. g., Linked Open
+                  Data) have not been intended but somewhat sidelined, focusing on very few
+                  approaches that work flawlessly. </p>
+               <p xml:id="p53">We expect that due to DM, a variety of rather short but potentially
+                  complex digital artifacts will be created and made accessible. Therefore, DM fits
+                  in a small but essential niche for (visually appealing) documents that are not
+                  treated within large textual editions or don’t merit a stand-alone web-page.</p>
+            </div>
+            <div xml:id="div5.3">
+               <head>Particularities and limitations </head>
+               <p xml:id="p54">DM demonstrates that it is possible to provide an easy-to-use
+                  platform with a solid design. Congrats to the developers for this.</p>
+            </div>
+            <div xml:id="div5.4">
+               <head>Suggestions for improvement</head>
+               <p xml:id="p55">In version 0.3.2. (March 2021) the project seemed orphaned since
+                  dependencies were from November 2019. In July 2021, the development went on, and
+                  version 0.5.0 was released in August. In October, we got aware of the release of
+                  version 1.0.0.</p>
+               <p xml:id="p56">When we started using DM, we had an application in a classroom
+                  setting in mind for which the tool worked very well and flawlessly (from a viewer
+                  and contributor perspective). The implementation of norm data (e. g., support of
+                  Geonames) is, of course, possible in the form of linking, but currently, there is
+                  no clear path towards using such data. In this regard Recogito is currently ahead.
+                  At the same time, we started discussions about using DM as a crowdsourcing
+                  application in order to deeply annotate one specific historical map. At the
+                  current stage of development, DM does not seem to be an adequate tool for this
+                  approach. Although the check-out functionality hinders overwriting contributions,
+                  the user management is not really convenient (every user needs a dedicated account
+                  with an individual password). While collaborating with other users is possible,
+                  only one person can work on a document at a time. The ability to check out an
+                  annotation box instead of the whole page would make a crowdsourcing approach more
+                  feasible. Furthermore, certain text entities were envisioned in specific (fixed)
+                  structures. This is, for the moment, not supported but could be an interesting
+                  add-on. Moreover, we would like to have more possibilities with regards to
+                  extraction/export of textual files (at least in plain text, ideally as TEI
+                  XML).</p>
+            </div>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography"/>
+      </back>
+   </text>
+</TEI>

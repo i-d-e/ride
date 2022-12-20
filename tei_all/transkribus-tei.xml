@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.15.6">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transkribus: Reviewing HTR training on (Greek) manuscripts</title>
+            <author ref="/">
+               <name>
+                  <forename>Elpida</forename>
+                  <surname>Perdiki</surname>
+               </name>
+               <affiliation>
+                  <orgName>Democritus University of Thrace</orgName>
+                  <placeName>Komotini, Greece</placeName>
+               </affiliation>
+               <email>eperdiki@helit.duth.gr</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2022-12">December 2022</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15/transkribus</idno>
+            <idno type="DOI">10.18716/ride.a.15.6</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue15/transkribus/transkribus.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina Scholger</editor>
+            <biblScope unit="issue" n="15">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Transkribus</title>
+                  <editor>University of Innsbruck and READ-COOP SCE</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>University of Innsbruck and READ-COOP SCE</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>University of Innsbruck and READ-COOP SCE</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Designer</resp>
+                     <persName>University of Innsbruck and READ-COOP SCE</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>University of Innsbruck and READ-COOP SCE</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Advisor</resp>
+                     <persName>University of Innsbruck and READ-COOP SCE</persName>
+                  </respStmt>
+                  <date type="publication">2019</date>
+                  <idno type="URI">https://transkribus.eu/</idno>
+                  <date type="accessed">2021-12-10</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">Criteria for Reviewing Tools and Environments for Digital Scholarly Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>HTML</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>.jpg, IIIF</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>.docx</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>MUFI (Medieval Unicode Font Initiative)</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>annotation</term>
+               <term>interface</term>
+               <term>tei/xml</term>
+               <term>transcription</term>
+               <term>collaborative</term>
+               <term>manuscript transmission</term>
+               <term>diplomatic transcription</term>
+               <term>palaeographic annotations</term>
+               <term>htr</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p style="text-align: justify;">Transkribus is a fully developed GUI (graphical user interface) platform offering (among others) the possibility to train HTR models with AI. It supports auto-transcription and searching of historical documents and is oriented towards Archives, Libraries, and researchers. This review describes most of Transkribus’ features by outlining the results of a project researching HTR on Greek manuscripts. Transkribus proves to be a useful solution for painlessly implementing state-of-the-art technology on Humanities, regardless of technical expertise or resources’ limitations. Any discussion in this review for further development of the platform is only provided given some of the Greek manuscripts’ peculiarities.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">OCR and most recently HTR technologies have proven to be of assistance in several scientific fields offering ever-evolving solutions for off-/online text recognition. Among those, Humanities and especially research on manuscript tradition(s) could benefit a lot from the progress of such technologies. Transkribus is one of the very few projects which have fully developed a ready-to-use tool for training HTR models via ΑΙ (Artificial Intelligence) to automate historical documents’ transcription.<note xml:id="ftn1">
+                  <ref target="https://web.archive.org/web/20211108183341/https:/readcoop.eu/transkribus/">https://web.archive.org/web/20211108183341/https:/readcoop.eu/transkribus/</ref>
+               </note> This review of the Transkribus platform is mostly based on personal experience with the software, gained through research regarding my PhD. I have extensively used Transkribus for testing automatic transcription of large document data sets, with a case study of witnesses containing John Chrysostom’s <emph>Homilies</emph> of Saint Paul’s <emph>Epistles to Titus</emph>. Part of my research results has been published at <emph>Classics@ </emph>18, “Ancient Manuscripts and Virtual Research Environments” issue (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>). All points of this review take into consideration mostly the usability of the software in my field. No technical details are reviewed, as a result, an expert could cover that aspect.</p>
+            <p xml:id="p2">Initially developed by the University of Innsbruck in 2013 and the Horizon 2020 EU research project READ in 2016  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>), Transkribus is a cross-platform ecosystem continually being developed since 2019 by the READ-COOP SCE, a European Cooperative Society to sustain and evolve the project.<note xml:id="ftn2">
+                  <ref target="https://web.archive.org/web/20211213175714/https://readcoop.eu/about/">https://web.archive.org/web/20211213175714/https://readcoop.eu/about/</ref>
+               </note> Although not fully open source, its code can be found both in GitHub and in GitLab repositories, where is now solely stored  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>).<note xml:id="ftn3">
+                  <ref target="https://web.archive.org/web/20211213181217/https://github.com/transkribus/">https://web.archive.org/web/20211213181217/https://github.com/transkribus/</ref> and <ref target="https://web.archive.org/web/20211213184430/https://gitlab.com/readcoop/transkribus">https://web.archive.org/web/20211213184430/https://gitlab.com/readcoop/transkribus</ref> respectively.</note> Transkribus offers two main solutions for the automation of manuscript transcription. One could either work with the “Expert Client”,<note xml:id="ftn4">
+                  <ref target="http://web.archive.org/web/20211113063459/https:/readcoop.eu/transkribus/download/">http://web.archive.org/web/20211113063459/https://readcoop.eu/transkribus/download/</ref>
+               </note> which has a very rich in features GUI (graphical user interface), or the “Transkribus Lite” option on a web browser,<note xml:id="ftn5">
+                  <ref target="http://web.archive.org/web/20220119164148/https:/transkribus.eu/lite/">http://web.archive.org/web/20220119164148/https://transkribus.eu/lite/</ref>
+               </note> with a cleaner interface, yet a lack of some tools. In the course of my research, I have extensively used both solutions and specifically I have been working with “Expert Client” versions 1.10.0-1.16.1 on Windows (10 &amp; 11, 64bit, Intel® Core™ i5-8265U 1.60GHz, 8GB RAM) and Linux (Mint 19.00, 32 bit, Intel Pentium T3200 dual-core processor 2GHz, 3GB RAM) and with versions 1.0.7-1.3.1 of “Transkribus Lite” on a Chrome browser (versions 93.0.4577.63-97.0.4692.99). Transkribus’ “Expert Client” requires a minimum Java version 8 to be properly executed.<note xml:id="ftn6"> See “Supported Operating Systems” at: <ref target="https://web.archive.org/web/20220123181926/https:/readcoop.eu/transkribus/howto/how-to-download-install-and-run-transkribus/">https://web.archive.org/web/20220123181926/https://readcoop.eu/transkribus/howto/how-to-download-install-and-run-transkribus/</ref>.</note> Apart from that, no other software or hardware dependency is necessary for the platform to be fully functional.</p>
+            <p xml:id="p3">In general, Transkribus has been offered to the public as a freemium model, meaning that all versions (GUI and web-based) come free to use in most of their functionality, except for the ability to automatically transcribe documents with already trained HTR models. For that purpose, all signed up users acquire 500 free credits (equal to a 400 pages transcription) upon subscription and then move on to a payment method depending on their research needs. Other than that, Transkribus offers a scholarship programme as well, for selected students.<note xml:id="ftn7"> More about pricing options, studentship and credits’ management can be found at: <ref target="http://web.archive.org/web/20211118014952/https:/readcoop.eu/transkribus/credits/">http://web.archive.org/web/20211118014952/https://readcoop.eu/transkribus/credits/</ref>.</note>
+            </p>
+         </div>
+         <div xml:id="div2">
+            <head>Methodology and implementation</head>
+            <p xml:id="p4">The need of accessing ancient/historical documents goes back to the first historians. People and especially scientists advance by studying sources of existing knowledge. It goes without saying that in recent years a lot of progress has been made in the field of text recognition – especially HTR, as a means to retrieve more quickly and efficiently historical documents. Transkribus builds upon that progress by integrating into one platform advanced technology tools such as HTR and layout analysis via neural network training, text to image matching, keyword spotting, TEI/XML mark-up tool, and even online collaboration on same document collections, as a form of a Virtual Research Environment (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>). Similar projects are a) eScriptorium,<note xml:id="ftn8"> More information about the project can be found at: <ref target="https://web.archive.org/web/20220102050954/https://escriptorium.fr/">https://web.archive.org/web/20220102050954/https://escriptorium.fr/</ref>
+                  <hi rend="Hyperlink">.</hi>
+               </note> which seems to offer the same features but as a fully open-source application, b) python systems implemented with TensorFlow library,<note xml:id="ftn9"> See for instance “SimpleHTR” project at: <ref target="https://web.archive.org/web/20220124180144/https:/github.com/githubharald/SimpleHTR">https://web.archive.org/web/20220124180144/https://github.com/githubharald/SimpleHTR</ref>.</note> c) Kraken, an OCR system for historical documents,<note xml:id="ftn10"> More information about the project are available at: <ref target="https://web.archive.org/web/20220129152558/http:/kraken.re/master/index.html">https://web.archive.org/web/20220129152558/http://kraken.re/master/index.html</ref>.</note> and d) Tesseract, the OCR engine developed by Google and mostly used in many projects.<note xml:id="ftn11"> Tesseract repository can be found at GitHub: <ref target="https://web.archive.org/web/20220125061256/https:/github.com/tesseract-ocr/tesseract">https://web.archive.org/web/20220125061256/https://github.com/tesseract-ocr/tesseract</ref>.</note> All the latter however presuppose advanced knowledge of coding and CLI (command-line interface).</p>
+            <p xml:id="p5">So, if one would seek for Transkribus’ innovation in the field, they should not focus specifically on HTR technology and the applied algorithm (yet not to be denied of course), but rather on the possibility of HTR to be exploited by a vast majority of researchers. Due to its effective and user-friendly environment, researchers, archives/collections, and research centres across the linguistic variety of the world could easily access and make effective use of Transkribus’ features leading to general progress in Humanities. Ancient documents, undiscovered for many years, could now be massively and automatically studied, regardless of the language they are written in. As a result, valuable historical, literary, and linguistic information could be retrieved much quicker than in the past. More importantly, despite offering state-of-the-art tools as the pioneering possibility to train your neural network for text recognition at any historical document, emphasis should lay on the fact that this very function is completely possible even with a low-power hardware machine such as a 32- or 63bit laptop and few GBs of RAM (see ibid. “Introduction”, for the technical specifications). That software’s performance proves to be liberating for independent researchers or scientific projects with a low budget/workforce (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>).</p>
+            <p xml:id="p6">
+               <figure xml:id="img1">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-1.png"/>
+                  <head type="legend">Rollback to specific versions option.</head>
+               </figure>Behind the convenient GUI platform or the web portal of Transkribus lies a compact backend architecture that consists of interconnection between several Java applications, an Apache Tomcat and an Oracle Database  (its visual representation can be found at <ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). Subscribed users log in to the platform and import selected documents images to private collections, which are only shared with their collaborators to whom the collections manager assigns custom roles of full or restricted access under permission. File images are imported on a server via a) local folder, b) FTP, c) URL of DFG Viewer METS or d) URL of IIIF manifest. Those files are called documents and are organised in collections created by the user. Then a PAGE XML with a unique key is generated for each image – a format framework that stores documents’ structural information and image characteristics for recording and evaluating document analysis workflow  (<ref type="crossref" target="#pletschacheretal2010">Pletschacher and Antonacopoulos 2010</ref>; <ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). That PAGE XML file, along with relevant metadata of the document stored in the database, is augmented to a new document version every time editing progress is saved. As a result, users can roll back to whichever version, if needed – there is a specific button for that purpose on the main panel of the software, by which users can select from a detailed list of all saved versions (see <ref type="crossref" target="#img1">fig. 1</ref>) </p>
+            <p xml:id="p7">An Apache Solr indexing solution provides keyword spotting through full-text search. The interface has been written in Java and C++ alongside OpenCV and JNI. All this workflow is documented in detail in the paper “Transkribus - a Service Platform for Transcription, Recognition and Retrieval of Historical Documents”  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). For layout analysis, certain tools are deployed provided by the National Centre of Scientific Research ”Demokritos” (NCSR), the Computer Vision Lab (CVL) of the Technical University Vienna, and the Computational Intelligence Technology Laboratory (CITlab) at the University of Rostock  (more on the matter can be found at Kahle et al. 2017). Text recognition is offered in two different ways: a) ABBYY FineReader 11 SDK is used for OCR (Optical Character Recognition) of printed texts and b) offline HTR engines provide manuscripts transcriptions via HMM (Hidden Markov Models) and language models, or RNN (Recurrent Neural Networks) and no language models, through developments from the Pattern Recognition and Human Language Technology (PRHLT) research centre, University of Valencia (UPVLC) and the CITlab and PLANET intelligent systems GmbH respectively  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). All systems described above are responsible for the neural model training on the data provided by the users. Users annotate via Transkribus GUI relevant points of the manuscript images and provide ground truth data of transcription. Both segmented images and their transcriptions are then considered to be training data and, when selected, can be used to train an HTR model at a certain manuscript collection. A portion of the same data is defined by the user as the validation set, which is used post-training to evaluate the HTR performance of the model  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). </p>
+         </div>
+         <div xml:id="div3">
+            <head>An instance of Transkrib-ing</head>
+            <p xml:id="p8">
+               <figure xml:id="img2">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-2.png"/>
+                  <head type="legend">Setting user roles and permission in collections.</head>
+               </figure>An example of usage would showcase more vividly Transkribus’ possibilities. So, once logged in (one cannot download the platform unless signing up for an account), a user can import manuscript images organised in collections (as described in the “Methodology and implementation” section ibid.). Each collection can be modified by more than one user, if users’ roles and permissions are assigned (i. e., administrator, editor, viewer etc. – see <ref type="crossref" target="#img2">fig. 2</ref>).</p>
+            <p xml:id="p9">
+               <figure xml:id="img3">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-3.png"/>
+                  <head type="legend">Transkribus automatic layout analysis.</head>
+               </figure>
+               <figure xml:id="img4">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-4.png"/>
+                  <head type="legend">Transkribus manual layout analysis.</head>
+               </figure>That feature ensures that a researcher could work collaboratively with a group of other researchers, or even a crowdsourcing team, without risking any meddling with the training data and most importantly with expediting the research progress. All data in collaborative collections are seamlessly synchronised and connected via the Transkribus server, so any document changes are almost instantly visible (a refresh of the environment is of course required, though, should any recent change happen, a pop-up window informs the user anyhow). From that point on, users can continue to the most important step of the HTR training. Image files should be segmented to define the baseline of the text, a process known as layout analysis, which can be either automatic (see <ref type="crossref" target="#img3">fig. 3</ref>) or manual (see <ref type="crossref" target="#img4">fig. 4</ref>).</p>
+            <p xml:id="p10">
+               <figure xml:id="img5">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-5.png"/>
+                  <head type="legend"> Transcription and Text2Image tool.</head>
+               </figure>After segmentation is complete, the user may provide line per line diplomatic transcriptions of the depicted text, again either manually or automatically via “Text2Image” tool, by importing a .txt file (which must be named exactly like the image file, so Transkribus can successfully synchronise image and relevant transcription – see <ref type="crossref" target="#img5">fig. 5</ref>).</p>
+            <p xml:id="p11">Some discussion has arisen on how much data and epochs (number of times a learning algorithm sees the complete dataset) are necessary for successful training of any neural network really but also regarding HTR  (<ref type="crossref" target="#stroebeletal2020">Ströbel, Clematide, and Volk 2020</ref>). For instance, Transkribus guidelines recommend a minimum transcription of 5,000–15,000 words and 50 epochs, depending on the format of the text;<note xml:id="ftn12"> As defined in Transkribus’ documentation: <ref target="https://web.archive.org/web/20220130213434/https://readcoop.eu/transkribus/howto/use-transkribus-in-10-steps/">https://web.archive.org/web/20220130213434/https://readcoop.eu/transkribus/howto/use-transkribus-in-10-steps/</ref>. </note> printed texts require less data than manuscripts, due to the uniformity of the script style. Other researchers have experimented successfully with less data (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>) or have argued about why and when more data and more epochs could result in overfitting, meaning to worsen the HTR results  (<ref type="crossref" target="#rabus2019">Rabus 2019</ref>). Decision on the matter should be made after taking into consideration <list rend="ordered">
+                  <item>the quality of the images, </item>
+                  <item>the uniformity of the script and/or the existence of more than one scribes (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>), </item>
+               <item>the utilisation of an already fully trained model in the same language (as a base model), which could boost up the training process, and </item>
+                  <item>the research goals; a searchable text requires less HTR accuracy than a text to be included in a critical edition (some of those aspects are discussed at <ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021)</ref>. </item>
+               </list>
+            </p>
+            <p xml:id="p12">
+               <figure xml:id="img6">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-6.png"/>
+                  <head type="legend">Training an HTR model with AI.</head>
+               </figure>For most projects, an average of 10,000 words should suffice for a successful model. With that step completed the user can proceed to the training of the model. A relevant button can be found at the “Tools” section of the panel and a second window prompts the user to define the details of the training, such as: <list rend="ordered">
+                  <item>name and description of the model, </item>
+                  <item>the language in which text is written [really any language at all or even more than one in the same document – I have already successfully trained models for Greek manuscripts from the 10th–14th c. A.D. (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>) and there are also few projects, that have worked with non-Latin scripts as Arabic or with multiple languages in the same model<note xml:id="ftn13">See for instance the multi-language model trained on 6 different languages and centuries data:  <ref target="https://web.archive.org/web/20220130101732/https://readcoop.eu/model/transkribus-print-multi-language-dutch-german-english-finnish-french-swedish-etc/">https://web.archive.org/web/20220130101732/https://readcoop.eu/model/transkribus-print-multi-language-dutch-german-english-finnish-french-swedish-etc/</ref>, or the experiments conducted on Arabic manuscripts by Dr Adi Keinan-Schoonbaert, Digital Curator for Asian and African Collections, British Library: <ref target="https://web.archive.org/web/20210416133914/https://blogs.bl.uk/digital-scholarship/2020/01/using-transkribus-for-arabic-handwritten-text-recognition.html">https://web.archive.org/web/20210416133914/https://blogs.bl.uk/digital-scholarship/2020/01/using-transkribus-for-arabic-handwritten-text-recognition.html</ref>.</note>, </item>
+                  <item>desired Nr. of epochs (system default is 50) and </item>
+                  <item>setting the pages that will be utilised as a training set and those to be used in validation (see <ref type="crossref" target="#img6">fig. 6</ref>) </item>
+               </list>
+            </p>
+            <p xml:id="p13">
+               <figure xml:id="img7">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-7.png"/>
+                  <head type="legend"> Possible output formats of Transkribus documents.</head>
+               </figure>If needed, one could easily benefit from an existing model in the same language, as a base model. That can be used as a means of data augmentation, as it helps train the model much faster if one has not had enough training data  (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>). Depending on the size of the data set, the training will be efficiently completed within a few hours or days. Because training is executed on Transkribus servers, during the training period the user can freely continue to use this or any other software, or even shut down his/her computer, which frees up resources and delivers a performance that does not influence interface responsiveness. Upon completion, Transkribus notifies the user via email of the training progress, and models can be successfully applied at manuscripts transcriptions, further improved if needed and even publicly published for the benefit of the whole community. Transcribed collections can be easily exported to many formats: from simple .txt files to PDF documents or even a fully structured TEI file (see <ref type="crossref" target="#img7">fig. 7</ref>). Exports can be sent via the platform’s server to the user’s email or saved locally to a selected folder.</p>
+            <p xml:id="p14">The accuracy and efficiency of Transkribus as a complete solution of HTR emerge from the high number of DH projects (independent researchers and archive collections) that have successfully applied the software to research related to historical documents.<note xml:id="ftn14"> Transkribus has dedicated a page informing for such projects at: <ref target="https://web.archive.org/web/20220129182000/https:/readcoop.eu/success-stories/">https://web.archive.org/web/20220129182000/https://readcoop.eu/success-stories/</ref>. See also the crowdsourcing UCL’s Bentham Project: <ref target="https://web.archive.org/web/20220130135024/https://www.ucl.ac.uk/news/2019/aug/transcribing-brunels-illegible-handwriting-using-ai/">https://web.archive.org/web/20220130135024/https://www.ucl.ac.uk/news/2019/aug/transcribing-brunels-illegible-handwriting-using-ai/</ref>. </note> Moreover, Transkribus has been researched by scholars of non-Latin alphabet scripts, such as Greek or Cyrillic alphabets, enlightening thus the methodology relevant to the implementation of HTR technology  (<ref type="crossref" target="#rabus2019">Rabus 2019</ref>; <ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>; <ref type="crossref" target="#burlacuetal2021">Burlacu and Rabus 2021</ref>). Despite, individual differences originating from the distinctiveness of every historical collection/script, all those projects feature one common conclusion: HTR technology, especially when provided in a user-friendly environment, can and will undoubtedly speed up and facilitate research in Humanities.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Usability and user’s support</head>
+            <p xml:id="p15">The scope and the length of this review do not allow for further, more detailed demonstration of all aspects and possibilities Transkribus can provide to manuscripts research. Yet, because of the richness of the platform’s tools and the sense of complexity these tools may develop to any user, the Transkribus team has provided extensive and sustained documentation of the platform titled “Resource Centre”<note xml:id="ftn15">
+                  <ref target="https://web.archive.org/web/20220130141552/https://readcoop.eu/transkribus/resources/">https://web.archive.org/web/20220130141552/https://readcoop.eu/transkribus/resources/</ref>.</note>. What used to be a wiki database, is now an .html format of all relevant information, which inform beginners or expert users for every aspect of the software. From installation instructions (covered by relevant step to step screenshots) to how-to guides of most sophisticated features, FAQs, glossary, and even YouTube video tutorials, Transkribus knowledge is gathered in one efficient portal. The same “Help” function is also available in a button form, from the GUI of both “Expert Client” as well as “Transkribus Lite.” An extra section of the documentation offers more information on the REST API provided by Transkribus, should any user like to implement it in another software.<note xml:id="ftn16">
+                  <ref target="https://web.archive.org/web/20220130144402/https://readcoop.eu/transkribus/docu/rest-api/">https://web.archive.org/web/20220130144402/https://readcoop.eu/transkribus/docu/rest-api/</ref>.</note> In the occasion that none of this documentation offers enough help, users could easily contact the Transkribus team via a relevant email address. From my own experience, a member of the team usually gets back to you within a day and kindly offers a solution or at least guidance towards one. If there are absolutely no solutions to a specific problem or in the case of a malfunction, users can easily report a bug or request a feature directly from the GUI of “Expert Client.” A similar feature is not currently available at “Transkribus Lite” version. Apart from that functionality, users cannot provide any actual contribution to the enhancement of the platform. All maintenance is developed under the READ project  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>) and the READ-COOP SCE – hence the freemium model, fundings of which supports Transkribus’ further development.<note xml:id="ftn17"> See ibid. “Introduction” and note 3.</note>
+            </p>
+            <p xml:id="p16">
+               <figure xml:id="img8">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-8.png"/>
+                  <head type="legend">Indication of multiple users working simultaneously on the same document/collection.</head>
+               </figure>In the mentioned above documentation, there is extended information on the installation and execution of the software. Windows users can expect a flawless installation, yet I have encountered some instances in which installation was successful, but the software could not be executed. Transkribus provides guidance for that issue as well, but further action could be to temporarily disable any antivirus software. For Linux users, no issues should impact installation as it is straightforward, provided that one has experience with the Linux terminal and follows religiously Transkribus’ instructions. Uninstalling the software is as easy if needed, and updates are automatic and sound. I have no experience with Transkribus on Mac OS (Operating System), so I could not possibly offer insight on the matter. The web version of the platform, “Transkribus Lite”, requires only a sign-in step and no other plugin is needed for it to work properly. That portability of Transkribus is the main reason the platform proves to be an excellent VRE solution, especially for small research groups  (<ref type="crossref" target="#perdikietal2021">Perdiki and Konstantinidou 2021</ref>). Since all progress is saved in Transkribus servers, users can work simultaneously on collections and each editing version is marked up with the username of either one (see <ref type="crossref" target="#img8">fig. 8</ref>). The same functionality is available at “Transkribus Lite” as well. The potential of input and output multiple types offers a certain amount of interoperability, given the fact that due to the built-in text annotation feature, one could easily use exported files as data to another software. That is especially true when it concerns the TEI/XML files, which are fully machine-readable and could be used either in text mining techniques as NLP algorithms, or even in the preparation of a digital edition by encoding and structuring the transcription. </p>
+            <p xml:id="p17">The other side of Transkribus’ portability and interoperability comes (although not seamlessly) in the form of users’ data management. Treatment of all users’ data is described and determined in the relevant “General terms and conditions” page of Transkribus website,<note xml:id="ftn18">
+                  <ref target="https://web.archive.org/web/20211106145137/https://readcoop.eu/terms-and-conditions/">https://web.archive.org/web/20211106145137/https://readcoop.eu/terms-and-conditions/</ref>. </note> but it can be summarised under the statement: “A collection is private by default. […] Transkribus team has the right to use uploaded material for testing and improving its services.”  (<ref type="crossref" target="#kahleetal2027">Kahle et al. 2017</ref>). An issue may arise regarding that policy because all data is stored and handled in Innsbruck, Austria, servers, meaning that any usage of the platform must comply with the EU GDPR law (General Data Protection Regulation). According to §8.3 of the “General Terms and Conditions” Transkribus page,<note xml:id="ftn19"> See ibid note 18.</note> users can delete uploaded training and non-personal data, yet READ-COOP SCE may preserve copies of it. Considering the debatable section of GDPR “Data Deletion and Modification”  (<ref type="crossref" target="#hacqueetal2021">Haque et al. 2021</ref>), as well as the discussion on whether AI training data might be/contain personal data  (<ref type="crossref" target="#liuetal2021">Liu et al. 2021</ref>), Transkribus’ handling of users’ content seems questionable. Equally, unresolved is §8.5 in which is stated that users must ensure copyright licences for all uploaded data. That is a fair point, but a question arises on whether or not one conflicts with copyright law by using protected data in an AI training process, without distributing in public the data per se but only the research results derived from those data – a question partially answered by the §8.4, which declares that READ-COOP SCE “[…] grants the Customer all exclusive, transferable, sublicensable, worldwide indefinite rights […]” when recognition results concern copyrighted material. Although no violation of data seems to take place, researchers should carefully read “General Terms and Conditions” before deciding if they accept the management of their data.	 </p>
+         </div>
+         <div xml:id="div5">
+            <head>Interaction, GUI, and visualisation </head>
+            <p xml:id="p18">Whilst normally training neural networks requires technical expertise, firm knowledge of programming languages and coding in general, Transkribus provides the user with a compact, fully-featured, yet easy to grasp graphical environment. With the supplement of the detailed documentation, no expert knowledge is necessary for a user to start training an AI model. Thus, Transkribus’ users could either be experienced scholars/librarians or even inexperienced, simple users (students or else), which could provide valuable crowdsourcing input.</p>
+            <p xml:id="p19">
+               <figure xml:id="img9">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-9.png"/>
+                  <head type="legend">Transkribus’ GUI on a Windows OS.</head>
+               </figure>The interface of the “Expert Client” version might seem a little too complicated at the beginning, due to the small size of the numerous buttons (see <ref type="crossref" target="#img9">fig. 9</ref>). Although no function allows searching for a certain tool (which would be fairly appreciated, regarding the compact buttons panel), features are arranged in five (5) main tabs: server, overview, layout, metadata, and tools, which imply the relevant group of functionalities. In spite of that functionality structure, even experienced users might develop some difficulties in discovering the appropriate tool for each action. However, documentation provides useful insight for almost every aspect of the platform, so the interface becomes eventually familiar. At certain points of editing collections or training progress, prompting pop-up windows might appear, which explain functionality or remind the user of crucial steps, such as saving or refreshing documents, error messages, etc. </p>
+            <p xml:id="p20">
+               <figure xml:id="img10">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-10.png"/>
+                  <head type="legend">Transkribus Lite (web version) GUI.</head>
+               </figure>As mentioned earlier (see ibid. “Introduction” section), “Transkribus Lite” has a much cleaner and easy to grasp interface, which seems to be more helpful with inexperienced users (see <ref type="crossref" target="#img10">fig. 10</ref>).</p>
+            <p xml:id="p21">Up until recently one could only view and transcribe documents in the web version of the platform. Yet in the recent updates more functions became available and for the moment the following are possible: a) collections’ management, b) images’ uploading, c) documents’ view and editing/transcribing, d) text searching, e) HTR training or/and recognition, f) jobs viewing (as in tasks progress) and g) credit manager (as in checking credits’ balance).<note xml:id="ftn20"> All functions along with relevant screenshots are available at: <ref target="https://web.archive.org/web/20220121150815/https://transkribus.eu/lite/">https://web.archive.org/web/20220121150815/https://transkribus.eu/lite/</ref>. </note> Lastly, despite offering the aforementioned rich in features graphical interface and the web-based version, there is also a possibility to make good use of Transkribus’ functions within third-party applications through a RESTful API  <ref type="crossref" target="#kahleetal2027">(Kahle et al. 2017</ref>). Full documentation of it is provided at the Resources Centre of Transkribus, as mentioned above (see ibid. “Usability and user’s support” section). </p>
+            <p xml:id="p22">
+               <figure xml:id="img11">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-11.png"/>
+                  <head type="legend">Keyword spotting feature with returned results.</head>
+               </figure>
+               <figure xml:id="img12">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-12.png"/>
+                  <head type="legend">Visualisation of the HTR validation.</head>
+               </figure>
+               <figure xml:id="img13">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-13.png"/>
+                  <head type="legend">Text comparison of ground truth and HTR prediction’s errors.</head>
+               </figure>It becomes obvious then, that the possibilities of the platform are not solely restricted to training HTR models, although this is the most important feature. Transkribus offers a lot of features and tools in the compact form of a simple GUI, some of which are: a) keyword spotting, which returns results both in text and image form as well (see <ref type="crossref" target="#img11">fig. 11</ref>), b) TEI export of the completed transcription, c) comparison of text versions, etc. Especially, the text comparison feature proves to be particularly important to the visualisation of HTR accuracy, as it provides detailed statistics and relevant graphics of the CER [Character Error Rate] (see <ref type="crossref" target="#img12">fig. 12</ref>). and a ground truth-validation comparison image with colour marking of HTR errors (see <ref type="crossref" target="#img13">fig. 13</ref>). All these tools are helpful to evaluate the behaviour and progress of the model and thus decide further steps. </p>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion-Desiderata</head>
+            <p xml:id="p23">In the era of an exponential development of technology and under the real influence of AI in every aspect of the modern world, exploitation of state-of-the-art software/hardware in Humanities comes as a necessity. Accumulated historical knowledge of the past is patiently waiting in archives and collections to be researched. But human experts could not be enough to manually transcribe all that big data of Humanities. With that in mind projects that develop software for HTR, or any other form of ancient text mining are particularly welcome.</p>
+            <p xml:id="p24">However real the need for technical assistance in the field of manuscripts’ research, scholars do not always prove to be tech-savvy. On the other hand, because software is mostly produced (as expected) by developers-experts in their field, most DH projects are technically sophisticated and cannot thus be mainstream. What is not fully understood or difficult to use, most probably will not be used at all (see for instance the distinction between Windows and Linux users, despite Linux proving to be equally, if not more, efficient). Transkribus differentiation from similar projects is exactly the fact that the platform successfully empowered simple users with the potential of neural networks training. It offered AI in a simple and functional package, which already proves to move forward research in Humanities, as small research groups or independent researchers liberated themselves from expensive or complicated technology.</p>
+            <p xml:id="p25">Transkribus capability to be trained in reading any language is of course expected due to the technical architecture of the software (i. e., recognise characters structure and not language semantics), it is admirable nevertheless, especially with non-Latin alphabets. Greek manuscripts, which are the sole core of my experiments with Transkribus, have many peculiarities in style and format. Regardless of the wide chronological range of my data (10th–14th c. A.D.) and experiments with small datasets, Transkribus performance was always formidable. The factor of uniformity that characterises Greek medieval manuscripts was of course helpful to that direction. Even in the case of low-quality manuscript images, automatic layout analysis was hardly erroneous and upon several required transcription data, models would perform in the worst case under 20% of CER. For projects that do not necessitate high accuracy results, or for those with small datasets, that percentage of CER is more than accepted; it is usable.</p>
+            <p xml:id="p26">
+               <figure xml:id="img14">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-14.png"/>
+                  <head type="legend">Ligatures’ annotation and recognition.</head>
+               </figure>In contrast, the very universality of Transkribus leads to some limitations regarding certain palaeographic peculiarities of Greek manuscripts. One of these aspects is about ligatures and abbreviations. When it comes to defining (and so recognising) ligatures in Greek manuscripts, often it happens to come upon a ligature in which some of the letters are written just above the others, sort of <emph>supra scripsit</emph>. In those cases, despite annotating the characters as <emph>superscript</emph> (an annotation tag offered in Transkribus toolbox), often HTR (indeed not always) fails to understand such combinations of letters – unless the user clearly defines their baseline as separate (see <ref type="crossref" target="#img14">fig. 14</ref>). From a point of view, that phaenomenon is not a Transkribus’ shortcoming per se, but more of a general HTR issue. One should experiment a lot before choosing the best methodology for any project. </p>
+            <p xml:id="p27">In the same context, the already existing and extremely useful virtual keyboard of special characters could be further enriched in collaboration with palaeographers. For the moment it is possible to add custom Unicode characters that will represent ligatures or other non-Latin characters of the manuscripts, but Greek ligatures are underrepresented and could be further supplemented. That way one would not have to use incorrect symbols or letters, because in that case there is the risk to confuse the neural network by teaching it to read the same letter in multiple instances: i. e. I was transcribing the ligature representing the word <emph>καὶ </emph>with a combination of characters, the most visibly similar <emph>ς` </emph>(see <ref type="crossref" target="#img14">fig. 14</ref>). Eventually, that choice proved to be successful, but surely it was counterproductive as well. Such minor implementations could be extremely beneficial for end-users, who prefer a complete-suit software as Transkribus than a CLI package.</p>
+            <p xml:id="p28">
+               <figure xml:id="img15">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/transkribus/pictures/picture-15.png"/>
+                  <head type="legend">Baseline vs hanging line misconception.</head>
+               </figure>Improvements could also be made in the field of layout analysis, in regard to Greek manuscripts. Segmentation of the image is completed, as stated earlier, by annotating manually or automatically the baseline of a manuscript. Yet there exist instances of Greek medieval manuscripts (mainly from the 14th c. A.D.) that form their text from a hanging line instead of a baseline  (<ref type="crossref" target="#coulsonetal2020">Coulson and Babcock 2020</ref>). Most surprisingly, Transkribus’ automatic analysis captured that peculiar characteristic, however, because software presupposes that a baseline is needed, line region was misplaced in the void area <emph>supra script </emph>(see <ref type="crossref" target="#img15">fig. 15</ref>). The issue was corrected by manually annotating the layout of the document, but this option would not have been practical for larger collections.</p>
+            <p xml:id="p29">Finally, as DH projects do make progress in and exploit the field of AI, we should move on to research the validity of the trained models. It is common practice to evaluate HTR models on the CER percentage of validation sets. Although, due to the complexity of real, raw data, which have not been previously curated by a researcher, evaluation of HTR models probably should not rely only on CER of validation sets, but could also include explanation techniques that may help us decide further steps on the research  (<ref type="crossref" target="#ribeiro2016">Ribeiro, Singh, and Guestrin 2016</ref>). The main questions are: a) how do we know if these metrics are correct or misleading and b) how easy is it to inspect training or validation data when dealing with big manuscript data? Researchers, we, should be able to trust the (trained by us) models.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="burlacuetal2021">Burlacu, Constanța, and Achim Rabus. 2021. ‘Digitising (Romanian) Cyrillic Using Transkribus: New Perspectives’. Diacronia 2021 (14): A196–A196. <ref target="https://doi.org/10.17684/i14A196en">https://doi.org/10.17684/i14A196en</ref>.</bibl>
+               <bibl xml:id="coulsonetal2020">Coulson, Frank T., and Babcock, eds. 2020. The Oxford Handbook of Latin Palaeography. The Oxford Handbook of Latin Palaeography. Oxford University Press. <ref target="https://doi.org/10.1093/oxfordhb/9780195336948.001.0001">https://doi.org/10.1093/oxfordhb/9780195336948.001.0001</ref>.</bibl>
+               <bibl xml:id="hacqueetal2021">Haque, Akm Bahalul, A. K. M. Najmul Islam, Sami Hyrynsalmi, Bilal Naqvi, and Kari Smolander. 2021. ‘GDPR Compliant Blockchains–A Systematic Literature Review’. IEEE Access 9: 50593–606. <ref target="https://doi.org/10.1109/ACCESS.2021.3069877">https://doi.org/10.1109/ACCESS.2021.3069877</ref>.</bibl>
+               <bibl xml:id="kahleetal2027">Kahle, Philip, Sebastian Colutto, Gunter Hackl, and Gunter Muhlberger. 2017. ‘Transkribus - A Service Platform for Transcription, Recognition and Retrieval of Historical Documents’. In 2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR), 19–24. Kyoto: IEEE. <ref target="https://doi.org/10.1109/ICDAR.2017.307">https://doi.org/10.1109/ICDAR.2017.307</ref>.</bibl>
+               <bibl xml:id="liuetal2021">Liu, Bo, Ming Ding, Sina Shaham, Wenny Rahayu, Farhad Farokhi, and Zihuai Lin. 2021. ‘When Machine Learning Meets Privacy: A Survey and Outlook’. ACM Computing Surveys 54 (2): 31:1-31:36. <ref target="https://doi.org/10.1145/3436755">https://doi.org/10.1145/3436755</ref>.</bibl>
+               <bibl xml:id="perdikietal2021">Perdiki, Elpida, and Maria Konstantinidou. 2021. ‘Handling Big Manuscript Data’. Edited by Claire Clivaz and V. Allen Garrick. Classics@ 18 (Ancient Manuscripts and Virtual Research Environments, special issue). <ref target="https://classics-at.chs.harvard.edu/classics18-perdiki-and-konstantinidou/">https://classics-at.chs.harvard.edu/classics18-perdiki-and-konstantinidou/</ref>.</bibl>
+               <bibl xml:id="pletschacheretal2010">Pletschacher, Stefan, and Apostolos Antonacopoulos. 2010. ‘The PAGE (Page Analysis and Ground-Truth Elements) Format Framework’. In 2010 20th International Conference on Pattern Recognition, 257–60. Istanbul, Turkey: IEEE. <ref target="https://doi.org/10.1109/ICPR.2010.72">https://doi.org/10.1109/ICPR.2010.72</ref>.</bibl>
+               <bibl xml:id="rabus2019">Rabus, Achim. 2019. ‘Recognizing Handwritten Text in Slavic Manuscripts: A Neural-Network Approach Using Transkribus’. Scripta &amp; E-Scripta 19: 9–32.</bibl>
+               <bibl xml:id="ribeiro2016">Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. 2016. ‘“Why Should I Trust You?”: Explaining the Predictions of Any Classifier’. ArXiv:1602.04938 [Cs, Stat], August. <ref target="http://arxiv.org/abs/1602.04938">http://arxiv.org/abs/1602.04938</ref>.</bibl>
+               <bibl xml:id="stroebeletal2020">Ströbel, Phillip Benjamin, Simon Clematide, and Martin Volk. 2020. ‘How Much Data Do You Need? About the Creation of a Ground Truth for Black Letter and the Effectiveness of Neural OCR’. In Proceedings of the 12th Language Resources and Evaluation Conference, 3551–59. Marseille, France: European Language Resources Association. <ref target="https://www.aclweb.org/anthology/2020.lrec-1.436">https://www.aclweb.org/anthology/2020.lrec-1.436</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

@@ -1,0 +1,2115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.15.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Stylo, un éditeur pour les sciences humaines et sociales</title>
+            <author ref="/">
+               <name>
+                  <forename>Estelle</forename>
+                  <surname>Debouy</surname>
+               </name>
+               <affiliation>
+                  <orgName>Université de Poitiers</orgName>
+                  <placeName>Poitiers, France</placeName>
+               </affiliation>
+               <email>edebouy@univ-poitiers.fr</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2022-12">December 2022</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15/stylo</idno>
+            <idno type="DOI">10.18716/ride.a.15.3</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue15/stylo/stylo.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+            <editor ref=" https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina Scholger</editor>
+            <biblScope unit="issue" n="15"/>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Stylo</title>
+                  <editor>Chaire de Recherche du Canada sur les écritures numériques (CRC-EN)</editor>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Grossetie Guillaume</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Parisot Thomas</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Fauchié Antoine</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Juchereau Arthur</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Krause Lena</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Mellet Margot</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Monjour Servanne</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Sauret Nicolas</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Vitali-Rosati Marcello</persName>
+                  </respStmt>
+                  <date type="publication">2018</date>
+                  <idno type="URI">https://stylo.huma-num.fr/</idno>
+                  <date type="accessed">2022-10-17</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">Criteria for Reviewing Tools and Environments for Digital Scholarly Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>.md</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>epub</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>visioconference</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e. g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>scholarly edition</term>
+               <term>collaborative edition</term>
+               <term>digital writing</term>
+               <term>markdown</term>
+               <term>scholarly journal</term>
+               <term>online text editor</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Stylo is an open source online text editor designed to allow researchers in the
+               humanities and social sciences to write their scientific papers in a straightforward
+               way while retaining full control over format and encoding. The source-text, encoded
+               in Markdown, can then be converted by Pandoc into a variety of formats. The documents
+               can also be viewed online through a permanent URL. Finally, Stylo features document
+               sharing functions that make collaborative editing easier. Stylo is
+               undoubtedly an interesting and innovative tool in the field of
+               collaborative publishing.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">L’éditeur Stylo, libre et gratuit sous licence GPL-3.0<note xml:id="ftn1">Cf. <ref target="https://github.com/EcrituresNumeriques/stylo/blob/master/LICENSE">https://github.com/EcrituresNumeriques/stylo/blob/master/LICENSE</ref>.</note>,
+               est développé par la Chaire de Recherche du Canada sur les écritures numériques
+               (CRC-EN) avec le support d’Érudit<note xml:id="ftn2">Infrastructure numérique qui
+                  soutient la publication numérique ouverte et la recherche en sciences humaines et
+                  sociales et en arts et lettres (<ref target="https://web.archive.org/web/20221107081219/https://www.erudit.org/en/">https://web.archive.org/web/20221107081219/https://www.erudit.org/en/</ref>).</note>
+               et de la Très Grande Infrastructure de Recherche (TGIR) Huma-Num<note xml:id="ftn3">Huma-Num, qui a pour tutelles principales le CNRS et le Campus Condorcet, a pour
+                  mission de construire et structurer, par l’intermédiaire de consortiums, une
+                  infrastructure numérique de niveau international (<ref target="https://web.archive.org/web/20221107081237/https://www.huma-num.fr/">https://web.archive.org/web/20221107081237/https://www.huma-num.fr/</ref>).</note>.
+               Il est hébergé par la TGIR Huma-Num depuis le 1ᵉʳ octobre 2020 (<ref type="crossref" target="#equipehumanum2020">Équipe de rédaction d’Huma-Num 2020</ref>). Connecté à
+                  HumanID<note xml:id="ftn4">Il s’agit d’un dispositif qui fournit, à travers une
+                  authentification unique, un accès à l’ensemble des services de stockage,
+                  traitement et diffusion des données scientifiques mis à disposition par
+                  Huma-Num.</note>, Stylo est accessible à tous les utilisateurs possédant un compte
+               chez Huma-Num. Le code source est disponible sur Github<note xml:id="ftn5">Cf. <ref target="https://github.com/EcrituresNumeriques/stylo">https://github.com/</ref>
+                  (lien archivé: <ref target="https://web.archive.org/web/20221107081252/https://github.com/EcrituresNumeriques/stylo">https://web.archive.org/web/20221107081252/https://github.com/EcrituresNumeriques/stylo</ref>)
+               </note>. Ce projet est encore un prototype en cours de développement.</p>
+            <p xml:id="p2">Stylo est un éditeur de texte en ligne conçu spécifiquement pour les
+               sciences humaines et sociales. Il doit permettre de rédiger tout type de textes
+               scientifiques (articles, monographies, thèses, mémoires, ouvrages collectifs, et
+               théoriquement éditions critiques). Visant à combiner les bonnes pratiques de
+               l’édition scientifique et celles de l’édition web, il repose sur :<list rend="bulleted">
+                  <item>le langage
+               Markdown pour la saisie du texte ;</item>
+                  <item>YAML pour l’enregistrement des
+               métadonnées ;</item>
+                  <item>BibTeX pour les références bibliographiques ;</item>
+                  <item>la chaîne de
+                  conversion Pandoc<note xml:id="ftn6">Cf. <ref target="https://web.archive.org/web/20221031020454/https://pandoc.org/">https://web.archive.org/web/20221031020454/https://pandoc.org/</ref>.</note>
+                  et XSLT pour les exports dans dix formats différents.</item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="div2">
+            <head>La « Stylo-sophie »<note xml:id="ftn7">Je reprends le terme employé dans la
+                  présentation de Stylo qui figure dans la documentation en ligne (<ref target="https://web.archive.org/web/20220521023727/http://stylo-doc.ecrituresnumeriques.ca/fr_FR/#!index.md">https://web.archive.org/web/20220521023727/http://stylo-doc.ecrituresnumeriques.ca/fr_FR/#!index.md</ref>).</note>
+            </head>
+            <div xml:id="div2.1">
+               <head>Contexte</head>
+               <p xml:id="p3">Le responsable du projet, Marcello Vitali-Rosati (<ref type="crossref" target="#vitalirosati2015">Vitali-Rosati 2015</ref>), est parti d’un constat :
+                  il déplore l’absence de solution adaptée aux besoins de l’écriture savante. Les
+                  outils existants présentent des limites qui doivent être dépassées ou reposent sur
+                  des principes soulevant un certain nombre de problèmes : ainsi, les traitements de
+                  texte entretiennent une confusion entre le contenu et la forme et ne permettent
+                  pas de structuration scientifique<note xml:id="ftn8">Sur les lacunes des logiciels
+                     de traitement de texte pour l’édition scientifique en sciences humaines et
+                     sociales, cf. <ref type="crossref" target="#vitalirosatietal2020">Vitali-Rosati
+                        et al. 2020</ref>.</note> ; LaTeX est un langage qui peut être perçu comme
+                  complexe par des chercheurs en sciences humaines ; l’encodage en XML a
+                  l’inconvénient d’être très lourd ; quant à <code>« Google Docs »,</code> il s’agit
+                  d’un cloud propriétaire qui ne garantit pas le respect de la vie privée.</p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Objectif</head>
+               <p xml:id="p4">Le projet Stylo est né de la volonté de donner aux auteurs la maîtrise
+                  de leurs données scientifiques et de l’ensemble de la chaîne éditoriale. Il faut
+                  cependant rappeler que cela comprend au sens propre la suite d’opérations par
+                  lesquelles un texte rédigé par un auteur est transformé en un texte publiable et
+                  publié. À la différence de LaTeX, Stylo ne permet pas de prendre en charge toutes
+                  ces étapes. Son grand intérêt est de permettre aux auteurs de saisir facilement
+                  leur texte dans un éditeur de texte. Ils en deviennent donc à la fois les auteurs
+                  et les encodeurs. L’encodage, qu’il soit sémantique ou de structure, s’ajoute à
+                  leur propriété intellectuelle tandis que les traitements de texte leur imposent de
+                  façon opaque leurs propres formats. La position de principe à l’origine de la
+                  conception de Stylo est donc excellente. Il est cependant illusoire de viser la
+                  maîtrise de toute la chaîne éditoriale : que le texte soit publié sous la forme
+                  d’un article dans une revue ou d’un livre, la réalisation et la diffusion
+                  nécessitent l’intervention de nombreux professionnels spécialisés (typographe,
+                  maquettiste, diffuseur, etc.) Et le fait que l’article ou le livre soit imprimé ou
+                  en ligne ne change rien à cela.</p>
+               <p xml:id="p5">Pour M. Vitali-Rosati (<ref type="crossref" target="#vitalirosatietal2020">Vitali-Rosati et al. 2020</ref>), cette idée
+                  selon laquelle écrire c’est non seulement écrire mais aussi structurer, relève
+                  d’une « culture de l’éditorialisation<note xml:id="ftn9">Sur ce concept, voir
+                     notamment la réflexion proposée par M. Vitali-Rosati sur « Écriture et
+                     éditorialisation » dans l’article « Qu’est-ce que l’écriture numérique ? »
+                        (<ref type="crossref" target="#vitalirosati2020">Vitali-Rosati
+                     2020</ref>).</note> en tant que processus de production de l’espace
+                  numérique ». Les concepteurs de Stylo ont souhaité construire un outil <emph>open
+                     source</emph> capable de garantir la bonne structuration des textes, et donc
+                  leur pérennité, leur indexation efficace, etc., sans demander aux chercheurs de
+                  développer des compétences informatiques trop complexes (<ref type="crossref" target="#sauret2018">Sauret 2018</ref>).</p>
+               <p xml:id="p6">L’éditeur Stylo doit donc répondre aux exigences suivantes (<ref type="crossref" target="#vitalirosati2018a">Vitali-Rosati 2018a</ref>) :<list rend="bulleted">
+                     <item>Être sémantique (<ref type="crossref" target="#kembellec2019">Kembellec
+                           2019</ref>, 7) : l’approche WYSIWYM (<emph>What You See Is What You
+                           Mean</emph>) qui a été adoptée, contrairement à l’approche WYSIWYG
+                           (<emph>What You See Is What You Get</emph>) qui est celle des traitements
+                        de texte, encourage la structuration logique avant le rendu
+                        graphique.</item>
+                     <item>Être facile à utiliser : partant du constat que nombre de chercheurs ne
+                        souhaitent pas consacrer du temps à maîtriser de nouveaux outils,
+                        M. Vitali-Rosati et son équipe ont choisi Markdown afin de ne pas
+                        interrompre la pensée par l’insertion de balises complexes. Ce langage
+                        présente en effet l’avantage de reposer sur une syntaxe simple et intuitive
+                        conçue pour être aussi facile à écrire et à lire que possible.</item>
+                  </list>
+               Être compatible avec d’autres formes d’écriture : l’éditeur repose sur
+                  des standards ouverts. La transparence des trois fichiers sources fondamentaux
+                  (Markdown, YAML et BibTeX) est au cœur de la philosophie de l’outil. Être <code>« low-tech »</code> : l’utilisation de standards et de
+                  technologies simples et pérennes est, pour les concepteurs de l’éditeur, la
+                  condition nécessaire à une maintenance aisée. Cette approche garantit aussi
+                  l’interopérabilité avec d’autres environnements et l’indépendance des utilisateurs
+                  vis-à-vis d’un logiciel ou d’un format.</p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Principes et fonctionnalités</head>
+            <p xml:id="p7">
+               <figure xml:id="img1">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-1.png"/>
+                  <head type="legend">Page d’accueil.</head>
+               </figure>
+               <figure xml:id="img2">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-2.png"/>
+                  <head type="legend">Les trois volets de l’interface de saisie.</head>
+               </figure>Une fois connecté, l’auteur accède à la page d’accueil où il a la
+               possibilité de créer un nouvel article (cf. <ref type="crossref" target="#img1">fig. 1</ref>). Quand il édite un article, apparaît une fenêtre qui se déploie en
+               trois volets comme on le voit sur la <ref type="crossref" target="#img2">figure
+                  2</ref>. Au centre : l’espace de saisie en Markdown. Dans le menu de gauche : le
+               gestionnaire de versions, la table des matières, le gestionnaire de bibliographie et
+               les statistiques. Dans le menu de droite : le gestionnaire de métadonnées<note xml:id="ftn10">Il est possible d’indiquer aussi bien les métadonnées fondamentales
+                  comme le titre, la date de publication, les auteurs, les mots-clés, que l’ensemble
+                  des métadonnées relatives à une revue savante.</note>. Stylo intègre la plupart
+               des métadonnées employées par les diffuseurs scientifiques et par les moteurs de
+               recherche grand public ou spécialisés.</p>
+         </div>
+         <div xml:id="div4">
+            <head>La saisie en Markdown</head>
+            <p xml:id="p8">Les concepteurs de Stylo ont fait le choix d’un langage de balisage
+               simplifié qui a le mérite de rendre accessible facilement une structuration
+               rigoureuse du texte. L’auteur peut ainsi indiquer quels seront les différents
+               éléments du texte : niveaux de titre du document, citations, notes, figures,
+               tableaux, etc. Stylo, basé sur Pandoc, utilise une variante de Markdown, décrite dans
+               la documentation de Pandoc comme <code>« Pandoc’s Markdown »</code>
+               <note xml:id="ftn11">Cf. <ref target="https://pandoc.org/MANUAL.html#pandocs-markdown">https://pandoc.org/MANUAL.html#pandocs-markdown</ref>.</note>, qui inclut des
+               fonctionnalités exclusives comme le traitement des citations notamment. Pour insérer
+               une note de bas de page il est possible de saisir un code comme dans <ref type="crossref" target="#code1">l'exemple 1</ref>.<figure xml:id="code1">
+                  <eg xml:space="preserve">En latin, l’adjectif s’accorde en genre, en nombre et en cas avec le nom auquel il se rapporte^[L’adjectif épithète de plusieurs noms s’accorde avec le plus proche, mais qualifie bien les deux substantifs.].</eg>
+                  <head type="legend">Exemple de code pour l’insertion d’une
+                     note.</head>
+               </figure>
+            </p>
+            <p xml:id="p9">Les concepteurs de Stylo considèrent que l’auteur doit aussi pouvoir
+               enrichir sémantiquement un terme ou une phrase (voir supra). Bien que Markdown ne
+               permette pas de balisage sémantique, le choix de Pandoc comme convertisseur rend
+               possible l’insertion d’annotations sémantiques : l’auteur doit alors utiliser le
+               sélecteur de classe <code>{.classe}</code> où <emph>classe</emph> peut correspondre à
+               « definition », <code>« description », « exemple », « concept », « these »,
+                  « question », « epigraphe », « dedicace », « credits » et « source »</code>. Il
+               faut cependant mentionner ici que les sélecteurs de classe, qui relèvent de la
+               structuration, n’ont pas de traduction sémantique dans le code : en utilisant la
+               classe « definition » par exemple, on obtient bien dans le fichier HTML
+               <code>&lt;span class="definition"&gt; … &lt;/span&gt;</code> mais cela reste un
+               attribut de classe défini dans une feuille de styles ; et dans le fichier TEI, qui
+               donnerait pourtant l’occasion d’une traduction sémantique, on ne retrouve que des
+               paragraphes <code>(&lt;p&gt; ... &lt;/p&gt;)</code> alors qu’on aurait pu s’attendre
+               à l’insertion d’un attribut sémantique. Par exemple : <code>&lt;span
+                  type="definition"&gt; … &lt;/span&gt;</code>.</p>
+            <p xml:id="p10">C’est grâce à ce système d’annotations sémantiques de mots que Stylo est
+               censé offrir la possibilité de mettre en page une édition critique. Rappelons que par
+               édition critique nous entendons ici l’édition d’un texte ancien transmis par la
+               tradition manuscrite. Elle comprend la liste des témoins, des sources, des leçons et
+               variantes présentés dans l’apparat critique, et éventuellement une traduction et un
+               commentaire. Si on prend l’exemple le plus simple décrit par les <emph>Guidelines for
+                  Electronic Text Encoding and Interchange </emph>de la TEI<note xml:id="ftn12">Cf.
+                  le chapitre 12 « Critical Apparatus » (<ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/TC.html</ref>).</note>, les
+               mots sont annotés à l’aide des trois éléments courants : app pour l’unité d’apparat
+               critique, <code>lem</code> pour le texte retenu par l’éditeur, et rdg pour les
+               variantes ou conjectures rejetées par l’éditeur. Il faut préciser que ces éléments
+               sont hiérarchisés : <code>lem</code> et <code>rdg</code> se trouvent toujours à l’intérieur de l’élément <code>app</code> et
+               jamais ailleurs (voir <ref type="crossref" target="#code2">exemple de code 2</ref>). <figure xml:id="code2">
+                  <eg xml:space="preserve">Longtemps je me suis<lb/>&lt;app&gt;<lb/>	&lt;lem wit="A"&gt;couché&lt;/lem&gt;<lb/>	&lt;rdg wit="B"&gt;levé&lt;/rdg&gt;<lb/>&lt;/app&gt;<lb/>de bonne heure.</eg>
+                  <head type="legend">Exemple d’apparat critique saisi en
+                     TEI.</head>
+               </figure>
+            </p>
+            <p xml:id="p11">Que faut-il donc écrire dans Stylo étant entendu que la syntaxe est
+                  [<code>texte]{.classe}</code> et que l’on peut inventer les classes dont on a
+               besoin ? On peut imaginer l'apparat critique suivant saisi en Markdown (exemple de <ref type="crossref" target="#code3">code 3</ref>). On obtiendra
+               alors le code HTML présenté dans l'exemple de <ref type="crossref" target="#code4">code 4</ref>. Et quel code HTML sera alors produit ?<figure xml:id="code3">
+                  <eg xml:space="preserve">Longtemps je me suis [[couché]{.lem}[levé]{.rdg}]{.app} de bonne heure.</eg>
+                  <head type="legend">Exemple d’apparat critique saisi en
+                     Markdown.</head>
+               </figure>
+               <figure xml:id="code4">
+                  <eg xml:space="preserve">Longtemps je me suis<lb/>
+&lt;span class="app"&gt;<lb/>
+	&lt;span class="lem"&gt;couché&lt;/span&gt;<lb/>
+	&lt;span class="rdg"&gt;levé&lt;/span&gt;<lb/>
+&lt;/span&gt;<lb/>
+de bonne heure.
+</eg>
+                  <head type="legend">Code HTML produit à partir de l’exemple
+                     3.</head>
+               </figure>
+            </p>
+            <p xml:id="p12">Plusieurs remarques s’imposent : Comment présenter les témoins et les
+               sources ? Si le HTML est utilisé pour la visualisation, il n’est pas fait pour
+               supporter ces informations. Il faudrait que le code soit plié pour permettre une
+               lecture aisée. C’est une question d’ergonomie qui se révèle importante si l’édition
+               est complexe. On constate donc qu’à mesure que l’édition gagne en complexité, on
+               s’éloigne de la logique de Markdown prônant un code léger.</p>
+            <p xml:id="p13">Il faudrait que l’éditeur ajoute à la feuille de styles conçue par
+               défaut la définition de nouveaux styles de manière à déterminer ce qui s’affiche ou
+               non : par exemple, les variantes pourraient s’afficher dans les marges, à condition
+               qu’elles soient peu nombreuses. Une solution consisterait à tout placer en note, par
+               exemple dans <code>&lt;span class="marginnote"&gt;,</code> comme le font les
+               collègues du pôle Document numérique de Caen<note xml:id="ftn13">Par exemple, dans
+                  l’édition de La nature des dieux de Cicéron réalisée par Clara Auvray-Assayas,
+                  c’est <code>&lt;note=type"apparat"&gt;…&lt;/note&gt; </code>qui a été utilisé pour
+                  présenter l’apparat critique : cf. <ref target="https://www.unicaen.fr/puc/sources/ciceron/static/LAT_ciceron.zip">https://www.unicaen.fr/puc/sources/ciceron/static/LAT_ciceron.zip</ref>.</note>.
+               Mais dans ce cas les différents éléments ne peuvent plus être identifiés par une
+               machine car, pour être sémantiques, les informations doivent être encodées comme des
+               éléments de données.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Suivi de versions, table des matières et bibliographie</head>
+            <p xml:id="p14">
+               <figure xml:id="img3">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-3.png"/>
+                  <head type="legend">Gestionnaire de bibliographie.</head>
+               </figure>
+               <figure xml:id="img4">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-4.png"/>
+                  <head type="legend">Présentation des références dans le fichier source.</head>
+               </figure>
+               <figure xml:id="img5">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-5.png"/>
+                  <head type="legend">Prévisualisation des références en HTML.</head>
+               </figure>Une attention particulière a été portée à la prise en compte d’un grand
+               nombre d’éléments propres à un travail scientifique<note xml:id="ftn14">Antoine
+                  Fauchié est parti de là quand il a rappelé le contexte dans lequel Stylo a été
+                  créé : « Context : academic publishing » (<ref type="crossref" target="#fauchie2020">Fauchié 2020</ref>).</note> :<list rend="bulleted">
+                  <item>
+                     <emph>Une rédaction en plusieurs étapes grâce au </emph>
+                     <code>« gestionnaire de versions ».</code> Les articles sont automatiquement
+                     sauvegardés, mais il est possible d’enregistrer des versions mineures ou
+                     majeures. Le gestionnaire de versions offre aussi la possibilité de comparer
+                     les différentes versions du texte et de suivre les corrections.</item>
+                  <item>
+                     <emph>Table des matières. </emph>Une table des matières est automatiquement
+                     générée à partir des titres de niveau 2, 3 et suivants, le titre de niveau 1
+                     étant réservé au titre de l’article déclaré dans les métadonnées.</item>
+                  <item>
+                     <emph>Bibliographie</emph>. Stylo permet de synchroniser son document à une
+                        <code>« collection »</code> Zotero<note xml:id="ftn15">Cf. <ref target="https://web.archive.org/web/20221107082029/https://www.zotero.org/">https://web.archive.org/web/20221107082029/https://www.zotero.org/</ref>.</note>.
+                     Il est aussi possible de saisir ou de récupérer les références au format BibTeX
+                     comme le montre la <ref type="crossref" target="#img3">figure 3</ref>.</item>
+                  <item>Une fois les références insérées dans le texte, les clés sont
+                     automatiquement remplacées par l’appel de citation et les références complètes
+                     sont produites à la fin de l’article comme on le voit sur les figures <ref type="crossref" target="#img4">4</ref> et <ref type="crossref" target="#img5">5</ref>.</item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="div6">
+            <head>La classe « Book »</head>
+            <p xml:id="p15">
+               <figure xml:id="img6">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-6.png"/>
+                  <head type="legend">Constitution d’un « Book ».</head>
+               </figure>Grâce à la classe <code>« Book »,</code> Stylo permet de créer des documents
+               plus complexes que des articles comme des mémoires ou des thèses. Les concepteurs
+               précisent toutefois que cette fonctionnalité est encore en cours de développement.
+               Elle repose sur l’utilisation de <code>« tags »</code> à poser sur tous les articles
+               qui constitueront le <code>« Book ». </code>Ils seront alors automatiquement chaînés
+               dans l’ordre alphabétique, comme on le voit dans l’exemple présenté dans la <ref type="crossref" target="#img6">figure 6</ref>.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Annotations, import, export</head>
+            <p xml:id="p16">
+               <figure xml:id="img7">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_15/stylo/pictures/picture-7.png"/>
+                  <head type="legend">Prévisualisation en HTML avec annotations.</head>
+               </figure>Chaque version d’un document est accessible en ligne dans un format HTML de
+               prévisualisation, exposé via une URL pérenne, permettant à un auteur ou un éditeur de
+               partager son texte. La prévisualisation est fournie avec le module d’annotation de la
+               plateforme Hypothesis (<ref type="crossref" target="#dossmann2020">Dossmann
+                  2020</ref>), ouvrant la voie à divers protocoles éditoriaux de relecture ou
+               d’évaluation (cf. <ref type="crossref" target="#img7">fig. 7</ref>).</p>
+            <p xml:id="p17">Stylo a été conçu pour que l’auteur puisse saisir directement son texte
+               en Markdown dans l’éditeur en ligne. Toutefois si le contenu destiné à être édité a
+               préalablement été structuré avec le logiciel Microsoft Word, il est possible de
+               l’importer en utilisant un <ref target="https://stylo-export.ecrituresnumeriques.ca/importdocx.html">convertisseur
+                  en ligne</ref> (du doc ou docx vers md). </p>
+            <p xml:id="p18">L’un des atouts majeurs de cet éditeur est de proposer, à partir d’une
+               seule saisie, de multiples formats de sortie. Ces exports sont de plusieurs types
+               selon la diffusion visée :<list rend="bulleted">
+                  <item>Des fichiers XML selon les schémas sélectionnés (Erudit, TEI, etc.)</item>
+                  <item>Des fichiers HTML pour publication directe sur des CMS (grâce à des API<note xml:id="ftn16">Une API (<emph>Application Programming Interface</emph>) est
+                        un programme permettant à deux applications distinctes de communiquer entre
+                        elles et d’échanger des données.</note>).</item>
+                  <item>Des fichiers PDF stylés selon des modèles programmables.</item>
+               </list>
+            </p>
+            <p xml:id="p19">L’export du mémoire se fait à travers un modèle (<emph>template</emph>)
+               LaTeX. Il correspond au modèle de mémoire et de thèse de l’université de Montréal.
+               Dans la documentation consultable en ligne, il est précisé que d’autres modèles
+               seront disponibles ultérieurement.</p>
+         </div>
+         <div xml:id="div8">
+            <head>Partage de documents</head>
+            <p xml:id="p20">Stylo est un éditeur en ligne qui offre aux auteurs la possibilité de
+               partager des documents dans le cadre d’une édition collaborative. Une fois que tous
+               les participants au projet sont inscrits dans Stylo, il leur suffit de partager leur
+               travail les uns avec les autres grâce à la fonction <code>« Share ».</code>
+            </p>
+         </div>
+         <div xml:id="div9">
+            <head>Documentation et support</head>
+            <p xml:id="p21">Plusieurs outils sont à la disposition des auteurs qui souhaitent
+               prendre en main l’éditeur Stylo :<list rend="bulleted">
+                  <item>un article <code>« type »</code> nommé <code>« How to Stylo</code> »
+                     apparaît par défaut dès qu’on est connecté : on y trouve comment saisir des
+                     titres, introduire des enrichissements typographiques, insérer des images, des
+                     listes, des tableaux et les éléments d’une édition (notes, références
+                     bibliographiques, citations). L’article se termine par une présentation des
+                     fonctions de prévisualisation et d’annotation ;</item>
+                  <item>une documentation en ligne : après avoir présenté comment faire ses
+                        <code>« premiers pas »</code> avec Stylo, les auteurs expliquent comment
+                     écrire en Markdown, structurer une bibliographie, prévisualiser, annoter et
+                     rédiger un article, et enfin produire un mémoire ou une thèse ; </item>
+                  <item>une vidéo de démonstration ; </item>
+                  <item>des publications présentées lors de divers événements scientifiques ;</item>
+                  <item>des permanences : la Chaire de recherche du Canada sur les écritures
+                     numériques organise en télé-conférence des sessions hebdomadaires de permanence
+                     pour le suivi de l’édition dans Stylo. Les organisateurs sont compétents et
+                     dévoués.</item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="div10">
+            <head>Exemples</head>
+            <p xml:id="p22">Stylo est utilisé pour la revue <ref target="https://web.archive.org/web/20221107082230/http:/www.sens-public.org/presentation/">Sens Public</ref> et en cours de test pour d’autres revues comme c’est le cas
+               pour le projet <ref target="https://web.archive.org/web/20221107082339/http:/revue20.org/le-projet/">Revue 2.0</ref>.</p>
+         </div>
+         <div xml:id="div11">
+            <head>Conclusion</head>
+         </div>
+         <div xml:id="div12">
+            <head>Apports</head>
+            <p xml:id="p23">Stylo est incontestablement un outil intéressant et novateur dans le
+               monde de l’édition collaborative. Il offre aux chercheurs en sciences humaines la
+               possibilité de rédiger facilement leurs documents scientifiques, tout en en
+               maîtrisant entièrement la structuration. La multiplicité des formats d’export
+               proposés permet de mener à bien une grande diversité de projets, y compris des
+               projets collaboratifs puisque chaque document peut être partagé entre plusieurs
+               auteurs.</p>
+         </div>
+         <div xml:id="div13">
+            <head>Limites</head>
+            <p xml:id="p24">Comme Stylo est encore en cours de développement, certaines
+               fonctionnalités attendues ne sont pas encore disponibles mais sont annoncées.</p>
+            <p xml:id="p25">On l’a dit, la fonction <code>« Book »</code> n’est pas encore
+               totalement fonctionnelle :<list rend="bulleted">
+                  <item>faute d’avoir placé un numéro au début de chaque nom, il n’est pas possible
+                     de réordonner les différents articles constitutifs d’un
+                     <code>« Book »</code> ;</item>
+                  <item>l’export est pour le moment instable (si l’on prend l’exemple de l’export
+                     PDF, le fichier produit est vide) alors que la prévisualisation qui passe par
+                     un export pour produire une URL publique servant de support de collaboration
+                     fonctionne bien ;</item>
+                  <item>le seul modèle prévu actuellement pour l’export PDF est celui de
+                     l’université de Montréal. Même si d’autres modèles doivent être intégrés dans
+                     une version ultérieure, il serait souhaitable de proposer à l’auteur la
+                     possibilité d’importer son propre modèle ;</item>
+                  <item>il faudra également attendre une prochaine version pour que l’interface
+                     propose un éditeur de métadonnées pour les métadonnées du mémoire ou de la
+                     thèse ;</item>
+                  <item>il n’est pas facile de produire des index, des listes des tables ou des
+                     figures ; cela dit, Stylo étant basé sur Pandoc, il est possible d’inclure dans
+                     un document des commandes spécifiques à certains formats d’export, rédigées
+                     dans le langage correspondant, telles que les commandes LaTeX pour les exports
+                     en PDF via LaTeX. Ceci permet d’utiliser par exemple <code>\index{entrée
+                        d’index}</code> et <code>\printindex</code>, ainsi que
+                        <code>\listoftables</code> et <code>\listoffigures</code>.</item>
+                  <item>enfin, il n’est pas possible actuellement d’afficher la bibliographie à la
+                     fin de chaque article d’un ouvrage collectif (c’est une bibliographie générale
+                     qui est générée à la fin du <code>« Book »</code>).</item>
+               </list>
+            </p>
+            <p xml:id="p26">Plusieurs fonctionnalités seront développées en lien avec
+                  Huma-Num :<list rend="bulleted">
+                  <item>le gestionnaire de bibliographie de Stylo reconnaîtra les références
+                        ISIDORE<note xml:id="ftn17">Isidore est un moteur de recherche permettant
+                        l’accès aux données numériques des sciences humaines et sociales (cf. <ref target="https://www.huma-num.fr/les-services-par-etapes/#isidorereutilisation">https://www.huma-num.fr/les-services-par-etapes/#isidorereutilisation</ref>).</note> :
+                     un travail est en cours pour aligner avec des autorités certaines métadonnées,
+                     comme les mots-clés ou les auteurs du document, en exploitant notamment l’API
+                     mise à disposition par le moteur de recherche isidore.science ;</item>
+                  <item>une interaction avec NAKALA<note xml:id="ftn18">Nakala est une base de
+                        données destinée à accueillir, conserver, rendre visible et accessible les
+                        données de recherche (cf. <ref target="https://www.huma-num.fr/les-services-par-etapes/#nakalapreservation">https://www.huma-num.fr/les-services-par-etapes/#nakalapreservation</ref>).</note>
+                     est envisagée.</item>
+               </list>
+            </p>
+            <p xml:id="p27">Concernant le degré de compatibilité de Stylo avec les différents
+               navigateurs : si je ne peux pas me prononcer sur Safari ou Edge faute de les avoir
+               testés, il m’a semblé raisonnable de vérifier que Stylo fonctionnait correctement
+               avec Firefox et Chrome/Chromium, les navigateurs les plus utilisés aujourd’hui
+               puisqu’ils sont compatibles avec les trois grands systèmes d’exploitation : c’est
+               bien le cas avec la version 91.5.0 de Firefox<note xml:id="ftn19">Cf. <ref target="https://www.mozilla.org/fr/firefox">https://www.mozilla.org/fr/firefox</ref>.</note> et avec la version
+               97.0.4692.99 de Chromium<note xml:id="ftn20">Cf. <ref target="https://www.chromium.org">https://www.chromium.org</ref>.</note> que
+               j’utilise. En revanche, si on active LibreJS, une extension libre qui bloque le code
+               JavaScript non libre<note xml:id="ftn21">Cf. <ref target="https://www.gnu.org/software/librejs">https://www.gnu.org/software/librejs</ref>.</note>, on ne peut plus utiliser
+               Stylo. Précisons qu’on a vu apparaître dans la dernière version de Stylo (1.6.7) un
+               lien vers une page qui décrira les engagements en matière de vie privée.</p>
+            <p xml:id="p28">Pour terminer, il faut relever qu’il n’est pas aisé de saisir une
+               édition critique dans Stylo. Le choix de Markdown, qui repose sur une syntaxe simple
+               et limitée, apparaît ici comme une contrainte quand il s’agit de produire une édition
+               complexe. La question du langage se pose alors. M. Vitali-Rosati, on l’a dit, part du
+               constat qu’il n’existe pas d’outil dédié à l’écriture scientifique. Or TeX a
+               précisément été créé par Donald E. Knuth à l’intention des auteurs de textes
+               scientifiques, parce qu’il souhaitait lui-même avoir la maîtrise sur la chaîne
+               éditoriale et qu’il était conscient que les auteurs étaient les mieux à même de
+               maîtriser les normes de leur discipline<note xml:id="ftn22">C’est ce qu’il expliqua
+                  lors d’une conférence donnée en 1978 devant les membres de l’<emph>American
+                     Mathematical Society</emph> où il présenta à la fois TeX et Metafont (<ref type="crossref" target="#knuth1979">D. E. Knuth 1979</ref>).</note>. Puis
+               Leslie Lamport a créé LaTeX, un ensemble de macros (formes condensées) permettant
+               d’alléger l’écriture des commandes TeX. Une saisie en LaTeX, contrairement à
+               Markdown, permet de saisir une édition critique dans toute sa complexité, sans
+               compter l’attention particulière accordée à la typographie (guillemets, tirets,
+                  etc.)<note xml:id="ftn23">Il faut néanmoins reconnaître que la qualité
+                  typographique d’un document est aussi largement affectée par le système
+                  d’exploitation sur lequel ce document est rédigé et par la connaissance que
+                  l’auteur a du système.</note> ou encore la prise en charge de langues multiples.
+               L’argument mis en avant selon lequel LaTeX serait trop complexe me semble contestable
+               dans la mesure où certaines questions sont de toute façon complexes, que ce soit dans
+               un fichier source LaTeX ou dans Stylo : c’est le cas, par exemple, de la saisie des
+               éléments constitutifs d’une édition critique tel l’apparat critique ou bien de
+               l’insertion des références bibliographiques. Si l’on souhaite malgré tout conserver
+               le choix d’un langage « léger » comme Markdown, une solution serait d’inventer de
+               nouveaux tags Markdown qui seraient directement convertis en TEI via Pandoc et Lua.
+               Plus simplement, il serait aussi possible de passer par le logiciel
+                  <emph>ekdosis</emph>
+               <note xml:id="ftn24">Développé par Robert Alessi (CNRS UMR 8167) et disponible depuis
+                  le CTAN : <ref target="https://web.archive.org/web/20221107082823/https://ctan.org/pkg/ekdosis">https://web.archive.org/web/20221107082823/https://ctan.org/pkg/ekdosis</ref>.
+                  Signalons aussi l’existence de Reledmac mais dont la finalité est la production
+                  d’une édition imprimée au format PDF (Reledmac a fait l’objet d’un compte rendu
+                  dans le numéro de RIDE consacré aux outils : <ref target="https://ride.i-d-e.de/issues/issue-11/reledmac/">https://ride.i-d-e.de/issues/issue-11/reledmac/</ref>, DOI :
+                  10.18716/ride.a.11.1).</note> qui fait les deux : il permet en effet de saisir
+               sous LaTeX tous les éléments constitutifs d’une édition critique (variantes, sources,
+               traduction, commentaire) et de demander une sortie aussi bien vers un fichier PDF que
+               vers un fichier TEI xml qui pourra être l’objet de requêtes. On peut en conclure que
+               pour une structuration de texte simple mais puissante du point de vue de l’écriture
+               humaniste, Stylo est plus simple que LaTeX, mais pour une structuration complexe (au
+               sens latin de complexus qui signifie <code>« plié »</code>), alors LaTeX est plus
+               simple.</p>
+         </div>
+         <div xml:id="div14">
+            <head>Suggestions</head>
+            <p xml:id="p29">Plusieurs suggestions peuvent être proposées pour améliorer cet
+               outil : Une version <emph>standalone</emph> permettrait à l’auteur de conserver
+               ses données sur son ordinateur ; annoncée par M. Vitali-Rosati dans un billet de blog
+               publié en 2018 (<ref type="crossref" target="#vitalirosati2018b">Vitali-Rosati
+                  2018b</ref>), cette fonctionnalité ne semble pas faire partie des projets
+               envisagés par les concepteurs dans leur espace GitHub. À ce titre, il serait utile de
+               pouvoir exporter son texte en Markdown afin d’être en mesure d’en poursuivre la
+               saisie indépendamment de Stylo.</p>
+            <p xml:id="p30">Concernant la fonctionnalité <code>« Book »,</code> il serait peut-être
+               intéressant pour les concepteurs de Stylo de consulter le projet Bookdown<note xml:id="ftn25">Cf. <ref target="http://bookdown.org/">http://bookdown</ref>.</note> (<ref type="crossref" target="#xie2017">Xie
+                  2017</ref>) : il s’agit d’un programme libre et <emph>open source</emph>, reposant
+               sur R Markdown, conçu dans le but de faciliter l’écriture de livres et d’articles
+               savants. Il permet notamment de générer des index multiples et des annexes, d’insérer
+               des références croisées, de personnaliser son modèle de document, etc.</p>
+            <p xml:id="p31">Concernant les formats :<list rend="bulleted">
+                  <item>il serait utile de pouvoir importer un texte préalablement mis en forme dans
+                     d’autres formats que docx ;</item>
+                  <item>l’export PDF pourrait prendre en charge des images dans un format autre que
+                     le PNG (c’est d’ailleurs une question mentionnée dans GitHub).</item>
+                  <item>L’auteur peut vouloir utiliser des images, photos, illustrations
+                     personnelles. Or une image, pour pouvoir être insérée dans Stylo, doit posséder
+                     une URL. On pourrait imaginer un espace de téléchargement d’images, comme le
+                     propose par exemple Overleaf<note xml:id="ftn26">Cf. <ref target="https://web.archive.org/web/20221107082945/https://www.overleaf.com/">https://web.archive.org/web/20221107082945/https://www.overleaf.com/</ref>.</note>,
+                     un éditeur LaTeX en ligne.</item>
+               </list>
+            </p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="dossmann2020">Dossmann, Gwenn. 2020. « Hypothes.is : guide
+                  utilisateur ». Support OpenEdition Books et Journals Éditer pour OpenEdition, <ref target="https://objs-fr.hypotheses.org/712">https://objs-fr.hypotheses.org/712</ref>.</bibl>
+               <bibl xml:id="equipehumanum2020">Équipe de rédaction d’Huma-Num. 2020. « Stylo, un
+                  éditeur de texte pour les SHS disponible chez Huma-Num ». Le blog d’Huma-Num et de
+                  ses consortiums, <ref target="https://humanum.hypotheses.org/6311">https://humanum.hypotheses.org/6311</ref>.</bibl>
+               <bibl xml:id="fauchie2020">Fauchié, Antoine. 2020. « Stylo: A User Friendly Text
+                  Editor for Humanities Scholars », Conférence FOSDEM. Bruxelles,
+                  https://archive.fosdem.org/2020/schedule/event/open_research_stylo.</bibl>
+               <bibl xml:id="kembellec2019">Kembellec, Gérald. 2019. « Semantic publishing, la
+                  sémantique dans la sémiotique des codes sources d’écrits d’écran scientifiques ».
+                  Les Enjeux de l’information et de la communication, 55 (20/2). <ref target="https://doi.org/10.3917/enic.027.0055">https://doi.org/10.3917/enic.027.0055</ref>.</bibl>
+               <bibl xml:id="knuth1979">Knuth, Donald E. 1979. « Mathematical Typography ». Bulletin
+                  (New Series) of the American Mathematical Society, 1 : 337-372.</bibl>
+               <bibl xml:id="sauret2018">Sauret, Nicolas. 2018. « Stylo : un éditeur sémantique pour
+                  les humanités ». Colloque « Repenser les humanités numériques », Centre de
+                  recherche interuniversitaire sur les humanités numériques, université de
+                  Montréal.</bibl>
+               <bibl xml:id="vitalirosati2015">Vitali-Rosati, Marcello. 2015. « An editor for
+                  academic papers (xml, html, md, TeX, pdf and if you really need it rtf) ». Culture
+                  numérique (Blog), 16 mars 2015, <ref target="http://blog.sens-public.org/marcellovitalirosati/an-editor-for-academic-papers-xml-html-md-tex-pdf-and-if-you-really-need-it-rtf">http://blog.sens-public.org/marcellovitalirosati/an-editor-for-academic-papers-xml-html-md-tex-pdf-and-if-you-really-need-it-rtf</ref>.</bibl>
+               <bibl xml:id="vitalirosati2018a">Vitali-Rosati, Marcello. 2018a. « Les chercheurs en
+                  SHS savent-ils écrire ? » The Conversation, 11 mars 2018. <ref target="http://theconversation.com/les-chercheurs-en-shs-savent-ils-ecrire-93024">http://theconversation.com/les-chercheurs-en-shs-savent-ils-ecrire-93024</ref>.</bibl>
+               <bibl xml:id="vitalirosati2018b">Vitali-Rosati, Marcello. 2018b. « Stylo : un éditeur
+                  de texte pour les sciences humaines et sociales ». Culture numérique (Blog), 3
+                  juin 2018. <ref target="http://blog.sens-public.org/marcellovitalirosati/stylo">http://blog.sens-public.org/marcellovitalirosati/stylo</ref>.</bibl>
+               <bibl xml:id="vitalirosati2020">Vitali-Rosati, Marcello. 2020. « Qu’est-ce que
+                  l’écriture numérique ? » Corela, HS-33. <ref target="https://doi.org/10.4000/corela.11759">https://doi.org/10.4000/corela.11759</ref>.</bibl>
+               <bibl xml:id="vitalirosatietal2020">Vitali-Rosati, Marcello, Nicolas Sauret, Margot
+                  Mellet et Antoine Fauchié. 2020. « Écrire les SHS en environnement numérique.
+                  L’éditeur de texte Stylo ». Revue Intelligibilité du numérique, 1. <ref target="http://intelligibilite-numerique.numerev.com/numeros/n-1-2020/18-ecrire-les-shs-en-environnement-numerique-l-editeur-de-texte-stylo">http://intelligibilite-numerique.numerev.com/numeros/n-1-2020/18-ecrire-les-shs-en-environnement-numerique-l-editeur-de-texte-stylo</ref>.</bibl>
+               <bibl xml:id="xie2017">Xie, Yihui. 2017. Bookdown Authoring Books and Technical
+                  Documents with R Markdown. CRC Press.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.15.2">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mei‑friend. A viewer and last-mile editor for MEI score encodings</title>
+            <author ref="https://d-nb.info/gnd/1161423672">
+               <name>
+                  <forename>Oleksii</forename>
+                  <surname>Sapov</surname>
+               </name>
+               <affiliation>
+                  <orgName>Mozarteum Foundation Salzburg</orgName>
+                  <placeName>Salzburg, Austria</placeName>
+               </affiliation>
+               <email>sapov@mozarteum.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2022-12">December 2022</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15/mei-friend</idno>
+            <idno type="DOI">10.18716/ride.a.15.2</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue15/mei-friend/mei-friend.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+            <editor ref=" https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="15">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>mei-friend</title>
+                  <editor>Werner Goebl, David M. Weigl (trompamusic)</editor>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Weigl, David M.</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Goebl, Werner</persName>
+                  </respStmt>
+                  <date type="publication">2021</date>
+                  <idno type="URI">https://github.com/trompamusic/mei-friend</idno>
+                  <date type="accessed">2022-02-06</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>JavaScript</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>.xml/mei</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>.xml/mei</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>digital music edition</term>
+               <term>music encoding initiative</term>
+               <term>code editing</term>
+               <term>musical notation rendering</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Mei‑friend, a free and open-source package for the Atom text editor, enables
+               convenient and fast rendering of music encoded in the format of the Music Encoding
+               Initiative (MEI) including some important navigation and display options.
+               Furthermore, it provides various functionalities for graphical editing of MEI code
+               using rendered music notation. Mei‑friend is primarily aimed at musicologists,
+               librarians, musicians and music enthusiasts. Users are required to have a moderate
+               technical expertise only owing to straightforward installation and intuitive usage of
+               the tool.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">Digital music editions can be created using the format of the Music
+               Encoding Initiative (MEI), which “share[s] many common characteristics and
+               development practices”<note xml:id="ftn1">
+                  <ref
+                     target="https://web.archive.org/web/20220121074651/https://music-encoding.org/about"
+                     >https://web.archive.org/web/20220121074651/https://music-encoding.org/about</ref>.</note>
+               with TEI, especially those for digital editions<note xml:id="ftn2">For instance, the
+                  usage of the <code>&lt;app&gt;</code> element for alternatives (cp. <ref
+                     target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-app.html"
+                     >https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-app.html</ref> and <ref
+                     target="https://music-encoding.org/guidelines/v4/elements/app.html"
+                     >https://music-encoding.org/guidelines/v4/elements/app.html</ref>) or of the
+                     <code>&lt;supplied&gt;</code> element for material “supplied by the transcriber
+                  or editor for any reason” (cp. <ref
+                     target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html"
+                     >https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html</ref> and
+                     <ref target="https://music-encoding.org/guidelines/v4/elements/supplied.html"
+                     >https://music-encoding.org/guidelines/v4/elements/supplied.html</ref>). Also,
+                  there are many similar concepts in the encoding of metadata (cp. <ref
+                     target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiHeader.html"
+                     >&lt;teiHeader&gt;</ref> and <ref
+                     target="https://music-encoding.org/guidelines/v4/elements/meihead.html"
+                     >&lt;meiHead&gt;</ref>).</note>. For MEI, rendering of XML code as symbolic
+               music notation is essential during the edition process. Typically, projects using
+                  MEI<note xml:id="ftn3">For instance, <ref target="https://freischuetz-digital.de"
+                     >Freischuetz Digital</ref>, <ref target="http://www.marenzio.org/index.xhtml"
+                     >Marenzio Online Digital Edition</ref>, <ref
+                     target="https://dme.mozarteum.at/movi/en">Digital Interactive Mozart
+                     Edition</ref>, <ref target="https://beethovens-werkstatt.de/prototyp-2-0"
+                     >Beethovens Werkstatt</ref>.</note> create their own (web) applications where
+               MEI is rendered. Those are mainly designed as presentation platforms and might not be
+               very suitable as production tools, although some project-specific functionalities can
+               be tested in these environments. The tool mei‑friend is designed for usage
+                  <emph>during</emph> the process of creating an edition, more precisely for
+               preparing basic musical text only as no editorial-specific markup is currently
+               possible. Music notation other than Common Western Notation might be displayed if
+               supported by the rendering engine<note xml:id="ftn4">The Verovio engraving library
+                  (cf. <ref type="crossref" target="#pugin2014">Pugin, Zitellini, and Roland,
+                     2014</ref>).</note>. However, no editing functionalities
+               for working with them are available.</p>
+            <p xml:id="p2">Mei‑friend is distributed as a free package<note xml:id="ftn5">
+                  <ref target="https://atom.io/packages/mei-friend"
+                     >https://atom.io/packages/mei-friend</ref>, currently 427 downloads
+                  [01-19-2022].</note> for the Atom text editor<note xml:id="ftn6">
+                  <ref target="https://atom.io">https://atom.io</ref>.</note>. It has been developed
+               by Werner Goebl and David Weigl in order to meet the needs of the project TROMPA<note
+                  xml:id="ftn7">
+                  <ref
+                     target="https://web.archive.org/web/20220210094706/https://iwk.mdw.ac.at/h2020-trompa"
+                     >https://web.archive.org/web/20220210094706/https://iwk.mdw.ac.at/h2020-trompa</ref>.
+              </note> and was generously shared with the MEI community<note xml:id="ftn8">The
+                  presentation at the <ref
+                     target="https://web.archive.org/web/20210613112607/https:/music-encoding.org/conference/2021/"
+                     >Music Encoding Conference 2021</ref> received the <ref target="https://web.archive.org/web/20221122150241/https:/music-encoding.org/conference/awards.html">best paper award</ref>.</note>.
+               The author was able to integrate the tool into his daily routine of MEI encoding very
+               well, turning it into a more convenient and efficient process<note xml:id="ftn9">The
+                     <ref target="https://o-sapov.github.io/portfolio/">author</ref> has been
+                  working as research assistant at the <ref
+                     target="https://dme.mozarteum.at/musik/edition/">Digital Interactive Mozart
+                     Edition</ref> (Mozarteum Foundation Salzburg) since 2018 having both editorial
+                  and technical responsibilities. He has been using mei‑friend since 2021 and its
+                  predecessor mei-tools-atom since 2020.</note>.</p>
+            <p xml:id="p3">For this review, the following hardware/software was used: Microsoft
+               Windows 10 Pro N, Version 21H2 (64 bit), Atom v1.58.0 x64, mei‑friend v0.6.0, running
+               on Dell Latitude 7480 (CPU Intel Core i5-6300U, RAM 8 GB). Additionally, the
+               installation process and basic functionalities were checked on Ubuntu 21.04 with the
+               same Atom and package versions, running on HP ProBook 440 G4 (CPU Intel Core
+               i5-7200U, RAM 8 GB).</p>
+         </div>
+         <div xml:id="div2">
+            <head>Methodology </head>
+            <p xml:id="p4">Since MEI was introduced, a number of tools<note xml:id="ftn10">Only the
+                  tools for working with Common Western Notation are considered here.</note> have
+               been developed which try to address the problem of MEI rendering in the first place
+               as currently no notation software like Sibelius, Finale or MuseScore supports MEI
+               natively. A few of the earliest initiatives include Verovio MEI viewer<note
+                  xml:id="ftn11">
+                  <ref target="https://www.verovio.org/mei-viewer.xhtml"
+                     >https://www.verovio.org/mei-viewer.xhtml</ref>.</note> and MEISE<note
+                  xml:id="ftn12">
+                  <ref target="https://meise.de.dariah.eu">https://meise.de.dariah.eu</ref>.</note>
+               (web-based), which can display and navigate MEI. An oXygen add-on<note xml:id="ftn13">
+                  <ref target="https://github.com/music-encoding/oXygen-MEI-addon"
+                     >https://github.com/music-encoding/oXygen-MEI-addon</ref>.</note> enables
+               rendering of MEI right in the editor, but it currently seems to work for macOS only.
+               Further on, the Verovio-Humdrum-Viewer<note xml:id="ftn14">
+                  <ref type="crossref" target="#sapp2017">Sapp, 2017</ref>. <ref
+                     target="https://verovio.humdrum.org">https://verovio.humdrum.org</ref>.</note>
+               (VHV) and Verovio Editor<note xml:id="ftn15">
+                  <ref target="https://editor.verovio.org">https://editor.verovio.org</ref>.</note>
+               (web-based) offer functionalities for graphical editing of MEI. The former offers a
+               relatively large amount of editing operations; however, internally VHV works with the
+               format <emph>kern.</emph> This leads to some conversion inconsistencies when
+               importing/exporting MEI files. The Verovio Editor processes MEI natively but only a
+               few editing operations are currently implemented. In addition, some of the tools
+               mentioned above offer other functionalities such as creating PDF and MIDI files,
+               advanced rendering options, etc. The predecessor of mei‑friend is a (legacy) Atom
+               package – mei‑tools‑atom<note xml:id="ftn16">
+                  <ref
+                     target="https://web.archive.org/web/20220214130403/https:/atom.io/packages/mei-tools-atom"
+                     >https://web.archive.org/web/20220214130403/https://atom.io/packages/mei-tools-atom</ref>.</note>. Although, this package offers hardly any functionalities beyond a
+               basic display, it certainly provides a good base for further development.</p>
+            <p xml:id="p5">None of the tools mentioned above (including mei‑friend) cannot be
+               considered as a full-fledged editor. Therefore, a typical data acquisition method in
+               the MEI community includes conversion from data formats originally gained by manual
+               typesetting with a notation software mentioned above or using Optical Music
+               Recognition. Usually, manual post-processing is needed, and this is the gap that
+               mei‑friend aims to fill.</p>
+            <p xml:id="p6">One of the advantages that mei‑friend offers is the user friendly
+               rendering. In my other workflow, I use a local editor for code editing and a
+               web-based application for rendering. This setup requires several steps to display the
+               results. This is time and energy consuming when performed repetitively and might
+               cause errors; for instance, because of file cashing in the browser. Mei‑friend
+               updates the rendered notation immediately after the code has been changed. This may
+               happen as one types in Atom (default) or after saving the file in an external editor.
+               An additional advantage is that the page remains the same after re-rendering (in some
+               other web applications I used, the displayed page flips to the first page of the
+               score).</p>
+            <p xml:id="p7">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/mei-friend/pictures/picture-1.png"/>
+                  <head type="legend">Selecting multiple elements.</head>
+               </figure>As mentioned above, the conversion to MEI from other formats is currently
+               not lossless and a broad variety of issues can occur. Some of them can be fixed by
+               using the editing functionalities of mei‑friend. Especially useful are those for
+               inserting the ControlEvents<note xml:id="ftn17">Music Encoding Initiative. 2019.
+                     <emph>1.2.2. Events and ControlEvents</emph> In <emph>MEI Guidelines
+                  </emph>(Version 4.0.1). <ref
+                     target="https://music-encoding.org/guidelines/v4/content/introduction.html#eventsControlevents"
+                     >https://music-encoding.org/guidelines/v4/content/introduction.html#eventsControlevents</ref>.</note>
+               (e. g. <code>&lt;dynam&gt;</code>, <code>&lt;slur&gt;</code>,
+                  <code>&lt;arpeggio&gt;</code>) as these elements establish references to Events
+                  (<code>&lt;note&gt;</code>,<code>&lt;chord&gt;</code>) by pointing to their
+                  <code>@xml:ids</code>. Collecting these <code>@xml:ids</code> manually can be a
+               tedious and error-prone task, especially if you work with a large score like a
+               symphony. The approach used by mei‑friend is intuitive and fast: Select the Events by
+               clicking them in the notation window (cf. <ref type="crossref" target="#img1">figure
+                  1</ref>) and press a shortcut that triggers a code editing function. For instance,
+               the shortcut ‘s’ inserts the following MEI element into its correct position in the
+               XML hierarchy:<figure xml:id="code1">
+                  <eg xml:space="preserve">&lt;slur xml:id="slur-0000000025523666" startid="#some-note-id1" endid="#some-note- id2"/&gt;</eg>
+                  <head type="legend">An inserted &lt;slur&gt; after applying the
+                     shortcut ‘s’.</head>
+               </figure>
+           </p>
+            <p xml:id="p8">Currently, mei‑friend enables inserting a subset of ControlEvents and the
+               layer-level-element <code>&lt;beam&gt;</code>; respectively, deletion works for these
+               elements only. The elements are inserted with a pre-defined (minimal) set of
+               attributes and dynamically created <code>@xml:ids</code>. Placement attributes can be
+               manipulated, but other attributes have to be entered manually.</p>
+            <p xml:id="p9">Finally, mei‑friend provides a few utilities for code refactoring
+               operations as renumbering of measures, correction of accidentals and the utility
+               called “regenerate encoding through Verovio”. The latter adds <code>@xml:id</code>s
+               where missing but should be applied with special care as some undesired code changes
+               may occur (cf. the <ref target="https://github.com/trompamusic/mei-friend/issues/9"
+                  >issue</ref> on GitHub).</p>
+         </div>
+         <div xml:id="div3">
+            <head>Implementation</head>
+            <p xml:id="p10">“[M]ei‑friend is written in JavaScript using the Atom package framework”
+                  (<ref type="crossref" target="#goebl2021">Goebl, </ref>
+               <ref type="crossref" target="#goebl2021">Weigl 2021, 6</ref>). It has very little
+               dependencies which are managed using the node package manager: jQuery and Verovio. In
+               addition, the Atom package language‑mei is required. Using Verovio’s JavaScript
+               toolkit, MEI is rendered to SVG and embedded into a “repositionable pane within the
+               Atom application window” (<ref type="crossref" target="#goebl2021">Goebl, </ref>
+               <ref type="crossref" target="#goebl2021">Weigl 2021, 6</ref>) as it would be in a
+               browser. Likewise, some other functionalities such as page breaks, zoom etc. are
+               based on the respective Verovio functions.</p>
+            <p xml:id="p11">The tool accepts files with ‘xml’ and ‘mei’ extensions and UTF-8
+               encoding. No validation is performed natively, but dedicated XML packages may be
+               used. Some encoding‑related warnings and errors raised by Verovio and actions on the
+               GUI are tracked in the console of the developer tools<note xml:id="ftn18">View &gt;
+                  Developer &gt; Toggle Developer Tools.</note>. For erroneous data, depending on
+               the error, rendered notation is displayed up to the point where the error occurs or
+               is not displayed at all.</p>
+            <p xml:id="p12">The performance on small<note xml:id="ftn19">Cf. <ref
+                     target="https://dme.mozarteum.at/movi/file/561/001"
+                     >https://dme.mozarteum.at/movi/file/561/001</ref>.</note> and middle-sized<note
+                        xml:id="ftn20">Cf. <ref target="https://dme.mozarteum.at/movi/file/332/002"
+                           >https://dme.mozarteum.at/movi/file/332/002</ref>.</note> files is high using
+               the default settings. However, “[l]arge<note xml:id="ftn21">Cf. <ref
+                     target="https://dme.mozarteum.at/movi/file/550/001"
+                     >https://dme.mozarteum.at/movi/file/550/001</ref>.</note> MEI encodings (of
+               about 25,000 lines and more) cause performance issues[…]”<note xml:id="ftn22">
+                  <ref type="crossref" target="#goebl2021">Goebl, Weigl 2021, 8</ref>. See also the
+                  detailed explanation there.</note> including disabled XML‑syntax highlighting. Two
+               possibilities to handle this are provided: 1) Manual updates of the rendered notation
+               and 2) usage of the speed mode. The last is an innovation which significantly
+               improves performance on large files<note xml:id="ftn23">For a detailed description of
+                  the implementation, see Goebl, Weigl 2021, 8-10.</note>. Currently, a few
+                  limitations<note xml:id="ftn24">“Works currently only with the <code>breaks</code>
+                  option set to <code>System(line)</code> and <code>Page and
+                  System(encoded)</code>.” Cf. the documentation page.</note> and downsides<note
+                  xml:id="ftn25">For instance, the “flip-page” button shifts the score to the next
+                  page after the searched one.</note> have to be expected.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Usability, sustainability and maintainability</head>
+            <p xml:id="p13">The package can be installed using GUI or from CLI<note xml:id="ftn26">
+                  <ref target="https://flight-manual.atom.io/using-atom/sections/atom-packages"
+                     >https://flight-manual.atom.io/using-atom/sections/atom-packages</ref>.</note>.
+               The dependencies are handled by the installation process itself; a prompt appears for
+               installation of the Atom package language‑mei. The installation procedure is well
+               described in the Atom package registry<note xml:id="ftn27">
+                  <ref
+                     target="https://web.archive.org/web/20220209081823/https:/atom.io/packages/mei-friend"
+                     >https://web.archive.org/web/20220209081823/https://atom.io/packages/mei-friend</ref>.</note>,
+               which I consider to be a main documentation page.</p>
+            <p xml:id="p14">The documentation provides an overview of the tool and its
+               functionalities; an animated screenshot<note xml:id="ftn28">Currently visible on
+                  GitHub only.</note> illustrates the concepts described. Example MEI files are
+               provided as direct download and as a link to a GitHub repository with musical works
+               published by TROMPA. Additionally, a few MEI files can be found locally in the
+               installation folder of the package.</p>
+            <p xml:id="p15">No special tool support is provided, but issues can be posted on GitHub
+               and are reviewed in a reasonable time. In addition, the developers are active members
+               of the MEI community and can be reached through its common communication
+                  channels<note xml:id="ftn29">
+                  <ref target="https://music-encoding.org/community/community-contacts.html"
+                     >https://music-encoding.org/community/community-contacts.html</ref>.</note>.</p>
+            <p xml:id="p16">The learning curve based on my experience and those of our project’s
+               chief lecturer is rather moderate. No specialized programming skills are required.
+               However, it is advantageous to have basic knowledge of how to work with text editors,
+               in particular with Atom, and, of course with MEI itself. It may take some time to
+               familiarize yourself with the keybindings and to memorize them.</p>
+            <p xml:id="p17">Mei‑friend can be used on all platforms<note xml:id="ftn30">Mac,
+                  Windows, Linux. Cf. <ref
+                     target="macOS, Windows, Linux. Cf. https://web.archive.org/web/20221026021350/https://flight-manual.atom.io/getting-started/sections/installing-atom/"
+                     >macOS, Windows, Linux. Cf. https://web.archive.org/web/20221026021350/https://flight-manual.atom.io/getting-started/sections/installing-atom/</ref>.</note>
+               where Atom can be installed. However, a small bias towards macOS is present: The icons
+               for the keybindings are macOS‑style also on Windows and Ubuntu, and not every
+               keybinding works on these platforms<note xml:id="ftn31">For instance, the keybinding for “Show/Hide Notation” (ctrl-shift-m). As a workaround in Atom, it is possible to create custom keybindigs, cf. <ref
+                  target="https://web.archive.org/web/20221122152245/https://flight-manual.atom.io/using-atom/sections/basic-customization/"
+                  >https://web.archive.org/web/20221122152245/https://flight-manual.atom.io/using-atom/sections/basic-customization/</ref>.</note>.</p>
+            <p xml:id="p18">As mei‑friend is an Atom package, the user benefits from other Atom
+               functionalities and features such as a built-in search utility, Git and GitHub
+               integration, other related packages, etc. In addition, Atom interoperates well with
+               other editors. For instance, it is possible to edit the same MEI in oXygen XML editor
+               and view the changes in the rendering pane of mei‑friend immediately after the file
+               has been saved.</p>
+            <p xml:id="p19">Package development takes place on a public GitHub repository<note
+                  xml:id="ftn32">
+                  <ref target="https://github.com/trompamusic/mei-friend"
+                     >https://github.com/trompamusic/mei-friend</ref>.</note>. A README file
+               contains documentation (same content as on the Atom package page) as well as
+               acknowledgments to the project contributors and predecessors; the (MIT) license is
+               linked here. No CITATION.cff<note xml:id="ftn33">
+                  <ref target="https://citation-file-format.github.io"
+                     >https://citation-file-format.github.io</ref>.</note> file or citation
+               guidelines are provided.</p>
+            <p xml:id="p20">The developers of mei‑friend informed me that the tool is currently
+               being redeveloped and extended as a web-browser application in the context of the
+               project <ref target="https://iwk.mdw.ac.at/signature-sound-vienna">Signature Sound
+                  Vienna</ref> (development takes place on another GitHub repository which is
+               currently private). Several general improvements are planned: automatic page
+               flipping, a wider range of rendering options (based on Verovio), GitHub integration,
+               etc. In addition, functionalities that are specific for digital editions (such as
+               editorial markup) might be added.</p>
+            <p xml:id="p21">Most likely the development of a web-based version of mei‑friend will be
+               priority and the Atom package will not be actively maintained. For users who still
+               prefer to use the Atom package (due to the interoperability with other local editors,
+               for example), it is important to keep the MEI rendering engine Verovio up to date.
+               Currently, this can be done in several ways: 1) by running updates pushed by the
+               developers, 2) by reinstalling the package 3) or by running an <code>npm</code>
+               update command from the package installation folder.</p>
+         </div>
+         <div xml:id="div5">
+            <head>User interaction and GUI</head>
+            <p xml:id="p22">MEI code is displayed alongside a pane with rendered music notation (cf.
+                  <ref type="crossref" target="#img1">figure 1</ref>). The music notation itself is
+               part of the GUI as the SVG elements are clickable here. Moreover, most of them are
+               mapped to the MEI elements in the text pane. For instance, clicking a note in the
+               notation pane immediately shows the respective MEI element in the editor pane. This
+               also works vice versa; however, if the focused MEI element is out of range of the
+               currently rendered page, the page has to be flipped manually.</p>
+            <p xml:id="p23">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/mei-friend/pictures/picture-2.png"/>
+                  <head type="legend">Toolbar.</head>
+               </figure>The rendering pane provides a toolbar which is divided into the following
+               sections (cf. <ref type="crossref" target="#img2">figure 2</ref>): 1) Zoom and
+               “invert colors of notation”, 2) page navigation, 3) system/page break behavior and
+               “speed mode”, 4) update behavior (when re-rendering should be performed), 5) font
+               selection, 6) navigation through the MEI elements, 7) “regenerate encoding through
+               Verovio”, info for current Verovio version and toggle button for overview of keyboard
+               shortcuts. The toolbar is not customizable. A reason for customization could be that
+               some functions would not be used very often and can be hidden, for example the
+               “invert colors of notation”. Somewhat irritating is the “speed mode” checkbox as it
+               is unchecked and cannot be checked by default. However, the documentation explains
+               that the checkbox depends on the notation break option. Otherwise, the toolbar is
+               well structured and in line with common visual patterns including tooltips.</p>
+            <p xml:id="p24">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/mei-friend/pictures/picture-3.png"/>
+                  <head type="legend">Overview of the keyboard shortcuts.</head>
+               </figure>Most user interaction happens in the music notation itself. As mentioned in
+              the Methodology section, users can select one or more graphical elements by clicking them and
+               applying a command. The overview of the keybindings (cf. <ref type="crossref"
+                  target="#img3">figure 3</ref>) can be toggled with the notation pane. The list is
+               arranged in semantically cohesive sections and provided with a verbose description.
+               Some effort was made to find semantically appropriate shortcuts where possible. For
+               instance, the keybinding for inserting a <hi rend="bold">s</hi>lur is ‘s’, for
+               inserting an <hi rend="bold">a</hi>rpeggio, an ‘a’ is used. No search function is
+               available within this help pane. Alternatively, the keybindings can be viewed in the
+               local package description page<note xml:id="ftn34">File &gt; Settings &gt; Packages
+                  &gt; <code>&lt;mei-friend&gt;</code>.</note>. The commands can also be called
+               using the command palette<note xml:id="ftn35">
+                  <ref
+                     target="https://web.archive.org/web/20220209101922/https:/atom.io/packages/command-palette"
+                     >https://web.archive.org/web/20220209101922/https://atom.io/packages/command-palette</ref>.</note>
+               or from the toolbar<note xml:id="ftn36">Packages &gt; MEI friend.</note>.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion and outlook</head>
+            <p xml:id="p25">Mei‑friend can be very useful for “polishing” MEI encodings after
+               conversion from other formats but is currently not aimed to be a full-fledged MEI
+               editor. Display of MEI files is implemented in a user-friendly and efficient way.
+               Speed mode – another innovation by the developers of mei‑friend – significantly
+               improves the performance of the tool. Various code editing functionalities are
+               implemented, mainly utilizing manipulation of ControlEvents and a few attributes. The
+               tool is currently being redeveloped and extended as a web-browser application in the
+               context of the project <ref target="https://iwk.mdw.ac.at/signature-sound-vienna"
+                  >Signature Sound Vienna</ref>.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>               
+               <bibl xml:id="goebl2021">Goebl, W.; and M. Weigl, D. Alleviating the Last Mile of Encoding: The mei-friend Package for the Atom Text Editor. In Münnich, S.; and Rizo, D., editor(s), <emph>Music Encoding Conference Proceedings</emph> 2021, pages 31–39, 2022. Humanities Commons, <ref target="https://music-encoding.org/conference/proceedings.html">https://music-encoding.org/conference/proceedings.html</ref>. </bibl>
+                              <bibl xml:id="mei2019">Music Encoding Initiative. 2019. <emph>MEI Guidelines</emph>
+                  (Version 4.0.1). <ref target="https://music-encoding.org/guidelines/v4/content"
+                     >https://music-encoding.org/guidelines/v4/content</ref>.</bibl>
+               <bibl xml:id="meifriend">mei-friend package for Atom: <ref target="https://atom.io/packages/mei-friend">https://atom.io/packages/mei-friend</ref>.</bibl>
+               <bibl xml:id="mei2022">Music Encoding Initiative. 2022. <ref
+                     target="https://web.archive.org/web/20220121074651/https://music-encoding.org/about"
+                     >https://web.archive.org/web/20220121074651/https://music-encoding.org/about</ref>.</bibl>
+               <bibl xml:id="pugin2014">Pugin, Laurent, Rodolfo Zitellini, and Perry Roland. 2014.
+                  “Verovio: A Library for Engraving MEI Music Notation into SVG.”. In Proceedings of
+                  the 15th International Society for Music Information Retrieval Conference, 107–
+                  12. Taipei, Taiwan: ISMIR. <ref target="https://doi.org/10.5281/zenodo.1417589"
+                     >https://doi.org/10.5281/zenodo.1417589</ref>.</bibl>
+               <bibl xml:id="sapp2017">Sapp, Craig. 2017. “Verovio Humdrum Viewer”. Presented at
+                  <emph>Music Encoding </emph>
+                  <emph>Conference 2017</emph> (MEC 2017), Tours, France. Slides available from
+                  <ref target="http://bit.ly/mec2017-vhv">http://bit.ly/mec2017-vhv</ref>. Tool available from <ref
+                     target="http://Verovio.humdrum.org">http://Verovio.humdrum.org</ref>.</bibl>
+               <bibl xml:id="trompamusic">Trompamusic, <ref target="https://web.archive.org/web/20220107224134/https:/iwk.mdw.ac.at/h2020-trompa">https://web.archive.org/web/20220107224134/https:/iwk.mdw.ac.at/h2020-trompa</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
