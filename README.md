@@ -18,6 +18,7 @@ The contents of this repository are published under CC-BY license. For a summary
 * Release v1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4550708.svg)](https://doi.org/10.5281/zenodo.4550708)
 * Release v2.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4562966.svg)](https://doi.org/10.5281/zenodo.4562966)
 * Release v2.1.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5081646.svg)](https://doi.org/10.5281/zenodo.5081646)
+* Release v3.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7491368.svg)](https://doi.org/10.5281/zenodo.7491368)
 
 ## Contributors
 
