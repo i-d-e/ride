@@ -1,0 +1,2182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.16.5">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A Review of the Königsfelden Online Edition</title>
+            <author ref="https://orcid.org/0000-0002-4879-129X">
+               <name>
+                  <forename>Christopher</forename>
+                  <surname>Pollin</surname>
+               </name>
+               <affiliation>
+                  <orgName>Zentrum für Informationsmodellierung (ZIM-ACDH), Austrian Centre for
+                     Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+                  <placeName>Graz, Österreich</placeName>
+               </affiliation>
+               <email>christopher.pollin@uni-graz.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023">March 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-16/koenigsfelden</idno>
+            <idno type="DOI">10.18716/ride.a.16.5</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue16/koenigsfelden/koenigsfelden.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-8820-5112">Tessa Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-3167-5089">Daniela Schulz</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike Neuber </editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="16">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-16</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Königsfelden Online. Die Urkunden und Akten des Klosters und des Oberamts
+                     Königsfelden</title>
+                  <editor>Department of History of the University of Zurich</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Halter-Pernet, Colette</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Hodel, Tobias</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Teuscher, Simon</persName>
+                  </respStmt>
+                  <date type="publication">2021</date>
+                  <idno type="URI">https://www.koenigsfelden.uzh.ch</idno>
+                  <date type="accessed">2022-08-07</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Keywords</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>fair data principles</term>
+               <term>search functionalities</term>
+               <term>data modelling</term>
+               <term>frontend</term>
+               <term>visualization</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This review deals with the digital edition “Die Urkunden und Akten des Klosters und
+               des Oberamts Königsfelden 1308–1662“ (Charters and Records of Königsfelden
+               (1308–1662)), which was carried out by the Department of History of the University of
+               Zurich between 2017 and 2020. The edition project provides access to more than 1500
+               charters and records. The aim of this review is to discuss the project context, the
+               web interface, the data and the quality of the edition. A particular focus will be
+               given to the FAIR data principles. Overall, <emph>Königsfelden Online</emph> is a
+               successful implementation of a digital edition that provides a coherent collection of
+               structured documents for further research.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">The digital edition of the charters and records of the Königsfelden
+               Monastery and the Oberamt Königsfelden from the years 1308–1662 (<ref
+                  target="https://www.koenigsfelden.uzh.ch">https://www.koenigsfelden.uzh.ch</ref>)
+               is the achievement of the Historical Seminar of the
+               University of Zurich and offers insights into a wide range of topics: from social
+               issues of the urban elites and the service nobility to aristocratic history and
+               aspects of economic and women's history. It should be noted at the outset that the
+               edition discussed here deals with a fully annotated corpus of historical sources. The
+               edition created from this material not only provides access to these historical
+               sources and their metadata via collections, but also a full-text search option,
+               indices, a map for locating documents, and experimental visualizations. Moreover,
+               users can access digital facsimiles of the source material, transcriptions, annotated
+               text, including diplomatic annotations such as abbreviations, and annotations of
+               named entities like persons, families, organizations, places, and their historical
+               context. For the annotation of the text, the project used XML and followed the
+               Guidelines of the Text Encoding Initiative P5 (<ref type="crossref" target="#tei"
+                  >TEI</ref>). At the time of the review, the database contained 1557 documents.</p>
+            <p xml:id="p2">This review focuses on the following subjects: The first section provides
+               an overview of the topic, objectives, methods, content, and modelling of the edition.
+               The second section addresses the publication and presentation, including technical
+               aspects, as well as the user interface of the collection, the search options, and the
+               edition views. After a particular focus on the FAIR data principles, the review
+               concludes with a brief discussion of the experimental visualization that the digital
+               edition additionally provides.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Scope of the edition</head>
+            <p xml:id="p3">Under the direction of Prof. Simon Teuscher, University of Zurich, and in
+               collaboration with the State Archives of the Canton of Aargau and the Swiss Legal
+               Sources Foundation, the project was carried out between 2017–2020 as part of the
+               National Fund project <emph>Edition der Urkunden und Akten des Klosters
+                  Königsfelden</emph> (Infrastructure: Editions, 10FE15_157907). In addition to the
+               funding from the Swiss National Science Foundation, the project was supported by a
+               contribution from the <emph>Lotteriefonds</emph> of the Canton of Aargau. Originally,
+               the project was initiated by Dr. Tobias Hodel, who was in charge until October 2019,
+               as well as Dr. Claudia Moddelmog and Prof. Simon Teuscher. After that, Dr. Colette
+               Halter-Pernet took over the lead until the end of the project. In addition, 10 staff
+               members were involved in the project in various employment relationships and work
+               areas. </p>
+            <p xml:id="p4">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-1.png"/>
+                  <head type="legend">Homepage of the digital edition
+                     (https://www.koenigsfelden.uzh.ch).</head>
+               </figure>
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-2.png"/>
+                  <head type="legend">Initial view of the documents. Documents are identified by
+                     shelfmark, date, short summaries, and keywords
+                     (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/documents.html).</head>
+               </figure>In the project <emph>Königsfelden Online</emph> (see <ref type="crossref"
+                  target="#img1">fig. 1</ref> &amp; <ref type="crossref" target="#img2">2</ref>),
+               the primary source material that is made accessible are charters. In contrast to the
+               project Monasterium.net<note xml:id="ftn1">Monasterium.net. <ref
+                     target="https://web.archive.org/web/20230125124743/http://monasterium.net:8181/mom/home"
+                     >https://web.archive.org/web/20230125124743/http://monasterium.net:8181/mom/home</ref>.
+               </note>, which is an information portal linking various collections,
+                  <emph>Königsfelden Online</emph> is thus an edition project of a single
+               collection. Being a part of Monasterium.net, however, ideas on how to describe
+               charters digitally have been advanced (<ref type="crossref" target="#vogeler2010"
+                  >Vogeler 2010</ref>, <ref type="crossref" target="#vogeler2018">Vogeler
+               2018</ref>). Here, the Charters Encoding Initiative (CEI) is certainly central, and
+               its considerations have been incorporated into the TEI (<ref type="crossref"
+                  target="#tei">TEI P5</ref>, ‘Representation of Primary Sources and <ref
+                  type="crossref" target="#winslow2019">Winslow 2019</ref>). </p>
+            <div xml:id="div2.1">
+               <head>Selection and Content</head>
+               <p xml:id="p5">Two projects were carried out in advance: The project
+                     <emph>Königsfelden und sein Adel. Annäherungen an eine neue Sozialgeschichte
+                  </emph>(SNF Projekt 2012–2016) and the book project <emph>Königsfelden.
+                     Königsmord, Kloster, Klinik </emph>(2010–2012). Both projects were – according
+                  to their abstracts and publication lists – essential for the realization of the
+                  digital edition. The knowledge gained in the context of these projects forms the
+                  basis for the classification of the sources provided with regard to the research
+                  questions. Another central preliminary work is the doctoral thesis
+                     <emph>Schriftordnungen im Wandel. Produktions-, Gebrauchs- und
+                     Aufbewahrungspraktiken von klösterlichem Schriftgut in Königsfelden
+                     (1300</emph>–<emph>1600)</emph> by Hodel (<ref type="crossref"
+                     target="#hodel2020">2020</ref>), as it is particularly relevant for the
+                     “Dorsualnotizen”<note xml:id="ftn2">Description of the “Dorsualschichten”. <ref
+                        target="https://web.archive.org/web/20230128142753/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/resources/images/Beschreibung_Do%20rsualschichten.pdf"
+                        >https://web.archive.org/web/20230128142753/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/resources/images/Beschreibung_Do%20rsualschichten.pdf</ref>.
+                  </note>, which will be dealt with later.</p>
+               <p xml:id="p6">According to the project description, the reviewed project comprises a
+                  so-called “Bestandesedition”<note xml:id="ftn3">Possibly translated as “collection
+                     edition”; however, the term “archive edition” seems suitable.</note>. It
+                  consists of digitized facsimiles as well as transcribed and annotated texts of
+                  historical sources from the archive collection <emph>Urkunden und Akten des
+                     Oberamtes Königsfelden 1314–1797 </emph>of the <emph>Aargau State
+                     Archive</emph>s.<note xml:id="ftn4">AA/0680 Urkunden und Akten des Oberamtes
+                     Königsfelden 1314 -1797, 1314-1797 (Dossier). Web view of the inventory of the
+                     archival collection in the Aargau State Archives. <ref
+                        target="https://web.archive.org/web/20230128142602/https://www.ag.ch/staatsarchiv/suche/detail.aspx?ID=201419"
+                        >https://web.archive.org/web/20230128142602/https://www.ag.ch/staatsarchiv/suche/detail.aspx?ID=201419</ref>.
+                  </note> These collections are edited according to the provenance principle, i. e.
+                  the organization of the documents is based on their origin. The annotations refer
+                  to named entities such as persons, organizations and places and at the level of
+                  textual structure to the normalization of abbreviations, additions or comments.
+                  The collection, which was accumulated over a period of four years, comprises about
+                  1,000 individual sheets and three edited cartularies (“Kopialbücher”).</p>
+               <p xml:id="p7">To enable a quick introduction to the material, the project
+                  description outlines those parts of the collection that are relevant to specific
+                  research areas. The following research areas are mentioned explicitly: Research on
+                  monastic communities, on the history of religious orders, on late medieval economy
+                  (e. g. on court and tithe administration), on local housekeeping, on written and
+                  oral administrative practices, on institutionalizations and systematization of
+                  rights, on gender history, on questions of Reformation history, on church and city
+                  history, on architectural history, as well as archaeology and art history, and on
+                  the Swiss “nobility” (e. g. on the Habsburg service nobility or on the “bourgeois”
+                  elites of the cities).</p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Documentation</head>
+               <p xml:id="p8">All in all, the edition is well documented. The detailed project
+                  description includes the project context, the scope of the material, and editorial
+                  guidelines. A detailed documentation of the technical implementation and the
+                  workflows for the collecting of the data is, however, missing. On the Zenodo<note
+                     xml:id="ftn5">Zenodo is an online storage service used for scientific datasets,
+                     among other things, and it is common practice to back up data there. <ref
+                        target="https://web.archive.org/web/20230128143830/https://zenodo.org/"
+                        >https://web.archive.org/web/20230128143830/https://zenodo.org/</ref>.
+                    Halter-Pernet, Colette, Teuscher, Simon, Hodel,
+                        Tobias, Barwitzki, Lukas, Egloff, Salome, Henggeler, Fabian, Nadig, Michael,
+                        Steinmann, Anina, Stettler, Sabine, &amp; Prada Ziegler, Ismail. (2021).
+                        Charters and Records of Königsfelden Abbey and Bailiwick (1308–1662)
+                     (1.0) [Data set]. Zenodo. <ref target="https://doi.org/10.5281/zenodo.5179361"
+                        >https://doi.org/10.5281/zenodo.5179361</ref>. </note> page related to the
+                  project, the scope of the digital data is specified, but the workflows of the data
+                  acquisition or the modelling decisions are not documented.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Mission</head>
+               <p xml:id="p9">Since the edition calls itself a “Bestandesedition”, its primary
+                  intention is to serve as an information system providing access to historical
+                  sources. As far as this purpose is concerned, the edition keeps its promise. The
+                  three main objectives of the edition are:<list rend="bulleted">
+                     <item>To provide the scientific community with a comprehensive corpus of
+                        historical sources, taking into account digital methods for further
+                        processing of the data.</item>
+                     <item>The preparation and annotation of the so-called “Dorsualnotizen”, which
+                        are located on the back of the original documents. These notes, consisting
+                        of signatures, date, notations or brief remarks, allow tracing the origin,
+                        purpose, location, and organization of the documents. This type of
+                        information offers new insights into the study of medieval and early modern
+                        written and administrative culture (cf. for more details: <ref
+                           type="crossref" target="#hodel2020">Hodel 2020</ref>, 109–170).</item>
+                     <item>A contribution to the development and implementation of digital editions
+                        in general.</item>
+                  </list> As elaborated in the following, these defined objectives are clearly
+                  achieved by the edition.</p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Method and Representation of documents and texts</head>
+               <p xml:id="p10">As far as categories of information are concerned, the edition
+                  focuses on “Regesten” (short summaries), named entities, the description of the
+                  material as well as editorial annotation for a better understanding of the
+                  content, such as additions, loss, or deletion of text. This edition is thus
+                  document-focused. The aim of the edition is to make the documents findable and to
+                  serve as a working basis for further – but not exclusively historical –
+                  research.</p>
+               <p xml:id="p11">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-3.png"/>
+                     <head type="legend">The backside of a facsimile of the text-image synopsis
+                        showing the “Dorsualnotizen”
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/docs/U-17_0001.xml).</head>
+                  </figure>The digital facsimiles are of high quality and displayed using the
+                     IIIF<note xml:id="ftn6">International Image Interoperability Framework. <ref
+                        target="https://web.archive.org/web/20230128144020/https://iiif.io/"
+                        >https://web.archive.org/web/20230128144020/https://iiif.io/</ref>.</note> viewer OpenSeadragon.<note xml:id="ftn7">An open-source, web-based viewer
+                     for high-resolution zoomable images, implemented in pure JavaScript, for
+                     desktop and mobile. <ref
+                        target="https://web.archive.org/web/20230128144119/https://openseadragon.github.io/"
+                        >https://web.archive.org/web/20230128144119/https://openseadragon.github.io/</ref>.
+                  </note> It is possible to zoom into the scans to analyse details in writing and
+                  seals. For charters, the front and back sides are shown. The backside is also
+                  transcribed and annotated, as they contain the earlier mentioned “Dorsualnotizen”
+                  (see <ref type="crossref" target="#img3">fig. 3</ref>). On the back, however, it
+                  is not so easy to quickly match the transcription and the position of the text in
+                  the facsimile. A highlight function for the text, especially the notes on the
+                  back, would allow an optimized synoptic view since the notes are very scattered
+                  and can be found in different positions.</p>
+            </div>
+            <div xml:id="div2.5">
+               <head>Modelling</head>
+               <p xml:id="p12">There is a detailed description of transcription guidelines and
+                  annotation practices. For the transcription<note xml:id="ftn8"
+                     >Transkriptionsregeln deutschsprachiger Texte der Sammlung Schweizerischer
+                     Rechtsquellen (SSRQ), <ref
+                        target="https://web.archive.org/web/20230128144244/https://www.ssrq-sds-fds.ch/wiki/Transkriptionsrichtlinien"
+                        >https://web.archive.org/web/20230128144244/https://www.ssrq-sds-fds.ch/wiki/Transkriptionsrichtlinien</ref>.
+                  </note> as well as for the dating<note xml:id="ftn9">Datierungsrichtlinien, <ref
+                        target="https://web.archive.org/web/20230128144353/https://www.ssrq-sds-fds.ch/wiki/Datierungsrichtlinien"
+                        >https://web.archive.org/web/20230128144353/https://www.ssrq-sds-fds.ch/wiki/Datierungsrichtlinien</ref>.
+                  </note> the edition project applies the guidelines of the Swiss Legal Source
+                  Foundation (SSRQ). For both areas of application, the project offers a
+                  recommendation (but not a TEI customization) with regards to the implementation in
+                  TEI. Deviations from SSRQ and the specific features for “Dorsualnotizen” are noted
+                     separately.<note xml:id="ftn10">Transkriptionsrichtlinien und
+                     Auszeichnungspraxis, Editionsprojekt Königsfelden, <ref
+                        target="https://web.archive.org/web/20230128144553/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/resources/images/TRL_Web.pdf"
+                        >https://web.archive.org/web/20230128144553/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/resources/images/TRL_Web.pdf</ref>.
+                  </note> Thus, primarily, the edition is based on the TEI Guidelines. The basic
+                  structure of the TEI documents in the edition consists of the facsimile and its
+                  zones to express regions on the digital facsimiles and the annotated text areas.
+                  The textual body is represented using <code>&lt;p&gt;</code> and
+                     <code>&lt;lb&gt;</code> elements. The <code>&lt;msDesc&gt;</code> element,
+                  moreover, contains the most important metadata.</p>
+               <p xml:id="p13">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-4.png"/>
+                     <head type="legend">Snapshot of a TEI file after downloading it from Zenodo.
+                        (AA_0428_0002.xml from https://zenodo.org/record/5179361, accessed
+                        20.12.2022).</head>
+                  </figure>Whereas the TEI documents (see <ref type="crossref" target="#img4">fig.
+                     4</ref>) are well-formed to allow further processing and to ensure their
+                  reusability, a more detailed exploration of the edition revealed that the
+                  documents are not valid according to the TEI. Unfortunately, the project does not
+                  provide any indications in the metadata of the XML/TEI files, nor a TEI
+                  customization, ODD or schema that could be referenced to the TEI documents of the
+                  edition to ensure their consistency.</p>
+               <p xml:id="p14">After examining three TEI documents<note xml:id="ftn11">The files
+                     examined were AA_0428_0002.xml, AA_0428_0138.xml and U-17_0009.xml from <ref
+                        target="https://zenodo.org/record/5179361"
+                        >https://zenodo.org/record/5179361</ref>,
+                    accessed on the 07.08.2022.</note>, the following minor errors that lead to invalid TEI documents have been
+                  identified. Many of these problems seem to be due to sloppy implementation but are
+                  mostly minor bugs.<list rend="bulleted">
+                     <item>Empty attributes <code>@ref </code>(<code>ref=""</code>).</item>
+                     <item>Invalid <code>&lt;publicationStmt&gt;</code> and
+                           <code>&lt;editorialDecl&gt;</code>. Moreover, the
+                           <code>&lt;publicationStmt&gt;</code> element seems to lack
+                        information.</item>
+                     <item>Empty elements like <code>&lt;taxonomy&gt;</code>,
+                           <code>&lt;listPerson&gt;</code>, <code>&lt;listOrg&gt;</code>, or
+                           <code>&lt;listPlace&gt;</code>.</item>
+                     <item>Invalid use of the attributes <code>@width</code> and
+                           <code>@height</code> as the unit of measurement, like “cm”, is missing to
+                        match the regular expression. </item>
+                     <item>Improper usage of the attribute <code>@type</code>
+                           (<code>type="marginal"</code>) in <code>&lt;p&gt;</code> elements.</item>
+                     <item>Invalid usage of the attribute <code>@agent</code> in <code>&lt;damage
+                           agent="faded ink"&gt;</code>, as attribute values do not allow
+                        spaces.</item>
+                     <item>Also, the element <code>&lt;comment&gt;</code> is used
+                        incorrectly.</item>
+                  </list>
+               </p>
+               <p xml:id="p15">In addition to these non-TEI compliant implementations, the following
+                  decision concerning the text model are worth discussing as well: Annotating the
+                  “Dorsualnotizen” is essential for the project. It seems to me, however, that the
+                  usage of the attribute <code>@rend</code> does not fit. It is used like:
+                     <code>&lt;p facs="#facs_2_region_1533022656524_73"
+                     rend="dorsual_22_sigle"&gt;</code>. The TEI guidelines define
+                     <code>@rend</code> as follows: “<emph>indicates how the element in question was
+                     rendered or represented in the source text</emph>”.<note xml:id="ftn12"
+                     >att.global.rendition. P5: Guidelines for Electronic Text Encoding and
+                     Interchange. Version 4.4.0. <ref
+                        target="https://web.archive.org/web/20230128145106/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html"
+                        >https://web.archive.org/web/20230128145106/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html</ref>,
+                     accessed on the 07.08.2022. </note> So, in my opinion, the attribute
+                     <code>@rend</code> should be used to express the representation of the text,
+                  like italic, bold, or dotted. ‘Knowing’ that the text on the back of a document is
+                  a “Dorsualnotiz” according to a certain categorization, as it is used for the
+                  search functionality, is not covered within the scope of <code>@rend</code>.
+                  Therefore, the attribute <code>@ana</code> would be a better fit.</p>
+               <p xml:id="p16">Documents within Monasterium.org may represent an alternative or
+                  comparable use of XML/TEI for annotating these types of documents (cf. <ref
+                     type="crossref" target="#roland2020">Roland 2020</ref>). The given example does
+                  not contain an annotated text, but rich metadata about the document, which are
+                  especially important to implement a front end with different search functions.
+               </p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Publication and presentation</head>
+            <div xml:id="div3.1">
+               <head>Technical infrastructure</head>
+               <p xml:id="p17">Since the technical implementation is poorly documented, it is not
+                  clear whether the mention of <emph>eXistSolutions GmbH</emph> refers only to the
+                  usage of eXist-db<note xml:id="ftn13">eXist-db is an open source NoSQL and native
+                     XML database built on XML technology. <ref
+                        target="https://web.archive.org/web/20230128145923/http://exist-db.org/exist/apps/homepage/index.html"
+                        >https://web.archive.org/web/20230128145923/http://exist-db.org/exist/apps/homepage/index.html</ref>.
+                  </note>, or if they also carried out the implementation. The hosting and
+                  maintenance of the eXist database is not further specified. The long-term
+                  archiving of the data is – reasonably – handled by Zenodo. </p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Browse, Search and Index</head>
+               <p xml:id="p18">Searching and browsing are essential functionalities of a platform on
+                  which sources are to be found for research purposes. And they also play an
+                  important role in the edition. Therefore, the Königsfelden online edition offers
+                  four points of access: Collections, Search, Index and Map.</p>
+               <p xml:id="p19">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-5.png"/>
+                     <head type="legend">Collection view in the footer of the homepage, which gives
+                        an overview of the entire collection.</head>
+                  </figure>The <emph>Collection view</emph> (see <ref type="crossref" target="#img5"
+                     >fig. 5</ref>) can be accessed in two ways. Via “Documents” in the navigation
+                  or as one of the areas on central views, which is located above the footer. In the
+                  latter, the separation into the three main categories “Chronologische Aufteilung”,
+                  “Dorsualschichten” and “Häufigste Schlagwörter” gives an overview of the content
+                  and scope of the categories. From the generated hit list, users can get to the
+                  detailed view of a single document.</p>
+               <p xml:id="p20">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-6.png"/>
+                     <head type="legend">Full text search for “Wein*” using truncation (*) with
+                        further constraints and its search results
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/search.html?refresh=true&amp;query=Wein*&amp;subtype=edition&amp;filter-period-min=1350&amp;filter-period-max=&amp;filter-language=Fr%C3%BChneuhochdeutsch&amp;filter-material=Pergament&amp;doc=).</head>
+                  </figure>The <emph>Search view </emph>is another entry point and allows full-text
+                  searches and advanced search queries. The query can be restricted to edition text
+                  or to metadata, and it is possible to further refine the search in terms of time,
+                  language, and medium. Detailed information on how to use the search (truncation,
+                  Boolean operators, wildcards, etc.) can be easily accessed. Searching for “Wein*”
+                  in the edition text with additional settings, for example, returns a transparent
+                  and explicable result (see <ref type="crossref" target="#img6">fig. 6</ref>). It
+                  is clear why a document was found, as the query text is highlighted in its
+                  context. Thus, the online edition provides a comprehensible and straightforward
+                  search that offers enhanced settings without overwhelming the user.</p>
+               <p xml:id="p21">
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-7.png"/>
+                     <head type="legend">Index search for the keyword “Wirtshaus”
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/detail.html?ref=key000064).</head>
+                  </figure>The <emph>index view</emph> (see <ref type="crossref" target="#img7">fig.
+                     7</ref>) is used to search for documents that are directly linked to named
+                  entities like people, organizations, places or keywords. In this regard, it should
+                  be mentioned that the display of the results list in the index search differs from
+                  the other search views, as it is the detailed view of an index term. For example,
+                  the “Regest” is missing, which could be a critical information for certain users.
+                  Instead, it is similar to the tabular-like index results view, which is used to
+                  represent prosopographic data of annotated persons.</p>
+               <p xml:id="p22">
+                  <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-8.png"/>
+                     <head type="legend">Documents displayed applying the map view. Click to list
+                        all documents linked to this location on the right side of the map
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/map2.html).</head>
+                  </figure>The last main point of access to the documents is the <emph>map
+                     view</emph> (see <ref type="crossref" target="#img8">fig. 8</ref>), from which
+                  all documents can be selected on a map in order to get to the edition view. There
+                  are no further filter options available. Only the frequency of mentions of an
+                  annotated place is highlighted. The relation of the place to the document is not
+                  visible, just whether the place was annotated or not. The handling of the map view
+                  could certainly be improved with little effort since there are many JavaScript
+                  libraries for this use case. Especially, regarding the fact that nowadays users
+                  are accustomed to well-functioning interfaces and smooth handling due to
+                  applications like Google Maps.</p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Interface and Usability</head>
+               <p xml:id="p23">The web front end is implemented using Bootstrap 3 and jQuery.
+                  Responsiveness of the webpage is given. Functionalities like the facsimile viewer
+                  are hidden in the mobile view, which represents a pragmatic solution.</p>
+               <p xml:id="p24">A major drawback of the website are the loading times. The loading of
+                  certain pages and search queries takes quite a long time. For example, when
+                  clicking on the “Documents” button in the navigation to view all documents, it
+                  takes about 15 seconds for the page to load. Even if you click on the pagination,
+                  you will encounter slow processing, because it loads all the 60 documents until
+                  the next action can be performed. The same loading issue arises with search
+                  queries, although an online edition, being a special type of web resource, should
+                  allow users multiple query functions to search for specific documents or explore
+                  the collection. The loading time might severely lower the users’ motivation and
+                  might edge the threshold of the users’ patience.</p>
+               <p xml:id="p25">
+                  <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-9.png"/>
+                     <head type="legend">Detailed view of a document with the “standardized”
+                        selected view showing the normalized text. All annotations are coloured
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/docs/U-17_0102.xml?odd=ssrq-norm.odd).</head>
+                  </figure>The <emph>detailed view of a document</emph> (see <ref type="crossref"
+                     target="#img9">fig. 9</ref>) is divided into a section containing data and
+                  text, as well as a section with the digital facsimiles in an embedded
+                  OpenSeadragon Viewer, which represents a classic image-text synopsis. Furthermore,
+                  it consists of a “Register”, basic metadata about the document and its
+                  materiality, its language or format, and the transcribed text of the edition. Via
+                  a checkbox the text can be read as standardized or non-standardized text. The
+                  categorization of annotated entities such as places, persons or organizations is
+                  explained by an overview and a coloured legend. Here you can also find further
+                  contextual information, like life data or hyperlinks to the detailed view of a
+                  named entity, such as a person. Annotations such as additions or deletions are
+                  resolved via tooltips. At this point it should be noted that some tooltips are not
+                  immediately recognizable. For example, there is a tooltip on the textual sequence
+                  “disen brief ansehent” that contains additional information on the original
+                  spelling “b’ef” for the standardized word form “brief”. The lack of any apparent
+                  indication of a tooltip, therefore, not only deprives the user of interesting
+                  additional information, but also constitutes a limitation in terms of
+                  usability.</p>
+               <p xml:id="p26">Accessibility is a distinct field of web development that also deals
+                  with barrier-free access to web content. In order to optimize the accessibility of
+                  a website, the web content needs to provide valid data, for example in terms of
+                  HTML5 validity, which in turn has an impact on whether your web content will be
+                  discovered by search engines. The accessibility of web pages can be tested
+                  manually or by using tools, such as the WAVE Web Accessibility Evaluation
+                     Tool<note xml:id="ftn14"><ref target="https://wave.webaim.org/"
+                        >https://wave.webaim.org</ref>.</note> or the W3C HTML5 Validator<note xml:id="ftn15"><ref
+                        target="https://validator.w3.org/">https://validator.w3.org</ref>.</note>. </p>
+               <p xml:id="p27">When validating the web page of the Königsfelden edition with WAVE,
+                  minor errors in the HTML code become visible. It shows that the <code>@alt</code>
+                  and <code>@label</code> attributes are missing, and that there is more than one
+                     <code>&lt;main&gt;</code> section. Especially <code>@alt</code> and
+                     <code>@label</code> are important attributes if a page is to be read by a
+                  screen reader. These are minor errors that do not impede the functionality but
+                  still limit accessibility and do not represent good practice. Usually, the funding
+                  agency and/or the institution hosting the website has/have their own
+                  specifications that have to be considered. For more details on the accessibility
+                  of web pages, I can highly recommend the blog post by Stanley (<ref
+                     type="crossref" target="#stanley2018">2018</ref>).</p>
+               <p xml:id="p28">When exploring the edition, another restriction must be taken into
+                  consideration: The entire digital edition is only available in German. Since the
+                  majority of the sources is in German, the user interface is also adapted to German
+                  speakers, which is legitimate by all means. Nevertheless, an abstract in English
+                  could possibly open up access to other groups as well.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>FAIR</head>
+            <p xml:id="p29">The FAIR<note xml:id="ftn16">FAIR principles. GO FAIR. <ref
+                     target="https://web.archive.org/web/20230128150113/https://www.go-fair.org/fair-principles/"
+                     >https://web.archive.org/web/20230128150113/https://www.go-fair.org/fair-principles/</ref>.
+               </note> data principles create a reference framework that improves the findability,
+               accessibility, interoperability, and reusability of data (<ref type="crossref"
+                  target="#wilkinsonetal2016">Wilkinson 2016</ref>). In its origin, it refers
+               primarily to the data itself, but in this context, it also covers the edition as a
+               whole. In the case of this review, it concerns the XML/TEI files, which are stored
+               separately from the edition on Zenodo. The following aspects are discussed in detail
+               with respect to the FAIR criteria.</p>
+            <div xml:id="div4.1">
+               <head>Findability</head>
+               <p xml:id="p30">By findable we mean whether a data set can be easily found by both
+                  humans and machines. It includes four sub-goals. The first refers to assigning
+                  globally unique and persistent identifiers to the data. Each document has a
+                  citation suggestion that looks like this: “Digitale Edition Königsfelden, URL:
+                  &lt;www.koenigsfelden.uzh.ch/exist/apps/ssrq/docs/U-17_0001.xml&gt;, Stand:
+                  7.8.2022.” It contains a URL that uniquely identifies each document. However, it
+                  cannot be concluded whether the URL is a persistent identifier. Instead, it shows
+                  that eXist-db is addressed directly. On Zenodo, there is a DOI that refers to the
+                  entire data dump: 10.5281/zenodo.5179361. </p>
+               <p xml:id="p31">Secondly, sufficient metadata, that allows contextualizing the
+                  documents, can be found on the Zenodo webpage and also on the edition webpage. For
+                  each individual TEI document, this is only partially the case. In the TEIs one can
+                  only find metadata about the actors involved, the title of the edition, the
+                  publication date, descriptive metadata of the document contained by
+                     <code>&lt;msDesc&gt;</code>, and the transcription and annotation guidelines.
+                  Other necessary metadata about the individual object, rights or publication can
+                  only be found on the Zenodo webpage. The criteria are thus satisfied to a limited
+                  extent. Furthermore, there is no identifier or URL that establishes a link between
+                  the individual document and the edition. This is only possible via the signature,
+                  such as “StAAG U.17/0887b”. The shelfmark is used as ID, as indicated in the URL
+                  of the web representation of the document<note xml:id="ftn17">StAAG U.17/0887b.
+                        <ref
+                        target="https://web.archive.org/web/20230128150317/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/docs/U-17_0887b.xml?odd=ssrq-norm.odd"
+                        >https://web.archive.org/web/20230128150317/https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/docs/U-17_0887b.xml?odd=ssrq-norm.odd</ref>.
+                  </note>, where, in terms of URL consistency, characters have to be replaced. Using
+                  “0887b”, one can find the object on the page via the “Open Document” function.
+                  Overall, from my point of view, in this regard the edition is not complying with
+                  the FAIR data principle, that requires metadata to clearly and explicitly include
+                  the identifier of the data they describe. Whereas the edition can be found
+                  effortlessly via search engines such as Google, Yahoo or Bing, it is not listed in
+                  the Marbacher Editionendatenbank<note xml:id="ftn18">Roland S. Kamzelak and Lydia
+                     Michel, Marbacher Editionendatenbank. <ref
+                        target="https://web.archive.org/web/20230128150534/https://www.dla-marbach.de/digital-humanities/editionen-db"
+                        >https://web.archive.org/web/20230128150534/https://www.dla-marbach.de/digital-humanities/editionen-db</ref>.
+                  </note> nor in Franzini’s<note xml:id="ftn19">Greta Franzini, Catalogue of Digital
+                     Editions. <ref
+                        target="https://web.archive.org/web/20230128150700/https://dig-ed-cat.acdh.oeaw.ac.at/"
+                        >https://web.archive.org/web/20230128150700/https://dig-ed-cat.acdh.oeaw.ac.at/</ref>.
+                  </note> catalogue, nor is it findable via scientific search engines like Google
+                  Scholar or Semantic Scholar. During the peer review of this review, the edition
+                  has been listed in Sahle’s<note xml:id="ftn20">Patrick Sahle, Scholarly Digital
+                     Editions. An annotated List. <ref
+                        target="https://web.archive.org/web/20230128150844/https://www.digitale-edition.de/exist/apps/editions-browser/index.html"
+                        >https://web.archive.org/web/20230128150844/https://www.digitale-edition.de/exist/apps/editions-browser/index.html</ref>.
+                  </note> catalogue in 2022. All in all, however, the findability of the edition is
+                  given.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Accessibility</head>
+               <p xml:id="p32">If an edition is freely accessible for any user without access
+                  restrictions (including authentication and authorization), then it is accessible
+                  in the sense of the FAIR criteria. The website can be accessed via HTTP without
+                  further authentication or authorization. The access to metadata, even when the
+                  website is no longer available, however, is only partially guaranteed. As
+                  mentioned before, some portions of metadata can be found on Zenodo, some on the
+                  edition webpage and a big part, but not all metadata in the TEI documents of this
+                  edition. Now, since the TEIs do not include all the existing metadata, changes on
+                  the edition webpage or Zenodo would affect the accessibility of a large part of
+                  the metadata.</p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Interoperability</head>
+               <p xml:id="p33">Generally, data is used together with other data in applications or
+                  workflows for analysis, storage, and processing. Therefore, it is necessary that
+                  data, with as little effort as possible, can be merged, integrated, or combined.
+                  Consequently, data should use a formal, accessible, shared, and broadly applicable
+                  language for knowledge representation. The TEI is the (de facto) standard that is
+                  used for the realization of editions of historical sources. It should be noted,
+                  however, that adaptations are necessarily domain specific. This means that
+                  historical documents, such as charters, require their own modelling. Next to the
+                  XML/TEI files all other primary data of the project can be found and cited on
+                  Zenodo (<ref type="crossref" target="#halterpernet2021">Halter-Pernet, Colette et.
+                     al 2021</ref>). This data dump consists of PageXML (~30.0 MB), which is the
+                  output of Transkribus<note xml:id="ftn21">Transkribus is a platform for the text
+                     recognition, image analysis and structure recognition of historical documents.
+                        <ref
+                        target="https://web.archive.org/web/20230127071754/https://readcoop.eu/de/transkribus/"
+                        >https://web.archive.org/web/20230127071754/https://readcoop.eu/de/transkribus/</ref>.
+                  </note>, XML/TEI files (19.0 MB) specified by Swiss legal sources, and digital
+                  facsimiles (21.0 GB).</p>
+            </div>
+            <div xml:id="div4.4">
+               <head>Reuse</head>
+               <p xml:id="p34">The goal of the fourth FAIR data principle is to maximize the reuse
+                  of data. For this purpose, data should be well described in order to be used in
+                  various contexts. The platform is licensed with CC BY-NC-SA and the edition data
+                  with CC BY 4.0. Data and metadata are therefore released with an explicit and
+                  accessible data usage license. However, this information should also be included
+                  in the <code>&lt;teiHeader&gt;</code> of the TEI documents. Data are associated
+                  with detailed information on provenance like project title, persons involved, and
+                  editing guidelines. These details can be found in the XML/TEI, and some further
+                  information on provenance are available in the project description on the edition
+                  and on the Zenodo page. Thus, with the selection of the XML/TEI format, the data
+                  meets a domain-relevant community standard.</p>
+               <p xml:id="p35">Even though it is not explicitly defined in the FAIR criteria, data
+                  exports and API are crucial for digital editions. No technical interfaces,
+                  spin-offs or export formats could be identified, neither does it seem to be
+                  possible to directly address the XML/TEI of a source document in the web front
+                  end. Nevertheless, the FAIR data principles are met.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Experimental visualization</head>
+            <p xml:id="p36">The “Überlieferung” button leads the user to an experimental overview,
+               where the collection is presented by means of information visualization. This view
+               incorporates four sections: 1) the visualization of the creation of documents, their
+               copies and their “Dorsualnotizen”, 2) the frequency and occurrence of
+               “Dorsualnotizschichten”, 3) the network visualization of the “Dorsualschichten”, and
+               4) a section on archival orders. It is a very good idea to provide such a view, as it
+               allows exploratory access to the dataset, in addition to the already existing ones.
+               The first three sections will be briefly discussed in the following. Before doing so,
+               though, I want to emphasize that I am well aware that it is a complex challenge to
+               create interactive visualizations from a dataset of historical information.
+               Especially, if you do not only wish to produce beautiful images, but to also create
+               added value in terms of gaining knowledge via the visualization, and in particular,
+               if you are providing it as an interactive web application.</p>
+            <div xml:id="div5.1">
+               <head>Visualization of the production of charters, their copies and their
+                  “Dorsualnotizen”</head>
+               <p xml:id="p37">
+                  <figure xml:id="img10">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-10.png"/>
+                     <head type="legend">Visualization that illustrates the production of documents
+                        as well as the copying activity
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/stemma.html#visualisierung).</head>
+                  </figure>This visualization illustrates the production of documents as well as the
+                  copying activity (see <ref type="crossref" target="#img10">fig. 10</ref>). The
+                  Y-axis represents the time (1300–1789) and the X-axis represents the individual
+                  pages of the cartularies. Each blue dot symbolizes a single document located at
+                  the correct height of the Y-axis depending on the date of origin. The X-axis shows
+                  the date of origin within the year (January–December). The horizontally arranged
+                  dots in different shades of yellow indicate copies of documents in the three
+                  processed cartularies. Each document is also connected to its copies by lines.
+                  Based on the position of the yellow dot above the X-axis, it is possible to find
+                  out on which folio page in the corresponding cartulary users can find the copy.
+                  Clicking on the dot opens the corresponding document in a new window.</p>
+               <p xml:id="p38">The idea behind the visualization is very interesting. It provides an
+                  overview of the temporal relationship between the cartularies and documents.
+                  However, there seem to be some issues as far as the implementation is concerned.
+                  The orange highlighting creates a messy ball of information, and it is quite
+                  difficult to select another related element. Clicking on one of the buttons under
+                  “Dorsualnotizen” on the right, such as “dors_2”, does not lead to any result. In
+                  my opinion, it would be advisable to implement the <emph>Mantra of Information
+                     Seeking</emph> (<ref type="crossref" target="#shneiderman1996"
+                     >Shneiderman</ref> 1996, 336–343), namely, to filter the information space
+                  according to certain criteria, like the “dorsal layers“ and then jump into the
+                  details – the document itself.</p>
+            </div>
+            <div xml:id="div5.2">
+               <head>Frequency and occurrence of “Dorsualnotizschichten“</head>
+               <p xml:id="p39">
+                  <figure xml:id="img11">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-11.png"/>
+                     <head type="legend">Diagram that shows the respective temporal scope of the
+                        individual “Dorsualnotizschichten”
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/stemma.html#Dorsualnotizschichtenzeitlinienvisualisierung).</head>
+                  </figure>The diagram shows the respective temporal scope of the individual
+                  “Dorsualnotizschichten” and thus enables a visual comparison of the target
+                  documents (see <ref type="crossref" target="#img11">fig. 11</ref>). The
+                  designations of the “Dorsualschichten” are linked to the documents of the edition.
+                  This is a successful visualization, in my opinion. At a glance, you can see the
+                  number of “Dorsualschichten” and in which period they occur. The additional
+                  heat-map-like layer shows the occurrence of the phenomena per year in colour. The
+                  existing legend provides an easy way to understand the visualization and colour
+                  coding. A click on the labels of the “Dorsualschichten” should give a search
+                  result of all corresponding documents, but, unfortunately, it only leads to an
+                  error message. It would be a great additional feature to get another layer of
+                  information showing time-related details about the documents, and thus providing
+                  an immediately visible temporal classification of the documents without a search
+                  query. This could be solved, for example, with a hover function over each bar
+                  representing a single year. Alternatively, common filter functions could help to
+                  bring more interactivity into the visualization.</p>
+            </div>
+            <div xml:id="div5.3">
+               <head>Network visualization of the “Dorsualschichten“ </head>
+               <p xml:id="p40">
+                  <figure xml:id="img12">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/koenigsfelden/pictures/picture-12.png"/>
+                     <head type="legend">Network visualization of the Königsfelden edition
+                        (https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/stemma.html#Dorsualnotizschichtenzeitlinienvisualisierung).</head>
+                  </figure>The network visualization of the Königsfelden edition (see <ref
+                     type="crossref" target="#img12">fig. 12</ref>) shows the connection between a
+                  document and one or more “Dorsualschichten”. Each of them is represented by a
+                  different colour and can be switched on or off. By clicking on a document node,
+                  only the associated “Dorsualschichten” are displayed. Clicking on the name of a
+                  document node, opens the corresponding document.</p>
+               <p xml:id="p41">The idea is attractive, but again, there are some implementation
+                  issues. If you click on a label like “number”, it results in displaying a blank
+                  page. The colour key for the individual nodes is quite small and therefore
+                  difficult to identify. Also, the readability of the tooltips containing some
+                  relevant information is definitely improvable. In addition, the colours are too
+                  similar. For example, the shades of pink are not distinguishable when working with
+                  the visualization. The information space is limited to a certain selection size,
+                  which makes the visualization very confusing. However, with only a small selection
+                  of documents, it is possible to get useful visualizations.</p>
+            </div>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion</head>
+            <p xml:id="p42">The digital edition of <emph>Die Urkunden und Akten des Klosters und des
+                  Oberamts Königsfelden 1308–1662</emph> keeps its promise to be a comprehensive,
+               coherent collection of edited, historical documents of more than 1500 charters and
+               records, that can be used for specific historical research. It includes digital
+               facsimiles, metadata on materiality, annotated texts focused on the content of the
+               sources, search options and indices. Reusability and long-term availability of the
+               research data (XML/TEI) is enabled through a data dump on Zenodo.</p>
+            <p xml:id="p43">All in all, this is a successful implementation of a digital edition,
+               even if minor flaws remain. However, these shortcomings do not really limit the use
+               of the resource as they relate to invalid HTML5 and TEI, accessibility, user
+               interface issues, as well as not entirely perfect but very interesting
+               visualizations. Nor do these minor insufficiencies diminish the achievement of
+               compiling and providing (almost) FAIR-compliant research data. The only real issue I
+               notice is the loading time of certain web pages and search queries. From my
+               experience, I dare to say that with maybe 2-3 months more project time, these minor
+               issues and maybe also the loading time troubles could have been fixed.</p>
+         </div>
+        
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="halterpernet2021">Halter-Pernet, Colette, Teuscher, Simon, Hodel,
+                  Tobias, Barwitzki, Lukas, Egloff, Salome, Henggeler, Fabian, Nadig, Michael,
+                  Steinmann, Anina, Stettler, Sabine, &amp; Prada Ziegler, Ismail. 2021. Charters
+                  and Records of Königsfelden Abbey and Bailiwick (1308–1662) (1.0) [Data set].
+                  Zenodo. <ref target="https://doi.org/10.5281/zenodo.5179361"
+                     >https://doi.org/10.5281/zenodo.5179361</ref>. </bibl>
+               <bibl xml:id="hodel2017">Hodel, Tobias. 2017. Königsfelden Abbey and Its First
+                  Cartulary: Dealing with Charters in the Fourteenth Century. In: Barret, Sébastien;
+                  Stutzmann, Dominique; Vogeler, Georg (Hg.) Ruling the script in the Middle Ages:
+                  formal aspects of written communication (books, charters, and inscriptions).
+                  Utrecht Studies in Medieval Literacy: Vol. 35 (S. 331–355). Turnhout: Brepols
+                  Publishers <ref target="http://dx.doi.org/10.1484/M.USML-EB.5.112441"
+                     >10.1484/M.USML-EB.5.112441</ref>. </bibl>
+               <bibl xml:id="hodel2020">Hodel, Tobias. 2020. Schriftordnungen im Wandel.
+                  Produktions-, Gebrauchs- und Aufbewahrungspraktiken von klösterlichem Schriftgut
+                  in Königsfelden (1300–1600). Spätmittelalterstudien: Vol. 7. Konstanz: UVK
+                  Verlagsgesellschaft <ref target="http://dx.doi.org/10.2357/9783739880600"
+                     >10.2357/9783739880600</ref>.</bibl>
+               <bibl xml:id="roland2020">Roland, Martin: Illuminierte Urkunden 1430-12-06_St-Gallen,
+                  In: Urkunden als offene Forschungsdaten. Langzeitarchivierung von Monasterium.net
+                  in GAMS, Graz 04.12.2020. <ref
+                     target="https://web.archive.org/web/20230128145506/http://gams.uni-graz.at/o:cord.16312845.0c4e.36ad.ab54.5ebdb45e8513/TEI_SOURCE"
+                     >https://web.archive.org/web/20230128145506/http://gams.uni-graz.at/o:cord.16312845.0c4e.36ad.ab54.5ebdb45e8513/TEI_SOURCE</ref>. </bibl>
+               <bibl xml:id="shneiderman1996">Shneiderman, Ben. 1996. The Eyes Have It: A Task by
+                  Data Type Taxonomy for Information Visualizations. In: Proceedings of the IEEE
+                  Symposium on Visual Languages, Washington, 336–343.</bibl>
+               <bibl xml:id="stanley2018">Stanley, Pablo. 2018. Designing for accessibility is not
+                  that hard. Inside Design Blog. <ref
+                     target="https://web.archive.org/web/20230127071513/https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94?gi=3816a0a5a7ad"
+                     >https://web.archive.org/web/20230127071513/https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94?gi=3816a0a5a7ad</ref>. </bibl>
+               <bibl xml:id="teuscher2012">Teuscher, Simon, Claudia Moddelmog. (2012). Einleitung
+                  in: Königsfelden: Königsmord, Kloster und Klinik. hier+ jetzt.</bibl>
+               <bibl xml:id="tei">Text Encoding Initiative, P5: Guidelines for Electronic Text
+                  Encoding and Interchange section ‘Representation of Primary Sources’, <ref
+                     target="https://web.archive.org/web/20230127071329/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html"
+                     >https://web.archive.org/web/20230127071329/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html</ref>,
+                  accessed on the 10.08.2022. </bibl>
+               <bibl xml:id="vogeler2010">Vogeler, Georg. 2010 “Charters Encoding Initiative
+                  Overview,“ Digital Proceedings of the Lawrence J. Schoenberg Symposium on
+                  Manuscript Studies in the Digital Age: Vol. 2: Iss. 1, Article 8. <ref
+                     target="https://web.archive.org/web/20230127071230/https://repository.upenn.edu/ljsproceedings/vol2/iss1/8/"
+                     >https://web.archive.org/web/20230127071230/https://repository.upenn.edu/ljsproceedings/vol2/iss1/8/</ref>.</bibl>
+               <bibl xml:id="vogeler2018">Vogeler, Georg. 2018. Digital Diplomatics: The Evolution
+                  of a European Tradition or a Generic Concept? In: Cubelic, Simon, Michaels, Axel
+                  und Zotter, Astrid (eds.): Studies in Historical Documents from Nepal and India,
+                  Heidelberg: Heidelberg University Publishing, 2018. 85–109. <ref
+                     target="https://doi.org/10.17885/heiup.331.454">10.17885/heiup.331.454</ref>. </bibl>
+               <bibl xml:id="wilkinsonetal2016">Wilkinson, M., Dumontier M., Aalbersberg I. et al.
+                  (2016). “The FAIR Guiding Principles for scientific data management and
+                  stewardship”. Scientific Data 3, 160018. <ref
+                     target="https://doi.org/10.1038/sdata.2016.18"
+                     >https://doi.org/10.1038/sdata.2016.18</ref>. </bibl>
+               <bibl xml:id="winslow2019">Winslow, Sean M. 2019. Modelling charters in TEI P5: the
+                  TEI_CEI ODD. In: TEI 2019 Book of Abstracts. <ref
+                     target="https://web.archive.org/web/20230127071110/https://gams.uni-graz.at/o:tei2019.132"
+                     >https://web.archive.org/web/20230127071110/https://gams.uni-graz.at/o:tei2019.132</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

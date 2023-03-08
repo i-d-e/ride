@@ -1,0 +1,2152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.16.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Walter Benjamin Digital</title>
+            <author ref="https://orcid.org/0000-0002-9649-0870">
+               <name>
+                  <forename>Laura</forename>
+                  <surname>Untner</surname>
+               </name>
+               <affiliation>
+                  <orgName>Österreichische Akademie der Wissenschaften</orgName>
+                  <placeName>Vienna, Austria</placeName>
+               </affiliation>
+               <email>laura.untner@oeaw.ac.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023">March 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-16/benjamin-digital</idno>
+            <idno type="DOI">10.18716/ride.a.16.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue16/benjamin-digital/benjamin-digital.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref=" https://orcid.org/0000-0001-8820-5112">Tessa Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref=" https://orcid.org/0000-0003-3167-5089"> Daniela Schulz</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="16">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-16</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Walter Benjamin Digital</title>
+                  <editor>Nadine Werner, Burkhardt Lindner</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Werner, Nadine</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Lindner, Burkhardt</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Nowak, Anja</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>pagina GmbH (Tübingen)</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>*produktivbüro Jork (Karlsruhe)</persName>
+                  </respStmt>
+                  <date type="publication">2019</date>
+                  <idno type="URI">https://www.walter-benjamin.online/</idno>
+                  <date type="accessed">2022-07-15</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>diplomatic reproduction of the manuscript</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>documentation</term>
+               <term>user interface</term>
+               <term>metadata</term>
+               <term>embedded transcription</term>
+               <term>data model</term>
+               <term>facsimile</term>
+               <term>german philology</term>
+               <term>literature</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>Walter Benjamin Digital </emph>is a digital partial edition of the eleventh
+               volume of the Critical Complete Edition of Walter Benjamin’s works, published by
+               Suhrkamp since 2008. It contains handwritten texts from the field of work of
+                  <emph>Berliner Kindheit um neunzehnhundert</emph> and its predecessor
+                  <emph>Berliner Chronik</emph> in the form of facsimilated manuscripts and
+               superimposed diplomatic transcriptions. <emph>Walter Benjamin Digital </emph>is not
+               geared toward exhausting the possibilities of a digital edition; hence the printed
+               volumes must remain key for research purposes.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Einleitung</head>
+            <p xml:id="p1">Am Beispiel von <emph>Walter Benjamin Digital </emph>zeigt sich, dass es
+               einen essenziellen Unterschied macht, ob ein Editionsprojekt primär ein digitales
+               oder ein analoges Medium zum Ziel hat. Die im Vergleich zur Buchform größeren
+               Möglichkeitsräume einer digitalen Edition können nicht ausgeschöpft werden, wenn die
+               spezifischen Logiken der digitalen Umgebung für die Erstellung und Publikation der
+               Edition nicht bestimmend sind.<note xml:id="ftn1">Siehe zum »<emph>digital
+                     paradigm</emph>« von DSE auch <ref type="crossref" target="#sahle2017">Sahle
+                     2017</ref>, 26.</note>
+               <emph>Walter Benjamin Digital </emph>ist in diesem Sinne auch weniger als ›Digital
+               Scholarly Edition‹ (DSE) denn als ›Digitales Archiv‹ (vgl. <ref type="crossref"
+                  target="#sahle2017">Sahle 2017</ref>, 34) mit Fokus auf die Repräsentation von
+               Faksimiles einzustufen, das jedoch aufgrund der Darbietung eines kritisch edierten
+               Textes in den Bereich von DSE hineinreicht. </p>
+            <p xml:id="p2">
+               <emph>Walter Benjamin Digital</emph> ist eine Ergänzung zum elften Band der
+               Kritischen Gesamtausgabe (KA) der Werke und des Nachlasses Walter Benjamins und ist
+               unter <ref target="https://www.walter-benjamin.online"
+                  >https://www.walter-benjamin.online</ref> zu finden (<ref
+                  target="werner2019">Werner/Lindner 2019</ref>). Nicht damit zu verwechseln
+               ist <ref target="https://www.walter-benjamin-online.de"
+                  >https://www.walter-benjamin-online.de</ref>, eine Informationsseite zur
+               gedruckten KA, die seit 2008 bei <ref type="crossref" target="#suhrkamp"
+                  >Suhrkamp</ref> erscheint. Verzeichnet sind dort alle 21 Bände<note xml:id="ftn2"
+                  >Erschienen sind bereits die Bände drei, sieben bis elf, 13 und 14, 16 sowie 19.
+                  2023 soll der fünfte Band folgen. Auftraggeberin ist die Hamburger Stiftung zur
+                  Förderung von Wissenschaft und Kultur, Herausgeber sind Christoph Gödde, Henri
+                  Lonitz und Thomas Rahn in Zusammenarbeit mit dem Walter Benjamin Archiv.</note>,
+               wobei es zu jenen, die bereits erschienen sind oder die demnächst erscheinen werden,
+               auch bibliographische Angaben, Leseproben und kurze Beschreibungstexte gibt. In eine
+               digitale Edition bzw. eine online zugängliche »Teiledition der faksimilierten
+               Manuskripte« (<ref type="crossref" target="#suhrkamp">Suhrkamp o. J.)</ref> führt nur
+               der Eintrag zum elften Band (Stand 7.8.2022). Künftig soll es auch für die Bände 17,
+               18 und 20 eine digitale Edition geben. </p>
+            <p xml:id="p3">Der elfte Band der KA umfasst den Textbestand zum Werkbereich der
+                  <emph>Berliner Kindheit um neunzehnhundert</emph> und seinem Vorläufer
+                  <emph>Berliner Chronik </emph>– Benjamins umfangreichste Texte über seine Kindheit
+               in Berlin. Sowohl die <emph>Berliner Kindheit um neunzehnhundert </emph>als auch die
+                  <emph>Berliner Chronik </emph>erschienen erst nach Benjamins Tod im Jahr 1940. Die
+                  <ref type="crossref" target="#benjamin1970">Berliner Chronik</ref> wurde erstmals
+               1970 von Gershom Scholem bei Suhrkamp herausgegeben. 1985 erschien sie noch einmal im
+                  <ref type="crossref" target="#benjamin1985">sechsten Band</ref> der zwischen 1972
+               und 1999 veröffentlichten <emph>Gesammelten Schriften</emph>, herausgegeben von Rolf
+               Tiedemann und Hermann Schweppenhäuser (die <ref type="crossref"
+                  target="#benjamin1991">revidierte Taschenbuchausgabe</ref> wurde dann 1991
+               publiziert). Die <ref type="crossref" target="#benjamin1950">erste Buchausgabe</ref>
+               der <emph>Berliner Kindheit um neunzehnhundert </emph>– zuvor waren bereits Auszüge
+               anonym oder unter Pseudonym in der <emph>Vossischen </emph>und der <emph>Frankfurter
+                  Zeitung </emph>veröffentlicht worden (vgl. <ref type="crossref"
+                  target="#lemke2011">Lemke 2011</ref>, 653–654) – wurde von Theodor W. Adorno im
+               Jahr 1950 beschafft. Adorno kannte jedoch die von Benjamin autorisierten Fassungen
+               nicht und schuf dementsprechend einen Text, der von Benjamin so nie vorgesehen war.
+               Eine <ref type="crossref" target="#benjamin1987">Edition einer autorisierten
+                  Fassung</ref> konnte, nachdem 1981 die Fassung letzter Hand in der Pariser
+               Nationalbibliothek gefunden wurde, erst 1987 mit einem Nachwort von Adorno und
+               herausgegeben von Rolf Tiedemann bei Suhrkamp veröffentlicht werden. Die <ref
+                  type="crossref" target="#benjamin2000">Gießener Fassung</ref> erschien dann erst
+               2000 bei Suhrkamp, herausgegeben von Rolf Tiedemann. Zuvor hatte Tillman Rexroth
+               bereits Adornos Edition revidiert und erweitert und im Rahmen der <emph>Gesammelten
+                  Schriften </emph>(<ref type="crossref" target="#benjamin1972">Bd. 4</ref>, 1972)
+               veröffentlicht. </p>
+            <p xml:id="p4">2019 wurde schließlich eine <ref type="crossref" target="#benjamin2019"
+                  >gedruckte kritische Edition</ref> des Werkbestands in zwei Teilbänden publiziert.
+               Die zwischen 1932 und 1938 entstandenen autobiographischen Prosaminiaturen und die
+               dazugehörigen Dokumente (z. B. Entwürfe) umfassen in der von Burkhardt Lindner und
+               Nadine Werner unter Mitarbeit von Anja Nowak herausgegebenen gedruckten Edition 652
+               Seiten. Der erste Teilband enthält Materialien zur <emph>Berliner Chronik</emph>
+               (unterteilt in »Entwürfe und Aufzeichnungen zur Berliner Chronik« sowie »Versfassung
+               zur Berliner Chronik«) und solche zur <emph>Berliner Kindheit um neunzehnhundert
+               </emph>(unterteilt in die Manuskripte »Felizitas-Exemplar«<note xml:id="ftn3">In der
+                  digitalen Edition »Feli<emph>c</emph>itas-Exemplar« (Hervorhebung: L. U.).</note>
+               und »Stefan-Exemplar«, »Inhaltsverzeichnisse, Aufzeichnungen, Entwürfe und
+                  Fassungen«<note xml:id="ftn4">In der digitalen Edition nur »Entwürfe,
+                  Aufzeichnungen und Fassungen« betitelt, grundsätzlich jedoch ident.</note>,
+               »Einzelne Manuskripte« sowie das »Berliner-« und das »Pariser-Manuskript«, »Drucke«
+               und »Übersetzungen«). Der zweite, 466 Seiten lange Teilband beinhaltet unter anderem
+               die Abschnitte »Entstehungs- und Publikationsgeschichte«, »Zur Edition«, »Lesarten,
+               Varianten, Erläuterungen und Nachweise«, »Dokumente«, »Zur Ausgabe«,
+               »Personenregister« und »Alphabetische Synopse der Stückfassungen«.</p>
+            <p xml:id="p5">
+               <emph>Walter Benjamin Digital </emph>(<ref type="crossref" target="werner2019"
+                  >Werner/Lindner 2019</ref>), eine Teiledition vor allem der Texte des ersten
+               Teilbandes, entstand zwischen 2016 und 2019 im Auftrag der Hamburger Stiftung zur
+               Förderung von Wissenschaft und Kultur. Herausgegeben wird sie von Nadine Werner,
+               Mitarbeiterin des 2004 eingerichteten und 12.000 Blatt<note xml:id="ftn5">Der Bestand
+                  setzt sich aus drei Nachlassteilen zusammen: dem Frankfurter, Berliner und Pariser
+                  Nachlassteil.</note> umfassenden Walter Benjamin Archivs in der Akademie der
+               Künste, Berlin, und Burkhardt Lindner, der jedoch im Jahr vor Beginn des Projekts
+               verstarb; Anja Nowak arbeitete ebenso mit.<note xml:id="ftn6">Weitere kooperierende
+                  Partner sind der Suhrkamp-Verlag, die pagina GmbH (Tübingen) und das
+                  *produktivbüro Jork (Karlsruhe).</note>
+               <emph>Walter Benjamin Digital </emph>füllt eine Lücke, da es bis zum Zeitpunkt der
+               Veröffentlichung keine vergleichbar umfangreiche digitale Aufbereitung von Texten
+               Benjamins gab. Es ist die erste digitale Edition eines Werks bzw. Werkbereichs Walter
+               Benjamins, wenn auch nicht das überhaupt erste digitale Projekt zu ihm.<note
+                  xml:id="ftn7"> Im Rahmen eines Forschungsprojekts von Agata Mergler entstand die
+                  Webseite »WalterBenjaminDigital« (<ref type="crossref" target="#mergler2016"
+                     >Mergler 2016</ref>). Mergler beschreibt ihre Forschungsinteressen und die
+                  damit einhergehenden Inhalte der Webseite wie folgt: »1. translation theory of
+                  Benjamin, applied to Benjamin and to digital/media work and research, and digital
+                  tools combined with translation theory applied to existing translations of
+                  Benjamin’s oeuvre; / 2. Benjamin’s presence online and digitally – researched,
+                  sampled, followed in its many forms and shapes; / 3. mapping Benjamin’s life,
+                  oeuvre, and combining his own ›proto-geocritical‹ thinking (if it can be called
+                  like that) with newer research; / 4. media/art studies and their Benjaminan
+                  context and influence […]«. (<ref type="crossref" target="#mergler2016">Mergler
+                     2016</ref> ff., About) Von Suhrkamp ist es übrigens nicht das erste digitale
+                  Editionsprojekt. Siehe etwa die Kooperation mit dem Austrian Centre for Digital
+                  Humanities and Cultural Heritage an der Österreichischen Akademie der
+                  Wissenschaften für die digitale Edition von Thomas Bernhards <emph>Wittgensteins
+                     Neffe</emph> (<ref type="crossref" target="#bernhard2021">2021</ref>). </note>
+               Eine Premiere in der Benjamin-Forschung ist zudem die mit <emph>Walter Benjamin
+                  Digital </emph>geschaffene freie Zugänglichkeit von Faksimiles. Nun kann also auch
+               frei im Netz nachvollzogen werden, worauf sich Gershom Scholem bezog, als er in
+               seinem Nachwort zur erwähnten Edition der <emph>Berliner Chronik </emph>(<ref
+                  type="crossref" target="#benjamin1970">1970</ref>) von
+               Entzifferungsschwierigkeiten schrieb. </p>
+            <p xml:id="p6">Die mit <emph>Walter Benjamin Digital </emph>realisierte faksimilierte
+               Edition ist insbesondere für die biographische Benjamin-Forschung und jene, die sich
+               mit Benjamins Arbeitsweisen beschäftigt, eine wertvolle Neuheit. Die Webseite, auf
+               der die Manuskripte aus dem Werkbereich der <emph>Berliner Kindheit um
+                  neunzehnhundert </emph>und der <emph>Berliner </emph>Chronik bereitgestellt
+               werden, versteht sich als »Arbeitsinstrument« (<ref type="crossref"
+                  target="werner2019">Werner/Lindner 2019</ref>). Das Ziel sei nicht, den
+               Text zu konstituieren, sondern ihn »lesbar« (ebd.) zu machen. Gemeint ist damit wohl,
+               dass es nicht um die Erstellung einer vollständigen historisch-kritischen Edition
+               geht und auf textgenetische Analysen größtenteils – abgesehen von den primär
+               werkorientierten Stückemarkierungen – verzichtet wird. Vielmehr kann die Edition als
+               Ergänzung zu den gedruckten Teilbänden und als Lesehilfe für die Manuskripte
+               verstanden werden, wie sie in den Archiven zu finden sind. Im Unterschied zur
+               gedruckten Edition beinhaltet die digitale Edition keine Typoskripte, Drucke,
+               Übersetzungen oder andere einschlägige Dokumente wie Korrespondenzstücke. Es fehlt
+               auch der gesamte Apparat, der sich im zweiten gedruckten Teilband befindet, sowie
+               jegliche Kommentare und weitere Kontextmaterialien. Insbesondere ist anzumerken, dass
+               die der digitalen Edition zugrundeliegenden Editions- und Kodierungsrichtlinien nicht
+               offengelegt und textkritische Zeichen nicht aufgelöst werden. So geht auch etwa der
+               methodische Ansatz (diplomatisch, materialorientiert, dokumentbezogen) nur implizit
+               hervor. </p>
+            <p xml:id="p7">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-1.png"/>
+                  <head type="legend">Startseite.</head>
+               </figure>Das User Interface (UI) von <emph>Walter Benjamin Digital </emph>ist nicht
+               nur <emph>responsive</emph> und intuitiv, sondern auch durchaus ästhetisch
+               ansprechend gestaltet. Die Seiten sind übersichtlich, nicht überladen und die
+               Farbgestaltung ist angenehm neutral: Grau- und Brauntöne vermischen sich mit Schwarz
+               und Weiß. Die Oberfläche bzw. die Paratexte sind in drei Sprachen verfügbar: Deutsch,
+               Englisch und Französisch. Übersetzungen der edierten Texte liegen nicht vor. Das
+               Impressum, Kontaktinformationen sowie Ansprechpartner_innen und allgemeinere
+               Informationen sind einfach zu finden. Im Hinblick auf hilfreiche Paratexte ist
+               insbesondere eine kurze Einführung in die Edition auf der Startseite (s. <ref
+                  type="crossref" target="#img1">Abbildung 1</ref>) und eine ausführlichere
+                  »Anleitung«<note xml:id="ftn8">Auf die »Anleitung« wird sowohl auf der Startseite
+                  als auch in der Fußleiste hingewiesen. Sie gibt auf umgerechnet etwa zwei
+                  A4-Seiten hilfreiche Aufschlüsse zur Edition; s. <ref
+                     target="https://web.archive.org/web/20220715132607/https://www.walter-benjamin.online/manual"
+                     >https://web.archive.org/web/20220715132607/https://www.walter-benjamin.online/manual</ref>.</note>
+               auf einer separaten Seite hervorzuheben. Es braucht nur wenige Klicks, um den Inhalt
+               der Edition zu überblicken und auf diesen zuzugreifen. Auch die Struktur wird den
+               Benutzer_innen verständlich und vertraut gemacht, z. B. durch eine klickbare
+               Navigationsleiste unterhalb des Faksimiles in der Manuskriptansicht, wo die
+               digitalisierten Materialien und Transkripte zu finden sind.<note xml:id="ftn9"
+                  >Beispielhafte Struktur: Berliner Chronik / Berliner Chronik / WBA 398/38.</note>
+               Wünschenswert wäre für die Navigation noch eine Funktion, mit der es möglich ist,
+               schnell und direkt auf eine Seite zu springen – etwa mittels eines Dropdown-Menüs
+               oder eines Suchschlitzes.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Wege in die Edition</head>
+            <p xml:id="p8">
+               <emph>Walter Benjamin Digital</emph> ist in fünf wesentliche Bereiche unterteilt: die
+               Startseite und die Reiter »Edition«, »Archive«, »Stücke« und »Personen«. Die vier
+               Reiter sind graphisch sehr ähnlich aufgebaut (dunkelgraue serifenlose Schrift vor
+               einem weißen Hintergrund) und stellen sowohl mögliche Einstiege in die Edition als
+               auch »Kontexte« dar, insofern sie jeweils die Blätterreihenfolge in der
+               Manuskriptansicht vorgeben.</p>
+            <div xml:id="div2.1">
+               <head>Startseite</head>
+               <p xml:id="p9">
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-2.png"/>
+                     <head type="legend">Volltextsuche.</head>
+                  </figure>Am oberen Rand der Startseite befindet sich eine Leiste, mit der eine
+                  Volltextsuche gestartet werden kann. Grundsätzlich funktioniert die Suche, auch
+                  wenn keine strukturierten erweiterten Suchmöglichkeiten oder Suchvorschläge
+                  angeboten werden. Jedenfalls kann auch mittels booleschen Operatoren nach Worten
+                  und Phrasen gesucht werden und die Orientierung der Filtermöglichkeiten auf der
+                  Seite der Suchergebnisse (s. <ref type="crossref" target="#img2">Abbildung
+                  2</ref>) an gängigen OPAC-UIs<note xml:id="ftn10">Online Public Access
+                     Catalogue-User Interfaces.</note> erleichtert die intuitive Benutzung, die
+                  zudem durch eine Erläuterung der Suchfunktion in der »Anleitung« unterstützt wird.
+                  Erwähnenswert ist, dass die Suchfeldeingabe lemmatisiert zu sein scheint, da
+                  beispielsweise eine Suche nach dem Begriff »Liebe« auch unter Anführungszeichen
+                  Treffer zu »lieb*« findet und Treffer zu »Liebe« nicht priorisiert werden. Um
+                  spezifischere Suchen zu ermöglichen, wäre eine Funktion nützlich, mit der diese
+                  Lemmatisierung deaktiviert werden kann. Die Seite der Suchergebnisse führt
+                  schließlich über Klicks auf Miniaturbilder und Textsnippets zu den Trefferseiten,
+                  auf denen jedoch der bzw. die Treffer nicht noch einmal farblich oder anderswie
+                  hervorgehoben werden. </p>
+               <p xml:id="p10">Unterhalb der Suchleiste befindet sich ein kurzer Einführungstext.
+                  Ebenso sind hier die Anzahl der in der digitalen Edition enthaltenen Faksimiles
+                  (252), jene der Archivalien (32) und jene der Stücke (45) zu finden – Klicks auf
+                  die Zahlen führen in die entsprechenden Reiter »Edition«, »Archive« und
+                     »Stücke«.<note xml:id="ftn11">Stand 7.8.2022. Siehe Abbildung 1.</note>
+                  Darunter befinden sich Zitate, Fotos und Faksimile-Ausschnitte. Das erste Zitat
+                  kann als Einstieg in den edierten Text dienen und stammt aus der <emph>Berliner
+                     Chronik</emph>. Benjamin meint hier, sein Deutsch würde deshalb als ›gut‹
+                  eingeschätzt werden, weil er das Wort »ich« so wenig gebrauche – ein ironisch
+                  wirkender Kommentar auf der Startseite eines autobiographischen Werks. Das zweite
+                  Zitat stammt aus einem Brief an Alfred Cohn und erweckt den (falschen) Eindruck,
+                  die Edition enthalte auch die in der gedruckten KA vorhandenen
+                  Korrespondenzstücke. Daneben befindet sich ein wenig aussagender Info-Block zum
+                  Felizitas-Exemplar. </p>
+            </div>
+            <div xml:id="div2.2">
+               <head>»Edition«</head>
+               <p xml:id="p11">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-3.png"/>
+                     <head type="legend">Reiter »Edition«.</head>
+                  </figure>Ein Klick auf den Reiter »Edition« führt zu einer Auflistung der für den
+                  elften Band der KA relevanten Textträger (s. <ref type="crossref" target="#img3"
+                     >Abbildung 3</ref>). Die Anordnung des Materials richtet sich nach der
+                  chronologischen Ordnung der gedruckten Ausgabe (s. o.) und könnte, etwa mittels
+                  ausklappbarer Felder, noch übersichtlicher gestaltet bzw. gestrafft werden.
+                  Ersichtlich wird jedenfalls, dass die digitale Edition alle zentralen Manuskripte
+                  enthält, die auch in der gedruckten Edition zu finden sind. Die in der Buchausgabe
+                  vorhandenen Typoskripte, Drucke und Übersetzungen werden namentlich angeführt. Die
+                  ersten drei Links im ersten Teil der Übersicht tragen allesamt den Titel »Berliner
+                  Chronik« und führen auf dieselbe Seite – eine redundante und verwirrende
+                  Wiederholung, die in der digitalen Edition in ähnlicher Weise immer wieder
+                  auftaucht.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>»Archive«</head>
+               <p xml:id="p12">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-4.png"/>
+                     <head type="legend">Reiter »Archive«.</head>
+                  </figure>Unter »Archive« werden in der digitalen Edition edierte wie nicht edierte
+                  Textträger in ihre archivarischen Zusammenhänge gestellt (s. <ref type="crossref"
+                     target="#img4">Abbildung 4</ref>) und entsprechend geordnet. Verzeichnet wird
+                  die Provenienz bzw. wo die Teilnachlässe aufbewahrt werden und unter welcher
+                  Signatur ihre jeweiligen Materialien zu finden sind.<note xml:id="ftn12">Angegeben
+                     werden Bestände aus dem Walter Benjamin Archiv in Berlin, dem Deutschen
+                     Literaturarchiv Marbach, der Universitätsbibliothek der
+                     Justus-Liebig-Universität Gießen sowie der Sammlung Giorgio Agamben (Venedig).
+                  </note>
+               </p>
+            </div>
+            <div xml:id="div2.4">
+               <head>»Stücke«</head>
+               <p xml:id="p13">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-5.png"/>
+                     <head type="legend">Reiter »Stücke«.</head>
+                  </figure>Der Reiter »Stücke« führt zu einer alphabetischen Auflistung der für den
+                  elften Band der KA edierten Stücke (s. <ref type="crossref" target="#img5"
+                     >Abbildung 5</ref>) und soll es ermöglichen, »thematisch zusammengehörende
+                  Aufzeichnungen, Entwürfe und Fassungen über verschiedene Textträger hinweg« (<ref
+                     type="crossref" target="werner2019">Werner/Lindner 2019</ref>, s. Anm.
+                  8) zu erschließen. Es handelt sich also um einen Weg in die Edition, der sich an
+                  Textkonvoluten orientiert. Schade ist, dass die Synopse der Stückfassungen aus dem
+                  zweiten gedruckten Teilband nicht integriert wurde, gibt sie doch einen guten
+                  Überblick über das Material bzw. eine weitere Perspektive auf das Verhältnis der
+                  Stückfassungen. </p>
+            </div>
+            <div xml:id="div2.5">
+               <head>»Personen«</head>
+               <p xml:id="p14">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-6.png"/>
+                     <head type="legend">Reiter »Personen«.</head>
+                  </figure>Unter dem Reiter »Personen« ist ein alphabetisch geordnetes
+                  Personenregister zu finden (s. <ref type="crossref" target="#img6">Abbildung
+                     6</ref>). Durch einen Klick auf einen Namen gelangt man zu den Trefferseiten in
+                  der Edition und die Treffer können noch weiter gefiltert werden (dabei wird auch
+                  die Anzahl der Vorkommnisse in Kombination mit anderen Filterparametern wie
+                  weiteren Personen oder Stücken angezeigt). Eine ABC-Leiste am linken Rand
+                  erleichtert die Navigation durch das Register, ersetzt jedoch keine Suchfunktion.
+                  Metadaten zu den Personen fehlen genauso wie eine Verknüpfung dieser mit
+                  Normdatensätzen, was gängigen Standards widerspricht. </p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Manuskriptansicht</head>
+            <p xml:id="p15">
+               <figure xml:id="img7">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-7.png"/>
+                  <head type="legend">Manuskriptansicht.</head>
+               </figure>Die edierten Manuskripte werden, anders als in diversen digitalen Editionen,
+               nicht etwa synoptisch präsentiert, sondern in einer »stufenlose[n] Überblendung«
+                  (<ref type="crossref" target="werner2019">Werner/Lindner 2019</ref>, Anm.
+               8) (s. <ref type="crossref" target="#img7">Abbildung 7</ref>). Das bedeutet, dass ein
+               (hochauflösendes) Faksimile, begleitet von einer Farbpalette, vor einem gräulichen
+               Hintergrund mit einer Transkription überblendet wird und der Grad der Überblendung
+               mit Hilfe eines Schiebereglers links oben individuell eingerichtet werden kann.
+               Befindet sich der Regler in der Mitte, wird das Faksimile vom Transkript mittelstark
+               überblendet, befindet er sich ganz links, wird nur das Faksimile bzw. die Handschrift
+               angezeigt, ganz rechts nur die – äußerst lobenswerte! – diplomatische und standgenaue
+               Transkription. Die Position der Manuskriptseite kann mit der Maus verschoben werden.
+               Ebenso können die Seiten mithilfe von Buttons über dem Schieberegler stufenlos
+               vergrößert und verkleinert, gedreht und im Vollbildmodus dargestellt werden.
+               Zurückgesetzt wird die individuell angepasste Ansicht durch einen Klick auf ein Icon,
+               das – merkwürdigerweise – einer Lupe ähnelt. </p>
+            <p xml:id="p16">
+               <figure xml:id="img8">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-8.png"/>
+                  <head type="legend">Beispielhafte Fixierung und Überlagerung von
+                     Transkriptzeilen.</head>
+               </figure>Die Manuskriptansicht überzeugt bei der Arbeit mit der Edition nur
+               teilweise. Positiv hervorzuheben ist die dokumentnahe und an spezifische
+               Forschungsinteressen adaptierbare Darstellung komplexer, detaillierter
+               editionsphilologischer Arbeit und die damit einhergehende Bereitstellung einer
+               Lesehilfe für die Manuskripte. Dies ist vor allem für dünne Manuskriptblätter und
+               entsprechend durchscheinende Seiten, nur schwer entzifferbare und verblasste oder
+               stark durchgestrichene Stellen von Benjamins zumeist schwer leserlicher kleiner,
+               engzeiliger Handschrift bedeutsam. Dagegen ein Negativbeispiel: Der Schieberegler
+               befindet sich fast ganz links, ich lege meinen Fokus also auf die Handschrift. Ein
+               Wort kann ich nicht entziffern, weswegen ich auf die entsprechende Zeile klicke und
+               damit die überlagerte Transkription bzw. das der Zeile entsprechende
+               Transkriptionsschnipsel fixiere. In der nächsten Zeile kann ich wieder ein Wort nicht
+               entziffern und sehe ein weiteres Mal in der Transkription nach, die ich erneut
+               fixiere. Schon die erste fixierte Zeile war am rechten Rand abgeschnitten und damit
+               ohne mühsames Verschieben der Seite auf einem nicht übergroßen Bildschirm nicht
+               vollständig lesbar, nun verdeckt auch noch die zweite fixierte Zeile die erste, ich
+               kann also noch weniger als davor lesen (s. <ref type="crossref" target="#img8"
+                  >Abbildung 8</ref>). Ich entscheide mich dagegen, mit fixierten Zeilen zu arbeiten
+               und muss dafür jede Zeile noch einmal anklicken. Wo Handschrift und Transkription
+               wortwörtlich ineinander übergehen, mögen mit Benjamins Handschrift Vertraute ein
+               hilfreiches Tool wahrnehmen. Wer jedoch Benjamins Handschrift nicht gut lesen kann
+               und auf die Zeilenfixierung zurückgreifen möchte, wird den letzten Feinschliff
+               vermissen, der die gewählte Ansicht im Vergleich zur ›klassischen‹ Synopse
+               rechtfertigen würde. </p>
+            <p xml:id="p17">
+               <figure xml:id="img9">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-9.png"/>
+                  <head type="legend">Beispielhafte Personenmarkierung bei vollständiger
+                     Überlagerung des Faksimiles.</head>
+               </figure>
+               <figure xml:id="img10">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-10.png"/>
+                  <head type="legend">Beispielhafte Stückemarkierung bei vollständiger Überlagerung
+                     des Faksimiles.</head>
+               </figure>Das Symbolmenü oberhalb des Schiebereglers stellt weitere Möglichkeiten zur
+               graphischen Manipulation der Anzeige bereit. Entsprechende Erläuterungen fallen in
+               der »Anleitung« recht kurz aus, sind aber durch Mouseover-Betitelungen und sprechende
+               Icons nicht unbedingt erforderlich. Ein Klick auf das erste Icon ermöglicht es, die
+               auf einer Seite vorkommenden Personen rot hervorheben zu lassen und aktiviert
+               zusätzlich eine normalisierte Auflistung der Personen am linken Rand in der
+               Reihenfolge der Vorkommnisse im Text (s. <ref type="crossref" target="#img9"
+                  >Abbildung 9</ref>). Das zweite Icon bietet die Möglichkeit, blaue, betitelte
+               Rahmen um solche Textbereiche anzeigen zu lassen, die einem Stück zugeordnet werden
+               können. Gleichzeitig können Personen und Stücke nicht markiert werden (s. <ref
+                  type="crossref" target="#img10">Abbildung 10</ref>). Für gewisse
+               Forschungsvorhaben wäre eine solche gleichzeitige Markierung jedoch bestimmt
+               nützlich. Es ist auch nicht davon auszugehen, dass diese zu einer Unübersichtlichkeit
+               führen würde – die Markierungen fallen ohnehin zart aus und die für die
+               Personenmarkierung vorgesehene linke Seite ist bei der Stückemarkierung so oder so
+               leer.</p>
+            <p xml:id="p18">Das Symbolmenü rechts oben bietet noch weitere Features. Zum einen sind
+               das Metadaten. Diese sind mit einem Verweis auf die Buchausgabe versehen, fallen
+               dementsprechend sehr kurz aus und sind zudem nur prosaisch (d. h. nicht formalisiert)
+               erfasst. Zu fast allen Manuskriptseiten werden jedenfalls die Seitenbreite und -höhe
+               sowie ggf. die Maße des Konvoluts angegeben. Während etwa Schreibmaterialien auf den
+               Faksimiles relativ gut zu erkennen sind, hätte sich – insbesondere vor dem
+               Hintergrund der Bedeutung von Materialität für Benjamins Schreiben – beispielsweise
+               noch eine Beschreibung des Papiers angeboten, dessen Haptik über den Bildschirm nicht
+               nachvollziehbar ist. Schließlich enthält das Symbolmenu eine Zitierempfehlung mit
+               einem Zeitstempel, wodurch die Zitation an einen bestimmten zeitlichen Zustand
+               gebunden wird, auch wenn die digitale Edition keine technische Versionierung
+               implementiert. Inwiefern die angebotenen URLs persistent sind, dazu macht die Edition
+               keine Aussage. </p>
+            <p xml:id="p19">Im Symbolmenü rechts oben kann auf ein kontextbezogenes
+               Inhaltsverzeichnis zugegriffen werden. Dort ist es möglich, durch die Kontexte
+               »Edition«, »Archive« und »Stücke« zu navigieren und die Einordnung der angezeigten
+               Manuskriptseite in diese Kontexte (z. B. bei »Stücke« die Zugehörigkeit zu einem
+               Konvolut) zu eruieren, ohne die Seite dafür zu verlassen. Ähnlich funktioniert das
+               Feature zu den Konvoluten, das ebenso über das Symbolmenü zu erreichen ist. Dieses
+               Feature zeigt alle Faksimiles des Konvoluts, zu dem die angezeigte Manuskriptseite
+               gezählt wird, in kontextbezogenen Miniaturansichten (»Edition«, »Archive«, »Stücke«,
+                  »Suchergebnisse«<note xml:id="ftn13">Unter »Suchergebnisse« ist zunächst gar
+                  nichts zu finden. Wurde jedoch bereits eine Suche durchgeführt, erscheinen hier
+                  alle Treffer für die zuletzt getätigte Suchabfrage. Der Nutzen der Seite ist –
+                  auch aufgrund fehlender Erläuterungen – relativ unklar, vor allem, weil eine Seite
+                  verlassen werden muss, um eine Suche zu starten.</note> und »Merkliste«) an.
+               Schade ist, dass man zwar für die Navigation auf der Seite bleiben kann, wenn man
+               jedoch eine andere Seite ansehen möchte, diese nicht in einem neuen Tab öffnen kann
+               (ein grundsätzliches Problem der Edition). Zur kontextbezogenen Konvolutansicht sei
+               ferner hinzugefügt, dass die Bezeichnungen der Konvolute, etwa aufgrund überflüssiger
+               Spatien und abgeschnittener Betitelungen, nicht immer fehlerfrei sind.<note
+                  xml:id="ftn14"> Fehlerhaft ist die Bezeichnung des Konvoluts auch dann, wenn auf
+                  der angezeigten Seite keine Stücke vorhanden sind. Zu lesen ist dann »Konvolut zu
+                  ›‹« und »Das gewählte Konvolut enthält keine Seiten«. Dieselbe ›Fehlermeldung‹
+                  erscheint, wenn die Bereiche »Merkliste« und »Suchergebnisse« leer sind.</note>
+            </p>
+            <p xml:id="p20">
+               <figure xml:id="img11">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_16/walter-benjamin-digital/pictures/picture-11.png"/>
+                  <head type="legend">»Merkliste«.</head>
+               </figure>Positiv hervorzuheben ist die »Merkliste«, die als weiterer Weg in die
+               Edition bezeichnet werden kann, weil durch sie ein individuell strukturierter
+               »Kontext« geschaffen wird. Eine angezeigte Seite kann in eine »Merkliste«
+               hinzugefügt, diese kann wiederum sortiert, gespeichert und gelöscht werden (s. <ref
+                  type="crossref" target="#img11">Abbildung 11</ref>). Öffnet man ausgehend von
+               einer »Merkliste« eine gespeicherte Seite, ist das Blättern innerhalb der gemerkten
+               Seiten möglich. Diese Reduktion auf ausgewählte Seiten kann einen bedeutenden
+               Mehrwert für die eigene Forschung darstellen. Für die Arbeit mit der Edition erweisen
+               sich auch die Export- und Importfunktionen im Merklistenbereich als ergiebig. Gemeint
+               ist damit, dass eine »Merkliste« als Textdatei exportiert und als diese wieder
+               importiert werden kann, was die längerfristige Arbeit mit der Edition maßgeblich
+               erleichtern kann. </p>
+         </div>
+         <div xml:id="div4">
+            <head>Datenmodell</head>
+            <p xml:id="p21">Kodierungsrichtlinien sind, wie bereits erwähnt, genauso wenig vorhanden
+               wie andere technische Dokumentationen. Es ist auch kein projektspezifisches Schema in
+               die TEI-Dokumente eingebunden, was die Nachvollziehbarkeit des Datenmodells
+               erschwert. Da jedoch zumeist<note xml:id="ftn15">In manchen Dokumenten ist auch der
+                  Namespace »ns1« (= <ref target="https://www.walterbenjamin.org/"
+                     >https://www.walterbenjamin.org/</ref>, HTTP Error 403) zu finden, dessen Sinnhaftigkeit
+                  jedoch nicht geklärt ist. Weder wird schlüssig, wann der Namespace einbezogen
+                  wird, noch welche Funktion er hat, da bei den Stichproben keine Auszeichnungen mit
+                  Elementen aus diesem Namespace entdeckt wurden. Grundsätzlich ist aber anzumerken,
+                  dass eine stichprobenmäßige Überprüfung keinen Hinweis auf fehlende
+                  Wohlgeformtheit oder Validität gab.</note> lediglich auf TEI zurückgegriffen wird,
+               geben die TEI-Richtlinien (vgl. <ref type="crossref" target="#tei2007">TEI Consortium
+                  2022</ref>) eine erste Orientierung. Die Grundstruktur eines jeden Dokuments ist
+               folgende (s. <ref type="crossref" target="#code1">Code 1</ref>):<figure
+                  xml:id="code1">
+                  <eg xml:space="preserve">&lt;TEI&gt;<lb/>    &lt;teiHeader&gt;<lb/>        &lt;fileDesc&gt;<lb/>            &lt;titleStmt&gt;<lb/>                &lt;title/&gt;<lb/>            &lt;/titleStmt&gt;<lb/>            &lt;publicationStmt/&gt;<lb/>            &lt;sourceDesc&gt;<lb/>                &lt;msDesc&gt;<lb/>                    &lt;msIdentifier/&gt;<lb/>                &lt;/msDesc&gt;<lb/>                &lt;history&gt;<lb/>                    &lt;origin/&gt;<lb/>                &lt;/history&gt;<lb/>            &lt;/sourceDesc&gt;<lb/>        &lt;/fileDesc&gt;<lb/>        &lt;profileDesc/&gt;<lb/>        &lt;revisionDesc/&gt;<lb/>    &lt;/teiHeader&gt;<lb/>    &lt;facsimile/&gt;<lb/>    &lt;sourceDoc/&gt;<lb/>&lt;/TEI&gt;</eg>
+                  <head type="legend">Grundstruktur der TEI-Dokumente.</head>
+               </figure>
+            </p>
+            <p xml:id="p22">Das <code>&lt;titleStmt/&gt;</code> ist, wie das
+                  <code>&lt;publicationStmt/&gt;</code>, die <code>&lt;profileDesc/&gt;</code> und
+               die Elemente <code>&lt;history/&gt;</code> und <code>&lt;origin/&gt;</code>, leer. Im
+               Tag <code>&lt;msIdentifier/&gt;</code> wird stets das Walter Benjamin Archiv
+               angeführt, was zum Beispiel bei einem TEI-Dokument zu einer Seite aus dem
+               »Stefan-Exemplar«, das im Deutschen Literaturarchiv Marbach liegt, unverständlich
+               ist. Die<code> &lt;revisionDesc/&gt;</code> ermöglicht es grundsätzlich
+               nachzuvollziehen, wann das Dokument von wem kodiert wurde. Die Kürzel in den Werten
+               der <code>@who</code>-Attribute werden jedoch nicht aufgelöst, es handelt sich also
+               nur um Daten und Initialen, die diesem Element entnommen werden können (s. <ref
+                  type="crossref" target="#code2">Code 2</ref>). </p>
+            <p xml:id="p23">Wünschenswert wären auf jeden Fall Angaben zum Titel und Autor, zu den
+               Herausgeber_innen, der Lizenz<note xml:id="ftn16">Auf der Webseite befindet sich der
+                  Hinweis »Alle Rechte vorbehalten«. Es handelt sich also um keine Creative
+                  Commons-Lizenz. </note> und der Sprache des Dokuments. Außerdem wären
+               Jahresangaben sowie Signaturen<note xml:id="ftn17">Jene, die bereits mit <emph>Walter
+                     Benjamin Digital </emph>oder den Manuskriptsignaturen vertraut sind, können die
+                  Signaturen prinzipiell dem <code>&lt;graphic/&gt;</code>-Tag entnehmen (s. <ref
+                     type="crossref" target="#code3">Code 3</ref>).</note> oder andere eindeutige
+               Identifier hilfreich. Fraglich bleibt auch, warum nicht zumindest die prosaischen
+               Metadaten aus dem UI in die TEI-Dokumente aufgenommen wurden.<figure xml:id="code2">
+                  <eg xml:space="preserve">&lt;teiHeader&gt;<lb/>        &lt;fileDesc&gt;<lb/>            &lt;titleStmt&gt;<lb/>                &lt;title/&gt;<lb/>            &lt;/titleStmt&gt;<lb/>            &lt;publicationStmt&gt;<lb/>               &lt;p/&gt;<lb/>            &lt;/publicationStmt&gt;<lb/>            &lt;sourceDesc&gt;<lb/>                &lt;msDesc&gt;<lb/>                    &lt;msIdentifier&gt;<lb/>                        &lt;settlement&gt;Berlin&lt;/settlement&gt;<lb/>                        &lt;institution&gt;Akademie der Künste&lt;/institution&gt;<lb/>                        &lt;repository&gt;Walter Benjamin Archiv&lt;/repository&gt;<lb/>                        &lt;collection type="archive"/&gt;<lb/>                        &lt;collection type="abstract"/&gt;<lb/>                        &lt;idno/&gt;<lb/>                        &lt;altIdentifier&gt;<lb/>                            &lt;idno/&gt;<lb/>                        &lt;/altIdentifier&gt;<lb/>                    &lt;/msIdentifier&gt;<lb/>                    &lt;history&gt;<lb/>                        &lt;origin/&gt;<lb/>                    &lt;/history&gt;<lb/>                &lt;/msDesc&gt;<lb/>            &lt;/sourceDesc&gt;<lb/>        &lt;/fileDesc&gt;<lb/>        &lt;profileDesc/&gt;<lb/>        &lt;revisionDesc&gt;<lb/>            &lt;listChange&gt;<lb/>                &lt;change status="encoded" when="2017-06-26" who="#OG"/&gt;<lb/>            &lt;/listChange&gt;<lb/>        &lt;/revisionDesc&gt;<lb/>    &lt;/teiHeader&gt;</eg>
+                  <head type="legend">teiHeader.</head>
+               </figure>
+            </p>
+            <p xml:id="p24">Im <code>&lt;facsimile/&gt;</code>-Tag (s. <ref type="crossref"
+                  target="#code3">Code 3</ref>) wird sodann das dem Dokument zugrundeliegende
+               Faksimile angegeben. Dabei handelt es sich jedoch um ein lokales Objekt und nicht um
+               eine URL<note xml:id="ftn18">Uniform Resource Locator.</note>, die zur entsprechenden
+               Seite in der digitalen Edition oder zu einer anderen öffentlich zugänglichen
+               Ressource führen würde. <figure xml:id="code3">
+                  <eg xml:space="preserve">&lt;facsimile&gt;<lb/>    &lt;graphic url="wba_369_3.jpg"/&gt;<lb/>&lt;/facsimile&gt;</eg>
+                  <head type="legend">Faksimile-Angabe.</head>
+               </figure>
+            </p>
+            <p xml:id="p25">Im Element <code>&lt;sourceDoc/&gt;</code> sind schließlich die
+               Transkriptionen zu finden, die unter Rückgriff auf das TEI-Modell zur »embedded
+               transcription« topographisch mit den Faksimiles in Beziehung gesetzt werden (s. <ref
+                  type="crossref" target="#code4">Code 4</ref>).<note xml:id="ftn19"><ref
+                     type="crossref" target="#tei2007">TEI Consortium 2022</ref>, <ref
+                     target="https://web.archive.org/web/20230122093623/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html"
+                     >https://web.archive.org/web/20230122093623/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html</ref>.
+               </note> Zuerst wird eine <code>&lt;surface/&gt;</code> definiert, deren
+                  <code>@xml:id</code> sich vom <code>&lt;facsimile/&gt;</code>-Tag ableitet. Dann
+               wird eine <code>&lt;zone/&gt;</code> festgelegt, also ein Bereich mit Text, dessen
+                  <code>@xml:id</code> sich wiederum am <code>&lt;surface/&gt;</code>-Tag
+                  orientiert.<note xml:id="ftn20">Die Anzahl der <code>&lt;zone/&gt;</code>-Tags
+                  kann von Dokument zu Dokument variieren.</note> Innerhalb einer
+                  <code>&lt;zone/&gt;</code> gibt es <code>&lt;line/&gt;</code>-Tags, die UUIDs<note
+                  xml:id="ftn21"> Universally Unique Identifiers.</note> besitzen, Textzeilen
+               beinhalten und gegebenenfalls <code>@corresp</code>-Attribute haben, die prosaisch
+               auf Stücke verweisen, zu denen die Zeilen gezählt werden. <figure xml:id="code4">
+                  <eg xml:space="preserve">&lt;surface xml:id="wba_369_3-s1"&gt;<lb/>    &lt;zone xml:id="wba_369_3-s1_z1"&gt;<lb/>        &lt;line xml:id="x29128E6B-3068-45E7-AE38-ACBC8E779356" <lb/>          corresp="#Tiergarten"&gt;Das die Sprache der Liebe&lt;/line&gt;</eg>
+                  <head type="legend">Ausschnitt aus &lt;sourceDoc/&gt;.</head>
+               </figure>
+            </p>
+            <p xml:id="p26">Gemäß dem TEI-Modell der »embedded transcription« verwendet die Edition
+               auf Zeilenebene drei zentrale Elemente<note xml:id="ftn22">Daneben gibt es die Tags
+                     <code>&lt;space/&gt;</code> zur Kodierung aufeinanderfolgender Spatien und
+                     <code>&lt;gap/&gt;</code> zur Markierung unleserlicher Stellen.</note> zur
+               Kodierung textueller Phänomene, die primär als graphischer Befund erfasst werden:
+                  <code>&lt;mod/&gt;</code>, <code>&lt;seg/&gt;</code> und <code>&lt;g/&gt;</code>.
+                  <code>&lt;mod/&gt;</code> wird für alle Änderungen im Text (Streichungen,
+               Überschreibungen, Hinzufügungen etc.) herangezogen. Näher bestimmt werden diese durch
+               entsprechende Werte von <code>@rend</code>- und <code>@type-Attributen</code>, etwa
+                  <code>"strikethrough"</code> für Streichungen und <code>"supplied"</code> für
+               Hinzufügungen der Herausgeber_innen. Jenseits der graphisch-orientierten Kodierung
+               mit den oben genannten Elementen, ließe sich in einer weniger dokument- und mehr
+               textzentrierten Edition auch auf spezifischere TEI-Tags zurückgreifen wie
+               beispielsweise auf <code>&lt;del/&gt;</code> für Streichungen und
+                  <code>&lt;supplied/&gt;</code> für Herausgeber_inneneingriffe. In sich ist die
+               dokumentzentrierte Auszeichnung der Edition jedoch konsistent. So werden Personen
+               bzw. der graphische Befund ihrer Erwähnung mit dem Element <code>&lt;seg/&gt;</code>,
+               das die Kodierung von Segmenten unterhalb des Block-Levels ermöglicht, kodiert, und
+               nicht etwa mit <code>&lt;persName&gt;</code> oder einem <code>&lt;rs/&gt;</code>-Tag
+               (mit <code>@type="person"</code>). <code>&lt;seg/&gt;</code>-Elemente weisen
+                  <code>@corresp</code>-Attribute auf, die mittels interner ID vermutlich auf
+               Einträge in das Personenregister verweisen. Zur Gänze nachvollziehbar ist die
+               Verweisstruktur allerdings nicht, da die IDs der Registereinträge im UI und die URLs
+               einzelner Personeneinträge nicht angezeigt werden. </p>
+            <p xml:id="p27">
+               <code>&lt;g/&gt;</code> dient schließlich der Auszeichnung spezieller von Walter
+               Benjamin verwendeter Zeichen, beispielsweise um Einfügungen in die Zeile zu
+               markieren, die mittels eines <code>@ref</code>-Attributs vermutlich auf einen intern
+               definierten Zeichensatz verweisen. Wie bei den bereits genannten Elementen wäre auch
+               hier eine Dokumentation der Attributwerte bzw. des speziellen Zeichensatzes sinnvoll,
+               da die Werte keine sprechenden und ohne Blick auf das Faksimile nicht nachvollziehbar
+               sind. Die TEI-Richtlinien schlagen auch deshalb bei der Verwendung von
+                  <code>&lt;g&gt;</code> eine Dokumentation der <code>@ref</code>-Werte innerhalb
+               von <code>&lt;glyph/&gt;</code>-Tags im Header vor, was im weitestgehend leeren
+                  <code>&lt;teiHeader/&gt;</code> der Benjamin-Edition nicht umgesetzt wurde. </p>
+         </div>
+         <div xml:id="div5">
+            <head>Umsetzung von FAIR-Prinzipien</head>
+            <p xml:id="p28">
+               <emph>Findable</emph> ist <emph>Walter Benjamin Digital </emph>bei einer Suche nach
+               dem Titel oder, was für eine gute Suchmaschinenoptimierung oder Popularität der Seite
+               spricht, auch nur beispielsweise bei einer Suche nach »Walter Benjamin Edition« über
+               Google. Teilweise verzeichnen auch einschlägige Editionskataloge wie jener von
+               Patrick Sahle (<ref type="crossref" target="#sahle2020">2020</ref> ff.) die
+                  Edition.<note xml:id="ftn23">Nicht verzeichnet ist sie etwa im »Catalogue Digital
+                  Editions« (vgl. <ref type="crossref" target="#franzini2012">Franzini
+                     2012</ref> ff.).</note> Forschungsdatenrepositorien wie Zenodo, Phaidra oder das
+               DARIAH-DE Repository erfassen <emph>Walter Benjamin Digital</emph> ebenso wenig wie
+               größere Kataloge, z. B. der WorldCat, der Karlsruher Virtuelle Katalog (KVK)<note
+                  xml:id="ftn24"> Eine Suche nach dem Titel im KVK und im WorldCat führt jedoch zu
+                  einem archivierten Beitrag von Nathalie Raoux (vgl. <ref type="crossref"
+                     target="#nnoj">N. N./BASE o. J.</ref>).</note> oder die OPACs der DNB, der ÖNB
+               oder der Schweizerischen Nationalbibliothek. In sozialen Netzwerken ist das Projekt
+               auch kaum präsent. Langfristig wären für die Gewährleistung der Auffindbarkeit der
+               Edition sowohl Katalogeinträge wünschenswert als auch eine Stellungnahme der Edition
+               zur Permanenz der in der Edition angebotenen Links.</p>
+            <p xml:id="p29">Die, wie schon festgehalten, auf der Oberfläche dreisprachige digitale
+               Teiledition des elften Bandes der KA ist insofern <emph>accessible</emph> als es
+               keine Zugangsbeschränkungen gibt. Den »Web Content Accessibility Guidelines« (vgl.
+                  <ref type="crossref" target="#kirckpatricketal2018">Kirkpatrick et al. 2018</ref>)
+               entspricht <emph>Walter Benjamin Digital </emph>laut eines Web
+               Accessibility-Testanbieters (vgl. <ref type="crossref" target="#level">Level Access
+                  o. J.</ref>), der die Barrierefreiheit digitaler Ressourcen testet und mit dem
+               einige Manuskriptseiten stichprobenmäßig untersucht wurden, zu rund 70% (die
+               Startseite erreicht nur rund 60%).<note xml:id="ftn25">Zur Einordnung dieser Zahlen
+                  siehe etwa <ref type="crossref" target="#webaim2022">WebAIM 2022</ref>. Die Web
+                  Accessibility von digitalen Edition variiert stark. Ein Vergleich ist auch
+                  aufgrund des Fehlens entsprechender umfassender Studien kaum möglich.</note>
+            </p>
+            <p xml:id="p30">Bedingt <emph>interoperable</emph> ist <emph>Walter Benjamin
+                  Digital</emph> insofern die XML-Dateien (s. o.) den standardisierten und
+               verbreiteten TEI-Richtlinien entsprechen. Wie bereits erwähnt, fehlen jedoch sowohl
+               zentrale Metadaten in den TEI-Dokumenten, technische Dokumentationen wie
+               Kodierungsrichtlinien und Erläuterungen zur IIIF<note xml:id="ftn26">International
+                  Image Interoperability Framework.</note>-Schnittstelle. </p>
+            <p xml:id="p31">
+               <emph>Reusable</emph> ist die Edition insofern einzelne Manuskriptseiten
+               (seitenweise) im XML/TEI<note xml:id="ftn27">Extensible Markup Language/Text Encoding
+                  Initiative (s. u.).</note>-Format heruntergeladen werden können. Andere
+               Downloadoptionen (z. B. TEI-Dokumente aller edierten Manuskriptseiten, PDF oder
+                  EPUB gibt es
+               nicht. Weiter distribuiert und potenziell öffentlich nachgenutzt dürfen die Dokumente
+               auch nicht werden, wodurch vor allem die institutionelle <emph>reusabilty</emph>
+               (etwa für anschließende Projekte) stark eingeschränkt wird.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Fazit</head>
+            <p xml:id="p32">
+               <emph>Walter Benjamin Digital</emph> ist so stark mit der gedruckten KA verzahnt,
+               dass nicht von einer eigenständigen DSE die Rede sein kann und die gedruckten
+               Teilbände für die Forschung weiterhin zentral bleiben müssen. Vor allem im Hinblick
+               auf die Suchmöglichkeiten und die digitale Repräsentation der Faksimiles stellt sie
+               jedoch eine wertvolle Ergänzung zu den gedruckten Teilbänden der KA dar.
+               Wünschenswert wäre insbesondere eine Nachreichung von Editionsprinzipien und
+               Kodierungsrichtlinien, eine Dokumentation der textkritischen Zeichen und eine
+               Nachbesserung an genannten technischen Aspekten.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="benjamin1950">Benjamin, Walter. 1950. <emph>Berliner Kindheit um
+                     neunzehnhundert. Mit einem Nachwort von Theodor W. Adorno</emph>. Frankfurt am
+                  Main: Suhrkamp. (Bibliothek Suhrkamp 2)</bibl>
+               <bibl xml:id="benjamin1970">Benjamin, Walter. 1970. <emph>Berliner Chronik</emph>,
+                  mit einem Nachwort hg. v. Gershom Scholem. Frankfurt am Main: Suhrkamp.
+                  (Bibliothek Suhrkamp 251)</bibl>
+               <bibl xml:id="benjamin1972">Benjamin, Walter. 1972. <emph>Gesammelte Schriften. Band
+                     4: Kleine Prosa, Baudelaire-Übertragungen</emph>, hg. v. Tillmann Rexroth in
+                  zwei Teilbänden. Frankfurt am Main: Suhrkamp.</bibl>
+               <bibl xml:id="benjamin1985">Benjamin, Walter. 1985. <emph>Gesammelte Schriften. Band
+                     6: Fragmente vermischten Inhalts, autobiographische Schriften</emph>, hg. v.
+                  Rolf Tiedemann und Hermann Schweppenhäuser unter Mitwirkung von Theodor W. Adorno
+                  und Gershom Scholem. Frankfurt am Main: Suhrkamp.</bibl>
+               <bibl xml:id="benjamin1987">Benjamin, Walter. 1987. <emph>Berliner Kindheit um
+                     neunzehnhundert. Fassung letzter Hand und Fragment aus früheren Fassungen. Mit
+                     einem Nachwort von Theodor W. Adorno</emph>, hg. v. Rolf Tiedemann. Frankfurt
+                  am Main: Suhrkamp. (Bibliothek Suhrkamp 966)</bibl>
+               <bibl xml:id="benjamin1991">Benjamin, Walter. 1991. <emph>Gesammelte Schriften. Band
+                     6: Fragmente, autobiographische Schriften</emph>, hg. v. Rolf Tiedemann und
+                  Hermann Schweppenhäuser unter Mitwirkung von Theodor W. Adorno und Gershom
+                  Scholem. Frankfurt am Main: Suhrkamp. (Suhrkamp-Taschenbuch Wissenschaft
+                  936)</bibl>
+               <bibl xml:id="benjamin2019">Benjamin, Walter. 2019. <emph>Werke und Nachlaß.
+                     Kritische Gesamtausgabe. Band 11: Berliner Chronik / Berliner Kindheit um
+                     neunzehnhundert</emph>, hg. v. Burkhardt Lindner und Nadine Werner unter
+                  Mitarbeit von Anja Nowak in zwei Teilbänden. Berlin: Suhrkamp. (Suhrkamp
+                  Wissenschaft Hauptprogramm)</bibl>
+               <bibl xml:id="benjamin2000">Benjamin, Walter. 2000. <emph>Berliner Kindheit um
+                     neunzehnhundert. Gießener Fassung</emph>, hg. und mit einem Nachwort von Rolf
+                  Tiedemann. Frankfurt am Main: Suhrkamp.</bibl>
+               <bibl xml:id="bernhard2021">Bernhard, Thomas. 2021. <emph>Wittgensteins Neffe</emph>,
+                  hg. v. Barbara Tumfart, Silvia Waltl und Konstanze Fliedl. <ref
+                     target="https://web.archive.org/web/20220715132417/https://wn.ace.oeaw.ac.at/"
+                     >https://web.archive.org/web/20220715132417/https://wn.ace.oeaw.ac.at/</ref>. </bibl>
+               <bibl xml:id="franzini2012">Franzini, Greta, Hg. 2012 ff. <emph>Catalogue Digital
+                     Editions</emph>. Zuletzt aktualisiert am 11.07.2022. <ref
+                     target="https://web.archive.org/web/20220715154142/https://dig-ed-cat.acdh.oeaw.ac.at/"
+                     >https://web.archive.org/web/20220715154142/https://dig-ed-cat.acdh.oeaw.ac.at/</ref>. </bibl>
+               <bibl xml:id="kirckpatricketal2018">Kirkpatrick, Andrew, Joshue O Connor, Alastair
+                  Campbell und Michael Cooper. O. J. »Web Content Accessibility Guidelines (WCAG)
+                  2.1.« W3C. Zuletzt aktualisiert am 05.06.2018. <ref
+                     target="https://web.archive.org/web/20220715132653/https://www.w3.org/TR/2018/REC-WCAG21-20180605/"
+                     >https://web.archive.org/web/20220715132653/https://www.w3.org/TR/2018/REC-WCAG21-20180605/</ref>. </bibl>
+               <bibl xml:id="lemke2011">Lemke, Anna. 2011. »Berliner Kindheit um neunzehnhundert«.
+                  In <emph>Benjamin-Handbuch. Leben – Werk – Wirkung</emph>, hg. v. Burkhardt
+                  Lindner, 653–663. Stuttgart: Metzler.</bibl>
+               <bibl xml:id="level">Level Access. O. J. <emph>Web accessibility</emph>. <ref
+                     target="https://web.archive.org/web/20220715132818/https://www.webaccessibility.com/"
+                     >https://web.archive.org/web/20220715132818/https://www.webaccessibility.com/</ref>. </bibl>
+               <bibl xml:id="mergler2016">Mergler, Agata. 2016 ff. »About«. WalterBenjaminDigital.
+                  Zuletzt aktualisiert am 29.06.2022. <ref
+                     target="https://web.archive.org/web/20220715132920/https://walterbenjamindigital.wordpress.com/about/"
+                     >https://web.archive.org/web/20220715132920/https://walterbenjamindigital.wordpress.com/about/</ref>. </bibl>
+               <bibl xml:id="nnoj">N. N. O. J. »Archives ›Walter Benjamin Digital‹«. BASE. <ref
+                     target="https://web.archive.org/web/20220715133015/https://www.base-search.net/Search/Results?q=id%3Ad88440aacbc6d5db30368f1f4c7f6e84b1734508421679a1d2b8f0a2063ede8f"
+                     >https://web.archive.org/web/20220715133015/https://www.base-search.net/Search/Results?q=id%3Ad88440aacbc6d5db30368f1f4c7f6e84b1734508421679a1d2b8f0a2063ede8f</ref>. </bibl>
+               <bibl xml:id="sahle2017">Sahle, Patrick. 2017. »What is a Scholarly Digital Edition«.
+                  In <emph>Digital Scholarly Editing. Theories and Practices</emph>, hg. v. Matthew
+                  James Driscoll und Elena Pierazzo, 19–39. Cambridge: Open Book Publishers.
+                  (Digital Humanities Series 4)</bibl>
+               <bibl xml:id="sahle2020">Sahle, Patrick et al., Hg. 2020 ff. <emph>A catalog of
+                     Digital Scholarly Editions</emph>. Zuletzt aktualisiert am 05.07.2022. <ref
+                     target="https://web.archive.org/web/20220715133255/https://www.digitale-edition.de/exist/apps/editions-browser/index.html"
+                     >https://web.archive.org/web/20220715133255/https://www.digitale-edition.de/exist/apps/editions-browser/index.html</ref>. </bibl>
+               <bibl xml:id="suhrkamp">Suhrkamp. O. J. <emph>Walter Benjamin. Werke und Nachlaß.
+                     Kritische Gesamtausgabe</emph>. <ref
+                     target="https://web.archive.org/web/20220715133354/https://www.walter-benjamin-online.de/"
+                     >https://web.archive.org/web/20220715133354/https://www.walter-benjamin-online.de/</ref>. </bibl>
+               <bibl xml:id="tei2007">TEI Consortium. 2007 ff. »TEI P5: Guidelines for Electronic
+                  Text Encoding and Interchange«. Text Encoding Initiative. Zuletzt aktualisiert am
+                  19.04.2022. <ref
+                     target="https://web.archive.org/web/20220715133436/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"
+                     >https://web.archive.org/web/20220715133436/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</ref>. </bibl>
+               <bibl xml:id="webaim2022">WebAIM. 2022. »The WebAIM Million. The 2022 report on the
+                  accessibility of the top 1,000,000 home pages.« WebAIM. web accessibility in mind.
+                  https://web.archive.org/web/20221230131439/https://webaim.org/projects/million/.</bibl>
+               <bibl xml:id="werner2019">Werner, Nadine und Burkhardt Lindner, Hg. 2019.
+                     <emph>Walter Benjamin Digital</emph>. <ref
+                     target="https://web.archive.org/web/20221230132601/https:/www.walter-benjamin.online/"
+                     >https://web.archive.org/web/20221230132601/https://www.walter-benjamin.online/</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
