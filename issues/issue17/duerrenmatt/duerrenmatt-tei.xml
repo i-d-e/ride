@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.17.2">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Friedrich Dürrenmatts Stoffe-Projekt als digitale Edition</title>
+            <author ref="https://orcid.org/0000-0003-0577-4470">
+               <name>
+                  <forename>Nadine</forename>
+                  <surname>Sutor</surname>
+               </name>
+               <affiliation>
+                  <orgName>Bergische Universität Wuppertal</orgName>
+                  <placeName>Wuppertal, Germany</placeName>
+               </affiliation>
+               <email>sutor@uni-wuppertal.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023-04">April 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-17/duerrenmatt</idno>
+            <idno type="DOI">10.18716/ride.a.17.2</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue17/duerrenmatt/duerrenmatt.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-8820-5112">Tessa Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-3167-5089"> Daniela Schulz</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="17">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-17</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Friedrich Dürrenmatt - Das Stoffe-Projekt</title>
+                  <editor>Rudolf Probst und Ulrich Weber</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Rudolf Probst, Ulrich Weber</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Micro Solutions Software &amp; Communications GmbH</persName>
+                  </respStmt>
+                  <date type="publication">2021-2022</date>
+                  <idno type="URI">https://www.fd-stoffe-online.ch/</idno>
+                  <date type="accessed">2022-08-08</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>hybrid edition</term>
+               <term>interface</term>
+               <term>visualization</term>
+               <term>user navigation</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>The <emph>Stoffe</emph>-project is a text-genetic hybrid edition that digitally processes and
+               presents the works of the Swiss writer Friedrich Dürrenmatt (1921–1990). The estate
+               is part of the founding inventory of the Swiss Literary Archives (SLA), where it has
+               been indexed since 1991, one year after Dürrenmatt’s death, and initially digitally
+               processed in a preliminary version. This served as the scientific basis for the
+               five-volume print edition that was published in May 2021. Editors are Rudolf Probst
+               and Ulrich Weber. The sophisticated new edition is linked to a digital edition in
+               which Dürrenmatt’s autobiographical works can be explored. In the three sections
+               “Text”, “Genesis”, and “Archive”, the online edition offers, on the one hand, the
+               text of the selection edition in digital form, and, on the other hand, text-genetic
+               tools for orientation, as well as the entire manuscript material in the scope of
+               about 30,000 leaves in the form of facsimiles. Thus, Dürrenmatt’s most important work
+               complex of the late oeuvre can be experienced as a process in all its dynamics and
+               complexity. Although Friedrich Dürrenmatt’s complex of materials is made accessible
+               in digital form, it does not meet common best practices of digital scholarly editions
+               which in turn has a negative impact on its compliance with the FAIR principles.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Gegenstand und Inhalte der Edition<note xml:id="ftn1">Im Mai 2021 fand am
+                  Lehrstuhl für Digital Humanities der Bergischen Universität Wuppertal ein interner
+                  Test der vorläufigen Beta-Version des <emph>Stoffe</emph>-Projekts statt. An
+                  dieser Testgruppe war auch die Verfasserin dieses Reviews beteiligt. Im Vorfeld
+                  der Veröffentlichung des Projektes wurden dabei von den Tester*innen sowohl eine
+                  Bewertung des Gesamteindrucks als auch Detailbeobachtungen vorgenommen. Relevante
+                  Parameter waren u. a. die Funktionalität, die Benutzbarkeit und das Layout der
+                  Edition. Die Ergebnisse der Auswertung wurden den Herausgebern der Edition zur
+                  Verfügung gestellt.</note>
+            </head>
+            <p xml:id="p1">Friedrich Reinhold Dürrenmatt, geboren am 5. Januar 1921 in Stalden im
+               Emmental, gestorben am 14. Dezember 1990 in Neuenburg, war ein Schweizer
+               Schriftsteller, Dramatiker und Maler. Viele seiner Romane und Erzählungen wurden auch
+               als Hörspiel bearbeitet. Von beinahe allen Werken existieren unterschiedliche
+               Fassungen. Im Fokus stehen autobiographische Werke, Korrespondenzen und
+               Lebensdokumente. Gegenstand der Rezension ist die digitale Edition<note xml:id="ftn2"
+                  > Offizielle Website der Edition: <ref target="https://www.fd-stoffe-online.ch"
+                     >https://www.fd-stoffe-online.ch</ref> (05.01.2022).</note> des
+                  <emph>Stoffe</emph>-Komplexes Friedrich Dürrenmatts. Die <emph>Stoffe</emph> sind
+               ein unvollendeter Lebensbericht voller Geschichten und Prosa-Skizzen, die Dürrenmatt
+               zu seinen Lebzeiten nicht publizieren konnte. Der Mehrwert der digitalen
+               textgenetischen Hybridedition liegt in der Sichtbarmachung des dynamischen Schaffens-
+               und Schreibprozesses Dürrenmatts. Das autobiographische Schreiben wird selbst zum
+                  <emph>Stoff</emph>, zum Drama, das sich in der Mikrogenese in Form von händischen
+               redaktionellen Überarbeitungen in den Typoskripten widerspiegelt. Ziel des
+               Editionsprojekts ist nicht die Herstellung <emph>einer</emph> editorisch
+               konstituierten Textversion; stattdessen zeigt die Edition einen Weg auf, wie die
+               komplexe Textgenese, die durch das ständige Kreisen der Gedanken und des
+               Umformulierens beeinflusst wird, dargestellt und digital umgesetzt werden kann. </p>
+            <p xml:id="p2">Über zehn Jahre lang haben die Herausgeber Ulrich Weber und Rudolf Probst
+               an der Druckausgabe gearbeitet und die mehr als 30.000 hinterlassenen Seiten des
+                  <emph>Stoffe</emph>-Archivs akribisch gesichtet. Ziel der fünf Bände ihrer
+               Neuedition (<ref type="crossref" target="#weberundprobst2021">Weber und Probst
+                  2021</ref>) ist es, den Leser*innen sämtliche Textvarianten, Nebennotizen,
+               Lektürequellen und Aufbau-Skizzen bis hin zum finalen Manuskript zugänglich und
+               nachvollziehbar zu machen (<ref type="crossref" target="#funk2021">Funk 2021</ref>;
+                  <ref type="crossref" target="#snb2020">SNB 2020</ref>). Sowohl die gedruckte
+               Neuauflage als auch die digitale Edition übernehmen die ursprüngliche Terminologie
+               des Ablagesystems aus Dürrenmatts ehemaligem Sekretariat. Das digitale Medium erlaubt
+               zudem Querverweise zu anderen Parallel- und Textstellen sowie Referenzen zu
+               Bilddokumenten. Beide Ausgabeformate, die digitale Edition und die Druckausgabe,
+               nutzen dafür ein identisches typografisches Symbolsystem. Die Online-Präsentation der
+               Edition verweist auf den Diogenes Verlag, Herausgeber der Druckfassung, der sich alle
+               Rechte vorbehält.<note xml:id="ftn3">Siehe: <ref
+                     target="https://web.archive.org/web/20230406143229/https://www.fd-stoffe-online.ch/text/0"
+                     >https://web.archive.org/web/20230406143229/https://www.fd-stoffe-online.ch/text/0</ref>.
+               </note> Darüber hinaus lassen sich mangels Dokumentation der Auswahlkriterien der
+               digital präsentierten Materialien keine Rückschlüsse auf mögliche Hintergründe dieser
+               editorischen Entscheidung ziehen. </p>
+            <p xml:id="p3">Die Edition ist in drei übergeordnete Bereiche aufgeteilt, die in sich
+               miteinander verknüpft sind. Unter <emph>Archiv</emph>
+               <note xml:id="ftn4">Bereich <emph>Archiv</emph>: <ref
+                     target="https://web.archive.org/web/20220805160920/https://www.fd-stoffe-online.ch/archiv"
+                     >https://web.archive.org/web/20220805160920/https://www.fd-stoffe-online.ch/archiv</ref>.</note>
+               stellt sie die 30.000 Manuskriptseiten, die in über 350 Textzeugen überliefert sind,
+               in Abbildungen und überwiegend auch mit Transkriptionen zur Verfügung. Die
+               Archivnomenklatur wurde bereits bei der Erschließung des Nachlasses berücksichtigt
+               und die Reihenfolge und Ordnung der Manuskriptsignaturen beibehalten. Der dynamische
+               Arbeits- und Schaffensprozess Dürrenmatts an seinem autobiographischen
+                  <emph>Stoffe</emph>-Projekt wird im Bereich <emph>Genese</emph>
+               <note xml:id="ftn5">Bereich <emph>Genese</emph>: <ref
+                     target="https://web.archive.org/web/20220805161446/https://www.fd-stoffe-online.ch/genese"
+                     >https://web.archive.org/web/20220805161446/https://www.fd-stoffe-online.ch/genese</ref>.</note>
+               durch unterschiedliche exemplarische Zugänge visualisiert. Der dritte Bereich gibt
+               den vollständigen <emph>Text</emph>
+               <note xml:id="ftn6">Bereich <emph>Text</emph>: <ref
+                     target="https://web.archive.org/web/20220808073610/https://www.fd-stoffe-online.ch/text"
+                     >https://web.archive.org/web/20220808073610/https://www.fd-stoffe-online.ch/text</ref>.</note>
+               der gedruckten Buchausgabe band-, text- und seitenidentisch wieder. Von hier aus sind
+               sämtliche Originalmanuskripte aus dem Nachlass der <emph>Stoffe</emph> zugänglich. </p>
+            <p xml:id="p4">Innerhalb der drei Zugänge bereitet die Edition das Material
+               unterschiedlich auf. Das Projekt umfasst audiovisuelle Medien und interaktive
+               Komponenten. <emph>Ton</emph>- und <emph>Filmdokumente</emph> im Archiv geben einen
+               Einblick in die Lebens- und Arbeitsweise Dürrenmatts. Das Film- und Tonmaterial
+               markiert dabei eine von mehreren Subkategorien innerhalb der Edition. Aufgrund ihrer
+               Navigation und Menügestaltung vermittelt die Edition zunächst den (falschen)
+               Eindruck, ihr Schwerpunkt läge auf audiovisuellen Medien und nicht auf der
+               schriftlichen Überlieferung des <emph>Stoffe</emph>-Komplex. Dies ist ein Defizit der
+               Ausgabe. Weitere Bestandteile des <emph>Stoffe</emph>-Projekts sind das umfangreiche
+               Handschriftenmaterial, Schreibmedien, bzw. Textsorten und Genres. Dokumenttypen wie
+               beispielsweise Arbeitsfassungen, Reinschriften, Notizhefte und Computertexte sind im
+               Archiv-Bereich der Edition im linken Menü über einen Button oben links auf der Seite
+               aufrufbar. Eine <emph>Timeline</emph>
+               <note xml:id="ftn7">Timeline mit Auswahl <emph>Biographisches Ereignis</emph>: <ref
+                     target="https://web.archive.org/web/20220808073755/https://www.fd-stoffe-online.ch/timeline"
+                     >https://web.archive.org/web/20220808073755/https://www.fd-stoffe-online.ch/timeline</ref>.</note>
+               und komplexe <emph>Stemmata</emph>
+               <note xml:id="ftn8">Übersicht zur Genese der Stoffe: Stemmata 1964–1981: <ref
+                     target="https://web.archive.org/web/20220808073949/https://www.fd-stoffe-online.ch/stemmata"
+                     >https://web.archive.org/web/20220808073949/https://www.fd-stoffe-online.ch/stemmata</ref>.</note>
+               im Bereich zur <emph>Genese</emph> visualisieren das chronologische Erscheinen der
+               Manuskripte, Arbeitsfassungen sowie damit zusammenhängende biographische Ereignisse.
+               Durch diese exemplarischen Zugänge versucht die Edition die literarische Entwicklung
+               der <emph>Stoffe</emph> nachvollziehbar und verständlicher zu machen. Volltexte
+               stehen im Bereich <emph>Text</emph> zur Verfügung und können im PDF-Format auf
+               Seitenbasis heruntergeladen werden. Optisch gleichen diese dem Layout der gedruckten
+               Fassung. Weitere Kontextmaterialien und Bibliografien stehen nicht zur Verfügung.
+            </p>
+         </div>
+         <div xml:id="div2">
+            <head>Ziele und Methoden</head>
+            <p xml:id="p5">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-1.png"/>
+                  <head type="legend">Transkription und Faksimile in paralleler Ansicht.</head>
+               </figure>Das Edendum der Edition ist der <emph>Stoffe</emph>-Komplex, innerhalb
+               dessen das <emph>Archiv</emph> eine tragende Rolle spielt. Trotz der beibehaltenen
+               Archivnomenklatur und Signaturen aus Dürrenmatts ehemaligen Sekretariat ist das
+               Projekt kein „digitales Archiv“, denn die Art der Aufbereitung erfüllt editorische
+               Ansprüche. Die Dokumente wurden editorisch durchgearbeitet und kritisch reflektiert,
+               sodass sie für die Forschung im philologischen Kontext benutzbar sind. Dadurch wird
+               das „Archiv“ zu einer „Edition“. Die archivalische Komponente der digitalen Edition
+               hat zunehmend an Bedeutung gewonnen. Vorzeigeprojekte wie die digitale Faust- und
+               Köppen-Edition räumen dem Archiv einen beachtlichen Stellenwert ein. Im digitalen
+               Medium haben auch Bild- und Audiomaterialien ihren Platz gefunden. Im Fokus des
+                  <emph>Stoffe</emph>-Projekts steht eine Edition, die das Korpus Dürrenmatts in
+               seiner Komplexität sichtbar macht, und zwar in einer Art und Weise, die sowohl
+               Fachwissenschaftler*innen als auch die breite Leserschaft Friedrich Dürrenmatts
+               verstehen. Letztere soll sich nicht erst in komplexe Transkriptionsregeln einlesen
+               oder einen editorischen Grundkurs belegen müssen, um mit der Edition arbeiten zu
+               können, so die Editoren im Rahmen eines Vortrages am IZED (Interdisziplinäres Zentrum
+               für Editions- und Dokumentwissenschaft).<note xml:id="ftn9">
+                  <emph>Dürrenmatts Stoffe-Projekt. Vom Nachlass zur Hybridedition</emph>.
+                  Veranstaltungsankündigung und -einladung des Graduiertenkollegs „Dokument – Text -
+                  Edition“ auf der Website des IZED der Bergischen Universität Wuppertal: <ref
+                     target="https://web.archive.org/web/20220808074239/https://www.ized.uni-wuppertal.de/de/home/"
+                     >https://web.archive.org/web/20220808074239/https://www.ized.uni-wuppertal.de/de/home/</ref>.</note>
+               Um diesem Anliegen nachzukommen, stellt die Edition verschiedene Ansichten (z. B.
+               Lesetext, diplomatische Transkription in einer parallelen Ansicht mit dem Faksimile)
+               bereit (<ref type="crossref" target="#abb1">Abb. 1</ref>). In der Edition befindet
+               sich jedoch kein Bereich (z. B. „About“ oder „Über die Edition“), der genau das als
+               Ziel und Methode explizit formuliert. </p>
+            <p xml:id="p6">Ein großer Kritikpunkt an der digitalen Edition des
+               <emph>Stoffe</emph>-Projekts ist, dass keine Angaben zur technischen Umsetzung
+               gemacht werden. Es gibt keine öffentliche Dokumentation, die nähere Informationen zum
+               verwendeten Datenmodell und -format gibt. Folglich kann keine Aussage über die Art
+               der Modellierung (und inwiefern diese gängigen Standards entspricht) getroffen
+               werden. </p>
+         </div>
+         <div xml:id="div3">
+            <head>Umsetzung und Präsentation</head>
+            <p xml:id="p7">Im Rahmen des Vortrags erklärten die Herausgeber, die
+               <emph>Stoffe</emph>-Edition sei auf technischer Seite unabhängig von umliegenden
+               Technologien wie Datenbanken und Programmbibliotheken, ohne zu spezifizieren, welche
+               Art von Datenbank, Server, Programmbibliotheken oder APIs genau verwendet wurden.
+               IT-Support für die Implementierung leistete Micro Solutions Software &amp;
+               Communications GmbH,<note xml:id="ftn10">Impressum, <ref
+                     target="https://web.archive.org/web/20220808074512/https://www.fd-stoffe-online.ch/impressum"
+                     >https://web.archive.org/web/20220808074512/https://www.fd-stoffe-online.ch/impressum</ref>.</note>
+               Unterstützung bei der Datenmodellierung pagina GmbH,<note xml:id="ftn11">pagina,
+                  offizielle Website: <ref
+                     target="https://web.archive.org/web/20220808074740/https://www.pagina.gmbh/digital-humanities/konzeption-und-beratung/"
+                     >https://web.archive.org/web/20220808074740/https://www.pagina.gmbh/digital-humanities/konzeption-und-beratung/</ref>.</note>
+               so die Herausgeber.</p>
+            <p xml:id="p8">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-2.png"/>
+                  <head type="legend">Startseite der Edition.</head>
+               </figure>Als Startseite erscheint beim Aufruf der Edition zunächst eine Landing Page
+                  (<ref type="crossref" target="#abb2">Abb. 2</ref>). Die optische Darstellung aus
+               einem schwarz-weißen Corporate Design in Kombination mit einem serifenlosen Font
+               wirkt zeitlos und modern. Das farblose, wenig spielerische, aber sauber und
+               aufgeräumte Design sowie die unaufgeregte Schriftart werden durchgehend einheitlich
+               in der gesamten Edition verwendet. Diese Art des schnörkellosen Designs steht in der
+               Stiltradition der Schweizer Typografie-Bewegung aus den 1950ern und 1960ern. </p>
+            <p xml:id="p9">Kritisch ist der Umgang mit der Konsole, um Ressourcen und Inhalte einer
+               Website mit Entwicklertools moderner Browser zu analysieren, da dieser – zumindest
+               was den schnellen Zugriff per Rechtsklick angeht – von der Website gesperrt ist.
+               Damit ist der Blick ‚hinter die Fassade‘ und somit in den Quellcode nicht bzw. nur
+               über Umwege möglich, um beispielweise herauszufinden, welche Schriftarten die Edition
+               für die unterschiedlichen Bereiche (z. B. für den Editionstext) verwendet. </p>
+            <p xml:id="p10">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-3.png"/>
+                  <head type="legend">Inhaltsbereich der Edition.</head>
+               </figure>Die textbasierten Abschnitte sind gut lesbar. Der zentrale Inhaltsbereich,
+               der den Einstieg in die Edition über die drei Bereiche <emph>Archiv</emph>,
+                  <emph>Genese</emph> und <emph>Text </emph>ermöglicht, ist durch Klick auf eine
+               beliebige Stelle auf der Startseite erreichbar. Der Inhaltsbereich spielt mit der
+               graphischen Gestaltung der Buchausgabe. Eine interaktive Grafik zeichnet in Form
+               einer Animation ein Labyrinth, das optisch eine Verbindung mit dem gleichnamigen Werk
+               („Labyrinth“, 1998 bei Diogenes) Friedrich Dürrenmatts herstellt (<ref
+                  type="crossref" target="#abb3">Abb. 3</ref>). </p>
+            <p xml:id="p11">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-4.png"/>
+                  <head type="legend">Aufgeklapptes Hauptmenü.</head>
+               </figure>Der strukturelle Aufbau der Seite erlaubt den Nutzer*innen einen
+               top-down-Einstieg, indem man sich Schritt für Schritt nach eigenen Interessen tiefer
+               mit einem der drei Bereiche befassen kann. <emph>Archiv</emph>, <emph>Genese</emph>
+               und <emph>Text </emph>verfügen in der linken oberen Ecke über eine ausklappbare
+               Bereichsnavigation, die passend zu jedem Inhalt ein Inhaltsverzeichnis bereitstellt.
+               Das aufklappbare Hauptmenü (<ref type="crossref" target="#abb4">Abb. 4</ref>) in der
+               rechten oberen Ecke bildet die Hauptnavigation der Edition. Von hier aus ist es
+               möglich, zu jeder beliebigen Stelle im Projekt zu springen.</p>
+            <p xml:id="p12">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-5.png"/>
+                  <head type="legend">Die Suchfunktion ermöglicht die Eingabe eines
+                     Freitexts.</head>
+               </figure>
+               <figure xml:id="img6">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-6.png"/>
+                  <head type="legend">Drei Register stehen innerhalb des Stoffe-Projekts zur
+                     Verfügung.</head>
+               </figure>Die Edition verfügt über eine allgemeine Suchfunktion.<note xml:id="ftn12">
+                  Suche, <ref
+                     target="https://web.archive.org/web/20220808074919/https://www.fd-stoffe-online.ch/search"
+                     >https://web.archive.org/web/20220808074919/https://www.fd-stoffe-online.ch/search</ref>.</note>
+               Sie erlaubt die Eingabe eines Freitextes, der jedoch nicht via Auto-Completion
+               vervollständigt wird. Die Ergebnissuche kann mit einer und/oder-Option sowohl
+               innerhalb des Buchtextes als auch im Archiv angestoßen werden (<ref type="crossref"
+                  target="#abb5">Abb. 5</ref>). Hilfetexte, die Erläuterungen zur Benutzung der
+               Suchfunktion bereitstellen, gibt es nicht. Register<note xml:id="ftn13">Register,
+                     <ref
+                     target="https://web.archive.org/web/20220808103013/https://www.fd-stoffe-online.ch/register/"
+                     >https://web.archive.org/web/20220808103013/https://www.fd-stoffe-online.ch/register/</ref>.</note>
+               sind unter dem Bereich <emph>Text</emph> subsumiert. In sehr übersichtlicher
+               Gestaltung stehen Personen- und Titelregister, Ortsregister und ein Titelregister
+               [sic!], die sich jeweils alphabetisch sortieren lassen, zur Auswahl (<ref
+                  type="crossref" target="#abb6">Abb. 6</ref>).</p>
+            <p xml:id="p13">Die URLs der Seiten sind kurz und prägnant. Allerdings gibt das Projekt
+               keine konkrete Empfehlung für deren Zitation. Das gilt auch für die Video- und
+               Tondokumente. Damit stellt sich die Frage, wie granular die Editionsinhalte (z. B.
+               Lesetexte oder Bildinhalte wie Faksimiles) zitierbar sind. Wie können sowohl einzelne
+               Seiten als auch Objekte (z. B. ein Video oder eine Tonaufnahme) innerhalb der Edition
+               nicht nur ordentlich zitiert, sondern auch persistent verfügbar gemacht werden? Die
+               einzelnen Inhaltsobjekte im <emph>Stoffe</emph>-Projekt haben keine klaren Adressen
+               und sind damit nicht feingranular adressierbar oder referenzierbar. Da die Edition
+               keine Angaben zu APIs, d. h. zu technischen Schnittstellen, macht, muss man als
+               Betrachter zu dem Schluss kommen, dass es keine gibt. Somit bietet das
+                  Stoffe-<emph>Projekt</emph> keine Option zum „Harvesten“ der Daten und lässt sich
+               auch nicht in andere, übergreifende Systeme integrieren. Eine Download-Option für die
+               Daten, d. h. die transkribierten Texte und die Faksimiles, gibt es nicht. Lediglich
+               die Lesetexte können im PDF-Format heruntergeladen werden. </p>
+         </div>
+         <div xml:id="div4">
+            <head>Benutzerführung</head>
+            <p xml:id="p14">Die Edition weist einige technische Mängel und Unzulänglichkeiten auf:
+               Beispielsweise dauert es mehrere Sekunden, bis die Startseite geladen ist. Vereinzelt
+               kommt es auch beim PDF-Download einzelner Textseiten zu Ladezeitverzögerungen. Die
+               neu geöffneten Tabs sind außerdem leer. Insgesamt ist die Suchfunktion sehr basal
+               gehalten. Es gibt keinen Hinweis darauf, was wo und wie durchsucht und gefunden
+               werden kann. Innerhalb des Suchbereichs sollten die Register und bereitgestellten
+               Metadaten miteinbezogen werden. Die Zweiteilung bzw. Unterscheidung in „Personen- und
+               Titelregister“ versus „Titelregister“ ist nicht ohne Weiteres verständlich. Bei
+               näherer Betrachtung wird deutlich, dass es sich hierbei um die gleichen Titel
+               handelt, nur anders geordnet. </p>
+            <p xml:id="p15">
+               <figure xml:id="img7">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-7.png"/>
+                  <head type="legend">Übersicht mit den verwendeten Icons eines jeden Bereichs
+                     (Bereichsnavigation).</head>
+               </figure>
+               <figure xml:id="img8">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-8.png"/>
+                  <head type="legend">Übersicht mit den in der Edition verwendeten Ideogramme als
+                     Querverweise zu weiterem Material.</head>
+               </figure>Die ausklappbaren hierarchischen Menüs innerhalb der drei Bereiche
+                  <emph>Archiv</emph>, <emph>Genese</emph> und <emph>Text</emph> schaffen
+               Übersichtlichkeit bei der Navigation, allerdings müssen die Nutzer*innen die kleinen
+               „Ausziehmenüs“ in der linken oberen Ecke zunächst finden und als solche erkennen
+                  (<ref type="crossref" target="#abb7">Abb. 7</ref>). Die Seiten- und
+               Pfeilnavigation ist schlicht und erklärt sich von selbst. Kleine Ideogramme am linken
+               und rechten Bildrand innerhalb von <emph>Text</emph> verweisen auf weiteres, nicht
+               ausschließlich textuelles Material, auf das sich Dürrenmatt bezieht, welches aus
+               seiner schriftstellerischen Arbeit hervorgegangen ist oder seinen Schaffensprozess
+               beeinflusst hat (<ref type="crossref" target="#abb8">Abb. 8</ref>).</p>
+            <p xml:id="p16">
+               <figure xml:id="img9">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-9.png"/>
+                  <head type="legend">Text- und Bildansicht innerhalb des Archivs.</head>
+               </figure>Die Dokumentdarstellung im <emph>Archiv</emph> ist gelungen: Sie ist
+               minimalistisch und doch ist alles da, was man braucht: Nutzer*innen können zwischen
+               einer Faksimile-, einer Textansicht oder einer Parallelansicht wählen. Durch die
+               Bereitstellung gängiger Zoom-Funktionen oder eines Vollbildmodus erlaubt der Viewer
+               eine genauere Betrachtung der Quelle. Die Anzeige der Varianten ist ebenfalls möglich
+                  (<ref type="crossref" target="#abb9">Abb. 9</ref>). </p>
+            <p xml:id="p17">Der Begrüßungstext innerhalb von <emph>Text</emph> markiert einen
+               gewissen Bruch zu den anderen Inhalten. Das ausklappbare Inhaltsverzeichnis auf der
+               linken Seite erlaubt eine Navigation innerhalb der Bände und die Auswahl einzelner
+               Kapitel. Die Texte selbst sind gut lesbar und wirken in ihrer Darstellung aufgeräumt.
+               Die Verweise sind als Links realisiert und bringen einen funktionalen Mehrwert, indem
+               sie das <emph>Stoffe</emph>-Projekt und seine inhaltlichen Komponenten miteinander
+               verknüpfen. Die Referenzen auf Dokumentfaksimiles sind allerdings weniger
+               offensichtlich und könnten durchaus prägnanter hervorstechen, damit sie sich der
+               Nutzer*in unmittelbar erschließen. Grundsätzlich sollten alle Links und verlinkten
+               Icons mit einem Tooltip versehen sein, damit das Linkziel bzw. die Funktion des
+               Elements klar ist, bevor die Nutzer*in daraufklickt. Ein übergeordnetes Feld im
+               Header des Textbereichs erlaubt die Eingabe von Seitenzahlen. </p>
+            <p xml:id="p18">
+               <figure xml:id="img10">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-10.png"/>
+                  <head type="legend">Timeline mit der chronologischen Anzeige unterschiedlicher
+                     Kategorien.</head>
+               </figure>Innerhalb der <emph>Genese</emph> bietet die Edition mit einer Timeline und
+               verschiedenen Stemmata zwei exemplarische Zugänge zur komplexen Textgenese. In der
+               Timeline können mehrere Kategorien selektiert und kombiniert werden, die dann in
+               chronologischer Reihenfolge z. B. erscheinende Manuskripte, Arbeitsfassungen und
+               damit zusammenhängende biographische Ereignisse anzeigen. Sie bildet alle Elemente
+               auf einem Zeitstrahl ab, die sich datieren lassen. Die Timeline (<ref type="crossref"
+                  target="#abb10">Abb. 10</ref>) ist voll funktionsfähig, intuitiv und einfach
+               benutzbar. Features wie das Scrolling, das Hovern über den Einträgen und das dadurch
+               erzeugte Pop-up funktionieren einwandfrei. Die Chronologie von Dokumenten ist
+               durchaus relevant für die Genese der <emph>Stoffe</emph>, insofern ist die Timeline
+               an dieser Stelle der Edition richtig aufgehoben.</p>
+            <p xml:id="p19">
+               <figure xml:id="img11">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-11.png"/>
+                  <head type="legend">Ausschnitt aus einer stemmatologischen Ansicht über die Genese
+                     der Stoffe im Zeitraum von 1964 bis 1981.</head>
+               </figure>Auf der Seite zu den Stemmata erscheint zunächst eine leere Seite. Für die
+               Anzeige muss über das linke Bereichsmenü manuell eines der insgesamt vier Stemmata
+               ausgewählt werden. Sie stellen den Entstehungsprozess unterschiedlicher Arbeitsphasen
+               über einen gewissen Zeitraum grafisch dar, um die Textgenese auf diese Weise zu
+               visualisieren und nachvollziehbar zu machen (<ref type="crossref" target="#abb11"
+                  >Abb. 11</ref>). Funktional hat dieses Feature noch Verbesserungspotential. Die
+               mit Hilfe dieses Tools dargestellte Visualisierung baut sich nur sehr langsam auf, da
+               das Material sehr umfangreich und komplex ist. Die Dynamik und die Ladezeit könnten
+               und sollten geschmeidiger sein. Die Übersichtsvisualisierung zu jedem Stemma ist
+               allgemein gut gelungen und technisch souverän gelöst, wirkt in der optischen
+               Darstellung, so wie die gesamte Edition, allerdings sehr buchähnlich. Ein großer
+               Vorteil ist die Verknüpfung der einzelnen Felder mit den entsprechenden
+               Textabschnitten aus dem <emph>Stoffe</emph>-Komplex. Die Stemmata zeichnen sich durch
+               eine leichte Handhabung aus. Für eine genauere Betrachtung erlaubt die Visualisierung
+               ein stufenloses Zoomen. Die Legende sollte auf den ersten Blick allerdings sichtbarer
+               und bei der vergrößerten Ansicht „sticky“ am Rand der Visualisierung oder dynamisch
+               einblendbar sein </p>
+            <p xml:id="p20">Als dritter und letzter Bestandteil der <emph>Genese</emph> visualisiert
+               eine Textzeugenliste die überlieferten Textzeugen. Die Tabelle als Mittel der
+               Darstellung ist gut gewählt, um neben der Timeline ein zusätzliches Werkzeug für die
+               Anzeige chronologischer Abfolgen anzubieten. Die Sortierung beginnt mit der ältesten
+               Quelle. Die Kolumnen sind zusätzlich nach Signatur, Titel und Datierung sortierbar.
+               Eine weitere Spalte zeigt an, ob der Textzeuge Teil der Druckedition ist. </p>
+         </div>
+         <div xml:id="div5">
+            <head>Soziabilität und Ausgabegeräte</head>
+            <p xml:id="p21">
+               <figure xml:id="img12">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-12.png"/>
+                  <head type="legend">Ein schmaler Viewport führt zu einer Überlappung der
+                     Inhalte.</head>
+               </figure>Das <emph>Stoffe</emph>-Projekt ist nicht mit sozialen Medien oder
+               virtuellen Forschungsumgebungen verbunden. Alternative Ausgabeformen wie spezielle
+               Druckformate oder zusätzliche digitale Formate für kleinere Geräte (E-Reader,
+               Tablets, Apps für Smartphones) gibt es nicht. Die Aktivierung schmalerer Viewports
+               zeigt, dass das Responsive Design für die Anzeige in schmaleren Bildschirmen, die
+               kleiner als 800px sind, noch nicht ganz ausgereift ist. Die Menüs auf der linken und
+               rechten Seite überschneiden den Inhaltsbereich, sobald die Breite abnimmt, wie das
+               Beispiel mit der Anzeige des Faksimile-Viewers zeigt (<ref type="crossref"
+                  target="#abb12">Abb. 12</ref>). Das ausgezogene Menü müsste sich automatisch
+               verkleinern oder sollte weniger Platz des Bildschirms einnehmen, um diese Überlappung
+               zu vermeiden.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Daten </head>
+            <p xml:id="p22">Die Grunddaten der Edition sind weder auffindbar noch zugänglich. Wie
+               die Herausgeber in dem bereits erwähnten Vortrag am IZED erklärt haben, wurden für
+               die Dürrenmatt-Edition projekteigene Kodierungsrichtlinien entwickelt. Diese kämen
+               einer Kodierung nach den Richtlinien der Text Encoding Initiative (TEI)<note
+                  xml:id="ftn14"> TEI-Guidelines, <ref target="https://tei-c.org/guidelines"
+                     >https://tei-c.org/guidelines</ref>.</note> zwar sehr nahe, entsprächen diesen aber nicht. Daher ist es fraglich,
+               inwieweit die Daten des <emph>Stoffe</emph>-Projekts interoperabel und
+               wiederverwendbar sind, sobald sie außerhalb der für die Edition konzipierten
+               technischen Infrastruktur genutzt werden. Die Interoperabilität der Edition wird,
+               abgesehen von dem projekteigenen Kodierungsschema, auch durch den Verzicht auf eine
+               Erschließung mit Normdaten (z. B. GND für Personen im Register) weiter eingeschränkt. </p>
+            <p xml:id="p23">
+               <figure xml:id="img13">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-13.png"/>
+                  <head type="legend">Einblendung der Metadaten.</head>
+               </figure>In der Parallelansicht von Faksimile und Lesetext kann die Leserschaft über
+               einen Klick auf eine kleine Fahne mit der Aufschrift „Metadaten“ am rechten Bildrand
+               weitere relevante Informationen über das angezeigte Dokument einblenden (<ref
+                  type="crossref" target="#abb13">Abb. 13</ref>). Dabei handelt es sich lediglich um
+               bibliografische und sammlungsspezifische Informationen. Dort würde man zusätzlich
+               Daten zur Identifikation, Beschreibung, Darstellung, Organisation, Dokumentation und
+               somit Relevantes zum Erschließungsprozess des Dokuments erwarten. Eine
+               Downloadfunktion wäre von Vorteil.</p>
+            <p xml:id="p24">
+               <figure xml:id="img14">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_17/duerrenmatt/pictures/picture-14.png"/>
+                  <head type="legend">Hinweis zum Umgang mit kopiertem Code.</head>
+               </figure>Die Daten sind in keinem öffentlichen Repositorium publiziert (z. B. GitHub,
+               Zenodo oder ein fachspezifisches Repositorium). Die Entscheidung der
+               Verantwortlichen, die Daten weder einsehbar noch für die Nachnutzung (wenn man sie
+               aufgrund der projekteigenen Kodierung extern denn verwenden kann) bereitzustellen,
+               ist in der Edition nirgends begründet. Auch über rechtliche Möglichkeiten und
+               Beschränkungen für die Nachnutzung der Inhalte, Rechte- und Lizenzmodell gibt die
+               Edition abgesehen von dem Rechtevorbehalt des Verlags keine unmittelbar transparente
+               Auskunft. Grundsätzlich verfolgt die Edition keine offene Datenpolicy: Wenn
+               Nutzer*innen eine Textstelle zu Zitierzwecken via Strg+C kopieren möchten, erscheint
+               in Form eines „Alerts“ eine Warnung, die auf rechtliche Konsequenzen verweist,
+               sollten mehr als 1000 Zeichen übernommen werden (<ref type="crossref" target="#abb14"
+                  >Abb. 14</ref>). Darüber hinaus ist die Einsicht in den Quellcode via Rechtsklick
+               blockiert. Lediglich über den Menüpunkt „Seitenquelltext anzeigen“ in Firefox und den
+               „Entwicklertools“ in Chrome wird dieser sichtbar. Da die Edition vermutlich
+               vollständig js-basiert ist und nur das Grundkonstrukt des Aufbaus aus HTML besteht,
+               lassen sich die einzelnen Seiten vermutlich nicht archivieren. Mit Blick auf die
+               Druckausgabe, die finanziell erworben werden muss und aus der sich fairerweise
+               größere Textmengen nicht direkt herauskopieren lassen (z. B. durch Scannen und
+               Vervielfältigen), was mutmaßlich strafbar ist, ist diese Art der Blockade, bzw.
+               Einschränkung des Zugriffs in der Online-Ausgabe in gewisser Weise nachvollziehbar.
+               Die Frage nach den Beweggründen, warum im digitalen Medium Informationen
+               „einbehalten“ werden, ist dennoch berechtigt. Durch eine mangelnde Dokumentation und
+               Kommunikation der editorischen Entscheidungen bleiben die Editoren den Nutzer*innen
+               jedoch eine Erklärung schuldig.</p>
+            <p xml:id="p25">Innerhalb der Edition gibt es keinen Bereich mit thematisch einführenden
+               und erläuternden Texten, die das Projekt kontextualisieren. Auch die Nennung aller
+               Beteiligten fehlt. Die Auswahl der Inhalte sowie deren Herkunft ist in der
+               chronologisch sortierten Textzeugenliste<note xml:id="ftn15">Chronologische
+                  Textzeugenliste, <ref
+                     target="https://web.archive.org/web/20220808075352/https://www.fd-stoffe-online.ch/chrontxtz"
+                     >https://web.archive.org/web/20220808075352/https://www.fd-stoffe-online.ch/chrontxtz</ref>.</note>
+               nachvollziehbar. Tabellarisch beinhaltet sie unter anderem die Signatur, den Titel
+               und die Datierung sowie Angaben über die Texterfassung. Die Editionsrichtlinien, die
+               für die Wiedergabe der Manuskripte konzipiert wurden, sind im Bereich
+                  <emph>Text</emph> zu Beginn kurz zusammengefasst. Für eine detaillierte Aufführung
+               über die <emph>Prinzipien der Textwiedergabe</emph> wird auf Band 1, Seite 24<note
+                  xml:id="ftn16">Prinzipien der Textwiedergabe: <ref
+                     target="https://web.archive.org/web/20220808075508/https://www.fd-stoffe-online.ch/text/1"
+                     >https://web.archive.org/web/20220808075508/https://www.fd-stoffe-online.ch/text/1</ref>.</note>
+               <emph>Zur Geschichte meiner Schriftstellerei</emph> in der Druckausgabe verwiesen. </p>
+            <p xml:id="p26">Da es zum jetzigen Zeitpunkt weder eine konkrete Zitierempfehlung noch
+               Permalinks für eine dauerhafte Adressierung sowohl auf Makroebene (Website) als auch
+               auf Mikroebene (Objekte, wie Tonaufnahme, Video, Bild) gibt, ist die Aussicht auf
+               eine dauerhafte Nutzbarkeit und Verfügbarkeit der Ressource eher fraglich. Aufgrund
+               fehlender Angaben über ein Repositorium, welches die langfristige Speicherung der
+               Daten ermöglichen soll, ist ebenso ungewiss, ob die verantwortlichen Institutionen
+               den Erhalt der Daten oder gar der Präsentation planen. </p>
+         </div>
+         <div xml:id="div7">
+            <head>Fazit</head>
+            <p xml:id="p27">Bei der Entwicklung digitaler Editionen und ihrer Methoden für die
+               erschließende Wiedergabe historischer Dokumente und Texte haben sich in der
+               einschlägigen Community bestimmte <emph>best practices</emph> etabliert, die u. a. im
+               Kriterienkatalog des IDEs (<ref type="crossref" target="#sahle2014">Sahle 2014</ref>)
+               dokumentiert sind. Das <emph>Stoffe</emph>-Projekt setzt viele dieser <emph>best
+                  practices</emph> nur unzureichend oder gar nicht um. State-of-the-Art in digitalen
+               Editionen ist heutzutage beispielsweise die Kodierung in XML/TEI. Ohne die Verwendung
+               dieses De-Facto-Standards digitaler Editionen sind Nachnutzung und Austauschbarkeit
+               der Ressourcen nur schwierig zu gewährleisten. Digitale Editionen (aber auch
+               Druckeditionen) arbeiten üblicherweise nach spezifischen Editionsrichtlinien, die
+               hier in keiner Weise transparent gemacht werden, von einem formalisierten technischen
+               Schema der Kodierung (z. B. XML-Schema, rng oder ODD) ganz zu schweigen. Ebenso fehlt
+               eine ausführliche Dokumentation zu sämtlichen Schritten der Erstellung und
+               Bearbeitung des Editionsprojekts. Die Rezipient*innen können über die verwendeten
+               Methoden und Praktiken nur spekulieren, da die Editoren ihre Entscheidungen wenig bis
+               gar nicht explizit machen. Insgesamt werfen die in der Rezension thematisierten
+               Mängel die Frage auf, ob das Projekt selbst gar nicht den Anspruch erhebt, als
+               digitale Edition gewertet zu werden, sondern sich selbst möglicherweise vielmehr
+               (‚nur‘) als digitales Archiv oder digitale Begleitpublikation versteht. </p>
+            <p xml:id="p28">Die nicht eingehaltenen Standards für digitale Editionen haben
+               Auswirkungen auf die Umsetzung der FAIR-Prinzipien, mit deren Hilfe „Forschungsdaten
+               für Menschen und Maschine optimal aufbereitet und zugänglich“ (<ref type="crossref"
+                  target="#forschungsdateninfo">FAIRe Daten</ref>) gemacht werden sollen. Für das
+                  <emph>Stoffe</emph>-Projekt kann festgehalten werden, dass in so gut wie allen
+               Bereichen der FAIRness, insbesondere aber auf der technisch-datenbasierten Seite,
+               Nachholbedarf besteht. So ist die digitale Edition zwar jenseits der Datenebene via
+               Google-Recherche <emph>findable </emph>(Suchbegriff „Dürrenmatt Stoffe“), allerdings
+               bezieht sich <emph>findability</emph> nicht nur auf die Auffindbarkeit im Netz,
+               sondern auch auf einzelne Bestandteile wie die Daten. Eine klare Forderung des
+               IDE-Kriterienkatalogs (<ref type="crossref" target="#sahle2014">Sahle 2014</ref>)
+               legt fest, dass einzelnen Inhaltsobjekten klare Adressen vergeben werden sollen und
+               müssen, um sie feingranular adressierbar und referenzierbar zu machen. Zusätzlich
+               sollte jede digitale Edition über Zitationshinweise verfügen und Permalinks auf
+               Seiten- und Objektbasis erstellen. Beide Punkte finden innerhalb des
+                  <emph>Stoffe</emph>-Projekts keine Umsetzung. Des Weiteren werden die Datensätze,
+               darunter neben den Transkriptionen auch Archivdokumente, nicht
+                  <emph>accessible</emph> gemacht, obwohl z. B. ein Bulk-Download eine einfache
+               Lösung der Bereitstellung wäre. Ebenfalls mit geringem Aufwand könnte man die
+               Sichtbarkeit, Nachnutzung und Langzeitarchivierung der Daten durch die Einspeisung in
+               ein Repositorium (z. B. Zenodo) steigern. Da aufgrund der fehlenden Dokumentation an
+               keiner Stelle ersichtlich wird, inwiefern der XML/TEI-Standard bei der
+               Datenmodellierung berücksichtigt wurde, ist wiederum fraglich, ob ein Transfer über
+               Schnittstellen mit anderen Systemen möglich ist und wie <emph>interoperable</emph>
+               die Daten schlussendlich sind. Gleiches gilt für die Frage, wie <emph>reusable
+               </emph>die Edition und ihre Daten sind; eine Angabe zur Lizenz fehlt. </p>
+            <p xml:id="p29">Grundsätzlich ist unklar, wie viel Einfluss der Verlag auf den
+               Publikationsprozess der digitalen Edition hat. Es ist undurchsichtig, wie die
+               Projektkonstellation zwischen dem Verlag und den Editor*innen aussieht und von
+               welcher Seite aus entschieden wurde, welche Bestandteile des Nachlasses mit welcher
+               Begründung digital veröffentlicht werden und welche nicht. Diese Tendenz einer
+               Beschränkung und Eingrenzung macht sich auch im Umgang mit dem Quellcode der Edition
+               bemerkbar. Für Entwickler*innen im Bereich digitaler Editionen ist es Usus, die
+               Kodierung und Umsetzung verschiedener Projekte zu besprechen. Die Website des
+                  <emph>Stoffe</emph>-Projekts reizt hingegen ihre Möglichkeiten aus, die Einsicht
+               des Quellcodes zu erschweren, auch wenn sie diese technisch nicht gänzlich verhindern
+               kann. </p>
+            <p xml:id="p30">Jenseits aller „handwerklichen Fragwürdigkeit“ macht die Edition
+               Dürrenmatts wichtigsten Werkkomplex des Spätwerks in seiner ganzen Dynamik und
+               Komplexität als Prozess erfahrbar. In den drei Bereichen <emph>Text</emph>,
+                  <emph>Genese</emph> und <emph>Archiv</emph> bietet die Online-Ausgabe einerseits
+               den Text der Auswahlausgabe in digitaler Form, andererseits textgenetische Werkzeuge
+               zur Orientierung sowie das gesamte Handschriftenmaterial im Umfang von rund 30.000
+               Blättern in Form von Faksimiles. Die digitale Aufbereitung, Erschließung und
+               Präsentation des Nachlasses, insbesondere des Archivs, profitieren von den
+               Möglichkeiten des digitalen Mediums, in dem Querverweise, Referenzen und
+               unterschiedliche Visualisierungen implementiert sind, um die komplexe Textgenese in
+               seiner Gesamtheit darzustellen und nutzbar zu machen. Abseits der drei
+               Haupteinstiegsmöglichkeiten auf übergeordneter Ebene durch <emph>Text</emph>,
+                  <emph>Genese</emph> und <emph>Archiv</emph> ermöglicht das Angebot von Lesetext,
+               Transkription und Faksimile unterschiedliche Ansichten und somit unterschiedliche
+               Zugänge zu dem Korpus. Damit stellt die digitale Edition als Begleitpublikation zum
+               Druck ohne Zweifel eine für die Forschung gewinnbringende Ergänzung dar, auch wenn
+               die Potentiale des digitalen Mediums nur bedingt ausgeschöpft wurden und die Edition
+               an vielen Stellen hinter etablierte <emph>best practices</emph> der Digital
+               Humanities zurückfällt. </p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="forschungsdateninfo">„FAIRe Daten. Wie die FAIR-Prinzipien umgesetzt
+                  werden können“. In <emph>Forschungsdaten.info</emph>, <ref
+                     target="https://web.archive.org/web/20230425082930/https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/"
+                     >https://web.archive.org/web/20230425082930/https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/faire-daten/</ref>.</bibl>
+               <bibl xml:id="funk2021">Funk, Gisa. 2021. „Friedrich Dürrenmatt. Das Stoffe-Projekt.
+                  Hinter tausend Spiegeln“ (Radiobeitrag). In <emph>Deutschlandfunk</emph>, <ref
+                     target="https://web.archive.org/web/20230425082236/https://www.deutschlandfunk.de/friedrich-duerrenmatt-das-stoffe-projekt-hinter-tausend-100.html"
+                     >https://web.archive.org/web/20230425082236/https://www.deutschlandfunk.de/friedrich-duerrenmatt-das-stoffe-projekt-hinter-tausend-100.html</ref>. </bibl>
+               <bibl xml:id="sahle2014">Sahle, Patrick (unter Mitarbeit von Georg Vogeler et al.).
+                  2014. „Kriterien für die Besprechung digitaler Editionen, Version 1.1.“ In
+                     <emph>RIDE: A Review Journal for Digital Editions and Resources</emph>
+                  <ref
+                     target="https://web.archive.org/web/20230120160031/https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/"
+                     >https://web.archive.org/web/20230120160031/https://www.i-d-e.de/publikationen/weitereschriften/kriterien-version-1-1/</ref>. </bibl>
+               <bibl xml:id="snb2020">Schweizerische Nationalbibliothek (SNB). 2020. „Friedrich
+                  Dürrenmatt: Das Stoffe-Projekt. Textgenetische Edition in fünf Bänden.“ <ref
+                     target="https://web.archive.org/web/20230425083714/https://www.nb.admin.ch/snl/de/home/ueber-uns/sla/publikationen/editionen/fd-stoffe.html"
+                     >https://web.archive.org/web/20230425083714/https://www.nb.admin.ch/snl/de/home/ueber-uns/sla/publikationen/editionen/fd-stoffe.html</ref>. </bibl>
+               <bibl xml:id="weberundprobst2021">Weber, Ulrich und Rudolf Probst (Hrsg.). 2021: Das
+                  „Stoffe-Projekt“. Textgenetische Edition in fünf Bänden im Schuber verbunden mit
+                  einer erweiterten Online-Version. Mit einem einleitenden Essay von Daniel
+                  Kehlmann. <ref
+                     target="https://web.archive.org/web/20230425082637/https://www.diogenes.ch/leser/titel/friedrich-duerrenmatt/das-stoffe-projekt-9783257071016.html"
+                     >https://web.archive.org/web/20230425082637/https://www.diogenes.ch/leser/titel/friedrich-duerrenmatt/das-stoffe-projekt-9783257071016.html</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
