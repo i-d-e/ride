@@ -1,0 +1,2070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.15.7">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>LAKomp. Lemmatize, annotate and compare texts in non-standardized
+               languages</title>
+            <author ref="0000-0003-1492-7766">
+               <name>
+                  <forename>Barbara</forename>
+                  <surname>Aehnlich</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bremen</orgName>
+                  <placeName>Bremen, Germany</placeName>
+               </affiliation>
+               <email>ba_ae@uni-bremen.de</email>
+            </author>
+            <author>
+               <name>
+                  <forename>Elisabeth</forename>
+                  <surname>Witzenhausen</surname>
+               </name>
+               <affiliation>
+                  <orgName>Ruhr-University Bochum</orgName>
+                  <placeName>Bochum, Germany</placeName>
+               </affiliation>
+               <email>elisabeth.witzenhausen@rub.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023-09">September 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15/lakomp</idno>
+            <idno type="DOI">10.18716/ride.a.15.7</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue15/lakomp/lakomp.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-6778-4610">Anna-Maria Sichani</editor>
+            <editor ref="https://orcid.org/0000-0002-4522-2833">Elena Spadini</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing"> Frederike
+               Neuber-Martucci</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="15">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-15</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>LAKomp</title>
+                  <editor>Martin-Luther-Universität Halle-Wittenberg</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Molitor, Paul</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Ritter, Jörg</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Molitor, Paul</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Ritter, Jörg</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Medek, André</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Kösser, Sylwia</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Advisor</resp>
+                     <persName>Molitor, Paul</persName>
+                  </respStmt>
+                  <date type="publication">2015</date>
+                  <idno type="URI">https://lakomp.uzi.uni-halle.de</idno>
+                  <date type="accessed">2021-07-21</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>e-mail, telephone</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>semi-automatic annotation</term>
+               <term>text comparison</term>
+               <term>usability</term>
+               <term>workflow</term>
+               <term>support</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>LAKomp is a semi-automatic web-based tool developed for the annotation and comparison
+               of historical, non-standardized texts. In contrast to other tools, LAKomp does not
+               automate annotation but makes manual annotation simple and fast offering a
+               semi-automatic tagging feature and a simple interface. Therefore, the tool is
+               especially useful for scholars of the Humanities. An alignment view and a generated
+                  <emph>Partiturtext</emph> make a comparison of different textual variants
+               possible. LAKomp is useful to individual researchers as well as larger research
+               groups as various users can annotate simultaneously. It was developed at the
+               Martin-Luther-University Halle-Wittenberg.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">Historical language data, such as Early New High German (ENHG) texts,
+               show a very high degree of variation on a graphematic as well as morphological and
+               lexical level. Therefore, quantitative research in diachronic linguistics faces
+               various challenges, as most tools in Natural Language Processing are trained on
+               standardized data and do not perform well on non-standardized varieties (<ref
+                  type="crossref" target="#bennett2010">Bennett et al. 2010</ref>). Linguists
+               working on these non-standardized language varieties generally use manually annotated
+               corpora that enable the automatic extraction of lexical, morphological, and syntactic
+               information and thereby allow statistically valid observations. </p>
+            <p xml:id="p2">In order to build a corpus, texts have to be enriched with metadata,
+               tokenized, lemmatized and annotated. As even the best automatic lemmatization tools
+               and part-of-speech (PoS) taggers produce a certain error rate, manual correction and
+               annotation are usually necessary to produce valid results. This makes corpus building
+               both a time-consuming and tiring process for annotators.</p>
+            <p xml:id="p3">LAKomp<note xml:id="ftn1">
+                  <ref
+                     target="https://web.archive.org/web/20230221131911/https://lakomp.uzi.uni-halle.de/"
+                     >https://web.archive.org/web/20230221131911/https://lakomp.uzi.uni-halle.de/</ref>.</note>
+               is a semi-automatic, web-based tool developed for Early New High German texts that
+               provides a user-friendly interface, which makes corpus creation and text comparison
+               easier and faster (<ref type="crossref" target="#aehnlichkoesser2016">Aehnlich and Kösser 2016</ref>). It was
+               designed for projects that analyze works that are transmitted through various textual
+               variants and show a high degree of graphematic variation. The tool can automatically
+               identify similar text passages across different textual variants, align them and list
+               deviations from a generated normalized text. At the same time, it has an integrated
+               machine-learning feature that presents suggestions for the lemmatization and
+               annotation of text based on the previous input. This process is referred to as
+               semi-automatic annotation in the course of this review.</p>
+            <p xml:id="p4">In this article, we<note xml:id="ftn2">PD Dr. Barbara Aehnlich works as a
+                  lecturer at the University Bremen and holds a Habilitation in German linguistics.
+                  Her research interests are language change and linguistic variation, with a
+                  particular focus on the legal language of the early modern period. Barbara
+                  Aehnlich is coordinator of the Digital Humanities Network DHnet Jena and has
+                  recently developed teaching concepts to strengthen data literacy for students in
+                  all faculties of the University Jena within a project for teaching data
+                  literacy.<lb/>Dr. Elisabeth Witzenhausen is a post-doc at Ruhr-University Bochum
+                  working on historical syntax, language change and dialectology. In her research,
+                  she works with various corpora and annotation tools for non-standardized
+                  language.</note> will present the tool from the perspective of a user. First, we
+               explain its development and user access (section “<ref type="crossref"
+                  target="#div2.1">Project and development</ref>” and “<ref type="crossref"
+                  target="#div2.2">User profile and access</ref>”). In the sections “<ref
+                  type="crossref" target="#div2.3">Corpus creation</ref>” “<ref type="crossref"
+                  target="#div2.4">Text comparison</ref>”, and “<ref type="crossref"
+                  target="#div2.5">Performance</ref>” we explain the general workflow. The interface
+               is described in the section “<ref type="crossref" target="#div2.6">User
+                  interface</ref>”. Sections “<ref type="crossref" target="#div2.7">Input and
+                  output</ref>” and “<ref type="crossref" target="#div2.8">Documentation and
+                  support</ref>” detail how input and output are dealt with and where documentation
+               and support can be accessed. In section “<ref type="crossref" target="#div3">LAKomp
+                  in use</ref>” we give a detailed account of how the tool was used for the project
+                  <emph>Digital Diachronic Text Comparison of Early Modern Legal Sources</emph>
+                  (<ref type="crossref" target="#aehnlich2021">Aehnlich 2021</ref>). Finally, some
+               concluding remarks are provided in the “<ref type="crossref" target="#div4"
+                  >Conclusion</ref>”.</p>
+         </div>
+         <div xml:id="div2">
+            <head>LAKomp: Project, access, data and workflow</head>
+            <div xml:id="div2.1">
+               <head>Project and development</head>
+               <p xml:id="p5">The acronym LAKomp stands for <emph>L</emph>emmatisierung,
+                     <emph>A</emph>nnotation, <emph>Komp</emph>aration von Varianten
+                  frühneuhochdeutscher Texte (Lemmatization, Annotation, Comparison of Variants of
+                  Early New High German Texts). The developers of the tool are André Medek, Aletta
+                  Leipold, Jörg Ritter, and Paul Molitor. LAKomp is a web-based tool, built using
+                  the programming language Ruby on Rails<note xml:id="ftn3">The source code is not
+                     freely available.</note>. It was developed within the interdisciplinary project
+                     <emph>SaDA</emph> (Semiautomatische Differenzanalyse von komplexen
+                  Textvarianten/ Semiautomatic Difference Analysis of Complex Textual Variants)<note
+                     xml:id="ftn4">
+                     <ref target="http://www.informatik.uni-halle.de/ti/forschung/ehumanities/sada/"
+                        >http://www.informatik.uni-halle.de/ti/forschung/ehumanities/sada/</ref>;
+                     Cf. <ref type="crossref" target="leipold2015">Leipold et al. 2015</ref>. SaDA was a BMBF-funded
+                     project by linguists (German, Romance) and computer scientists, led by Thomas
+                     Bremer, Paul Molitor, Jörg Ritter, and Hans-Joachim Solms (1 September 2012 to
+                     31 August 2015).</note> in order to allow corpus building and comparison of
+                  textual variants within a user-friendly interface. After the end of the project,
+                  the team ensures maintenance and support for the tool.</p>
+               <p xml:id="p6">LAKomp was originally developed and is currently used for preparing
+                  the <emph>Pfalzpaint</emph> edition, to be published in hybrid form, both
+                  digitally and as a printed book, in 2023. The aim of this edition is to present
+                  the textual variants of the <emph>Wundarznei</emph> by Heinrich von Pfalzpaint
+                  (ca. 1400-1464, cf. <ref type="crossref" target="#leipold2014">Leipold et al.
+                     2014</ref>) and to provide a highly structured and annotated corpus useful to
+                  researchers with various interests (<ref type="crossref" target="leipold2015">Leipold et al. 2015</ref>, 171). During the annotation process for the
+                  <emph>Pfalzpaint</emph> edition, LAKomp was used for another project running at the
+                  same time, namely the annotation of the Referenzkorpus Frühneuhochdeutsch<note
+                     xml:id="ftn5">
+                     <ref
+                        target="https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm"
+                        >https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm</ref>.</note>.
+                  The project group in Halle used LAKomp as an alternative to the annotation tool
+                  CorA (<ref type="crossref" target="#bollmanndipper2014">Bollmann et al.
+                     2014</ref>), which was used by the other project groups (see section “<ref type="crossref" target="#div2.6">User
+                  interface</ref>” for a short comparison of both tools). For the Halle group, the main
+                  reason for using LAKomp was that the user interface ensures a faster annotation
+                  process.</p>
+            </div>
+            <div xml:id="div2.2">
+               <head> User profile and access </head>
+               <p xml:id="p7">LAKomp was designed for humanities scholars, especially linguists, to
+                  create a corpus consisting of different textual variants with a high degree of
+                  spelling variation in order to analyze their relationship. It was designed for the
+                  specific tasks of scholarly editing ENHG texts presenting textual variants, but is
+                  as useful for the lemmatization and morphological annotation of other corpora. It
+                  is possible to ask for modifications of the tool in order to analyze texts in a
+                  language other than ENHG (personal correspondence with Jörg Ritter, 13.12.2021).
+                  LAKomp can be used free of charge.</p>
+               <p xml:id="p8">Potential users have to contact the project group via the e-mail
+                  address specified on the website <ref target="https://lakomp.uzi.uni-halle.de/"
+                     >https://lakomp.uzi.uni-halle.de/</ref> and will receive their own URL for
+                  using the tool. LAKomp can be accessed with all common browser versions and does
+                  not rely on plugins. The tool was designed for large screens; thus, it does not
+                  fully work on mobile devices. </p>
+               <p xml:id="p9">All features in LAKomp can be used immediately without requiring long
+                  training periods. Working with the tool, it becomes apparent that it was designed
+                  for and with Humanities scholars. The intuitive design of the user interface makes
+                  it possible for any user with a linguistic background to start lemmatizing and
+                  annotating. The interface displays the features clearly and no specific
+                  programming knowledge is required to use the tool. </p>
+               <p xml:id="p10">LAKomp was designed to be used by single researchers or larger
+                  groups. Therefore, various users can work simultaneously on one project. LAKomp
+                  has an integrated user administration board in which user roles and rights can be
+                  managed. Not every user has all editing rights. The administrator assigns roles
+                  and has unrestricted rights, while annotators can only annotate the documents.
+                  This is particularly useful for working on projects with several employees and
+                  student assistants.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Corpus creation</head>
+               <p xml:id="p11">The workflow for corpus creation and subsequent text comparison
+                  consists of three steps. First, texts have to be transcribed within the
+                  web-interface. During the annotation process, the texts are pre-processed, i.e.,
+                  enriched with modern punctuation. This makes subsequent automatic data processing
+                  possible. Secondly, the texts are lemmatized and annotated with PoS and
+                  morphological information. The annotation process is referred to as
+                  semi-automatic, because both lemmatization (normalization), PoS and morphological
+                  annotations are done manually but are greatly sped up by automatically generated
+                  suggestions. In a third step, textual variants can be compared with each other. In
+                  the interface, at first similar text passages are identified and contrasted; in
+                  the detailed comparison, these passages can be presented synoptically.</p>
+               <p xml:id="p12">Within the tool, lemmatization is referred to as normalization.
+                  Normalizing the spelling leads to good results in the automatic text comparison
+                  and is the first step before annotating morphological information. For the
+                  lemmatization, there are preset lexica, namely the Brothers Grimm German
+                  Dictionary<note xml:id="ftn6">
+                     <ref
+                        target="https://web.archive.org/web/20230221132336/https://woerterbuchnetz.de/?sigle=DWB"
+                        >
+                        https://web.archive.org/web/20230221132336/https://woerterbuchnetz.de/?sigle=DWB
+                     </ref>.</note> and the dictionary of the Early New High German reference
+                  corpus.<note xml:id="ftn7">
+                     <ref
+                        target="https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm"
+                        >
+                        https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm
+                     </ref>.</note> For each corpus, a project-internal dictionary is generated.
+                  This dictionary grows as the lemmatization of the texts proceeds. When generating
+                  automatic suggestions, these growing dictionaries are given priority. </p>
+               <p xml:id="p13">In the next step, the users annotate the text with PoS and
+                  morphological information. They can decide whether they want to use the
+                     <emph>STTS</emph><note xml:id="ftn8">
+                     <ref
+                        target="https://web.archive.org/web/20221222074849/http://www.sfs.uni-tuebingen.de/resources/stts-1999.pdf"
+                        >
+                        https://web.archive.org/web/20221222074849/http://www.sfs.uni-tuebingen.de/resources/stts-1999.pdf
+                     </ref>.</note> or <emph>HiTS</emph> tagset (<ref type="crossref"
+                     target="#dipper2013">Dipper et al. 2013</ref>). The Stuttgart-Tübingen-Tagset
+                  (STTS) is the standard tagset for Modern German corpora. Since this tagset can
+                  only be partially applied to older stages of German, the Historical Tagset (HiTS)
+                     (<ref type="crossref" target="#dipper2013">Dipper et al. 2013</ref>) was
+                  developed. The main difference between the two tagsets is the consistent double
+                  labeling of lemmas in HiTS. For each token, it distinguishes between the PoS-tag
+                  of the dictionary form and that of the specific occurrence. This makes it
+                  possible, for example, to tag an adjective that is used as an adverb. Hence,
+                  language change/grammaticalization in progress can be studied. Both tagsets allow
+                  for the definition of new tags for which values (morphological information) can be
+                  adapted in LAKomp.</p>
+               <p xml:id="p14">The tool provides the annotation layers "Lemma", "PoS-Tag Lemma",
+                  "PoS-Tag Record”, “case", "gender" and "number", as well as comments sections for
+                  both lemma and PoS-tag. In this respect, the tool is similar to CorA (<ref
+                     type="crossref" target="#bollmanndipper2014">Bollmann et al. 2014</ref>), which
+                  also does not give the flexibility of defining individual annotation layers
+                  depending on the specific annotation task (<ref type="crossref"
+                     target="#bollmanndipper2014">Bollmann et al. 2014</ref>, 87). This means that
+                  mistakes due to typos or spelling variation within the annotation layers are
+                  prevented, as no plain text annotation is possible, but that the user has to
+                  choose from a closed list of values for each layer. The user, however, can
+                  customize the list of tags and values.</p>
+               <p xml:id="p15">A central feature of LAKomp is that changes within the single steps
+                  of the workflow can be made without having to repeat the subsequent steps. If, for
+                  example, an error in the transcription is found while comparing the texts, it is
+                  not necessary to correct, lemmatize and annotate the entire text part again. Only
+                  the specific token with its annotations has to be corrected, while the adjacent
+                  tokens and annotations are preserved. This limits the amount of work to the
+                  absolute necessary.</p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Performance</head>
+               <p xml:id="p16">For historical language data, automatic tagging still faces
+                  challenges. The tagger either needs a normalization layer (<ref type="crossref"
+                     target="#bollmanndipper2012">Bollman et al. 2012</ref>; <ref type="crossref"
+                     target="#bollmann2012">Bollmann 2012</ref>) or manually annotated data on
+                  which the tagger learns (<ref  type="crossref" target="koleva2017">Koleva et al. 2017</ref>). In
+                  most cases, manual post-processing is necessary, as there is always a certain
+                  error rate. LAKomp offers an alternative: Instead of tagging automatically, the
+                  tool gives suggestions during the manual annotation process which are picked out
+                  by the annotator. Using a machine-learning algorithm, the tool learns during the
+                  manual annotation and gives suggestions based on the input. In this process, the
+                  corpus-specific dictionary has a higher priority than the preset dictionaries. The
+                  suggestions, therefore, become better the more tokens are annotated. In the case
+                  of the <emph>Wundarznei</emph> in which 81,86% (n= 186180) of all tokens are
+                  annotated, LAKomp provides the correct suggestion for PoS and morphological
+                  information as a first or second option in 80% of the cases (personal
+                  correspondence with Jörg Ritter, 13.12.2021). This semi-automatic process makes
+                  the manual annotation faster compared to other tools that use a tabular interface
+                  without suggestions.</p>
+            </div>
+            <div xml:id="div2.5">
+               <head>Text comparison</head>
+               <p xml:id="p17">For scholarly editing and other text comparison tasks, LAKomp offers
+                  an alignment view and <emph>Partiturtext</emph> (see below). The text is first off
+                  partitioned. Then the tool compares selected witnesses and presents similar
+                  passages. The user can decide whether the comparison should be on paragraph,
+                  sentence (default), phrase or word level and can also edit the automatically
+                  generated alignment. </p>
+               <p xml:id="p18">The text comparison tool works based on the lemmatization and
+                  annotation in the previous step. The word forms of the individual manuscripts are
+                  compared to an automatically generated normalized text. This automatically
+                  generated text functions as the basis of comparison. An in-depth comparison of
+                  textual variants thus becomes possible. The tool automatically displays diverging
+                  positions of paragraphs, sentences and words.</p>
+               <p xml:id="p19">Differences and similarities between the textual variants are
+                  displayed vertically in an alignment table. LAKomp automatically generates the
+                     <emph>Partiturtext</emph> (a horizontal alignment table plus a critical
+                  apparatus) based on pre-processing, lemmatization, and annotation.</p>
+               <p xml:id="p20">
+                  <figure xml:id="img1">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_15/lakomp/pictures/picture-1.png"/>
+                     <head type="legend">Partiturtext on lemma level.</head>
+                  </figure>
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_15/lakomp/pictures/picture-2.png"/>
+                     <head type="legend">Partiturtext on character level.</head>
+                  </figure>LAKomp supports two levels of comparison: on a lexical level (<ref
+                     type="crossref" target="#img1">fig. 1</ref>), lexical and structural
+                  differences between textual variants are highlighted. LAKomp also supports text
+                  comparison on the level of characters (<ref type="crossref" target="#img2">fig.
+                     2</ref>). All graphematic deviations are then displayed.</p>
+            </div>
+            <div xml:id="div2.6">
+               <head>User interface</head>
+               <p xml:id="p21">Lemmatization and annotation are designed to be fast and simple.
+                  Compared to other annotation tools such as CorA, the interface is not tabular and
+                  words are displayed in a reading version (without transcription notation), which
+                  makes it easier to read the text that is being annotated. It is also possible to
+                  show the text in transcription notation. Without having to take their hands off
+                  the keyboard, the users can select a word and open the dialog window in which
+                  suggestions for the annotation are presented. The user can accept or correct the
+                  annotation with the keyboard: A time-consuming back-and-forth between keyboard and
+                  mouse is not necessary. In contrast to CorA, the input fields for lemma, PoS-tag
+                  and morphological information have an auto-completion feature that suggests
+                  entries with every character entered. In most cases, a word form can be annotated
+                  with very few keystrokes.<note xml:id="ftn9">The <emph>Enter</emph> key on a word
+                     form opens the dialog, with the arrow keys, the selection of an entry from the
+                     drop-down menu is possible, the <emph>Tab</emph> key switches to the input
+                     fields to change or re-enter data, pressing <emph>Enter</emph> with an open
+                     dialog window saves the annotation.</note>
+               </p>
+            </div>
+            <div xml:id="div2.7">
+               <head>Input and output </head>
+               <p xml:id="p22">No import functionality is available: the text has to be transcribed
+                  directly or copy-pasted (in plain text) into the web interface. No bridge with an
+                  OCR software is provided.</p>
+               <p xml:id="p23">The input is checked for the correct transcription standard
+                  established in the reference corpus project Early New High German.<note
+                     xml:id="ftn10">
+                     <ref
+                        target="https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm"
+                        >
+                        https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm
+                     </ref>.</note> This feature can be changed if the tool is used for other
+                  languages. The transcription standard allows details of the manuscript to be
+                  recorded, such as headings, marginal notes or unreadable text. The web interface
+                  offers a print view displaying all metadata and annotations. The text can be
+                  presented in a reading version as well as in transcription mode. The lemmatized
+                  and annotated texts can be exported as TEI-XML. Furthermore, an export as CorA-XML
+                     (<ref type="crossref" target="#bollmanndipper2014">Bollmann et al. 2014</ref>)
+                  is offered.</p>
+               <p xml:id="p24">Corpora created with LAKomp can be imported into the ANNIS corpus
+                  tool. ANNIS is a web-based software for searching and visualizing linguistic
+                  corpora, which is part of the corpus-tools.org toolchain (<ref type="crossref"
+                     target="#zeldes2009">Zeldes et al. 2009</ref>). Within the tool, it is possible
+                  to search through all annotation layers, single tokens and adjacent tokens.</p>
+            </div>
+            <div xml:id="div2.8">
+               <head>Documentation and support</head>
+               <p xml:id="p25">Only a project-internal documentation is available. It would be
+                  desirable to have a support forum or FAQ on the website. Nonetheless, quick and
+                  reliable active support is provided by the Institute for Computer Science at the
+                  MLU Halle-Wittenberg.</p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>LAKomp in use – annotation and comparison of ENHG legal sources </head>
+            <p xml:id="p26">In the following section, we want to describe how LAKomp was used in the
+               project <emph>Digitaler diachroner Textvergleich zu Rechtsquellen der Frühen
+                  Neuzeit</emph> (Digital Diachronic Text Comparison of Early Modern Legal Sources)
+               (<ref type="crossref" target="aehnlich2021">Aehnlich 2021</ref>). The project aimed at comparing
+               passages from four different ENHG legal sources (<emph>Constitutio Criminalis
+                  Bambergensis, Constitutio Criminalis Carolina</emph>, the <emph>Klagspiegel</emph>
+               of Conrad Heyden and the <emph>Laienspiegel</emph> of Ulrich Tengler).<note
+                  xml:id="ftn11">LAKomp was also used in another project comparing passages of the
+                  <emph>Klagspiegel</emph> and the <emph>Laienspiegel</emph>, (cf. <ref
+                     type="crossref" target="#aehnlich2020">Aehnlich 2020</ref>, 319–369).</note>
+               All the texts were used during and after the reception of Roman law in Germany in the
+               15th and 16th century. Digital text comparison with LAKomp made it possible to study
+               the representations of homicide in different versions of the four legal sources
+               mentioned above. Lemmatizing and annotating the passages in LAKomp allowed a
+               diachronic perspective on linguistic features of the texts. The comparison and
+               description of their development over a total of almost 200 years made it possible to
+               show changes in spelling, punctuation, and specialized vocabulary. </p>
+            <p xml:id="p27">The projects in LAKomp are subdivided into texts, parts of text and
+               documents. The whole text, i.e. one edition of the <emph>Laienspiegel</emph>, would
+               be referred to as text. Chapters are parts of texts and subdivided into documents.
+               The transcription and annotation are done in documents. This structure avoids large
+               amounts of text to be processed at the same time and allows to capture the structure
+               of the original manuscripts.</p>
+            <p xml:id="p28">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/lakomp/pictures/picture-3.png"/>
+                  <head type="legend">Transcription according to the conventions of the reference
+                     corpora (Klagspiegel 1480).</head>
+               </figure>First of all, the print editions of the legal sources had to be transcribed
+               and pre-processed (<ref type="crossref" target="#img3">fig. 3</ref>). All the sources
+               are available in digital copies. Despite recent progress in OCR-technology, automatic
+               text recognition is still error-prone for ENHG texts and manual post-processing would
+               have been too time-consuming given the size of the individual documents. Therefore,
+               the passages were transcribed manually, following the transcription conventions of
+               Middle High German grammar and the reference corpora Middle High German and Early New
+               High German.<note xml:id="ftn12">
+                  <ref
+                     target="https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm"
+                     >
+                     https://web.archive.org/web/20230221132147/https://www.ruhr-uni-bochum.de/wegera/ref/index.htm
+                  </ref>.</note>
+            </p>
+            <p xml:id="p29">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/lakomp/pictures/picture-4.png"/>
+                  <head type="legend">Transcription mode in LAKomp (Klagspiegel 1480).</head>
+               </figure>
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_15/lakomp/pictures/picture-5.png"/>
+                  <head type="legend">Annotation dialog in LAKomp.</head>
+               </figure>After transcription and post-processing, the text is displayed in LAKomp as
+               shown in <ref type="crossref" target="#img4">fig. 4</ref>. At this stage, the texts
+               are lemmatized and annotated by clicking on the respective token. As noted in section
+               2.3.1, lemmatization assigns a dictionary form (lemma) to a spelling variant
+               occurring in the text. In this project, lemmatization was based on the integrated
+               Grimm's dictionary (DWB),<note xml:id="ftn13">
+                  <ref
+                     target="https://web.archive.org/web/20230221132336/https://woerterbuchnetz.de/?sigle=DWB"
+                     >
+                     https://web.archive.org/web/20230221132336/https://woerterbuchnetz.de/?sigle=DWB
+                  </ref>.</note> which serves as a reference dictionary. <note xml:id="ftn14">The
+                  reference corpus Frühneuhochdeutsch and the Pfalzpaint-Edition are also lemmatized
+                  according to the DWB. (cf. <ref type="crossref" target="#leipold2015">Leipold et
+                     al. 2015</ref>, 174).</note>
+               <ref type="crossref" target="#img5">Fig. 5</ref> shows the dialog window for the
+               lemmatization and annotation in LAKomp. In this window, suggestions for lemma and
+               morphological information are offered. The suggestions can be accepted with one
+               click. Even if there is no appropriate suggestion, the powerful auto-completion makes
+               writing into the respective fields much faster. </p>
+            <p xml:id="p30">Based on the annotation, the text comparison allowed us to investigate
+               graphematic and lexical changes in the legal sources over the centuries.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Conclusion</head>
+            <p xml:id="p31">LAKomp is an intuitive tool that facilitates the work of humanities
+               scholars and enables them to lemmatize, annotate, and compare texts of
+               non-standardized languages without specific programming skills. By means of an
+               alignment view and a generated <emph>Partiturtext</emph>, a comparison of different
+               textual variants is possible. LAKomp is a web-based tool, in which several users can
+               annotate simultaneously. The integrated machine-learning algorithm makes suggestions
+               for lemmatization based on previous inputs, which makes LAKomp a fast and effective
+               tool for working with historical or non-standardized texts. This software fills a gap
+               in the existing tool landscape, as it does not automate annotation but makes manual
+               annotation faster using the semi-automatic tagging feature and a simple
+               interface.</p>
+            <p xml:id="p32">It would be helpful if a comprehensive handbook or tutorial was
+               available. Currently, researchers working with the tool receive reliable and friendly
+               support from the project staff. Overall, LAKomp can be highly recommended for
+               annotating and comparing texts without standardized orthography.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="aehnlichkoesser2016">Aehnlich, Barbara, and Sylwia Kösser. 2016. ‘Das
+                  Tool LAKomp und seine Anwendung auf Texte nichtstandardisierter Sprachstufen’.
+                  Poster DHd 2016 Leipzig. <ref
+                     target="https://www.dhd2016.de/abstracts/posters-001.html"
+                     >https://www.dhd2016.de/abstracts/posters-001.html</ref>, <ref
+                     target="https://dhd2016.de/?q=node/135">https://dhd2016.de/?q=node/135</ref>. </bibl>
+               <bibl xml:id="aehnlich2020">Aehnlich, Barbara. 2020. <emph>Rechtspraktikerliteratur und
+                  neuhochdeutsche Schriftsprache. Conrad Heydens Klagspiegel und Ulrich Tenglers
+                  Laienspiegel</emph>. Berlin: Peter Lang.</bibl>
+               <bibl xml:id="aehnlich2021">Aehnlich, Barbara. 2021. ‘Standardisierung in
+                  frühneuhochdeutschen Rechtsquellen’. In <emph>Historische Schrift- und
+                  Schriftlichkeitsforschung</emph> (= Jahrbuch für Germanistische Sprachgeschichte 12),
+                  edited by Paul Rössler, Peter Besl and Anna Saller, Berlin/Boston: De Gruyter,
+                  227–250.</bibl>
+               <bibl xml:id="bennett2010">Bennett, Paul, Martin Durrell, Silke Scheible, and Richard
+                  J. Whitt. 2010. ‘Annotating a historical corpus of German: A case study’. In
+                  <emph>Proceedings of the LREC 2010 workshop on Language Resources and Language
+                  Technology Standards</emph>, 64–68. </bibl>
+               <bibl xml:id="bollmann2012">Bollmann, Marcel. 2012. ‘(Semi-)automatic normalization
+                  of historical texts using distance measures and the Norma tool’. In <emph>Proceedings of
+                  the Second Workshop on Annotation of Corpora for Research in the Humanities</emph>
+                  (ACRH-2), Lisbon, Portugal.</bibl>
+               <bibl xml:id="bollmanndipper2014">Bollmann, Marcel, Stefanie Dipper, Julia Krasselt,
+                  and Florian Petran. 2014. ‘Manual and semi-automatic normalization of historical
+                  spelling – case studies from Early New High German’. In <emph>Proceedings of the First
+                  International Workshop on Language Technology for Historical Text(s) (LThist2012)</emph>, Vienna, Austria.</bibl>
+               <bibl xml:id="dipper2013">Dipper, Stefanie, Karin Donhauser, Thomas Klein, Sonja
+                  Linde, Stefan Müller, and Klaus-Peter Wegera. 2013. ‘HiTS: ein Tagset für
+                  historische Sprachstufen des Deutschen’. In <emph>Journal for Language Technology an
+                  Computational Linguistics</emph> (JLCL) 28 (1), 85–137.</bibl>
+               <bibl xml:id="koleva2017">Koleva, Mariya, Melissa Farasyn, Bart Desmet, Anne
+                  Breitbarth, and Veronique Hoste. 2017. ‘An automatic part-of-speech tagger for
+                  Middle Low German’. In <emph>International Journal of Corpus Linguistics</emph>. 22(1),
+                  108–141. </bibl>
+               <bibl xml:id="leipold2015">Leipold, Aletta, Sylwia Kösser, André Gießler, and
+                  Hans-Joachim Solms. 2015. ‘Zwischen Online-Korpus und Buch. Die Hybridedition der
+                  Wundarznei des Heinrich von Pfalzpaint’. In <emph>Vom Nutzen der Editionen. Zur
+                  Bedeutung moderne Editorik für die Erforschung von Literatur- und Kulturgeschichte</emph>
+                  (= Editio / Beihefte, 39), edited by Thomas Bein, Berlin: de Gruyter,
+                  167–184.</bibl>
+               <bibl xml:id="leipold2014">Leipold, Aletta, Jörg Ritter, and Hans-Joachim Solms.
+                  2014. ‘Neue Wege zu Textzeugenvergleich und Edition am Beispiel der Wundarznei des
+                  Heinrich von Pfalzpaint’. In <emph>Jahrbuch für Germanistische Sprachgeschichte 5</emph> (1),
+                  edited by Hans Ulrich Schmid and Arne Ziegler, Berlin/Boston: De Gruyter,
+                  335–358.</bibl>
+               <bibl xml:id="zeldes2009">Zeldes, Amir, Julia Ritz, Anke Lüdeling, and Christian
+                  Chiarcos. 2009. ‘ANNIS: A Search Tool for Multi-Layer Annotated Corpora’. In
+                  <emph>Proceedings of Corpus Linguistics 2009</emph>. Liverpool, UK.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
