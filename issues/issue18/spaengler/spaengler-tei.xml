@@ -1,0 +1,2023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.18.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A synergistic approach to non-narrative historical sources. The database and
+               digital edition of the Spängler household account books, 1733–1785</title>
+            <author ref="0000-0002-5209-9052">
+               <name>
+                  <forename>Werner</forename>
+                  <surname>Scheltjens</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Bamberg</orgName>
+                  <placeName>Bamberg, Germany</placeName>
+               </affiliation>
+               <email>werner.scheltjens@uni-bamberg.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023-09">September 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-18/spaengler</idno>
+            <idno type="DOI">10.18716/ride.a.18.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue18/spaengler/spaengler.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber-Martucci</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="18">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-18</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>The account books of the Salzburg merchant family Spängler from 1733 to
+                     1785 – digital</title>
+                  <editor>Reinhold Reith; Georg Stöger</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Reith, Reinhold (Editor) Stöger, Georg (Editor)</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>v3 consulting GmbH (Munich)</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Pichler-Baumgartner, Luisa (Contributor) Falkner, Maria Johanna
+                        (Contributor) Scharf, Katharina (Contributor)</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Advisor</resp>
+                     <persName>Kramml, Peter F.</persName>
+                  </respStmt>
+                  <date type="publication">2020</date>
+                  <idno type="URI">http://spaengler-haushaltsbuecher.at/</idno>
+                  <date type="accessed">2022-07-21</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Account Books</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Economic History</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Database</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Combination of database and diplomatic edition</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Categorization of data items</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>economic history</term>
+               <term>household account books</term>
+               <term>database edition</term>
+               <term>diplomatic edition</term>
+               <term>semantic data</term>
+               <term>querying</term>
+               <term>web application</term>
+               <term>interface</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>The household account books of the Salzburg merchant family Spängler cover an
+               exceptionally long period and constitute a unique source for the history of
+               consumption in Central Europe in the eighteenth century. This review assesses the
+               diplomatic and database edition that was published by the University of Salzburg and
+               partners in 2020. The review focuses on the synergies that the scholarly digital
+               edition of the household account books aims to establish between the transcription of
+               the books, a database for querying their contents, and a special section containing
+               biographical entries about the actors registered in the books. The review shows where
+               this combination of editing styles is fruitful, especially for non-narrative sources,
+               and where there is scope for further improvements.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">The <ref
+                  target="https://web.archive.org/web/20220721110558/https://www.spaengler-haushaltsbuecher.at/"
+                  >Account Books Spängler Online</ref> (Ausgabenbücher Spängler Online, short: ASO;
+                  <ref type="crossref" target="#reithstoeger2020a">Reith and Stöger 2020a</ref>) are
+               a digital edition of four private household accounts of the Salzburg cloth and silk
+               merchant Franz Anton Spängler.<note xml:id="ftn1">Note that the name of the website
+                  says ’Haushaltsbücher’, whereas the descriptive title of the website specifies
+                  that we are dealing with ‘Ausgabenbücher’, in which only expenses were recorded.
+                  In English, the distinction disappears and the source is described as ‘(household)
+                  account books’.</note> The books are part of the collections of the Salzburg City
+               Archives and were kept by six family members of different generations (<ref
+                  type="crossref" target="#reithstoeger2022">Reith and Stöger 2022</ref>, 72-74).
+               Reinhold Reith and Georg Stöger (both University of Salzburg) conceptualized,
+               managed, and edited the digital edition of the ASO in collaboration with Luisa
+               Pichler-Baumgartner, Maria Johanna Falkner, and Katharina Scharf (<ref
+                  target="https://web.archive.org/web/20220721105614/https://www.spaengler-haushaltsbuecher.at/impressum"
+                  >Imprint</ref>). The digital edition and the database that supports querying its
+               contents were published online in June 2020. Reith, Stöger, and their colleagues have
+               worked extensively on the Spängler family and the Salzburg merchant community before
+                  (<ref type="crossref" target="#reith2015">Reith et al. 2015</ref>; <ref
+                  type="crossref" target="#reith2016">Reith et al. 2016</ref>). The Austrian Science
+               Fund (FWF PUD 10) and some additional organizations funded the <emph>in
+                  extenso</emph> digital publication of the ASO, which was carried out in
+               cooperation with the Salzburg City Archives. The technical implementation and design
+               were outsourced to a Munich-based consulting company.<note xml:id="ftn2">Insofar as
+                  this can be inferred from the web application itself, the technologies used for
+                  presenting the content on the web are CSS and JavaScript. The backend technology
+                  used for the different sections of the web application – ‘transcription’,
+                  ‘database’, and ‘persons’ – is not specified.</note>
+            </p>
+            <p xml:id="p2">The ASO pursue the synergistic combination of a full diplomatic
+               transcription of the source with a (relational) database for querying and computing
+               its contents. Their conceptualization differs from that of well-known forms of
+               digital text editions. Rather than an index, commentary, and description, a database
+               linked with the transcription provides the functionalities for exploring the account
+               books. In so doing, the ASO are part of a tradition of publishing non-narrative
+               historical sources online. Previous examples of digital editions organized in a
+               similar way include the municipal account books of Basel (<ref type="crossref"
+                  target="#burghartz2015">Burghartz 2015</ref>; <ref type="crossref"
+                  target="#burghartzcalvivogeler2017">Burghartz, Calvi, and Vogeler 2017</ref>) and
+               the (unfinished) digital edition of the account books of the Loitz merchant family of
+               Stettin and Danzig (<ref type="crossref" target="#lipinska2019">Lipińska et al.
+                  2019</ref>). The ASO project associates itself loosely with the emerging
+               methodological tradition of combining textual editing with a database but gives no
+               details about its technical implementation. Since only few other projects in the
+               realm of economic history have pursued the integration of a scholarly digital edition
+               (SDE, in the ASO: ‘<ref
+                  target="https://web.archive.org/web/20220721105956/https://www.spaengler-haushaltsbuecher.at/transcription"
+                  >Transcription</ref>’) with a relational database for querying its contents (here:
+                  ‘<ref
+                  target="https://web.archive.org/web/20220721110039/https://www.spaengler-haushaltsbuecher.at/db"
+                  >Database</ref>’), this is quite unfortunate. This review pays special attention
+               to the interaction between transcription and database of the ASO and highlights the
+               strengths, challenges, and weaknesses of this approach.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Subject and content of the edition</head>
+            <p xml:id="p3">The household account books document the daily expenses of members of the
+               Spängler family in Salzburg. Their expenses cover a wide variety of topics, ranging
+               from birthday presents for family members to wages paid to personnel, maintenance
+               costs for carriages, expenditures for food supplies, and much more. The source offers
+               much detailed information about the cost of living and wages earned in Salzburg
+               during a significant part of the eighteenth century. Within the historiography of
+               household account books, which took off in the 1970s (<ref type="crossref"
+                  target="#reithstoeger2022">Reith and Stöger 2022</ref>, 72-73), the ASO occupy an
+               exceptional position. Covering more than 50 years from 1733 until 1785, they have a
+               broader scope than earlier editions of private household account books in the German
+               realm (for an overview see <ref type="crossref" target="#pichlerbaumgartner2016"
+                  >Pichler-Baumgartner 2016</ref>). They contribute a wealth of microdata to ongoing
+               research about consumption patterns, household expenditures, and social and family
+               relations – topics that are at the core of Reith and Stöger’s research (see e.g. <ref
+                  type="crossref" target="#reith2015">Reith et al. 2015</ref>; <ref type="crossref"
+                  target="#reith2016">Reith et al. 2016</ref>; <ref type="crossref"
+                  target="#stoeger2019">Stöger 2019</ref>; <ref type="crossref"
+                  target="#reithknapp2021">Reith and Knapp 2021</ref>). The ASO also stand out
+               against the bulk of the known private household account books, which have their
+               origins in the fifteenth and sixteenth centuries (see <ref type="crossref"
+                  target="#reithstoeger2022">Reith and Stöger 2022</ref>, 72-73; <ref
+                  type="crossref" target="#pichlerbaumgartner2016">Pichler-Baumgartner 2016</ref>,
+               63-77). Thus, the ASO make an important contribution to the history of consumption
+               and everyday life in the eighteenth century (<ref type="crossref"
+                  target="#reithstoeger2022">Reith and Stöger 2022</ref>, 74).</p>
+            <p xml:id="p4">The ASO publish the four household account books of the Spängler family.
+               The first book (184 pp.; each scan is one page) covers the period from January 1733
+               to June 1750; the second book (186 pp.) runs from June 1750 until January 1761; the
+               third (188 pp.) from January 1761 to January 1772 and the fourth (180 pp.) from
+               January 1772 to May 1785. Each book was scanned from front to cover. Including the
+               pages before the first bookkeeping entry, which are given a negative page number in
+               the digital edition, the total number of scans is 754. The series is almost without
+               gaps. The editors indicate only three brief interruptions after the death of each of
+               Franz Anton Spängler’s three wives. According to the editors, the transcription and
+               database contain about 21,000 bookkeeping entries. No sampling procedures have been
+               applied. The introduction to the digital edition contains a general bibliography.
+               Additionally, each of the biographical entries in the web application contains
+               extensive references to literature, published and archival sources. For some of the
+               biographical entries, portraits of the persons are included in the web
+               application.</p>
+            <p xml:id="p5">The ASO make the data accessible in three different ways, starting from
+               the ‘<ref
+                  target="https://web.archive.org/web/20220721105956/https://www.spaengler-haushaltsbuecher.at/transcription"
+                  >Transcription</ref>’, the ‘<ref
+                  target="https://web.archive.org/web/20220721110039/https://www.spaengler-haushaltsbuecher.at/db"
+                  >Database</ref>’, or a comprehensive list of ‘<ref
+                  target="https://web.archive.org/web/20220721110154/https://www.spaengler-haushaltsbuecher.at/persons"
+                  >Persons</ref>’ mentioned in the source. Alongside the ‘Introduction’, these are
+               the main menu items on the homepage of the digital edition. The first section of the
+               web application, ‘Transcription’, provides an enriched transcription of the ASO,
+               which is flanked by scans of the original source. In the transcribed text, the names
+               of persons are linked to biographical entries, which open in a pop-up window when
+               clicked. The list of biographical entries, ‘Persons’, can be accessed separately as
+               well and thus constitutes the second way of accessing the data in the ASO. A simple
+               mouse-click queries the person against the database and immediately shows all
+               mentions of this person in the database entries. The entries themselves provide links
+               to the corresponding book/page in the ‘Transcription’ section. In addition to
+               searches based on personal names, the ‘Database’ section also supports full-text
+               search as well as list-based searches for the categories ‘mode of payment’, ‘type of
+               service / occasion / object’, and ‘recipient’. The ‘Database’ section also supports
+               queries based on date (from, to), value (min, max), and book/page. The latter can be
+               used as a means to access specific pages in the transcription.</p>
+         </div>
+         <div xml:id="div3">
+            <head>Aims and Methods</head>
+            <p xml:id="p6">The <ref
+                  target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                  >introduction to the web application</ref> and a recent publication clearly define
+               the aims of the ASO (<ref type="crossref" target="#reithstoeger2022">Reith and Stöger
+                  2022</ref>). However, only two sections in the introduction (“About the text
+               edition and the database” and “Edition guidelines”) contain information about the
+               methods applied during the process. Most of the explanation deals with the database
+               and the biographies of the persons mentioned in the account books. </p>
+            <p xml:id="p7">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-1.png"/>
+                  <head type="legend">Screenshot of book 1, page 11.</head>
+               </figure>About the transcription itself, it is said that “[t]he original sequence was
+               retained in the text edition in order to document the structure, character and upkeep
+               of these account books; that means, even crossouts (insofar as those struck words
+               were legible) were reproduced, along with special characters and marginalia.” (<ref
+                  type="crossref" target="#reithstoeger2020b">Reith and Stöger 2020b</ref>) <ref
+                  target="https://web.archive.org/web/20220721105956/https://www.spaengler-haushaltsbuecher.at/transcription"
+                  >Transcriptions</ref> are displayed next to scans of the transcribed page (see
+                  <ref type="crossref" target="#img1">fig. 1</ref>). Minor modifications were made
+               to the transcribed text, mostly for the sake of legibility.<note xml:id="ftn3">The
+                  editors indicate that “[t]he addition of punctuation and completions of shortened
+                  declinations, articles and word endings as well as consonants (indicated in the
+                  original as a double underlining) were made without comment for the sake of better
+                  fluency.” (<ref
+                     target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                     >Introduction</ref>).</note> The original spelling was largely retained. The
+               original spelling of the personal names in the account books has also been preserved
+               in the transcription, but is linked to a uniform spelling of the person’s name in the
+               ‘Persons’ section.</p>
+            <p xml:id="p8">This example page highlights a few particularities of the transcription.
+               First, strikethrough of the entire page is not added to the transcription, because it
+               is visible on the scan. Second, entries that were crossed out in the account books
+               are transcribed as well, but they are not marked as such in the transcription.
+               Moreover, they are not included in the database to avoid incorrect calculations.
+               Third, abbreviations are written in full, using parentheses to add the abbreviated
+               parts of the word, e.g. annor =&gt; annor(um). For some words, the abbreviations were
+               retained, the “Edition guidelines” indicate that “(…) [t]he abbreviations and
+               spellings of Sa (for Summa), pr (for per) and zus (for zusammen, altogether) were
+               retained in the transcription.” It is somewhat regrettable that legitimate concerns
+               about the legibility of the transcription were not extended to the currencies and
+               measures in the text. In the case of currencies, “(…) the standard units x (Kreuzer)
+               and f (Gulden) were substituted by xr and fl to facilitate legibility.” (<ref
+                  type="crossref" target="#reithstoeger2020b">Reith and Stöger 2020b</ref>).
+               Furthermore, as indicated in the section “Remarks about the currency and standard
+               units”, “[p]ayments in ducats were marked with the abbreviation # [hashtag – W.S.]
+               and the converted value (c. 5 fl) was recorded.” (<ref type="crossref"
+                  target="#reithstoeger2020b">Reith and Stöger 2020b</ref>) The sign used for the
+               pound is <del>u</del> (u with strikethrough) (see <ref
+                  target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                  >Introduction</ref>). This was probably a pragmatic solution to avoid having to
+               deal with the complex issue of the visualization of pre-modern signs for currencies
+               and measures, for which – if at all – Unicode equivalents are only scarcely
+               available, although the pound sign would not have posed any particular problems. </p>
+            <p xml:id="p9">In contrast with other efforts to improve legibility and computability of
+               the source, abbreviated measures are left untouched. The web application only
+               provides a general description of its metric equivalents in the <ref
+                  target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                  >introduction</ref>. Since the account books are a source for economic historians
+               with an interest in the history of consumption, this is remarkable. Looking more
+               closely at the weights and measures in the source, some issues become apparent that
+               have an impact beyond the realm of historical metrology. For example, one may wonder
+               why ‘barrel’ (Fass) is not described in the section on weights and measures, although
+               it appears prominently in the list of keywords. </p>
+            <p xml:id="p10">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-2.png"/>
+                  <head type="legend">Selection of query results for ‘barrel‘ as ‘type of service /
+                     occasion / object’.</head>
+               </figure>The answer is that, in many cases, the keyword ‘barrel’ was used to annotate
+               wages paid to the cooper (see <ref type="crossref" target="#img2">fig. 2</ref>). The
+               next section deals with similar (minor) inconsistencies in more detail.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Publication and presentation</head>
+            <p xml:id="p11">The user interface is clear and intuitive. The main access methods of
+               the scholarly digital edition correspond to the main sections of the web application.
+               The interface is relatively easy to navigate as soon as the user understands how the
+               different sections are interconnected. The names in the ‘<ref
+                  target="https://web.archive.org/web/20220721105956/https://www.spaengler-haushaltsbuecher.at/transcription"
+                  >Transcription</ref>’ are linked to a pop-up window with the corresponding
+               information from the ‘<ref
+                  target="https://web.archive.org/web/20220721110154/https://www.spaengler-haushaltsbuecher.at/persons"
+                  >Persons</ref>’ section. The names in the ‘Persons’ section are linked to the
+                  ‘<ref
+                  target="https://web.archive.org/web/20220721110039/https://www.spaengler-haushaltsbuecher.at/db"
+                  >Database</ref>’ section. In the ‘Database’ section, book and page info link to
+               the ‘Transcription’ section, and a mouse-click on a person’s name in the
+               ‘Transcription’ makes the corresponding biographical entry from the ‘Persons’ section
+               pop-up on the screen.</p>
+            <div xml:id="div4.1">
+               <head>The ‘Database’ section</head>
+               <p xml:id="p12">
+                  <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-3.png"/>
+                     <head type="legend">List numbers entered into the month field in book 4, page
+                        172.</head>
+                  </figure>The ‘<ref
+                     target="https://web.archive.org/web/20220721110039/https://www.spaengler-haushaltsbuecher.at/db"
+                     >Database</ref>’ section permits full-text, keyword, person, date, value and
+                  book/page searches. The book/page search allows navigating to a specific page in
+                  one of the account books. The querying of dates is very helpful, but the option
+                  should be used with caution. Date queries are based on a calculated field that
+                  generates dates in the YYYY-MM-DD format. When information about day and or month
+                  of an entry is missing, the corresponding metadata field in the search result
+                  remains empty. Moreover, on some occasions, other information is entered into the
+                  ‘month’ field. On page 172 in book 4, for example, the month-column was used to
+                  add numbers to a list (see <ref type="crossref" target="#img3">fig. 3</ref>).
+                  While this corresponds to the location of the numbers in the original, as can be
+                  seen on the scan, it is unfortunate that the project provides no information about
+                  such occurrences.</p>
+               <p xml:id="p13">The value search allows to enter minimum and/or maximum values (with
+                  two decimals) to select expenses within a certain range, but caution is necessary,
+                  because “(…) [e]ntries lacking monetary quatntities [sic!] and pure text entries
+                  (forwarding entries or subtotals) are not part of the database.” (<ref
+                     type="crossref" target="#reithstoeger2020b">Reith and Stöger 2020b</ref>). The
+                  full-text, keyword and person searches are discussed in more detail below. </p>
+               <p xml:id="p14">
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-4.png"/>
+                     <head type="legend">Screenshot of book 1, page 47.</head>
+                  </figure>The query results appear below the search mask and consist of three
+                  parts: ‘place’, ‘transcription’, and ‘meta-data’ (see <ref type="crossref"
+                     target="#img4">fig. 4</ref>). The part ‘place’ contains information about the
+                  date of the entry and where it is found in the original source (book and page
+                  info). The date is a calculated field based on information about day and month in
+                  the transcription. Further query result fields subsumed in the part
+                  ‘transcription’ are the text of the entry and the amounts paid in
+                     <emph>gulden</emph> and <emph>kreuzer</emph>. These amounts form the basis for
+                  the first calculated field in the ‘meta-data’ part of the query results, called
+                  ‘value’. The second metadata field is that of the ‘writer’, which is followed by
+                  ‘persons’, ‘places’, ‘mode of payment’, ‘type of service / occasion / object’, and
+                  ‘recipient’. All metadata fields, except ‘writer’ and ‘places’, can be queried via
+                  the search mask. The metadata field ‘writer’ contains a three-letter abbreviation
+                  of the author of the entry. Six family members wrote in the account books. In the
+                  ‘transcription’ part of the query results, information about the writer of the
+                  entry is not processed further. The ‘Transcription’ section, however, uses
+                  background colours to differentiate between contributing family members. For each
+                  entry, a mouse-over displays the three-letter abbreviation of the family member’s
+                  name. For example, it allows to observe when and how the wives of Franz Anton
+                  Spängler (FAS) participated in bookkeeping.</p>
+               <p xml:id="p15">
+                  <emph>Full-text search</emph> does not differentiate between lowercase and
+                  uppercase. It supports the use of percentage (%) and underscore (_) wildcards to
+                  match any number of characters starting from zero (%) or exactly one character
+                  (_). For example, ‘Schmid%ge_elle’ returns 11 results, including ‘Schmidtgeselle’
+                  and ‘Schmidtgeßelle’, but also ‘Schmidt Geßelle’. Unfortunately, the website
+                  provides no information about the use of wildcards. Therefore, this functionality
+                  is easily overlooked. Full-text search comprises the transcription as well as the
+                  metadata fields ‘person’ and ‘places’. Most of the other metadata fields can only
+                  be searched via the keyword lists, in which the editors clearly invested a lot of
+                  time and effort. This means that the metadata term ‘wine’, which is a keyword
+                  listed in ‘type of services / object / occasion’ returns no results when used in a
+                  full-text search. However, since the German word for wine often occurs in the
+                  transcription, a full-text search for ‘Wein’ does indeed return 244 results. Given
+                  the extent of the keyword lists, it is useful to check if it already comprises
+                  your search term.</p>
+               <p xml:id="p16">
+                  <emph>Keyword search</emph> is available for three categories: ‘mode of payment’,
+                  ‘type of service / occasion / object’, and ‘recipient’. Via a link in the
+                  introduction, the full German-English <ref
+                     target="https://web.archive.org/web/20220721110449/https://spaengler-haushaltsbuecher.at/assets/ASO_keywords_1_2020.pdf"
+                     >list of keywords</ref> in these categories is available for download. Many
+                  keywords contain two levels separated by a comma in the downloadable list, e.g.
+                  ‘wage, beer money’ or ‘education, newspaper’. To deal with these levels, the
+                  search mask provides two fields from which keywords can be chosen. When keyword
+                  data on the second level is available, the choices appear as a sub-list in the
+                  second field. In the opposite case, the second field in the search mask
+                  disappears. For the keyword ‘wage’ there are six second-level keywords (‘beer
+                  money’, ‘bonus payment’, ‘annual wage’, ‘wage benefit for board’, ‘daily wages’,
+                  ‘gratuity’). For some reason, ‘wage benefit for board’ is also listed as a
+                  first-level keyword. Second-level keyword is clearly optional: of 5,690 entries
+                  with mode of payment ‘wage’, 285 have the second-level keyword ‘annual wage’, 151
+                  ‘beer money’, 48 ‘bonus payments’, 356 ‘daily wages’, 369 ‘gratuity’ and 37 ‘wage
+                  benefit for board’. Note, however, that ‘wage benefit for board’ as first-level
+                  keyword generates 43 results.</p>
+               <p xml:id="p17">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-5.png"/>
+                     <head type="legend">Query results for ‘luxury food, almond’ as ‘type of service
+                        / occasion / object’.</head>
+                  </figure>
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-6.png"/>
+                     <head type="legend">Query results for ‘luxury food, sugar’ as ‘type of service
+                        / occasion / object’.</head>
+                  </figure>The list of keywords for the category ‘kind [i.e. mode] of payment’
+                     (<emph>Ger.</emph> Art der Zahlung) consists of 16 first- and second-level
+                  keywords; the ‘recipient’ list categorizes the recipients of the payments and
+                  contains 128 first- and second-level keywords. Finally, the ‘type of service /
+                  occasion / object’ list specifies the different kinds of payments in the account
+                  books. There are 285 (!) first- and second-level keywords in this list. Sometimes,
+                  first-level keywords also appear as second-level keywords, e.g. ‘animal’ is a
+                  first-level keyword, but also a second-level keyword to ‘house’; ‘barrel’ is a
+                  first-level keyword, but also a second-level keyword to ‘maintenance’; ‘food’ is a
+                  first-level keyword that returns 4,031 entries, but as a secondary keyword to
+                  ‘transport’ it only returns two entries. Both the issue with first- and
+                  second-level keywords and the length and detail of the keyword list itself have an
+                  impact on the use of the keyword lists. It is not always clear what to expect in
+                  each category. It is hard to obtain a clear view of the contents of the database
+                  based on keyword searches. Some of the categories in the ‘type of service /
+                  occasion / object’ list are very small; others are very large. The keyword
+                  ‘clothing’, for example, has 1,855 entries, ‘cleaning’ has 1,236 and ‘education’
+                  has 874. The decisions made for including an entry into a certain category are not
+                  always clear; sometimes they are doubtful. For English speakers, it is not helpful
+                  that the full list of keywords (provided as pdf) is in the alphabetical order of
+                  the German keywords. Some of the English translations seem to be a bit artificial
+                  (e.g. spicery goods for the German ‘Spezereiware’) and some keywords seem to
+                  overlap (e.g. spice and spicery goods). If more than one commodity was listed in
+                  the same entry, only one (not necessarily the first) is referenced with a keyword.
+                  This leads to more minor inconsistencies in the database. For example, it is
+                  unclear why the entry in book one page 154 ‘für Zuger et Mandln’
+                     (<emph>Eng.</emph> for sugar and almonds) is categorized under ‘luxury food,
+                  almond’ rather than ‘luxury food, sugar’ (see <ref type="crossref" target="#img5"
+                     >fig. 5</ref>), whereas in book one page 169, an entry with the exact same
+                  wording is categorized as ‘luxury food, sugar’ (see <ref type="crossref"
+                     target="#img6">fig. 6</ref>).</p>
+               <p xml:id="p18">One very large category is ‘food’. It comprises 7,271 entries. The
+                  first-level category food has 24 second-level keywords – from baked goods, beer
+                  and bread to vegetables, vinegar and wine. As before, the categorization may be a
+                  bit misleading at first. Many of the entries that are categorized as ‘food, baked
+                  goods’ document the payment of wage supplements or gratuities (<emph>Ger.</emph>
+                  Trinkgeld) to the baking personnel (‘recipient’ = ‘servants’). The search mask
+                  does not facilitate excluding certain categories from the query. However, when
+                  putting the query results in descending order, which is a functionality that is
+                  offered for almost all fields in the display of query results, it is possible to
+                  separate a list of actual ‘baked goods’ from the remaining entries. Further
+                  processing is easier in an Excel sheet containing the query results, which can be
+                  downloaded from the database section.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>The ‘Persons’ section</head>
+               <p xml:id="p19">The ‘<ref
+                     target="https://web.archive.org/web/20220721110154/https://www.spaengler-haushaltsbuecher.at/persons"
+                     >Persons</ref>’ section is an essential part of the ASO. According to the
+                  editors, it “(…) lists over 500 individuals and families [and] (…) provides
+                  information for local research as well.” (<ref type="crossref"
+                     target="#reithstoeger2022">Reith and Stöger 2022</ref>). The ‘Persons’ section
+                  adds much value to the database. Even ‘unknown’ persons are included. Wherever
+                  possible, the scarce information in the account books is used to describe their
+                  identity. For other, better-known persons, extensive biographical entries
+                  including a number of portraits are provided, which are accessible from the
+                  ‘Transcription’ and ‘Database’ sections as well. The ‘Persons’ section links to
+                  the ‘Database’ section. When clicking on the name of a person in the alphabetical
+                  list of biographical entries, this full name is copied into the field ‘persons’ in
+                  the ‘Database’ section, where it matches with the person’s metadata. Although this
+                  is an excellent way to explore and query the database, there are a few issues with
+                  its implementation in the ASO. For several persons in the ‘Persons’ section, the
+                  database query returns no results. Vice versa, for quite a few names in the Excel
+                  download of the database (more on downloading below), no corresponding entries
+                  were found in the ‘Persons’ section. A few explanations could be found for these
+                  inconsistencies.</p>
+               <p xml:id="p20">Where persons were found in the ‘persons’ metadata of the ‘Database’,
+                  but not in the ‘Persons’ section of the web application, the reasons are either
+                  the person being unknown or occurring rarely. A systematic comparison of the Excel
+                  downloads of (almost) the entire database with the alphabetical list of ‘persons’
+                  revealed the names of 89 persons that registered in the database with their
+                  metadata, but for which no corresponding biographical entry could be found in the
+                  ‘Persons’ section. For example, the Excel download contains one entry concerning
+                  ‘Graßpointner, Mathias’. The ‘Persons’ section, however, lists ‘Großpointner,
+                  Mathias’ and does not find the other entry for which the metadata are different.
+                  Often, minor inconsistencies in the spelling of names lead to such non-matches.
+                  Another example is that of Maria Theresia Obenaus, who is found with ‘persons’
+                  metadata in the database, but has no corresponding entry in the ‘Persons’ section
+                  (neither is her name linked in the ‘Transcription’). These entries in the account
+                  books do not appear in the query results, when the ‘Persons’ section is taken as
+                  starting point.</p>
+               <p xml:id="p21">
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-7.png"/>
+                     <head type="legend">Query result for ‘Schuster, Maria Anna’, a person with a
+                        biographical entry in the ‘Persons’ section, but no corresponding entries in
+                        the database.</head>
+                  </figure>For persons that have a biographical entry in the ‘Persons’ section, but
+                  no corresponding entries in the database, two explanations could be found.
+                  Sometimes, this person is related to someone that occurs in the database. For
+                  example, three persons named ‘Schuster’ have biographical entries: Maria Anna,
+                  Anna Theresia, and Martin. Only Anna Theresia has corresponding entries in the
+                  database; for the other names, a query yields no results (see <ref type="crossref"
+                     target="#img7">fig. 7</ref>). </p>
+               <p xml:id="p22">
+                  <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-8.png"/>
+                     <head type="legend">Query result for ‘Azwanger, Raimund Felix’, a person with
+                        biographical entry in the ‘Persons’ section, but no corresponding entries in
+                        the database.</head>
+                  </figure>
+                  <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_18/spaengler/pictures/picture-9.png"/>
+                     <head type="legend">Query result for ‘Atzwanger, Raimund Felix’, a person with
+                        inconsistent metadata in the database.</head>
+                  </figure>Rather often, spelling inconsistencies in the person metadata field in
+                  the database result in an error message. For example, no corresponding entries are
+                  found in the database for ‘Azwanger, Raimund Felix’, because a slightly different
+                  spelling of his surname (Atzwanger) was used in the person’s metadata (see <ref
+                     type="crossref" target="#img8">fig. 8</ref> and <ref type="crossref"
+                     target="#img9">9</ref>). A systematic survey of all names in the ‘Person’
+                  section revealed that in 38 cases, the link to the database yields no results.
+               </p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Download options</head>
+            <p xml:id="p23">The web application does not contain any technical interfaces. Download
+               options have some limitations. It is impossible to download the entire database
+               directly; the number of entries that can be downloaded at once is topped off at
+               5,000. Moreover, in the English version of the website the download option only works
+               when at least some data is entered in the search mask, for example book and page
+               numbers, or dates. With some limitations (not every entry has a date), the date can
+               be used as a means for downloading (almost) the entire database in a few steps. Query
+               results can be downloaded as Excel files that contain all the items in the database
+               display. The Excel sheet also contains an extra field containing the number of the
+               scan and one containing the row number of the entry. The number of the scan is
+               preceded by a letter indicating the book (a = 1, b = 2, c = 3, d = 4). Row numbers
+               continue across the different account books, starting with 1 for the first row of
+               book 1 and ending with 22,951 for the last row of book 4. Since rows without values
+               are not included in the database (see <ref
+                  target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                  >Introduction</ref>), the Excel sheet contains 21,146 rows. Scans can be
+               downloaded one by one from the web application, but the quality is not high (96 x 96
+               dpi). No information is given about the rights and restrictions for the reuse of text
+               and images downloaded from the website.</p>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusions</head>
+            <p xml:id="p24">The ASO follow a digital paradigm and can be considered a scholarly
+               digital edition. The ASO combine a diplomatic with a database edition to improve the
+               analysis of the source from the perspective of the history of consumption. The
+               editorial guidelines are rather concise, but offer enough information about the
+               transcription of the account books. More in-depth information about the structure and
+               functions of the database, on the other hand, would have been helpful. </p>
+            <p xml:id="p25">A major strength of the ASO is its clear and intuitive structure that
+               makes it easy to explore the source from a variety of perspectives. Despite its
+               inconsistencies, the ‘Persons’ section, which provides additional biographical
+               information about many people in the account books, is a major asset of the work. The
+               way in which the transcription and database sections of the web application are
+               connected, has its limitations, but the merits clearly prevail. The ASO provide an
+               excellent example of how relatively straightforward digital techniques, such as the
+               use of hyperlinks, are leveraged to the benefit of a synergistic digital edition.
+               This method could be useful for other non-narrative sources besides the household
+               account books. Therefore, it is unfortunate that the ASO remain silent about the
+               technical side of the project. </p>
+            <p xml:id="p26">Since its editors embed their work primarily in German-language
+               historiography, there is much scope for future research with the ASO. For example, it
+               would be interesting to compare the format and contents of the ASO with examples of
+               household books in, for example, Great Britain. At first sight, it seems that
+               eighteenth-century household books are quite common in British historiography.
+               Researchers have used them to discuss consumer behavior, but also to examine changes
+               in fashion in the eighteenth century (<ref type="crossref" target="#garry2016">Garry
+                  2016</ref>), the role of second-hand markets in private households, and issues of
+               masculinity and the image of women (<ref type="crossref" target="#vickery2006"
+                  >Vickery 2006</ref>; <ref type="crossref" target="#harvey2012">Harvey 2012</ref>).
+               The ASO open doors for comparative analyses on these and related topics. Given the
+               obvious value of the source, its methods and web application, it would be recommended
+               for the editors to get rid of the minor inconsistencies in the application,
+               especially in the ‘Persons’ section, and to publish information about the
+               technologies used for preparing and publishing this fascinating digital edition.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="burghartz2015">Burghartz, Susanna, ed. 2015. <emph>Jahrrechnungen der
+                     Stadt Basel 1535–1611 – digital</emph>. Basel / Graz. <ref
+                     target="https://hdl.handle.net/11471/1010.1"
+                     >https://hdl.handle.net/11471/1010.1</ref>.</bibl>
+               <bibl xml:id="burghartzcalvivogeler2017">Burghartz, Susanna, Sonia Calvi, and Georg
+                  Vogeler, eds. 2017. Urfehdebücher der Stadt Basel – digitale Edition. Basel /
+                  Graz. <ref target="https://hdl.handle.net/11471/1010.2.1"
+                     >https://hdl.handle.net/11471/1010.2.1</ref>.</bibl>
+               <bibl xml:id="garry2016">Garry, Mary Anne. 2016. “Sedan Chairmen in
+                  eighteenth-century London.” <emph>The Journal of Transport History</emph>, 37 (1):
+                  45-63.</bibl>
+               <bibl xml:id="harvey2012">Harvey, Karen. 2012. The Little Republic. Masculinity &amp;
+                  Domestic Authority in eighteenth-century Britain. Oxford: Oxford University
+                  Press.</bibl>
+               <bibl xml:id="lipinska2019">Lipińska, Aleksandra, Bettina Schröder-Bornkampf, Marcin
+                  Grulkowski, Filip Hristov, and Giulia Simonini. 2019. <emph>GeldKunstNetz.
+                     Rechnungsbücher der Stettin-Danziger Kaufmannbankiersfamilie Loitz.
+                     Kommentierte Online-Edition und Netzwerkanalyse.</emph> 30. November 2019. Open
+                  Data LMU. <ref target="https://doi.org/10.5282/ubm/data.317"
+                     >https://doi.org/10.5282/ubm/data.317</ref>.</bibl>
+               <bibl xml:id="pichlerbaumgartner2016">Pichler-Baumgartner, Luisa. 2016. ““Halte er
+                  nur alles clar und deitlich”. Haushaltsbücher als Quelle der Sozial-, Wirtschafts-
+                  und Kulturgeschichte.“ In <emph>Haushalten und Konsumieren. Die Ausgabenbücher der
+                     Salzburger Kaufmannsfamilie Spängler von 1733 bis 1785</emph>, edited by
+                  Reinhold Reith, Luisa Pichler-Baumgartner, Georg Stöger and Andreas Zechner,
+                  63-77. Salzburg: Stadtarchiv.</bibl>
+               <bibl xml:id="reithstoeger2022">Reith, Reinhold and Georg Stöger. 2022. “Exploring
+                  and Presenting Eighteenth-Century Private Consumption.“ <emph>Vierteljahrschrift
+                     für Sozial- und Wirtschaftsgeschichte</emph>, 109 (1): 72-86. <ref
+                     target="https://doi.org/10.25162/vswg-2022-0003"
+                     >https://doi.org/10.25162/vswg-2022-0003</ref>.</bibl>
+               <bibl xml:id="reithknapp2021">Reith, Reinhold and Elias Knapp. 2021. “Zum Potential
+                  der Nachlassinventare von Kaufleuten für die Handels- und Konsumgeschichte.
+                  Salzburg im 18. und frühen 19. Jahrhundert.“ <emph>Österreichische Zeitschrift für
+                     Geschichtswissenschaften</emph>, 32 (3): 202-215. <ref
+                     target="https://doi.org/10.25365/oezg-2021-32-3-11"
+                     >https://doi.org/10.25365/oezg-2021-32-3-11</ref>.</bibl>
+               <bibl xml:id="reithstoeger2020a">Reith, Reinhold and Georg Stöger. 2020a. Account
+                  Books Spängler Online. <ref
+                     target="https://web.archive.org/web/20220721110558/https://www.spaengler-haushaltsbuecher.at/"
+                     >https://web.archive.org/web/20220721110558/https://www.spaengler-haushaltsbuecher.at/</ref>.</bibl>
+               <bibl xml:id="reithstoeger2020b">Reith, Reinhold and Georg Stöger in collaboration
+                  with Luisa Pichler-Baumgartner, Maria Johanna Falkner and Katharina Scharf (eds.)
+                  2020b. “Introduction”. <emph>Account Books Spängler Online</emph>. <ref
+                     target="https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction"
+                     >https://web.archive.org/web/20220721105854/https://spaengler-haushaltsbuecher.at/introduction</ref>.</bibl>
+               <bibl xml:id="reith2016">Reith, Reinhold, Luisa Pichler-Baumgartner, Georg Stöger,
+                  and Andreas Zechner, eds. 2016. <emph>Haushalten und Konsumieren. Die
+                     Ausgabenbücher der Salzburger Kaufmannsfamilie Spängler von 1733 bis
+                     1785</emph>. Salzburg: Stadtarchiv Salzburg.</bibl>
+               <bibl xml:id="reith2015">Reith, Reinhold, ed. 2015. Das Verlassenschaftsinventar des
+                  Salzburger Tuch- und Seidenhändlers Franz Anton Spängler von 1784. Einführung und
+                  kommentierte Edition in Verbindung mit Andreas Zechner, Luisa Pichler, Doris
+                  Hörmann, Jürgen Wöhry and Florian Angerer. Salzburg: Stadtarchiv Salzburg.</bibl>
+               <bibl xml:id="stoeger2019">Stöger, Georg. 2019. “Zwischen Konsumieren und
+                  Produzieren. Dinge und ihre Nutzer*innen im 18. Jahrhundert.“
+                     <emph>Österreichische Zeitschrift für Geschichtswissenschaften</emph>, 30 (1):
+                  124-143. </bibl>
+               <bibl xml:id="vickery2006">Vickery, Amanda. 2006. “His and Hers: Gender, consumption
+                  and household accounting in eighteenth-century England.” <emph>Past &amp;
+                     Present</emph>, Supplement 1: 12-38.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
