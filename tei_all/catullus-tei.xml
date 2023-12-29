@@ -1,0 +1,2035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.18.5">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Catullus Online</title>
+            <author ref="https://orcid.org/0009-0006-8020-8849">
+               <name>
+                  <forename>Martina</forename>
+                  <surname>Pensalfini</surname>
+               </name>
+               <affiliation>
+                  <orgName>Università di Bologna</orgName>
+                  <placeName>Bologna, Italy</placeName>
+               </affiliation>
+               <email>martina.pensalfini@studio.unibo.it</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2023-12">December 2023</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-18/catullus</idno>
+            <idno type="DOI">10.18716/ride.a.18.5</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue18/catullus/catullus.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="18">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-18</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Catullus Online</title>
+                  <editor>Dàniel Kiss</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Kiss, Dàniel</persName>
+                  </respStmt>
+                  <date type="publication">2013</date>
+                  <idno type="URI">http://www.catullusonline.org/CatullusOnline/index.php?dir=poems </idno>
+                  <date type="accessed">2022-05-14</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>anthology</term>
+               <term>codex</term>
+               <term>critical apparatus</term>
+               <term>critical digitization</term>
+               <term>critical edition</term>
+               <term>digital scholarly edition</term>
+               <term>italian</term>
+               <term>latin</term>
+               <term>literature</term>
+               <term>manuscripts</term>
+               <term>poetry</term>
+               <term>scholarly digital edition</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>Catullus Online</emph>, a collection of the author’s poems and a repository of
+               the conjectures collected through the centuries, was published by Dániel Kiss with
+               the support of the <emph>Abteilung für Griechische und Lateinische Philologie</emph>
+               of the Ludwig-Maximilians-Universität München, in 2013. Kiss faced many difficulties
+               in the creation of such a resource, both from a technical standpoint and from the
+               inner complexity of the philological tradition behind Catullus and his poems. He
+               still ended up creating a rather interesting Scholarly Digital Edition, which has
+               made such work more accessible, even to those that don’t typically belong in the
+               academic world, offering the possibility to access high-quality photos of the
+               manuscripts, a curated apparatus and much other information about the texts and the
+               author, with just a simple click. What is mostly missing in this project is a more
+               sophisticated digital interface, a lost opportunity to further enhance the quality of
+               such a Scholarly Digital Edition.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Bibliographic identification of the Scholarly Digital Edition</head>
+            <p xml:id="p1">
+               <emph>Catullus Online</emph> was developed thanks to the research project <emph>An
+                  Online Repertory of Conjectures for Catullus</emph> (2009–2013), promoted by the
+               Center for Advanced Studies and the <emph>Abteilung für Griechische und Lateinische
+                  Philologie</emph> of the Ludwig-Maximilians-Universität München, which financed
+               the project. The result of the project is now reachable as a digital resource through
+               the URL “http://www.catullusonline.org”.</p>
+            <p xml:id="p2">Dániel Kiss is the editor and creator of <emph>Catullus Online</emph>,
+               and he was helped by a group composed of philologists like Giuseppe Gilberto Biondi
+               and Michael Reeve and experts in Classics like David Butterfield, Carlotta
+               Dionisotti, Julia Gaisser, Daniel Hadas, Stephen Harrison, Jeffrey Henderson,
+               Giovanni Maggiali, and John Trappes-Lomax who worked with him on tracing conjectures
+               – critical reconstructions of corrupted passages of text – and rare books. After
+               having been published in 2013, the work on <emph>Catullus Online</emph> was further
+               developed during the research project <emph>The textual transmission of
+                  Catullus</emph> (2015–2017), which was realized at the Universitat de
+               Barcelona.</p>
+         </div>
+         <div xml:id="div2">
+            <head>General parameters and introduction</head>
+            <p xml:id="p3">The idea behind this project first appeared to Kiss during his stay at
+               Scuola Normale di Pisa in 2005, where he was confronted with the controversial
+               textual history of Catullus’ poems and their manuscripts (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 101). To better understand this complex
+               history, Kiss went to the University of North Carolina at Chapel Hill in 2007, where
+               he was able to study the Halle-Ullman Papers as well as the collation and the
+               transcription of 113 manuscripts of Catullus made by William Gardner Hale, Euan T.
+               Sage, Berthold L. Ullman, and other scholars of the 20th century.<note xml:id="ftn1"
+                  >From the Section ABOUT THE WEBSITE in <emph>Catullus Online</emph>: <ref
+                     target="http://web.archive.org/web/20231215114144/http://www.catullusonline.org/CatullusOnline/index.php?dir=edited_pages&amp;pageID=5"
+                     >http://web.archive.org/web/20231215114144/http://www.catullusonline.org/CatullusOnline/index.php?dir=edited_pages&amp;pageID=5</ref>.</note>
+               By this time, he chose not to create a new edition of Catullus’ poems, and instead,
+               he focused on “mapping the manuscript tradition and drawing up conjectures”(<ref
+                  type="crossref" target="#kiss2020">Kiss 2020</ref>, 101).</p>
+            <p xml:id="p4">
+               <emph>Catullus Online</emph> was first created as a repository of conjectures and
+               later – with the development and employment of further elements – as a digital
+               critical edition. The choice of an online publication was due to the various problems
+               that came with printed editions since many were expensive and not accessible across
+               the world, whereas a digital publication instead allowed Kiss to make his project
+               more accessible and to display some additional elements (e.g., search tools, the
+               possibility to visualize the images of the manuscript and to consult more easily the
+               apparatus) that could not be used in a printed edition (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 102-103).</p>
+            <p xml:id="p5">It is easy to understand the general parameters of <emph>Catullus
+                  Online</emph> since the titles of its various sections are very explicit, and Kiss
+               has done a good job of explaining his work and his editorial principles through the
+               two sections in the menu on the left in the lower side of the site: “ABOUT THE
+               WEBSITE”, where he explains the journey to the creation of the project and then of
+               the website, and “ABOUT THE REPOSITORY”, which instead illustrates his philological
+               attitude towards the manuscripts and conjectures. In these two sections, there are
+               many links to external web resources, which are clickable and offer the possibility
+               to explore further the sources used for <emph>Catullus Online</emph>, although a few
+               have not been updated and will lead to old or inactive pages. To know more about the
+               methods used in this project, users can read <emph>Catullus Online: A Digital
+                  Critical Edition of the Poems of Catullus with a Repertory of Conjectures</emph>,
+               an essay written by Dániel Kiss, where he further explains his working process and
+               his editorial choices.</p>
+         </div>
+         <div xml:id="div3">
+            <head>Subject and content of the edition</head>
+            <p xml:id="p6">
+               <emph>Catullus Online</emph> is composed of the full text of all 116 poems written by
+               Catullus, accompanied by a critical, diachronic, and positive apparatus – meaning
+               that both accepted and rejected readings are present (<ref type="crossref"
+                  target="#mace_roelli2015">Macé and Roelli 2015</ref>) – containing the textual
+               notes and all the conjectures which have been made on the text so far and which Kiss
+               has collected through his work.</p>
+            <p xml:id="p7">The text of the poems is based on the manuscripts which stem from the
+                  <emph>Codex Veronensis</emph> (V), the oldest witness of Catullus’ manuscripts,
+               and is directly accessible through “POEMS”, whereas to use the apparatus, the user
+               will have to go to the section “POEMS WITH APPARATUS”. The biggest achievement of
+               such a format is that it creates a free curated digital edition of Catullus, allowing
+               the user both to have complete access to all the conjectures found by Kiss and to
+               interact with different texts and even unpublished papers (e.g., Berthold L. Ulman’s
+               ones). The editor focused on the investigation of his sources, many of which had not
+               been verified by previous scholars. To do so, he proceeded to personally transcribe
+               half a dozen undocumented manuscripts he found at Chapel Hill and two incunables that
+               were not available in any libraries of Munich and neither online. This resulted in
+               Kiss owning a collation, a reproduction, or a transcription of all known manuscripts
+               of Catullus that were copied before 1520 and of all printed editions from the editio
+               princeps of 1472 up to the first Aldine of 1502 (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 104-105). Other than <emph>Catullus
+                  Online</emph>, there are many classical Latin texts already available online, but
+               unlike this case, they are just digital reproductions of the printed edition, in some
+               cases scanned with OCR, with no optional functionalities or a full apparatus (<ref
+                  type="crossref" target="#nappa2017">Nappa 2017</ref>).</p>
+            <p xml:id="p8">Another achievement of <emph>Catullus Online</emph> is the fact that
+               users can directly visualize the images of the manuscripts, and the possibility to
+               access these helps to shed light on the complex textual schema behind Catullus’
+               tradition, allowing academics – and other interested users – to consult the
+               manuscripts behind the text of the project. More precisely, we can see images of only
+               O, G, and T since <emph>Biblioteca Apostolica Vaticana</emph> – which is currently
+               holding the manuscript R – does not allow the online publication of high-resolution
+               images of its manuscripts outside of its website (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 107). The possibility to directly see the
+               images of the manuscripts employed for a critical edition is not frequent, mostly due
+               to traditional copyright restrictions. In fact, many libraries do not allow
+               high-quality reproductions of the manuscripts they store, and they are neither
+               trained nor funded to handle the incoming need for digitization other than
+               conservation. To solve this problem, new application format interfaces – e.g., IIIF,
+               the International Image Interoperability Framework – are being implemented to offer
+               the possibility to let the libraries – e.g., the <emph>Bodleian Library</emph> –
+               continue hosting their images on their home servers while allowing other sites to
+               display them, offering the possibility to easily share various cultural artifacts on
+               the web (<ref type="crossref" target="#mastronarde2020">Mastronarde 2020</ref>,
+               116).</p>
+            <p xml:id="p9">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-1.png"/>
+                  <head type="legend">Screenshot of the description of manuscript T.</head>
+               </figure>
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-2.png"/>
+                  <head type="legend">Screenshot of the description of manuscript 90.</head>
+               </figure>The users can also access the section “TESTIMONIA”, where quotations of
+               Catullus found in ancient and medieval texts are stored as indirect witnesses of his
+               textual tradition, whereas through the section “BIBLIOGRAPHY”, the user will be able
+               to find the bibliography that was used to create this project. “MANUSCRIPTS” gives us
+               the full list of the manuscripts, and they are divided into two groups:<list
+                  rend="numbered">
+                  <item>T, O, G, R, m, S.<lb/>These manuscripts are introduced with a small
+                     description of their main details, such as where and when they were copied, the
+                     writing used, their measures, and other important specifics, as can be seen in
+                        <ref type="crossref" target="#img1">Figure 1</ref>.</item>
+                  <item>Other surviving manuscripts of Catullus’ <emph>Liber</emph>. <lb/>They are
+                     each identified by a number and ordered alphabetically. This system is based on
+                     the list of manuscripts created by D. F. S. Thompson (<ref type="crossref"
+                        target="#thompson1997">1997</ref>, 77-92) and further elaborated and curated
+                     by Kiss in 2012. They have their main details – such as where they are now
+                     stored, and where and when they were copied – next to their identifying number,
+                     as can be seen in <ref type="crossref" target="#img2">Figure 2</ref>.</item>
+               </list>
+            </p>
+            <p xml:id="p10">In “ABOUT THE WEBSITE” and “ABOUT THE REPOSITORY”, all the information
+               about the methods and tools that have been used to build the repository and the
+               website is given, and in “HELP” and “CONTACT”, you can find all the useful
+               information to navigate the website and to properly contact the editor for feedback
+               or further inquiries. While the general interface, the navigation bar, and the
+               sections are given in English, the poems are available only in Latin, with no
+               translation into any other language offered. To offer a translation at least into
+               English would be very helpful since this edition is meant to reach not only scholars
+               but anybody with Internet access (<ref type="crossref" target="#kiss2020">Kiss
+                  2020</ref>, 103) and it might also involve people who do not have a solid base in
+               Latin in the <emph>Catullus Online</emph> project. A few other features that could be
+               implemented are sections or pages about Catullus’ life and his context, as well as to
+               encourage other kinds of studies on the poems, such as historical or linguistic
+               ones.</p>
+         </div>
+         <div xml:id="div4">
+            <head>Aims and methods</head>
+            <p xml:id="p11">
+               <emph>Catullus Online</emph> was originally born as a repository of conjectures, but
+               later, the editor chose to transform it into a digital critical edition by adding the
+               text of the poems to the repository. The digital aspect of this edition was meant to
+               allow for searchability through an interconnected text, a user-friendly and
+               easy-to-use interface supported by all browsers, and reminiscent of the standards
+               upheld by printed editions (<ref type="crossref" target="#kiss2020">Kiss 2020</ref>,
+               103). The constitution of the text is made in a rather traditional way, with an
+               apparatus and a repertory of conjectures (<ref type="crossref" target="#nappa2017"
+                  >Nappa 2017</ref>), to avoid distracting the viewer from the focal points and
+               complicating the consultation of the website.</p>
+            <p xml:id="p12">The two missions of this digital critical edition are to offer a
+               reliable text and to give students a research tool for the future (<ref
+                  type="crossref" target="#kiss2020">Kiss 2020</ref>, 113-114). An audience that
+               could benefit from this edition is also undergraduates or secondary school students,
+               as the easy-to-use interface would allow them to study the poems and the apparatus
+               easily to deepen their knowledge (<ref type="crossref" target="#nappa2017">Nappa
+                  2017</ref>). The main manuscripts are known as TOGR, and since they are all
+               independent of each other, they all have source value (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 103):<list rend="numbered">
+                  <item>
+                     <emph>Oxoniensis</emph>, copied in Northern Italy, 14th century, is currently
+                     stored in Oxford, <emph>Bodleian Library</emph> (O).</item>
+                  <item>
+                     <emph>Sangermanensis</emph>, copied in Verona in 1375, is currently stored in
+                     Paris, <emph>Bibliothèque Nationale de France</emph> (G).</item>
+                  <item>
+                     <emph>Romanus</emph>, copied in Florence 1375–1395, currently stored in Rome,
+                        <emph>Biblioteca Apostolica Vaticana</emph> (R).</item>
+                  <item>
+                     <emph>Thuaneus</emph>, an anthology of Latin poetry copied around 850 in
+                     central France stored in Paris, <emph>Bibliothèque Nationale de France</emph>;
+                     unlike the others, it does not derive directly from the <emph>Codex
+                        Veronensis</emph> (T) (<ref type="crossref" target="#kiss2020">Kiss
+                        2020</ref>, 101-103).</item>
+               </list>
+            </p>
+            <p xml:id="p13">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-3.png"/>
+                  <head type="legend">Screenshot of the apparatus of verse 1 (carmen 1).</head>
+               </figure>Another important element of a critical edition is the apparatus where all
+               the conjectures are stored alongside the critical and textual notes. In this case, we
+               can talk about a proper critical apparatus because the variant readings of the
+               various witnesses are stored alongside the conjectures. The apparatus appears on the
+               right of the poem either through clicking the option “SHOW FULL APPARATUS” or the
+               triangle icon in the section “POEMS WITH APPARATUS” next to the first line of the
+               poem. This way, you can easily visualize all the diachronic dimensions of the text
+               with one click, as shown in <ref type="crossref" target="#img3">Figure 3</ref>.</p>
+            <p xml:id="p14">The manuscripts are either recognized through their sigla or with their
+               number in the list, while the apparatus itself is ordered chronologically,
+               registering all the first instances of the conjectures stored inside of it. However,
+               there are a few exceptions and limitations due to the still unknown relationships
+               between many Renaissance manuscripts and humanistic conjectures. Not having a fully
+               developed stemma of all of Catullus’ manuscripts and having many families of codices
+               that cannot be linked to any of the parent nodes (TOGR) has made the task of fully
+               understanding the relationships between manuscripts and their dates rather difficult
+               and complex (<ref type="crossref" target="#bertone2017">Bertone 2017</ref>, 1). Kiss
+               distanced himself from Mynors’ theories – refusing the theory of the eight layers of
+               humanistic conjectures<note xml:id="ftn2">R.A.B Mynors, to make sense of the
+                  complexity of Catullus’ tradition, recognized eight layers of humanistic
+                  corrections and named them after the Greek letters αβγδεζηθ to distinguish them
+                     (<ref type="crossref" target="#kiss2013_2017">Kiss 2013, 2017</ref>). According
+                  to Dániel Kiss, this system proved to be highly problematic due to its
+                  inconsistency.</note> – and edition, in the aspects of presentation and editing,
+               for example, by choosing not to reproduce here the fragmentary <emph>Priapea</emph>,
+               placed by Muretus between the poems 17 and 21 (<ref type="crossref"
+                  target="#nappa2017">Nappa 2017</ref>).</p>
+            <p xml:id="p15">
+               <emph>Catullus Online</emph> does not follow the TEI Guidelines since, back in 2009,
+               when the project was planned by the editor, he was not aware of the possibility of
+               using models that were different from the digitized book and the text-only online
+               publication. By then, the TEI consortium had already developed digital guidelines for
+               digital critical editions like <emph>Catullus Online</emph>. However, these
+               guidelines would not have been compatible with the project since the apparatus had to
+               be marked up manually or semi-automatically. This would have been too time-consuming
+               for the project at hand, although the guidelines might have been useful as a starting
+               point since they offer a rather durable and robust system of tags (<ref
+                  type="crossref" target="#kiss2020">Kiss 2020</ref>, 103-104).</p>
+            <p xml:id="p16">Nevertheless, the website employed a standard for the texts: HTML, a
+               formal recommendation by the W3C, used to showcase documents in a browser. Such a
+               standard is solid and quite easy to use, making the project further interoperable and
+               structured through an understandable setup. It can also be adapted for different
+               formats (such as mobile or desktop) and can be used in all major browsers, as was
+               Kiss’ original objective in creating his digital edition.</p>
+            <p xml:id="p17">Another aspect to take into consideration, aside from the employment of
+               only a very basic but solid standard for the encoding of texts, is the fact that Kiss
+               has not allowed <emph>Catullus Online</emph> to be citable through CTS
+                  (<emph>Canonical Text Services</emph>), losing a chance to allow the website to be
+               accessible and employ the tools available through such a service (<ref
+                  type="crossref" target="#blackwell_smith2014">Blackwell and Smith 2014</ref>).
+               This also limits the potentiality of such a project in the world of linked open data,
+               which has by now become a norm in the digital humanities environment. </p>
+            <p xml:id="p18">All the information about the aims and methods of <emph>Catullus
+                  Online</emph> can be found in the “ABOUT THE REPOSITORY” section on the website
+               and in the essay <emph>Catullus Online: A Digital Critical Edition of the Poems of
+                  Catullus with a Repertory of Conjectures</emph> (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 99-114), where all methods, theories, and
+               ideas are documented to fully explain the process behind the choices made on the text
+               constitution.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Publication and presentation</head>
+            <p xml:id="p19">Kiss worked with Woodpecker Software to construct the website on which
+                  <emph>Catullus Online</emph> is presented, and with Stalker Studio for its design.
+               To realize <emph>Catullus Online</emph>, the engineers of Woodpecker Software
+               employed the programming language PHP and the open-source database management system
+               MySQL, which has been employed mostly in the apparatus part (<ref type="crossref"
+                  target="#kiss2020">Kiss 2020</ref>, 105-109).</p>
+            <p xml:id="p20">As mentioned before, the TEI Guidelines are not employed, and neither a
+               model like the one used by the digital project <emph>Musisque Deoque</emph> (<ref
+                  type="crossref" target="#biondi_etal2005">Biondi et al. 2005</ref>) – a platform
+               where many digital critical editions of Latin literature are stored – is used. The
+               poems and the apparatus would need to be manually or semi-automatically encoded,
+               which would be a rather slow process for the huge number of conjectures stored in
+                  <emph>Catullus Online</emph>. Instead, Kiss’ project seems to remain on the same
+               level as the digitized books and the simple text-only online publications (<ref
+                  type="crossref" target="#kiss2020">Kiss 2020</ref>, 103-104). The sole standard
+               employed by the author for the texts is, as mentioned above, HTML, offering a solid
+               basis. However, this could be improved in the future by using the TEI Guidelines.</p>
+            <p xml:id="p21">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-4.png"/>
+                  <head type="legend">Screenshot of the homepage.</head>
+               </figure>The interface of <emph>Catullus Online</emph> is quite easy to understand,
+               and this format does not require any introductory readings or explanations. However,
+               if needed, the user can find a small summary of the various functions of this website
+               inside the section “HELP”. The user is directly introduced to the poems in the
+               central part of the homepage, whereas on the left part of the website, they can find
+               the first part of the navigation bar, – composed of “POEMS”, “POEMS WITH APPARATUS”,
+               “BIBLIOGRAPHY”, “TESTIMONIA” – the search tools, and the rest of the navigation bar –
+               MANUSCRIPTS”, “ABOUT THE WEBSITE”, “ABOUT THE REPOSITORY”, “CONTACTS”, and “HELP”, as
+               shown in <ref type="crossref" target="#img4">Figure 4</ref>.</p>
+            <p xml:id="p22">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-5.png"/>
+                  <head type="legend">Screenshot of Show Full Apparatus detail.</head>
+               </figure>On the right side of this section, there are only two relevant elements,
+               which are the Facebook icon – <emph>Catullus Online</emph> is very much active on
+               Facebook – and the “SHOW FULL APPARATUS” option, which will lead the user from
+               “POEMS” to “POEMS WITH APPARATUS”. There, the user can visualize the apparatus in its
+               entirety and they can fully visualize various textual phenomena which are
+               interconnected with the text (<ref type="crossref" target="#kiss2020">Kiss
+               2020</ref>, 107), as shown in <ref type="crossref" target="#img5">Figure 5</ref>.</p>
+            <p xml:id="p23">As much as this interface is very easy to understand, it is not very
+               accessible and usable since reading the text of the poems and their apparatus might
+               be a rather tiring task for users. In fact, showcasing the full texts might be a bit
+               troubling to read and follow, even more so on a screen with a small font and a high
+               density of text. </p>
+            <p xml:id="p24">
+               <figure xml:id="img6">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-6.png"/>
+                  <head type="legend">Screenshot of the three main icons.</head>
+               </figure>In the section “POEMS WITH APPARATUS”, three icons appear next to the verse
+               chosen, as shown in <ref type="crossref" target="#img6">Figure 6</ref>. The triangle
+               icon will make the critical apparatus appear on the right beside the verse studied.
+               If the apparatus is longer than one line, the following verse is moved down, so that
+               the text can be properly aligned, and the user can fully visualize all the
+               conjectures and secondary readings for that specific line without having them overlap
+               with the following verse. The rectangle icon, instead, will lead to the visualization
+               of the images of the manuscripts at a lower quality, while clicking directly on the
+               image will open another window in the browser, showcasing it in a much higher
+               resolution and with a larger dimension. The images can also be downloaded, and they
+               are extremely precious for the user since they allow them to witness the tradition
+               behind Catullus’ poems directly. The quotation mark, on the other hand, will give the
+               user further textual and contextual information, and in some cases, it is possible to
+               also visualize a cross icon, which offers an overview of the different
+               reconstructions of that specific line, also shown in the apparatus. This way, it
+               allows a clearer layout separating the reconstructions from the other information
+               stored in the apparatus.</p>
+            <p xml:id="p25">
+               <figure xml:id="img7">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-7.png"/>
+                  <head type="legend">Screenshot Search by poems, apparatus, and testimonia
+                     option.</head>
+               </figure>
+               <figure xml:id="img8">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-8.png"/>
+                  <head type="legend">Screenshot Go to the passage (poem and line) option.</head>
+               </figure>It would be rather difficult and time-consuming to browse through the
+               entirety of the collection. Hence, two search tools have been added to allow the user
+               to jump directly to the part of the text they want to study.<list rend="numbered">
+                  <item>A search box that allows you to search a word inside the poems, the
+                     apparatus, or the testimonia (or through all three options); this is very
+                     useful because it allows the user to confront various passages in the text with
+                     a similar theme or use a specific keyword to see how it is differently used in
+                     the text, or its popularity, as shown in <ref type="crossref" target="#img7"
+                        >Figure 7</ref>.</item>
+                  <item>The second search tool can be employed, instead, to search a specific
+                     paragraph. It will simply jump into a specific poem or line selected, and
+                     obviously, in this case, it is important to point out that the user would need
+                     to know which specific passage they are searching. This second search tool is a
+                     bit faulty since it sometimes either does not work at all or will not jump
+                     directly to the poem or line selected, as shown in <ref type="crossref"
+                        target="#img8">Figure 8</ref>.</item>
+               </list>
+            </p>
+            <p xml:id="p26">
+               <figure xml:id="img9">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_18/catullus/pictures/picture-9.png"/>
+                  <head type="legend">Screenshot of the alphabetic order of the Bibliography
+                     section.</head>
+               </figure>To also facilitate the navigation of the “BIBLIOGRAPHY” page, the author has
+               organized the bibliography through quick links to individual letters, alphabetically
+               ordered, as shown in <ref type="crossref" target="#img9">Figure 9</ref>.</p>
+            <p xml:id="p27">All the rights of this project – the author’s research, his work on the
+               text, and the website – are copyrighted by Dániel Kiss (<ref type="crossref"
+                  target="#kiss2013_2017">2013, 2017</ref>). For the images, instead, all the rights
+               belong to the institution hosting the photographed manuscripts. The
+                  <emph>Bibliothèque Nationale de France</emph> has given the permission to
+               reproduce digitally the images of the manuscripts T and G, whereas the <emph>Bodleian
+                  Library</emph> at first requested a small fee for the publication of the images of
+               O, but now they are freely available on the <emph>Digital Bodleian</emph> (<ref
+                  type="crossref" target="#mastronarde2020">Mastronarde 2020</ref>, 116-117).</p>
+            <p xml:id="p28">The website is not hosted on an institutional site, although that is
+               something that Kiss hopes to obtain in the future since it would make the site much
+               more stable and durable in time. Currently, he has been paying an annual fee to
+               Woodpecker Software for the domain rights of <emph>Catullus Online</emph>. The
+               platform is accessible from every kind of browser, although in the future,
+               technological change problems might prove to be rather intense for the website, even
+               more for mobile users since a responsive version has not been developed yet and a
+               printed edition is not available (<ref type="crossref" target="#kiss2020">Kiss
+                  2020</ref>, 109-112). </p>
+            <p xml:id="p29">It is also important to state that the content and rendering of the
+               website are tightly linked, which appears to be quite a limitation for the project as
+               it does not allow the ordinary user to consult the project offline, and neither can
+               they store the texts and apparatus elsewhere to properly annotate them. It would be
+               good in the future to study a solution that would allow the users to access the
+               website differently, without relying entirely on its rendering, and by allowing the
+               possibility to download the apparatus and texts or even just simply mark the texts
+               with their annotations.</p>
+            <p xml:id="p30">In the future, it is also important to review the content of
+                  <emph>Catullus Online</emph> since, over the years, growing feedback from the
+               users has been collected. This could be useful to update the edition with newfound
+               conjectures and ideas, and this was possible thanks to the presence of <emph>Catullus
+                  Online</emph> on Facebook, which has proved to be extremely useful for the first
+               years of the website since it allowed the editor to promote it in groups about
+               classics and digital humanities (<ref type="crossref" target="#kiss2020">Kiss
+                  2020</ref>, 109).</p>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion</head>
+            <p xml:id="p31">According to Patrick Sahle’s definition, <emph>Catullus Online</emph> is
+               a Scholarly Edition, a “critical representation of historic documents” (<ref
+                  type="crossref" target="#sahle2016">Sahle 2016</ref>, 23). The choices regarding
+               the reproduction of the text and the additional material chosen to portray the
+               historical tradition behind Catullus’ poems are explained, justified, and stated by
+               the editor through specific editorial methods and based on academic studies that are
+               respected throughout the entire edition. The historical aspect of this edition, on
+               the other hand, is visible in the apparatus and the “MANUSCRIPT” section where the
+               user can fully witness the diachronic dimension of Catullus’ tradition, being able to
+               bridge the distance in time directly. There is also a full representation of the
+               subject and all the self-stated rules – e.g., to offer a way to freely access the
+               conjectures, to collect as many conjectures as possible and to give the user some
+               extra tools to further understand the context and historical tradition – that are
+               respected throughout the entirety of the edition (<ref type="crossref"
+                  target="#sahle2016">Sahle 2016</ref>, 23-26).</p>
+            <p xml:id="p32">It is also a Scholarly <emph>Digital</emph> Edition but with some
+               reservations: it imposes a specific digital paradigm – an algorithm creates a
+               specific way to visualize the text (<ref type="crossref" target="#sahle2016">Sahle
+                  2016</ref>, 26-27) – and a specific standard for the texts – HTML. These two
+               elements are followed in the entirety of the edition’s creation, but many aspects
+               (e.g., “accessibility, usability, and computability”) remain truly underdeveloped.
+               Regarding this, I do believe that the lack of models and examples at the time the
+               author started working on <emph>Catullus Online</emph> brought Kiss to have a very
+               basic digital model for his project: there is no employment of shared practices such
+               as TEI or CTS, and the interface of the website struggles to be responsive and
+               accessible.</p>
+            <p xml:id="p33">As stated in the paragraphs above, Catullus Online does certainly offer
+               the user a scholarly edition in a digital format, and even though it solves many of
+               the problems that come with a printed edition (e.g., the possibility to access the
+               texts and the apparatus freely), it still retains some of the typical characteristics
+               of printed editions, such as the impossibility to view the edition in different
+               formats or the limited responsivity, due to the absence, for example, of an
+               infrastructure that adapts to the device the user is employing. </p>
+            <p xml:id="p34">There is certainly a discussion about the digital development of the
+               edition, alongside an explanation of all the choices of the author around it,
+               furthermore, reinstating a paradigm. However, as Kiss was not the one who worked on
+               the technological side – instead, it was a private studio (Woodpecker Software) –
+               there is little to no knowledge about the infrastructure hosting the website, hence
+               limiting the reusability of such a model for other editions.</p>
+            <p xml:id="p35">This brings the project to be, indeed, digital but at a basic level and
+               with many sectors that could be further improved by all the new standards, models,
+               and practices developed over the years. Although <emph>Catullus Online</emph> is not
+               digitally perfect, it hopes to be a starting point for the development of further
+               studies on Catullus’ tradition (<ref type="crossref" target="#kiss2020">Kiss
+                  2020</ref>, 112-114).</p>
+            <div xml:id="div6.1">
+               <head>Suggested Future Implementations</head>
+               <p xml:id="p36">Here are a few suggestions that could help <emph>Catullus
+                     Online</emph> broaden its horizons in the digital realm:<list rend="bulleted">
+                     <item>Kiss would do well to adapt the edition to the TEI Guidelines to offer a
+                        more durable service over time.</item>
+                     <item>It would also be an improvement for the edition to allow <emph>Catullus
+                           Online</emph> to be citable through the CTS protocol. It could employ an
+                        implementation similar to the one in the Perseus Digital Library, which
+                        combines both the CTS system and linked data, starting from an HTML basis
+                           (<ref type="crossref" target="#almas_babeau_krohn2014">Almas, Babeu, and
+                           Krohn, 2014</ref>). </item>
+                  </list>
+               </p>
+               <p xml:id="p37">Both the implementation of the TEI Guidelines and the CTS protocol
+                  would allow <emph>Catullus Online</emph> to become further syntactically and
+                  semantically interoperable (<ref type="crossref" target="#kalvesmaki2014"
+                     >Kalvemaski 2014</ref>), which is something that the project is in part
+                     lacking.<list rend="bulleted">
+                     <item>It would also be a good idea to offer a translation of the poems
+                        alongside their text so that this website could be truly employed and
+                        consulted by people other than academics (e.g., secondary school students
+                        who have yet to form themselves on Latin texts and could use this website to
+                        train in such a subject).</item>
+                     <item>On this same topic, I would also suggest offering information on
+                        Catullus’ life and the history of the manuscripts used. This would be
+                        helpful to give a full portrait of the author and the manuscripts used in
+                        the section “ABOUT THE REPOSITORY”, which explains the editorial methods
+                        behind the choices applied to the text and apparatus, but not the story of
+                        the manuscripts.</item>
+                     <item>The paper that Dániel Kiss wrote – <emph>Catullus Online: A Digital
+                           Critical Edition of the Poems of Catullus with a Repertory of
+                           Conjectures</emph> – could be linked in the above-mentioned section to
+                        explain the story behind Catullus’ tradition further.</item>
+                  </list>
+               </p>
+               <p xml:id="p38">A clearer interface would also offer a more accessible tool:<list
+                     rend="bulleted">
+                     <item>The website and the apparatus might benefit from showing one poem at a
+                        time instead of all of them at once, allowing the user to zoom in on the
+                        specific part of the texts, they are interested in. For this, a drop-down
+                        menu where the user could select just the poem they are looking for and its
+                        apparatus could be implemented.</item>
+                     <item>Another aspect that could be improved is the second search tool, which
+                        has been noted to be faulty in the previous paragraph. If fixed, it would
+                        prove to be a very helpful and useful tool to observe further unnoticed
+                        details in the poems.</item>
+                     <item>Aside from a clearer interface, it would also be good to further work on
+                        creating a solution for the website not to rely so heavily on its rendering,
+                        allowing different methods of consultation that would involve a broader
+                        audience. It would, for example, be helpful to create different methods of
+                        visualization and allow the users to consult the website offline, as
+                        well.</item>
+                  </list>
+               </p>
+               <p xml:id="p39">Finally, I think that <emph>Catullus Online</emph> could benefit from
+                  further working on its responsive design, starting by offering a mobile version of
+                  the website that could be more easily accessible to everyday users and not
+                  strictly academics, allowing the website to be able to be consulted at any
+                  moment.</p>
+            </div>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="almas_babeau_krohn2014">Almas, Bridget, Alison Babeu, and Anna Krohn.
+                  2014. “Linked Data in the Perseus Digital Library.” <emph>ISAW Papers</emph>, 7.3.
+                     <ref
+                     target="https://web.archive.org/web/20230731161944/http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/almas-babeu-krohn/"
+                     >https://web.archive.org/web/20230731161944/http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/almas-babeu-krohn/</ref>. </bibl>
+               <bibl xml:id="bertone2017">Bertone, Susanna. 2017. <emph>Tradizione di Catullo e
+                     critica del paratesto Divisiones, titoli e facies del Liber</emph> [doctoral
+                  thesis], Università di Parma.<hi rend="Quelltext" xml:space="preserve"> </hi>
+                  <ref target="https://hdl.handle.net/1889/3606"
+                     >https://hdl.handle.net/1889/3606</ref>.</bibl>
+               <bibl xml:id="biondi_etal2005">Biondi, Gilberto, Paolo Mastrandea, Raffaele Perelli,
+                  Valeria Viparelli, and Loriano Zurli. 2005. <emph>Musisque Deoque. A Digital
+                     Archive of Latin Poetry</emph>. Accessed December 18, 2023. <ref
+                     target="https://mizar.unive.it/mqdq/public/"
+                     >https://mizar.unive.it/mqdq/public/</ref>.</bibl>
+               <bibl xml:id="blackwell_smith2014">Blackwell, Christoper and Neel Smith, eds. 2014.
+                  “The Canonical Text Services protocol, version 5.0.rc.2.” <ref
+                     target="http://cite-architecture.github.io/cts_spec/">Canonical Text Services
+                     protocol specification</ref>. <ref
+                     target="https://web.archive.org/web/20230731161428/http://cite-architecture.github.io/cts_spec/"
+                     >https://web.archive.org/web/20230731161428/http://cite-architecture.github.io/cts_spec/</ref>.</bibl>
+               <bibl xml:id="kalvesmaki2014">Kalvesmaki, Joel. 2014. “Canonical References in
+                  Electronic Texts: Rationale and Best Practices Issue.” Digital Humanities
+                  Quarterly, 8(2). <ref
+                     target="https://web.archive.org/web/20230731161221/http://www.digitalhumanities.org/dhq/vol/8/2/000181/000181.html"
+                     >https://web.archive.org/web/20230731161221/http://www.digitalhumanities.org/dhq/vol/8/2/000181/000181.html</ref>. </bibl>
+               <bibl xml:id="kiss2020">Kiss, Dàniel. 2020. “Catullus Online: A Digital Critical
+                  Edition of the Poems of Catullus with a Repertory of Conjectures.” In
+                     <emph>Digitale Altertumswissenschaften: Thesen und Debatten zu Methoden und
+                     Anwendungen</emph>, edited by Stylianos Chronopoulos, Felix K. Maier, and Anna
+                  Novokhatko, 99-114. Digital Classics Books, 4., Heidelberg: Propylaeum. <ref
+                     target="https://katalog.ub.uni-heidelberg.de/titel/68575399"
+                     >https://katalog.ub.uni-heidelberg.de/titel/68575399</ref>.</bibl>
+               <bibl xml:id="kiss2013_2017">Kiss, Dàniel. 2013, 2017. <emph>Catullus Online. An
+                     Online Repertory of Conjectures on Catullus</emph>. Accessed December 18, 2023.
+                     <ref
+                     target="https://web.archive.org/web/20230613133050/http://www.catullusonline.org/CatullusOnline/index.php"
+                     >https://web.archive.org/web/20230613133050/http://www.catullusonline.org/CatullusOnline/index.php</ref>.</bibl>
+               <bibl xml:id="mace_roelli2015">Macé, Caroline and Philipp Roelli. 2015. “Apparatus.”
+                  Parvum Lexicon Stemmatologicum. <ref
+                     target="https://web.archive.org/web/20220830162314/https://wiki.helsinki.fi/display/stemmatology/Apparatus"
+                     >https://web.archive.org/web/20220830162314/https://wiki.helsinki.fi/display/stemmatology/Apparatus</ref>.</bibl>
+               <bibl xml:id="mastronarde2020">Mastronarde, Donald J. 2020. “Curated Data for Textual
+                  History: Review of Catullus Online.” In <emph>Digitale Altertumswissenschaften:
+                     Thesen und Debatten zu Methoden und Anwendungen</emph>, edited by Stylianos
+                  Chronopoulos, Felix K. Maier, and Anna Novokhatko, 115-118. Digital Classics
+                  Books, 4., Heidelberg: Propylaeum. <ref
+                     target="https://katalog.ub.uni-heidelberg.de/titel/68575399"
+                     >https://katalog.ub.uni-heidelberg.de/titel/68575399</ref>.</bibl>
+               <bibl xml:id="nappa2017">Nappa, Christopher. 2017. “Review: Catullus Online.” Society
+                  for Classical Studies. <ref
+                     target="https://web.archive.org/web/20220502185159/https://classicalstudies.org/scs-blog/christopher-nappa/review-catullus-online"
+                     >https://web.archive.org/web/20220502185159/https://classicalstudies.org/scs-blog/christopher-nappa/review-catullus-online</ref>. </bibl>
+               <bibl xml:id="sahle2016">Sahle, Patrick. 2016. “What is a Scholarly Digital Edition?”
+                  In <emph>Digital Scholarly Editing: Theories and Practices</emph>, edited by
+                  Matthew James Driscoll and Elena Pierazzo, 19-39. Cambridge: Open Book Publishers.
+                     <ref target="http://dx.doi.org/10.11647/OBP.0095.02"
+                     >http://dx.doi.org/10.11647/OBP.0095.02</ref>.</bibl>
+               <bibl xml:id="thompson1997">Thompson, Douglas F. S. 1997. <emph>Catullus</emph>.
+                  Toronto: University of <hi rend="Emphasis">Toronto</hi> Press.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
