@@ -1,0 +1,2233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.17.5">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Gottfried Semper: Der Stil – Eine Edition im Aufbau</title>
+            <author ref="https://orcid.org/0000-0002-0615-0523">
+               <name>
+                  <forename>Sandra</forename>
+                  <surname>König</surname>
+               </name>
+               <affiliation>
+                  <orgName>Nationale Akademie der Wissenschaften Leopoldina</orgName>
+                  <placeName ref="https://www.geonames.org/2911522">Halle an der Saale, Germany</placeName>
+               </affiliation>
+               <email>Sandra.Koenig@leopoldina.org</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2024-05">May 2024</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-17/semper-edition</idno>
+            <idno type="DOI">10.18716/ride.a.17.5</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue17/semper-edition/semper-edition.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0001-8820-5112">Tessa Gengnagel</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298">Frederike Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-3167-5089">Daniela Schulz</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike Neuber </editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="technical">Frederike
+               Neuber</editor>
+            <biblScope unit="issue" n="17">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-17</idno>
+            <idno type="DOI">10.18716/ride.a.17</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Gottfried Semper | Der Stil | Digitale Edition</title>
+                  <editor>Philip Ursprung, Sonja Hildebrand</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Gnehm, Michael</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Chestnova, Elena</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Germann, Raphael</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Kevic, Tanja</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Weidmann, Dieter</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Aus der Au, Carmen</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Vermeul, Swen</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Luomi, Antti</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Czernecki, Cezary</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Programmierung von Backend und Frontend: Scientific IT Services (SIS)
+                        der ETH Zürich</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Wüthrich, Nadine (Graphisches Design)</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Schmitt, Reinhard (Graphisches Design)</persName>
+                  </respStmt>
+                  <date type="publication">2021 (?)</date>
+                  <idno type="URI">https://www.semper-edition.ch/</idno>
+                  <date type="accessed">2024-04-03</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Design History</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>currently: Diplomatic edition; intention: Enriched edition</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>diplomatic transcription</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Creative Commons Attribution-NonCommercial 2.0 Generic Lizenz
+                           </gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>art history</term>
+               <term>design history</term>
+               <term>work in progress</term>
+               <term>beta status</term>
+               <term>tei</term>
+               <term>manuscript</term>
+               <term>fair data principles</term>
+               <term>19th century</term>
+               <term>text as graph</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>This review describes the <emph>Semper-Edition</emph> in its current version of
+               March 2024, when work on the edition is at its midpoint of a projected 12-year
+               processing time. Nevertheless, it seems suitable to review this resource at this
+               point as it gives valuable insight into what constitutes good usability when going
+               online at an early production stage. The edition encompasses Gottfried Sempers
+               (1803–1879) opus magnum <emph>Der Stil in den technischen und tektonischen Künsten,
+                  oder Praktische Aesthetik</emph> (1860/1863), including draft versions, fair
+               copies, proof stages, and complementing these texts with additional manuscripts
+               closely linked to <emph>Der Stil</emph>, namely <emph>Vergleichende Baulehre</emph>,
+                  <emph>Kunstformenlehre</emph> and student notes on Semper’s lectures. The edition
+               does not create one ‘Leittext’ (scholarly curated text) but aims at making the
+               comprehensive content within these texts accessible and usable for different courses
+               of analysis, achieving this by using a labelled property graph data base.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Vorbemerkung</head>
+            <p xml:id="p1">
+               <figure xml:id="img1">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-1.png"/>
+                  <head type="legend">Startseite der <emph>Semper-Edition</emph>.</head>
+               </figure>Dieses Review betrachtet mit der <emph>Semper-Edition</emph> (<ref type="crossref" target="#abb1">Abb. 1</ref>) ein Projekt, dass sich noch
+               mitten im Aufbau befindet, dessen Editor:innen sich jedoch schon früh entschieden
+               haben, Teile der Edition zugänglich zu machen.<note xml:id="ftn1">Die vorliegende Publikation wurde im Rahmen des Konsortiums Text+ im
+                  Kontext der Arbeit des Vereins Nationale Forschungsdateninfrastruktur
+                  (NFDI) e.V. verfasst. NFDI wird von der Bundesrepublik Deutschland und
+                  den 16 Bundesländern finanziert, und das Konsortium Text+ wird
+                  gefördert durch die Deutsche Forschungsgemeinschaft (DFG) -
+                  Projektnummer 460033370. Die Autor:innen bedanken sich für die
+                  Förderung sowie Unterstützung. Ein Dank geht außerdem an alle
+                  Einrichtungen und Akteur:innen, die sich für den Verein und dessen
+                  Ziele engagieren.</note> Eine solche Vorabveröffentlichung
+               bringt für die Benutzbarkeit ganz eigene Herausforderungen mit sich, wenn der
+               Textbestand noch unvollständig ist oder noch nicht alle geplanten Funktionen
+               umgesetzt wurden. Im Folgenden wird daher vor allem die Benutzerperspektive
+               eingenommen: Wie wird der interessierte Nutzer durch diesen Zwischenstand geführt,
+               was steht bereits zur Verfügung?</p>
+         </div>
+         <div xml:id="div2">
+            <head>Gegenstand und Inhalt der Edition</head>
+            <div xml:id="div2.1">
+               <head>Gegenstand der Edition</head>
+               <p xml:id="p2">Die Schriften des deutschen Architekten, Reformers und
+                  Kunsttheoretikers Gottfried Semper (1803–1879) gelten als zentrale Beiträge zu den
+                  seinerzeit engagiert verhandelten Fragen von Stil und Form in Architektur, Kunst
+                  und Kunstgewerbe (<ref type="crossref" target="#karge2014">Karge 2014</ref>, 7).
+                  Den konzentrierten Ausdruck fanden Sempers Gedanken in seinem Hauptwerk <emph>Der
+                     Stil in den technischen und tektonischen Künsten, oder Praktische Aesthetik.
+                     Ein Handbuch für Techniker, Künstler und Kunstfreunde</emph>, das <ref type="crossref" target="#semper18601863">1860/1863</ref> in zwei Bänden
+                  erschien – Band 1 zur textilen Kunst, Band 2 bezogen auf „Keramik, Tektonik,
+                  Stereometrie, Metallotechnik“.<note xml:id="ftn2"> Gottfried Semper: <emph>Der
+                        Stil in den technischen und tektonischen Künsten, oder Praktische Aesthetik.
+                        Ein Handbuch für Techniker, Künstler und Kunstfreunde</emph>, Band 1:
+                        <emph>Die Textile Kunst für sich betrachtet und in Beziehung zur
+                        Baukunst</emph>, Frankfurt am Main: Verlag für Kunst und Wissenschaft, 1860;
+                     Band 2: <emph>Keramik, Tektonik, Stereometrie, Metallotechnik für sich
+                        betrachtet und in Beziehung zur Baukunst</emph>, München: Friedrich
+                     Bruckmann’s Verlag, 1863. Die zweite Auflage erschien <ref type="crossref" target="#semper18781879">1878/79</ref> und wurde ebenfalls von Friedrich
+                     Bruckmann’s Verlag in München herausgegeben.</note> Ein geplanter dritter Band
+                  sollte sich explizit der Architektur widmen, wurde jedoch nie fertiggestellt.<note xml:id="ftn3"> Vgl. zur komplexen Editionsgeschichte des <emph>Stils</emph>
+                     <ref type="crossref" target="#luttmann2008">Luttmann 2008</ref>, <ref type="crossref" target="#mallgrave2001">Mallgrave 2001</ref>, S. 285–295,
+                     318–325 sowie <ref type="crossref" target="#herrmann1978">Herrmann 1978</ref>,
+                     S. 95–124 („Zur Entstehung des ‚Stil‘ 1840–1877“).</note>
+               </p>
+               <p xml:id="p3">Sempers Opus Magnum entstand in einer Phase des Umbruchs, sowohl die
+                  allgemeine Stilentwicklung betreffend als auch Sempers eigenes Leben. Nach
+                  Studienreisen durch Europas Süden hatte er sich in Dresden erfolgreich etabliert –
+                  als Architekt (u. a. Hoftheater 1838–41, Gemäldegalerie 1847–54) und Professor für
+                  Baukunst an der Akademie der Bildenden Künste. Als Folge seiner Teilnahme an der
+                  1849er-Revolution war Semper 1850 zum Exil gezwungen und verbrachte mehrere Jahre
+                  in London, wo er die Auswirkungen der Industrialisierung auf Alltags- und
+                  Produktionsbedingungen beobachtete. Die erste Weltausstellung 1851 in London, die
+                  er als Organisator einiger Länderpavillons aktiv begleitete, löste maßgebliche
+                  Schritte der Kunstgewerbereform aus. Semper war einer deren Vorreiter und setzte
+                  sich – eben auch im <emph>Stil</emph> – intensiv mit der Geschichte des
+                  Kunsthandwerks auseinander (vgl. <ref type="crossref" target="#karge2014">Karge
+                     2014</ref>, 8). Nicht zuletzt waren seine kunsttheoretischen Überlegungen
+                  entscheidend geprägt von seiner praktischen Arbeit als Architekt und Lehrer, u. a.
+                  aus seiner Lehrtätigkeit am Londoner Department of Practical Art.<note xml:id="ftn4"> Das „Department of Practical Art“, ab 1853 „Science and Art
+                     Department” und angegliedert an das 1852 in London eröffnete South Kensington
+                     Museum (heute V&amp;A), war die zentrale Bildungsstätte für kunstgewerbliche
+                     Ausbildung in Großbritannien und ein wichtiger Impulsgeber für die folgenden
+                     Veränderungen kunstgewerblicher Ausbildung auf internationaler Ebene.</note>
+               </p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Material und Vorarbeiten</head>
+               <p xml:id="p4">Tatsächlich liegt Sempers Werk <emph>Der Stil in den technischen und
+                     tektonischen Künsten, oder Praktische Aesthetik</emph> bislang nicht als
+                  kommentierte Edition vor, seit den 1970er Jahren wurde der Text jedoch mehrfach
+                  nachgedruckt, teilweise mit wissenschaftlich einordnenden Vorworten.<note xml:id="ftn5"> Vgl. Semper, Gottfried. 1977. <emph>Der Stil in den technischen
+                        und tektonischen Künsten oder praktische Ästhetik</emph>. Nachdruck der
+                     Ausgabe Frankfurt a.M. 1860/1863. Mittenwald: Mäander-Kunstverlag; Karge,
+                     Henrik (Editor). 2008. <emph>Gesammelte Schriften.</emph> Band 2 + 3. Nachdruck
+                     der Ausgabe Frankfurt a.M. 1860/1863. Hildesheim, Zürich, New York:
+                     Olms-Weidman. Parallel werden Nachdrucke als Print on Demand /
+                     kostenpflichtiges E-Book angeboten, z. Bsp. Gottfried Semper. 2017. <emph>Der
+                        Stil in den technischen und tektonischen Künsten. Praktische Ästhetik – ein
+                        Handbuch für Techniker, Künstler und Kunstfreunde</emph>, Nachdruck der
+                     Ausgabe von 1860, Norderstedt: Hansebooks GmbH.</note> Inzwischen existieren
+                  auch mehrere Open Access-Digitalisate, u. a. bereitgestellt von den
+                  Universitätsbibliotheken der ETH Zürich und der Universität Heidelberg.<note xml:id="ftn6"> ETH-Bibliothek Zürich: 1. Auflage: <ref target="https://doi.org/10.3931/e-rara-14129">https://doi.org/10.3931/e-rara-14129</ref>, 2. Auflage: <ref target="https://doi.org/10.3931/e-rara-14130">https://doi.org/10.3931/e-rara-14130</ref>; Universitätsbibliothek
+                     Heidelberg: 1. Auflage: <ref target="https://doi.org/10.11588/diglit.2102">https://doi.org/10.11588/diglit.2102</ref>, 2. Auflage: <ref target="https://doi.org/10.11588/diglit.66813">https://doi.org/10.11588/diglit.66813</ref>. </note> Dies dürfte die
+                  Zugänglichkeit des Werkes in den letzten Jahrzehnten wesentlich verbessert haben. </p>
+               <p xml:id="p5">Das Projekt „Semper-Edition“ beabsichtigt nun, „erstmals […] eine[…]
+                  kritische[…], digitale[…] Edition“<note xml:id="ftn7">
+                     <ref target="https://web.archive.org/web/20230724080451/https://www.semper-edition.ch/info">https://web.archive.org/web/20230724080451/https://www.semper-edition.ch/info</ref>.
+                  </note> des gesamten Textkonvoluts vorzunehmen. Zu den zwei Auflagen der
+                  publizierten Bände wird umfassend Material erschlossen: zur Verfügung stehende
+                  Vorstufen (Sempers Manuskripte, Reinschriften, Druckfahnen) und die Printausgaben,
+                  darunter drei verschiedene Druckvarianten der Erstauflage von Band 1. Die
+                  Editor:innen erweitern das Material zudem um Manuskripte Sempers, die eng mit der
+                  Genese des Werks verschränkt sind und zugleich eine Annäherung an den nie
+                  fertiggestellten 3. Band erlauben: Neben Vorarbeiten zu diesem das vor allem
+                  erst jüngst wieder aufgefundene druckfertige Manuskript zur
+                     <emph>Kunstformenlehre</emph> (1856) <note xml:id="ftn8"> Wiederentdeckt von
+                     Susanne Luttmann im Rahmen ihrer Dissertations-Recherchen, vgl. <ref type="crossref" target="#luttmann2008">Luttmann 2008</ref>, 153 f.</note>
+                  und die Manuskripte zur <emph>Vergleichenden Baulehre</emph> (1849–1877). Ergänzt
+                  werden Sempers eigene Texte durch studentische Mitschriften zu seinen Vorlesungen
+                  an der Eidgenössischen polytechnische Schule (heute ETH) Zürich aus den späten
+                  1850er bis in die 1860er Jahren. Schließlich ist geplant, auch die überlieferten
+                  Vorzeichnungen und Holzschnittprobedrucke zu den Illustrationen in den beiden
+                  Bänden bereitzustellen. Perspektivisch soll zudem von den Registereinträgen direkt
+                  auf entsprechende externe Ressourcen verlinkt werden. </p>
+               <p xml:id="p6">Zu all diesen in der Edition verwendeten Werken und Textstufen gibt
+                  die Webseite jedoch nur knappe Auskunft in der Fußzeile der Startseite, der
+                  Info-Seite bzw. den Unterseiten der einzelnen Werke, eine umfassendes Quellen-
+                  bzw. Materialverzeichnis fehlt. Auf die Editionsgeschichte des Werks und weitere
+                  Vorarbeiten wird ebenfalls nicht direkt verwiesen, erst über eine Fußnote in dem
+                  auf der Webseite verlinkten Projektbericht von 2020 erhält man etwas mehr
+                  Information (vgl. <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul
+                     2020</ref>, 150, <ref type="crossref" target="#ftn2">Anm. 2</ref>). Tatsächlich liegen einzelne Werke / Werkteile bereits
+                  als wissenschaftliche Editionen in Printfassungen vor: Allen voran die umfassende
+                  Bearbeitung der <emph>Vergleichenden Baulehre</emph> durch Susanne Luttmann von
+                  2008 sowie ein bereits 1981 von Wolfgang Herrmann veröffentlichter <emph>Entwurf
+                     für den Anfang zum III. Band des „Stil</emph>“.<note xml:id="ftn9"> Vgl. <ref type="crossref" target="#luttmann2008">Luttmann 2008</ref>, einzelne
+                     Manuskripte der „Vergleichenden Baulehre“ bereits bei <ref type="crossref" target="#herrmann1981">Herrmann 1981</ref>, S. 180–216 (Vorwort, Einleitung,
+                     10. Kapitel, Neue Einleitung); bei Herrmann auch der Entwurf zum Anfang eines
+                     3. Bandes, vgl. ebd. S. 250–260.</note> Darüber, ob diese Vorarbeiten in die
+                     <emph>Semper-Edition</emph> einfließen, geben allerdings weder Webseite noch
+                  der Projektbericht eine Auskunft.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Editorisches Konzept und Zielstellung</head>
+               <p xml:id="p7">
+                  <figure xml:id="img2">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-2.png"/>
+                     <head type="legend">Info-Seite der <emph>Semper-Edition</emph>.</head>
+                  </figure>Das editorische Konzept und die Zielstellung werden auf der Info-Seite
+                     (<ref type="crossref" target="#abb2">Abb. 2</ref>) knapp erläutert: Das Werk
+                  <emph>„Der Stil“</emph> soll – wie bereits angeführt – in einer „kritisch, digitalen Edition“
+                  zur Verfügung gestellt, Texte sollen nebeneinandergestellt und verglichen werden
+                  können. Verlinkungen mit externen Quellen sollen „Referenztexte und weitere
+                  Bezüge“ aufzeigen. Um mehr über das Konzept zu erfahren, muss man auf den
+                  verlinkten Projektbericht <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref> zurückgreifen: Demzufolge ist Zielstellung der
+                  Edition, eine größtmögliche Offenheit in der Textrekonstruktion für verschiedene
+                  Fragestellungen und Analysen herzustellen und Sempers Gedankengänge
+                  nachvollziehbar zu machen. Daher werden alle Textstufen eines Werks – Manuskript,
+                  Reinschrift, Druckfahne, Publikation – gleichwertig behandelt; es ist gerade nicht
+                  beabsichtigt, <emph>einen</emph> Leittext zu rekonstruieren: „In this process a
+                  variant is not one or more paths provided by the editors, but a collection of
+                  potentially infinite possibilities that can be created by specific filtering.”
+                     (<ref target="chestnova2020">Chestnova/Vermeul 2020</ref>, 146) Damit
+                  reagieren die Editor:innen auf aktuelle Strömungen in der Editionswissenschaften,
+                  die die Flexibilität und Instabilität von Texten in den Fokus nehmen.<note xml:id="ftn10"> Vgl. zur Forderung nach stärkerem Fokus auf Inhaltserschließung
+                     für werkübergreifende Vernetzung, <ref type="crossref" target="#dumont2019">Dumont 2019</ref>, 19.</note> Zugleich sehen die Editor:innen eine
+                  Parallele zur tatsächlichen Arbeit mit historischen Texten, „where single
+                  interventions can rarely be collated with each other into groups” (<ref type="crossref" target="#chestnova2020"> Chestnova/Vermeul 2020</ref>, 146). </p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Projektinformation</head>
+               <p xml:id="p8">Wie bereits angemerkt, erfährt man aktuell noch wenig über die der
+                  Edition zugrundeliegenden Texte und deren Auswahl. Auch die Person Gottfried
+                  Semper und seine Bedeutung für die Diskurse seiner Zeit werden nicht näher
+                  vorgestellt. Zur Projektorganisation liefert die Webseite ebenfalls nur knappe
+                  Informationen: Die <emph>Semper-Edition</emph> entsteht in Kooperation der
+                  Eidgenössischen Technischen Hochschule (ETH) Zürich und der Università della
+                  Svizzera italiana (USI) Mendrisio, finanziert wird das Projekt durch den Schweizer
+                  Nationalfonds (SNF). Die verantwortliche Projektleitung haben Philip Ursprung und Sonja
+                  Hildebrand inne, die operative Projektleitung liegt bei Michael Gnehm, die
+                  Co-Projektleitung für Digital Humanities bei Elena Chestnova, weitere
+                  Mitarbeiter:innen sind Raphael Germann, Tanja Kevic und Dieter Weidmann, als
+                  ehemalige Mitarbeiterin wird Carmen Aus der Au aufgeführt. Technische
+                  Unterstützung erhält das Projekt durch das DigiCenter der ETH Bibliothek
+                  (Digitalisierung) sowie die Scientific IT Services (SIS) der ETH (Programmierung
+                  von Backend und Frontend). Nicht vorhanden ist ein Zitiervorschlag für die Edition
+                  an sich, so ist auch nicht klar, was der „offizielle“ Titel des Projekts ist.<note xml:id="ftn11"> Die Webseite trägt den Titel: „Gottfried Semper | Der Stil |
+                     Digitale Edition“; <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref> verwenden den Kurztitel „Semper-Edition“. Der
+                     Projekttitel zur Projektbeschreibung auf der gta-Webseite lautet „Gottfried
+                     Semper: Der Stil. Digitale Edition“ (<ref target="https://web.archive.org/web/20240221095048/https:/www.gta.arch.ethz.ch/forschungsprojekte/gottfried-semper-der-stil-digitale-edition/informationen">https://web.archive.org/web/20240221095048/https://www.gta.arch.ethz.ch/forschungsprojekte/gottfried-semper-der-stil-digitale-edition/informationen</ref>);
+                     auf der Webseite des Förderers ist das Projekt benannt: „Gottfried Semper: Der
+                     Stil. Kritische und kommentierte Ausgabe“ (<ref target="https://web.archive.org/web/20240221095553/https:/data.snf.ch/grants/grant/157995">https://web.archive.org/web/20240221095553/https://data.snf.ch/grants/grant/157995</ref>;
+                        <ref target="https://web.archive.org/web/20221130144243/https:/data.snf.ch/grants/grant/198242">https://web.archive.org/web/20221130144243/https://data.snf.ch/grants/grant/198242</ref>).
+                     Der automatisch generierte Zitiervorschlag für die Einzelseiten der Edition
+                     verwendet „Semper-Edition“ als Titel.</note> Ebenso fehlt eine Angabe zum
+                  Erscheinungsverlauf, auch die Laufzeiten der Projektphasen sind nicht
+                     benannt.<note xml:id="ftn12">Laut Projektbeschreibung auf der Webseite des
+                     Förderers (<ref target="https://data.snf.ch/grants/grant/198242">https://data.snf.ch/grants/grant/198242</ref>, s. vorherige Anm.) sind die
+                     (geplanten) Laufzeiten 2017–2020, 2021–2024, 2025–2028.</note> So wird auf der
+                  Webseite auch nicht ersichtlich, dass sich die Edition noch im Aufbau
+                  befindet.</p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Erschließung</head>
+            <div xml:id="div3.1">
+               <head>Methode</head>
+               <p xml:id="p9">
+                  <figure xml:id="img3">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-3.png"/>
+                     <head type="legend">Parallelansicht (Faksimile, Transkript) – rot: Wechsel der
+                        Ansichten, blau: ‚Index-Menü‘, grün: Optionen für Faksimile.</head>
+                  </figure>Wie die Zielsetzung wird auch die Methode nur knapp auf der Info-Seite
+                  erläutert (s. <ref type="crossref" target="#abb2">Abb. 2</ref>). Die Transkription erfolgt dieser zufolge „im Wesentlichen als
+                  diplomatische Umschrift“. Konkrete Transkriptionsregeln werden nur in Teilen
+                  dargestellt, es fehlt eine
+                  feingliedrigere Auflistung, welche Auszeichnung für welche Textphänomene verwendet
+                  wird. So werden auch scheinbare Inkonsistenzen für den Benutzer nicht aufgelöst:
+                  gesperrter Text aus der Printfassung erscheint in der Lesefassung kursiv
+                  (s. Textmarkierungen <ref type="crossref" target="#abb3">Abb. 3</ref>), in
+                  der Transkription hingegen unterstrichen.<note xml:id="ftn13"> Vgl. z. B. Gottfried Semper, Der Stil, Band 1, Druckausgabe,
+                     Druckvariante 1860A, Stil, Band I, Auflage 1, Version a, Seite vi, ed.
+                     Semper-Edition, Zürich, 2020. <ref target="https://www.semper-edition.ch/selection/transcript/semper/stil_1_print/pages/Stil_Bd.1_Aufl_I_1860a_sVI.xml">https://www.semper-edition.ch/selection/transcript/semper/stil_1_print/pages/Stil_Bd.1_Aufl_I_1860a_sVI.xml</ref>,
+                     2024-02-21. Die Einzelseiten der Edition konnten bei mehreren Versuchen nicht
+                     in vollem Umfang mit der Wayback-Machine archiviert werden, daher werden hier
+                     die von der Edition vorgegebenen Zitierlinks benutzt.</note>
+               </p>
+               <p xml:id="p10">Der veröffentlichte, transkribierte Text ist zumeist sauber,
+                  allerdings enthält die Lesefassung teilweise noch Worttrennungen, Korrekturzeichen
+                  u. a. (<ref type="crossref" target="#abb3">Abb. 3</ref>). Auch fielen im Zuge der
+                  Recherche zu diesem Text einige Transkriptions- und Tippfehler auf – da der Text
+                  aktuell nur mittels Volltextsuche durchsuchbar ist, wirken diese sich negativ auf
+                  die Findbarkeit aus.<note xml:id="ftn14"> So zum Beispiel fehlen hier in der
+                     Transkription in der Aufzählung Leerzeichen zwischen „DasGespinnst“,
+                     „DerKnote[sic!]“, „DerStich“, nach „Knote“ fehlt zudem die Klammer „(das
+                     Netzwerk)“, siehe: Gottfried Semper, Der Stil, Band 1, Reinschrift, Hauptstück
+                     4. Textile Kunst: Technisch-historisches, gta Ms 230, fols. 139v – 140r, ed.
+                     Semper-Edition, Zürich, 2020. <ref target="https://www.semper-edition.ch/selection/facsimile/semper/stil_1_rein/pages/20_Ms_230_140.xml">https://www.semper-edition.ch/selection/facsimile/semper/stil_1_rein/pages/20_Ms_230_140.xml</ref>,
+                     2024-02-21.</note> Ob es Kontrolldurchläufe zur Korrektur der Texte gibt, wird
+                  nicht beschrieben. Zur Erstellung der Lesefassung erfährt man, dass dafür alle
+                  Korrekturen und Streichungen übernommen werden.</p>
+               <p xml:id="p11">Der Webseite zufolge werden die Transkripte in TEI-XML, Version P5,
+                  umgesetzt, näher wird das verwendete TEI-Schema nicht spezifiziert.<note xml:id="ftn15"> Der Workflow zur Transkript-Erstellung ausführlicher in <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>,
+                     142–143 (es werden sowohl Optical-Character-Recognition (OCR) als auch
+                     Handwritten-Text-Recognition (HTR) sowie die Tools Transkribus (<ref target="https://web.archive.org/web/20240419144040/https://www.transkribus.org/">https://web.archive.org/web/20240419144040/https://www.transkribus.org/</ref>)
+                     und Oxygen XML editor (<ref target="https://web.archive.org/web/20240419143916/https://www.oxygenxml.com/">https://web.archive.org/web/20240419143916/https://www.oxygenxml.com/</ref>)
+                     eingesetzt). </note> Anschließend werden die XML-Daten in einen Labeled
+                  Property Graph<note xml:id="ftn16">Labeled Property Graph (LPG) gehört (wie auch
+                     Resource Description Framework [RDF]) zu den Graphdatenbanken. Diese
+                     fokussieren auf die Bezüge zwischen den Daten: Entitäten werden als Knoten
+                     dargestellt, die Bezüge zwischen diesen als Kanten. Sie sind damit flexibler
+                     als relationale Datenbanken, die die Daten zuerst in Tabellen erfassen und
+                     diese dann miteinander verlinken. In einem LPG können zudem – anders als in RDF
+                     - sowohl Knoten als auch Kanten mit spezifischen Eigenschaften ausgezeichnet
+                     werden, so dass sehr differenzierte Modellierungen von Bezügen zwischen den
+                     Daten und komplexe Suchabfragen in der Datenbank möglich sind.</note>
+                  überführt, hierfür kommt die Software Neo4j<note xml:id="ftn17">
+                     <ref target="https://web.archive.org/web/20240419144055/https://neo4j.com/">https://web.archive.org/web/20240419144055/https://neo4j.com/</ref>.
+                  </note> zum Einsatz. Mit dem Einsatz von Graphtechnik weichen die Editoren von der
+                  etablierten Praxis des TEI-XML-Standards für Digitale Editionen ab. Sie begründen
+                  das auf der Info-Seite mit der Komplexität der Referenzen und Verlinkungen in der
+                  Edition, diese „erfordern einen neusten Ansatz der digitalen
+                  Open-Access-Präsentation. So wird etwa eine Kommentarebene eingeführt, welche die
+                  <emph>Semper-Edition</emph> mit externen Materialien und Datenbanken verlinkt. Dadurch werden
+                  Referenztexte und weitere Bezüge sichtbar gemacht. Derartige flexible Verlinkungen
+                  werden durch die Verwendung einer Graphdatenbank (Neo4j) wesentlich
+                     erleichtert.“<note xml:id="ftn18">Siehe <ref type="crossref" target="ftn6">Anm. 6</ref>. Mehr zum Einsatz der
+                     Graphdatenbank und zur Begründung deren Verwendung bei <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>, 142–146. Zwei Aspekte
+                     sind wohl ausschlaggebend: die Eignung eines Labelled Property Graphs für
+                     komplexe Suchanfragen, und die Tatsache, dass das TEI-XML an Grenzen kommt,
+                     wenn in den Texten sich überlappende Eigenschaften ausgezeichnet werden müssen,
+                     die nicht in die strikt-hierarchischen Struktur von TEI-XML passen.</note> Zum
+                  Vorgang der Digitalisierung und Erstellung der Faksimiles, z. B. zum verwendeten
+                  Dateiformat, liegen keine näheren Informationen vor. Die Auflösung der
+                  Digitalisate scheint recht hoch, d. h. sie erlaubt eine starke Vergrößerung auf
+                  der Webseite. Da die Digitalisate nicht heruntergeladen werden können, kann keine
+                  weitere Aussage über deren Qualität getroffen werden.</p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Register / Stellenkommentar</head>
+               <p xml:id="p12">Zur konkreten Ausgestaltung dieser oben benannten „Kommentarebene“
+                  und den enthaltenen Kategorien erfährt man leider noch nichts auf der Webseite,
+                  auch gibt es kein für sich ausgewiesenes Register.<note xml:id="ftn19">Chestnova/Vermeul zufolge werden im Register erfasst: Personen, Orte,
+                     Literaturverweise, Organisationen, Völker, Werke / Artefakte und Konzepte<hi rend="annotation_reference">, v</hi>gl. <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>, 143. </note> Für jede
+                  Einzelseite kann aber bereits ein Index-Menü aufgerufen werden (s. u.,
+                  „Seitenaufbau“), das einen Abschnitt „Stellenkommentar“ enthält. Dessen Einträge
+                  sind aktuell nicht zu externen Normvokabularien verlinkt, so ist auf der Webseite
+                  für den Nutzer nicht ersichtlich, ob und welche Normdaten verwendet werden.<note xml:id="ftn20"> Tatsächlich erarbeitet das Projekt ein eigenes Vokabular, den
+                     „Digital Semper Thesaurus“. Dieser entsteht auf Basis des SKOS-Schemas mit dem
+                     Open Source-Tool iQvoc (<ref target="https://web.archive.org/web/20240419144557/https://iqvoc.net/">https://web.archive.org/web/20240419144557/https://iqvoc.net/</ref>), für
+                     eine bestmögliche Interoperabilität mit anderen Ressourcen werden als Normdaten
+                     GND und Getty AAT eingebunden (<ref target="Chestnova2021">Chestnova 2021</ref>, ab
+                     min. 46).</note> Inwieweit und in welcher Form über die bloße Identifizierung
+                  dieser Entitäten im Register eine Kommentierung und wissenschaftliche Einordnung
+                  stattfindet, wird nicht näher beschrieben. Damit fehlt ein entscheidender Teil der
+                  Edition: Die kritische Einordnung und Kontextualisierung des Werkinhalts, der in
+                  Bezug auf die inzwischen vorhandenen Open-Access-Digitalisate der Printausgabe ja
+                  auch erst den Mehrwert dieser Edition bringt. Es mag sein, dass der Arbeitsplan
+                  der Edition andere Arbeitsschritte vorangestellt hat. Doch bereits 1977 stellte
+                  der Kunsthistoriker Adrian von Buttlar in Bezug auf den <emph>Stil</emph> mit
+                  seinen zahlreichen Referenzen fest, dass „dessen historische Zuordnung und Bewertung
+                  bisweilen überwunden oder widerlegt ist“ (<ref type="crossref" target="#buttlar1977">Buttlar 1977</ref>, 2). Sempers Werk ist tief in die
+                  zeitgenössischen – zum Teil mit heutigem Wissen klar problematischen – Diskurse
+                  des 19. Jahrhunderts eingebunden,<note xml:id="ftn21">Eine Herausforderung ist
+                     zum Beispiel der Umgang mit rassistischen Begriffen in der Bezeichnung von
+                     Personen, z. B. „der N*** Wusswass“ (Gottfried Semper, Der Stil, Band 1,
+                     Entwurf, Hauptstück 4. Textile Kunst: Technisch-historisches, gta Ms 218, fols.
+                     82v – 83r, ed. Semper-Edition, Zürich, 2020. <ref target="https://www.semper-edition.ch/selection/facsimile/semper/stil_1_entwurf/pages/20_Ms_218_88.xml">https://www.semper-edition.ch/selection/facsimile/semper/stil_1_entwurf/pages/20_Ms_218_88.xml</ref>,
+                     2024-03-28.) (An dieser Stelle sei auf eine unglücklicherweise unsaubere
+                     Erschließung hingewiesen: Der Text bezieht sich auf die Person mit Namen
+                     Wusswass, im Register verknüpft ist hingegen der nach dieser Person benannte
+                     Ort.) Wenn Semper wiederum in Bezug auf die chinesische Sprache schreibt, es
+                     zeige sich „mehr bonzenhafte Versimpelung als kindliche Ursprünglichkeit in
+                     dieser Einfalt“ (Gottfried Semper, Der Stil, Band 1, Druckausgabe,
+                     Druckvariante 1860A, Stil, Band I, Auflage 1, Version a, Seite 3, ed.
+                     Semper-Edition, Zürich, 2020. <ref target="https://www.semper-edition.ch/selection/facsimile/semper/stil_1_print/pages/Stil_Bd.1_Aufl_I_1860a_s3.xml">https://www.semper-edition.ch/selection/facsimile/semper/stil_1_print/pages/Stil_Bd.1_Aufl_I_1860a_s3.xml</ref>,
+                     2024-02-21), ist historisches Kontextwissen nötig, um einordnen zu können, dass
+                     es sich schon damals bei „bonzenhaft“ um einen geringschätzenden Ausdruck
+                     handelte. („Bonze“, in: Wolfgang Pfeifer et al., Etymologisches Wörterbuch des
+                     Deutschen (1993), digitalisierte und von Wolfgang Pfeifer überarbeitete Version
+                     im Digitalen Wörterbuch der deutschen Sprache, <ref target="http://web.archive.org/web/20240326142825/https://www.dwds.de/wb/etymwb/Bonze">http://web.archive.org/web/20240326142825/https://www.dwds.de/wb/etymwb/Bonze</ref>.).
+                  </note> es wäre daher gut gerade für Nutzer ohne entsprechendes Fachwissen zum
+                  Thema zumindest eine entsprechende Einführung in den Kontext und die geplante
+                  kritische Kommentierung auf der Webseite zu platzieren.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Präsentation und Funktionalität</head>
+            <div xml:id="div4.1">
+               <head>Was wird bereitgestellt</head>
+               <p xml:id="p13">Bereits als Transkription zu Verfügung steht ein größerer Teil der zu
+                  Band 1 gehörenden Textstufen: 1. Auflage der Printausgabe 1860 (Variante a), 2.
+                  Auflage 1878, Entwurf, Reinschrift, Druckfahnen. Mit Inhaltsverzeichnis angelegt,
+                  aber noch nicht hochgeladen sind die Textstufen der Printausgaben 1860b und 1860c.
+                  Noch gar nicht sichtbar sind Inhaltsverzeichnis und die Textstufen zum zweiten
+                  Band des <emph>Stil</emph> sowie den Vorarbeiten zum geplanten 3. Band. Für die
+                     <emph>Kunstformenlehre</emph>, <emph>Vergleichende Baulehre</emph> und die
+                  Vorlesungsmitschriften sind Startseiten mit Grundinformationen angelegt. Die
+                  edierten Texte werden jeweils als Faksimile, Transkripte und Lesefassung
+                  bereitgestellt. Bislang sind nur verkürzte bibliografische bzw. archivalische
+                  Angaben zu den einzelnen Printausgaben bzw. Manuskripten angegeben, hier wären wie
+                  bereits angemerkt vollständige Angaben nötig. Eine Erläuterung, woran die
+                  Unterscheidung der drei Varianten der ersten Auflage von 1860 festgemacht wird,
+                  fehlt ebenfalls. Alternative Ausgabeformen, wie PDF-Ausdruck oder E-Book, scheinen
+                  nicht geplant, wie überhaupt eine Druckfunktion für die Webseite der Edition
+                  aktuell nicht vorhanden ist. Eine Download-Funktion für die XML-Daten ist zum
+                  Zeitpunkt des Reviews ebenfalls nicht vorhanden.<note xml:id="ftn22"> Tatsächlich
+                     soll ein TEI-XML-Download Stand 2023 zukünftig möglich sein, siehe (<ref target="http://web.archive.org/web/20240328155606/https://www.zde.uzh.ch/de/projects/semper.html">http://web.archive.org/web/20240328155606/https://www.zde.uzh.ch/de/projects/semper.html</ref>).
+                  </note> Grundsätzlich fehlen – bis auf die knappen Mouseover der Icons –
+                  Hilfetexte zur Orientierung innerhalb der editierten Texte sowie zur
+                  Funktionalität der Seite und der Suche. Die Info-Seite bietet wie beschrieben nur
+                  Grunddaten zur Edition (verwendetes Material, Editionsprinzipien, Umsetzung),
+                  allgemeinen Kontaktdaten, Informationen zu den beteiligten Institutionen und
+                  Personen sowie eine Angabe zur Nutzungslizenz für die Transkripte. Der verlinkte
+                  Projektbericht (<ref type="crossref" target="Chestnova2020">Chestnova/Vermeul 2020</ref>) ist nur bedingt
+                  hilfreich für die Benutzerführung, gibt zudem einen inzwischen älteren Stand
+                  wieder.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Seitenaufbau</head>
+               <p xml:id="p14">Die Präsentationsoberfläche der Edition ist minimalistisch gehalten,
+                  nur wenige Optionen stehen eingangs zur Verfügung. Visuell sind eigentliche
+                  Edition und Begleitinformationen sehr gut voneinander getrennt: Die Startseite
+                  (siehe <ref type="crossref" target="#abb1">Abb. 1</ref>) beginnt mit der Kopfzeile
+                  mit Editionstitel „Gottfried Semper | Der Stil | Digitale Edition“ und den
+                  Menüpunkten „Selektion“ für direkten Einstieg in die Edition, „Info“ für die
+                  bereits benannte Info-Seite, „E“ für Umstellung auf englischsprachige Menüführung
+                  sowie dem auf die Suchfunktion verweisenden Lupensymbol. Für diesen Abschnitt wird
+                  eine serifenlose Schrift verwendet. Der „Editionstitel“ dient zugleich als ‚Home
+                  Button‘ und führt immer wieder zurück zur Startseite. Unterhalb der Kopfzeile sind
+                  die Zugänge zu den vier großen Hauptabschnitten (= Werken) der Edition platziert,
+                  diese heben sich durch eine deutlich größere Schrift in Serifen von der Kopfzeile
+                  ab: „Der Stil“, „Kunstformenlehre“, „Vergleichende Baulehre“ und „Vorlesungen“.
+                  Ein Klick auf diese öffnet den Hauptabschnitt und führt direkt in das jeweilige
+                  Werk hinein. Dessen Unterstartseiten enthalten – wie erwähnt – einen kurzen
+                  Einführungstext in das betreffende Werk sowie ein Inhaltsverzeichnis mittels
+                  dessen die einzelnen Kapitel aufgerufen werden können. Eine Fußzeile, in gleicher
+                  serifenloser Schrift wie die Kopfzeile, schließt die Startseite unten ab. Sie
+                  enthält links den ersten Abschnitt der kurzen Projektvorstellung von der
+                  Info-Seite, die Verlinkung zu „Weiteren Informationen“ führt dann zu eben dieser.
+                  Rechts findet sich eine E-Mail-Kontaktadresse, sowie die Logos der beteiligten
+                  Institutionen und des Fördermittelgebers, jeweils mit einer Verlinkung zu deren
+                  Webseiten. </p>
+               <p xml:id="p15">Die eigentliche Edition öffnet sich mit zwei parallelen Textfenstern
+                  unterhalb der Kopfzeile (<ref type="crossref" target="#abb3">Abb. 3</ref>).
+                  Innerhalb dieser gibt es nochmals kleine Kopfzeilen, die eine verkürzte
+                  Quellenangabe zur genaueren Orientierung bieten und über die Schaltflächen „Werk“
+                  und „Inhaltsverzeichnis“ den Wechsel zu einer anderen Textseite ermöglichen.
+                  Unterhalb der Textfenster kann man zwischen drei Textdarstellungen wählen:
+                  Faksimile, Transkript und Lesefassung. Für alle drei kann ein Index-Menü
+                  aufgerufen werden, Pfeile rechts und links des Textes ermöglichen direktes Vor-
+                  und Zurückblättern der angezeigten Seite. Bei den Faksimiles erscheinen zudem
+                  Icons für Vergrößern, Verkleinern und Seite drehen. Mit dem Icon
+                  „durchgestrichenes Auge“ kann man die „Highlight“-Funktion (s. u.) abstellen, das
+                  Icon mit zwei diagonalen Pfeilen repräsentiert die Funktion „Vollbildschirm“.
+                  Letztere ist allerdings zum Zeitpunkt des Reviews nicht aktivierbar, was sich
+                  negativ auf die Nutzung der Faksimile auswirkt: Da die Editionskopfzeile stets
+                  einen Teil des Bildschirms beansprucht, muss man gerade bei kleinen Geräten
+                  häufiger Zoom- und Scrollfunktion nutzen, um Texte im Detail zu studieren.</p>
+               <p xml:id="p16">
+                  <figure xml:id="img4">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-4.png"/>
+                     <head type="legend">Anzeige des Schlagworts im Text mittels Highlight.</head>
+                  </figure>Das Index-Menü enthält die Kategorien „Dokumentinformation“,
+                  „Stellenkommentar“, „Zitieren“ und „Metadaten“ (<ref type="crossref" target="#abb4">Abb. 4</ref>). Was sich hinter den 4´vier Kategorien verbirgt, wird
+                  bislang nicht näher erklärt und kann aktuell nur dort erschlossen werden, wo
+                  bereits Inhalte vorhanden sind: Der „Stellenkommentar“ wurde hier bereits
+                  beschrieben (s. o.). Unter „Zitieren“ findet man den jeweils passenden
+                  Zitiervorschlag für die aufgerufene Seite. Dieser besteht aus Kurztitel des Werks
+                  und der Textstufe, ggf. Archiv-Signatur, Seitenangabe, URL zur exakten Seite und
+                  dem aktuellen Datum. Dass hier nur ein Kurztitel erscheint, ist zwar aufgrund z.
+                  B. der langen Titelei der beiden Bände des <emph>Stil</emph> verständlich,
+                  allerdings verstärkt dies noch mal die Notwendigkeit an anderer Stelle
+                  vollständige bibliographische bzw. archivalische Angaben zur Verfügung zu stellen.
+                  Die Index-Bereiche „Dokumentinformation“ und „Metadaten“ scheinen noch leer, so
+                  dass nicht ersichtlich ist, welche Informationen hier später gegeben werden.
+                  Funktional grundsätzlich etwas unpraktisch ist es, dass das Index-Menü jeweils in
+                  das andere Textfenster hinein aufklappt und hier den Text verdeckt. Zumindest zu
+                  Beginn der Benutzung ist unklar, für welche der beiden Seiten die Information
+                  gilt. </p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Orientierung</head>
+               <p xml:id="p17">
+                  <figure xml:id="img5">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-5.png"/>
+                     <head type="legend">Einstieg in die Edition über ‚Selektion‘.</head>
+                  </figure>Der Einstieg in die Edition erfolgt entweder über die Auswahl eines Werks
+                  auf der Startseite oder „Selektion“ (<ref type="crossref" target="#abb5">Abb.
+                     5</ref>). In beiden Fällen stehen einem im nächsten Schritt die Zugänge „Werk“
+                  oder „Inhaltsverzeichnis“ zur Verfügung.</p>
+               <p xml:id="p18">
+                  <figure xml:id="img6">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-6.png"/>
+                     <head type="legend">Einstieg in die Edition über ‚Werk‘.</head>
+                  </figure>
+                  <figure xml:id="img7">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-7.png"/>
+                     <head type="legend">Einstieg in die Edition über ‚Inhalt‘.</head>
+                  </figure>Unter „Werk“ (<ref type="crossref" target="#abb6">Abb. 6</ref>) findet
+                  man die Gliederung der Texte entsprechend deren Kapitelüberschriften. In diesem
+                  Bereich kann auch zu weiteren Textstufen des gerade aufgerufenen Werks oder aber
+                  auch zu einem der anderen Werke gewechselt werden. Dabei befinden sich die bereits
+                  online gestellten Textteile hinter den ausgegrauten Überschriften, während die
+                  weiß deutlich stärker hervortretenden Überschriften noch keine hinterlegten Texte
+                  haben. Dies ist anfangs verwirrend, da man Text gerade hinter den visuell
+                  hervortretenden Überschriften vermutet. Der Einstieg über „Inhaltsverzeichnis“
+                     (<ref type="crossref" target="#abb7">Abb. 7</ref>) ermöglicht das direkte
+                  Scrollen innerhalb des gerade geöffneten Textes durch die Faksimiles zu einer
+                  bestimmten Seite. Da diese unterschiedlichen Zugänge auf der Webseite nicht näher
+                  erläutert werden, erschließen sie sich leider erst nach einiger Zeit der Benutzung
+                  der Edition. Das direkte Ansteuern einer bestimmten Seitenzahl ist derzeit nicht
+                  möglich. Um auf bereits einmal gefundene Inhalte zurückgreifen zu können, müsste
+                  man blättern oder jeweils den Zitierlink speichern.</p>
+               <p xml:id="p19">
+                  <figure xml:id="img8">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-8.png"/>
+                     <head type="legend">Vergleichsansicht zweier Textstufen zu den Prolegomena des
+                        1. Bands des Stil als Faksimile: links die Reinschrift, rechts Sempers
+                        Entwurf.</head>
+                  </figure>Standardmäßig öffnet sich die ausgewählte Textseite in Parallelansicht,
+                  d. h. zwei Textfenster mit verschiedenen Darstellungen: links Faksimile, rechts
+                  Transkription (<ref type="crossref" target="#abb4">Abb. 3</ref>). Mittels des
+                  Doppelpfeils im kleinen Menü rechts oben über den kleinen Kopfzeilen der edierten
+                  Texte können die Plätze der beiden Fenster getauscht werden. Es steht zudem eine
+                  Einzelansicht zur Verfügung. Vielversprechend erscheint die Möglichkeit, in einer
+                  Vergleichsansicht Seiten aus zwei verschiedenen Textstufen, auch aus verschiedenen
+                  Werken nebeneinander zu legen (<ref type="crossref" target="#abb8">Abb. 8</ref>).
+                  Leider erschließt sich diese gerade für den direkten Vergleich verschiedener
+                  Textstufen und Werke wichtige Funktion nicht ohne Weiteres beim ersten Benutzen
+                  der <emph>Semper-Edition</emph>.<note xml:id="ftn23"> Erläutert ist sie im
+                     Projektbericht von <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>, 147–148.</note> In der Orientierung zwischen
+                  den verschiedenen Ansichtsmodi sind die Mouse-Over zu den Icons hier leider auch
+                  nicht hilfreich: da in diesem Bereich der Webseiten-Oberfläche anscheinend nur
+                  Platz für drei Icons ist, teilen sich die Icons für Parallel- und
+                  Vergleichsansicht den mittleren Platz. Der Nutzer hat zu Beginn also keine
+                  Möglichkeit, diese zwei Funktionen zu erkennen. Da noch ein Großteil der Werke
+                  fehlt und es aktuell nicht möglich ist, einzelne Seiten innerhalb der Texte
+                  gezielt aufzurufen, kann die Vergleichsfunktion auch noch nicht ihr volles
+                  Potential zeigen.</p>
+               <p xml:id="p20">Zur besseren Orientierung innerhalb einer Textseite sind in der
+                  Parallelansicht Transkription / Lesefassung und Faksimile absatzweise mittels
+                  Highlight verbunden (<ref type="crossref" target="#abb3">Abb. 3</ref>), jedoch
+                  nicht Transkription und Lesefassung untereinander. Ebenfalls durch Highlight
+                  verlinkt sind die Schlagworte aus dem Register mit den entsprechenden Textstellen
+                  in Transkript bzw. Lesefassung (<ref type="crossref" target="#abb4">Abb.
+                  4</ref>).</p>
+            </div>
+            <div xml:id="div4.4">
+               <head>Suche</head>
+               <p xml:id="p21">
+                  <figure xml:id="img9">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_17/semper-edition/pictures/picture-9.png"/>
+                     <head type="legend">Anzeige des Suchergebnis.</head>
+                  </figure>Es steht bislang nur eine Volltextsuche über alle bereits publizierten
+                  Texte hinweg zur Verfügung, diese kann über das Lupensymbol oben rechts in der
+                  Editionskopfzeile aufgerufen werden. Allerdings wird deren Funktionalität auf der
+                  Webseite nicht näher erläutert, dass eine kombinierte Suche mit Booleschen
+                  Modifikatoren möglich ist, erfährt man erst aus dem Projektbericht.<note xml:id="ftn24"> Hier erfährt man auch, dass angedacht ist, die Funktionalität
+                     der Suche noch wesentlich auszubauen und zum Beispiel alle Erwähnungen
+                     archäologischer Artefakte im Umkreis eines Suchbegriffs zu markieren oder
+                     andere Konzeptbegriffe hervorzuheben (vgl. <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>, 148). Im Zuge des
+                     Reviews führten Suchen mit Boolschen Modifiern bzw. wildcard-Funktionen (*)
+                     leider stets zu einer Fehlfunktion der Suche. </note> Suchergebnisse können
+                  aktuell nicht gespeichert werden, so dass man sich kompliziertere Abfragevorlagen
+                  parallel ablegen müsste. Das Suchergebnis wird als Übersicht von je fünf
+                  Textausschnitten angezeigt (<ref type="crossref" target="#abb9">Abb. 9</ref>),
+                  navigiert werden kann durch die Ergebnisse jeweils eine Suchergebnisseite vor oder
+                  zurück. Die Darstellung der Suchergebnisse erscheint bei einzelnen Stichproben zum
+                  Zeitpunkt dieses Reviews noch fehlerhaft: Beim Blättern durch das Suchergebnis
+                  wirken einzelne Ergebnisseiten in der vorherigen Anzeige eingefroren
+                  (Beispiel-Suchbegriff „Geschmack“), teilweise werden mehr Treffer versprochen als
+                  angezeigt (Beispiel-Suchbegriff „Südsee“, von 15 Titeln erscheinen nur 11 in der
+                  Vorschau). Bei Auswahl eines Treffers öffnet sich die entsprechende Seite in der
+                  Parallelansicht mit Faksimile und Transkript. Mit der ‚Zurückfunktion‘ im Browser
+                  kommt man wieder zum Suchergebnis. Ein direktes Aufrufen einer bestimmten Seite
+                  ist wie bereits erwähnt nicht möglich, ebenso wenig kann die Suche auf bestimmte
+                  Texte / Textabschnitte eingeschränkt werden. Die Registereinträge erfüllen noch
+                  keine spezielle Suchfunktion, es kann z. B. nicht mittel Überbegriffen/Kategorien
+                  gesucht werden (wie etwa ‚Pelz‘ für alle Pelzarten).</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>FAIR</head>
+            <p xml:id="p22">Findbarkeit (Findable): Gegenwärtig ist für die Edition als Ganzes kein
+               Einsatz eines Persistent Identifiers ersichtlich, auch gibt es keine Anzeige einer
+               Versionierung. Bei den Einzelseiten wird ein Zitiervorschlag mit einer automatisch
+               generierten tagesaktuellen Datumsangabe generiert. Da aber die Versionierung in Form
+               der Datumsangabe nicht Bestandteil des Links ist, scheint kein persistentes
+               Wiederaufrufen spezifischer Versionen möglich. Inwieweit die Edition selbst später
+               mit umfangreichen Metadaten beschrieben wird, lässt sich aktuell noch nicht sagen.
+               Zur Verzeichnung der Edition in Nachweissystemen kann festgehalten werden, dass sie
+               sowohl in den Katalogen von Greta Franzini<note xml:id="ftn25">
+                  <ref target="http://hdl.handle.net/21.11115/0000-000F-EF07-D">Catalogue of Digital Editions: Gottfried Semper. Critical and Commented Edition, DOI: http://hdl.handle.net/21.11115/0000-000F-EF07-D</ref>.</note> und Patrick
+                  Sahle<note xml:id="ftn26">
+                  <ref target="https://digitale-edition.de/e765">https://digitale-edition.de/e765</ref>.</note> erfasst als auch sehr gut mit
+               gängigen Suchmaschinen zu finden ist. Eine Aufnahme in Bibliothekskatalogen fehlt
+               bisher, selbst die Bibliotheken der herausgebenden Institutionen haben die Edition
+               nicht verzeichnet. Sehr gut findbar ist der Projektbericht von <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>, dieser enthält allerdings
+               keinen direkten Link zur Online-Ressource. Das Projekt scheint nicht die sozialen
+               Medien zu nutzen.</p>
+            <p xml:id="p23">Zugänglichkeit (Accessible): Die Präsentationsschicht ist mit den oben
+               beschriebenen Inhalten für jeden frei aufrufbar, die Daten selbst (eingeschlossen
+               Faksimiles) sind hingegen nicht offen verfügbar, Nutzer erhalten keine Information
+               über mögliche alternative Zugangswege.<note xml:id="ftn27">Es ist Stand 2023 wohl
+                  bereits jetzt auf Anfrage die Bereitstellung von Graphdaten möglich, ein
+                  TEI-XML-Download ist für eine nächste Version der Edition geplant vgl. <ref target="https://www.zde.uzh.ch/de/projects/semper.html">https://www.zde.uzh.ch/de/projects/semper.html</ref> (s. hier <ref type="crossref" target="#ftn21">Anm. 21</ref>).</note>
+               Selbst eine einfache Druckfunktion für Einzelseiten fehlt. Eine eingeschränkte
+               Zugänglichkeit steht zwar nicht im Widerspruch mit dem Accessible-Prinzip, welches
+               nur vorsieht, dass in einem solchen Fall ein Weg zur Kontaktaufnahme zum Erhalt der
+               Daten offen kommuniziert wird. Eine entsprechende „info“-E-Mail-Adresse sowie Namen
+               von Ansprechpartnern sind auf der Webseite auch vorhanden. Zugangsbeschränkungen
+               sollen aber gut begründet werden, z. B. durch rechtliche Anforderungen. Die
+               Entscheidung, die Datennachnutzung eher restriktiv zu behandeln, mag auch ihre
+               Ursache in der ursprünglich hybrid geplanten Publikationsform haben,<note xml:id="ftn28"> “[…] the decision to develop the Style Edition on a fully digital
+                  basis and to set aside the initial idea of a hybrid publication as had been
+                  proposed to the SNSF in the original funding proposal for the first phase.” (<ref target="https://data.snf.ch/grants/grant/198242">https://data.snf.ch/grants/grant/198242</ref>, siehe <ref type="crossref" target="#ftn10">Anm. 10</ref>).</note>
+               inzwischen entsteht die <emph>Semper-Edition</emph> jedoch rein digital, so dass
+               entweder die fortgesetzte Nutzungseinschränkung erklärt werden oder mit Hinweis auf
+               den Arbeitsstand des Editionsprojekt eine Aussicht auf kommende
+               Datenzugangsmöglichkeiten erfolgen sollte.</p>
+            <p xml:id="p24">Beim Aspekt der Zugänglichkeit fragen die RIDE-Review-Kriterien explizit
+               auch nach Web Accessibility und Barrierefreit. Im Rahmen dieses Review wurde die
+               Barrierearmut der Edition nicht eingehend getestet, allerdings hat sich bereits beim
+               Versuch alle Elemente der Edition mittels Tastatur anzusteuern gezeigt, dass dies
+               zwar für Kopf- und Fußzeilenelemente möglich ist, nicht jedoch für die Unterbereiche
+               der Info-Seite (Impressum u. a.). Der eigentliche Editionsbereich kann gar nicht
+               erreicht werden. Dadurch wird aktuell auch der Zugang zu den – in Sinne der
+               Barrierearmut positiv zu bewertenden Lesefassungen – erschwert. Die Menüführung kann
+               auf Englisch umgestellt werden. Das responsive Design funktioniert auf einem Tablet
+               in Querformat, bei Hochformat oder Mobiltelefon passt sich die Edition nicht an den
+               schmalen Bildschirm an.</p>
+            <p xml:id="p25">Interoperabilität (Interoperable): Zum aktuellen Zeitpunkt ist noch
+               keine Interoperabilität, d. h. Nachnutzbarkeit als Download oder für Verlinkungen, der
+               auf der Webseite angezeigten Daten gegeben. Es gibt dort auch keine Information über
+               geplante Zugangswege oder die verwendeten Normvokabulare. Mit TEI XML (Version 5)
+               verwendet die Edition das gängige für Nachnutzung geeignete Standardformat der
+               Fachcommunity. Der Einsatz der Graphtechnik bei dieser Edition ist u. a. begründet
+               mit der Komplexität der Korrekturschichten und Referenzierungen innerhalb der Texte,
+               den Editor:innen ist der neuartige, experimentelle Charakter dieses Projektteils auch
+               bewusst (Chestnova/Vermeul 2020, 148 f.). In Bezug auf Interoperabilität und
+               Standardisierbarkeit muss sich die Graphtechnik noch bewähren, es gibt aber bereits
+               verwandte Projekte, die mit der Methode „Text als Graph“ arbeiten, wie das an der
+               Akademie der Wissenschaften und der Literatur | Mainz und der Johannes a Lasco
+               Bibliothek Emden angesiedelte Projekt „Die sozinianischen Briefwechsel“.<note xml:id="ftn29"> Siehe: „Zwischen Theologie, frühmoderner Naturwissenschaft und
+                  politischer Korrespondenz: Die sozinianischen Briefwechsel“, hrsg. von Kęstutis
+                  Daugirdas und Andreas Kuczera unter DH-Mitarbeit von Julian Jarosch, Sebastian
+                  Enns und Patrick Toschka; Projektwebseite: <ref target="https://web.archive.org/web/20240221100358/https:/sozinianer.mni.thm.de/home">https://web.archive.org/web/20240221100358/https://sozinianer.mni.thm.de/home</ref>
+                  (unvollständig archiviert).</note>
+            </p>
+            <p xml:id="p26">Nachnutzbarkeit (Reusable): Eine umfängliche Dokumentation der
+               Datenerstellung und -verarbeitung wurde bislang nicht veröffentlicht. Zwar können
+               grundlegenden Ansätze und Annahmen des editorischen Konzepts sowie die (geplante)
+               Umsetzung <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul 2020</ref>
+               entnommen werden, dies ersetzt jedoch nicht vollständige Transkriptions- und
+               Editionsrichtlinien. Ebenso fehlen detaillierte bibliographische Angaben bzw.
+               Provenienzdaten zur Herkunft der einzelnen Texte / Manuskripte. Für die auf der
+               Webseite publizierten Transkripte wird die „Creative Commons
+               Attribution-NonCommercial 2.0 Generic Lizenz“ benannt (siehe <ref type="crossref" target="#img2">Abb. 2</ref>). D. h. die freie
+               Verwendung der Transkripte ist zwar erlaubt, aber nur zu nicht-kommerziellen Zwecken.
+               Hierzu ist anzumerken, dass formal die gewählte Lizenz nicht nur benannt, sondern
+               auch mit ihrem Gesetzestext verlinkt sein sollte, dies fehlt hier. Die gewählte
+               NC-Lizenz schränkt zudem eine mögliche weitreichende Verbreitung ein, wie der Jurist
+               Paul Klimpel ausführt: „Gerade Inhalte, die im Rahmen von öffentlichen
+               Bildungsinitiativen geschaffen wurden, sollten jeden Verbreitungsweg nutzen, der
+               ihnen offensteht, da die möglichst weite Verbreitung von Inhalten im Vordergrund
+               steht.“ (<ref type="crossref" target="#klimpel2012">Klimpel 2012</ref>, 20) Mit der
+               Wahl dieses Bausteins kann es passieren, dass auch Nutzer:innenkreise ausgeschlossen
+               werden, die sehr wahrscheinlich gar nicht mitgemeint sind, wie z. B.
+               nicht-öffentliche Bildungs- und Weiterbildungseinrichtungen (vgl. <ref type="crossref" target="#klimpel2012">Klimpel 2012</ref>, 17). Für die übrigen
+               Elemente der Edition, Faksimile, Lesefassung, Register, wird gar keine Lizenz für die
+               Nachnutzbarkeit benannt. Nutzer:innen bleiben somit im Unklaren darüber, was mit
+               diesen Inhalten der Edition machbar ist. </p>
+         </div>
+         <div xml:id="div6">
+            <head>Fazit</head>
+            <p xml:id="p27">Dieses Review beschreibt eine digitale Edition, die sich noch im Aufbau
+               befindet. Es soll daher nicht negativ bewertet werden, dass es in einzelnen Bereichen
+               noch zu Fehlfunktionen kommt oder dass Teile der Edition bzw. Datenzugänge noch
+               fehlen. Kritisch hervorzuheben ist jedoch, dass die Editor:innen auf der
+               Editionswebseite zu wenig Information bereitstellen: sowohl die Dokumentation zur
+               Editions (Editions-, Transkriptionsregeln, Grundlagen der Graphdatenbank) und deren
+               Arbeitsstand als auch zum Gegenstand der Edition und zur Benutzung der
+               Editionswebseite. Nutzer:innern ohne spezifische Fachkenntnisse zu Semper und dem
+               Entstehungskontexts von <emph>Der Stil in den technischen und tektonischen
+                  Künsten</emph> benötigen ausführlichere Kontextinformation, gerade auch zu den aus
+               heutiger Sicht problematischen Werkinhalten. Dazu können neben vollständigen
+               bibliographischen und archivalischen Angaben der editierten Publikationen und
+               Manuskripte auch eine Bibliografie zu relevanten bereits vorhandenen Ausgaben des
+                  <emph>Stil</emph> und der zentralen Sekundärliteratur gehören. Direkt auf der
+               Webseite sollte der Nutzer außerdem nötige Informationen für eine gute Orientierung
+               auf der Seite erhalten: Welche Ansichten (Parallel, Vergleich, Einzel) gibt es, wie
+               steuert man diese an? Wie funktioniert die Suche, was funktioniert noch nicht? Was
+               verbirgt sich hinter den Index-Kategorien „Metadaten“ und „Dokumentinformation“?
+               Warum ist (aktuell) kein direkter Datenzugang möglich, über welche Wege kann man
+               Zugang erhalten? Mögliche Irritationen der Nutzer zu Funktionseinschränkungen, die
+               durch den kontinuierlichen Weiterbau der Edition bedingt sind, könnten durch einen
+               „Work-in-Progress“-Hinweis aufgefangen werden.</p>
+            <p xml:id="p28">Zum Editionsvorhaben an sich kann festgehalten werden, dass die Auswahl
+               der Werke und Textstufen schlüssig ist und sich durch den engen inhaltlichen
+               Zusammenhang mit dem <emph>Stil</emph>, dem zentralen Text der Edition, begründet.
+               Bis auf die beiden noch zu Sempers Lebzeiten publizierten Auflagen der ersten zwei
+               Bände liegen die hier zu edierenden Manuskripte bisher noch nicht in einer
+               digitalisierten Form vor. Unter den Projektmitarbeiter:innen sind ausgewiesene
+               Semper-Expert:innen, wie Michael Gnehm, Sonja Hildebrand und Elena Chestnova, die
+               mehrfach zu Sempers Werk publiziert haben. Das Archiv der ETH Zürich, eine der
+               beteiligten Institutionen, verwaltet den Nachlass Sempers, in dem ein großer Teil der
+               für diese Edition relevanten Manuskripte aufbewahrt wird. Die Edition weist relevante
+               Aspekte einer digitalen wissenschaftlichen Edition auf: Die Umsetzung verfolgt mit
+               dem Einsatz der Graphtechnik ein klares digitales Paradigma, die Editor:innen sind
+               sich durchaus bewusst, dass es sich dabei um einen neuen, noch wenig standardisierten
+               Ansatz handelt (vgl. <ref type="crossref" target="#chestnova2020">Chestnova/Vermeul
+                  2020</ref>, 143). Wie gut die Umsetzung gelingt, wird sich erst nach
+               Fertigstellung der Edition bewerten lassen. Dabei wird vor allem die noch
+               auszubauende Kommentarebene mit kritischer Kontextualisierung und den geplanten
+               Verlinkungen in den größeren Bezugsrahmen um das Werk relevant sein. </p>
+            <p xml:id="p29">Die <emph>Semper-Edition</emph> wird zuerst Kunst- und
+               Architekturhistoriker ansprechen und einen wichtigen Beitrag zur Forschung zum 19.
+               Jahrhundert leisten können. Darüber hinaus dürfte gerade die Kommentarebene helfen,
+               dieses wertvolle Quellenmaterial auch für andere Fächer und deren Forschungen zum 19.
+               Jahrhundert aufzuschließen.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="buttlar1977">Buttlar, Adrian von. 1977. „Gottfried Semper als
+                  Theoretiker.“ In: <emph>Gottfried Semper: Der Stil in den technischen und
+                     tektonischen Künsten oder Praktische Ästhetik. Band 1: Die textile
+                  Kunst</emph>, edited by Friedrich Piel, 1–22. Mittenwald: Mäander-Kunstverlag
+                  (Kunstwissenschaftliche Studientexte 3). DOI: <ref target="https://doi.org/10.11588/artdok.00007848">10.11588/artdok.00007848</ref>. </bibl>
+               <bibl xml:id="chestnova2020">Chestnova, Elena und Swen Vermeul. 2020.
+                  “Semper-Edition.” <emph>Zeitschrift für schweizerische Archäologie und
+                     Kunstgeschichte,</emph> 77 (2-3): 139–52. DOI: <ref target="https://doi.org/10.5169/SEALS-882471">10.5169/SEALS-882471</ref>. </bibl>
+               <bibl xml:id="chestnova2021">Chestnova, Elena. 2021. “Modelling Manuscripts: the
+                  example of the Semper Edition. Digital Images, Metadata and Cultural Heritage
+                  Objects (DHCH21)” (DHCH21), Rom. DOI: <ref target="https://doi.org/10.5281/zenodo.7650435">10.5281/zenodo.7650435</ref>. </bibl>
+               <bibl xml:id="dumont2019">Dumont, Stefan. 2019. “Briefe kommentieren im Semantic
+                  Web“. <ref target="https://publications.goettingen-research-online.de/handle/2/108288">https://publications.goettingen-research-online.de/handle/2/108288</ref>. </bibl>
+               <bibl xml:id="herrmann1978">Herrmann, Wolfgang. 1978. <emph>Gottfried Semper im Exil.
+                     Paris, London 1849</emph>–<emph>1855</emph>. Basel, Stuttgart:
+                  Birkhäuser.</bibl>
+               <bibl xml:id="herrmann1981">Herrmann, Wolfgang. 1981. <emph>Gottfried Semper:
+                     Theoretischer Nachlass an der ETH Zürich. Katalog und Kommentare. </emph>Basel,
+                  Stuttgart: Birkhäuser.</bibl>
+               <bibl xml:id="karge2008">Karge, Henrik (Editor). 2008. <emph>Gesammelte Schriften.
+                     Band 2 + 3</emph>. Nachdruck der Ausgabe Frankfurt a.M. 1860/1863. Hildesheim,
+                  Zürich, New York: Olms-Weidman. </bibl>
+               <bibl xml:id="karge2014">Karge, Henrik. 2014. „Einleitung des Herausgebers.“ In:
+                     <emph>Gottfried Semper. Gesammelte Schriften</emph>, <emph>Band 1:
+                     Wissenschaftliche Abhandlungen und Streitschriften</emph>, hg. von Henrik
+                  Karge, 7–59. Hildesheim/Zürich/New York: Olms-Weidmann.</bibl>
+               <bibl xml:id="klimpel2012">Klimpel, Paul. 2012. <emph>Freies Wissen dank
+                     Creative-Commons-Lizenzen Folgen, Risiken und Nebenwirkungen der
+                     Bedingung „nicht-kommerziell – NC“</emph>, hg. von Wikimedia Deutschland,
+                  iRights.info, CC DE. Berlin. <ref target="https://web.archive.org/web/20240221101240/https://irights.info/wp-content/uploads/userfiles/CC-NC_Leitfaden_web.pdf">https://web.archive.org/web/20240221101240/https://irights.info/wp-content/uploads/userfiles/CC-NC_Leitfaden_web.pdf</ref>.</bibl>
+               <bibl xml:id="luttmann2008">Luttmann, Susanne. 2008. <emph>Gottfried Sempers
+                   „Vergleichende Baulehre“. Eine quellenkritische Rekonstruktion.</emph>
+                  Dissertation. ETH Zürich.</bibl>
+               <bibl xml:id="mallgrave2001">Mallgrave, Harry Francis. 2001. <emph>Gottfried Semper:
+                     Ein Architekt des 19. Jahrhunderts</emph>. Zürich: gta-Verl.</bibl>
+               <bibl xml:id="semper1860a">Semper, Gottfried. 1860A. <emph>Der Stil in den
+                     technischen und tektonischen Künsten, oder Praktische Aesthetik. Ein Handbuch
+                     für Techniker, Künstler und Kunstfreunde</emph>, Band 1: <emph>Die Textile
+                     Kunst für sich betrachtet und in Beziehung zur Baukunst</emph>. Frankfurt am
+                  Main: Verlag für Kunst und Wissenschaft (2. Auflage: 1878, München: Friedrich
+                  Bruckmann’s Verlag). </bibl>
+               <bibl xml:id="semper1860b">Semper, Gottfried. 1860B. <emph>Die textile Kunst für sich
+                     betrachtet und in Beziehung zur Baukunst. Bd. 1. Der Stil in den technischen
+                     und tektonischen Künsten oder praktische Ästhetik</emph>. Frankfurt a. M.:
+                  Verl. für Kunst und Wissenschaft. DOI: <ref target="https://doi.org/10.11588/diglit.67642">10.11588/diglit.67642</ref>. </bibl>
+               <bibl xml:id="semper1863a">Semper, Gottfried. 1863A. <emph>Der Stil in den
+                     technischen und tektonischen Künsten, oder Praktische Aesthetik. Ein Handbuch
+                     für Techniker, Künstler und Kunstfreunde</emph>, Band 2: <emph>Keramik,
+                     Tektonik, Stereometrie, Metallotechnik für sich betrachtet und in Beziehung zur
+                     Baukunst</emph>, München: Friedrich Bruckmann’s (2. Auflage: 1879, München:
+                  Friedrich Bruckmann’s Verlag).</bibl>
+               <bibl xml:id="semper1863b">Semper, Gottfried. 1863B. <emph>Keramik, Tektonik,
+                     Stereotomie, Metallotechnik für sich betrachtet und in Beziehung zur Baukunst.
+                     Bd. 2. Der Stil in den technischen und tektonischen Künsten oder praktische
+                     Ästhetik</emph>. München: Bruckmann. DOI: <ref target="https://doi.org/10.11588/diglit.1300">10.11588/diglit.1300</ref>. </bibl>
+               <bibl xml:id="semper18601863">Semper, Gottfried. 1860-1863. <emph>Der Stil in den
+                     technischen und tektonischen Künsten, oder Praktische Aesthetik: ein Handbuch
+                     für Techniker, Künstler und Kunstfreunde</emph>. Frankfurt a. M.: Verlag für
+                  Kunst und Wissenschaft. ETH-Bibliothek Zürich, Rar 6712. DOI: <ref target="https://doi.org/10.3931/e-rara-14129">10.3931/e-rara-14129</ref>.</bibl>
+               <bibl xml:id="semper18781879">Semper, Gottfried. 1878-1879. <emph>Der Stil in den
+                     technischen und tektonischen Künsten, oder Praktische Aesthetik: ein Handbuch
+                     für Techniker, Künstler und Kunstfreunde</emph>. München: Bruckmann.
+                  ETH-Bibliothek Zürich, A 4714. DOI: <ref target="https://doi.org/10.3931/e-rara-14130">10.3931/e-rara-14130</ref>. </bibl>
+               <bibl xml:id="semper1878">Semper, Gottfried. 1878. <emph>Die textile Kunst für sich
+                     betrachtet und in Beziehung zur Baukunst.</emph> 2. Aufl. Bd. 1. Band.
+                     <emph>Der Stil in den technischen und tektonischen Künsten oder praktische
+                     Ästhetik</emph>. München: Friedr. Bruckmann’s Verlag. DOI: <ref target="https://doi.org/10.11588/diglit.66814">10.11588/diglit.66814</ref>. </bibl>
+               <bibl xml:id="semper1879">Semper, Gottfried. 1879. <emph>Keramik, Tektonik,
+                     Stereotomie, Metallotechnik für sich betrachtet und in Beziehung zur
+                     Baukunst</emph>. 2. Aufl. Bd. 2. Band. <emph>Der Stil in den technischen und
+                     tektonischen Künsten oder praktische Ästhetik</emph>. München: Friedr.
+                  Bruckmann’s Verlag. DOI: <ref target="https://doi.org/10.11588/diglit.66815">10.11588/diglit.66815</ref>. </bibl>
+               <bibl xml:id="semper1877">Semper, Gottfried. 1977. <emph>Der Stil in den technischen
+                  und tektonischen Künsten oder praktische Ästhetik</emph>. 2 Bände, Nachdruck
+                  der Ausgabe Frankfurt a.M. 1860/1863. Mittenwald: Mäander-Kunstverlag.</bibl>
+               <bibl xml:id="semper2017">Semper, Gottfried. 2017. <emph>Der Stil in den technischen
+                     und tektonischen Künsten. Praktische Ästhetik – ein Handbuch für Techniker,
+                     Künstler und Kunstfreunde</emph>. Nachdruck der Ausgabe von 1860. Norderstedt:
+                  Hansebooks GmbH. </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

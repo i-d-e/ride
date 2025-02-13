@@ -1,0 +1,2151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.20.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Schopenhauer’s Library</title>
+            <author ref="https://orcid.org/0009-0000-6834-6583">
+               <name>
+                  <forename>Bianca</forename>
+                  <surname>La Manna</surname>
+               </name>
+               <affiliation>
+                  <orgName>Università degli Studi di Genova</orgName>
+                  <placeName>Genoa, Italy</placeName>
+               </affiliation>
+               <email>bianca.lamanna@studio.unibo.it</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2025-01">January 2025</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-20/schopenhauer</idno>
+            <idno type="DOI">10.18716/ride.a.20.1</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue20/schopenhauer/schopenhauer.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <editor ref="none" role="assistant">Thea Schaaf</editor>
+            <biblScope unit="issue" n="20"/>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-20</idno>
+            <idno type="DOI">10.18716/ride.a.20</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Schopenhauer’s Library. Annotations and marks in his Spanish books</title>
+                  <editor>José Luis Losada Palenzuela</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Losada Palenzuela, José Luis</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>Losada Palenzuela, José Luis</persName>
+                  </respStmt>
+                  <date type="publication">2017</date>
+                  <idno type="URI">https://schopenhauer.uni.wroc.pl/</idno>
+                  <date type="accessed">2024-08-18</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>annotation</term>
+               <term>marginalia</term>
+               <term>scholarly digital edition</term>
+               <term>user experience</term>
+               <term>tei/xml</term>
+               <term>drupal</term>
+               <term>transmedialization</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>
+               <emph>Schopenhauer’s Library</emph> is a project, on-hold, that aims to publish all
+               of Schopenhauer’s Spanish books that contain personal annotations or marginalia
+               written by the philosopher himself. It currently provides the digital edition of the
+               book <emph>Oráculo manual y arte de prudencia</emph> (1659). This review analyzes the
+               choices made in this digital edition, offering some comparisons with other projects
+               that aim to publish the author’s marginalia. The project will be introduced with some
+               general remarks related to the challenge of representing marginalia in the digital
+               environment. The aims and methods of this digital edition will be explained, with
+               some reflections on the editorial choices made for the representation and
+               presentation of the digital edition. The edition can be considered an interesting
+               example of an attempt to build a user-friendly scholarly digital edition centered on
+               marginalia, promoting a new approach to presenting digitized content as a facilitator
+               for accessing knowledge and performing research.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>General introduction and parameters</head>
+            <p xml:id="p1">Readers’ annotations, i.e., notes on a text or a manuscript, and
+               marginalia, i.e., notes in the margins or white spaces of a manuscript, have
+               traditionally played a minor role in textual scholarship. An exception was the
+               interest in authorial annotations that had the purpose of reconstructing the genesis
+               of a textual work, i.e., textual genetic annotations (<ref type="crossref"
+                  target="#vanhulle2016b">Van Hulle 2016b</ref>, 38). The publication of Jackson’s
+               book <emph>Marginalia: Readers Writing in Books</emph> (<ref type="crossref"
+                  target="#jackson2001">2001</ref>), which is entirely dedicated to readers’
+               annotations, changed how annotations and marginalia have been considered. Jackson
+               underlines how the practice of annotating texts increased from the 18th century until
+               today (<ref type="crossref" target="#jackson2001">2001</ref>, 51). This new custom
+               had its origin in the fact that in that period the book became a common property, in
+               pocket format. These new considerations raised interest in marginalia as valuable by
+               themselves.</p>
+            <p xml:id="p2">Moreover, the formulation of the concept of Extended Mind Theory (EMT) in
+               cognitive philosophy in recent decades has brought new theories into textual genetic
+               and exogenetic digital editing<note xml:id="ftn1">Exogenesis in an edition is an
+                  approach that puts an author’s work in perspective as part of an intertextual
+                  dimension made up of external elements, such as the author’s library, which become
+                  relevant to the reconstruction of the creation process (<ref type="crossref"
+                     target="#vanhulle2016a">Van Hulle 2016a</ref>, 114).</note>. This theory, first
+               formalized by Clark and Chalmers states that cognitive processes do not take place
+               only in the mind but can be extended to the environment (<ref type="crossref"
+                  target="#clark_chalmers1998">1998</ref>). The latest theories suggest that the
+               mind is not only extended but also extensive, i.e., the cognitive process is also
+               influenced by the surroundings.<note xml:id="ftn2">For one of the latter articles
+                  that explains this new concept of Radical Enactive Cognition see <ref
+                     type="crossref" target="#hutto_myin2013">Hutto and Myin 2013</ref>.</note> In
+               this regard, Van Hulle well explains how an external object, in this case a book or a
+               white piece of paper, can become an extension of our brain (<ref type="crossref"
+                  target="#vanhulle2016a">Van Hulle 2016a</ref>), underlining the importance of
+               annotations in the reconstruction of a creative process.</p>
+            <p xml:id="p3">With the help of digital environments, which give more freedom of
+               representation (e.g., allowing image annotations, visualization of features on place,
+               etc.), various projects published digitalized authors’ libraries to make their
+               annotations accessible. The three most well-known are <ref
+                  target="https://web.archive.org/web/20250108194313/https:/whitmanarchive.org/">The
+                  Walt Whitman Archive</ref> (<ref type="crossref" target="#cohen_folson_price2023"
+                  >Cohen et al. 2023</ref>), <ref
+                  target="https://web.archive.org/web/20250108194603/https:/melvillesmarginalia.org/"
+                  >Melville's Marginalia Online</ref> (<ref type="crossref"
+                  target="#olsen_norberg2025">Olsen-Smith and Norberg 2025</ref>), <ref
+                  target="https://web.archive.org/web/20250108195928/https:/www.beckettarchive.org/"
+                  >Beckett Digital Manuscript Project</ref> (<ref type="crossref"
+                  target="#vanhulle_neyt_dillen2021">Van Hulle et al. 2021</ref>), and <ref
+                  target="https://web.archive.org/web/20250108193820/https:/uclab.fh-potsdam.de/ff/"
+                  >Fontanes Handbibliothek</ref> (<ref type="crossref" target="#bludau2019">Bludau
+                  et al. 2019</ref>).</p>
+            <p xml:id="p4">In 2017, another project, <emph>Schopenhauer’s Library. Annotations and
+                  marks in his Spanish books</emph> (<ref type="crossref" target="#losada2017b"
+                  >Losada Palenzuela 2017b</ref>) was initiated to provide a scholarly digital
+               edition (SDE) of the handwritten notes added by Schopenhauer to his Spanish books.
+               The novelty of this digital scholarly edition lies in the decision of the editor,
+               José Luis Losada Palenzuela, to publish the book containing the marginalia as a
+               semi-diplomatic edition, which can be compared with the facsimile that is also
+               provided to the user from the website. This choice is in line with Pierazzo’s
+               reflections on how the display of a facsimile representation with its digital
+               documentary edition challenges the user, increasing its attention, contrary to the
+               previous belief that image-based editions would have been the best choice for digital
+                  editions.<note xml:id="ftn3">“The dialectic relationship between the diplomatic
+                  edition and the facsimile representation, while demanding extreme editorial rigor,
+                  engages the users in close inspection of the transcriptions/translations enacted
+                  by the editor in a sort of imaginary competition” (<ref type="crossref"
+                     target="#pierazzo2014">Pierazzo 2014</ref>, 4).</note>
+            </p>
+            <p xml:id="p5"><emph>Schopenhauer’s library</emph> comprised 38 Spanish books, nine of which contain
+               personal marginalia. These books have already been digitalized and made available by
+               the Johann Christian Senckenberg University Library and the <ref
+                  target="http://www.ub.uni-frankfurt.de/archive/schopenhauer.html">Schopenhauer
+                  Archive</ref> (Frankfurt am Main). The edition is an on-hold project that started
+               in 2017 and was first presented at the <emph>II Congreso Internacional de Humanidades
+                  Digitales Hispánicas. Innovación, globalización e impacto</emph>, Madrid, in
+                  2015.<note xml:id="ftn4">The presentation <emph>Marginal annotations in books.
+                     Interpretation, encoding, publication</emph> is available online: <ref
+                     target="http://editio.github.io/slides/marginalia-en#/portada"
+                     >http://editio.github.io/slides/marginalia-en#/portada</ref>.</note> Both the
+               digitization of the nine books with marginalia and their critical edition are
+               incomplete works. At present, <emph>Schopenhauer’s Library</emph> contains the
+               digital edition of only one book, i.e., <emph>Oráculo manual y arte de
+                  prudencia</emph> (<ref type="crossref" target="#gracian1659">1659</ref>), written
+               by the Jesuit and philosopher Baltasar Gracián, who, through 300 aphorisms and
+               related commentaries, seeks to guide people to live with wisdom and integrity.</p>
+            <p xml:id="p6">The digital edition was edited by José Luis Losada Palenzuela while he
+               was an Assistant Professor of Romance Philology at the University of Wrocław, where
+               the edition is located. Presently, he is an Associate Professor at the University of
+               Breslau and a member of its Digital Humanities Lab since 2023. The project did not
+               receive any funding, but the last phase of implementation was supported by a research
+               fellowship at the Trier Center for Digital Humanities, University of Trier, funded by
+               the DAAD (German Academic Exchange Service).</p>
+            <p xml:id="p7">General parameters about the structure of the edition are easily
+               accessible from the <ref
+                  target="https://web.archive.org/web/20240812094610/https:/schopenhauer.uni.wroc.pl/introduction.html"
+                  >Introduction</ref> and the <ref
+                  target="https://web.archive.org/web/20240812094130/https:/schopenhauer.uni.wroc.pl/editorial.html"
+                  >Editorial principles</ref> pages, as well as from the additional resources and
+               publications related to the project, which are available on the website. These
+               include an article published in 2017 as a presentation of the project (<ref
+                  type="crossref" target="#losada2017a">Losada Palenzuela 2017a</ref>).</p>
+         </div>
+         <div xml:id="div2">
+            <head>Aims and methods</head>
+            <p xml:id="p8">As stated in the <ref
+                  target="https://web.archive.org/web/20240812094130/https:/schopenhauer.uni.wroc.pl/editorial.html"
+                  >Editorial principles</ref>, the project aims at classifying, encoding, and
+               editing Schopenhauer’s marginalia in his Spanish books, providing an interpretation,
+               and transcribing both the original texts and the annotations. Schopenhauer did not
+               have a vast collection of books, but he was a passionate reader and his annotations
+               are interesting as a tool to provide additional knowledge of Schopenhauer as a
+               philosopher and author (<ref type="crossref" target="#losada2011">Losada Palenzuela
+                  2011</ref>, 514). The project employs a three-step procedure: the interpretation
+               of the manuscript’s annotations; the encoding of the annotations through digital
+               markup; and the dissemination of the text thanks to its publication in the digital
+               environment.</p>
+            <p xml:id="p9">The edition currently provides the facsimile of the original Spanish
+               book, i.e., the <emph>Oráculo manual y arte de prudencia</emph> (<ref type="crossref"
+                  target="#gracian1659">1659</ref>) owned by Schopenhauer, which contains his
+               annotations; the semi-diplomatic edition of the running text of the printed book; and
+               the critical edition of Schopenhauer’s notes. While there is no mention of the target
+               audience, it may be assumed from the content that it is intended to reach a broader
+               audience than just scholars, or philosophers, since its presentation can be easily
+               browsed and accessed by non-experts, casual users, and curious readers.</p>
+            <p xml:id="p10">Documents are visually represented in three different ways: the original
+               book is represented both as a facsimile and as a semi-diplomatic edition, and the
+               annotations are encoded as part of the semi-diplomatic edition. The transcription of
+               the manuscript is reliable and without errors. Interpretations of less clear passages
+               are provided by the editor in the editorial notes, which are also the only commentary
+               available.</p>
+         </div>
+         <div xml:id="div3">
+            <head>XML/TEI Encoding</head>
+            <p xml:id="p11">The edition follows the <ref target="https://tei-c.org/">TEI</ref>
+               standard, based on XML, for the representation of texts in digital form. The
+               principles followed for the encoding of each element and a sample of the encoded text
+               are provided in the section <emph>Encoding</emph> of the page <ref
+                  target="https://web.archive.org/web/20240812094130/https:/schopenhauer.uni.wroc.pl/editorial.html"
+                  >Editorial principles</ref> (<ref type="crossref" target="#img4">Fig. 4</ref>).
+               The encoding is organized according to three levels:<list rend="bulleted">
+                  <item>The bibliographic information encoded in the <code>&lt;teiHeader&gt;</code>
+                     element;</item>
+                  <item>The book encoded as a print resource according to the TEI Guidelines, and
+                     contained in the element <code>&lt;text&gt;</code>. The text is subdivided in
+                     the three parts <code>&lt;front&gt;</code>, <code>&lt;body&gt;</code>,
+                        <code>&lt;back&gt;</code>;</item>
+                  <item>The annotations and marginalia encoded with core elements for
+                     transcriptional work representing additions, deletions, omissions, and
+                     substitutions (<ref type="crossref" target="#tei2024a">TEI Consortium
+                        2024a</ref>).</item>
+               </list>
+            </p>
+            <p xml:id="p12">Inside the text, the dividing element <code>&lt;pb&gt;</code> indicates
+               the beginning of the page. This element is used also in the HTML visualization as an
+               anchor to link the facsimile of the single page, to let the user compare it to the
+               transcription on the side.</p>
+            <p xml:id="p13">
+               <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-1.png"/>
+                  <head type="legend">A sample of how elements have been encoded using TEI/XML. It
+                     is contained in the <emph>Editorial principles</emph>.</head>
+               </figure>For the encoding of the annotations, a relevant role is given to the TEI
+               element <code>&lt;add&gt;</code>, specifically intended for insertions made by an
+               author, scribe, annotator, or corrector (<ref type="crossref" target="#tei2024b">TEI
+                  Consortium 2024b</ref>). Two attribute selections of <code>@type</code> and
+                  <code>@subtype</code> allow the editor to cover the taxonomy of marginalia. The
+               types of annotations are “Glosse” (en. “gloss”); “Korrektur” (en. “correction”);
+               “Randstreichung” (en. ”marginal marks”); “Unterstreichung” (en. “underlining”). The
+               subtype specifies the purpose of the type or the kind of implementation, e.g., the
+               “Glosse” can be an “index”, i.e., a reference to a page number, or a “statement”,
+               i.e., a gloss on a passage (<ref type="crossref" target="#img1">Fig. 1</ref>).</p>
+            <p xml:id="p14">
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-2.png"/>
+                  <head type="legend">Type of encoded handwritten annotations.</head>
+               </figure>Handwritten annotations are specified with an additional attribute
+                  <code>@hand</code> whose values are declared in the <code>&lt;handNotes&gt;</code>
+               element, in the TEI header (<ref type="crossref" target="#img2">Fig. 2</ref>):<list
+                  rend="bulleted">
+                  <item>“SchopPen”: pencil marks by Arthur Schopenhauer;</item>
+                  <item>“SchopInk”: ink marks by Arthur Schopenhauer;</item>
+                  <item>“Archiv”: signature entries in book (from archive).</item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="div4">
+            <head>Presentation</head>
+            <p xml:id="p15">
+               <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-3.png"/>
+                  <head type="legend"><emph>Schopenhauer’s Library</emph>: the home page of the edition.</head>
+               </figure>The site does not have a dedicated home page. Instead, this role is assumed
+               by the page that contains the edition of the only published book <ref
+                  target="https://web.archive.org/web/20240617100823/https:/schopenhauer.uni.wroc.pl/"
+                  >Oráculo manual y arte de prudencia</ref> (<ref type="crossref" target="#img3"
+                  >Fig. 3</ref>). Two additional pages, i.e., <ref
+                  target="https://web.archive.org/web/20240812094610/https:/schopenhauer.uni.wroc.pl/introduction.html"
+                  >Introduction</ref> and <ref
+                  target="https://web.archive.org/web/20240812094130/https:/schopenhauer.uni.wroc.pl/editorial.html"
+                  >Editorial principles</ref>, provide information about the content of the project,
+               the guidelines followed for the classification and encoding of the marginalia and
+               annotations, and about the publication of the edition. A fourth page contains the
+                  <ref
+                  target="https://web.archive.org/web/20240812095050/https:/schopenhauer.uni.wroc.pl/bibliography.html"
+                  >Bibliography</ref>. The users are easily made aware of their position within the
+               site structure because, in the navigation bar, the button of the current page changes
+               its color from gray to white.<note xml:id="ftn5">It does not work for the <ref
+                     target="https://web.archive.org/web/20240812094610/https:/schopenhauer.uni.wroc.pl/introduction.html"
+                     >Introduction</ref>.</note>
+            </p>
+            <p xml:id="p16">The three informational pages <ref
+                  target="https://web.archive.org/web/20240812094610/https:/schopenhauer.uni.wroc.pl/introduction.html"
+                  >Introduction</ref>, <ref
+                  target="https://web.archive.org/web/20240812094130/https:/schopenhauer.uni.wroc.pl/editorial.html"
+                  >Editorial principles</ref>, and <ref
+                  target="https://web.archive.org/web/20240812095050/https:/schopenhauer.uni.wroc.pl/bibliography.html"
+                  >Bibliography</ref> consist of plain text and provide links to specific additional
+               information on the web. On the page of the edition, some useful tools are provided:
+               there is a sidebar on the left, with two different blocks. The first one contains a
+               button to show the facsimile of the original book and a checkbox that enables the
+               user to display the respective image inside the semi-diplomatic edition when passing
+               over the number of the page with the mouse. When the image hover function is off, the
+               facsimile is accessible by clicking on the page number in the semi-diplomatic
+               edition. Furthermore, the facsimile can be moved to be placed alongside the
+               correspondent transcription for comparison. A pin on the bottom-left angle of the
+               facsimile allows the image to keep its position while scrolling.</p>
+            <p xml:id="p17">In the second block, there is information about the edition, its source,
+               and links to obtain more details about the people and institutions involved in the
+               project.</p>
+            <p xml:id="p18">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-4.png"/>
+                  <head type="legend">On the left is the facsimile of the first page of the book,
+                     obtained by hovering over the page number, i.e. [p. 1]. On the right the
+                     <emph>Reading Options</emph> window is displayed.</head>
+               </figure>On the right side of the page, the button <emph>Reading Options </emph>(<ref
+                  type="crossref" target="#img4">Fig. 4</ref>) provides text-based reading views, as
+               well as browsing options to access the text according to a classification of the
+               aphorisms. By clicking the button, a window will be displayed. At the top, there are
+               three different choices for the layout:<list rend="bulleted">
+                  <item>Linebreaks (on/off): to remove or reapply line breaks; it preserves
+                     paragraph breaks;</item>
+                  <item>Aphorism number: to show the enumeration of Gracián’s aphorisms;</item>
+                  <item>Maxims italic: to change the font of maxims into italic.</item>
+               </list>
+            </p>
+            <p xml:id="p19">In the second part of the window, there are five options to access
+               single aphorisms, which display aphorisms with some specific characteristics:<list
+                  rend="bulleted">
+                  <item>Aphorism list;</item>
+                  <item>Aphorisms with marks;</item>
+                  <item>Aphorisms with glosses;</item>
+                  <item>All annotations;</item>
+                  <item>Aphorisms with underlining.</item>
+               </list>
+            </p>
+            <p xml:id="p20">This function allows the user to access the entire contents of the
+               edition, with a non-linear reading of the text. There are no other options available
+               for searching through the text, and in particular for searching within the facsimile
+               viewer, which limits user interaction to either moving forward to the following page
+               or returning to the previous one. It is possible to jump to a specific page only
+               through the page number displayed in the text.</p>
+            <p xml:id="p21">
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-5.png"/>
+                  <head type="legend">The legend, as it is shown by clicking on the button <emph>color and
+                     rendition legends</emph>.</head>
+               </figure>These options are easy to understand for the user. A less intuitive feature
+               concerns the fact that the <emph>Reading Options</emph> window is movable, which may
+               cause some available options not to appear when clicking on the button. To support
+               and orient the user within the edition, there is a legend at the top of the page that
+               can be displayed by clicking on the button <emph>color and rendition legends</emph>
+                  (<ref type="crossref" target="#img5">Fig. 5</ref>). It explains how both
+               Schopenhauer’s marks and annotations on text and the editorial notes are encoded and
+               presented in the semi-diplomatic edition.</p>
+            <p xml:id="p22">The SDE does not contain a critical commentary. This role is, to some
+               extent, filled by the editor’s notes, which are accessible within the text via a
+               tooltip, and which provide explanatory information. These notes clarify some
+               corrections or annotations on the text made by Schopenhauer. Schopenhauer’s
+               marginalia sometimes provide critical corrections to Gracián’s book, and this is the
+               only information that we can find inside the edition of the original book held by
+               Schopenhauer. At the end of the reading options, a download link to the XML/TEI
+               encoded document and a DOI pointing to the open-access research data repository
+               Zenodo is provided. The license, displayed in the left bar alongside the information
+               about the edition, is Creative Commons 4.0 International Attribution (CC BY
+                  4.0).<note xml:id="ftn6">This licence allows to share and adapt content, on the
+                  condition of giving credits to the author.</note>
+            </p>
+            <p xml:id="p23">The facsimile is published under the license Public Domain Mark 1.0<note
+                  xml:id="ftn7"><ref
+                     target="http://web.archive.org/web/20250103184905/https://creativecommons.org/publicdomain/mark/1.0/deed.en"
+                     >http://web.archive.org/web/20250103184905/https://creativecommons.org/publicdomain/mark/1.0/deed.en</ref>.</note>
+               by the <ref target="http://www.ub.uni-frankfurt.de/">Johann Christian
+                  Senckenberg</ref> University Library. To show the facsimile, the editor reused the
+               publicly available raster images in the JPG format provided by the library, which
+               allows the users to access and compare the whole book in an overall good quality but,
+               inevitably, starts to look grainy when zoomed in. Furthermore, there are no links to
+               social media accounts related to this SDE.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Comparison with other SDEs of Marginalia</head>
+            <p xml:id="p24">The benefit of the representation implemented in the
+                  <emph>Schopenhauer’s Library</emph> can be clarified by showing three alternative
+               solutions in other projects concerning marginalia: the first, <ref
+                  target="https://web.archive.org/web/20250108194603/https:/melvillesmarginalia.org/"
+                  >Melville’s Marginalia Online</ref>, is wholly image-based. The second, <ref
+                  target="https://web.archive.org/web/20250108194313/https:/whitmanarchive.org/">The
+                  Walt Whitman’s Archive</ref>, provides both a facsimile representation and a
+               digital documentary edition but is tied to a fixed and non-searchable visualization,
+               while the third, the <ref
+                  target="https://web.archive.org/web/20250108195928/https:/www.beckettarchive.org/"
+                  >Beckett Digital Library</ref>, provides a non-linear search just for
+                  marginalia.<note xml:id="ftn8">For further analysis on these projects, it is worth
+                  mentioning that <emph>Melville’s Marginalia Online</emph> and <emph>Beckett
+                     Digital Library</emph> have been reviewed respectively in RIDE Issue 3 (see
+                     <ref type="crossref" target="#bleeker2015">Bleeker 2015</ref>) and RIDE Issue 5
+                  (see <ref type="crossref" target="#sichani2017">Sichani 2017</ref>).</note>
+            </p>
+            <p xml:id="p25">
+               <figure xml:id="img6">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-6.png"/>
+                  <head type="legend">An example of the facsimile representation of a page with
+                     annotations and marginalia made by Melville.</head>
+               </figure>
+               <figure xml:id="img7">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-7.png"/>
+                  <head type="legend">An example of the facsimile representation of a book from
+                     <emph>Melville’s Library</emph>.</head>
+               </figure>
+               <emph>Melville’s Marginalia Online</emph> offers an example of a completely
+               imaged-based representation of books. While it is interesting for scholars to have
+               such access to a good-quality facsimile (<ref type="crossref" target="#img6">Fig.
+                  6</ref>), having the possibility of seeing elements like the front of the spine
+                  (<ref type="crossref" target="#img7">Fig. 7</ref>) in the context of textual
+               scholarship it is preferable to also have a digital documentary edition, additional
+               comments, and a better visualization of the different kinds of annotations. An
+               encoded transcription of the text, moreover, would provide the opportunity to make
+               use of all the possibilities offered by the technology, such as full-text search and
+               alternative visualizations. In this regard, a valuable tool that has been implemented
+               in <emph>Schopenhauer’s Library </emph>is non-linear browsing, which allows the user
+               to jump from one aphorism to another through the <emph>Reading Options
+               </emph>sidebar.</p>
+            <p xml:id="p26">
+               <figure xml:id="img8">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-8.png"/>
+                  <head type="legend">Comparison between the facsimile representation and the
+                     documentary edition in <emph>The Walt Whitman’s Archive</emph>.</head>
+               </figure>
+               <figure xml:id="img9">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-9.png"/>
+                  <head type="legend">Metadata related to the book <emph>A Defence of the Christian
+                     Doctrines of the Society of Friends</emph> held by Whitman with the legend of the
+                     representation of the marginalia.</head>
+               </figure>A different solution in the display of marginalia is the one offered by
+                  <emph>The Walt Whitman’s Archive</emph>. In this case, there is the possibility to
+               browse both the diplomatic edition and the facsimile representation (<ref
+                  type="crossref" target="#img8">Fig. 8</ref>). The facsimile shows up in a separate
+               window which allows the user to display the facsimile next to the diplomatic edition,
+               even though there is no automatic side-by-side visualization. While there is a legend
+               to orientate the user among the representation of annotations and marginalia (<ref
+                  type="crossref" target="#img9">Fig. 9</ref>), the browsing can only be linear,
+               which forces the user to search each mark and annotation inside the entire text.</p>
+            <p xml:id="p27">
+               <figure xml:id="img10">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-10.png"/>
+                  <head type="legend">An example of an annotation display of a document from the
+                     <emph>Beckett Digital Library</emph>.</head>
+               </figure>In the <emph>Beckett Digital Library</emph>, there is a documentary edition
+               but no full-text search The text of the marginalia, however, is digitized and
+               accessible through non-linear search (<ref type="crossref" target="#img10">Fig.
+                  10</ref>). This means that the user can access the marks and annotations on both
+               the facsimile and the transcribed version, which is visualized as an in-place pop-up
+               window.</p>
+            <p xml:id="p28">A functional feature of the website of <emph>Beckett Digital
+                  Library</emph> is its organization through four semantic categories (“Author”,
+               “Title”, “Place”, and “Date”), each one organized into subcategories, which improves
+               the user experience in the browsing of the resources. Four additional options allow
+               filtering according to the type of content (“Inscription”, “All Reading Traces”,
+               “Manuscript Only”, “Student Library”). Nevertheless, this difference in the
+               organization stems from the necessity to arrange a larger quantity of materials and
+               resources.</p>
+            <p xml:id="p29">These three examples, despite achieving the archival purpose, provide
+               few options for accessibility and searchability. This probably is because these
+               projects have been carried out at another stage of technological development: for
+               example, full-text search for such large projects is a realistic and achievable
+               objective now, and it is a powerful instrument to provide users with what was more
+               difficult at the time these projects were created.</p>
+            <p xml:id="p30">
+               <figure xml:id="img11">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-11.png"/>
+                  <head type="legend">The <emph>Lesespuren</emph> visualization on the <emph>Fontanes Handbibliothek</emph>
+                     website.</head>
+               </figure>
+               <figure xml:id="img12">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-12.png"/>
+                  <head type="legend">The <emph>Ähnlichkeiten</emph> visualization on the <emph>Fontanes Handbibliothek</emph>
+                     website.</head>
+               </figure>An example of the technological turn brought out in the last years is the
+                  <ref
+                  target="https://web.archive.org/web/20250108193820/https:/uclab.fh-potsdam.de/ff/"
+                  >Fontanes Handbibliothek</ref>, which provides a new perspective on the field
+               based on a quantitative data-driven approach and data visualization. It is part of
+               the digital services of the Theodore Fontane Archive<note xml:id="ftn9">
+                  <ref
+                     target="https://web.archive.org/web/20250108204757/https:/www.fontanearchiv.de/en/"
+                     >https://web.archive.org/web/20250108204757/https://www.fontanearchiv.de/en/</ref>.</note>,
+               and it collects the digitized library of Theodore Fontane, providing a smart and
+               interactive presentation. The visualization of data is constructed through the HTML
+               tag <code>&lt;svg&gt;</code>, which is used as a container to embed SVG graphics,
+               i.e., two-dimensional XML-based vector images. According to the kind of elements it
+               contains the data will be represented in a different graph. In this case, they
+               implemented two visualizations: <list rend="bulleted">
+                  <item>
+                     <emph>Lesespuren</emph> (en. “reading tracks”), in which each book is a
+                        <code>&lt;rect&gt;</code> element inside the <code>&lt;svg&gt;</code> tag,
+                     and all the rectangles are grouped by the author (<ref type="crossref"
+                        target="#img11">Fig. 11</ref>); </item>
+                  <item>
+                     <emph>Ähnlichkeiten</emph> (en. “similarities”), in which the visualization is
+                     still constructed through the <code>&lt;svg&gt;</code> elements to recreate a
+                     cartesian plane where the books, represented as circles, are plotted according
+                     to the similarity of their reading tracks. Moreover, the books that belong to
+                     the same author are linked together (<ref type="crossref" target="#img12">Fig.
+                        12</ref>).</item>
+               </list>
+            </p>
+            <p xml:id="p31">The reading tracks are grouped into five categories: “Marginalien” (en.
+               “marginalia”), “Markierungen” (en. “marks”), “Provenienzangaben” (en. “provenance”),
+               “Zusätzliches Material” (en. “additional material”) and “Anderes” (en. “others”).
+               Each of them has a color assigned.</p>
+            <p xml:id="p32">
+               <figure xml:id="img13">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-13.png"/>
+                  <head type="legend">The facsimile visualization of a page with marginalia on the
+                     <emph>Fontanes Handbibliothek</emph> website.</head>
+               </figure>Even if this data-driven visualization is well-suited for larger collections
+               than <emph>Schopenhauer’s Library</emph>, it is interesting to compare the solutions
+               to access the facsimile already presented with the one offered by the <emph>Fontanes
+                  Handbibliothek</emph> in the <emph>Lesespuren</emph> visualization at the book
+               level. Each rectangle is a continuous representation of the pages of a book. Each
+               point on the bar corresponds to a page and each page with a mark is highlighted with
+               the color of its type. By clicking on a point of this rectangle, the facsimile of the
+               correspondent page will be displayed in a box with the metadata on side, which
+               includes the transcription of marginalia or marks, and their attribution (<ref
+                  type="crossref" target="#img13">Fig. 13</ref>). In this way, the user can easily
+               access a single page already knowing if it contains a reading track and of what kind.
+               Another interesting feature that allows non-linear search over the whole collection
+               is the search bar. The user can search for a specific annotation; the pages that
+               contain that string of text are highlighted with a red rectangle; books that do not
+               contain the annotation are marked by an opaque grey bar.</p>
+            <p xml:id="p33">Unlike the examples provided until now, <emph>Fontanes
+                  Handbibliothek</emph> provides a solution that is more oriented to data
+               visualization than to textual analysis. In this regard, both chronologically and
+               methodologically, the <emph>Schopenhauer’s Library</emph> can be considered the
+               bridge between the previous marginalia’s libraries and a more web-oriented approach.
+            </p>
+         </div>
+         <div xml:id="div6">
+            <head>Technical infrastructure and publication</head>
+            <p xml:id="p34">For the creation of the SDE, the editor used the TEICHI framework<note
+                  xml:id="ftn10">
+                  <ref target="https://github.com/teichi/teichi"
+                     >https://github.com/teichi/teichi</ref>.</note> (<ref type="crossref"
+                  target="#pape_schoech_wegner2012">Pape et al. 2012</ref>) to display TEI files
+               using XSLT in a Drupal environment,<note xml:id="ftn11">
+                  <ref target="https://www.drupal.org/">https://www.drupal.org/</ref>.</note> a
+               modular content management system (CMS). The TEICHI framework, which already brought
+               some limitations in the options of elements that could be displayed and in the
+               available tools, is nowadays obsolete; in March 2018, a new version of Drupal was
+               released for security reasons,<note xml:id="ftn12">
+                  <ref target="https://www.drupal.org/psa-2018-001"
+                     >https://www.drupal.org/psa-2018-001</ref>.</note> for which TEICHI was not
+               updated. </p>
+            <p xml:id="p35">
+               <figure xml:id="img14">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/schopenhauer/pictures/picture-14.png"/>
+                  <head type="legend"> The facsimile as it appears in full screen. On the lower left
+                     corner, the button for keeping the position fixed while scrolling; on the lower
+                     right corner the two positional arrows, the zoom regulator, the button to
+                     return to the homepage, and the button to exit the full screen.</head>
+               </figure>The current version of the <emph>Schopenhauer’s Library </emph>is a custom
+               HTML-based solution that reimplements the previous XSLT/CSS/JavaScript files of the
+               final web interface created through the TEICHI implementation, and for this reason it
+               shows some technical issues compared to the original version. In this regard, it must
+               be noted that some of the tools on the website do not work, e.g., the home button in
+               the facsimile viewer (<ref type="crossref" target="#img14">Fig. 14</ref>), which
+               allows you to return to the first page. In the full-screen view of the facsimile, the
+               page number is not given.</p>
+            <p xml:id="p36">Furthermore, in the footer of the website, there is a generic search box
+               that is not implemented: while it is possible to write words inside the field, no
+               results are returned. Some of these functions were active in the first implementation
+               of the edition using Drupal, but as stated, the related plug-ins are no longer
+               available.</p>
+            <p xml:id="p37">Some limitations, however, are due to the TEICHI framework itself,
+               which, on one hand, was easily accessible and provided a smart visualization but, on
+               the other hand, was not one of the most flexible frameworks to present digital
+               editions: it was not possible, for example, to get a visualization that allowed
+               side-by-side comparisons between the facsimile and the semi-diplomatic edition.
+               Regarding the tools, the framework offered a layout with some default features that
+               could be customized. In the final layout of the <emph>Schopenhauer’s Library</emph>,
+               the left sidebar is used for editorial information while, for common practice, it
+               generally hosts the direct search section. This functionality is, instead, included
+               in the right box, a space intended by the module to be the commentary’s position, and
+               used by this project for the <emph>Reading Options</emph>. The choice to use the
+               TEICHI module was also possible, since this edition needed to provide only one
+               version of the text. This framework is not intended to give variants, even if it is
+               possible to insert one alternative reading.</p>
+            <p xml:id="p38">The advantage of the TEICHI framework, however, resided in the
+               possibility of visualizing a text independently from its encoding. This was possible
+               since it allowed the transformation of an XML-TEI document through XSLT into an HTML
+               document with associated CSS, simplifying the visualization of the marginalia.</p>
+         </div>
+         <div xml:id="div7">
+            <head>Conclusion</head>
+            <p xml:id="p39">It is difficult to place <emph>Schopenhauer’s Library</emph> in one of
+               the fields of textual scholarship. Following Sahle’s quality thresholds to define
+               what must be considered an edition, “an edition project is not an edition”, since an
+               edition “gives a complete representation of its subject” (<ref type="crossref"
+                  target="#sahle2016">Sahle 2016</ref>, 35). According to this, to define
+                  <emph>Schopenhauer’s Library</emph> as a digital edition, it should give the
+               minimum representativeness of the subject, i.e. the digital edition of the Spanish
+               books held by Schopenhauer, publishing more than one of the five books already
+               digitalized by the Johann Christian Senckenberg University Library (Frankfurt am
+               Main) in collaboration with the <ref
+                  target="http://www.ub.uni-frankfurt.de/archive/schopenhauer.html">Schopenhauer
+                  Archiv</ref>.</p>
+            <p xml:id="p40">Nevertheless, as a non-budget project, it provides a trustworthy and
+               complete edition of one of these books with a high level of overall quality, both on
+               the textual and digital sides. Moreover, <emph>Schopenhauer’s Library </emph>has some
+               of the attributes of a scholarly digital edition identified by Sahle: it is the
+               “critical representation of historic documents” (<ref type="crossref"
+                  target="#sahle2016">Sahle 2016</ref>, 23); once printed, it will lose content and
+               functionalities (<ref type="crossref" target="#sahle2016">Sahle 2016</ref>, 38); and
+               it has academic relevance and usefulness for scholars.</p>
+            <p xml:id="p41">This project has not been updated since the publication of the first
+               book in 2017. However, the hosting institution, the University of Wrocław, and the
+               edition’s availability in an XML/TEI standard, which is an international text
+               encoding standard and allows interoperability, are factors that should ensure the
+               long-term use of the edition. Unfortunately, even if it is an interesting edition, it
+               is unlikely that many scholars will use it as an SDE due to the lack of material
+               about Schopenhauer’s Spanish library and annotations, which do not provide a complete
+               view of the subject since the focus of this edition currently is on how to encode
+               marginalia most efficiently.</p>
+            <p xml:id="p42">This edition, as an edition of marginalia, should be considered part of
+               the branch of textual scholarship that focuses not on the authorial text but on the
+               surrounding context, which is the basis for the genetic critical edition. This should
+               also fit the idea of a genetic critical edition given by Dirk van Hulle (<ref
+                  type="crossref" target="#vanhulle2016a">2016a</ref>, 109), which includes the
+               exogenesis, in this case an author’s library, as part of the reconstruction of the
+               process of creation of an authorial work. However, key elements to define it as a
+               genetic edition are missing since it does not provide contextual or additional
+               information that guides the user in making links between this library and
+               Schopenhauer’s works. Nevertheless, a researcher or an expert in the field could
+               obtain the missing or additional information to proceed with a genetic reconstruction
+               from projects of this kind, which easy access to the materials through digital tools
+               and non-linear research. </p>
+            <p xml:id="p43">The TEICHI framework for Drupal is not available anymore, yet the
+               experience provided by its implementation can be taken as an example to exploit the
+               potential of the digital environment to display original content in a new way that
+               can foster study and research. Even if this framework had some limits regarding
+               visualization, the transcription of the text with the addition of some explicative
+               comments that it provided are fundamental elements for retrieving information and
+               achieving knowledge about a text with marginalia.<note xml:id="ftn13">“La mera
+                  digitalización en forma de imágenes es, sin duda, una fuente valiosísima de
+                  información. Si a aquella añadimos reflexión e interpretación, producimos
+                  conocimiento.” (<ref type="crossref" target="#losada2017a">Losada Palenzuela
+                     2017a</ref>, 130).</note> This tool followed the digital paradigm, the “real
+               revolution” of <emph>transmedialization</emph>, as defined by Sahle: “The shift from
+               media orientation to data orientation with its focus on abstraction, modelling and
+               multipurpose representations” (<ref type="crossref" target="#sahle2016">Sahle
+                  2016</ref>, 32).</p>
+            <p xml:id="p44">The loss of features during conversion processes opens up new questions
+               and concerns about the sustainability and maintenance of SDEs. While the use of
+               standards, such as XML/TEI guarantees some level of stability, on the side of the
+               graphic interface, it is an open challenge to provide long-term access to the users.
+               Since the main aim of the publication of a digital edition on the web should be to
+               make the resources accessible to the users, in this review, it has been pointed out
+               which novelties and functional solutions were available with the TEICHI framework
+               that future projects may try to implement in the design of their interface.</p>
+            <p xml:id="p45">
+               <emph>Schopenhauer’s Library</emph> has not only the aim to prove that the marginalia
+               must be studied as a component of textual scholarship but also to state the necessity
+               of a flexible and easy-to-use module for the creation of digital edition websites,
+               that can be adapted according to the specific requirements of the digital
+               edition.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="bleeker2015">Bleeker, Elli. 2015. “Melville’s Marginalia Online.”
+                     <emph>RIDE: A Review Journal for Digital Editions and Resources</emph> 3.
+                  Accessed January 8, 2025. <ref target="https://doi.org/10.18716/ride.a.3.1"
+                     >https://doi.org/10.18716/ride.a.3.1</ref>.</bibl>
+               <bibl xml:id="bludau2019">Bludau, Mark-Jan, Viktoria Brüggemann, Anna Busch, Marian
+                  Dörk, Kristina Genzel, Klaus-Peter Möller, Sabine Seifert, and Peer Trilcke. 2019.
+                     <emph>Fontanes Handbibliothek</emph>. Accessed January 8, 2025. <ref
+                     target="https://web.archive.org/web/20250108193820/https:/uclab.fh-potsdam.de/ff/"
+                     >https://web.archive.org/web/20250108193820/https:/uclab.fh-potsdam.de/ff/</ref>.</bibl>
+               <bibl xml:id="clark_chalmers1998">Clark, Andy and David J. Chalmers. 1998. “The
+                  Extended Mind.” <emph>Analysis</emph> 58: 10–23.</bibl>
+               <bibl xml:id="cohen_folson_price2023">Cohen, Matt, Ed Folsom, and Kenneth M. Price,
+                  eds. 2023. <emph>The Walt Whitman Archive</emph>. Accessed January 8, 2025. <ref
+                     target="https://web.archive.org/web/20250108194313/https:/whitmanarchive.org/"
+                     >https://web.archive.org/web/20250108194313/https://whitmanarchive.org/</ref>.</bibl>
+               <bibl xml:id="gracian1659">Gracián y Morales, Baltasar. 1659. <emph>Oráculo manual y
+                     arte de prudencia</emph>. Amsterdam: Juan Blaeu.</bibl>
+               <bibl xml:id="hutto_myin2013">Hutto, Daniel D. and Erik Myin. 2013.
+                     <emph>Radicalizing Enactivism: Basic Minds without Content</emph>. Cambridge,
+                  MA: MIT Press.</bibl>
+               <bibl xml:id="jackson2001">Jackson, H. J. 2001. <emph>Marginalia: readers writing in
+                     books</emph>. New Haven: Yale University Press.</bibl>
+               <bibl xml:id="losada2011">Losada Palenzuela, José Luis. 2011. “Cantar en falsete.
+                  Arthur Schopenhauer y la recepción de la Numancia en Alemania.” In <emph>Visiones
+                     y revisiones cervantinas. Actas selectas del VII Congreso Internacional de la
+                     Asociación de Cervantistas</emph>, edited by C. Strosetzki, 511–526. Alcalá de
+                  Henares: Ediciones del Centro de Estudios Cervantinos. <ref
+                     target="http://cvc.cervantes.es/literatura/cervantistas/congresos/cg_VII/cg_VII_45.pdf"
+                     >http://cvc.cervantes.es/literatura/cervantistas/congresos/cg_VII/cg_VII_45.pdf</ref>. </bibl>
+               <bibl xml:id="losada2017a">Losada Palenzuela, José Luis. 2017a. “Anotaciones
+                  manuscritas en bibliotecas de autor. Propuesta de etiquetado y de publicación
+                  digital.” <emph>Revista de Humanidades Digitales, </emph>116–131. <ref
+                     target="https://doi.org/10.5944/rhd.vol.1.2017.16563"
+                     >https://doi.org/10.5944/rhd.vol.1.2017.16563</ref>.</bibl>
+               <bibl xml:id="losada2017b">Losada Palenzuela, José Luis. 2017b. <emph>Schopenhauer’s
+                     Library. Annotations and marks in his Spanish books</emph>. Accessed January 8,
+                  2025. <ref
+                     target="https://web.archive.org/web/20240617100823/http:/schopenhauer.uni.wroc.pl/"
+                     >https://web.archive.org/web/20240617100823/http:/schopenhauer.uni.wroc.pl/</ref>.</bibl>
+               <bibl xml:id="olsen_norberg2025">Olsen-Smith, Steven, and Norberg, Peter, eds. 2025.
+                     <emph>Melville’s Marginalia Online</emph>. Accessed January 8, 2025. <ref
+                     target="https://web.archive.org/web/20250108194603/https:/melvillesmarginalia.org/"
+                     >https://web.archive.org/web/20250108194603/https://melvillesmarginalia.org/</ref>.</bibl>
+               <bibl xml:id="pape_schoech_wegner2012">Pape, Sebastian, Christof Schöch, and Lutz
+                  Wegner. 2012. “TEICHI and the Tools Paradox. Developing a Publishing Framework for
+                  Digital Editions.” <emph>Journal of the Text Encoding Initiative</emph>. <ref
+                     target="https://doi.org/10.4000/jtei.432"
+                     >https://doi.org/10.4000/jtei.432</ref>.</bibl>
+               <bibl xml:id="pierazzo2014">Pierazzo, Elena. 2014. “Digital Documentary Editions and
+                  the Others.” <emph>Scholarly Editing: The Annual of the Association for
+                     Documentary Editing</emph>, 35. <ref
+                     target="https://web.archive.org/web/20250106191009/https://www.scholarlyediting.org/2014/essays/essay.pierazzo.html"
+                     >https://web.archive.org/web/20250106191009/https://www.scholarlyediting.org/2014/essays/essay.pierazzo.html</ref>.</bibl>
+               <bibl xml:id="sahle2016">Sahle, Patrick. 2016. “What is a Scholarly Digital Edition?”
+                  In <emph>Digital Scholarly Editing: Theories, Models and Methods</emph>, edited by
+                  Matthew James Discroll and Elena Pierazzo, 19–39. Cambridge, UK: Open Book
+                  Publishers. <ref target="https://doi.org/10.11647/OBP.0095.02"
+                     >https://doi.org/10.11647/OBP.0095.02</ref>.</bibl>
+               <bibl xml:id="sichani2017">Sichani, Anna-Maria. 2017. “Literary drafts, genetic
+                  criticism and computational technology. The Beckett Digital Manuscript Project.”
+                     <emph>RIDE: A Review Journal for Digital Editions and Resources 5</emph>. <ref
+                     target="https://doi.org/10.18716/ride.a.5.2"
+                     >https://doi.org/10.18716/ride.a.5.2</ref>.</bibl>
+               <bibl xml:id="tei2024a">TEI Consortium, eds. 2024a. “Scope of Transcriptions”
+                     <emph>Guidelines for Electronic Text Encoding and Interchange</emph>. 4.8.1.
+                     <ref
+                     target="http://www.tei-c.org/Vault/P5/4.8.1/doc/tei-p5-doc/en/html/PH.html"
+                     >http://www.tei-c.org/Vault/P5/4.8.1/doc/tei-p5-doc/en/html/PH.html</ref>.</bibl>
+               <bibl xml:id="tei2024b">TEI Consortium, eds. 2024b. “&lt;add&gt;” <emph>Guidelines
+                     for Electronic Text Encoding and Interchange</emph>. 4.8.1. <ref
+                     target="https://tei-c.org/Vault/P5/4.8.1/doc/tei-p5-doc/en/html/ref-add.html"
+                     >https://tei-c.org/Vault/P5/4.8.1/doc/tei-p5-doc/en/html/ref-add.html</ref>.</bibl>
+               <bibl xml:id="vanhulle2016a">Van Hulle, Dirk. 2016a. “Exogenetic Digital Editing and
+                  Enactive Cognition<emph>”</emph> In <emph>Digital Scholarly Editing: Theories,
+                     Models and Methods</emph>, edited by Matthew James Discroll and Elena Pierazzo,
+                  107–118. Cambridge, UK: Open Book Publisher. <ref
+                     target="https://doi.org/10.11647/OBP.0095.06"
+                     >https://doi.org/10.11647/OBP.0095.06</ref>.</bibl>
+               <bibl xml:id="vanhulle2016b">Van Hulle, Dirk. 2016b. “Modelling a Digital Scholarly
+                  Edition for Genetic Criticism: A Rapprochement” <emph>Variants </emph>12–13:
+                  34–56. <ref target="https://doi.org/10.4000/variants.293"
+                     >https://doi.org/10.4000/variants.293</ref>.</bibl>
+               <bibl xml:id="vanhulle_neyt_dillen2021">Van Hulle, Dirk, Vincent Neyt, and Wout
+                  Dillen, eds. 2021. <emph>Samuel Beckett Digital Manuscript Project</emph>.
+                  Accessed January 08, 2025. <ref
+                     target="https://web.archive.org/web/20250108195928/https:/www.beckettarchive.org/"
+                     >https://web.archive.org/web/20250108195928/https://www.beckettarchive.org/</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
