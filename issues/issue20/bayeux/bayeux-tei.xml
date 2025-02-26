@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.20.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sewing text and images together in the digital environment. A review of Bayeux
+               Tapestry Digital Edition</title>
+            <author ref="https://orcid.org/0000-0002-5958-2100">
+               <name>
+                  <forename>Manuele</forename>
+                  <surname>Veggi</surname>
+               </name>
+               <affiliation>
+                  <orgName>Sapienza University of Rome</orgName>
+                  <placeName ref="https://www.geonames.org/3169070">Rome, Italy</placeName>
+               </affiliation>
+               <email>manuele.veggi@uniroma1.it</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2025-02">February 2025</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-20/bayeux</idno>
+            <idno type="DOI">10.18716/ride.a.20.3</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue20/bayeux/bayeux.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="20">Digital Scholarly Editions</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-20</idno>
+            <idno type="DOI">10.18716/ride.a.20</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Bayeux Tapestry Digital Edition</title>
+                  <editor>Martin K. Foys</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Martin K. Foys</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>James F. Caccamo</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Contributor</resp>
+                     <persName>Erica L. Pittman</persName>
+                  </respStmt>
+                  <date type="publication">2003; 2011</date>
+                  <idno type="URI">http://www.sd-editions.com/bayeux/online/</idno>
+                  <date type="accessed">2024-01-27</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing
+                     Scholarly Digital Editions</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+               <category>
+                  <catDesc>Documentation</catDesc>
+                  <category xml:id="se001">
+                     <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+                     </catDesc>
+                     <catDesc>Is it easily possible to describe the project bibliographically along
+                        the schema "responsible editors, publishing/hosting institution, year(s) of
+                        publishing"?</catDesc>
+                     <category xml:id="se002">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se003">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se004">
+                     <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+                     </catDesc>
+                     <catDesc>Are the contributors (editors, institutions, associates) of the
+                        project fully documented?</catDesc>
+                     <category xml:id="se005">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se006">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se007">
+                     <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project list contact persons?</catDesc>
+                     <category xml:id="se008">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se009">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se010">
+                     <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection of materials of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se011">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se012">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se013">
+                     <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Is the selection by and large reasonable?</catDesc>
+                     <category xml:id="se014">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se015">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se016">
+                     <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation include information about the long term
+                        sustainability of the basic data (archiving of the data)?</catDesc>
+                     <category xml:id="se017">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se018">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se019">
+                     <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the aims and purposes of the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se020">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se021">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se022">
+                     <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+                     </catDesc>
+                     <catDesc>Are the methods employed in the project explicitly
+                        documented?</catDesc>
+                     <category xml:id="se023">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se024">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se025">
+                     <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Does the project document which data model (e.g. TEI) has been used
+                        and for what reason?</catDesc>
+                     <category xml:id="se026">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se027">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se028">
+                     <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts concerning the use of the
+                        project?</catDesc>
+                     <category xml:id="se029">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se030">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se031">
+                     <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Does the project supply citation guidelines (i.e. how to cite the
+                        project or a part of it)?</catDesc>
+                     <category xml:id="se032">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se033">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se034">
+                     <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                        further modifications and additions)?</catDesc>
+                     <category xml:id="se035">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se036">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se037">
+                     <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+                     </catDesc>
+                     <catDesc>Does the project provide information about institutional support for
+                        the curation and sustainability of the project?</catDesc>
+                     <category xml:id="se038">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se039">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Contents</catDesc>
+                  <category xml:id="se040">
+                     <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Has the material been previously edited (in print or
+                        digitally)?</catDesc>
+                     <category xml:id="se041">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se042">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se043">
+                     <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+                     </catDesc>
+                     <catDesc>Does the edition make use of these previous editions?</catDesc>
+                     <category xml:id="se044">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se045">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se046">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se047">
+                     <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an introduction to the subject-matter (the
+                        author(s), the work, its history, the theme, etc.) of the project?</catDesc>
+                     <category xml:id="se048">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se049">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se050">
+                     <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a bibliography?</catDesc>
+                     <category xml:id="se051">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se052">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se053">
+                     <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                        passages, interpretation, etc.)?</catDesc>
+                     <category xml:id="se054">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se055">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se056">
+                     <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project include or link to external resources with contextual
+                        material?</catDesc>
+                     <category xml:id="se057">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se058">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se059">
+                     <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of digitised sources?</catDesc>
+                     <category xml:id="se060">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se061">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se062">
+                     <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+                     <category xml:id="se063">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se064">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se065">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se066">
+                     <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Is the text fully transcribed?</catDesc>
+                     <category xml:id="se067">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se068">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se069">
+                     <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                        etc.)?</catDesc>
+                     <category xml:id="se070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se072">
+                     <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the project feature compilations indices, registers or
+                        visualisations that offer alternative ways to access the material?</catDesc>
+                     <category xml:id="se073">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se074">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se075">
+                     <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and
+                           2.1</ref>
+                     </catDesc>
+                     <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+                     <category xml:id="se076">
+                        <catDesc>Single manuscript</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se077">
+                        <catDesc>Single work</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se078">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se079">
+                        <catDesc>Collected works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se080">
+                        <catDesc>Papers</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se081">
+                        <catDesc>Archival holding</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se082">
+                        <catDesc>Charters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se083">
+                        <catDesc>Letters</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se084">
+                        <catDesc>Diary</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se085">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Embroidery</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se086">
+                     <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+                     </catDesc>
+                     <catDesc>What era(s) do the documents belong to?</catDesc>
+                     <category xml:id="se087">
+                        <catDesc>Classics</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se088">
+                        <catDesc>Medieval</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se089">
+                        <catDesc>Early modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se090">
+                        <catDesc>Modern</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se091">
+                     <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+                     </catDesc>
+                     <catDesc>Which perspective(s) do the editors take towards the edited material?
+                        How can the edition be classified in general terms?</catDesc>
+                     <category xml:id="se092">
+                        <catDesc>History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se093">
+                        <catDesc>Philology / Literary Studies</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se094">
+                        <catDesc>Philosophy / Theology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se095">
+                        <catDesc>History of Science</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se096">
+                        <catDesc>Musicology</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se097">
+                        <catDesc>Art History</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se098">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se099">
+                     <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer any spin-offs?</catDesc>
+                     <category xml:id="se100">
+                        <catDesc>App</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se101">
+                        <catDesc>Mobile</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se102">
+                        <catDesc>PDF</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se103">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se104">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Access modes</catDesc>
+                  <category xml:id="se105">
+                     <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>By which categories does the project offer to browse the
+                        contents?</catDesc>
+                     <category xml:id="se106">
+                        <catDesc>Authors</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se107">
+                        <catDesc>Works</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se108">
+                        <catDesc>Versions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se109">
+                        <catDesc>Structure</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se110">
+                        <catDesc>Pages</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se111">
+                        <catDesc>Documents</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se112">
+                        <catDesc>Type of material</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se113">
+                        <catDesc>Images</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se114">
+                        <catDesc>Dates</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se115">
+                        <catDesc>Persons</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se116">
+                        <catDesc>Places</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se117">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se118">
+                     <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer a simple search?</catDesc>
+                     <category xml:id="se119">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se120">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se121">
+                     <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer an advanced search?</catDesc>
+                     <category xml:id="se122">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se123">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se124">
+                     <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search support the use of wildcards?</catDesc>
+                     <category xml:id="se125">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se126">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se127">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se128">
+                     <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer an index of the searched field?</catDesc>
+                     <category xml:id="se129">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se130">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se131">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se132">
+                     <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the search offer autocompletion or suggest
+                        functionalities?</catDesc>
+                     <category xml:id="se133">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se134">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se135">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se136">
+                     <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Does the project offer help texts for the search?</catDesc>
+                     <category xml:id="se137">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se138">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se139">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Aims and methods</catDesc>
+                  <category xml:id="se140">
+                     <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Who is the intended audience of the project?</catDesc>
+                     <category xml:id="se141">
+                        <catDesc>Scholars</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se142">
+                        <catDesc>Interested public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se143">
+                     <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+                     </catDesc>
+                     <catDesc>Which type fits best for the reviewed project?</catDesc>
+                     <category xml:id="se144">
+                        <catDesc>Facsimile edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se145">
+                        <catDesc>Archive edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se146">
+                        <catDesc>Documentary edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se147">
+                        <catDesc>Diplomatic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se148">
+                        <catDesc>Genetic edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se149">
+                        <catDesc>Work critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se150">
+                        <catDesc>Text critical edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se151">
+                        <catDesc>Enriched edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se152">
+                        <catDesc>Database edition</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se153">
+                        <catDesc>Digital library</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se154">
+                        <catDesc>Collection of texts</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se155">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se156">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se158">
+                     <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>In how far is the text critically edited?</catDesc>
+                     <category xml:id="se159">
+                        <catDesc>Transmission examined</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se160">
+                        <catDesc>Palaeographic annotations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se161">
+                        <catDesc>Normalization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se162">
+                        <catDesc>Variants</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se163">
+                        <catDesc>Emendation</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se164">
+                        <catDesc>Commentary notes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se165">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se166">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Translation</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se167">
+                     <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the data encoded in XML? </catDesc>
+                     <category xml:id="se168">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se169">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se170">
+                     <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is the project employing a standardized data model (e.g.
+                        TEI)?</catDesc>
+                     <category xml:id="se171">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se172">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se173">
+                     <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+                     </catDesc>
+                     <catDesc>Which kinds or forms of text are presented?</catDesc>
+                     <category xml:id="se174">
+                        <catDesc>Facsimiles</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se175">
+                        <catDesc>Diplomatic transcription</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se176">
+                        <catDesc>Edited text</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se177">
+                        <catDesc>Translations</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se178">
+                        <catDesc>Commentaries</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se179">
+                        <catDesc>Semantic data</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Technical accessability</catDesc>
+                  <category xml:id="se180">
+                     <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+                     </catDesc>
+                     <catDesc>Are there persistent identifiers and an addressing system for the
+                        edition and/or parts/objects of it and which mechanism is used to that
+                        end?</catDesc>
+                     <category xml:id="se181">
+                        <catDesc>DOI</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se182">
+                        <catDesc>ARK</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se183">
+                        <catDesc>URN</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se184">
+                        <catDesc>PURL.ORG</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se185">
+                        <catDesc>Persistent URLs</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se186">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se187">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se188">
+                     <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow
+                        the reuse of the data of the project in other contexts?</catDesc>
+                     <category xml:id="se189">
+                        <catDesc>OAI-PMH</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se190">
+                        <catDesc>REST</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se191">
+                        <catDesc>General API</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se192">
+                        <catDesc>None</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se193">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se194">
+                     <catDesc>Open Access</catDesc>
+                     <catDesc>Is the edition Open Access?</catDesc>
+                     <category xml:id="se195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se197">
+                     <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue
+                           4.12</ref>
+                     </catDesc>
+                     <catDesc>Is the basic data (e.g. the XML) of the project accessible for each
+                        part of the edition (e.g. for a page)?</catDesc>
+                     <category xml:id="se198">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se199">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se200">
+                     <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can the entire raw data of the project be downloaded (as a
+                        whole)?</catDesc>
+                     <category xml:id="se201">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se202">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se203">
+                     <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+                     </catDesc>
+                     <catDesc>Can you use the data with other tools useful for this kind of
+                        content?</catDesc>
+                     <category xml:id="se204">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se205">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se206">
+                     <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Are the rights to (re)use the content declared?</catDesc>
+                     <category xml:id="se207">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se208">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="se209">
+                     <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+                     </catDesc>
+                     <catDesc>Under what license are the contents released?</catDesc>
+                     <category xml:id="se210">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se211">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se212">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se213">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se214">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se215">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se216">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se217">
+                        <catDesc>PDM</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se218">
+                        <catDesc>No license</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se219">
+                        <catDesc>Multiple licenses</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="se220">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Institutional and Individual License</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>bayeux tapestry</term>
+               <term>digital scholarly edition</term>
+               <term>early editions</term>
+               <term>documentary editions</term>
+               <term>multimedia</term>
+               <term>hypermedia</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>The following contribution is focused on <emph>Bayeux Tapestry Digital Edition</emph>
+               (BTDE), a project addressed to a heterogeneous audience that aims to describe this
+               famous embroidery from different perspectives. Indeed, not only does this scholarly
+               edigital edition (SDE) provide a high-quality facsimile of this artwork, but it also
+               tries to reconstruct its historical and cultural background. This review mainly aims
+               at describing the contents of the edition and their presentation, considering also
+               the available approaches and tools when BTDE was first published. Moreover, it
+               suggests possible further implementations and highlights minor issues in the
+               sustainability and in the rendering of the Latin inscriptions. The review will show
+               how the project can be considered a pioneering example of a scholarly digital
+               edition, which managed to reconstruct the complexity of the chosen document in a
+               digital environment, proposing an interesting solution to combine multimedia
+               assets.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">The Bayeux Tapestry is an almost 70-meter-long embroidery visually and
+               verbally describing the events related to William the Conqueror and the Battle of
+               Hastings (1066). The narration of the deeds is provided by a variegated iconographic
+               apparatus and short Latin inscriptions, which make the Tapestry “a historical
+               account, but also an essential source of information on the way of life in the Middle
+               Ages: it is therefore a documentary record which employs particular narrative
+               techniques and makes use of symbolism” (<ref type="crossref" target="#unesco2006"
+                  >UNESCO 2006, 1</ref>).</p>
+            <p xml:id="p2">Its complex nature and its historical relevance awoke considerable
+               historical interest in the field of scholarly editions. The Tapestry was rediscovered
+               in 1728 by Bernard de Montfaucon, who curated the first facsimile reproduction; this
+               edition was followed in the nineteenth century by two other reproductions by Charles
+               Sothard (<emph>ante</emph> 1824) and Elizabeth Wardle (1885). The embroidery later
+               enjoyed long-lasting philological fame also during the last century, in particular
+               thanks to the critical editions by Sir Frank Stenton (1965), David M. Wilson (1985),
+               and Bernstein (1986) (see <ref type="crossref" target="#spear1992">Spear 1992</ref>).
+               This established editorial tradition led to the creation of the <emph>Bayeux Tapestry
+                  Digital Edition</emph> (BTDE), which aims to reproduce the embroidery to exploit
+               the possibilities of the digital environment to provide a new reading experience to
+               the user.</p>
+            <p xml:id="p3">This project was developed from 1996 to 2002 thanks to the partial
+               funding of Loyola University Chicago, a pioneering research hub in the field of
+               scholarly digital editions (e.g., see the <ref
+                  target="https://web.archive.org/web/20240102145221/https://charles-harpur.org/Home/Site/"
+                  >Charles Harpur Critical Archive</ref>), with the main collaboration of the Center
+               for Research and Creativity at Florida State University and Hood College. The
+               development team was directed by Martin K. Foys, Assistant Professor of English at
+               Hood College, who is responsible for the major textual and paratextual content of the
+               scholarly digital edition (SDE). Erica L. Pittman contributed as an editor, while
+               James Caccamo and Jody Evenson joined the project as graphic designers and
+               contributed to the development of its CD-ROM distribution: the first edition was
+               indeed firstly commercialised on this support – the web version, which is the
+               reference of the current review, is a revised edition and was published almost a
+               decade later. This general information is easily accessible from the website section
+                  “<ref
+                  target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DCredits"
+                  >Credits</ref>”, where also their email addresses<note xml:id="ftn1"
+                  >Unfortunately, not all these contacts are updated. To contact the main editor,
+                  Prof. Foys, another <ref target="mailto:foys@wisc.edu">institutional mail</ref>
+                  (affiliated with the University of Wisconsin–Madison) has been used by the author
+                  of this review.</note> are indicated.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Subject and Content of the Edition</head>
+            <p xml:id="p4">The project is a true pioneer in the field of scholarly digital editions
+               of multimedia documents. The major innovation is its endeavour to mediate between a
+               “reader-oriented” and a “document-oriented” approach. The “<ref
+                  target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DIntroduction%26part%3D1"
+                  >Introduction</ref>” page observes that in the previous printed editions (e.g. see
+                  <ref type="crossref" target="#img1">Fig. 1</ref>), the document was either
+               subdivided into high-quality, detailed segments or described through a small-scale
+               reproduction of large narrative blocks. BTDE is, hence, an interesting negotiation
+               between continuity and fragmentation: the continuity of the embroidery is preserved,
+               yet each panel is enhanced with high-quality reproductions, commentaries, and
+               ancillary media. <figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-1.png"/>
+                  <head type="legend">A traditional edition of the Bayeux Tapestry (here, <ref
+                        type="crossref" target="#gameson1997">Gameson 1997</ref>). To render the
+                     details, the embroidery is segmented into different plates.</head>
+               </figure></p>
+            <p xml:id="p5">Indeed, the project “maintains a semblance of editorial control (and
+               stability) by presenting its material in a docucentric structure” (<ref
+                  type="crossref" target="#foys2011">Foys 2011, Introduction</ref>), as most of the
+               resources are anchored to the Tapestry displayed on the home page. Thanks to this
+               editorial choice, BTDE can be considered a forerunner of a standard model of SDE –
+               later described in Pierazzo (<ref type="crossref" target="#pierazzo2017">2017,
+                  2</ref>) – characterised by the “centrality” and the “pervasive presence of
+               reproductions”. As a matter of fact, the edition proposes to the reader a
+               high-fidelity reproduction of the embroidery, based on the critical edition published
+               by Wilson in 1985. This version can also be compared from the “Versions” dropdown
+               menu with three relevant facsimile reproductions: Montfaucon’s (1728), Stothard’s
+               (1828), and Reading City Museum’s by Wardle (1885). This choice is led by two
+               considerations. Firstly, it uses these copies as <emph>descripti</emph> to identify
+               possible modifications to the original inscriptions during the restoration campaigns.
+               Secondly, the presence of the facsimiles highlights how BTDE’s editor considered the
+               embroidery, in its double nature of image and texts, as a precious source to
+               reconstruct the history of culture and of the reception of this artwork.<note
+                  xml:id="ftn2">Pasquali (<ref type="crossref" target="#pasquali2020">2020,
+                  26</ref>) mentions the role of <emph>codices descripti</emph>, particularly in the
+                  history of culture. The facsimiles were created both to have a reliable
+                  reproduction in case of damage to the original embroidery and to allow diffusion
+                  of the French artwork in England. They are interesting sources for understanding
+                  the reception of the Tapestry, similar to engravings for artistic
+                  masterpieces.</note></p>
+            <p xml:id="p6">If this structure hence proves BTDE’s kinship with previous printed
+               editions, other features show an influence of the digital scholarly tendencies at the
+               beginning of the twenty-first century. As shown by Mancinelli and Pierazzo (<ref
+                  type="crossref" target="#mancinelli_pierazzo2021">2021, 38</ref>), one of these
+               aspects is the implementation of <emph>hypertext</emph>: BTDE “uses the computer to
+               transcend the linear, bounded and fixed qualities of the traditional written text”
+                  (<ref type="crossref" target="#landow_delany1991">Landow and Delany 1991,
+                  227</ref>). In this way, the reader experience is richer in comparison with
+               traditional printed books, as the “BTDE enhances the ability to produce multiple
+               versions of the Tapestry simultaneously, realized through the user’s interaction with
+               the readings presented in the body of commentary” and the secondary material (<ref
+                  type="crossref" target="#foys2011">Foys 2011, Introduction</ref>).</p>
+            <div xml:id="div2.1">
+               <head>Analysis of the Content: Between Hypertext and Hypermedia</head>
+               <p xml:id="p7">The user can acquire a comprehensive knowledge of the Tapestry thanks
+                  to the material provided by this edition, which analyses the inscription and the
+                  images of the manufactured object and reconstructs its historical background.
+                  Indeed, on the <ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D1"
+                     >default “Bayeux” page</ref>, each scene can be chosen to be accompanied by a
+                  comment (inactive by default) through a “Commentary” toggle button, consisting of
+                  a detailed description of both the scene and its details and of the events’
+                  historical background. Relevant restoration campaigns are also mentioned and the
+                  iconology of the figures in the upper and lower borders is deciphered. The late
+                  Latin inscriptions commenting on the scenes are also analysed in this section and
+                  are transcribed and translated into English above the reproduction of the
+                  embroidery, thanks to another toggle button (see <ref type="crossref"
+                     target="#img2">Fig. 2</ref>). The selection of the available resources is hence
+                  meant to reconstruct the <emph>Zeitgeist</emph> of the artwork. This setting is
+                  also evident in the section “Background”, whose material is both
+                     <emph>hypertextual</emph> and <emph>hypermedial</emph>. Indeed, the project
+                  extends “hypertext by reintegrating our visual and auditory faculties into textual
+                  experience, linking graphic images, sound, and video to verbal signs” (<ref
+                     type="crossref" target="#landow_delany1991">Landow and Delany 1991, 231</ref>).
+                     <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-2.png"/>
+                     <head type="legend">Main page of BTDE.</head>
+                  </figure>
+               </p>
+               <p xml:id="p8">Regarding background information, the “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DGenealogy%26part%3Ddefault"
+                     >Genealogy</ref>” section, curated by Foys, reconstructs the context of the
+                  dynastic war between the Duke of Normandy and the King of England. The two
+                  branches of the family are distinguished by two different colors, and the user of
+                  the edition can point to any member of the tree to read a brief biography,
+                  supported by several scholarly references. Each source is linked to the general
+                     “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DBibliography"
+                     >Bibliography</ref>” page, consisting of a list of reference titles presented
+                  as raw text. Moreover, the historical background is based not only on modern
+                  studies but also on original sources collected in the section “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DLibrary%26part%3DEd"
+                     >Library</ref>”, either in the form of full-texts or, more often, just through
+                  the most relevant excerpts of the sources (see <ref type="crossref" target="#img3"
+                     >Fig. 3</ref>). <figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-3.png"/>
+                     <head type="legend">Library panel of BTDE (here, <emph>The Ship of William the
+                           Conqueror</emph>).</head>
+                  </figure> The seventeen documents (see <ref type="crossref" target="#img4">Fig.
+                     4</ref>) are dated between the eleventh and the first half of the twelfth
+                  century. They also allow non-specialist users to reconstruct how these events were
+                  originally perceived by contemporary historians. Indeed, the section offers a
+                  printable modern English translation that the users can select through an
+                  interactive index, which is displayed as soon as they land on this section. A
+                  similar panel provides a brief description of the visualized document
+                  (“Introduction”), a short set of notes, which can be directly reached with the
+                  hyperlinks in the main text (“Notes”), and a list of the bibliographical
+                  references. <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-4.png"/>
+                     <head type="legend">Catalogue of the available texts in the Library section of
+                        BTDE.</head>
+                  </figure>
+               </p>
+               <p xml:id="p9">This interactive paradigm and interface characterise other sections,
+                  like “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DMuseum%26part%3Dfrnt"
+                     >Museum</ref>”, conceived to describe the material culture connected to the
+                  embroidery. Each element is displayed on the right and commented on the left.
+                  Different modalities of visualization are proposed, like “full screen” or “split
+                  screen”, allowing to compare the analysed virtual items and a specific element of
+                  the Tapestry (see <ref type="crossref" target="#img5">Fig. 5</ref>). This tool is
+                  also relevant from an art-historical point of view as it allows readers to
+                  identify motifs and iconographic sources (seals, illuminated manuscripts,
+                  architectures, etc.) for the embroidery (see also <ref type="crossref"
+                     target="#div4.2">section 4.2</ref>). The attempt to reconstruct not only the
+                  military history but also the eleventh-century way of life is addressed as well by
+                  the “<ref type="crossref"
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DGlossary%26part%3Ddefault"
+                     >Glossary</ref>”, describing the events, the people, and the places presented
+                  by the Tapestry. It contains an interesting <emph>excursus</emph> on social and
+                  cultural aspects identifiable in the embroidery, which are enhanced with
+                  hyperlinks to other relevant contents available in BTDE. <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-5.png"/>
+                     <head type="legend">“King's Edward Seal”, split screen view.</head>
+                  </figure>
+               </p>
+               <p xml:id="p10">In the Glossary, the references to relevant places are intimately
+                  linked to the “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DMap%26part%3D0%26amp%3Bsection%3DHastings"
+                     >Map</ref>” section (unfortunately, this section cannot be properly viewed
+                  anymore), storing information and animations concerning the battlefield of
+                  Hastings and the main places mentioned by the Tapestry. Presumably, this section
+                  should have allowed us to dive into an immersive multisensorial experience.
+                  Unfortunately, this functionality cannot be enjoyed completely or even at all in
+                  specific browsers. Indeed, this SDE, which was originally published in CD-ROMs,
+                  suffers the obsolescence of different technical infrastructures: for example, the
+                  panels of “Click map” (<ref type="crossref" target="#img6">Fig. 6</ref>) or
+                  “Battle map” (<ref type="crossref" target="#img7">Fig. 7</ref>) cannot be
+                  visualized correctly, as uploaded as a Shockwave Flash directly embedded in the
+                  HTML code (see <ref type="crossref" target="#code1">Code 1</ref>).<note
+                     xml:id="ftn3">The format was declared obsolete at the end of 2020, but it can
+                     still be opened with external software (e.g., Ruffle).</note>
+                  <figure xml:id="code1">
+                     <eg> &lt;object width="557" height="493"&gt;<lb/> &lt;embed
+                        src="http://www.inklesseditions.com/TCR/Bayeux/images/map0.swf" width="557"
+                        height="493" allowscriptaccess="always" bgcolor="#141443"
+                        wmode="transparent"&gt;<lb/> &lt;/object&gt; </eg>
+                     <head type="legend">Embedding of maps in the HTML code.</head>
+                  </figure>
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-6.png"/>
+                     <head type="legend">Visualization of the SWF files of the page “Click
+                        map”.</head>
+                  </figure>
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-7.png"/>
+                     <head type="legend">Visualization of the SWF files of the page “Battle
+                        camp”.</head>
+                  </figure>
+               </p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Aims and Methods of the Edition</head>
+            <p xml:id="p11">Although the edition displays the content in an intuitive structure
+               without omitting relevant material, the methodology, especially concerning textual
+               scholarship, is less covered. This inaccuracy can be seen already in the lack of a
+               proper <emph>philological statement</emph>. The sole section which may provide useful
+               food for thought in this direction is the “<ref
+                  target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DIntroduction%26part%3D1"
+                  >Introduction</ref>”. Here, after a short bibliographical reconstruction of the
+               history of the Tapestry, the aims of the project are stated. BTDE is not conceived as
+               a <emph>summa</emph> of the previous studies on the embroidery. Rather, the editors
+               identify the keywords <emph>hypertext</emph> and <emph>hypermedia</emph> as the focal
+               point of the publication, which provides an enhanced reading experience of the edited
+               artefact.</p>
+            <p xml:id="p12">Therefore, the contribution of these two core concepts to the field of
+               digital scholarly editing can be interpreted as the main ambitious research question
+               of the project, which is addressed to both nonspecialist readers and scholars. Yet,
+               at a closer look, specific goals can be recognized. In particular, the richness and
+               the quality of the “Background” resources show how Foys is interested in the “history
+               of the culture” (<ref target="#pasquali2020">Pasquali 2020, 26</ref>) rather than in
+               a sole textual analysis. The <emph>hypertextual</emph> structure is the framework
+               where the editor sews together all the different cultural instances provided by the
+               SDE: the embroidery is here interpreted as a potential indirect fresco of the way of
+               life along the Channel in the eleventh century. “A hypermedia edition” – explains
+               Foys (<ref target="#foys2011">2011, Introduction</ref>) – “also recaptures, if only
+               by analogy, a sense that the Tapestry itself was a multimedia document in which
+               meaning was found through a shifting collusion of space, location, image, text,
+               border, and perhaps even sound”.</p>
+            <p xml:id="p13">In this direction, the adopted methodological approach might be
+               understood as a reader-oriented critical sensitiveness. Of course, this has a great
+               impact on defining the ‘implicit reader’ of the SDE. The project refuses a
+               self-definition: its title mentions the edited document and the publication medium
+                  (<emph>digital</emph>). Nonetheless, an ideal reader can be modelled starting from
+               the available material. Although the scholarly rigour can be identified by the
+               massive, high-quality, and well-documented resources, the publication is thought not
+               only for an academic audience but is also conceived with an educational purpose as it
+               allows the user to experience the Tapestry as ‘an eleventh-century viewer’.</p>
+            <p xml:id="p14">Given the importance of the photographic facsimile, BTDE can be
+               considered as a documentary edition. Indeed, the project is presented as “the
+               recording of as many features of the original document as are considered meaningful
+               by the editors, displayed in all the ways the editors consider useful for the
+               readers, including all the tools necessary to achieve such a purpose” (<ref
+                  type="crossref" target="#pierazzo2011">Pierazzo 2011, 475</ref>). Yet, the double
+               nature of the embroidery of <emph>text</emph> and <emph>image</emph> is unevenly
+               reproduced. Indeed, the iconographic and material aspects are thoroughly scrutinized
+               throughout the edition, while the accurate rendering of the textual inscriptions is
+               not prioritized as the editor’s mission sometimes appears more educational than
+               philological. For example, the default visualization of the edition displays the text
+               in a modern English translation rather than in Latin. This subordination reflects a
+               specific feature of the Tapestry, where the “text constitutes a reduced chronicle of
+               marginal, but not insignificant, importance, apparently subordinated visually and
+               functionally to the larger figural imagery” (<ref type="crossref"
+                  target="#brilliant1991">Brilliant 1991, 107</ref>).</p>
+            <p xml:id="p15">Consequently, the general analysis of the inscriptions is limited to a
+               section of the “<ref
+                  target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DGlossary%26part%3Ddefault"
+                  >Glossary</ref>”, besides other ‘details’ such as hairstyles, costumes, or
+               vegetation. Here, Foys performs a palaeographical analysis of the inscriptions,
+               stating that the letters are “drawn from a mixture of both epigraphic and manuscript
+               models”, of capital and semi-uncial characters. Foys’ chosen solution is here a
+               semi-diplomatic transcription, but the lack of a philological statement causes some
+               inaccuracies, as shown in the <ref type="crossref" target="#appendix">Appendix</ref>. </p>
+            <p xml:id="p16">Lastly, the extensive commentary on the main page, especially in the
+               sections “Restoration” and “Inscriptions”, is intended as an apparatus where the
+               original Tapestry is compared with the facsimiles to identify variants. After a
+               thorough bibliographical analysis, these variants are then catalogued either as
+               innovations of the <emph>descripti</emph> or as possible modifications to the
+                  <emph>antigraph</emph> during restoration campaigns. These sections also contain
+               palaeographic notes on textual information, as well as references to relevant traits
+               to define the language variety from a diachronic and diatopic perspective. However,
+               as shown, this plethora of resources is not considered the major priority by the
+               scholar.</p>
+            <p xml:id="p17">This minor attention paid to the inscriptions is evident also in their
+               rendering in the digital medium. As a matter of fact, they are encoded as plain HTML
+               paragraphs. The documentation of the edition does not provide information in this
+               regard: the “Introduction” section does not refer to a computer-driven management of
+               the text nor provide information about the structure of the database. More insight on
+               the rendering of the textual context and the structure of the database can be instead
+               retrieved in a presentation of BTDE – in its first CD-ROM edition – by Foys in the
+               journal Documentary Editing (<ref type="crossref" target="#foys2001">Foys
+               2001</ref>). However, also this description is not detailed and connects the
+               management of textual data with the “Search” functionality, which is discussed later
+               in this review in <ref type="crossref" target="#div4.2">section 4.2</ref>: “Each
+               textual lexias in the program is stored as an external HTML file; these files in turn
+               are compiled into a database file which may be searched through standard Boolean
+               operands” (<ref type="crossref" target="#foys2001">Foys 2001, 39</ref>). Also in this
+               latter contribution, no other piece of information about the architecture of the
+               database is provided.</p>
+            <p xml:id="p18">This last contribution therefore confirms that inscriptions are rendered
+               as <code>&lt;p&gt;</code> tags, which have been manually compiled without further
+               annotation, and not as a text firstly marked up following the TEI Guidelines and
+               later converted into an HTML document with an XSLT script. This approach fails to
+               highlight those <emph>loci</emph> of the Tapestry that could pave the way to
+               philological and linguistic analyses of the text. However, this can be justified by
+               the technological possibilities available at the beginning of the Nineties. As said,
+               the development of the original BTDE CD-ROM version lasted almost a decade, from 1994
+               to 2003: <cit>
+                  <quote>TEI P3 was not even released until 1994, and there was then minimal (if
+                     any) support for the intensive kind of graphic display and navigation that the
+                     BTDE required. TEI was also still based in SGML, not XML at that time. The
+                     shift to XML did not happen until TEI P4 in 2002 – again, then, while support
+                     for graphic display was developing, TEI was still not designed to easily
+                     accommodate intensive graphic display and on-they-fly assemblages of images
+                     into a continuous display. At that time (2002), it would have made little sense
+                     to (re)program the edition in TEI - and also would have required an incredible
+                     amount of coding labor, even if some of the edition’s functionality could have
+                     been replicated, which at the time appeared difficult at best, and doubtful at
+                     worst.</quote>
+                  <bibl>Foys 2023</bibl>
+               </cit>
+            </p>
+         </div>
+         <div xml:id="div4">
+            <head>Publication and Presentation</head>
+            <div xml:id="div4.1">
+               <head>Structure of the Website and Organization of the Resources</head>
+               <p xml:id="p19">Being published at the beginning of the new millennium, BTDE was
+                  originally distributed on CD-ROMs, whose content was later transferred to an open
+                  website (see <ref type="crossref" target="#div4.2">section 4.2</ref>). The current
+                  interface is based on simple UI elements such as buttons and dropdowns: as better
+                  described in the following paragraphs, this makes the edition accessible also for
+                  non-experts, since the user can easily identify the requested resource. Despite
+                  the lack of a single complete index, the architecture of the website can, in fact,
+                  be easily grasped without looking at the user guidelines of the “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DHelp"
+                     >Help</ref>” page (see <ref type="crossref" target="#img8">Fig. 8</ref>).
+                     <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-8.png"/>
+                     <head type="legend">Structure and organization of the different sections of
+                        BTDE. Personal elaboration.</head>
+                  </figure> The user reaches, by default, the visualization of the first panel.
+                  Thanks to a series of buttons, it is possible to read the commentary, scroll along
+                  the scenes and panels, hide the scene and change the language of the transcription
+                  (Latin or English). From this main page the user can access different resources.
+                  The menu “Versions” allows you to see and compare the four embroideries (the
+                  original and the three facsimiles). </p>
+               <p xml:id="p20">“Background” is undoubtedly the richer section of the website, as it
+                  contains all the additional multimedia and interactive resources (see <ref
+                     type="crossref" target="#div2.1">section 2.1</ref>). It is also responsible for
+                  granting the scholarly quality of the edition, as its subsection “Introduction”
+                  offers a complete bibliographical <emph>excursus</emph> on the most interesting
+                  aspects of Tapestry and its facsimile, which are also mentioned in the “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DBibliography"
+                     >Bibliography</ref>” section. This richness of content also characterizes
+                  peritextual information. This can be stated by analysing “Tools”, which includes
+                  sections concerning credits, search (see <ref type="crossref" target="#div4.2"
+                     >section 4.2</ref>), and support. In particular, the first one has an entire
+                  paragraph devoted to the descriptions of the credits and permissions of the
+                  project. Most of the resources are under Foys’ copyright, and the list of credits
+                  toward external scholars or institutions is reported in detail. The user can read
+                  the edition according to two different licenses (individual and institutional),
+                  which is feasible for scholarly reuse of the data. Unfortunately, this page does
+                  not contain other information on the sustainment of the SDE and on further
+                  implementations. On the contrary, the page defines the project as concluded: the
+                  current version of the SDE is hence to be considered definitive.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Image and Text in the WWW. Remarks on the Editorial Rationale</head>
+               <p xml:id="p21">Any analysis of the editorial principles beneath the BTDE must
+                  consider the historical and technological context in which it was conceived and
+                  developed. As mentioned above, the first release of the edition relied on CD-ROMs.
+                  It was later converted to an online Shockwave display by the publisher, without
+                  any further contribution by the editor (<ref type="crossref" target="#foys2023"
+                     >Foys 2023</ref>).<note xml:id="ftn4">The edition should have allowed switching
+                     between the CD-ROM and the web interface. Nonetheless, the available link does
+                     not work correctly, and a “404 error” page is displayed.</note> Consequently,
+                  the current website relies heavily (if not even entirely) on the first version.
+                  The project, which was published in 2003, had indeed to deal with the difficulties
+                  of the challenges of combining textual resources with a consistent number of
+                  images of these supports (see <ref type="crossref" target="#div3">section
+                  3</ref>). Moreover, financial difficulties were at stake as it was only partially
+                  funded by different scholarly institutions, and an independent publishing house,
+                  “Scholarly Digital Editions”, was responsible for the publication of the
+                  results.</p>
+               <p xml:id="p22">All these constraints are described in an article written by the
+                  co-founder of this commercial activity, Peter Robinson (<ref type="crossref"
+                     target="#robinson2013">2013</ref>). This short historical excursus is
+                  interesting as it first describes how CD-ROMs and the World Wide Web gave a
+                  consistent impulse to the publication of scholarly digital editions. Later,
+                  Robinson offers a reconstruction of the editorial context at the dawn of the new
+                  millennium, supported by a brief report of the activity of his commercial
+                  activity. “Scholarly Digital Editions”, founded in 2000 by Peter Robinson and
+                  Barbara Bordalejo, was indeed one of the first private and independent publishing
+                  houses trying to cover a consistent hole in this niche of the editorial market.
+                  During its activity, it published ten different editions. However, from a mere
+                  commercial and economic point of view, this experiment was a failure, also owing
+                  to an unfair concurrence with university-affiliated publishing houses. “We lost
+                  money on these publications”, admits the co-founder (<ref type="crossref"
+                     target="#robinson2013">Robinson 2013, 90</ref>). On the other hand, its job was
+                  essential to disseminate and support crucial projects involved in digital
+                  scholarly editing, such as the pivotal SDE by Prue Shaw on Dante’s
+                     <emph>Commedia</emph>. In this context, BTDE is by far one of the most
+                  successful experiments of this enterprise, as it is <emph>the</emph> best-seller
+                  among all the other editions in the entire catalogue (see <ref type="crossref"
+                     target="#img9">Fig. 9</ref>).<note xml:id="ftn5">The catalogue of the
+                     enterprise from its founding to 2013 contains ten titles (in brackets, the
+                     identifier used in <ref type="crossref" target="#img9">Fig. 9</ref> above is
+                     given). Estelle Stubbs (ed.), <emph>The Hengwrt Chaucer Digital
+                        Facsimile</emph>, 2000 (A); Martin Foys (ed.), <emph>The Bayeux Tapestry
+                        Digital Edition</emph>, 2002 (B); Ceridwen Lloyd-Morgan (ed.), <emph>The
+                        Hengwrt Chaucer Standard Edition</emph>, 2003 (C); Barbara Bordalejo (ed.),
+                        <emph>Caxton’s Canterbury Tales: The British Library Copies</emph>, 2003
+                     (D); Elena Pierazzo (ed.), <emph>The Miller’s Tale on CD-ROM</emph>, 2004 (E);
+                     Christopher Given-Wilson et al (eds.), <emph>The Parliament Rolls of Medieval
+                        England</emph>, 2005 (F); Paul Thomas (ed.), <emph>The Nun’s Priest’s Tale
+                        on CD-ROM</emph>, 2006 (G); Prue Shaw (ed.), <emph>Dante: Monarchia</emph>,
+                     2007 (H); Jos Weitenberg (ed.), <emph>Leiden Armenian Lexical Textbase</emph>,
+                     2008 (I); Daniel W. Mosser (ed.), <emph>A Digital Catalogue of the Pre-1500
+                        Manuscripts and Incunables of the Canterbury Tales</emph>, 2010 (J); Prue
+                     Shaw (ed.), <emph>Dante Alighieri: Commedia</emph>, 2010 (K).</note> “The
+                  Bayeux Tapestry” – states Robinson (<ref type="crossref" target="#robinson2013"
+                     >2013, 91</ref>) – “may claim to have sold more copies than any comparable
+                  scholarly digital edition ever”. <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-9.png"/>
+                     <head type="legend">Sold copies of the publications of ‘Scholarly Digital
+                        Editions’. Personal elaboration after Robinson (<ref type="crossref"
+                           target="#robinson2013">2013</ref>).</head>
+                  </figure> In my opinion, the editorial success (as shown in <ref type="crossref"
+                     target="#img9">Fig. 9</ref>, 2,500 copies were sold) and the acknowledgment of
+                  several awards (Choice Outstanding Title award; 2005 prize of the International
+                  Society of Anglo-Saxonists for the best new edition in any medium) is to be
+                  justified with BTDE’s pioneering strategies of sewing together image and texts in
+                  the digital environment. For instance, the edition seems to anticipate the
+                  potentialities of the techniques for image interoperability (such as IIIF, which
+                  would be developed only in 2011). A rapid inspection of the source code reveals
+                  that the facsimile of the edition is uploaded through an <ref
+                     target="https://web.archive.org/web/20240106171033/https://openseadragon.github.io/docs/"
+                     >OpenSeadragon API</ref>. This solution allows us to visualize and zoom in on
+                  minor details of the embroidery without a loss of quality. This performance would
+                  not have been possible with the upload of a mere .jpeg file, which, on the
+                  contrary, still characterizes several SDEs published in the first decade of the
+                  new millennium. Relying on this JavaScript structure, the user can explore the
+                  content in an interactive and intuitive platform. Following the category of
+                  “paradigmatic regression” developed by van Zundert (<ref type="crossref"
+                     target="#vanzundert2016">2016</ref>), it would not be incorrect to claim that
+                  reading the Tapestry in BTDE might resemble viewing a subtitled movie.</p>
+               <p xml:id="p23">The attention to images and additional content, as well as the
+                  interactive features granted by the JavaScript structure, makes the BTDE a crucial
+                  point in the digital philological praxis. The hypermedial and interactive
+                  paradigm, indeed, exceeds the limit of a simple scholarly restitution of the text.
+                  Rather, it tries to gaze at the Tapestry as a unity of image and text developed in
+                  a specific social and political context. In this perspective, it would not be
+                  exaggerated to look at the edition as a hybrid experiment between ecdotic and
+                  museum practice (Foys himself names a section of the website as “Museum”). Indeed,
+                  the editor enhanced the philological restitution of the text with a very common
+                  model of a virtual museum, defined by Caraceni (<ref type="crossref"
+                     target="#caraceni2014">2014</ref>),<note xml:id="ftn6">The virtual museum
+                     category that seems to best describe this model is the category <emph>A</emph>.
+                     A more detailed definition of this aspect is available in Caraceni (<ref
+                        type="crossref" target="#caraceni2014">2014, 183</ref>).</note> whose
+                  collection can be freely browsed within a <emph>closed</emph> environment. This
+                  innovative solution valorises both the tangible and intangible heritage of the
+                  cultural context depicted by the embroidery. The possibility to dynamically
+                  explore these resources thanks to this interactive paradigm is a considerable step
+                  towards democratizing knowledge: in fact, “the editor [manages to reveal]
+                  relationships to the reader: not only relationships among the various texts that
+                  belong to the work, but also those between them and other texts [and objects – I
+                  would add] related to the work” (<ref type="crossref" target="#rasmussen2016"
+                     >Rasmussen 2016, 129</ref>).</p>
+               <p xml:id="p24">In this project, hyperlinks are implemented as an “organizing
+                  principle”, which results in the creation of a deeply intertwined set of
+                  relations. This feature allows for switching from the commentary of the main
+                  scenes to the additional sections available in the background materials.
+                  Nonetheless, the paradigm followed by the edition is still linked to the
+                  methodologies of the Web 1.0 (the Semantic Web was introduced in 2006, i.e.,
+                  almost four years later than the first edition of BTDE). As a matter of fact, the
+                  metadata of the objects presented in the “Background” material is reduced to a
+                  simple description of the source and the hosting institution in plain text.
+                  Consequently, the sole citation guideline available refers to the SDE as a whole
+                  and not to its single parts.</p>
+               <p xml:id="p25">Concerning the publication of the project, the obsolescence of the
+                  use of web technologies is an obstacle to the sustainability of the project. Since
+                  the last version (no update is scheduled) dates to 2011, the website reflects old
+                  visual and functionality standards, starting from the implemented fonts and the
+                  sole export format available (a printable PDF available through the printer icon).
+                  However, these features do not affect the core aspects of the user experience: the
+                  combination of colours is pleasant to the eye, and in textual sections, every
+                  class of hyperlinks is rendered with a specific colour (see also <ref
+                     type="crossref" target="#foys2001">Foys 2001</ref>). This colour-coded
+                  categorisation witnesses the kinship of BTDE interface with the web presentation
+                  of other early scholarly digital humanities. For instance, choosing as a case
+                  study the redesign of the Women Writers Project Online by Brown University from
+                  1999 to 2006, Warwick underlines how this “innovative use of colour” can be
+                  considered one of the main peculiarities of these projects (<ref type="crossref"
+                     target="#warwick2020">Warwick 2020</ref>). She comments that “such a use of
+                  colour is evidently intended to help users unfamiliar with webpages to distinguish
+                  between different parts of the collection” (<ref type="crossref"
+                     target="#warwick2020">Warwick 2020, 7</ref>), which is coherent with
+                  “reader-oriented sensitiveness” of BTDE.</p>
+               <p xml:id="p26">However, the out-of-date version available online still has a major
+                  hindrance to usability, as seen in the analysis of the “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DMap%26part%3D0%26amp%3Bsection%3DHastings"
+                     >Map</ref>” section. In addition, the use of HTTP protocol instead of HTTPS can
+                  lead to different behaviours across different browsers (<ref type="crossref"
+                     target="#siewert-et-al2022">Siewert et al. 2022</ref>) and even to possible
+                  issues in content display (see a more detailed overview on the topic in <ref
+                     type="crossref" target="#paracha-et-al2020">Paracha et al. 2020</ref>). As an
+                  example, at the time of writing this review, the function “<ref
+                     target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DSearch%26search%3D%26section%3DWhole"
+                     >Search</ref>” does not run in all browsers.<note xml:id="ftn7">Suggested
+                     browser: Mozilla Firefox.</note> This page allows users to carry out simple
+                  boolean queries: they can be applied to the entirety of the edition or to a
+                  specific subsection (including the scene commentary but not the transcription),
+                  and they may be combined through logical operators. Given its extremely
+                  streamlined structure, the search engine can be used regardless of the previous
+                  knowledge of the user, even though no further support (e.g. auto-suggestion) is
+                  provided. Lastly, although the license allows the reuse of data, the extraction,
+                  exportation, and re-implementation of the resources of this edition, several
+                  factors make it difficult to extract all the data in a reusable and
+                  machine-readable format: the absence of a consistent data model and of annotated
+                  texts, and the possibility of choosing PDF as the sole export format.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Conclusion</head>
+            <p xml:id="p27">Undoubtedly, BTDE is a ‘critical representation of a historic document’.
+               In this sense, it perfectly fits the definition of SDE proposed by Patrick Sahle, who
+               defines Foys’ project as a “good example” of the implementation of editorial
+               methodology to a cultural artefact that is not exclusively a text carrier (<ref
+                  type="crossref" target="#sahle2016">Sahle 2016, 2</ref>). Indeed, the edition
+               completely fulfils its aim of implementing digital potentialities to recreate a new
+               immersive reading experience of the Tapestry: it is not just a digitized version as,
+               if printed, the complex hyperlink and interactive would fade. The use of
+                  <emph>hypermedia</emph> as an epistemological basis for the structure of the SDE
+               allows for easily identifying in this network-shaped architecture the real digital
+               paradigm of the edition. Through the systematic use of hyperlinks, the project
+               succeeds, in fact, in reproducing the cognitive habits of the reader, offering a
+               multi-layer interpretation of the Tapestry.</p>
+            <p xml:id="p28">The comparison with other scholarly digital editions provides useful
+               coordinates to contextualize the project in the ever-evolving field of digital
+               scholarly editing. The high quality and the richness of the available material are
+               pioneering in the field (especially at the first release date), but the treatment of
+               textual data is unorthodox. The philological statement is not clear: for instance,
+               although it states the epistemological principle, it overlooks the chosen approach
+               for text transcription. This approach reports the inscription in a semi-diplomatic
+               transcription, yet often causing inconsistencies and, more seldom, mistakes (see the
+                  <ref type="crossref" target="#appendix">appendix</ref>).</p>
+            <p xml:id="p29">In <emph>lieu</emph> of conclusion, BTDE is an interesting project from
+               different perspectives, and its quality is certified by general scholarly rigour.
+               Yet, a decade after the last modification, it would need a new, updated release. The
+               possible modification may be delivered in three main directions. Firstly, the
+               software should be updated with current technologies: interesting additional
+               resources (e.g., “<ref
+                  target="https://web.archive.org/web/20240127163235/http:/www.sd-editions.com/bayeux/online/index.html#/background%3DMap%26part%3D0%26amp%3Bsection%3DHastings"
+                  >Map</ref>”) are no longer available due to the obsolescence of the implemented
+               digital infrastructure, which seriously hinders the usability of the edition.
+               Moreover, new scholarly tools for the analysis of textual data and iconographic
+               details (in particular, borders) should be provided.</p>
+            <p xml:id="p30">As mentioned, XML/TEI markup would surely be a key solution: it would
+               allow the creation of indexes and the manipulation of text strings and, lastly, would
+               pave the way to the application of NLP technologies, for example, for more specific
+               queries for linguistic patterns. In addition, the editor deciphers the complex
+               iconology of the borders in the commentaries, but these aspects are difficult to
+               isolate on a large scale. Annotation techniques and <emph>ad hoc</emph> search
+               engines would allow for performing systematic and contrastive iconographic
+               analysis.</p>
+            <p xml:id="p31">Thirdly, a new edition of the BTDE should update the web infrastructure
+               to be compliant with the requisites of the Semantic Web. The rich interconnection
+               between the resources would surely be valorized by the implementation of a Semantic
+               Digital Edition, which fosters “a view of the text ‘from above’, not as a sequence of
+               data but as a network of relationships” (<ref type="crossref"
+                  target="#tomasi-et-al2019">Tomasi, Giovannetti and Daquino 2019, 51</ref>).<note
+                  xml:id="ftn8">Personal translation. Orginal Italian version: “una visione del
+                  testo ‘dall'alto’, non come sequenza di dati ma come rete di relazioni”.</note> In
+               order to achieve this goal, the TEI markup should be enhanced with a serialization as
+               Linked Open Data, which is today made possible in the Text Encoding Initiative.<note
+                  xml:id="ftn9">For example, the <code>&lt;xenoData&gt;</code> section tag allows to
+                  express metadata from other schemes. Regarding this topic, see the reference for
+                  this element in the TEI P5 guidelines, as well as the proceedings of the 2013 TEI
+                  Conference.</note> These changes would considerably improve the usability of the
+               edition and would create a digital object compatible with the most recent framework
+               for data reusability (such as the FAIR principles).</p>
+            <p xml:id="p32">Regardless of these suggestions, BTDE can be considered a milestone
+               project in the field of SDE for its time. Foys’ intuition of identifying
+                  <emph>hypermediality</emph> as the paradigm for translating a multimedial artefact
+               into an easily surfable digital environment is innovative and ambitious. Indeed, it
+               is also addressed to a non-specialized audience and, lastly, advances new frontiers
+               of the field of digital scholarly editing, highlighting the potentialities of those
+               editorial practices when applied at the intersection of art history and literary
+               studies.</p>
+         </div>
+         <div type="appendix">
+            <head>Appendix. Features of Inscriptions and Transcription Habits: a Minimum
+               Sample</head>
+            <p>The editor divides the words, which are embroidered in <emph>scriptio continua</emph>
+                  (<ref type="crossref" target="#img10">Fig. 10</ref>), without reflecting the
+               layout of the Tapestry (<ref type="crossref" target="#img11">Fig. 11</ref>), as the
+               line break is usually marked just by a white space (<ref type="crossref"
+                  target="#img12">Fig. 12</ref>). Moreover, the polychrome of the inscription is not
+               rendered (<ref type="crossref" target="#img13">Fig. 13</ref>). On the contrary, the
+               editor keeps the alternate between capital and semi-uncial characters (<ref
+                  type="crossref" target="#img14">Fig. 14</ref> and <ref type="crossref"
+                  target="#img15">15</ref>). Yet, some inconsistencies can be found (see the
+               different rendering of <emph>WIDONIS</emph> in <ref type="crossref" target="#img11"
+                  >Fig. 11</ref>, with an apparently lowercase dental, and <emph>WIDO</emph>, <ref
+                  type="crossref" target="#img16">Fig. 16</ref>). The arcigrapheme &lt;V&gt; is
+               distinguished between [u] (<ref type="crossref" target="#img17">Fig. 17</ref>) and
+               [v] (<ref type="crossref" target="#img18">Fig. 18</ref>), while the occurrences of
+               &lt;VV&gt;, probably correspondent to [gw], are rendered as &lt;W&gt;, even though
+               the transcription is not always consistent (<ref type="crossref" target="#img16">Fig.
+                  16</ref>, <ref type="crossref" target="#img17">17</ref>, <ref type="crossref"
+                  target="#img18">18</ref>).</p>
+            <p>The editor does not distinguish <emph>legaturae</emph> (<ref type="crossref"
+                  target="#img19">Fig. 19</ref>, <ref type="crossref" target="#img20">20</ref>, <ref
+                  type="crossref" target="#img21">21</ref>) and <emph>tituli</emph> (<ref
+                  type="crossref" target="#img22">Fig. 22</ref>, <ref type="crossref"
+                  target="#img23">23</ref>, <ref type="crossref" target="#img24">24</ref>, <ref
+                  type="crossref" target="#img25">25</ref>, and <ref type="crossref" target="#img26"
+                  >26</ref>), either: they are rendered within the brackets, but in 8b, the entire
+               word is rewritten. Short-hand symbols (e.g., the Tironian note in <ref
+                  type="crossref" target="#img27">Fig. 27</ref>) are solved similarly. Moreover,
+               conjectures are identified by “(…?)” and square brackets (<ref type="crossref"
+                  target="#img28">Fig. 28</ref>), while emendations are signalled similarly to
+                  <emph>tituli</emph>. In addition, some of these corrections are not always
+               necessary. The Latin of the Tapestry does not coincide with the Classical
+                  variety.<note xml:id="ftn10">A precise phenomenology of Late Antiquity Latin is
+                  provided by Clackson and Horrocks (<ref type="crossref"
+                     target="#clackson_horrocks2007">2007</ref>).</note> This can be evident just
+               from a lexical point of view (<emph>caballi</emph> instead of <emph>equi</emph>,
+                  <emph>parabolant</emph> instead of <emph>loquntur</emph>): the transcription
+               itself does not correct simplified diphthongs (<emph>prelium</emph>, <ref
+                  type="crossref" target="#img29">Fig. 29</ref>), but sometimes implements
+               morphosyntactic corrections. For instance, the suffix of the accusative is added
+                  (<ref type="crossref" target="#img30">Fig. 30</ref>), or active verbs are
+               reconducted to the classical deponent form (<ref type="crossref" target="#img31">Fig.
+                  31</ref>). <table xml:id="table1">
+                  <head>Sample of inscriptions and transcription habits</head>
+                  <row role="label">
+                     <cell>Case</cell>
+                     <cell>Facsimile</cell>
+                     <cell>Transcription</cell>
+                     <cell>Panel<note xml:id="ftn11">It is possible to directly reach the discussed
+                              <emph>locus</emph> both by clicking on the embedded hyperlink in the
+                           case number (first column) or by manually typing the corresponding panel
+                           number (third column) in the slider in upper right corner of BTDE main
+                           section.</note></cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D3"
+                           >1.</ref></cell>
+                     <cell><figure xml:id="img10">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-10.png"/>
+                           <head type="legend">ET SUI MILITES: EQUITANT</head>
+                        </figure></cell>
+                     <cell>ET SUI MILITES: EQUITANT</cell>
+                     <cell>3</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D9"
+                           >2.</ref></cell>
+                     <cell><figure xml:id="img11">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-11.png"/>
+                           <head type="legend">ET VELIS: VENTO: PLENIS VE==NIT: IN TERRA: WIDONIS
+                              COMITIS</head>
+                        </figure></cell>
+                     <cell>ET VELIS: VENTO: PLENIS VE==NIT: IN TERRA: WIDONIS COMITIS</cell>
+                     <cell>9</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D27"
+                           >3.</ref></cell>
+                     <cell><figure xml:id="img12">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-12.png"/>
+                           <head type="legend">NUNTIUS : AD WIL GELMUM DUCEM</head>
+                        </figure></cell>
+                     <cell>NUNTIUS : AD WIL GELMUM DUCEM</cell>
+                     <cell>27</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D111"
+                           >4.</ref></cell>
+                     <cell><figure xml:id="img13">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-13.png"/>
+                           <head type="legend">ET hIC EPISCOPUS : CIBU(M) : ET : POTU(M)
+                              BENEDICIT</head>
+                        </figure></cell>
+                     <cell>ET hIC EPISCOPUS : CIBU(M) : ET : POTU(M) BENEDICIT</cell>
+                     <cell>111</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D29"
+                           >5a.</ref></cell>
+                     <cell><figure xml:id="img14">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-14.png"/>
+                           <head type="legend">hAROLDUm</head>
+                        </figure></cell>
+                     <cell>hAROLDUm</cell>
+                     <cell>29</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D97"
+                           >5b.</ref></cell>
+                     <cell><figure xml:id="img15">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-15.png"/>
+                           <head type="legend">AD PeVeNeSÆ :-</head>
+                        </figure></cell>
+                     <cell>AD PeVeNeSÆ :-</cell>
+                     <cell>97</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D14"
+                           >6a.</ref></cell>
+                     <cell><figure xml:id="img16">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-16.png"/>
+                           <head type="legend">WIDO:</head>
+                        </figure></cell>
+                     <cell>WIDO:</cell>
+                     <cell>14</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D126"
+                           >6b.</ref></cell>
+                     <cell><figure xml:id="img17">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-17.png"/>
+                           <head type="legend">VVILLeLM</head>
+                        </figure></cell>
+                     <cell>VVILLeLM</cell>
+                     <cell>126</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D78"
+                           >6c.</ref></cell>
+                     <cell><figure xml:id="img18">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-18.png"/>
+                           <head type="legend">WILLELMI</head>
+                        </figure></cell>
+                     <cell>WILLELMI</cell>
+                     <cell>78</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D161"
+                           >7a.</ref></cell>
+                     <cell><figure xml:id="img19">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-19.png"/>
+                           <head type="legend">PUGNANT</head>
+                        </figure></cell>
+                     <cell>PUGNANT</cell>
+                     <cell>161</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D3"
+                           >7b.</ref></cell>
+                     <cell><figure xml:id="img20">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-20.png"/>
+                           <head type="legend">AECLLESIA</head>
+                        </figure></cell>
+                     <cell>AECLLESIA</cell>
+                     <cell>4</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D110"
+                           >7c.</ref></cell>
+                     <cell><figure xml:id="img21">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-21.png"/>
+                           <head type="legend">MINISTRAVeRUN(T)</head>
+                        </figure></cell>
+                     <cell>MINISTRAVeRUN(T)</cell>
+                     <cell>110</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D14"
+                           >8a.</ref></cell>
+                     <cell><figure xml:id="img22">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-22.png"/>
+                           <head type="legend">HAROLDU(m)</head>
+                        </figure></cell>
+                     <cell>HAROLDU(m)</cell>
+                     <cell>14</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D24"
+                           >8b.</ref></cell>
+                     <cell><figure xml:id="img23">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-23.png"/>
+                           <head type="legend">AD WIDO NE (Widonem)</head>
+                        </figure></cell>
+                     <cell>AD WIDO NE (Widonem)</cell>
+                     <cell>24</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D67"
+                           >8c.</ref></cell>
+                     <cell><figure xml:id="img24">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-24.png"/>
+                           <head type="legend">ECClESIAM : S(AN)C(T)I PETRI AP(OSTO)LI</head>
+                        </figure></cell>
+                     <cell>ECClESIAM : S(AN)C(T)I PETRI AP(OSTO)LI</cell>
+                     <cell>67</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D158"
+                           >8d.</ref></cell>
+                     <cell><figure xml:id="img25">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-25.png"/>
+                           <head type="legend">ODO EP(iscopu)S :</head>
+                        </figure></cell>
+                     <cell>ODO EP(iscopu)S :</cell>
+                     <cell>158</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D70"
+                           >8e.</ref></cell>
+                     <cell><figure xml:id="img26">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-26.png"/>
+                           <head type="legend">ALLOQUIT(UR) :</head>
+                        </figure></cell>
+                     <cell>ALLOQUIT(UR) :</cell>
+                     <cell>70</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D19"
+                           >9.</ref></cell>
+                     <cell><figure xml:id="img27">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-27.png"/>
+                           <head type="legend">7 (et) WIDO:</head>
+                        </figure></cell>
+                     <cell>7 (et) WIDO:</cell>
+                     <cell>19</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D161"
+                           >10.</ref></cell>
+                     <cell><figure xml:id="img28">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-28.png"/>
+                           <head type="legend">E . . . . . (T?)IUS [EUSTATIUS]</head>
+                        </figure></cell>
+                     <cell>E . . . . . (T?)IUS [EUSTATIUS]</cell>
+                     <cell>161</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D125"
+                           >11a.</ref></cell>
+                     <cell><figure xml:id="img29">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-29.png"/>
+                           <head type="legend">AD PreLIUM :</head>
+                        </figure></cell>
+                     <cell>AD PreLIUM :</cell>
+                     <cell>125</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D125"
+                           >11b.</ref></cell>
+                     <cell><figure xml:id="img30">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-30.png"/>
+                           <head type="legend">CONTRA : hAROLDUM . REGe(M)</head>
+                        </figure></cell>
+                     <cell>CONTRA : hAROLDUM . REGe(M)</cell>
+                     <cell>125</cell>
+                  </row>
+                  <row role="data">
+                     <cell><ref
+                           target="http://www.sd-editions.com/bayeux/online/index.html#/facsimile%3DBayeux%26panel%3D73"
+                           >11c.</ref></cell>
+                     <cell><figure xml:id="img31">
+                           <graphic
+                              url="http://ride.i-d-e.de/wp-content/uploads/issue_20/bayeux/pictures/picture-31.png"/>
+                           <head type="legend">ISTI MIRANT(UR)</head>
+                        </figure></cell>
+                     <cell>ISTI MIRANT(UR)</cell>
+                     <cell>73</cell>
+                  </row>
+               </table>
+            </p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="brilliant1991">Brilliant, Richard. 1991. “The Bayeux Tapestry: a
+                  stripped narrative for their eyes and ears.” <emph>Word &amp; Image: A Journal of
+                     Verbal/Visual Enquiry</emph> 7:2: 98–126. <ref
+                     target="https://doi.org/10.1080/02666286.1991.10435818"
+                     >https://doi.org/10.1080/02666286.1991.10435818</ref>.</bibl>
+               <bibl xml:id="caraceni2014">Caraceni, Simona. 2014. <emph>Designing a taxonomy of
+                     virtual museums for the use of AVICOM professionals.</emph> PhD Thesis,
+                  Plymouth University.</bibl>
+               <bibl xml:id="ciula_ciotti2014">Ciula, Arianna, and Fabio Ciotti, eds. 2014.
+                  “Selected Papers from the 2013 TEI Conference”, <emph>Journal of the Text Encoding
+                     Initiative</emph> 8. <ref target="https://doi.org/10.4000/jtei.1025"
+                     >https://doi.org/10.4000/jtei.1025</ref>.</bibl>
+               <bibl xml:id="clackson_horrocks2007">Clackson, James, and Geoffrey Horrocks. 2007.
+                  “Latin in Late Antiquity and Beyond.” In <emph>The Blackwell History of the Latin
+                     Language</emph>, 265–304. Malden: Blackwell Publishing.</bibl>
+               <bibl xml:id="foys2001">Foys, Martin K. 2001. “Hypertextile Scholarship: Digitally
+                  Editing the Bayeux Tapestry.” <emph>Documentary Editing: Journal of the
+                     Association for Documentary Editing (1979–2011)</emph> 23 (2): 34–43. <ref
+                     target="https://web.archive.org/web/20250222175117/https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1437&amp;context=docedit"
+                     >https://web.archive.org/web/20250222175117/https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1437&amp;context=docedit</ref>.</bibl>
+               <bibl xml:id="foys2011">Foys, Martin K., ed. 2011. <emph>Bayeux Tapestry Digital
+                     Edition (revised edition). Scholarly Digital Editions.</emph> Accessed January
+                  27, 2024. <ref target="http://www.sd-editions.com/bayeux/online/index.html#"
+                     >http://www.sd-editions.com/bayeux/online/index.html#</ref>.</bibl>
+               <bibl xml:id="foys2023">Foys, Martin K., answer to an email by Manuele Veggi. 2023.
+                     <emph>Bayeux Tapestry Digital Edition: Request of Information</emph> (February
+                  5).</bibl>
+               <bibl xml:id="gameson1997">Gameson, Richard. 1997. <emph>The Study of the Bayeux
+                     Tapestry.</emph> Woodbridge: The Boydel Press.</bibl>
+               <bibl xml:id="landow_delany1991">Landow, George, and Paul Delany. 1991. “Hypertext,
+                  hypermedia and literary studies: the state of the art.” In <emph>Hypermedia and
+                     Literary Studies</emph>, edited by Paul Delany and George P. Landow. Cambridge:
+                  MIT Press.</bibl>
+               <bibl xml:id="mancinelli_pierazzo2021">Mancinelli, Tiziana, and Elena Pierazzo. 2021.
+                     <emph>Che cos'è un'edizione critica digitale.</emph> Roma: Carocci
+                  editore.</bibl>
+               <bibl xml:id="paracha-et-al2020">Paracha, Muhammad Talha, Balakrishnan
+                  Chandrasekaran, David Choffnes, and Dave Levin. 2020. “A Deeper Look at Web
+                  Content Availability and Consistency over HTTP/S.” <emph>Traffic Monitoring and
+                     Analysis.</emph>
+                  <ref
+                     target="https://web.archive.org/web/20250223095517/https://www.cs.umd.edu/~dml/papers/https_tma20.pdf"
+                     >https://web.archive.org/web/20250223095517/https://www.cs.umd.edu/~dml/papers/https_tma20.pdf</ref>.</bibl>
+               <bibl xml:id="pasquali2020">Pasquali, Giorgio. 2020. <emph>Storia della tradizione e
+                     critica del testo.</emph> Firenze: Le Lettere.</bibl>
+               <bibl xml:id="pierazzo2011">Pierazzo, Elena. 2011. “A rationale of digital
+                  documentary editions.” <emph>Literary and Linguistic Computing</emph> 26 (4):
+                  463–477. <ref target="https://doi.org/10.1093/llc/fqr033"
+                     >https://doi.org/10.1093/llc/fqr033</ref>.</bibl>
+               <bibl xml:id="pierazzo2017">Pierazzo, Elena. 2017. “Facsimile and Document-Centric
+                  Editing.” In <emph>Creating a Digital Scholarly Edition with the Text Encoding
+                     Initiative. A Textbook for Digital Humanists</emph>, edited by Marjorie
+                  Burghart. DEMM. <ref
+                     target="https://web.archive.org/web/20250223102119/https://ec.europa.eu/programmes/erasmus-plus/project-result-content/cfb03c8e-6765-477e-aa4d-e2b162f57068/IO2_Creating%20a%20digital%20edition%20with%20the%20TEI.pdf"
+                     >https://web.archive.org/web/20250223102119/https://ec.europa.eu/programmes/erasmus-plus/project-result-content/cfb03c8e-6765-477e-aa4d-e2b162f57068/IO2_Creating%20a%20digital%20edition%20with%20the%20TEI.pdf</ref>.</bibl>
+               <bibl xml:id="rasmussen2016">Rasmussen, Krista Stinne Greve. 2016. “Reading or Using
+                  a Digital Edition? Reader Roles in Scholarly Editions.” In <emph>Digital Scholarly
+                     Editing. Theories and Practices</emph>, edited by Matthew J. Driscoll and Elena
+                  Pierazzo, 119–136. Cambridge: Open Book Publishers. <ref
+                     target="http://dx.doi.org/10.11647/OBP.0095.07"
+                     >http://dx.doi.org/10.11647/OBP.0095.07</ref>.</bibl>
+               <bibl xml:id="robinson2013">Robinson, Peter. 2013. “The History of Scholarly Digital
+                  Editions, Plc.” <emph>Papers of The Bibliographical Society of Canada</emph> 51
+                  (1): 83–104. <ref target="https://doi.org/10.33137/pbsc.v51i1.20763"
+                     >https://doi.org/10.33137/pbsc.v51i1.20763</ref>.</bibl>
+               <bibl xml:id="sahle2016">Sahle, Patrick. 2016. “What is a Scholarly Digital Edition?”
+                  In <emph>Digital Scholarly Editing. Theories and Practices</emph>, edited by
+                  Matthew J. Driscoll and Elena Pierazzo, 19–40. Cambridge: Open Book Publishers.
+                     <ref target="http://dx.doi.org/10.11647/OBP.0095.02"
+                     >http://dx.doi.org/10.11647/OBP.0095.02</ref>.</bibl>
+               <bibl xml:id="siewert-et-al2022">Siewert, Hendrik, Martin Kretschmer, Marcus
+                  Niemietz, and Juraj Somorovsky. 2022. “On the security of parsing
+                  security-relevant HTTP headers in modern browsers.” In <emph>2022 IEEE Security
+                     and Privacy Workshops (SPW), San Francisco, CA, USA, 2022</emph>, 342–352. <ref
+                     target="https://doi.org/10.1109/spw54247.2022.9833880"
+                     >https://doi.org/10.1109/spw54247.2022.9833880</ref>.</bibl>
+               <bibl xml:id="spear1992">Spear, David. 1992. “Recent Scholarship on the Bayeux
+                  Tapestry: David M. Wilson, «The Bayeux Tapestry; David J. Bernstein, The Mystery
+                  of the Bayeux Tapestry»; N. P. Brooks and H. E. Walker, «The Authority and
+                  Interpretation of the Bayeux Tapestry»; Shirley Ann Brown, «The Bayeux Tapestry :
+                  History and Bibliography».” <emph>Annales de Normandie</emph> 42 (2):
+                  221–226.</bibl>
+               <bibl xml:id="tomasi-et-al2019">Tomasi, Francesca, Francesca Giovannetti, and
+                  Marilena Daquino. 2019. “Linked Data per le edizioni scientifiche digitali. Il
+                  workflow di pubblicazione dell'edizione semantica del quaderno di appunti di Paolo
+                  Bufalini.” <emph>Umanistica Digitale</emph> 7. <ref
+                     target="http://doi.org/10.6092/issn.2532-8816/9091"
+                     >http://doi.org/10.6092/issn.2532-8816/9091</ref>.</bibl>
+               <bibl xml:id="unesco2006">UNESCO. 2006. “Bayeux Tapestry.” <emph>Memory of the
+                     World.</emph>
+                  <ref
+                     target="https://web.archive.org/web/20240102143806/https://www.unesco.org/en/memory-world/bayeux-tapestry"
+                     >https://web.archive.org/web/20240102143806/https://www.unesco.org/en/memory-world/bayeux-tapestry</ref>.</bibl>
+               <bibl xml:id="vanzundert2016">van Zundert, Joris. 2016. “The Case of the Bold Button:
+                  Social Shaping of Technology and the Digital Scholarly Edition.” <emph>Digital
+                     Scholarship in the Humanities</emph> 31 (4): 898–910. <ref
+                     target="https://doi.org/10.1093/llc/fqw012"
+                     >https://doi.org/10.1093/llc/fqw012</ref>.</bibl>
+               <bibl xml:id="warwick2020">Warwick, Claire. 2020. “Interfaces, ephemera, and
+                  identity: A study of the historical presentation of digital humanities resources.”
+                     <emph>Digital Scholarship in the Humanities</emph> 35 (4): 944–971. <ref
+                     target="https://doi.org/10.1093/llc/fqz081"
+                     >https://doi.org/10.1093/llc/fqz081</ref>.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
