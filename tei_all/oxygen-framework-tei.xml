@@ -1,0 +1,2461 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?><?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.19.2">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Untangling Data Complexity: Custom Oxygen Frameworks for Edition Projects</title>
+            <author ref="https://orcid.org/0000-0001-8011-2376">
+               <name>
+                  <forename>Jennifer</forename>
+                  <surname>Bunselmeier</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Wuppertal</orgName>
+                  <placeName>Wuppertal</placeName>
+               </affiliation>
+               <email>bunselmeier@uni-wuppertal.de</email>
+            </author>
+            <author ref="https://orcid.org/0000-0002-7966-7996">
+               <name>
+                  <forename>Sina</forename>
+                  <surname>Krottmaier</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Graz</orgName>
+                  <placeName>Graz</placeName>
+               </affiliation>
+               <email>sina.krottmaier@uni-graz.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2024-12">December 2024</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19/oxygen-framework</idno>
+            <idno type="DOI">10.18716/ride.a.19.2</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue19/oxygen-framework/oxygen-framework.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
+            <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="19">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19</idno>
+            <idno type="DOI">10.18716/ride.a.19</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>Custom Oxygen Frameworks</title>
+                  <editor>SyncRo Soft SRL</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>SyncRo Soft SRL</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>SyncRo Soft SRL</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Designer</resp>
+                     <persName>SyncRo Soft SRL</persName>
+                  </respStmt>
+                  <date type="publication">~2012-2024</date>
+                  <idno type="URI">https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/authoring_customization.html</idno>
+                  <date type="accessed">2024-01-31</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+
+
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>CSS, XQuery</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Unicode, US-ASCII, etc. </gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes, Oxygen XML Editor</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Documentation on Website</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Video Tutorials, Technical Support Form, FAQs</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>oxygen xml editor</term>
+               <term>tei</term>
+               <term>digital edition</term>
+               <term>editing</term>
+               <term>data complexity</term>
+               <term>metadata</term>
+               <term>xml</term>
+               <term>xslt</term>
+               <term>oxygen custom framework</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Consistency and coherence in annotated and enriched data are vital to the success of
+               any digital edition project. Custom frameworks within the oXygen XML Editor provide a
+               user-friendly approach for editors to interact directly with XML data, thus lowering
+               entry barriers and ensuring consistency across datasets. Drawing on our experiences as customisers, this review explores the benefits and
+               limitations of these custom frameworks, highlighting their potential for
+               interdisciplinary teams with varying levels of XML expertise. We critically examine
+               the technical requirements for creating and maintaining custom frameworks, as well as
+               the current state of documentation. We also discuss challenges that users may face
+               with oXygen’s complex interface. Once implemented, frameworks facilitate uniform data
+               input, allow for the automation of repetitive annotation tasks, and integrate
+               seamlessly with project workflows, thereby enabling users to focus on annotation
+               tasks in an environment tailored to the specific needs of each project. In our 
+               opinion, despite being underutilised and insufficiently promoted within the
+               oXygen platform, custom frameworks offer extensive functionalities that meet the
+               needs of a wide variety of edition projects.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>The Reviewer</head>
+            <p xml:id="p1">Dr Jennifer Bunselmeier is a Digital Humanities research assistant in the
+               digital edition projects ‘Rhodomanologia’ (classical philology) and ‘Niklas
+               Luhmann-Archiv’ (sociology) at the University of Wuppertal. Her expertise lies in
+               data modelling, data curation, frontend design, and workflow management. She has been
+               developing and maintaining custom oXygen frameworks for five years.</p> 
+            <p xml:id="p2">Sina Krottmaier is a research assistant in the project ‘History as a
+               Visual Concept Peter of Poitiers’ Compendium historiae’ at the Department of Digital
+               Humanities at the University of Graz. In this project, she is currently developing
+               and maintaining a custom oXygen framework to simplify and streamline the process of
+               collecting metadata for users. </p>
+         </div>
+         <div xml:id="div2">
+            <head>Introduction</head>
+            <p xml:id="p3">Consistency and coherence of annotated and enriched data are crucial for
+               successful edition projects. To extract necessary information from the data, it must
+               be encoded in accordance with established standards. However, when dealing with large
+               amounts of data, this can be a challenging task, particularly when an
+               interdisciplinary project team with varying levels of editorial and XML expertise is
+               involved. In some cases, ensuring uniformity and consistency of data can pose a
+               significant challenge in a project. </p>
+            <p xml:id="p4">This review examines a very powerful, yet regrettably ‘hidden tool’ in
+               the oXygen XML Editor (see <ref type="crossref" target="#syncro2024m">SyncRo Soft
+                  2002–2024m</ref>): custom oXygen frameworks. First, we will provide a brief
+               overview of the tool’s advantages and disadvantages. Then the technical aspects,
+               particularly the installation process, necessary conceptual steps and the tool’s GUI,
+               documentation, and learnability will be discussed, including an overview of relevant
+               functionalities and the relevant terminology. Finally, we summarise the tool’s
+               strengths and weaknesses and evaluate its usefulness for digital edition
+               projects.</p>
+         </div>
+         <div xml:id="div3">
+            <head>Identification of the Tool</head>
+            <p xml:id="p5">Custom oXygen frameworks (hereafter referred to as
+               <emph>framework</emph>) are an integrated feature of the oXygen XML Editor (hereafter
+               referred to as <emph>oXygen</emph>). The proprietary editor, which has been
+               continuously developed and maintained by SyncRo Soft SRL since 2002, specialises in
+               XML-heavy authoring, developing and annotating tasks. It is widely used not only in
+               the private sector (see <ref type="crossref" target="#syncro2024g">ibid.
+                  2002–2024g</ref>), but also in the Digital Humanities community. Due to the
+               proprietary nature of oXygen (see <ref type="crossref" target="#syncro2024g">ibid.</ref>), the creation and especially the use of frameworks is only possible
+               once the software has been purchased by all users, meaning that functionality depends
+               on possessing a valid oXygen software license<note xml:id="ftn1"> While the licenses
+                  for the private sector are rather expensive, SyncRo Soft SRL accommodates the
+                  academic sector with relatively inexpensive academic licenses (see <ref type="crossref" target="#syncro2024l">SyncRo Soft SRL
+               2002–2024l</ref>).</note>.</p>
+            <p xml:id="p6">There are two types of frameworks integrated into oXygen: predefined
+               frameworks for various XML specifications (e.g. TEI<note xml:id="ftn2"> For more
+                  information on the TEI Standard, see <ref type="crossref" target="#tei">TEI
+                     Consortium n.d.</ref></note> or DITA<note xml:id="ftn3"> For more information
+                  on the DITA Standard, see <ref type="crossref" target="#oasis2018">OASIS Open
+                     2018</ref>.</note>), and custom frameworks, which are created from scratch for
+               specific requirements. The integration of the custom frameworks option can be traced back at least to version 13.2 of oXygen, published in 2012.
+               Since then, the functionality has continuously evolved, with the latest
+               changes introduced in Version 25.1 in 2023 (see <ref type="crossref" target="#syncro2023">SyncRo Soft SRL 2023</ref>). </p>
+            <p xml:id="p7">This review concentrates on the second type – the option to construct
+               frameworks from scratch. It assesses the effort required from the perspective of a
+               user-developer (hereafter <emph>customiser</emph>). However, to comprehensively
+               address this, it is essential to also evaluate the tool’s output – the crafted
+               framework – as perceived by the <emph>user</emph><note xml:id="ftn4"> To avoid
+                  confusion, the term ‘user’ will be employed when discussing the person engaged in
+                  the editing process, as distinct from the term ‘editor’, which refers to the
+                  oXygen XML Editor programme.</note>. The review will use the term
+                  <emph>tool</emph> to refer to the features for creating a framework, while also
+               considering the created framework as a tool to facilitate XML annotation.</p>
+            <p xml:id="p8">Furthermore, it is important to note, that working with oXygen frameworks
+               not automatically means working with ediarum (see <ref type="crossref" target="#telota2024a">Berlin-Brandenburgische Akademie der Wissenschaften, and
+                  TELOTA - IT/DH 2024a</ref>; <ref type="crossref" target="#dumontetal2021">Dumont
+                  et al. 2021</ref>). Ediarum is an environment that enables collaborative working
+               and publishing of edition projects. The environment consists of multiple software
+               components, one of which specifically utilises the framework tool of oXygen and
+               expands it by adding additional functionalities. It also incorporates a database
+                  (eXist-db<note xml:id="ftn5"> For more information on eXist-db, see <ref type="crossref" target="#exist2018">eXist Solutions 2018</ref>.</note>) which,
+               when set up on a server, enables collaborative working on and publishing of edition
+               projects. Alternatively, it is possible to include the ediarum.jar in an existing
+               framework to add additional java operations. (<ref type="crossref" target="#telota2024b">Berlin-Brandenburgische Akademie der Wissenschaften, and
+                  TELOTA - IT/DH 2024b</ref>; <ref type="crossref" target="#telota2024b">ibid.
+                  2024c</ref>; <ref type="crossref" target="#fechner2023">Fechner 2023</ref>)</p>
+            <p xml:id="p9">So, while ediarum can be broadly described as a large-scale working
+               environment, frameworks are a feature in the oXygen editor itself. Therefore, oXygen
+               frameworks are not the same as ediarum, but ediarum utilises the oXygen framework
+               functionality and incorporates it into its working environment. Since creating custom
+               oXygen frameworks is entirely sufficient for our project work, our review will focus
+               specifically on this aspect: the creation and usefulness of custom oXygen frameworks
+               for edition projects.<note xml:id="ftn6"> A detailed review of ediarum can be found
+                  in RIDE Issue 11 (see <ref type="crossref" target="#mertgens2019">Mertgens
+                     2019</ref>), for anyone interested in a working and publishing environment for
+                  their project.</note></p>
+            <div xml:id="div3.1">
+               <head>What Is an oXygen Framework? </head>
+               <p xml:id="p10">When editing an XML file, oXygen enables users to seamlessly switch
+                  between an XML view (Text mode), displaying the raw XML code, and a visual editing
+                  environment (Author mode). In Author mode, the code is presented in a visually
+                  enhanced format. A framework is a configuration or set of rules defining how XML
+                  documents are structured, presented, and edited.</p>
+               <p xml:id="p11">The advantage of the Author mode is that it enables users with little
+                  or no knowledge of XML to work with XML files without having to engage directly
+                  with the XML code, as it is hidden from them. For example, the editing process can
+                  be made more controlled and streamlined by displaying only those fields (elements)
+                  that are to be filled with content, or by implementing dropdown menus that allow
+                  only certain predefined values to be added to the XML file. Users can insert,
+                  modify, or delete XML fragments using various functionalities without accessing
+                  the actual source code. Hiding the source code behind a form-like appearance
+                  minimises errors and inconsistencies, such as inserting elements in the wrong
+                  place or the accidental deletion of elements. </p>
+               <p xml:id="p12">A framework can be as simple or as complex as required, varying
+                  greatly in the number of functionalities and features provided. Frameworks can
+                  therefore be tailored to different data complexities and requirements, and are not
+                  limited to specific use cases. </p>
+               <p xml:id="p13">It is crucial to note that the framework options are both extensive
+                  and powerful, mirroring the capabilities of oXygen. However, this review will only
+                  focus on and assess the functionalities we deem useful for projects working on
+                  digital editions, as shown in section ‘Creating a Framework’.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Technical Aspects</head>
+            <p xml:id="p14">This section focuses on the technical aspects of installing and using
+               the tool.</p>
+            <div xml:id="div4.1">
+               <head>General Technical Aspects </head>
+               <p xml:id="p15">oXygen and its functionalities are written in Java. However, as
+                  oXygen is designed for editing and processing XML data, customisers only require Java
+                  skills if they wish to modify or expand core functionalities or write their own
+                  operations. The integrated functionalities should be sufficient to handle most use
+                  cases. Moreover, since XML is the designated data format, all operations related
+                  to XML data (such as XPath, XQuery, XSLT transformations, schemata) are fully
+                     supported.<note xml:id="ftn7"> It should be noted that oXygen also supports
+                     many other formats, such as JSON, HTML or JavaScript. However, these play a
+                     subordinate role in the creation of and work with frameworks, which is why
+                     other formats and functionalities are not discussed in this review.</note></p>
+               <p xml:id="p16">Performance issues emerge in larger files (initially observed in a
+                  1.3 MB file), especially when combined with complex CSS rendering and continuous
+                  background validation. The framework’s response time noticeably slows down,
+                  impacting processes like inserting fragments or navigating from one fillable form
+                  field to another. As of now, the exact cause and potential countermeasures have
+                  not yet been determined, as this issue has not been systematically analysed.</p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Installation and Building Process</head>
+               <p xml:id="p17">
+                  <figure xml:id="img1">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-1.png"/>
+                     <head type="legend">Initial folder structure of a framework.</head>
+                  </figure>
+                  <figure xml:id="img2">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-2.png"/>
+                     <head type="legend">Referencing of the framework in the Document Type
+                        Association tab.</head>
+                  </figure>
+                  oXygen allows users and customisers to create and use frameworks, regardless of the
+                  operating system used<note xml:id="ftn8"> oXygen is available for Windows, MacOS,
+                     and Linux. </note>. However, it is important to note that the editor’s
+                  interface and the layout of the created framework, including spacing and field
+                  size, may vary. The steps required for installing a framework depend on the person’s
+                  role, whether they are a customiser (i.e. technical personnel) or a user (i.e.
+                  involved in editing the texts).</p>
+               <p xml:id="p18">For customisers, in order to create a framework for a project, a few
+                  preparatory steps and configurations are necessary.<note xml:id="ftn9"> For
+                     step-by-step instructions, see <ref type="crossref" target="#syncro2024c">SyncRo Soft SRL 2002–2024c</ref>. However, it should be noted that the
+                     documentation does not include visual illustrations of individual steps, which
+                     may pose challenges for new customisers during the initial configuration
+                     process.</note> Those include: <list rend="bulleted">
+                     <item>The creation of a specific folder hierarchy (e.g., Demo/framework), as
+                        well as folders for icons, templates and a CSS file (<ref type="crossref" target="#img1">fig. 1</ref>).</item>
+                     <item>The referencing of the folder structure as a Location in the Document
+                        Type Association Tab in oXygen (<ref type="crossref" target="#img2">fig. 2</ref>).</item>
+                     <item>The actual creation process of a new framework (Document Type) in the
+                        Document Type Association Tab.</item>
+                  </list></p>
+
+               <p xml:id="p19"><figure xml:id="img3">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-3.png"/>
+                  <head type="legend">Association rules of a framework.</head>
+               </figure>During this creation process, the framework is named, the previously
+                  created folders and files (framework folder, template folder, and CSS) are
+                  assigned, and the criteria on the basis of which a framework is applied to a file
+                  (association rules) are defined by the customiser. 
+               </p>
+               <p xml:id="p20">For instance, <ref type="crossref" target="#img3">fig. 3</ref> shows the association rules for a Demo framework
+                  specifying that it is applicable to all TEI files with the attribute <code>@rendition</code>
+                  and the value ‘demo’ in the <code>&lt;TEI&gt;</code> root element. </p>
+               <p xml:id="p21"><figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-4.png"/>
+                     <head type="legend">Framework folder structure after all configurations.</head>
+                  </figure>After all these configurations, the newly created framework will be
+                  visible in the Document Type Association list. It is crucial that customisers
+                  initialise the framework by clicking on ‘Apply’. This will automatically generate
+                  a *.<emph>framework</emph> file in the chosen directory, containing all the
+                  framework’s information (<ref type="crossref" target="#img4">fig. 4</ref>). </p>
+               <p xml:id="p22">Once these steps have been completed, customisers can start editing
+                  the framework. It is recommended to create an oXygen project for the development
+                  process (see <ref type="crossref" target="#syncro2024d">SyncRo Soft SRL
+                     2002–2024d</ref>), as this allows for quicker access to the files.</p>
+               <p xml:id="p23">To use a framework, all users need to do is associate it in oXygen.
+                  For this, customisers can either package the framework as an add-on for users to
+                  integrate or implement a GitHub (see <ref type="crossref" target="#github2024">GitHub Inc. 2024</ref>) or GitLab (see <ref type="crossref" target="#gitlab2024">GitLab B.V. 2024</ref>) workflow for file sharing, which
+                  has proven effective for us<note xml:id="ftn10"> For alternative methods of
+                     sharing a framework, such as via an add-on, and detailed instructions, see <ref type="crossref" target="#syncro2024n">SyncRo Soft SRL 2002–2024n</ref>.
+                  </note>. If the latter is set up, users can simply: <list rend="bulleted">
+                     <item>Clone the framework repository from GitHub (or GitLab).</item>
+                     <item>Open oXygen, navigate to the Document Type Association Tab, and add the
+                        cloned folder structure as a Location.</item>
+                  </list>The framework is then added to oXygen, and any file containing the
+                  defined attribute-value pair in the root element will automatically be rendered
+                  using the framework’s layout and have all its features.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Creating a Framework</head>
+            <p xml:id="p24">This section focuses on the process of creating a framework and
+               highlights its most important components. This includes technical and conceptual
+               prerequisites, an evaluation of the tool’s graphical user interface (GUI) and
+               documentation, and examples showcasing core features and functionalities.</p>
+            <div xml:id="div5.1">
+               <head>Technical Know-How</head>
+               <p xml:id="p25">For customisers, proficiency in CSS is essential for the design, as
+                  XML is translated into the visually appealing and user-friendly display of the
+                  Author mode through CSS. To selectively address and manipulate individual elements
+                  within the – sometimes intricate – XML structure or to insert a fragment at a
+                  context-dependent location, the ability to navigate the XML tree using XPath
+                  expressions is also necessary.<note xml:id="ftn11"> Both CSS and XPath are
+                     thoroughly documented, and numerous tutorials are available online for
+                     beginners as well as for more advanced requirements. See, for example,
+                     <ref type="crossref" target="#w3schools2024a">W3schools 1999–2024a</ref>; 
+                     <ref type="crossref" target="#w3schools2024b">ibid. 1999–2024b</ref>; 
+                     <ref type="crossref" target="#w3cetal2017">W3C et al. 2017</ref>; 
+                     <ref type="crossref" target="#w3cetal2004">W3C and Bos 2004</ref>.</note>
+               </p>
+               <p xml:id="p26">While not strictly necessary, an understanding of the concept of
+                  variables and skills in XSL, XQuery, or JavaScript are helpful for making full use
+                  of the tool, as it supports the inclusion of scripts via dedicated Author Mode
+                  operations (e.g. JSOperation, XSLTOperation, and XQueryOperation<note xml:id="ftn12"> In this review we do not delve deeply into these operations, as
+                     they have played only a limited role in our projects. For a full description,
+                     see <ref type="crossref" target="#syncro2024b">SyncRo Soft SRL 2002-2024b</ref>.</note>). This allows for more complex XML
+                  manipulations for which the tool does not provide build-in operations. </p>
+               <p xml:id="p27">Finally, knowledge of and the use of schemata such as XML Schema (see
+                     <ref type="crossref" target="#w3cetal2004">W3C, Fallside, and Walmsley
+                     2004</ref>) or RelaxNG (see <ref type="crossref" target="#relax2014">“RELAX NG
+                     Home Page” 2014</ref>) facilitate control over the data, preventing issues such
+                  as proliferation of attribute values, and ensuring that fragments are only
+                  inserted in valid places.</p>
+            </div>
+            <div xml:id="div5.2">
+               <head>Conceptual Know-How</head>
+               <p xml:id="p28">Before commencing framework development, the project’s conceptual
+                  objectives, requirements, and prerequisites must be established. This is vital for
+                  creating a tailored framework that meets the project’s specific needs. The process
+                  involves a comprehensive analysis of the source material and identification of
+                  existing groundwork (e.g. existing annotations of the data and / or defined data
+                  model) and requirements for the framework (e.g. how should it support users, what
+                  should be recorded and how). It also requires addressing questions related to the
+                  depth of information, features of the published (digital) edition, and any
+                  research questions the project aims to answer.</p>
+               <p xml:id="p29">Guided by these conceptual considerations and building upon a data
+                     model<note xml:id="ftn13"> It is strongly recommended to commence work on the
+                     framework and deploy it in productive editorial work only when the data model
+                     is largely finalised and no more significant changes are anticipated, as late
+                     or frequent changes to the data model require significant post-work in the
+                     framework. Additionally, using a schema enables schema-aware restrictions of
+                     actions, preventing users from inadvertently inserting XML fragments in places
+                     where they are not allowed, according to the data model.</note>, customisers
+                  can create template XML files, which are then accessible to users through oXygen’s
+                  ‘New Document’ option.<note xml:id="ftn14"> The complexity of the project
+                     determines the number of template files needed. For instance, a homogeneous set
+                     of documents like letters might require just one template file. Conversely,
+                     projects dealing with diverse content types, such as transcriptions of diverse
+                     source material (e.g., manuscripts, letters, poems) and editorial content
+                     (e.g., bibliographic items, indices, introductory texts), may necessitate
+                     multiple template files.</note> Templates provide the project’s individual XML
+                  structure and placeholders for data entry, ensuring uniformity across all
+                  files.</p>
+            </div>
+            <div xml:id="div5.3">
+               <head>Technical Interface and GUI</head>
+               <p xml:id="p30">Once created, the framework is stored in a .<emph>framework</emph>
+                  file, which is a configuration XML file that encapsulates all the settings and
+                  resources needed to work with XML-based documents associated through document type
+                  association. This means, it can be manually accessed and edited in oXygen, just
+                  like any other XML file. Alternatively, the tool provides a graphical user
+                  interface (GUI). It primarily consists of classical dialogue boxes for creating
+                  and editing the framework.</p>
+               <p xml:id="p31"><figure xml:id="img5">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-5.png"/>
+                  <head type="legend">Action configuration options in the framework options
+                     dialogue box.</head>
+               </figure>The GUI generally poses no obstacle for customisers familiar with
+                  working with oXygen. It has the advantage of providing framework variables and
+                  displaying all possible options for selection, making it easier to configure
+                  settings without needing to know the exact XML syntax. However, the tool follows a
+                  logically formal arrangement of options, which regrettably causes essential
+                  settings to be somewhat hidden. It might be helpful if fundamental configuration
+                  options were more prominently placed or highlighted. For example, while actions
+                  are the core features of each framework, their configuration options are found
+                  only in the fourth tab within the second submenu of the dialogue box (<ref type="crossref" target="#img5">fig. 5</ref>).
+                     
+               </p>
+               <p xml:id="p32"><figure xml:id="img6">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-6.png"/>
+                  <head type="legend">Options to create a custom <emph>oXygen toolbar (here
+                           ‘Rhodomanologia’)</emph>.</head>
+               </figure>
+                  <figure xml:id="img7">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-7.png"/>
+                     <head type="legend">Example of a framework’s custom toolbar and menu with
+                        individual icons and descriptions.</head>
+                  </figure>The same applies to the valuable option of integrating the
+                  framework’s actions into a new custom oXygen toolbar or menu<note xml:id="ftn15">
+                     The menu option is particularly suitable for complex frameworks and projects
+                     where numerous actions need to be nested and grouped, and displaying all
+                     options in the toolbar would be overwhelming.</note> (<ref type="crossref" target="#img6">fig. 6</ref>, <ref type="crossref" target="#img7">7</ref>). 
+               </p>
+               <p xml:id="p33"><figure xml:id="img8">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-8.png"/>
+                  <head type="legend">XML fragment inserted via an input field in the dialogue
+                     box.</head>
+               </figure>
+                  <figure xml:id="img9">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-9.png"/>
+                     <head type="legend">XML fragment inserted directly into the framework file’s
+                        source code.</head>
+                  </figure>While the GUI proves to be sufficient and comfortable for most tasks,
+                  there are instances where direct access to the framework file is a more effective
+                  approach. For instance, if modifications are required in later stages of framework
+                  development, such as altering the name of an element that is used in multiple
+                  instances, the XML framework file can easily be searched, ensuring comprehensive
+                  changes across all fragments. In contrast, in the GUI each action dialogue box
+                  needs to be opened, checked and edited manually. Additionally, due to the
+                  restricted size of the input field for fragments in the dialogue box (<ref type="crossref" target="#img8">fig. 8</ref>),
+                  directly inserting content into the XML file may be easier. However, the fragment
+                  is inserted as a plain text string without any code markup, which significantly
+                  reduces readability (<ref type="crossref" target="#img9">fig. 9</ref>). 
+               </p>
+            </div>
+            <div xml:id="div5.4">
+               <head>Terminology and Functionalities – Overview </head>
+               <p xml:id="p34">oXygen provides a variety of built-in functionalities that can be
+                  used in either the CSS file or the framework file to facilitate interaction
+                  between the user and the document. The following is an overview of options deemed
+                  most useful, some of which will be explored in more detail later on.</p>
+               <p xml:id="p35">                  <figure xml:id="img10">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-10.png"/>
+                  <head type="legend">Action dialogue box with form-like design.</head>
+               </figure><hi rend="bold">Author Mode Action</hi><note xml:id="ftn16"> For the full list of Author
+                     Mode Actions, see <ref type="crossref" target="#syncro2024e">SyncRo Soft SRL
+                        2002–2024e</ref>. </note>: used in the framework file. Actions are the core
+                  feature of the framework. Their main elements (<ref type="crossref" target="#img10">fig. 10</ref>) are: <list rend="bulleted">
+                     <item>ID – to identify each action and make it invocable from anywhere in the
+                        framework, such as the CSS file or other actions.</item>
+                     <item>Description – a plain text description of the action’s functionality to
+                        be displayed to the user on mouseover.</item>
+                     <item>Icon – to visually represent the action when it is displayed as a button,
+                        for example in the toolbar.</item>
+                     <item>Keyboard shortcut – to call the action using a keyboard shortcut.</item>
+                     <item>Operation – the operation to be performed and its arguments.</item>
+                     <item>XPath constraint – to enable or disable application of the action in
+                        certain parts of the document.<note xml:id="ftn17"> The usefulness of XPath
+                           constraints cannot be overstated. It allows customisers to control action
+                           execution, ensuring that only valid XML data is generated. Entire actions
+                           can be restricted to the cursor being placed in the right place in the
+                           document. For example, a toolbar button triggering an action for encoding
+                           reading variants in a manuscript transcription could appear grey and
+                           unclickable if the cursor is placed in a section where this action is not
+                           applicable, such as the metadata section.</note></item>
+                  </list>
+               </p>
+               <p xml:id="p36"><hi rend="bold">Author Mode Operations</hi><note xml:id="ftn18"> For the full list of
+                     Author Mode Operations, see <ref type="crossref" target="#syncro2024b">SyncRo
+                        Soft SRL 2002–2024b</ref>. </note>: used in Author Mode Actions; serving as
+                  the primary task to be performed, for example: <list rend="bulleted">
+                     <item><code>DeleteElementOperation</code> – deletes an element.</item>
+                     <item><code>ExecuteMultipleActionsOperation</code> – consecutively calls and executes a list
+                        of actions via their ID.</item>
+                     <item><code>ExecuteValidationScenarioOperation</code> and
+                        <code>ExecuteTransformationScenariosOperation</code> – validates or transforms the
+                        document using a scenario already configured in oXygen’s validation /
+                        transformation settings.</item>
+                     <item><code>InsertFragmentOperation</code> – inserts an XML fragment.</item>
+                     <item><code>XSLTOperation</code> – executes an XSL transformation either referencing an
+                        external XSL file or providing the entire script in the action’s script
+                        argument.</item>
+                  </list></p>
+
+               <p xml:id="p37"><hi rend="bold">Form Controls</hi><note xml:id="ftn19"> For the full list of Form
+                     Controls, see <ref type="crossref" target="#syncro2024i">SyncRo Soft SRL
+                        2002–2024i</ref>. </note>: used in the CSS file to provide graphical user
+                  interfaces, for example: <list rend="bulleted">
+                     <item><code>oxy_browser()</code> – to integrate an HTML frame.</item>
+                     <item><code>oxy_checkbox()</code> – a checkbox to select or de-select an option.</item>
+                     <item><code>oxy_combobox()</code> – a dropdown menu with predefined values.</item>
+                     <item><code>oxy_datePicker()</code> – a calendar (with the option to specify the desired
+                        date format).</item>
+                     <item><code>oxy_textfield()</code> – a plain text input field.</item>
+                     <item><code>oxy_video()</code> – to integrate a video.</item>
+                  </list>
+               </p>
+
+               <p xml:id="p38"><hi rend="bold">Custom CSS Functions</hi><note xml:id="ftn20"> For the full list of Custom
+                     CSS Functions, see <ref type="crossref" target="#syncro2024f">SyncRo Soft SRL
+                        2002–2024f</ref>. </note>: used in the CSS file to enhance the layout for
+                  users and perform specific operations on values, for example: <list rend="bulleted">
+                     <item><code>oxy_action()</code> – calls a predefined action from the framework or defines an
+                        action directly. </item>
+                     <item><code>oxy_concat()</code> – concatenates strings. </item>
+                     <item><code>oxy_editor()</code><note xml:id="ftn21"> oxy_editor() is an alternative,
+                           possibly deprecated, method of using form controls as they can be taken
+                           as an argument; see section 'Documentation and Learnability', <ref type="crossref" target="#p64">p. 64</ref> for more details.</note> – used in combination
+                        with oxy_label() to style forms.</item>
+                     <item><code>oxy_label()</code> – supplies a display label for the edited segment.</item>
+                     <item><code>oxy_xpath()</code> – evaluates an XPath expression.</item>
+                  </list>
+               </p>
+
+               <p xml:id="p39"><hi rend="bold">Additional CSS Properties</hi><note xml:id="ftn22"> For the full list of
+                     Additional CSS Properties, see <ref type="crossref" target="#syncro2024a">SyncRo Soft SRL 2002–2024a</ref>. </note>: used in the CSS file to control
+                  the appearance or behaviour of elements, for example: <list rend="bulleted">
+                     <item><code>-oxy-collapse-text</code> – to hide the text content of an element, for example,
+                        when it is already rendered using a function such as oxy_editor() (otherwise
+                        the content would be displayed twice).</item>
+                     <item><code>-oxy-editable</code> – to enable or prohibit editing the content of an
+                        element.</item>
+                     <item><code>-oxy-foldable</code> – to make elements foldable, for example, the metadata or
+                        facsimile section at the beginning of a TEI document.</item>
+                     <item><code>-oxy-placeholder-content</code> – to show a placeholder for empty elements to
+                        let the users know what kind of input is expected (particularly useful when
+                        a form-like layout with labels is not feasible).</item>
+                  </list>
+               </p>
+               <p xml:id="p40"><hi rend="bold">Editor Variables</hi><note xml:id="ftn23"> For the full list of editor
+                     variables, see <ref type="crossref" target="#syncro2024h">SyncRo Soft SRL
+                        2002–2024h</ref>. </note>: used in the framework file to define reusable
+                  values and thereby facilitate flexible interactions between users and the
+                  framework, for example: <list rend="bulleted">
+                     <item><code>${ask}</code> – to ask users to provide more input or to choose from a given set
+                        of options before an XML fragment is inserted, e.g., values for attributes. </item>
+                     <item><code>${caret}</code> – current cursor location, e.g., to set the next editable
+                        position inside or after an inserted XML fragment.</item>
+                     <item><code>${date}</code> – to insert or display the current date.</item>
+                     <item><code>${framework}</code> – the path of the current framework directory, e.g., to set
+                        a relative path to the folder containing icons used in the framework.</item>
+                     <item><code>${id}</code> and <code>${uuid}</code> – application-level or universally unique identifier,
+                        e.g., to generate IDs to insert into the XML file or to use only during
+                        processing.</item>
+                     <item><code>${selection}</code> – currently selected text, e.g., to surround it with an XML
+                        fragment.</item>
+                  </list></p>
+            </div>
+
+
+            <div xml:id="div5.5">
+               <head>Design and Visualisation (CSS)</head>
+               <p xml:id="p41">The design of the final framework is entirely in the hands of the
+                  customiser. Whether users consider a framework practical or not depends on how the
+                  customiser shapes the framework and utilises the capabilities provided by the
+                  tool. It must therefore be noted in all subsequent considerations that only the
+                  presence of a function in the tool or its implementation effort should be
+                  understood as part of this paper’s tool critique, not the actual realisation and
+                  configuration in the individual framework.</p>
+               <p xml:id="p42">In our experience, a framework’s acceptance among users and
+                  non-technical personnel is improved by visual proximity to familiar programmes.
+                  For instance, aligning the layout with widely-used word processing programmes such
+                  as MS Word lowers the entry barrier due to familiarity and facilitates intuitive
+                  use. Actions such as highlighting text and applying formatting through a toolbar
+                  button, for example, to mark headings or italicisation, are well-known to users.
+                  The tool allows customisers to create buttons in a similar manner, group them in a
+                  toolbar, and assign them individual actions. This layout is particularly suitable
+                  for projects or documents where predominantly prose text is generated, such as
+                  transcripts or introductory sections. </p>
+               <p xml:id="p43">Regarding the rendering<note xml:id="ftn24"> This section focuses
+                     solely on <emph>rendering</emph> the XML file using CSS. The options for
+                        <emph>modifying</emph> the XML content will be discussed in the next
+                     section.</note> of the XML file, essentially anything styleable using CSS is
+                     possible<note xml:id="ftn25"> Note that while CSS display commonly varies by
+                     machine, browser, or platform, oXygen generally maintains a consistent display
+                     across different environments. However, not all typical CSS features and
+                     selectors are supported. For a full list, see <ref type="crossref" target="#syncro2024o">SyncRo Soft SRL 2002–2024o</ref>.</note>, such as
+                  Word-like page layouts, frames, colours, and more. However, CSS rendering has its
+                  limitations. Since no transformation or programming language is involved, each
+                  element is simply output where it appears in the document. Re-ordering or
+                  repositioning elements, such as numbered footnotes, or grouping and sorting
+                  metadata for neater input, is not possible, whereas in web development, CSS is
+                  widely used for these tasks. Furthermore, context-dependent styling is limited to
+                  the capabilities of CSS selectors: an element can be styled differently, for
+                  example, depending on its ancestor elements (parent / ancestor selector) or when
+                  it differs in terms of attributes or attribute values (attribute selector).
+                  However, it is not possible to conditionally output or style elements based on the
+                  presence of specific descendant elements.<note xml:id="ftn26"> For example, it is
+                     possible to style <code>&lt;note&gt;</code> elements differently based on their ancestor,
+                     such as <code>teiHeader note {...}</code> vs. <code>text note {...}</code>, or based on their
+                     attributes, like <code>note[type="footnote"]</code> vs. <code>note[type="endnote"]</code>. However,
+                     it is not possible, for instance, to change a note’s text colour from red to
+                     green once a certain descendant element has been added by the user.</note></p>
+               <p xml:id="p44"><figure xml:id="img11">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-11.png"/>
+                  <head type="legend">Example of an XML file rendered as form fields for users to
+                     fill in (here bibliographic metadata).</head>
+               </figure>Beyond conventional CSS styling options, the tool provides additional
+                  oXygen-specific CSS functionalities that broaden the spectrum. For instance,
+                  clearly structured and self-explanatory form fields can be designed through the
+                  <code>oxy_editor()</code> function (generating an input field that can be filled in by the
+                  users, adding either element content or attribute values), and explanatory labels
+                  can be provided through the <code>oxy_label()</code> function (<ref type="crossref" target="#img11">fig. 11</ref>). As users are usually
+                  familiar with filling in forms, this approach combines intuitive form completion
+                  with standardised input formats, ensuring good data quality. In our projects, we
+                  found the form approach particularly useful in areas where traditionally highly
+                  formalised information is provided, such as metadata, bibliographic details,
+                  indices, or object descriptions. 
+               </p>
+               <p xml:id="p45">Especially in digital edition projects, where data is traditionally
+                  published online both as data and as a digital edition, there is also the
+                  opportunity to tailor the framework’s design to align with the online
+                  presentation. This way, users can already visualise the future presentation of the
+                  edited text during the editing process, which is often perceived as helpful. For
+                  instance, elements that will later be presented as links can already be displayed
+                  in blue and underlined in the framework, elements denoting quotations can be
+                  surrounded by quotation marks, and text justification, indentation, or different
+                  font sizes can already be implemented.</p>
+               <p xml:id="p46">One last aspect not to be underestimated is the ability to hide
+                  elements from the XML file that are relevant only for technical personnel, not for
+                  users, such as sections related to copyright and rights. This ensures a cleaner
+                  look and prevents accidental alterations to sections that should not be
+                  edited.</p>
+            </div>
+            <div xml:id="div5.6">
+               <head>Functionality (Framework)</head>
+               <p xml:id="p47"><figure xml:id="img12">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-12.png"/>
+                  <head type="legend">Three versions for date insertion: calendar, automatic
+                     insertion of current date, and text input field.</head>
+               </figure>There are often multiple ways through which a single action can be
+                  realised (<ref type="crossref" target="#img12">fig. 12</ref>). For instance, when a date value needs to be inserted into the
+                  document, the tool offers the option to open a calendar dialog box
+                  (<code>oxy_datePicker()</code>). Users can then select the date from the calendar, and it is
+                  automatically inserted in the desired, predefined format. Additionally, there is
+                  the option to insert the current date directly through an editor variable
+                  (<code>${date}</code>). And, of course, a free text field can also be created, allowing users
+                  to manually input the date (<code>oxy_textfield()</code>). All three options have legitimate
+                  use cases, and the choice made by the customiser depends not on limitations of the
+                  tool, but on the specific needs of the project. For new customisers, it would be
+                  helpful if more projects shared their examples, specific use cases, and
+                  experiences online. This would provide a broader understanding of the advantages
+                  and disadvantages associated with different implementation approaches.
+               </p>
+               <p xml:id="p48">It is important to note that the person customising the framework is
+                  often not the one using it. We therefore consider the need for communication
+                  between customiser and user as an essential part of working with the tool.
+                  Ideally, users express a desire for workflow improvement or highlight a cumbersome
+                  step, and the customiser provides a solution by implementing a suitable action
+                  from the tool.</p>
+               <p xml:id="p49">Following is a selection of settings, operations, form controls, and
+                  variables, which have proven particularly useful for working on digital editions. 
+                  As mentioned earlier, the capability to design buttons through which
+                  users can trigger actions is a central feature of the tool. They can be freely
+                  arranged in the toolbar, visually sorted using separators, or grouped thematically
+                  in dropdown submenus. The <code>oxy_action()</code> function in CSS allows buttons to be
+                  directly output within the text. This option is particularly useful when an action
+                  only makes sense at specific points in the document, such as when users should be
+                  able to delete an optional element. Icons can be custom-designed, and a freely
+                  formulated mouseover message can inform users about the action triggered by the
+                  button. </p>
+               <p xml:id="p50">When there is a need to add content to existing elements, dropdown
+                  menus can be easily styled using the <code>oxy_combobox()</code> function. While the primary
+                  use case likely involves adding attribute values, it is also possible to provide a
+                  list of text content to choose from. This is particularly useful when standardised
+                  values are frequently repeated but should be inserted as a text node rather than
+                  an attribute value. For example, if the text genre in the metadata section isn’t
+                  manually inserted but can be selected from a list of options and then applied as a
+                  text node, it reduces the user’s typing workload, ensures consistency, and
+                  eliminates the risk of typographical errors.</p>
+               <p xml:id="p51">When combined with the <code>oxy-xpath()</code> function, a dropdown menu doesn’t
+                  necessarily require a fixed, predefined list of values; instead, it can
+                  dynamically fetch and display values based on the provided path. For instance, in
+                  a section where the user must specify a location, the list of values can import
+                  the project’s index file and offer only those entries that are discernible as
+                  place names.</p>
+               <p xml:id="p52">To assist users in using the framework correctly, external points of
+                  reference can be included. For example, <code>oxy_video()</code> allows the embedding of
+                  locally stored or remote videos (such as YouTube tutorials), providing guidance
+                  for users throughout the editing process. The <code>oxy_browser()</code> form control
+                  facilitates the integration of web pages, enabling customisers to link parts of a
+                  documentation to the framework. Customisers proficient in Java coding can also
+                  create their own custom form controls (see <ref type="crossref" target="#syncro2024k">SyncRo Soft SRL 2002–2024k</ref>). </p>
+               <p xml:id="p53">One of the most frequently used operations is to insert an XML
+                  fragment, for example, to create a new empty entry in an index file, which can
+                  then be filled in by the user (<code>InsertFragmentOperation</code>). The insert position is
+                  freely selectable (before / after, as the first / last child) and the insert
+                  location (any element in the document) can be specified via XPath. Thus, it does
+                  not necessarily have to happen at the point from which the action is
+                  triggered.</p>
+               <p xml:id="p54">If the fragment is not only to be inserted but also to replace the
+                  selected content or surround it with markup, there are two closely related
+                  alternatives to achieve just that (<code>InsertOrReplaceFragmentOperation</code> and
+                  <code>SurroundWithFragmentOperation</code>). These are useful when it is necessary to add
+                  markup to existing text or elements, for instance, to mark a selected text as an
+                  entity, such as person or place, and surround it with the corresponding XML
+                  markup.</p>
+               <p xml:id="p55"><figure xml:id="img13">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-13.png"/>
+                  <head type="legend">Example of using the <code>${ask}</code> variable in the dialogue box,
+                     asking the user to choose between two attribute values before the XML code
+                     is inserted.</head>
+               </figure>The XML fragment to be inserted or wrapped around the selected text
+                  is stored in the framework file and is output as is. However, there are instances
+                  where it proves beneficial to permit users to augment the fragment before it is
+                  inserted. This involves options such as selecting from a predefined list of
+                  attribute values to categorise an entity as either a person or a place. This
+                  approach enables key parts of the fragment to be determined dynamically without
+                  the need to customise separate actions for each variant. To facilitate this,
+                  editor variables can be used in the XML fragment. While powerful, these variables
+                  can be intricate to write in the input field due to their complexity. For
+                  instance, the <code>${ask}</code> variable can be used to create a dialogue box, prompting
+                  users to choose from a list of predefined values in a radio menu<note xml:id="ftn27"> In addition to radio buttons, the <code>${ask}</code> editor variable also
+                     supports creating dropdown menus or fields for free text entry in the dialogue
+                     box. These can be used, for example, to prompt the user to provide the number
+                     of a footnote as a text value, or to select the language of a text from a list
+                     of standardised language codes.</note> before inserting the XML fragment with
+                  the selected values. A simple fragment (<code>&lt;entity&gt;</code>) with only two values
+                  (‘person’ and ‘place’) for the <code>@type</code> attribute might look as shown in <ref type="crossref" target="#img13">fig. 13</ref>.
+               </p>
+
+               <p xml:id="p56">Customisers can specify a title for the dialogue box, telling users
+                  what kind of information they need to provide (‘Choose type of entity’), along
+                  with a list of values to be inserted into the fragment, a label to display in the
+                  dialogue box (‘Person’ and ‘Place’), and a default value, pre-selecting the option
+                  in the radio menu (‘person’).</p>
+               <p xml:id="p57">The importance of the default value argument must not be
+                  underestimated. It allows users to swiftly proceed through dialogue boxes by
+                  pressing ‘Enter’ if the most common option is pre-selected. Day-to-day use has
+                  shown that these seemingly minor simplifications can significantly enhance work
+                  efficiency. The <code>${ask}</code> editor variable has proven useful and very
+                  popular among users, as manually entering the sometimes quite technical attribute
+                  values can be tiresome. Moreover, it reduces the necessity for displaying separate
+                  input fields for each attribute, contributing to a cleaner framework. This is
+                  especially useful for projects that rely heavily on storing standardised
+                  information in attributes instead of textual element content.</p>
+               <p xml:id="p58">Particularly for complex encoding it may not always be possible to
+                  achieve the desired result in a single action. The ExecuteMultipleActionsOperation
+                  allows listing multiple actions that are then triggered consecutively. For
+                  example, the first action might insert a <code>&lt;graphic&gt;</code> element to the XML file,
+                  asking users to provide an ID and an URL to the image file. A second action could
+                  then execute an XSL script using the <code>XSLTOperation</code> to update a corresponding
+                  facsimile section of the document. The <code>XSLTOperation</code> is a powerful operation, as
+                  it allows for complex manipulations of the XML file which are not possible with
+                  the build-in operations. It must be noted, however, that the tool’s interface only
+                  provides a small input field for providing XML fragments or scripts. Due to the
+                  window’s limited size and without most of oXygen’s usual code support, such as
+                  colours and indentation, debugging and maintenance can be difficult. It is
+                  therefore recommended to store XSL scripts as separate files. </p>
+               <p xml:id="p59">Alternatively, the <code>ExecuteTransformationScenariosOperation</code> could be
+                  employed, which references and triggers a transformation scenario already
+                  configured in the transformation settings, thus including all the scenario’s
+                  arguments, such as defining an output file path for the resulting document.</p>
+               <p xml:id="p60">Another highly advantageous configuration option involves the ability
+                  to mark text content, entire elements, attribute values, or suggested values in
+                  dropdown menus as either editable or non-editable by setting the editable argument
+                  of the function to either true or false. This way, more technical segments, such
+                  as IDs, metadata, or attribute values, can be selected and displayed but not
+                  altered. If entire elements should be displayed for review but not edited, the CSS
+                  property <code>-oxy-editable</code> can be set to false.</p>
+               <p xml:id="p61">And finally, for clarity of layout, the <code>:empty</code> (and
+                     <code>:not(:empty)</code>) selector in CSS has proven particularly effective.
+                  It enables the customiser to reduce the display to relevant parts of the XML file
+                  or to present action buttons in the text only when they are contextually
+                  appropriate, such as displaying an ‘open link in browser’ icon only once a URL has
+                  been provided. It enhances clarity when specific elements or actions are revealed
+                  to the user only after a higher-level value has been selected or entered.
+                  Moreover, empty fields can be highlighted in colour, or specific placeholder
+                  content can be displayed using the <code>-oxy-placeholder-content</code> CSS
+                  property, drawing the user’s attention to missing inputs.</p>
+            </div>
+            <div xml:id="div5.7">
+               <head>Documentation and Learnability</head>
+               <p xml:id="p62">oXygen’s website provides a comprehensive guide (see <ref type="crossref" target="#syncro2024j">SyncRo Soft SRL 2002–2024j</ref>) for
+                  creating custom frameworks, with additional resources available in various
+                  webinars on oXygen ‘s official YouTube channel (see <ref type="crossref" target="#syncro2004">SyncRo Soft SRL and @oxygenxml 2004</ref>). However, these
+                  materials provide only a basic overview. The webinars primarily focus on
+                  customising the DITA framework or addressing specific use cases. The website
+                  documentation outlines the functions of individual options but lacks clear
+                  implementation instructions and examples. This information gap is particularly
+                  noticeable regarding the built-in Author Mode operations.</p>
+               <p xml:id="p63">In some cases, unexpected issues may arise, such as with the
+                  <code>SurroundWithFragmentOperation</code> and the <code>InsertOrReplaceFragmentOperation</code>. The
+                  intention was to display a button in the text, triggering the action of
+                  surrounding a selected passage of text with XML markup (indicated by explicitly
+                  including the <code>${selection}</code> variable). However, the action was not applied to the
+                  selected text. Instead, an empty element fragment was inserted where the button
+                  was displayed. Apparently, the text selection was shifted to the button’s position
+                  when it was clicked. This issue could only be resolved by relocating the button to
+                  the toolbar. Instances like these highlight the need for more comprehensive
+                  documentation and additional examples.</p>
+               <p xml:id="p64"><figure xml:id="img14">
+                  <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-14.png"/>
+                  <head type="legend">CSS code using <code>oxy_editor()</code> for creating a dropdown menu
+                     for the values of the <code>@type</code> attribute.</head>
+               </figure>
+                  <figure xml:id="img15">
+                     <graphic url="http://ride.i-d-e.de/wp-content/uploads/issue_19/oxygen/pictures/picture-15.png"/>
+                     <head type="legend">CSS code using <code>oxy_combobox()</code> for creating a dropdown menu
+                        for the values of the <code>@type</code> attribute.</head>
+                  </figure>In other sections the documentation omits the explanation of
+                  functions that seem to be deprecated but still work, as exemplified by the
+                  <code>oxy_editor()</code> function. It was introduced to the framework in 2012 (see <ref type="crossref" target="#syncro2012">SyncRo Soft SRL 2012</ref>) to facilitate
+                  form-based layouts. As noted before, the <code>oxy_editor()</code> function can include any
+                  form control as an argument, such as comboboxes. The two code snippets shown in <ref type="crossref" target="#img14">fig. 14</ref> and <ref type="crossref" target="#img15">15</ref>
+                  are therefore functionally identical.
+               </p>
+               <p xml:id="p65">Both versions create a dropdown menu, offering the values A, B, C, D
+                  for the <code>@type</code> attribute of the <code>&lt;p&gt;</code> element. The value selected by the user
+                  will then be used as the attribute value. The <code>oxy_editor()</code> function is widely used
+                  in webinars, yet it is missing from the current documentation. This means new
+                  customisers cannot find any information on the arguments associated with this
+                  function.</p>
+               <p xml:id="p66">In our opinion, the documentation could be improved by adopting a
+                  more user-friendly style and intuitive navigation system. Currently, it adheres to
+                  the formal structure of the GUI dialogue boxes, making it difficult to find
+                  important features. The table of contents can also be challenging to navigate,
+                  especially for first-time users who are not familiar with form controls, CSS
+                  functions, and other technical distinctions. Improving the clarity and structure
+                  of the documentation would help customisers access the information they need.</p>
+               <p xml:id="p67">In summary, learning to use custom frameworks can be challenging and
+                  requires extensive research through written documentation and video tutorials. The
+                  full potential of the tool may only become apparent through interactions with
+                  experienced customisers and users who actively use frameworks, as they can often
+                  identify areas for improvement by addressing tedious or laborious processes that
+                  may not be immediately apparent to new customisers. </p>
+            </div>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion </head>
+            <p xml:id="p68">Custom oXygen frameworks are a powerful tool to enable users with little
+               or no knowledge of XML to engage directly with XML files, thereby lowering the
+               barrier for non-technical personnel to work in digital edition projects. Creating and maintaining frameworks requires a certain level of
+               technical knowledge from the customiser, including proficiency in CSS, schema
+               languages, XPath, and XSL. For users of a framework, a significant challenge may
+               arise from the complexity of the oXygen XML Editor itself, as it can initially feel
+               overwhelming with its numerous features and functionalities. However, once the hurdle
+               of setting up and familiarising oneself with oXygen are overcome, the benefits of
+               using frameworks in projects become clear. They significantly reduce the need for
+               specialised technical and digital annotation knowledge by visually replicating
+               familiar systems (e.g., designing the framework as a form or making it resemble known
+               text editors like Word). This allows users to focus on their annotation work in a
+               familiar environment while producing high-quality data.</p>
+            <p xml:id="p69">Frameworks integrate well into existing project workflows and processes,
+               as diverse techniques and project materials can be seamlessly and flexibly combined
+               to create a comprehensive working environment that encompasses content creation,
+               validation, and documentation. Data quality is reliably ensured, as the data inserted
+               through the framework is uniform, and illegitimate or missing content can be
+               highlighted and easily spotted by users. The built-in actions and functions meet the
+               majority of editing requirements and can even be expanded and customised when
+               necessary. </p>
+            <p xml:id="p70">Regrettably, the custom frameworks tool is not prominently featured in
+               the oXygen environment, and its potential is not effectively communicated. A more
+               user-friendly documentation and more real-world examples from other users and
+               customisers would significantly improve visibility and accessibility.</p>
+            <p xml:id="p71">While the term ‘framework’ is often used interchangeably with ‘ediarum’,
+               it is crucial to recognise that they are not synonymous. Ediarum is a large-scale
+               working environment that relies on oXygen frameworks, whereas using the oXygen custom
+               framework tool directly to create project specific frameworks is a highly effective
+               and less technically demanding solution. The broad range of functionalities and
+               options available cover all of our projects’ use cases. Even knowing or using only a
+               basic set of the tool’s features, some of which were explored in this paper, is still
+               sufficient to meet the tailored needs of most edition projects.</p>
+            <p xml:id="p72">To conclude, in our project experience, both the customisers and the
+               users consider oXygen frameworks to be an effective, recommendable tool that
+               significantly improves the editing workflow.</p>
+         </div>
+
+
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="telota2024a">Berlin-Brandenburgische Akademie der Wissenschaften, and
+                  TELOTA - IT/DH. 2024a. “ediarum. Digitale Editionen Erstellen Und Publizieren.”
+                  ediarum. Digitale Editionen erstellen und publizieren. Accessed September 6, 2024.
+                     <ref target="https://web.archive.org/web/20240917072449/https://www.ediarum.org/index.html">https://web.archive.org/web/20240917072449/https://www.ediarum.org/index.html</ref>.</bibl>
+               <bibl xml:id="telota2024b">———. 2024b. “ediarum.JAR”: GitHub. Accessed September 6,
+                  2024. <ref target="https://web.archive.org/web/20240917072314/https://github.com/ediarum/ediarum.JAR">https://web.archive.org/web/20240917072314/https://github.com/ediarum/ediarum.JAR</ref>.</bibl>
+               <bibl xml:id="telota2024c">———. 2024c. “Features.” ediarum. Accessed September 6,
+                  2024. <ref target="https://web.archive.org/web/20240917072606/https://www.ediarum.org/features.html">https://web.archive.org/web/20240917072606/https://www.ediarum.org/features.html</ref>.</bibl>
+               <bibl xml:id="dumontetal2021">Dumont, Stefan, Nadine Arndt, Sascha Grabsch, and Lou
+                  Klappenbach. 2021. ediarum.BASE.edit v2.0.0 (v2.0.0). Zenodo. <ref target="https://doi.org/10.5281/zenodo.5897100">https://doi.org/10.5281/zenodo.5897100</ref>.</bibl>
+               <bibl xml:id="exist2018">eXist Solutions. 2018. “eXistdb.” eXist. Accessed September
+                  9, 2024. <ref target="https://exist-db.org/exist/apps/homepage/index.html">https://exist-db.org/exist/apps/homepage/index.html</ref>. </bibl>
+               <bibl xml:id="fechner2023">Fechner, Martin. 2023. ediarum.JAR (v3.2.1). Zenodo. <ref target="https://doi.org/10.5281/zenodo.7941448">https://doi.org/10.5281/zenodo.7941448</ref></bibl>
+               <bibl xml:id="github2024">Github Inc. 2024. “GitHub.” Software development platform.
+                  Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240913063037/https://github.com/">https://web.archive.org/web/20240913063037/https://github.com/</ref>.</bibl>
+               <bibl xml:id="gitlab2024">GitLab B.V. 2024. “GitLab.” Software development platform.
+                  Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240917071638/https://about.gitlab.com/">https://web.archive.org/web/20240917071638/https://about.gitlab.com/</ref>.</bibl>
+               <bibl xml:id="mertgens2019">Mertgens, Andreas. “Ediarum. A toolbox for
+                  editors and developers” <emph>RIDE</emph> 11 (2019). Accessed September 6 2024.
+                     <ref target="https://doi.org/10.18716/ride.a.11.4">https://doi.org/10.18716/ride.a.11.4.</ref></bibl>
+               <bibl xml:id="oasis2018">OASIS Open. 2018. “DITA Version 1.3 Specification.” OASIS.
+                  Accessed January 16, 2024.<ref target="https://web.archive.org/web/20240116105406/http://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html">https://web.archive.org/web/20240116105406/http://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html</ref>. </bibl>
+               <bibl xml:id="relax2014">“RELAX NG Home Page.” 2014. RELAX NG Home Page. Accessed
+                  January 18, 2024. <ref target="https://web.archive.org/web/20240118070611/https://relaxng.org/">https://web.archive.org/web/20240118070611/https://relaxng.org/</ref>. </bibl>
+               <bibl xml:id="syncro2024a">SyncRo Soft SRL. 2002–2024a. “Additional CSS Properties.”
+                  Documentation. oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118071706/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-css-additional-properties.html">http://web.archive.org/web/20240118071706/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-css-additional-properties.html</ref>. </bibl>
+               <bibl xml:id="syncro2024b">———. 2002–2024b. “Built-in Author Mode Operations.”
+                  Documentation. oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118071822/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-default-author-operations.html">http://web.archive.org/web/20240118071822/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-default-author-operations.html</ref>. </bibl>
+               <bibl xml:id="syncro2024c">———. 2002–2024c. “Creating a Framework through the
+                  Configuration Dialog.” Documentation. oXygen XML Editor. Accessed January 16,
+                  2024. <ref target="https://web.archive.org/web/20240116111755/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/framework-customization-extending.html">https://web.archive.org/web/20240116111755/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/framework-customization-extending.html</ref>. </bibl>
+               <bibl xml:id="syncro2024d">———. 2002–2024d. “Creating a New Project.” Documentation.
+                  oXygen XML Editor. Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240118063352/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/create-new-project.html">https://web.archive.org/web/20240118063352/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/create-new-project.html</ref>. </bibl>
+               <bibl xml:id="syncro2024e">———. 2002–2024e. “Creating and Customizing Author Mode
+                  Actions for a Framework.” Documentation. oXygen XML Editor. Accessed January 18,
+                  2024. <ref target="https://web.archive.org/web/20240118070808/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-create-custom-actions.html">https://web.archive.org/web/20240118070808/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-create-custom-actions.html</ref>. </bibl>
+               <bibl xml:id="syncro2024f">———. 2002–2024f. “Custom CSS Functions.” Documentation.
+                  oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118071502/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-oxygen-css-functions.html">http://web.archive.org/web/20240118071502/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/dg-oxygen-css-functions.html</ref>. </bibl>
+               <bibl xml:id="syncro2024g">———. 2002–2024g. “Customers.” oXygen XML Editor. Accessed
+                  January 16, 2024. <ref target="https://web.archive.org/web/20240116104421/https://www.oxygenxml.com/customers.html">https://web.archive.org/web/20240116104421/https://www.oxygenxml.com/customers.html</ref>. </bibl>
+               <bibl xml:id="syncro2024h">———. 2002–2024h. “Editor Variables.” Documentation. oXygen
+                  XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118071843/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/editor-variables.html#editor-variables">http://web.archive.org/web/20240118071843/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/editor-variables.html#editor-variables</ref>. </bibl>
+               <bibl xml:id="syncro2024i">———. 2002–2024i. “Form Controls.” Documentation. oXygen
+                  XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118071348/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/form-controls.html">http://web.archive.org/web/20240118071348/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/form-controls.html</ref>. </bibl>
+               <bibl xml:id="syncro2024j">———. 2002–2024j. “Framework and Author Mode
+                  Customization.” Documentation. oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118072955/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/authoring_customization.html">http://web.archive.org/web/20240118072955/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/authoring_customization.html</ref>. </bibl>
+               <bibl xml:id="syncro2024k">———. 2002–2024k. “Implementing Custom Form Controls.”
+                  Documentation. oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118072107/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/implementing-custom-form-controls.html">http://web.archive.org/web/20240118072107/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/implementing-custom-form-controls.html</ref>. </bibl>
+               <bibl xml:id="syncro2024l">———. 2002–2024l. “Oxygen XML Editor - Academic Edition.”
+                  oXygen XML Editor. Accessed October 3, 2024.
+                  <ref target="https://web.archive.org/web/20241003103831/https://www.oxygenxml.com/buy_academic_edition.html">https://web.archive.org/web/20241003103831/https://www.oxygenxml.com/buy_academic_edition.html</ref>.</bibl>
+               <bibl xml:id="syncro2024m">———. 2002–2024m. <emph>oXygen XML Editor</emph> (version
+                  23.1). Windows, MacOS, Linux. Romania: SyncRo Soft SRL. Accessed December 18,
+                  2023. <ref target="https://web.archive.org/web/20231218081955/https://www.oxygenxml.com/xml_editor.html">https://web.archive.org/web/20231218081955/https://www.oxygenxml.com/xml_editor.html</ref>. </bibl>
+               <bibl xml:id="syncro2024n">———. 2002–2024n. “Sharing a Framework.” Topic. oXygen XML
+                  Editor. Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240118064556/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/author-document-type-extension-sharing.html">https://web.archive.org/web/20240118064556/https://www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/author-document-type-extension-sharing.html</ref>. </bibl>
+               <bibl xml:id="syncro2024o">———. 2002–2024o. “Standard W3C CSS Supported Features.”
+                  oXygen XML Editor. Accessed October 3, 2024.
+                  <ref target="https://www.oxygenxml.com/doc/versions/26.1/ug-editor/topics/dg-standard-css-support.html">https://www.oxygenxml.com/doc/versions/26.1/ug-editor/topics/dg-standard-css-support.html</ref>.</bibl>
+               <bibl xml:id="syncro2012">———. 2012. “Oxygen XML Editor 14.1.” Version History.
+                  oXygen XML Editor. Accessed January 18, 2024. <ref target="http://web.archive.org/web/20240118074418/https://www.oxygenxml.com/xml_editor/whatisnew14.1.html">http://web.archive.org/web/20240118074418/https://www.oxygenxml.com/xml_editor/whatisnew14.1.html</ref>. </bibl>
+               <bibl xml:id="syncro2023">———. 2023. “What’s New in Oxygen XML Editor 25.1.” oXygen
+                  XML Editor. Accessed January 16, 2024. <ref target="https://web.archive.org/web/20240116104953/https://www.oxygenxml.com/xml_editor/whatisnew25.1.html">https://web.archive.org/web/20240116104953/https://www.oxygenxml.com/xml_editor/whatisnew25.1.html</ref>. </bibl>
+               <bibl xml:id="syncro2004">SyncRo Soft SRL, and @oxygenxml. 2004. <emph>oXygen XML
+                     Channel</emph>. Webinars and conference recordings. YouTube: oXygen XML
+                  Channel. Accessed January 18, 2024. <ref target="https://www.youtube.com/@oxygenxml/search?query=Framework">https://www.youtube.com/@oxygenxml/search?query=Framework</ref>. </bibl>
+               <bibl xml:id="tei">TEI Consortium. n.d. “TEI: Text Encoding Initiative.” Accessed
+                  January 16, 2024. <ref target="https://web.archive.org/web/20240116105707/https://tei-c.org/">https://web.archive.org/web/20240116105707/https://tei-c.org/</ref>. </bibl>
+               <bibl xml:id="w3cetal2024">W3C, and Bert Bos. 2024. “CSS Specifications.”
+                  Documentation. W3C – Description of All CSS Specifications. Accessed January 18,
+                  2024. <ref target="https://web.archive.org/web/20240118065122/https://www.w3.org/Style/CSS/specs.en.html">https://web.archive.org/web/20240118065122/https://www.w3.org/Style/CSS/specs.en.html</ref>. </bibl>
+               <bibl xml:id="w3cetal2004">W3C, David C. Fallside, and Priscilla Walmsley. 2004. “XML
+                  Schema Part 0: Primer Second Edition.” Documentation. W3C Recommendation. Accessed
+                  January 18, 2024. <ref target="https://web.archive.org/web/20240118070415/https://www.w3.org/TR/xmlschema-0/">https://web.archive.org/web/20240118070415/https://www.w3.org/TR/xmlschema-0/</ref>. </bibl>
+               <bibl xml:id="w3cetal2017">W3C, Jonathan Robie, Michael Dyck, and Josh Spiegel. 2017.
+                  “XML Path Language (XPath) 3.1.” Documentation. W3C Recommendations. Accessed
+                  January 18, 2024. <ref target="https://web.archive.org/web/20240118065535/https://www.w3.org/TR/xpath-31/">https://web.archive.org/web/20240118065535/https://www.w3.org/TR/xpath-31/</ref>. </bibl>
+               <bibl xml:id="w3schools2024a">W3schools. 1999–2024a. “CSS Tutorial.” Tutorial.
+                  W3schools. Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240118070014/https://www.w3schools.com/css/default.asp">https://web.archive.org/web/20240118070014/https://www.w3schools.com/css/default.asp</ref>. </bibl>
+               <bibl xml:id="w3schools2024b">———. 1999–2024b. “XPath Tutorial.” Tutorial. W3schools.
+                  Accessed January 18, 2024. <ref target="https://web.archive.org/web/20240118070143/https://www.w3schools.com/xml/xpath_intro.asp">https://web.archive.org/web/20240118070143/https://www.w3schools.com/xml/xpath_intro.asp</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>

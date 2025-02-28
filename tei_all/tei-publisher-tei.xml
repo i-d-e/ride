@@ -1,0 +1,2800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.19.1">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>TEI Publisher</title>
+            <author ref="https://orcid.org/0000-0002-2071-6407">
+               <name>
+                  <forename>Nadine</forename>
+                  <surname>Sutor</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Wuppertal</orgName>
+                  <placeName>Wuppertal</placeName>
+               </affiliation>
+               <email>sutor@uni-wuppertal.de</email>
+            </author>
+            <author ref="https://orcid.org/0000-0003-0577-4470">
+               <name>
+                  <forename>Andreas</forename>
+                  <surname>Mertgens</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Wuppertal</orgName>
+                  <placeName>Wuppertal</placeName>
+               </affiliation>
+               <email>mertgens@uni-wuppertal.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2024-12">December 2024</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19/tei-publisher</idno>
+            <idno type="DOI">10.18716/ride.a.19.1</idno>
+            <idno type="archive">https://github.com/i-d-e/ride/raw/master/issues/issue19/tei-publisher/tei-publisher.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
+            <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+               Neuber</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="19">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19</idno>
+            <idno type="DOI">10.18716/ride.a.19</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>TEI Publisher. The Instant Publishing Toolbox</title>
+                  <editor>Wolfang Meyer, Magdalena Turska</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Wolfgang Meyer</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Magdalena Turska</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>Programmer</resp>
+                     <persName>eXist-db</persName>
+                  </respStmt>
+                  <date type="publication">2015-2024</date>
+                  <idno type="URI">https://teipublisher.com</idno>
+                  <date type="accessed">2024-10-14</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>XQuery</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>epub</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Česky, Slovenščina, Norsk, Suomi, Nederlands, Română</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>Slack</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>tei/xml</term>
+               <term>data transformation</term>
+               <term>publishing</term>
+               <term>digital editions</term>
+               <term>digital humanities</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>The <emph>TEI Publisher</emph> is an open-source tool designed to simplify the
+               publication of TEI encoded texts for researchers without extensive programming
+               knowledge. It allows users to transform XML data into web-based digital editions
+               using predefined templates and custom styles. Developed by eXist-Solutions, it
+               integrates with the eXist-db XML database to store and organize data, offering
+               flexibility for different use cases. Initially launched in 2015, the tool is under
+               continuous development, with regular updates introducing new features and
+               improvements. In this review, we examine how <emph>TEI Publisher</emph> balances ease
+               of use with deep customization options. We demonstrate how scholars are empowered to
+               produce digital editions rapidly and how researchers can experiment with various
+               re-presentations of their data using a graphical interface and a set of predefined
+               configurations. We also discuss how, while it lowers barriers for less technical
+               users, it nevertheless requires a solid understanding of TEI and proficiency with XML
+               technologies for more complex customization. Using a small practical example, we will
+               demonstrate some of the core functions of the <emph>TEI Publisher</emph> and
+               highlight both the advantages and drawbacks affecting its presentation and usability.
+               TEI Publisher proves to be a mature and easy-to-use tool for projects with moderate
+               technical demands, suited for researchers seeking rapid results. However, it falls
+               short in accessibility, citability, and adaptability for highly customized use cases,
+               revealing areas for future improvement in usability and inclusivity.</p>
+         </div>
+      </front>
+      <body>
+
+         <div xml:id="div1">
+            <head>Eröffnung des Reviews</head>
+            <div xml:id="div1.1">
+               <head>Die ReviewerInnen</head>
+               <p xml:id="p1">Die Rezension über den <emph>TEI Publisher</emph> wurde von zwei
+                  AutorInnen verfasst. Mit ihrem abgeschlossenen Bachelorstudium der
+                  Kulturwissenschaften sowie dem absolvierten Masterstudium der Editions- und
+                  Dokumentwissenschaften, hat die Autorin fachlich einen geisteswissenschaftlichen
+                  Hintergrund. Das Abschlussprojekt der Masterarbeit setzte sie im Sommer 2019 mit
+                  dem <emph>TEI Publisher</emph> um. Am Lehrstuhl für Digital Humanities an der
+                  Bergischen Universität Wuppertal hat sich die Autorin verstärkt mit digitalen
+                  Technologien, Tools und Publikationsworkflows auseinandergesetzt. Die Reviewerin
+                  ist in diesem Sinne keine Webentwicklerin, sondern eine klassische Userin des
+                  rezensierten Tools. </p>
+               <p xml:id="p2">Der Co-Autor hat nach einem Bachelor in Anglistik und
+                  Wirtschaftswissenschaft ebenfalls den Master der Editions- und
+                  Dokumentwissenschaft abgeschlossen und arbeitet seit 2016 in den Digital
+                  Humanities. Zunächst am Cologne Center for eHumanities, seit 2020 am Lehrstuhl für
+                  Digital Humanities an der Bergischen Universität Wuppertal hat er an mehreren
+                  Projekten mitgearbeitet, deren Kern die Publikation von XML Daten war und dabei
+                  auch mehrere Portale mit <emph>eXist-db</emph> erstellt und administriert. </p>
+            </div>
+            <div xml:id="div1.2">
+               <head>Identifizierung des Tools</head>
+               <p xml:id="p3">Der <emph>TEI Publisher</emph> identifiziert sich selbst als
+                  sogenannte <emph>Instant Publishing Toolbox</emph>.<note xml:id="ftn1"> Vgl.
+                     offizielle Projektwebseite <ref
+                        target="https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html"
+                        >https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html</ref>.</note>
+                  Benannt wird das Tool häufig in abgekürzter Form als <emph>Publisher</emph>. Das
+                  Ziel ist es, den ForscherInnen und WissenschaftlerInnen mit dem <emph>TEI
+                     Publisher</emph> ein effizientes und robustes Tool an die Hand zu geben, das
+                  ohne umfangreiche Programmierkenntnisse die Publikation von Daten und Quellen
+                     ermöglicht.<note xml:id="ftn2">
+                     <emph>Allgemeine Beschreibung</emph>. Vgl.<emph> Digital Edition Creation
+                        Pipelines: Tools and Transitions</emph> (DigEdTnT): <ref
+                        target="https://web.archive.org/web/20240119134732/https://digedtnt.github.io/teipublisher/"
+                        >https://web.archive.org/web/20240119134732/https://digedtnt.github.io/teipublisher/</ref>.</note>
+                  Im Rahmen der produktiven Arbeit mit dem <emph>TEI Publisher </emph>können
+                  NutzerInnen mehrere vorgefertigte Templates sowie Konfigurations- und
+                  Transformationsskripte selbst konfigurieren. Für individuelle Zwecke und je nach
+                  Projektkontext kann die technische Infrastruktur des <emph>TEI Publisher
+                  </emph>also bis zu einem gewissen Umfang angepasst werden. „<emph>TEI
+                     Publisher</emph> allows you to publish XML without becoming a programmer and
+                  without pushing you into a one-size-fits-all framework.“<note xml:id="ftn3">
+                     eXist-Solutions. Offizielle Projektwebsite: <ref
+                        target="https://web.archive.org/web/20240119135050/https://www.existsolutions.com/"
+                        >https://web.archive.org/web/20240119135050/https://www.existsolutions.com/</ref>.</note>
+                  Mit dem <emph>TEI Publisher</emph> lassen sich vereinzelt umfangreiche
+                  Programmierarbeiten reduzieren, sodass auch erfahrene WebentwicklerInnen von
+                  diesem Tool profitieren können. </p>
+               <p xml:id="p4">Entwickelt wurde der <emph>TEI Publisher</emph> von
+                     eXist-Solutions,<note xml:id="ftn4"> Vgl. ebd. </note> einer GmbH, die
+                  technischen Support, Beratung, Schulung und Hosting für eXist-Datenbanksysteme
+                  anbietet und inzwischen auch aktiv bei der Weiterentwicklung des <emph>TEI
+                     Publishers</emph> mitwirkt. „Full service for all your eXist-db and <emph>TEI
+                     Publisher</emph> needs.“<note xml:id="ftn5"> Vgl. ebd.</note> Zu den primären
+                  EntwicklerInnen zählen Magdalena Turska und Wolfgang Meier. Vor der produktiven
+                  Arbeit mit dem <emph>TEI Publisher </emph>ist zunächst die Einrichtung einer
+                  XML-Datenbank (<emph>eXist-db</emph>) erforderlich. Sie dient als storage engine
+                  für jegliche <emph>eXist</emph>-Anwendungen. Über den „Package-Manager“, eine Art
+                  „App-Store“ für <emph>eXist</emph>-Anwendungen, kann der <emph>TEI
+                     Publisher</emph> als Webapplikation heruntergeladen werden. Als Backend
+                  speichert und organisiert <emph>eXist-db</emph> die Daten in mehreren
+                     <emph>collections. </emph>Die Versionsnummer des <emph>TEI Publisher
+                  </emph>wird bei der Installation automatisch angegeben. NutzerInnen können im
+                  Vorfeld nur bedingt selbst bestimmen, welche Version dieses Tools sie einrichten
+                  und verwenden möchten. Die Versionsnummer des <emph>TEI Publisher</emph> muss
+                  kompatibel mit der Version der Datenbank sein, wie in dem projekteigenen
+                  GitHub-Repository hingewiesen wird: „Important: <emph>TEI Publisher</emph> from
+                  version 5.0.0 requires eXist-db 5.0.0 or later.“<note xml:id="ftn6"> Directory zur
+                        <emph>TEI Publisher</emph>-App im projekteigenen GitHub-Repository: <ref
+                        target="https://web.archive.org/web/20240119135544/https://github.com/eeditiones/tei-publisher-app"
+                        >https://web.archive.org/web/20240119135544/https://github.com/eeditiones/tei-publisher-app</ref>.</note>
+                  In dem Repository wird auch das Veröffentlichungsdatum einer jeden Version des
+                     <emph>TEI Publisher </emph>dokumentiert. Das Repository ist zugleich globaler
+                  Speicherort für sämtliche Ressourcen der EntwicklerInnen. Hier werden alle
+                  Änderungen, Revisionsschritte und Updates dokumentiert und veröffentlicht. </p>
+            </div>
+            <div xml:id="div1.3">
+               <head>Stand der Entwicklung</head>
+               <p xml:id="p5">
+                  <figure xml:id="img1">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-1.png"/>
+                     <head type="legend">Interface der Testinstanz des <emph>TEI Publisher
+                        </emph>unter Version 8.0.0.</head>
+                  </figure>
+                  <figure xml:id="img2">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-2.png"/>
+                     <head type="legend">Aktuelle Versionsnummer der Testinstanz des <emph>TEI
+                           Publisher</emph>.</head>
+                  </figure>Seit Projektstart im Jahr 2015 befinden sich der <emph>TEI
+                     Publisher</emph> und alle seine Komponenten in aktiver Weiterentwicklung.
+                     Unter<emph> Tagged „release“</emph><note xml:id="ftn7"> e-editiones, Tagged
+                     „release“, offizielle Website: <ref
+                        target="https://web.archive.org/web/20240119135747/https://www.e-editiones.org/tags/release/"
+                        >https://web.archive.org/web/20240119135747/https://www.e-editiones.org/tags/release/</ref>.
+                  </note> werden alle, insbesondere technischen Updates in Form von Blogeinträgen
+                  publiziert. Ein bis zwei Mal pro Jahr veröffentlichen die EntwicklerInnen eine
+                  neue Hauptversion, die um neue Funktionen und Features erweitert wird. Nach
+                  Auffassung der EntwicklerInnen kann der <emph>TEI Publisher</emph> dadurch in
+                  möglichst vielen unterschiedlichen Use-Cases zum Einsatz kommen. Weniger
+                  umfangreiche Updates werden unregelmäßig und in kürzeren Abständen veröffentlicht.
+                  Dazu zählen beispielsweise Verbesserungen, aber auch Fehlerkorrekturen. In einem
+                     Blogpost<note xml:id="ftn8"> e-editiones, Blogpost zur Version 8.0.0. des
+                        <emph>TEI Publisher</emph>. Offizielle Website: <ref
+                        target="https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/"
+                        >https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/</ref>.</note>
+                  vom März 2023 wird die aktuelle Version 8.0.0 und die dort neu implementierten
+                  Features kurz vorgestellt. Seit Februar 2024<note xml:id="ftn9"> e-editiones,
+                     Blogpost zur Version 9.0.0 des <emph>TEI Publisher</emph>. Offizielle Website:
+                        <ref
+                        target="http://web.archive.org/web/20240829005138/https://www.e-editiones.org/posts/tei-publisher-9/"
+                        >http://web.archive.org/web/20240829005138/https://www.e-editiones.org/posts/tei-publisher-9/</ref>.</note>
+                  steht Version 9.0.0. zur Verfügung. Das Update brachte u.a. kleine Verbesserungen
+                  der Facetten, Erweiterungen des clientseitigen URL-Routings und eine zusätzliche
+                  Unterstützung für IIIF-Manifeste. Darüber hinaus gab es eine grundlegende
+                  Überarbeitung des Annotation-Editors, der durch die Migration ein neues,
+                  benutzerfreundlicheres und ergonomischeres Layout, sowie zusätzliche
+                  Bearbeitungsmöglichkeiten von Register-Einträgen bietet. Somit wird es möglich
+                  auch lokale Taxonomien und Register für Orte, Namen etc. innerhalb des <emph>TEI
+                     Publishers</emph> zu nutzen.<note xml:id="ftn10"> Vgl. ebd. Abschnitt
+                        <emph>Redesigned annotation editor.</emph></note> Zum Zeitpunkt der
+                  Abfassung dieser Review war Version 9.0.0. des<emph> TEI Publisher </emph>noch
+                  nicht veröffentlicht, sodass sich die hier dokumentierten Ergebnisse auf Version
+                  8.0.0. beziehen. Die Testdemo<note xml:id="ftn11"> Testinstanz in Version 8.1.0
+                     des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240119140535/https://teipublisher.com/exist/apps/tei-publisher/index.html"
+                        >https://web.archive.org/web/20240119140535/https://teipublisher.com/exist/apps/tei-publisher/index.html</ref>.</note>
+                  (Abb. 1), mit der die NutzerInnen die Infrastruktur des <emph>TEI Publisher</emph>
+                  erkunden und Daten zu Experimentierzwecken hochladen können, lief daher noch unter
+                  Version 8.1.0 (Abb. 2). Im projekteigenen GitHub-Repository ist die <emph>version
+                     history</emph> des <emph>TEI Publisher </emph>dokumentiert.<note xml:id="ftn12"
+                     > GitHub-Repository der tei-publisher-app, Releases: <ref
+                        target="http://web.archive.org/web/20240904063926/https://github.com/eeditiones/tei-publisher-app/releases"
+                        >http://web.archive.org/web/20240904063926/https://github.com/eeditiones/tei-publisher-app/releases</ref>.</note>
+               </p>
+
+            </div>
+            <div xml:id="div1.4">
+               <head>Bestimmung der Entwicklungsumgebung </head>
+               <p xml:id="p6">Zum Zwecke dieses Reviews wurde der <emph>TEI Publisher</emph>
+                  vornehmlich auf Windows und Mac Systemen, zum kleinen Teil auch auf einem Linux
+                  (Ubuntu 22) System benutzt. Der <emph>TEI Publisher</emph> als Applikation auf
+                  Basis von <emph>eXist-db</emph> ist plattformunabhängig. Unterschiede ergaben sich
+                  lediglich in der Installation von <emph>eXist-db</emph>. </p>
+            </div>
+            <div xml:id="div1.5">
+               <head>Allgemeine Einführung in das Tool</head>
+               <p xml:id="p7">Die Motivation hinter der Entwicklung des <emph>TEI Publisher
+                  </emph>liegt darin begründet, ein Werkzeug zur Verfügung zu stellen, das es
+                  WissenschaftlerInnen ermöglicht, ihre Quellen in digitaler Form und ohne
+                  umfassende Programmierkenntnisse zu veröffentlichen. Auch erfahrene
+                  EntwicklerInnen sollen von dieser Software profitieren, indem sie weniger Code
+                  schreiben müssen, dadurch Redundanzen vermeiden und somit Wartung sowie
+                  Interoperabilität verbessern können. Zentrale Aspekte in der Vision des <emph>TEI
+                     Publisher</emph> sind ein hohes Maß an Standardisierung, Modularität,
+                  Wiederverwendbarkeit sowie Nachhaltigkeit. </p>
+               <p xml:id="p8">Der <emph>TEI Publisher</emph> ist ein Gemeinschaftsprojekt, das auf
+                  Ideen und Beiträgen von TEI-Enthusiasten aus aller Welt basiert. Ursprünglich
+                  inspiriert von der Vision hinter dem TEI-Processing-Model<note xml:id="ftn13"> Das
+                        <emph>TEI-Processing-Model </emph>steuert, wie TEI-Dokumente verarbeitet und
+                     in andere Formate (wie z.B. HTML, PDF, oder ePub) konvertiert werden. Es bietet
+                     eine standardisierte Methode, die festlegt, wie die XML-Kodierung eines
+                     TEI-Dokuments interpretiert und in eine bestimmte Präsentationsform
+                     transformiert wird. Das Modell enthält Regeln und Mechanismen, um den Übergang
+                     von der strukturierten Repräsentation eines Textes in der TEI zu seiner
+                     Darstellung zu <emph>prozessieren</emph>.Vgl. DiXiT Blog. <emph>TEI Simple
+                        Processing Model: Oxford workshop</emph> (2015): <ref
+                        target="http://web.archive.org/web/20240904070739/https://dixit.hypotheses.org/695"
+                        >http://web.archive.org/web/20240904070739/https://dixit.hypotheses.org/695</ref>.</note>
+                  und dem TEI-Simple-Projekt<note xml:id="ftn14"> Das <emph>TEI-Simple-Projekt
+                     </emph>war eine Initiative, die darauf abzielte, die Komplexität der
+                     TEI-Kodierung zu reduzieren, um sie für NutzerInnen zugänglicher zu machen, die
+                     keine ExpertInnen im Bereich der Textkodierung sind. <emph>TEI-Simple
+                     </emph>stellte eine vereinfachte Version der TEI-Guidelines zur Verfügung, die
+                     sich auf häufig verwendetes und grundlegendes TEI-Markup konzentrierte. Ziel
+                     war es, die Nutzung von TEI für Projekte zu erleichtern, die keine hochgradig
+                     komplexe oder detaillierte Textkodierung benötigen. Vgl. GitHub.io. <emph>TEI
+                        Simple</emph>: <ref
+                        target="http://web.archive.org/web/20240904070209/https://teic.github.io/TEI-Simple/"
+                        >http://web.archive.org/web/20240904070209/https://teic.github.io/TEI-Simple/</ref>.</note>
+                  aus dem Jahr 2015, hat es sich zu dem entwickelt, was es heute ist: Eine
+                     <emph>Instant Publishing Toolbox</emph>, die eine einfache und unkomplizierte
+                  Datenpublikation auf Basis von XML-TEI in mehreren Exportformate ermöglichen soll.
+                  Laut Aussage der EntwicklerInnen ist der <emph>TEI Publisher </emph>kein
+                  kommerzielles Projekt, denn im Fokus steht der Open Source-Gedanke. Der <emph>TEI
+                     Publisher </emph>sei ein wichtiger Schritt in Richtung Interoperabilität,
+                  Wiederverwendbarkeit und Nachhaltigkeit. Um diese Ziele weiter voranzutreiben und
+                  damit auch eine breitere Öffentlichkeit davon profitieren kann, schlossen sich im
+                  Mai 2020 eine Reihe kleinerer und größerer Editionsprojekte, kulturbewahrende
+                  Institutionen und einzelne ForscherInnen zusammen, um e-editiones<note
+                     xml:id="ftn15"> e-editiones, offizielle Website: <ref
+                        target="https://web.archive.org/web/20240119141236/https://www.e-editiones.org/"
+                        >https://web.archive.org/web/20240119141236/https://www.e-editiones.org/</ref>.</note>
+                  zu gründen. E-editiones ist ein Verband, der Akteure aus Forschung und
+                  Wissenschaft, die in den Bereichen der digitalen Geisteswissenschaften,
+                  Editionswissenschaft und der Informatik tätig sind, zusammenbringt. Im Fokus steht
+                  die Unterstützung digitaler Projekte durch die Förderung offener Standards und
+                  gemeinschaftlicher Kooperationen mit dem letztendlichen Ziel, den Fortbestand von
+                  Editionen bis weit in die Zukunft zu sichern.<note xml:id="ftn16"> Vgl. ebd.
+                  </note> E-editiones wartet und pflegt auch den Sourcecode des <emph>TEI
+                     Publisher</emph> und koordiniert dessen Entwicklung in dem hier bereits
+                  vorgestellten GitHub-Repository.</p>
+            </div>
+            <div xml:id="div1.6">
+               <head>Finanzierung</head>
+               <p xml:id="p9">Der <emph>TEI Publisher</emph> wurde mit Beiträgen anderer NutzerInnen
+                  der Öffentlichkeit als freie Software entwickelt und für Forschungszwecke zur
+                  Verfügung gestellt. Eine Vielzahl von privat und öffentlich finanzierten Projekten
+                  haben ebenfalls Unterstützung geleistet. Hinter allem steht, wie bereits erwähnt,
+                  der Verein e-editiones, der digitale Projekte durch die Förderung offener
+                  Standards unterstützt. Das Resultat dieser gemeinschaftlichen Zusammenarbeit ist
+                  eine lebhafte und gut vernetzte Community, die hinter dem <emph>TEI
+                     Publisher</emph> steht. </p>
+               <p xml:id="p10">Ein weiterer Weg der Finanzierung, z.B. für Wartung und Entwicklung
+                  von Software wie <emph>eXist-db</emph> oder dem <emph>TEI-Publisher</emph>, läuft
+                  über Projektaufträge. „TEI Publisher's development so far was mainly funded by
+                  projects having concrete publication needs.”<note xml:id="ftn17">
+                     <emph>Support</emph>. Offizielle Website des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support"
+                        >https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support</ref>.</note>
+                  Darüber hinaus, bietet die Entwickler-Community ihre Unterstützung bei der Planung
+                  und Umsetzung von Editionsprojekten an: „If you have a digital edition to publish
+                  and would like to give TEI Publisher a try, contact us [...] and we commit to port
+                  any feature with more general interest back to the TEI Publisher.“<note
+                     xml:id="ftn18"> Ebd. <ref
+                        target="https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support"
+                        >https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support</ref>.</note>
+                  Auf der offiziellen Projektwebsite wird transparent gemacht, in welchen
+                  preislichen Kategorien sich potenzielle Interessenten befinden und unter welchen
+                  Bedingungen, z.B. je nach Umfang der technischen Anforderungen, einen
+                  Preisnachlass auf spezielle Anfragen gibt: <cit>
+                     <quote>Starting with TEI Publisher 5.0, we provide a special offer: Pass us
+                        your TEI data and we'll invest 5 full days to create a working prototype of
+                        your digital edition for a total price of € 5000 and earmark 10% of that for
+                        further TEI Publisher development. How much can be achieved in just a few
+                        days? Since TEI Publisher is all about code reuse, we can achieve a lot
+                        given that the quality of the underlying data allows it [...]<note
+                           xml:id="ftn19">
+                           <emph>Special Offer</emph>. Offizielle Website des <emph>TEI
+                              Publisher</emph>: <ref
+                              target="https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support"
+                              >https://web.archive.org/web/20240904071745/https://teipublisher.com/index.html#support</ref>.</note>
+                     </quote>
+                  </cit>
+               </p>
+               <p xml:id="p11">Um exemplarisch zu zeigen, was in kurzer Zeit möglich ist, wird auf
+                  eine mit dem <emph>TEI Publisher</emph> umgesetzte digitale Edition der <emph>Van
+                     Gogh Letters</emph><note xml:id="ftn20">
+                     <emph>Van Gogh Letters</emph>. Digitale Edition online abrufbar unter: <ref
+                        target="https://web.archive.org/web/20240119142458/https://teipublisher.com/exist/apps/vangogh/index.html"
+                        >https://web.archive.org/web/20240119142458/https://teipublisher.com/exist/apps/vangogh/index.html</ref>.</note>
+                  verwiesen, die ein ausgewähltes Corpus der Briefe des Künstlers Van Gogh inklusive
+                  Transkriptionen und Faksimiles in synoptischer Ansicht visualisiert. Erstellt
+                  wurde diese Edition auf Basis von Version 5.0.0.</p>
+            </div>
+            <div xml:id="div1.7">
+               <head>Transparenz</head>
+               <p xml:id="p12">Die Dokumentation<note xml:id="ftn21"> Offizielle Dokumentation des
+                        <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240119142743/https://teipublisher.com/exist/apps/tei-publisher/documentation"
+                        >https://web.archive.org/web/20240119142743/https://teipublisher.com/exist/apps/tei-publisher/documentation</ref>.</note>
+                  ist sehr umfangreich, wird stetig erweitert und enthält viele Beispiele und
+                  Referenzen. Sie bespricht Probleme und gibt technische Hinweise, auf die
+                  NutzerInnen im Rahmen der produktiven Arbeit mit dem <emph>TEI Publisher</emph>
+                  achten sollten. Die Dokumentation kann sowohl online eingesehen als auch in
+                  verschiedenen Exportformaten oben im Menü via Klick auf „Download“ heruntergeladen
+                  werden. Als ersten Einstieg bietet die offizielle Website des <emph>TEI
+                     Publisher</emph> mehrere Demo-Projekte,<note xml:id="ftn22">
+                     <emph>Features Demos</emph>. Offizielle Website des <emph>TEI Publisher</emph>:
+                        <ref
+                        target="https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html"
+                        >https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html</ref>.
+                  </note> damit sich NutzerInnen einen Überblick verschaffen können, um zu sehen,
+                  was mit dem <emph>TEI Publisher</emph> als Tool möglich ist. Die technische
+                  Dokumentation im GitHub-Repository<note xml:id="ftn23"> GitHub-Repository von
+                     e-editiones, technische Dokumentation des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240904072550/https://github.com/eeditiones/tei-publisher-app"
+                        >https://web.archive.org/web/20240904072550/https://github.com/eeditiones/tei-publisher-app</ref>.</note>
+                  ist ausführlich und wird stetig aktualisiert. Das betrifft sowohl die Ressourcen,
+                  als auch die textuellen Erläuterungen in der Readme-Datei, die z.B. durch den
+                  Installationsprozess führen. In dem Repository auf GitHub wird auch auf
+                     Lizenzen<note xml:id="ftn24">
+                     <emph>License. </emph>GitHub-Repository von e-editiones, technische
+                     Dokumentation des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240904072550/https://github.com/eeditiones/tei-publisher-app"
+                        >https://web.archive.org/web/20240904072550/https://github.com/eeditiones/tei-publisher-app</ref>
+                  </note> Bezug genommen, unter denen sämtliche Software, darunter auch der
+                     <emph>TEI Publisher</emph>, betrieben wird. Damit verknüpft sind auch die
+                  Bedingungen, unter denen der <emph>Publisher</emph> und seine Komponenten
+                  verwendet werden dürfen. Lizenziert ist der <emph>TEI Publisher</emph> unter der
+                     GPLv3-Lizenz.<note xml:id="ftn25"> Die GNU General Public License ist eine
+                     freie Copyleft-Lizenz für Software und andere Arten von Werken. Sie soll die
+                     Freiheit garantieren, alle Versionen eines Programms weiterzugeben sowie
+                     Modifikationen zu erlauben. Dadurch soll sichergestellt werden, dass sie eine
+                     freie Software und ein freies Programm für alle NutzerInnen bleibt. <ref
+                        target="https://web.archive.org/web/20240119042126/https://www.gnu.org/licenses/gpl-3.0.html"
+                        >https://web.archive.org/web/20240119042126/https://www.gnu.org/licenses/gpl-3.0.html</ref>
+                  </note> Ist von Seiten der NutzerInnen die Verwendung in einem anderen Kontext
+                  beabsichtigt, was möglicherweise ein anderes Lizenzmodell erforderlich macht,
+                  bitten die Verantwortlichen um eine Kontaktaufnahme, damit hier eine Lösung
+                  gefunden werden kann. </p>
+               <p xml:id="p13">Der Umfang der Informationen zu sämtlichen Bereichen rund um den
+                     <emph>TEI Publisher</emph> ist beachtlich und daher positiv zu bewerten. Die
+                  Art der Bereitstellung ist jedoch z. T. verwirrend und nicht immer
+                  nachvollziehbar. So widersprechen sich beispielsweise die Angaben zur Version in
+                  dem Blog von e-editiones (8.0.0)<note xml:id="ftn26"> e-editiones, Blogpost zur
+                     Version 8.0.0. des <emph>TEI Publisher</emph>. Offizielle Website: <ref
+                        target="https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/"
+                        >https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/</ref>.</note>
+                  und in der Rubrik „News“ auf der Startseite (8.0.0)<note xml:id="ftn27">
+                     <emph>News</emph>. Offizielle Website des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html"
+                        >https://web.archive.org/web/20240119134513/https://teipublisher.com/index.html</ref>.</note>
+                  im Vergleich zur Testversion (8.1.0)<note xml:id="ftn28"> Testinstanz in Version
+                     8.1.0 des <emph>TEI Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240119140535/https://teipublisher.com/exist/apps/tei-publisher/index.html"
+                        >https://web.archive.org/web/20240119140535/https://teipublisher.com/exist/apps/tei-publisher/index.html</ref>.</note>.
+                  ForscherInnen, die eine produktive Arbeit mit diesem Tool in Erwägung ziehen,
+                  werden im Unklaren gelassen, wann welche Version der Publisher-App zur Verfügung
+                  steht.</p>
+            </div>
+         </div>
+         <div xml:id="div2">
+            <head>Methoden und Implementierung</head>
+            <div xml:id="div2.1">
+               <head>Problemstellung und Alternativen</head>
+               <p xml:id="p14">Das grundlegende Problem, für das der <emph>TEI Publisher</emph> eine
+                  Lösung anbieten möchte, ist eines, das sich in vielen Projekten stellt: In TEI
+                  erfasste Textdaten und ein entsprechendes Datenmodell liegen vor oder das Projekt
+                  befindet sich womöglich noch im Prozess der Exploration und Datenmodellierung.
+                  Konzeptionell besteht bereits eine Vision von einer Präsentationsebene sowie einer
+                  Editionsansicht und gesucht wird nun der schnellste und einfachste Weg dorthin.
+                  Gleichzeitig sollte der Prozess so flexibel und anpassbar sein, dass spezifische
+                  Anforderungen (und die gibt es in fast jedem geisteswissenschaftlichen Projekt)
+                  realisiert und auch komplexe TEI-Datenmodelle repräsentiert und verarbeitet werden
+                  können. Trotz dieser Ansprüche ist in vielen Projekten oft jedoch keine dedizierte
+                  oder nur eine begrenzte Stelle für einen Entwickler vorgesehen. Darüber hinaus
+                  erlauben die Projektrealitäten keine langen und teuren Entwicklungsprozesse über
+                  die begrenzten Projektkontexte hinaus. Der klassische Weg wäre entweder die eigene
+                  Entwicklung einer Webapplikation auf Basis einer XML-Datenbank wie
+                     <emph>eXist-db</emph> oder <emph>Base-X</emph> oder die Erstellung einer
+                  statischen Webseite. Beide Wege sind in der oben skizzierten Situation oft nur
+                  schwer umsetzbar und erfordern von den Projektmitarbeitenden gute Kenntnisse
+                  sowohl im Bereich der „X-Technologien“ (<emph>XPath, XSLT, XQuery</emph>) und in
+                  der Webentwicklung die, sofern eben keine vollwertige Entwicklerstelle vorhanden
+                  ist, erst erarbeitet werden müssen. Dieses Problem ist seit langer Zeit Thema in
+                  den gerade kleineren Forschungsprojekten und es wurde immer wieder Bedarf für eine
+                  niedrigschwellige Lösung geäußert. In ihrer Vorstellung der <emph>TEI Archiving,
+                     Publishing, and Access Service (TAPAS)</emph> im TEI Journal berichten 2013
+                  z.B. schon Julia Flanders and Scott Hamlin: „Following a TEI workshop at Wheaton
+                  College, participants reflected on the fact that learning and creating TEI data
+                  seemed to lie well within their grasp, but publishing that data seemed to depend
+                  on institutional resources (server space, programmer time, XML publishing
+                  expertise) that they could not count on.“<note xml:id="ftn29">
+                     <emph>TAPAS: Building a TEI Publishing and Repository Service </emph>Julia
+                     Flanders and Scott Hamlin <ref target="https://doi.org/10.4000/jtei.788"
+                        >https://doi.org/10.4000/jtei.788</ref></note>
+               </p>
+               <p xml:id="p15">Schaut man sich aktuelle Entwicklungen an, versuchen neben dem
+                     <emph>TEI Publisher</emph> auch andere Tools an diesem Punkt anzuknüpfen und
+                  Projekte in diesen Phasen des Workflows zu unterstützen - mit jeweils
+                  unterschiedlichen Herangehensweisen, Zielgruppen und <emph>use-cases</emph>. </p>
+               <p xml:id="p16">Die Software<emph> EVT (Edition Visualization Technology)</emph>
+                  beschreibt sich selbst als „light-weight, open source tool specifically designed
+                  to create digital editions from XML-encoded texts, freeing the scholar from the
+                  burden of web programming and enabling the final user to browse, explore and study
+                  digital editions by means of a user-friendly interface.“<note xml:id="ftn30">
+                     <emph>EVT</emph>: <ref
+                        target="http://web.archive.org/web/20240125074736/http://evt.labcd.unipi.it/"
+                        >http://web.archive.org/web/20240125074736/http://evt.labcd.unipi.it/</ref>.</note>
+                  Das Tool wurde im Rahmen des <emph>Digital Vercelli Book</emph> Projektes
+                  entwickelt und liegt bereits in Version 2.0 vor.<note xml:id="ftn31">
+                     <emph>Digital Vercelli Book Projekt</emph>: <ref
+                        target="http://web.archive.org/web/20240125075035/http://vbd.humnet.unipi.it/"
+                        >http://web.archive.org/web/20240125075035/http://vbd.humnet.unipi.it/</ref>.</note>
+                  <emph>EVT</emph> positioniert sich zunehmend als generisches Tool für verschiedene
+                  Formen von digitalen Editionen.<note xml:id="ftn32"> Exemplarischen sei hier noch
+                     die Universitätbibliothek in Basilikata erwähnt die für viele Handschriften
+                     neben einer PDF Datei auch eine mit EVT realisierte Editionsansicht anbietet:
+                        <ref target="https://bup.unibas.it/library/DH"
+                        >https://bup.unibas.it/library/DH</ref></note> Der spezifische Fokus liegt
+                  hier auf der synoptischen Darstellung verschiedener Textansichten und des
+                  Faksimiles, also den Anforderungen einer klassischen historisch-kritischen
+                  Editionspraxis. Technisch realisiert ist die Software von EVT als Open-Source Web
+                  Applikation auf Basis von JavaScript. Wie im Namen bereits ersichtlich, liegt der
+                  Schwerpunkt primär darauf, EditorInnen bei der Arbeit mit und der Analyse von
+                  Dokumenten zu unterstützen und dafür eine leistungsfähige Visualisierung
+                  anzubieten. Eine finale Publikationsplattform für Projekte zu erstellen steht
+                  somit nicht im Vordergrund.</p>
+               <p xml:id="p17">Als weitere Entwicklung in diesem Bereich sei das Modul
+                     <emph>ediarum.WEB</emph> zu nennen, welches von der Berlin-Brandenburgische
+                  Akademie der Wissenschaften (BBAW) im Rahmen des <emph>ediarum-</emph>Projekts als
+                  Publikationsmodul entwickelt wurde. Dies bietet die Möglichkeit, Daten, die
+                  mittels des <emph>ediarum-</emph>Frameworks erstellt und verwaltet werden,
+                  innerhalb einer <emph>eXist-db</emph>-App zu veröffentlichen. Im Gegensatz zum
+                     <emph>TEI Publisher</emph> positioniert sich <emph>ediarum.WEB</emph> noch
+                  deutlicher als Werkzeug und Programmbibliothek für EntwicklerInnen („library for
+                     <emph>eXist-db</emph>“<note xml:id="ftn33"> GitHub des <emph>ediarum.WEB</emph>
+                     Moduls: <ref target="https://github.com/ediarum/ediarum.WEB/releases"
+                        >https://github.com/ediarum/ediarum.WEB/releases</ref>
+                  </note> ) und weniger als out-of-the-box Lösung für ForscherInnen. </p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Methodologie und Funktionsweisen</head>
+               <p xml:id="p18"><figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-3.png"/>
+                     <head type="legend">Ausschnitt aus dem ODD-Editor.</head>
+                  </figure>Kern des <emph>TEI Publisher</emph> ist das TEI Processing Model in Form
+                  von ODD (One Document Does it all) Dateien, die technisch betrachtet ebenfalls
+                  XML-Dateien sind. Diese Form der Verarbeitung wurde im Jahr 2015 zunächst als
+                  Alternative zur Arbeit mit XSLT-Skripten vorgestellt. ODD-Dateien enthalten
+                  XML-Schemafragmente in denen ein spezifisches Set von XML-Elementen und Attributen
+                  technisch definiert wird sowie die dazugehörige menschenlesbare Dokumentation und
+                  Encoding Richtlinien. In ODD-Dateien wird also festgelegt, welche TEI-Elemente und
+                  Attribute projektspezifisch genutzt werden und wie diese eingesetzt und
+                  verarbeitet werden sollen. Darauf aufbauend können mit Stylesheets spezifische
+                  Darstellungsformen erstellt werden. Im <emph>TEI Publisher</emph> sind bereits
+                  einige ODD-Dateien aus verschiedenen Projekten integriert. Mit diesen können
+                  bereits viele der am häufigsten verwendeten TEI-Elemente verarbeitet werden. Dies
+                  bietet den NutzerInnen vor allem am Anfang der Benutzung die Möglichkeit,
+                  experimentell verschiedene mögliche Darstellungsformen für ihre Daten
+                  auszuprobieren. Ein weiterer Vorteil des <emph>TEI Publisher</emph>s ist nicht nur
+                  die Vereinfachung der Verarbeitung von TEI-Dokumenten mittels ODD, sondern auch
+                  die Erstellung und Anpassung dieser ODD-Dateien durch ein mitgeliefertes User
+                  Interface. Der <emph>TEI Publisher</emph> bietet hier mit dem ODD-Editor (Abb. 3)
+                  ein Werkzeug an, mit dem die individuelle Anpassung von ODD Dateien und damit die
+                  Kontrolle über die Darstellung des TEI-Encoding auch für AnwenderInnen ermöglicht
+                  werden soll, die nicht direkt im XML-Code arbeiten können oder wollen. Dieses ist
+                  von der Funktionsweise vergleichbar mit dem von der Text Encoding Initiative
+                  selber bereitgestellten ROMA Tool<note xml:id="ftn34"> Roma - ODD Customization
+                        <ref
+                        target="https://web.archive.org/web/20240906034216/https://roma.tei-c.org/"
+                        >https://web.archive.org/web/20240906034216/https://roma.tei-c.org/</ref>
+                  </note>, wobei dieses im direkten Vergleich der Benutzererfahrung nochmal klarer
+                  lesbar und leichter zu bedienen ist, gerade für technisch wenig versierte
+                  NutzerInnen. Auch wenn im ODD Editor hier dann tatsächlich keine aktive Arbeit im
+                  XML-Code mehr für die Anpassung erforderlich ist, ist eine gute Kenntnis der
+                  TEI-Module, des benutzten Vokabulars und ein Verständnis und Erfahrung von TEI
+                  Schemata dennoch erforderlich für eine effektive Nutzung. </p>
+               <p xml:id="p19">Weitere Elemente, die im Rahmen des Transformationsprozesses eine
+                  Rolle spielen, sind CSS-Stylesheets und HTML-Templates. In diesen Dateien wird die
+                  Darstellung der mit ODD transformierten Dokumente definiert. Auch hier stellt der
+                     <emph>TEI Publisher</emph> viele Beispiel-Templates bereit, mit denen
+                  unterschiedliche Layouts und Darstellungsformen mit den projekteigenen Daten
+                  getestet werden können. Für deren Anpassung gibt es allerdings keine grafische
+                  Oberfläche, hier muss also im Texteditor gearbeitet oder extern erstellte CSS- und
+                  HTML-Dateien importiert werden. Innerhalb der Templates können zusätzlich
+                  sogenannte, mit JavaScript realisierte <emph>Webcomponents</emph> genutzt werden.
+                  Diese <emph>Webcomponents </emph>sind in der Lage, interaktive und dynamische
+                  Funktionen und Features zu erzeugen. </p>
+               <p xml:id="p20">Die grundlegende Methodologie lässt sich dahingehend zusammenfassen,
+                  dass die Verarbeitung von TEI-Daten mittels ODD, Templates und Stylesheets
+                  unterstützt und dadurch den BenutzerInnen in erster Linie die Möglichkeit gegeben
+                  wird, mit verschiedene Darstellungsformen zu experimentieren bevor dann in einem
+                  nächsten Schritt die gezielte Anpassung und Weiterentwicklung vorgenommen werden
+                  kann.</p>
+               <p xml:id="p21"><figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-4.png"/>
+                     <head type="legend">Annotationseditor in einer älteren Version des <emph>TEI
+                           Publisher</emph>, Screenshot aus der <emph>TEI
+                        Publisher</emph>-Dokumentation.</head>
+                  </figure>Neben diesen reinen Darstellungsfunktionalitäten unterstützt der
+                     <emph>TEI Publisher </emph>seit Version 7.1.0 zusätzlich rudimentäre
+                     Annotationsvorhaben.<note xml:id="ftn35">
+                     <emph>Configuring the Annotation Editor. </emph>Dokumentation des
+                        <emph>TEI-Publisher</emph>:<ref
+                        target="https://web.archive.org/web/20240904074340/https://teipublisher.com/exist/apps/tei-publisher/documentation?root=3.42"
+                        >https://web.archive.org/web/20240904074340/https://teipublisher.com/exist/apps/tei-publisher/documentation?root=3.42</ref>.</note>
+                  Im Annotationseditor kann eine geteilte Ansicht mit einer kleinen Auswahlleiste
+                  geöffnet werden, die über Annotationsbuttons verfügt (Abb. 4). Damit dieses
+                  Annotationsfeature funktioniert, ist eine vorherige Auszeichnung von Named
+                  Entities in den TEI-Dokumenten erforderlich. Erst dann können Entitäten, wie z.B.
+                  Personen und Orte im Annotationseditor semantisch hervorgehoben und exploriert
+                  werden. In einem Seitenbereich (unter „TEI“) können NutzerInnen nachverfolgen, wie
+                  sich die Annotationen in den XML-Daten verhalten und zugleich beobachten, wie sie
+                  im Interface des <emph>TEI Publisher</emph> angezeigt werden. In einem weiteren
+                  Bereich kann ergänzend zu „TEI“ zwischen weiteren Ansichten durch Transformation
+                  (z.B. in HTML, JSON) gewechselt werden.<note xml:id="ftn36">
+                     <emph>Bearbeitung des ODD der Manuskripte. </emph>Vgl.<emph> Digital Edition
+                        Creation Pipelines: Tools and Transitions</emph> (DigEdTnT): <ref
+                        target="https://web.archive.org/web/20240904074941/https://digedtnt.github.io/teipublisher/"
+                        >https://web.archive.org/web/20240904074941/https://digedtnt.github.io/teipublisher/#a-bearbeitung-des-odd-der-manuskripte</ref>.</note>
+               </p>
+               <p xml:id="p22">
+                  <figure xml:id="img5">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-5.png"/>
+                     <head type="legend">Annotationseditor in Version 9.0.0 des <emph>TEI
+                           Publisher</emph>. Screenshot aus der <emph>TEI
+                        Publisher</emph>-Dokumentation.</head>
+                  </figure>Der typische „Transkriptions-Workflow“, den die meisten TEI-basierten
+                  Projekte durchlaufen, wird in der Dokumentation wie folgt beschrieben: In einem
+                  ersten Schritt wird eine rudimentäre Transkription erstellt. Entweder manuell in
+                  einem XML-Editor, mit Hilfe von OCR- oder HTR-Tools wie Transkribus oder durch
+                  Konvertierung aus einem anderen Format, z. B. durch Import aus Word. Unabhängig
+                  von der hier gewählten Methodik, enthält diese Transkription grundlegende
+                  strukturelle Markierungen, wie z.B. Unterteilungen, Überschriften und Absätze.
+                  Diese „Basis-Transkription“ kann mit Hilfe der Funktionalitäten des <emph>TEI
+                     Publisher</emph> schrittweise angereichert werden: Textmerkmale wie
+                  Hervorhebungen können markiert, Abkürzungen erweitert, Korrekturen und
+                  Regularisierungen vorgenommen werden; Personen, Orte oder Begriffe, die im Text
+                  vorkommen, können explizit markiert und mit einem <emph>authority register</emph>
+                  verknüpft werden. Dies ist ein iterativer Prozess, bei dem die daraus
+                  resultierende TEI-Kodierung stetig überprüft wird. Die Web-Annotationen innerhalb
+                  der Infrastruktur des<emph> TEI Publisher</emph> zielen darauf ab, die
+                  „Anreicherungsphase“ zu erleichtern. Sie ermöglicht den RedakteurInnen, alle
+                  Vorhaben der Auszeichnung direkt in einer benutzerfreundlichen Umgebung
+                  durchzuführen. Die Dokumentation verspricht, diese Arbeitsweise sei einfacher und
+                  niederschwelliger und erfordere nur halb so viel TEI-Erfahrung, wie es bei der
+                  Nutzung eines klassischen XML-Editors der Fall ist: „Just use your mouse to
+                  highlight the text fragment to annotate, click on the annotation type and
+                  optionally select additional information, e.g. to link with an external authority
+                     file.“<note xml:id="ftn37">
+                     <emph>Annotating Documents</emph>. Dokumentation des
+                     <emph>TEI-Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240829113820/https://tei-publisher.com/exist/apps/tei-publisher/documentation/web-annotations"
+                        >https://web.archive.org/web/20240829113820/https://tei-publisher.com/exist/apps/tei-publisher/documentation/web-annotations</ref>.</note>
+               </p>
+               <p xml:id="p23">Die experimentelle Unterstützung für die Erkennung und Markierung von
+                  benannten Entitäten in Texten (Named Entity Recognition) ist erst mit Version 8
+                  des <emph>TEI Publisher</emph> möglich. In Version 9.0.0 wurden ein neues,
+                  ergonomischeres Layout sowie ein erweiterter Funktionsumfang für die Kuration
+                  ortsbezogener lokaler Register eingeführt (Abb. 5). Der Annotations-Editor ist
+                  nicht dazu gedacht, Dokumente von Grund auf neu zu erstellen. Er zielt auf „eine
+                  der mühsamsten und zeitraubendsten Aufgaben in jedem Editionsprojekt ab: das
+                  Hinzufügen von semantischen, analytischen oder textkritischen Markierungen zu
+                  einer bestehenden Transkription.“<note xml:id="ftn38"> Vgl. ebd.</note> Die Arbeit
+                  der RedakteurInnen soll über den webbasierten Annotationseditor des <emph>TEI
+                     Publisher</emph> durch die automatische Identifizierung potenzieller Kandidaten
+                  für Personen und Orte vereinfacht werden. Um die Erkennung von Named-Entities im
+                  Annotationseditor verfügbar zu machen, ist ein separater Python-Dienst nötig. In
+                  dem entsprechenden Abschnitt der Dokumentation ist ein Verweis zum
+                     <emph>tei-publisher-ner</emph> Repository verlinkt.<note xml:id="ftn39"> API
+                        <emph>tei-publisher-ner. </emph>GitHub-Repository von e-editiones: <ref
+                        target="https://web.archive.org/web/20240904081501/https://github.com/eeditiones/tei-publisher-ner"
+                        >https://web.archive.org/web/20240904081501/https://github.com/eeditiones/tei-publisher-ner</ref>.</note>
+                  Dort können NutzerInnen das Repository gemäß den Anweisungen in der Readme-Datei
+                  klonen, um die API in der eigenen Instanz für die Erkennung von Entitäten im
+                  Eingabetext und Skripte für das Training von Entitätserkennungsmodellen nutzen zu
+                  können. Mit einem zusätzlichen Analysetool wie dem Annotationseditor ist der
+                  Grundstein für die weitere, tiefergehende Auseinandersetzung mit den Quellen
+                  gelegt, z.B. für eine (geografische oder personenbezogene) Netzwerkanalyse.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Input- und Output</head>
+               <p xml:id="p24">Der <emph>TEI Publisher</emph> startete als Publishing Toolbox für
+                  TEI-Daten. Die Prinzipien des TEI Processing Model waren jedoch nie auf ein
+                  einziges Vokabular beschränkt. Der <emph>TEI Publisher</emph> hat seine
+                  Unterstützung sehr schnell auf andere XML-Formate ausgeweitet. Derzeit werden TEI,
+                  DocBook, JATS und MS Word DOCX unterstützt. Diese werden dann automatisch vom
+                     <emph>TEI Publisher</emph> mithilfe von dafür ausgelegten ODD Dateien in TEI
+                  XML konvertiert. Komplexeres Markup wird hier also nicht mit konvertiert und
+                  erfasst, wie es z.B. bei eigenständigen Tools wie TEI Garage geschieht.<note
+                     xml:id="ftn40"> TEIGarage Conversion <ref target="https://teigarage.tei-c.org/"
+                        >https://teigarage.tei-c.org/</ref></note> Um ein äquivalentes Ergebnis z.B.
+                  für docx Dateien zu erzielen, müssen die für die Konvertierung genutzten ODD Daten
+                  individuell angepasst werden. Laut Dokumentation ist es eine bewusste Entscheidung
+                  gewesen, bei der Konvertierung zunächst den Fokus nur auf die Textinhalte und
+                  grobe Struktur zu legen um die resultierende TEI-Datei nicht mit unnötigen
+                  Elementen und Attributen zu überfrachten und komplexeres Markup den Anpassungen
+                  der Nutzer zu überlassen.<note xml:id="ftn41"> Vgl. Seite 32/33 in .<ref
+                        target="https://tei-publisher.com/exist/apps/tei-publisher/print/doc/documentation.xml"
+                        >https://tei-publisher.com/exist/apps/tei-publisher/print/doc/documentation.xml</ref>
+                  </note> Die Basis für die Arbeit mit dem <emph>TEI Publisher</emph> sind dennoch
+                  überwiegend valide TEI-Daten. Eventuell schon vorhandene ODD-Daten oder
+                  Stylesheets können ebenfalls als Input in die Instanz des <emph>TEI
+                     Publisher</emph> dienen. Innerhalb des <emph>TEI Publisher</emph> können diese
+                  weiter bearbeitet oder von Grund auf neu erstellt werden. Die als Input in den
+                     <emph>TEI Publisher</emph> eingespeisten Daten können wiederum in andere
+                  Ausgabeformate (<emph>Output Media Settings</emph>), wie z.B. PDF und epub
+                  exportiert werden.<note xml:id="ftn42">
+                     <emph>Output Media Settings. </emph>Dokumentation des <emph>TEI
+                        Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240123104904/https://teipublisher.com/exist/apps/tei-publisher/documentation/output-media"
+                        >https://teipublisher.com/exist/apps/tei-publisher/documentation/output-media</ref>.</note>
+                  Der <emph>TEI Publisher</emph> unterstützt somit verschiedene Ausgabemedienformate
+                  und übersetzt Stile mit dem Attribut @output in das entsprechende Zielformat. Die
+                  Qualität der erzeugten Ausgabe kann allerdings je nach Art des Eingabedokuments im
+                  Fo- und Latex-Modus unterschiedlich sein, wie in der Dokumentation hingewiesen
+                  wird. Auch hier scheint der Output zunächst weniger detailliert zu sein, als bei
+                  den für diese Art von Transformation dedizierten Tools wie TEIGarage, erlaubt aber
+                  auch hier eine individuelle Anpassung,</p>
+               <p xml:id="p25">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-6.png"/>
+                     <head type="legend">Erstellung einer eigenen<emph>
+                        TEI-Publisher</emph>-Applikation mit dem App-Generator.</head>
+                  </figure>Der Hauptoutput des <emph>TEI Publisher</emph> ist, nachdem in der
+                  Sandbox-Umgebung eine funktionierende Kombination aus ODD und CSS entwickelt
+                  wurde, die Erzeugung einer Standalone <emph>eXist-db</emph>-Applikation mit der
+                  zuvor konfigurierten ODD-Datei und CSS-Stylesheet. Durch einen Klick auf „Admin“
+                  („Administration“) öffnet sich ein Menü, in dem die Option „App Generator“
+                  („Anwendung generieren“) ausgewählt werden kann (Abb. 6). Diese Version kann dann,
+                  je nach Anforderung, Ziel und Zweck individuell angepasst und konfiguriert werden.
+                  Die Modifizierung bezieht sich nicht nur auf die Konfiguration interaktiver
+                  Komponenten, sondern auf die Gestaltung und das Layout des gesamten Interface. In
+                  diesem Arbeitsschritt indiziert der <emph>TEI Publishe</emph>r automatisch die
+                  Datensätze, womit in der erstellten Applikation ohne weitere Arbeit eine
+                  Suchfunktion zur Verfügung steht. Ohne weitere Anpassungen werden dann auch
+                  facettierte Suchfilter für die Werte „Genre“ und „Language“ (aus den
+                  entsprechenden Elementen im TEI-Header) erzeugt. Es können weitere Facetten
+                  implementiert werden, diese müssen dann aber manuell in den Konfigurationsdateien
+                  der Applikation konfiguriert werden, was technisch nicht trivial aber ausreichend
+                  dokumentiert ist.<note xml:id="ftn43">
+                     <emph>Facet Search Configuration. </emph>Dokumentation des <emph>TEI
+                        Publisher</emph>: <ref
+                        target="https://teipublisher.com/exist/apps/tei-publisher/documentation/facets"
+                        >https://teipublisher.com/exist/apps/tei-publisher/documentation/facets</ref>
+                  </note>
+               </p>
+               <p xml:id="p26">Diese separate Applikation, die in der <emph>eXist-db-</emph>Instanz
+                  generiert und auf dem Dashboard der Datenbank angezeigt wird, kann unabhängig vom
+                     <emph>TEI Publisher</emph> distribuiert werden. Es ist also möglich, eine voll
+                  funktionsfähige Anwendung zu exportieren, die dann auf einem eigenen Server
+                  bereitgestellt werden kann. </p>
+               <p xml:id="p27">Die Performance der Applikation ist abhängig von der Performance der
+                     <emph>eXist-db</emph>-Instanz, auf der der <emph>TEI Publisher</emph>
+                  installiert ist. Diese ist wiederum abhängig von den Systemressourcen und der
+                  Konfiguration des jeweiligen Servers. Die Darstellung von einzelnen XML-Daten und
+                  auch die facettierte Suche der meisten Korpora verläuft dank der von
+                     <emph>eXist-db</emph> durchgeführten Indizierung schnell und unproblematisch.
+                  Erfahrungsgemäß gibt es erst bei größeren Datenkorpora und komplexeren Queries in
+                  der XML-Datenbank Einbrüche in der Performance von <emph>eXist-db.</emph> Zu
+                  diesem Zeitpunkt müsste dann von einem erfahrenen Entwickler manuelle
+                  Optimierungsarbeit geleistet werden.<note xml:id="ftn44"> Genaue Werte lassen sich
+                     hier nicht benennen, da viele Faktoren wie Serverleistung, die
+                        <emph>eXist-db</emph> Version und vor allem auch die Komplexität der Daten
+                     und der Queries hier einen maßgeblichen Einfluss auf die Performance haben.
+                     Dies ist ein auf Seite von exist-db bekanntes Thema und die Entwickler bieten
+                     dafür Hilfestellungen an. Siehe hierzu : <ref
+                        target="https://exist-db.org/exist/apps/doc/faq_performance"
+                        >https://exist-db.org/exist/apps/doc/faq_performance</ref> und <ref
+                        target="https://exist-db.org/exist/apps/doc/tuning"
+                        >https://exist-db.org/exist/apps/doc/tuning</ref></note></p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Praxisbeispiel: Erstellung einer Minimaledition</head>
+               <p xml:id="p28"><figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-7.png"/>
+                     <head type="legend">Default-View auf eine hochgeladene TEI-XML-Datei in den
+                           <emph>TEI Publisher</emph>.</head>
+                  </figure>Grundlage für dieses niedrigschwellige Beispiel waren TEI-XML-Daten, die
+                  von Studierenden im Rahmen einer Anfänger Übung erstellt wurden. Die Studierenden
+                  hatten jeweils ein Dokument aus dem Nachlass Harold Garfinkels erhalten und
+                  sollten dieses hinsichtlich vorgenommener Änderungen (Ergänzungen,
+                  Durchstreichungen) und Named Entities transkribieren. Um die Transkriptionsarbeit
+                  der Studierenden schnell und ohne großen Aufwand zu visualisieren und ihnen einen
+                  ersten Eindruck von einer möglichen späteren Editionsansicht zu geben, sollte der
+                     <emph>TEI Publisher</emph> genutzt werden. Ein erster Test war dank der
+                  „Playground“ Umgebung auf der Webseite des <emph>TEI Publishers </emph>schnell
+                  möglich und eine erste rudimentäre Webansicht erstellt. Durch das Experimentieren
+                  mit den verschiedenen bereitgestellten ODD-Dateien und Templates konnten
+                  unterschiedliche Renderings derselben TEI-XML-Datei ausprobiert werden (Abb. 7).
+                  Viele der häufig in digitalen Editionen benutzen Elemente (z.B. <emph>add,
+                     person</emph>) werden in vielen der ODD-Template Kombinationen visualisiert und
+                  angezeigt. </p>
+               <p xml:id="p29">Als nächsten Schritt in der Reihe der Anpassung können z.B. eine
+                  eigene ODD mit eigenen Rendering-Befehlen erstellt werden. Eine Überlegung war
+                  auch, eine bereits vorhandene ODD zu kopieren und den eigenen Anforderungen
+                  anzupassen. In dem hier gezeigten use-case wurde eine bereits bestehende ODD
+                  kopiert und mit Hilfe des grafischen ODD-Editors neue Regeln zur Darstellung von
+                  Unterstreichungen formuliert. Für die Studierenden als Beispiel für NutzerInnen
+                  mit wenig XML-Erfahrung erlaubt der ODD-Editor einen einfacheren und
+                  niederschwelligen Zugang. Ein Vorwissen über das XML-Datenmodell, die Art der
+                  Beziehungen zwischen Elementen und Attribute sind jedoch erforderlich und führen
+                  zumindest für AnfängerInnen dennoch zu einer gewissen Einarbeitungszeit. </p>
+               <p xml:id="p30"><figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-8.png"/>
+                     <head type="legend">Synoptische Ansicht von Transkription und Faksimile eines
+                        Typoskripts.</head>
+                  </figure>Die Integration von Bilddateien wird im <emph>TEI Publisher</emph>
+                  mithilfe der bereits vorgestellten <emph>Webcomponents</emph> (in diesem Falle
+                     <emph>pb-facsimile</emph>) realisiert. Dieser spezielle
+                     <emph>Webcomponent</emph> wird im HTML-Template implementiert. Es ist sowohl
+                  eine Einbindung von Bildern mittels der IIIF Schnittstelle, als auch von
+                  statischen Bildern möglich, die auch auf externen Server liegen können. In diesem
+                  niedrigschwelligen Beispielsfall lagen die Bilder aber (noch) nicht auf einem
+                  IIIF-Server vor, sondern waren als statische Bilddateien auf dem Server abgelegt.
+                  Um sie korrekt darzustellen, waren kleine manuelle Arbeiten in den Ausgangsdaten,
+                  im Template und im ODD-Editor nötig, die aber in der Dokumentation klar
+                  verständlich beschrieben waren.<note xml:id="ftn45">
+                     <emph>Images and IIIF</emph> TEI Publisher FAQ <ref
+                        target="https://web.archive.org/web/20240911113016/https://faq.teipublisher.com/images/static-images/"
+                        >https://web.archive.org/web/20240911113016/https://faq.teipublisher.com/images/static-images/</ref></note>
+                  Schlussendlich stand aber eine zufriedenstellende synoptische Ansicht der Texte
+                  und ihrer textuellen Phänomene bereit (Abb. 8). </p>
+               <p xml:id="p31">Im letzten Schritt kann diese Arbeit Grundlage einer<emph>
+                     eXist-db</emph> Applikation werden. Hierzu kann direkt aus der Oberfläche des
+                  Publishers eine Applikation erstellt werden mit den erstellten oder angepassten
+                  ODD - und Template-Daten. Diese Applikation liegt dann unabhängig als separate
+                     <emph>eXist-db</emph> App vor. Sind zu einem späteren Zeitpunkt noch Änderungen
+                  nötig oder gewünscht, kann dies z.B. durch Änderungen in der ODD und ein
+                  „rekompilieren“ der Applikation erreicht werden. Entsprechende
+                  Programmierkenntnisse vorausgesetzt, kann die Applikation auch direkt separat
+                  weiterentwickelt und modifiziert werden. </p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Benutzerfreundlichkeit, Nachhaltigkeit und Wartbarkeit </head>
+            <div xml:id="div3.1">
+               <head>Installation</head>
+               <p xml:id="p32">Eine Besonderheit und eine in Hinsicht auf Zugänglichkeit
+                  vorbildliche Option ist, dass für erste Experimente und Tests mit eigenen Daten
+                  zunächst keine lokale Installation notwendig ist, sondern eine zu
+                  Demonstrationszwecken zur Verfügung gestellte Instanz des <emph>TEI
+                     Publisher</emph> auf der offiziellen Seite betrieben wird. Auf diese wird
+                  unmittelbar auf der offiziellen Webseite hingewiesen. Innerhalb dieser Instanz
+                  finden sich die Dokumentation und Sammlungen verschiedener Beispielseiten. Die
+                  Beantragung eines Zugangs ist nicht erforderlich. Auf der Startseite sind die
+                  Zugangsdaten öffentlich angegeben (Anmelden als <emph>tei-dem</emph>o mit Passwort
+                     <emph>demo</emph>). NutzerInnen können dann die Benutzeroberfläche und eine
+                  Vielzahl von Beispielen erkunden und auf die eigenen Anforderungen hin überprüfen.
+                  Auch der Upload eigener XML-Daten ist im Rahmen einer „Playground“ genannten
+                  Umgebung hier sofort möglich. Hier muss jedoch beachtet werden, dass diese Daten
+                  dann im Rahmen der Demo-Instanz öffentlich zugänglich sind. </p>
+               <p xml:id="p33">Die Nutzung der Testversion stellt den von Entwicklerseite
+                  bevorzugten ersten Kontaktpunkt mit der Anwendung dar. Dies zeigt sich auch darin,
+                  dass sich die Anleitung zur Installation in einer lokalen oder selbst-gehosteten
+                     <emph>eXist-db </emph>Instanz dann erst innerhalb der Dokumentation und nicht
+                  direkt auf der Homepage der Webseite findet. Die lokale Installation des <emph>TEI
+                     Publisher</emph> erfolgt entweder in Form eines „App“-Pakets innerhalb von
+                     <emph>eXist-db</emph> oder als Docker-Container. </p>
+               <p xml:id="p34">Für die manuelle, lokale Installation ergeben sich dadurch
+                  Abhängigkeiten in Bezug auf <emph>eXist-db,</emph> welche wiederum Java
+                  voraussetzt. Die Einrichtung dieser Abhängigkeiten und des Installationsprozesses
+                  ist sowohl von Seiten des <emph>TEI-Publisher</emph> als auch von <emph>eXist-db
+                  </emph>ausreichend gut dokumentiert, benötigt aber erfahrungsgemäß ein gewisses
+                  Maß an technischem Verständnis und Aufmerksamkeit. Dies ist insbesondere dann der
+                  Fall, wenn andere von Java abhängige Software in der jeweiligen Umgebung genutzt
+                  wird, da es bei der Verwendung anderer Java-Versionen zu Konflikten kommen kann.
+                  Hier ist also genau auf die zum Zeitpunkt der Installation in den Dokumentationen
+                  genannten Versionsnummern von <emph>eXist-db</emph> und Java zu achten. Die
+                  Installation über Docker hat keine weiteren Abhängigkeiten und ist, sofern
+                  Erfahrung im Umgang mit Docker gegeben ist, reibungslos. Der Installationsvorgang
+                  selbst und die Hinweise auf Abhängigkeiten sind in der allgemein sehr
+                  ausführlichen Dokumentation beschrieben (wenn auch zum Stand dieser Review teils
+                  nur auf Englisch<note xml:id="ftn46"> An der Mehrsprachigkeit des <emph>TEI
+                        Publisher</emph> und seiner Dokumentation wird per
+                        <emph>Crowdsourcing</emph> laufend gearbeitet. </note>).</p>
+            </div>
+            <div xml:id="div3.2">
+               <head>Dokumentation und Lernkurve</head>
+               <p xml:id="p35">Die Dokumentation ist über die Webseite einfach zu erreichen und
+                  deckt klar strukturiert in einem Bereich „Quickstart“ alle Themen ab, um in die
+                  Arbeit mit dem <emph>TEI Publisher</emph> einzusteigen. Auch zu komplexeren Themen
+                  wie <emph>Custom Vocabularies</emph>, CSS Styling, <emph>Webcomponents </emph>etc.
+                  finden sich hier Anleitungen, die jeweils immer Beispiele und ggf. Dokumentation
+                  von APIs enthalten. Mit zunehmender Tiefe der Themen setzt aber auch die
+                  Dokumentation fortgeschrittene technische Kompetenz voraus. Es ist somit keine
+                  vollumfängliche Anleitung, um technische Laien zu tieferer individueller Anpassung
+                  zu ermächtigen. Wo die Grenzen zwischen einer Dokumentation, gerichtet an das
+                  reine Benutzerpublikum und einer technischen Dokumentation für EntwicklerInnen zu
+                  ziehen sind, ist nicht immer klar und kann womöglich in einigen Situationen zur
+                  Irritation führen. </p>
+               <p xml:id="p36">Als Kanäle für Support jenseits der Dokumentation wird vor allem auf
+                  den <emph>Slack</emph>-Channel<note xml:id="ftn47"> Slack-Channel von e-editiones:
+                        <ref
+                        target="https://web.archive.org/web/20240904082433/https://e-editiones.slack.com/"
+                        >https://web.archive.org/web/20240904082433/https://e-editiones.slack.com/</ref>.</note>
+                  von e-editiones verwiesen. Hier können Fragen an die EntwicklerInnen gestellt
+                  werden. Diese werden auch konsistent innerhalb von wenigen Stunden, maximal eines
+                  Tages beantwortet. Des Weiteren gibt es auf der GitHub-Seite die Möglichkeit, das
+                  Issue System für Fragen und Probleme der technischen Natur zu nutzen. </p>
+               <p xml:id="p37">Angesichts der niedrigen Einstiegshürde durch die Demo-Instanz, der
+                  Dokumentation und dem angebotenen Support zeigt sich für den ersten Einstieg in
+                  den <emph>TEI Publisher</emph> eine flache Lernkurve wie sich auch in unseren oben
+                  skizzierten Erfahrungen in der Lehre gezeigt hat. Von der TEI-XML-Datei zur ersten
+                  rudimentären HTML-Ansicht unter Benutzung der voreingestellten ODDs und dem
+                  Template ist der Prozess reibungslos und die Studierenden hatten schon nach kurzer
+                  Zeit erste Ergebnisse. Auch für eine Vielzahl von niedrigschwelligen
+                  Editionsprojekten, z.B. eine Briefedition, die sich an das etablierte
+                  TEI-Vokabular hält, wird dieser Prozess ausreichend sein. Hier zeigen sich die
+                  Stärken einer solchen Lösung, die auf Grundlage einer soliden TEI-Datenbasis
+                  schnell eine funktionale einfache Edition bereitstellen kann. Auch die
+                  Realisierung einer rudimentären Indizierung und Suche ist so schnell erreicht, da
+                  diese durch den <emph>TEI Publisher</emph> ohne zusätzlichen Entwicklungsaufwand
+                  implementiert ist. </p>
+               <p xml:id="p38">Spezifische Forschungsfragen und Anforderungen erfordern dagegen ein
+                  zunehmendes Maß an Anpassung sowohl der Darstellung als auch der Transformation
+                  der Dateien an das jeweilige Datenmodell und die Editionsrichtlinien. Um dies zu
+                  erleichtern und den BenutzerInnen mit nur wenig XML-Kenntnissen zu ermöglichen,
+                  bietet der <emph>TEI Publisher</emph> den bereits erwähnten ODD-Editor an, der
+                  Anpassungen mittels einer grafischen Benutzeroberfläche innerhalb des <emph>TEI
+                     Publisher</emph> ermöglicht. Mit etwas Einarbeitungszeit ist also auch eine
+                  individuelle Anpassung der Transformation der TEI-XML-Dateien möglich. Eine
+                  Anpassung und Erweiterung der facettierten Suche erfordert dann jedoch bereits
+                  gute Kenntnisse in XQuery bzw. dem Umgang mit <emph>eXist-db</emph>. </p>
+               <p xml:id="p39">Die Lernkurve wird steiler, sobald die Anforderungen der Projekte
+                  ambitionierter werden und komplexere Forschungsplattformen jenseits einer
+                  „einfachen“ Edition entwickelt werden sollen. Der <emph>TEI Publisher</emph>
+                  reagiert auf derartige Herausforderungen, indem er die Entwicklung komplexerer
+                  Plattformen mittels individuell angepassten HTML-Templates und CSS Stylesheets
+                  sowie <emph>Webcomponents</emph> erlaubt. Somit können dann auch interaktive
+                  visuelle Elemente wie z.B. Timelines o.Ä. eingebunden werden.<note xml:id="ftn48">
+                     Als Beispiel sei hier nochmal auf die Van Gogh Edition verwiesen, in der
+                     mithilfe der <emph>Webcomponent</emph>
+                     <emph>pb-timeline</emph> eine dynamische Zeitleiste zur Navigation angeboten
+                     werden kann. Ein Beispiel für den Einsatz der <emph>pb-leaflet-map</emph>
+                     <emph>Webcomponent</emph> wären die Reisetagebücher Johann Conrad Fischers <ref
+                        target="https://web.archive.org/web/20240119142458/https://teipublisher.com/exist/apps/vangogh/index.html"
+                        >https://web.archive.org/web/20240119142458/https://teipublisher.com/exist/apps/vangogh/index.html</ref>.<ref
+                        target="https://johannconradfischer.com/de/travels"
+                        >https://johannconradfischer.com/de/travels</ref><seg xml:space="preserve">  </seg>Eine
+                     Liste aller zur Verfügung stehenden Komponenten mit Beispielen findet sich in
+                     einer ausführlichen API Dokumentation z.B. für <emph>pb-timeline</emph>: <ref
+                        target="https://cdn.tei-publisher.com/@2.23.2/dist/api.html#pb-timeline.0"
+                        >https://cdn.tei-publisher.com/@2.23.2/dist/api.html</ref></note> Dies
+                  setzt, wie bereits erwähnt, in jedem Fall technische Kenntnisse und eine gewisse
+                  Einarbeitungszeit voraus. Die zwar meist sehr ausführliche und verständlich
+                  gestaltete Dokumentation ist dennoch komplex und setzt Verständnis und Erfahrungen
+                  mit den zugrundeliegenden Technologien, insbesondere <emph>eXist-db</emph> und
+                  seinen Modulen und Funktionen voraus </p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Nachhaltigkeit</head>
+               <p xml:id="p40">Aspekte aus dem Bereich Sicherheit und Privatsphäre ergeben sich
+                  nicht aus dem <emph>TEI Publisher</emph> selbst, sondern vielmehr aus der
+                  zugrundeliegenden Technologien (<emph>eXist-db</emph>), sowie der von den
+                  NutzerInnen mit dem <emph>TEI Publisher</emph> erstellten Applikation. Ein
+                  grundlegendes Nutzer- und Rechtemanagement kann über <emph>eXist-db</emph>
+                  eingerichtet werden.</p>
+               <p xml:id="p41">Eine Schwäche scheint bisher die Zitierfähigkeit innerhalb der mit
+                  dem <emph>TEI Publisher</emph> erstellten Applikationen zu sein. Es finden sich
+                  keine Module oder Hilfestellungen, um UUID oder persistente URIs für z.B.
+                  Einzelseiten oder Abschnitte in Dokumenten zu erstellen. Befindet man sich
+                  beispielsweise auf der dritten Seite eines Dokuments und kopiert die URL in ein
+                  anderes, separates Browserfenster, so öffnet dieser die Seite zwar auf dem
+                  korrekten Dokument, referenziert dann aber die erste Seite des Dokumentes. Ist
+                  eine entsprechende persistente Zitierbarkeit für eine Edition gewünscht, so muss
+                  dies durch EntwicklerInnen innerhalb der mit dem <emph>TEI Publisher</emph>
+                  erstellen Applikation implementiert werden. Obwohl der Quellcode des <emph>TEI
+                     Publisher</emph> in offenen GitHub Repositorien bereitgestellt wird, ist dieser
+                  aufgrund der Größe und Komplexität der Anwendung nur teilweise kommentiert.
+                  Tiefgehende Anpassungen und Weiterentwicklungen sind daher nur mit beträchtlicher
+                  Einarbeitungszeit und Geduld umzusetzen. In diesem Zusammenhang muss auch erwähnt
+                  werden, dass eine Archivierbarkeit der mit dem <emph>TEI Publisher</emph>
+                  erstellten Editionen mit einem Tool wie dem Web Archive nicht verlässlich und
+                  konsistent gegeben ist. Beim Versuch, eine Einzelseite einer Edition (also z.b.
+                  ein Brief) zu archivieren und diesen Archivlink wieder aufzurufen, gelangt man oft
+                  lediglich zu einer leeren Seite mit evtl. nur einem Logo. Dies führte z.B. schon
+                  im Prozess dieser Review dazu, dass Links zu der Dokumentation des <emph>TEI
+                     Publishers</emph> oft nicht als archivierte Links genutzt werden konnten, da
+                  die Dokumentation selbst eine <emph>TEI Publisher</emph> Anwendung ist und ein
+                  Aufruf der archivierten Seite „ins Nichts“ führte. Hier wäre aus Sicht der
+                  Nachhaltigkeit und Zitierbarkeit eine Lösung oder zumindest eine Anleitung für
+                  Entwickler nötig, wie diese Einschränkung umgangen werden kann.</p>
+               <p xml:id="p42">Ein Aspekt der Nachhaltigkeit ist der langfristig zu erwartende
+                  Support eines Tools. Im Gegensatz zu vielen Anwendungen deren Entwicklung in den
+                  Digital Humanities oft an Projektlaufzeiten oder gar an Einzelpersonen geknüpft
+                  ist, kann der<emph> TEI Publisher</emph> hier durch die Einbettung in den
+                  e-editiones Verein ein glaubwürdiges Versprechen machen, auch langfristig und
+                  kontinuierlich weiter gepflegt zu werden und eine aktive Community aufrecht zu
+                     erhalten.<note xml:id="ftn49"> Stand August 2024 verzeichnet der Verein
+                     e-editiones im Projektregister 46 eingetragene und mit dem <emph>TEI Publisher
+                     </emph>realisierte Projekte weltweit. <ref
+                        target="https://web.archive.org/web/20240906042131/https://www.e-editiones.org/map/"
+                        >https://web.archive.org/web/20240906042131/https://www.e-editiones.org/map/</ref>
+                  </note> Mit Fragen zur Nachhaltigkeit ist im Kontext digitaler Projekte immer auch
+                  die Zuständigkeit für die Langzeitarchivierung und -verfügbarkeit verbunden.
+                  Insbesondere für kleinere Projekte mit begrenzten Ressourcen kann das Hosting ein
+                  massives Problem darstellen. Der Betrieb eines Servers und die Wartung der
+                  zugehörigen Infrastruktur ist teuer und erfordert ein ständiges Engagement, das
+                  i.d.R. über die geplante Dauer des Projekts hinausgeht. Auch wenn das Hosting von
+                  einer institutionellen Service-Infrastruktur bereitgestellt wird, kann unter
+                  gewissen Umständen immer der Fall eintreten, dass die Ressourcen dieser
+                  Institutionen ihre Rolle auf die Bereitstellung von Updates und minimaler Wartung
+                  beschränken. Dies führt allzu oft dazu, dass die Dienste nach einigen Jahren
+                  teilweise oder ganz eingestellt werden. In ihren Statuten („4. Ensuring long term
+                  availability of digital editions“)<note xml:id="ftn50">
+                     <emph>Strategy</emph>. <emph>4. Ensuring long term availability of digital
+                        editions. </emph>Offizielle Website von e-editiones: <ref
+                        target="https://web.archive.org/web/20240829140227/https://www.e-editiones.org/pages/strategy/#4.-ensuring-long-term-availability-of-digital-editions"
+                        >https://web.archive.org/web/20240829140227/https://www.e-editiones.org/pages/strategy/#4.-ensuring-long-term-availability-of-digital-editions</ref>
+                  </note> setzt sich der Verband e-editiones dafür ein, dass öffentliche
+                  Gedächtnisinstitutionen die Editionen langfristig bereitstellen. Ziel dieses
+                  Vorhabens von Seiten der Community ist es, die Kosten und den Aufwand für die mit
+                  der Pflege der Editionen beauftragten Institutionen drastisch zu senken. Wie der
+                  Verband auf seiner Website darlegt, hat swissuniversities Anfang 2020 im Rahmen
+                  des Projekts Nationale Infrastruktur Editionen (NIE-INE) Verbesserungen am
+                     <emph>TEI Publisher </emph>gefördert, um langfristige Aktualisierungen zu
+                  erleichtern und ein gemeinsames Hosting von heterogenen Editionsprojekten auf
+                  einer Plattform zu ermöglichen. Die Community unterstützt Editionsprojekte auch
+                  dabei, einen (öffentlichen) Provider für die Zeit nach dem Ende des
+                  Förderzeitraums zu gewinnen und die langfristige Archivierung der Rohdaten des
+                  Projekts zu planen. In welchem preislichen Rahmen sich die hier genannten
+                  Förderangebote bewegen, wird nicht transparent gemacht.</p>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Userinteraktion, GUI and Visualisierungen</head>
+            <div xml:id="div4.1">
+               <head>Profil der BenutzerInnen</head>
+               <p xml:id="p43">Wie bereits erwähnt, eignet sich der <emph>TEI Publisher</emph> vor
+                  allem für WissenschaftlerInnen und ForscherInnen, die ihre Daten ohne umfangreiche
+                  Kenntnisse im Bereich Webentwicklung digital publizieren und zugänglich machen
+                  möchten. Grundwissen im Bereich TEI-XML, XPath, XQuery und HTML und CSS sind
+                  jedoch von Vorteil. Für AnfängerInnen eignet sich der <emph>TEI Publisher
+                  </emph>andererseits gut, um diese Technologien weiter zu vertiefen, vor allem aber
+                  um deren Zusammenspiel innerhalb der Infrastruktur des <emph>TEI Publisher</emph>
+                  besser zu verstehen. Der große Zulauf anlässlich des „three-part online course“ im
+                  Juni 2020 hat gezeigt, dass ein großes Interesse auch bei InteressentInnen
+                  vorhanden war, die sich bis dato gar nicht oder nur wenig mit der Publikation von
+                  XML/TEI-Daten befasst haben.<note xml:id="ftn51"> Learn <emph>TEI Publisher</emph>
+                     From Scratch. Session 1 of 3. Online verfügbar auf YouTube: <ref
+                        target="https://web.archive.org/web/20240123123956/https://www.youtube.com/watch?v=QuWrfAS2SWM"
+                        >https://web.archive.org/web/20240123123956/https://www.youtube.com/watch?v=QuWrfAS2SWM</ref>.</note>
+                  Sobald konkretere oder technisch anspruchsvollere Lösungen gefordert sind, müssen
+                  umfassende Programmierarbeiten durchgeführt werden, was die Kompetenzen einiger
+                  NutzerInnen übersteigen könnte. Das kann z.B. die Implementierung und
+                  Konfiguration komplexer Publikationsansichten betreffen, für die jeweils
+                  verschiedene ODDs für unterschiedliche TEI-XML-Dateien generiert werden müssen. Je
+                  nach Konfigurationslevel muss die technische Infrastruktur des <emph>TEI
+                     Publisher</emph> unter Umständen vollständig „aufgebohrt“ werden. </p>
+            </div>
+            <div xml:id="div4.2">
+               <head>Technische Schnittstellen und GUI</head>
+               <p xml:id="p44">Ein grundsätzliches Problem, das sich bei der Betrachtung der
+                  grafischen Benutzeroberfläche (GUI) bemerkbar macht, ist das Responsive Design.
+                  Bis dato ist es mit dem <emph>TEI Publisher</emph> nicht möglich, adäquate
+                  Darstellungen für kleinere Ausgabegeräte zu generieren. Aufgrund des
+                  Zusammenspiels verhältnismäßig vieler Technologien und dem modularen Aufbau der
+                  Software, gestaltet es sich schwierig, spezifische Viewports (z.B. für den
+                  Faksimile-Viewer oder der Beibehaltung optisch ansprechender synoptischer
+                  Textansichten) für unterschiedliche Geräteanforderungen zu konfigurieren. Diese
+                  komplizierten Aufgaben können, wenn die technische Infrastruktur des <emph>TEI
+                     Publisher</emph> dafür überhaupt ausgelegt ist, nur von professionellen
+                  DH-EntwicklerInnen oder ausgebildeten SoftwareentwicklerInnen geleistet werden, da
+                  mitunter viel technische Anpassungsarbeit notwendig ist.</p>
+               <p xml:id="p45">Ist der <emph>TEI Publisher</emph> als Applikation einmal installiert
+                  und eingerichtet (vgl. Abschnitt 3), kann er, bzw. die Startseite über eine GUI,
+                  z.B. den Browser, aufgerufen werden. Die GUI ist übersichtlich gestaltet und wirkt
+                  zunächst wenig überladen. Dadurch können NutzerInnen die unterschiedlichen
+                  Funktionen und Features, z.B. eine facettierte Suche oder eine Menüstruktur im
+                  Header-Bereich, auf den ersten Blick visuell gut erfassen. An dieser Stelle muss
+                  erwähnt werden, dass es sich in dieser Ansicht, die den NutzerInnen geboten wird,
+                  lediglich um einen „Dummy“ mit Default-Einstellung handelt. In den
+                  Standardeinstellungen verfügt das Interface des <emph>TEI Publisher</emph> über
+                  die gängigen visuellen Komponenten einer Website. Dazu zählen beispielsweise ein
+                  Content-Bereich, die Anzeige von Facetten und ein Header-Bereich als Kopfzeile, in
+                  die bei Bedarf (drop-down)-Menüs implementiert werden können. Vor der produktiven
+                  Arbeit mit dem <emph>TEI Publisher</emph> muss, wie in Kapitel 3 dieser Review
+                  bereits erläutert, über den sogenannten App-Generator eine eigene Web-App und
+                  somit eine separate Instanz des <emph>TEI Publisher</emph> erstellt werden. </p>
+               <p xml:id="p46">Die bereits angesprochenen interaktiven Elemente werden durch
+                  sogenannte <emph>Webcomponents</emph> im Interface integriert. Sie basieren auf
+                  dem HTML5- Standard und liefern ein Set aus unterschiedlichen Steuerelementen und
+                  Navigationswergzeugen. Je nach Quelle, können unterschiedliche Komponenten, z.B.
+                  für die Generierung einer synoptischen Ansicht aus Transkription, Übersetzung und
+                  dem dazugehörigen Faksimile implementiert werden. Für eine intuitive Nutzung
+                  textbasierter Ressourcen stellt der <emph>TEI Publisher </emph>Buttons für eine
+                  Blätterfunktion bereit. Mit OpenSeadragon liefert der <emph>TEI Publisher</emph>
+                  einen integrierten Faksimile-Viewer, der ein stufenloses Zoomen in Bilddateien
+                  erlaubt. In dem projekteigenen GitHub-Repository wird in den Kommentaren eines
+                  JavaScript-Files, das in der library für die Dokumentation der <emph>Webcomponents
+                  </emph>liegt, auf Version 4.1.1 des Viewers verwiesen.<note xml:id="ftn52">
+                     GitHub-Repository von e-editiones/tei-publisher-components: <ref
+                        target="https://web.archive.org/web/20240904090056/https://github.com/eeditiones/tei-publisher-components/blob/master/lib/openseadragon.min.js"
+                        >https://web.archive.org/web/20240904090056/https://github.com/eeditiones/tei-publisher-components/blob/master/lib/openseadragon.min.js</ref>.</note>
+                  Die derzeit aktuellste Version von OpenSeadragon ist 5.0.0.<note xml:id="ftn53">
+                     <emph>OpenSeadragon</emph>. Offizielles GitHub-Repository: <ref
+                        target="https://web.archive.org/web/20240904090259/https://openseadragon.github.io/"
+                        >https://web.archive.org/web/20240904090259/https://openseadragon.github.io/</ref>.</note>
+                  Da die Einbindung eines solchen Viewers in das Template durch den
+                     <emph>Webcomponent </emph>&lt;pb-facsimile&gt; erfolgt (Abb. 9) ist es
+                  fraglich, ob alternative Viewer (z.B. Mirador), die möglicherweise nicht mit
+                  solchen <emph>Webcomponents </emph>kompatibel sind, in den <emph>TEI
+                     Publisher</emph> integriert werden können. Der Einbau solcher Viewer ist
+                  unabhängig dieser Webcomponents sicher möglich, erfordert aber zusätzliches
+                  technisches Know-How. </p>
+               <p xml:id="p47">
+                  <figure xml:id="img9">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-9.png"/>
+                     <head type="legend">Dokumentation der <emph>Webcomponent</emph> und Demo des
+                        Viewers.</head>
+                  </figure>Seit Version 9.0.0 unterstützt der <emph>TEI Publisher </emph>die
+                  Präsentation von IIIF-Manifesten. Durch dieses neue Feature werden alle relevanten
+                  Metadaten, einschließlich einer Liste der Bilder, in einem einzigen
+                  standardisierten IIIF-Manifest registriert und bereitgestellt. Der dafür
+                  erforderliche <emph>Webcomponent</emph> ist <emph>pb-tify</emph>.
+                     <emph>pb-tify</emph> ist seit Version 2.10.0 der <emph>tei-publisher-components
+                  </emph>verfügbar und basiert auf TIFY, einem „schlanken und mobilfreundlichen
+                     IIIF-Viewer“.<note xml:id="ftn54"><emph> TIFY. A slim and mobile-friendly IIIF
+                        document viewer</emph>. Offizielle Projektwebsite: <ref
+                        target="https://web.archive.org/web/20240829115731/https://tify.rocks/"
+                        >https://web.archive.org/web/20240829115731/https://tify.rocks/</ref>.</note>
+                  Für die Betrachtung von Bilddateien nutzt TIFY ebenfalls OpenSeadragon als
+                     Viewer.<note xml:id="ftn55">
+                     <emph>Facsimiles and other images:</emph> Dokumentation des <emph>TEI
+                        Publisher</emph>: <ref
+                        target="https://web.archive.org/web/20240904090856/https://teipublisher.com/exist/apps/tei-publisher/documentation/facsimiles?action=search&amp;view=div&amp;odd=docbook.odd#3.16.21.7.2.4.2.4"
+                        >https://web.archive.org/web/20240904090856/https://teipublisher.com/exist/apps/tei-publisher/documentation/facsimiles?action=search&amp;view=div&amp;odd=docbook.odd#3.16.21.7.2.4.2.4</ref>.</note>
+               </p>
+               <p xml:id="p48">
+                  <figure xml:id="img10">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-10.png"/>
+                     <head type="legend">Ausgabe eines Fehlercodes bei fehlgeschlagener Übersetzung
+                        der ODD.</head>
+                  </figure>Die Software des <emph>TEI Publisher</emph> verfügt über Mechanismen, die
+                  Fehlervermeidung oder Warnungen in Form von Alerts ausgeben. Dieses Feature ist
+                  insofern hilfreich, als dass es unerfahrenen AnwenderInnen aufzuzeigen versucht,
+                  in welchem Bereich Probleme auftreten. Dies kann z.B. bei einer nicht korrekt
+                  übersetzten ODD (Abb. 10) oder einer fehlerhaften Verknüpfung von ODD und
+                  HTML-Template oder TEI-XML-Daten der Fall sein. Die Fehlermeldungen innerhalb des
+                  ODD-Editors sind jedoch verhältnismäßig informationsarm. Eine Fehlermeldung, die
+                  bei einem fehlgeschlagenen Speichern auftritt, gibt z.B. nur die Meldung „Error“
+                  aus, nicht jedoch die Ursache. Darüber hinaus gibt es keine Hilfestellung, wie
+                  Probleme zu beheben sind, die in den Meldungen adressiert werden. </p>
+            </div>
+            <div xml:id="div4.3">
+               <head>Visualisierungen </head>
+               <p xml:id="p49">Der <emph>TEI Publisher</emph> verfügt über keine speziellen oder
+                  nennenswerten Features für die Visualisierung der Daten. </p>
+            </div>
+            <div xml:id="div4.4">
+               <head>Befähigung der NutzerInnen</head>
+               <p xml:id="p50">
+                  <figure xml:id="img11">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/tei-publisher/pictures/picture-11.png"/>
+                     <head type="legend"><emph>eXide </emph>als XML-Editor von <emph>eXist-db</emph>
+                        für das Editieren von Daten.</head>
+                  </figure>Die Ausgabe des Textes über die ODD ist verhältnismäßig gut und einfach
+                  zu konfigurieren. Dort können NutzerInnen schnell und unkompliziert einfache
+                  Textformatierungen für spezielle Elemente im Output anpassen. Dieser Vorgang kann
+                  unmittelbar im integrierten ODD-Editor oder im Oxygen-XML-Editor erfolgen, sofern
+                  dieser mit der <emph>eXist-db</emph> über den Datenquellenexplorer verknüpft ist.
+                  Alternativ können NutzerInnen sämtliche Daten, Skripte und ODDs in
+                     <emph>eXide</emph>, einem mitgelieferten XML-Editor von <emph>eXist-db</emph>,
+                  editieren und in die Datenbank speichern (Abb. 11). </p>
+               <p xml:id="p51">Problematischer ist hingegen das Design der Publisher-App, das sich
+                  auf sämtliche Einstellungen und Konfigurationen bezieht, die außerhalb der
+                  Funktionalität liegen. Hier umfangreiche und komplexe projektspezifische
+                  Anpassungen vorzunehmen, sprengt oft das beabsichtigte Format und die Kompetenzen
+                  der NutzerInnen. Das Korsett ist im übertragenen Sinne verhältnismäßig eng, da nur
+                  in einem gewissen Umfang <emph>einfache</emph> Änderungen von Seiten weniger
+                  erfahrener NutzerInnen auf dem Gebiet der Webentwicklung vorgenommen werden
+                  können. Nur wer über genügend technisches Know-How verfügt, kann fehlende Features
+                  oder Funktionen selbst entwickeln, indem man beispielsweise ganz spezifische, für
+                  das Projekt erforderliche <emph>Webcomponents</emph> einbindet.</p>
+            </div>
+            <div xml:id="div4.5">
+               <head>Zugänglichkeit</head>
+               <p xml:id="p52">Ein großer Kritikpunkt ist die nicht vorhandene Angabe zu Funktionen
+                  wie z.B. Screenreadern, die zu einer erheblichen Verbesserung der Zugänglichkeit
+                  für Menschen mit besonderen Bedürfnissen, Eigenschaften und Fähigkeiten beitragen
+                  würden, damit auch sie den <emph>TEI Publisher</emph> als Software für ihr
+                  Forschungsvorhaben nutzen können. Ein kurzer stichprobenartiger Test mit dem in
+                  MacOS integrierten Screenreader VoiceOver ergab, dass in der mit dem <emph>TEI
+                     Publisher</emph> realisierten Van Gogh Briefedition zwar die Editionstexte und
+                  Fußnoten gut navigiert werden konnten, es aber Elemente des Interfaces und der
+                  Navigation gab die nicht korrekt wiedergegeben wurden, was die Navigation teils
+                  inkonsistent erscheinen ließ oder gar komplett blockierte. Hier wäre es auf jeden
+                  Fall wünschenswert, in zukünftigen Entwicklungen auf eine Kompatibilität mit
+                  solchen Tools zu achten und in der Dokumentation das Thema Zugänglichkeit
+                  dediziert zu berücksichtigen.</p>
+            </div>
+         </div>
+         <div xml:id="div5">
+            <head>Fazit</head>
+            <p xml:id="p53">Der <emph>TEI Publisher</emph> spielt in der TEI-Community eine immer
+               größere Rolle. Die seit einigen Jahren existierende und stetig anwachsende <emph>TEI
+                  Publisher Registry</emph><note xml:id="ftn56">
+                  <emph>TEI Publisher Registry</emph>. Einsehbar auf der offiziellen Website von
+                  e-editiones: <ref
+                     target="https://web.archive.org/web/20240904085848/https://www.e-editiones.org/map/"
+                     >https://web.archive.org/web/20240904085848/https://www.e-editiones.org/map/</ref>.</note>,
+               die auf Basis einer Kartenansicht sämtliche mit dem <emph>TEI Publisher</emph>
+               umgesetzte Projekte geografisch verzeichnet, zeigt nicht nur die Vielfalt sondern
+               auch die zunehmende Bedeutung dieser Software für die Umsetzung digitaler
+               Editionsvorhaben. Als Tool bietet der <emph>TEI Publisher</emph> viele nachgefragte
+               Funktionen für die Forschung, die die technischen Hürden für die Erstellung digitaler
+               Editionen senken kann. Allerdings offenbaren sich bei genauerer Betrachtung einige
+               vernachlässigte Aspekte, die für die Benutzerfreundlichkeit und die wissenschaftliche
+               Integrität von entscheidender Bedeutung sind.</p>
+            <p xml:id="p54">Positiv sei erwähnt, dass der <emph>TEI Publisher</emph> schon jetzt
+               eine sehr schnelle Lösung bietet um bei einem vorhanden TEI-XML-Korpus Darstellungs-
+               und Publikationen prototypisch zu erzeugen und damit im Sinne des
+                  <emph>rapid-prototypings</emph> eine wichtige Funktion im Projektablauf übernimmt.
+               EditorInnen können so schnell einen Eindruck davon bekommen, wie ihre Texte in einer
+               späteren Edition aussehen können und anschließend diese Darstellung mit
+               vergleichsweise geringen technischen Aufwand modifizieren. Für Projekte, die ein
+               umfangreiches Korpus mit geringer oder mittlerer Erfassungstiefe und Komplexität
+               umfassen - also überwiegend gebräuchliche TEI-XML-Elemente und wenig spezifische
+               Darstellungsformen - kann der <emph>TEI Publisher</emph> ebenfalls eine sehr gute
+               Lösung sein. Eine Edition, Plattform oder Webseite kann damit ohne großen
+               Entwicklungsaufwand erstellt werden. Hier muss aber auch erwähnt werden, dass die
+               technische Komplexität schnell und stark ansteigt, sobald die Anforderungen eines
+               Projektes von den antizipierten Anwendungsfällen abweichen. Die Anpassung der
+               ODD-Dateien und den Templates ist technisch, auch im grafischen Editor, nicht
+               unbedingt trivial und kann schnell komplex werden. Daher sind in diesem Bereich gute
+               Kenntnisse in den X-Technologien erforderlich. Die Nutzung der
+                  <emph>Webcomponents</emph> bietet zwar mächtige und sinnvolle Funktionalitäten,
+               erhöht aber das Komplexitätsniveau weiter. Hier ist eine konstante
+               EntwicklerInnenstelle nötig, die neben Expertenwissen im Bereich der X-Technologien,
+               Webentwicklung und der gängigen Webtechnologien HTML, CSS und JavaScript, möglichst
+               auch Erfahrungen mit dem Datenbanksystem <emph>eXist-db</emph> und ihren Eigenheiten
+               vorweisen sollte. Die Einbindung von IIIF-Manifesten ist mit der Migration auf
+               Version 9.0.0 des <emph>TEI Publisher</emph> positiv zu bewerten. Ein solches Feature
+               treibt die Unterstützung einer plattformübergreifenden Nutzung bildbasierter
+               Medieninhalte weiter voran. Der modifizierte und optisch überarbeitete
+               Annotationseditor ermöglicht einen neuen Blick auf die Daten und bietet neue
+               Möglichkeiten zur Exploration und Erschließung der Quellen.</p>
+            <p xml:id="p55">Ein Mangel liegt in der Vernachlässigung von barrierefreien Zugängen für
+               Menschen mit Behinderungen. Die Entwicklung von Software sollte stets darauf
+               abzielen, Inklusivität zu fördern und allen NutzerInnen die gleichen Chancen zu
+               bieten. Eine barrierefreie Gestaltung kann durch Hilfestellungen in Form von
+               Screenreader-Kompatibilität, Tastaturkürzeln oder alternativen Darstellungsformen
+               gewährleistet werden. Dieser Aspekt ist nicht nur ethisch wichtig, sondern entspricht
+               auch den Grundprinzipien der Gleichberechtigung im digitalen Raum. Ein weiteres
+               Versäumnis betrifft die unzureichende Berücksichtigung von Zitierfähigkeit auf
+               sämtlichen Granularitätsebenen. Zwar verkündet die Community des <emph>TEI
+                  Publisher</emph> mit Version 8 ein zentrales URL-Register einzuführen.<note
+                  xml:id="ftn57">
+                  <emph>Browser history, bookmarkable URLs. </emph>Ankündigung im Blogpost von
+                  e-editiones: <ref
+                     target="https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/"
+                     >https://web.archive.org/web/20240119140230/https://www.e-editiones.org/posts/tei-publisher-8/</ref>.</note>
+               Da aber nirgends ersichtlich ist, wo und wann dieses Feature veröffentlicht und für
+               die breite Öffentlichkeit nutzbar sein wird, konnte diese Funktion innerhalb dieser
+               Review nicht getestet werden. Die Verwendung persistenter Identifier ist essentiell,
+               um die Rückverfolgbarkeit und wissenschaftliche Nachvollziehbarkeit von Daten und
+               Inhalten sicherzustellen. Derzeit wird der Zugriff per Dateinamen geregelt. Zum
+               jetzigen Zeitpunkt ist das die einzige „Persistenz“ die es gibt. In der Dokumentation
+               wird auf das Konzept persistenter Identifier und die Rolle innerhalb der Entwicklung
+               des <emph>TEI Publisher</emph> nicht eingegangen. Eine Software wie der <emph>TEI
+                  Publisher</emph> sollte immanente Prinzipien wie persistent Identifier und PURLs
+               unterstützen, z.B. durch Resolver/Rewrite-Routinen. Das Fehlen einer solchen
+               zentralen Funktion kann die Glaubwürdigkeit der Forschungsergebnisse beeinträchtigen
+               und die Integration der Software in den wissenschaftlichen Diskurs erschweren. Des
+               Weiteren zeigt sich ein Defizit im Bereich der visuellen Darstellung von Faksimiles.
+               Eine Thumbnail-View oder zumindest eine doppelseitige Ansicht würde eine effiziente
+               Analyse von Texten und Bildern ermöglichen. Die Vernachlässigung solcher Features
+               beeinträchtigt nicht nur die Benutzerfreundlichkeit, sondern kann auch die
+               Effektivität von Forschungsarbeiten beeinflussen, insbesondere in Bezug auf die
+               Arbeit mit historischen Dokumenten oder Handschriften. Insgesamt verdeutlichen diese
+               Versäumnisse, dass die Entwicklung von Software für die Digital Humanities nicht nur
+               auf innovative Funktionen, sondern auch auf grundlegende Prinzipien der
+               Zugänglichkeit, wissenschaftlichen Integrität und Nutzerfreundlichkeit abzielen
+               sollte. Zukünftige Programme und Software sollten daher diese Aspekte prioritär
+               berücksichtigen, um eine umfassende und inklusive Forschungsumgebung zu
+               gewährleisten. Die Community hinter dem <emph>TEI Publisher</emph> unterstützt
+               Editionsprojekte dabei, einen (öffentlichen) Provider für die Zeit nach Ende des
+               Förderzeitraums zu gewinnen und die langfristige Archivierung der Rohdaten des
+               Projekts zu planen. Es ist somit möglich, mit den VorsteherInnen von e-editiones in
+               Bezug auf potenzielle Hostingangebote in Kontakt zu treten. ForscherInnen und
+               WissenschaftlerInnen können sich über das Hosten ihrer Projekte informieren und, je
+               nach Umfang und Anforderung, in Absprache realisieren. Über vergleichbare preisliche
+               Kategorien für die Dauer des Hostings gibt es keine offiziellen Bekanntmachungen.
+            </p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="teipublisher">Offizielle Dokumentation des <emph>TEI Publisher</emph>:
+                     <ref
+                     target="https://web.archive.org/web/20240119142743/https://teipublisher.com/exist/apps/tei-publisher/documentation"
+                     >https://web.archive.org/web/20240119142743/https://teipublisher.com/exist/apps/tei-publisher/documentation</ref>.</bibl>
+               <bibl xml:id="vorstellung-teipublisher">Vorstellung des <emph>TEI Publisher</emph> im
+                  Rahmen der Webinar-Reihe <emph>Tools &amp; Transitions</emph> des DigEdTnT: <ref
+                     target="https://web.archive.org/web/20240119134732/https://digedtnt.github.io/teipublisher/"
+                     >https://web.archive.org/web/20240119134732/https://digedtnt.github.io/teipublisher/</ref>.</bibl>
+               <bibl xml:id="teiguidelines">TEI-Guidelines, 22.5.4.1 <emph>The TEI processing
+                     model</emph>: <ref
+                     target="https://web.archive.org/web/20240119150735/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDPMPM"
+                     >https://web.archive.org/web/20240119150735/https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDPMPM</ref>
+               </bibl>
+               <bibl xml:id="learn-teipublisher">Learn <emph>TEI Publisher</emph>. Three-Part online
+                  course: <ref
+                     target="https://web.archive.org/web/20240123123956/https://www.youtube.com/watch?v=QuWrfAS2SWM"
+                     >https://web.archive.org/web/20240123123956/https://www.youtube.com/watch?v=QuWrfAS2SWM</ref>
+               </bibl>
+               <bibl xml:id="piotrowski2020">Michael Piotrowski: Gründung von e-editiones. Blogpost
+                  auf dem DHd-Blog. Veröffentlicht am 16. April 2020: <ref
+                     target="https://web.archive.org/web/20240904085635/https://dhd-blog.org/?p=13474"
+                     >https://web.archive.org/web/20240904085635/https://dhd-blog.org/?p=13474</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
