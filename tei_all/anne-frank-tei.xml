@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.20.4">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Anne Frank House VR &amp; The Secret Annex (3D)</title>
+				<author ref="XXX">
+					<name>
+						<forename>Marcus</forename>
+						<surname>Feldbrügge</surname>
+					</name>
+					<affiliation>
+						<orgName>Bergische Universität Wuppertal</orgName>
+						<placeName>Wuppertal, Germany</placeName>
+					</affiliation>
+					<email>feldbruegge@uni-wuppertal.de</email>
+				</author>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+				<date when="2025-04">April 2025</date>
+				<idno type="URI">http://ride.i-d-e.de/issues/issue-20/anne-frank</idno>
+				<idno type="DOI">10.18716/ride.a.20.4</idno>
+				<idno type="archive"
+					>https://github.com/i-d-e/ride/raw/master/issues/issue20/anne-frank/anne-frank.pdf</idno>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/4.0/"/>
+				</availability>
+			</publicationStmt>
+			<seriesStmt>
+				<title level="j">RIDE - A review journal for digital editions and resources</title>
+				<editor ref="https://orcid.org/0000-0003-2852-065X">Ulrike Henny-Krahmer</editor>
+				<editor ref="https://orcid.org/0000-0003-1438-3236">Martina Scholger</editor>
+				<editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+					Henny-Krahmer</editor>
+				<editor ref="https://orcid.org/0000-0001-8279-9298" role="managing">Frederike
+					Neuber</editor>
+				<editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+					Scholger</editor>
+				<biblScope unit="issue" n="20">Digital Scholarly Editions</biblScope>
+				<idno type="URI">http://ride.i-d-e.de/issues/issue-20</idno>
+				<idno type="DOI">10.18716/ride.a.20</idno>
+			</seriesStmt>
+			<notesStmt>
+				<relatedItem type="reviewed_resource">
+					<bibl>
+						<title>Anne Frank House VR &amp; The Secret Annex (3D)</title>
+						<editor>Anne Frank Stichting</editor>
+						<respStmt>
+							<resp>Editor</resp>
+							<persName>Anne Frank Stichting</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Programmer</resp>
+							<persName>Ronde, Martin de</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Programmer</resp>
+							<persName>Tasma, Hans</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Programmer</resp>
+							<persName/>
+						</respStmt>
+						<respStmt>
+							<resp>Advisor</resp>
+							<persName>Kraan</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Advisor</resp>
+							<persName>Ellen van der</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Advisor</resp>
+							<persName>Besmann, Charlotte</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Advisor</resp>
+							<persName>Brink, Tom</persName>
+						</respStmt>
+						<respStmt>
+							<resp>Advisor</resp>
+							<persName/>
+						</respStmt>
+						<date type="publication">2018</date>
+						<idno type="URI">https://www.annefrank.org/en/museum/web-and-digital/</idno>
+						<date type="accessed">2023-03-01</date>
+					</bibl>
+				</relatedItem>
+				<relatedItem type="reviewing_criteria">
+					<bibl>
+						<ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing Scholarly
+							Digital Editions</ref>
+					</bibl>
+				</relatedItem>
+			</notesStmt>
+			<sourceDesc>
+				<p>born digital</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<classDecl>
+				<taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+					<category>
+						<catDesc>Documentation</catDesc>
+						<category xml:id="se001">
+							<catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+							</catDesc>
+							<catDesc>Is it easily possible to describe the project bibliographically along the
+								schema "responsible editors, publishing/hosting institution, year(s) of
+								publishing"?</catDesc>
+							<category xml:id="se002">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se003">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se004">
+							<catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+							</catDesc>
+							<catDesc>Are the contributors (editors, institutions, associates) of the project fully
+								documented?</catDesc>
+							<category xml:id="se005">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se006">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se007">
+							<catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+							</catDesc>
+							<catDesc>Does the project list contact persons?</catDesc>
+							<category xml:id="se008">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se009">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se010">
+							<catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+							</catDesc>
+							<catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
+							<category xml:id="se011">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se012">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se013">
+							<catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+							</catDesc>
+							<catDesc>Is the selection by and large reasonable?</catDesc>
+							<category xml:id="se014">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se015">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se016">
+							<catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+							</catDesc>
+							<catDesc>Does the documentation include information about the long term sustainability
+								of the basic data (archiving of the data)?</catDesc>
+							<category xml:id="se017">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se018">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se019">
+							<catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+							</catDesc>
+							<catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
+							<category xml:id="se020">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se021">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se022">
+							<catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+							</catDesc>
+							<catDesc>Are the methods employed in the project explicitly documented?</catDesc>
+							<category xml:id="se023">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se024">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se025">
+							<catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+							</catDesc>
+							<catDesc>Does the project document which data model (e.g. TEI) has been used and for
+								what reason?</catDesc>
+							<category xml:id="se026">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se027">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se028">
+							<catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+							</catDesc>
+							<catDesc>Does the project offer help texts concerning the use of the
+								project?</catDesc>
+							<category xml:id="se029">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se030">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se031">
+							<catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+							</catDesc>
+							<catDesc>Does the project supply citation guidelines (i.e. how to cite the project or
+								a part of it)?</catDesc>
+							<category xml:id="se032">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se033">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se034">
+							<catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+							</catDesc>
+							<catDesc>Does the editon regard itself as a completed project (i.e. not promise
+								further modifications and additions)?</catDesc>
+							<category xml:id="se035">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se036">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se037">
+							<catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+							</catDesc>
+							<catDesc>Does the project provide information about institutional support for the
+								curation and sustainability of the project?</catDesc>
+							<category xml:id="se038">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se039">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+					</category>
+					<category>
+						<catDesc>Contents</catDesc>
+						<category xml:id="se040">
+							<catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+							</catDesc>
+							<catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
+							<category xml:id="se041">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se042">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se043">
+							<catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+							</catDesc>
+							<catDesc>Does the edition make use of these previous editions?</catDesc>
+							<category xml:id="se044">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se045">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se046">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se047">
+							<catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+							</catDesc>
+							<catDesc>Does the project offer an introduction to the subject-matter (the author(s),
+								the work, its history, the theme, etc.) of the project?</catDesc>
+							<category xml:id="se048">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se049">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se050">
+							<catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+							</catDesc>
+							<catDesc>Does the project offer a bibliography?</catDesc>
+							<category xml:id="se051">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se052">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se053">
+							<catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+							</catDesc>
+							<catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+								passages, interpretation, etc.)?</catDesc>
+							<category xml:id="se054">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se055">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se056">
+							<catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+							</catDesc>
+							<catDesc>Does the project include or link to external resources with contextual
+								material?</catDesc>
+							<category xml:id="se057">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se058">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se059">
+							<catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+							</catDesc>
+							<catDesc>Does the project offer images of digitised sources?</catDesc>
+							<category xml:id="se060">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se061">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se062">
+							<catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+							</catDesc>
+							<catDesc>Does the project offer images of an acceptable quality?</catDesc>
+							<category xml:id="se063">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se064">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se065">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se066">
+							<catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+							</catDesc>
+							<catDesc>Is the text fully transcribed?</catDesc>
+							<category xml:id="se067">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se068">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se069">
+							<catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+							</catDesc>
+							<catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+								etc.)?</catDesc>
+							<category xml:id="se070">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se071">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se072">
+							<catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+							</catDesc>
+							<catDesc>Does the project feature compilations indices, registers or visualisations
+								that offer alternative ways to access the material?</catDesc>
+							<category xml:id="se073">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se074">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se075">
+							<catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+							</catDesc>
+							<catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+							<category xml:id="se076">
+								<catDesc>Single manuscript</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se077">
+								<catDesc>Single work</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se078">
+								<catDesc>Collection of texts</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se079">
+								<catDesc>Collected works</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se080">
+								<catDesc>Papers</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se081">
+								<catDesc>Archival holding</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se082">
+								<catDesc>Charters</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se083">
+								<catDesc>Letters</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se084">
+								<catDesc>Diary</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se085">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+								<catDesc>
+									<gloss>Reconstruction of the annex</gloss>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se086">
+							<catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+							</catDesc>
+							<catDesc>What era(s) do the documents belong to?</catDesc>
+							<category xml:id="se087">
+								<catDesc>Classics</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se088">
+								<catDesc>Medieval</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se089">
+								<catDesc>Early modern</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se090">
+								<catDesc>Modern</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se091">
+							<catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+							</catDesc>
+							<catDesc>Which perspective(s) do the editors take towards the edited material? How can
+								the edition be classified in general terms?</catDesc>
+							<category xml:id="se092">
+								<catDesc>History</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se093">
+								<catDesc>Philology / Literary Studies</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se094">
+								<catDesc>Philosophy / Theology</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se095">
+								<catDesc>History of Science</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se096">
+								<catDesc>Musicology</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se097">
+								<catDesc>Art History</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se098">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+								<catDesc>
+									<gloss/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se099">
+							<catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+							</catDesc>
+							<catDesc>Does the project offer any spin-offs?</catDesc>
+							<category xml:id="se100">
+								<catDesc>App</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se101">
+								<catDesc>Mobile</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se102">
+								<catDesc>PDF</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se103">
+								<catDesc>None</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se104">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+								<catDesc>
+									<gloss>Videos</gloss>
+								</catDesc>
+							</category>
+						</category>
+					</category>
+					<category>
+						<catDesc>Access modes</catDesc>
+						<category xml:id="se105">
+							<catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+							</catDesc>
+							<catDesc>By which categories does the project offer to browse the contents?</catDesc>
+							<category xml:id="se106">
+								<catDesc>Authors</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se107">
+								<catDesc>Works</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se108">
+								<catDesc>Versions</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se109">
+								<catDesc>Structure</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se110">
+								<catDesc>Pages</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se111">
+								<catDesc>Documents</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se112">
+								<catDesc>Type of material</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se113">
+								<catDesc>Images</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se114">
+								<catDesc>Dates</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se115">
+								<catDesc>Persons</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se116">
+								<catDesc>Places</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se117">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+								<catDesc>
+									<gloss>non</gloss>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se118">
+							<catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the project offer a simple search?</catDesc>
+							<category xml:id="se119">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se120">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se121">
+							<catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the project offer an advanced search?</catDesc>
+							<category xml:id="se122">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se123">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se124">
+							<catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the search support the use of wildcards?</catDesc>
+							<category xml:id="se125">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se126">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se127">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se128">
+							<catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the search offer an index of the searched field?</catDesc>
+							<category xml:id="se129">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se130">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se131">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se132">
+							<catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
+							<category xml:id="se133">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se134">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se135">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se136">
+							<catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+							</catDesc>
+							<catDesc>Does the project offer help texts for the search?</catDesc>
+							<category xml:id="se137">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se138">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se139">
+								<catDesc>Not applicable</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+					</category>
+					<category>
+						<catDesc>Aims and methods</catDesc>
+						<category xml:id="se140">
+							<catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+							</catDesc>
+							<catDesc>Who is the intended audience of the project?</catDesc>
+							<category xml:id="se141">
+								<catDesc>Scholars</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se142">
+								<catDesc>Interested public</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se143">
+							<catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+							</catDesc>
+							<catDesc>Which type fits best for the reviewed project?</catDesc>
+							<category xml:id="se144">
+								<catDesc>Facsimile edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se145">
+								<catDesc>Archive edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se146">
+								<catDesc>Documentary edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se147">
+								<catDesc>Diplomatic edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se148">
+								<catDesc>Genetic edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se149">
+								<catDesc>Work critical edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se150">
+								<catDesc>Text critical edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se151">
+								<catDesc>Enriched edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se152">
+								<catDesc>Database edition</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se153">
+								<catDesc>Digital library</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se154">
+								<catDesc>Collection of texts</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se155">
+								<catDesc>None</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se156">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+								<catDesc>
+									<gloss>VR-Simulation</gloss>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se158">
+							<catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+							</catDesc>
+							<catDesc>In how far is the text critically edited?</catDesc>
+							<category xml:id="se159">
+								<catDesc>Transmission examined</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se160">
+								<catDesc>Palaeographic annotations</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se161">
+								<catDesc>Normalization</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se162">
+								<catDesc>Variants</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se163">
+								<catDesc>Emendation</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se164">
+								<catDesc>Commentary notes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se165">
+								<catDesc>None</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se166">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+								<catDesc>
+									<gloss>No text is edited, but the environment of the text production</gloss>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se167">
+							<catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+							</catDesc>
+							<catDesc>Is the data encoded in XML? </catDesc>
+							<category xml:id="se168">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se169">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se170">
+							<catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+							</catDesc>
+							<catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
+							<category xml:id="se171">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se172">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se173">
+							<catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+							</catDesc>
+							<catDesc>Which kinds or forms of text are presented?</catDesc>
+							<category xml:id="se174">
+								<catDesc>Facsimiles</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se175">
+								<catDesc>Diplomatic transcription</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se176">
+								<catDesc>Edited text</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se177">
+								<catDesc>Translations</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se178">
+								<catDesc>Commentaries</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se179">
+								<catDesc>Semantic data</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+					</category>
+					<category>
+						<catDesc>Technical accessability</catDesc>
+						<category xml:id="se180">
+							<catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+							</catDesc>
+							<catDesc>Are there persistent identifiers and an addressing system for the edition
+								and/or parts/objects of it and which mechanism is used to that end?</catDesc>
+							<category xml:id="se181">
+								<catDesc>DOI</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se182">
+								<catDesc>ARK</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se183">
+								<catDesc>URN</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se184">
+								<catDesc>PURL.ORG</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se185">
+								<catDesc>Persistent URLs</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se186">
+								<catDesc>None</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se187">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+								<catDesc>
+									<gloss/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se188">
+							<catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+							</catDesc>
+							<catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse
+								of the data of the project in other contexts?</catDesc>
+							<category xml:id="se189">
+								<catDesc>OAI-PMH</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se190">
+								<catDesc>REST</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se191">
+								<catDesc>General API</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se192">
+								<catDesc>None</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se193">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+								<catDesc>
+									<gloss/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se194">
+							<catDesc>Open Access</catDesc>
+							<catDesc>Is the edition Open Access?</catDesc>
+							<category xml:id="se195">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se196">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se197">
+							<catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue 4.12</ref>
+							</catDesc>
+							<catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of
+								the edition (e.g. for a page)?</catDesc>
+							<category xml:id="se198">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se199">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se200">
+							<catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+							</catDesc>
+							<catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
+							<category xml:id="se201">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se202">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se203">
+							<catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+							</catDesc>
+							<catDesc>Can you use the data with other tools useful for this kind of
+								content?</catDesc>
+							<category xml:id="se204">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se205">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se206">
+							<catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+							</catDesc>
+							<catDesc>Are the rights to (re)use the content declared?</catDesc>
+							<category xml:id="se207">
+								<catDesc>Yes</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se208">
+								<catDesc>No</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+						</category>
+						<category xml:id="se209">
+							<catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+							</catDesc>
+							<catDesc>Under what license are the contents released?</catDesc>
+							<category xml:id="se210">
+								<catDesc>CC0</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se211">
+								<catDesc>CC-BY</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se212">
+								<catDesc>CC-BY-ND</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se213">
+								<catDesc>CC-BY-NC</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se214">
+								<catDesc>CC-BY-SA</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se215">
+								<catDesc>CC-BY-NC-ND</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se216">
+								<catDesc>CC-BY-NC-SA</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se217">
+								<catDesc>PDM</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se218">
+								<catDesc>No license</catDesc>
+								<catDesc>
+									<num type="boolean" value="1"/>
+								</catDesc>
+							</category>
+							<category xml:id="se219">
+								<catDesc>Multiple licenses</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+							</category>
+							<category xml:id="se220">
+								<catDesc>Other</catDesc>
+								<catDesc>
+									<num type="boolean" value="0"/>
+								</catDesc>
+								<catDesc>
+									<gloss/>
+								</catDesc>
+							</category>
+						</category>
+					</category>
+				</taxonomy>
+			</classDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de"/>
+			</langUsage>
+			<textClass>
+				<keywords xml:lang="en">
+					<term>immersion</term>
+					<term>virtual reality</term>
+					<term>visual history</term>
+					<term>3d</term>
+					<term>documentation</term>
+					<term>anne frank</term>
+					<term>history</term>
+					<term>20th century</term>
+				</keywords>
+			</textClass>
+		</profileDesc>
+	</teiHeader>
+	<text>
+		<front>
+			<div type="abstract">
+				<p>After his return from deportation, Otto Frank, father of Anne Frank, decreed that the
+					annex in which the family hid during WWII should no longer be furnished. For this reason,
+					Anne Frank’s world-famous writing place is vacant today. With the project <emph>The Secret
+						Annex (3D)</emph>, which was launched in 2010, and the VR application <emph>The Anne
+						Frank House VR</emph>, which has existed since 2018, the <emph>Anne Frank
+						Foundation</emph> is finally venturing to restore the annex virtually to its former
+					state. In this way, the <emph>Anne Frank House</emph> wants to create an immersive
+					environment that gives users an impression of the living conditions in the annex at the
+					time of WWII. Although it is obvious from the outset that the resource under review is not
+					a digital edition, it is nevertheless reviewed on the assumption that it is one according
+					to the RIDE-‘Criteria for Reviewing Digital Editions and Resources’. It aims to emphasise
+					the added value of ‘Virtual Reality’ (VR) could have for digital edition practice.</p>
+			</div>
+		</front>
+		<body>
+			<div xml:id="div1">
+				<head>Einführung</head>
+				<p xml:id="p1">Das <emph>Anne Frank Haus</emph> (AFH) in Amsterdam beherbergt die Stätte, in
+					welcher sich die Familie Frank und noch vier weitere Personen zwischen 1942–1944 vor dem
+					aufrückenden Nazi-Regime versteckt hielten. In diesem Zeitraum verfasste Anne Frank ihr
+					weltweit berühmt gewordenes Tagebuch, wodurch sie zu einer Symbolfigur für die Schrecken
+					und Qualen des jüdischen Volks während der Shoah avancierte. Seit seiner Gründung im Jahr
+					1957 hat sich das AFH das Ziel gesetzt, das ehemalige Versteck der Familie Frank zu
+					erhalten und ausgehend von Annes Leben „Ausstellungen, pädagogische Programme und
+						Produkte“<note xml:id="ftn1">
+						<ref
+							target="https://web.archive.org/web/20240124161526/https://www.annefrank.org/de/uber-uns/was-wir-tun/"
+							>https://web.archive.org/web/20240124161526/https://www.annefrank.org/de/uber-uns/was-wir-tun/</ref>.</note>,
+					die sich mit der Gefahr von „Antisemitismus, Rassismus und Diskriminierung“<note
+						xml:id="ftn2">
+						<ref
+							target="https://web.archive.org/web/20240124161526/https://www.annefrank.org/de/uber-uns/was-wir-tun/"
+							>https://web.archive.org/web/20240124161526/https://www.annefrank.org/de/uber-uns/was-wir-tun/</ref>.</note>
+					auseinandersetzen, zu entwickeln.</p>
+				<p xml:id="p2">In diesem Rahmen nimmt die Stiftung eine Vorreiterstellung in der digitalen
+					Kulturvermittlung ein. Durch die Schaffung des Onlineportals <emph>The Anne Frank House
+						online</emph> (<ref type="crossref" target="#afs2018a">Anne Frank Stichting 2018a</ref>)
+					können sich Menschen weltweit mit dem Schicksal der Anne Frank vom heimischen Computer aus
+					befassen. Um diese Auseinandersetzung für jüngere Menschen möglichst interessant zu
+					gestalten, schöpft das AFH allerneuste digitale Medienangebote aus. Dazu zählen neben
+					einer Webseite auch Apps, <emph>YouTube</emph>-Videos, <emph>Google Arts &amp;
+						Culture</emph>-Sheets, Blogs, Soziale Medien, 360°-Videos und Virtual-Reality
+					-Anwendungen (VR-App).</p>
+				<p xml:id="p3">Vorwiegend soll das Augenmerk in dieser Rezension auf zwei Angebote des AFH,
+					die über die Einstiegsseite des Onlineportals erreichbar sind, gerichtet werden: die
+					VR-App <emph>Anne Frank House VR</emph> (AFHVR, <ref type="crossref" target="#afs2018b"
+						>Anne Frank Stichting 2018b</ref>) und die Browseranwendung <emph>The Secret Annex
+					</emph>(TSA, <ref type="crossref" target="#afs2018c">Anne Frank Stichting 2018c</ref>).
+					Beide Projekte stehen im engen Zusammenhang und bieten eine digitale Rekonstruktion des
+					Hinterhauses im Zustand, wie es zwischen 1942–1944 aussah; also in jenem Zeitraum, in
+					welchem sich die Familie Frank dort versteckt hielt. Darüber hinaus soll in diesem Beitrag
+					evaluiert werden, ob diese beiden Simulationen die Kriterien für eine digitale Edition
+					erfüllen könnten. Eine digitale Edition ist bei ihrer Korpusbildung bekanntlich nicht
+					darauf beschränkt, allein Textträger in Form von beschriebenen Blättern, sondern auch
+					Dokumente von weitaus komplexerer Materialität erschließend wiederzugeben, wie etwa
+					Inschriften auf Wänden, Skulpturen oder Tontafeln.<note xml:id="ftn3">Zu nennen ist hier
+						etwa das Projekt <emph>Deutsche Inschriften Online</emph>: <ref
+							target="https://www.inschriften.net/">https://www.inschriften.net/</ref>, oder etwa
+						die Arbeiten von <emph>Pure3D</emph>, insb. <emph>The Battle of Mount Street
+							Bridge</emph>: <ref target="https://mountstreet1916.ie/"
+							>https://mountstreet1916.ie/</ref>. Die Liste ließe sich noch weiter
+						fortsetzen.</note> Daneben gibt es außerdem seit Längerem Diskussionen darüber, wie
+					3D-Simulationen nutzbringend in einen editionswissenschaftlichen Kontext eingebettet
+					werden können. Federführend in diesem Diskurs sind Costas Papadopoulos und Susan
+					Schreibman vom Projekt <emph>Pure3D </emph>in Maastricht zu nennen. (<ref type="crossref"
+						target="#pure2023">Pure3D 2023</ref>) In ihrem bereits 2019 erschienenen Aufsatz
+						<emph>Towards 3D Scholarly Editions</emph> beschreiben Papadopoulos und Schreibman die
+					Möglichkeit, mithilfe von 3D-Simulationen komplexe räumliche und zeitliche Ereignisse, wie
+					im konkreten Beispiel eine Schlacht, editorisch aufzubereiten. (<ref type="crossref"
+						target="#papadopoulos.schreibman2019">Papadopoulos und Schreibman 2019</ref>) Aus diesem
+					Grund erfüllen die beiden Angebote des AFH grundsätzlich die Voraussetzung, um als eine
+					digitale Edition betrachtet werden zu können. Ähnlich zu den Projekten von <emph>Pure3D
+					</emph>wird bei den Projekten des AFH versucht, ein komplexes räumlich-zeitliches Moment
+					zu erschließen. Diese Erschließung erfolgt ebenfalls, wie von Papadopoulos und Schreibman
+						(<ref type="crossref" target="#papadopoulos.schreibman2019">2019</ref>) nebst weiteren
+					Kriterien für die <emph>3D Scholary Edition</emph> gefordert, durch den Einsatz von
+					Kommentaren, die sich verstreut über das Szenario ausfindig machen lassen. Dennoch soll an
+					dieser Stelle betont werden, dass die beiden immersiven Angebote des AFH in ihrem
+					Selbstverständnis keine kritische Edition darstellen. Wie sich noch zeigen wird, will die
+					Stiftung mit diesem Angebot eine digital-immersive Lernplattform für junge Menschen
+					schaffen. Im Folgenden wird das Projekt des AFH dennoch unter den bekannten RIDE-Kriterien
+					für eine kritische digitale Edition bewertet, um zu sehen, wie beide Welten – diejenige
+					der digitalen Museumsdidaktik und diejenige der digitalen Editionswissenschaft – zukünftig
+					Synergien schaffen könnten. Deswegen wird der Begriff ,Edition‘ auch nur in einfachen
+					Anführungszeichen gesetzt erscheinen, wenn er in Bezug auf die beiden Projekte genannt
+					wird.</p>
+				<p xml:id="p4">Das Projekt AFHVR wurde vom AFH in Zusammenarbeit mit <emph>Vertigo Games
+						(Force Field Entertainment)</emph> und <emph>Oculus</emph> realisiert. Finanziert wurde
+					das Projekt von der <emph>Anne Frank Stiftung</emph> mit Unterstützung von
+						<emph>Oculus</emph>.<note xml:id="ftn4">Vgl. <ref
+							target="https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/"
+							>https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/</ref>.</note>
+					Die Applikation wurde 2018 veröffentlicht und steht seit 2019 in einer aktualisierten Form
+					im App-Store von <emph>Oculus</emph> zum Download zur Verfügung.<note xml:id="ftn5">Vgl.
+							<ref
+							target="https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/"
+							>https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/</ref>.</note>
+					Im Impressum werden Martin de Ronde und Hans Tasma als Verantwortliche für die technische
+					Infrastruktur genannt, sowie Ellen van der Kraan, Charlotte Besmann und Tom Brink für die
+					kuratorische Aufbereitung der App.</p>
+				<p xml:id="p5">TSA ist vermutlich schon seit 2010 über das Onlineportal abrufbar und fußt
+					auf einem gleichnamigen Vorgängerprojekt, welches auf der Grundlage von 360°-Videos
+					aufbaute. Leider ist die Informationslage über die Entwicklung und die
+					Publikationsgeschichte recht dürftig. Ansprechpartner*innen und Entwickler*innen zu diesem
+					Projekt werden nicht genannt.</p>
+				<p xml:id="p6">Generell gestaltet sich der Zugriff auf Projektmetadaten schwierig. Alle
+					Metadaten, die ermittelt werden konnten, finden sich verstreut in einzelnen
+					Pressemitteilungen, Blogeinträgen und in <emph>YouTube</emph>-Videos, die für diese
+					Rezension ausgewertet wurden. Für das AFH im Allgemeinen steht ein Impressum zur
+					Verfügung. Zudem bietet die Stiftung diverse Wege zur Kontaktaufnahme an, z. B. über ein
+					FAQ, ein Kontaktformular, telefonisch, via E-Mail oder über die diversen Sozialen
+						Medien.<note xml:id="ftn6">Vgl. <ref
+							target="https://web.archive.org/web/20240124162002/https://www.annefrank.org/en/about-us/contact/"
+							>https://web.archive.org/web/20240124162002/https://www.annefrank.org/en/about-us/contact/</ref>.</note>
+				</p>
+			</div>
+			<div xml:id="div2">
+				<head>Gegenstand und Inhalt</head>
+				<p xml:id="p7">Das AFH kristallisiert in verschiedenen Quellen drei Gründe für die
+					Entwicklung und Bereitstellung von AFHVR und TSA heraus. Ein erstes Anliegen ist die
+					virtuelle Rekonstruktion der Möbel im Hinterhaus. Nach dem Krieg entschied Otto Frank, der
+					Vater von Anne, das Haus nicht wieder zu möblieren, nachdem es von den Nazis leergeräumt
+					worden war. Darum ist das originale Gemäuer nicht mehr in dem Zustand, in dem Anne es 1944
+					verlassen musste.<note xml:id="ftn7"> Vgl. <ref
+							target="https://artsandculture.google.com/story/SAUBp8B2mXzPKw"
+							>https://artsandculture.google.com/story/SAUBp8B2mXzPKw</ref>.</note> Als einen
+					weiteren Anlass benennt das AFH den weltweiten Zugang zum Hinterhaus. Es möchte Menschen
+					aus der ganzen Welt die Gelegenheit bieten, das Versteck der Anne Frank selbstständig
+					erkunden zu können.<note xml:id="ftn8">Vgl. <ref
+							target="https://web.archive.org/web/20240124162318/https://www.annefrank.org/de/uber-uns/nachrichten-und-presse/news-de/2019/7/4/erneuerter-vr-rundgang-durch-anne-franks-versteck/"
+							>https://web.archive.org/web/20240124162318/https://www.annefrank.org/de/uber-uns/nachrichten-und-presse/news-de/2019/7/4/erneuerter-vr-rundgang-durch-anne-franks-versteck/</ref>.</note>
+					Als letzten Impuls nennt das AFH die Barrierefreiheit. Infolge der Architektur ist das
+					Hinterhaus leider nur fußläufig zu besichtigen. Das AFH möchte aber auch diejenigen
+					erreichen, die aufgrund einer eingeschränkten Mobilität die originalen Räumlichkeiten
+					nicht besuchen können.<note xml:id="ftn9">Vgl. <ref
+							target="https://web.archive.org/web/20240124160055/https://www.annefrank.org/en/about-us/news-and-press/news/2018/6/12/anne-frank-house-vr-launched/"
+							>https://web.archive.org/web/20240124160055/https://www.annefrank.org/en/about-us/news-and-press/news/2018/6/12/anne-frank-house-vr-launched/</ref>.</note>
+				</p>
+				<p xml:id="p8">Die beiden Projekte erweisen sich für die digitale Kulturvermittlung insofern
+					als relevant, als sie einen vertiefenden informativen Einblick in die Lebensumstände und
+					die Schreibstätte der Anne Frank gestatten. So kann der Entstehungskontext des berühmten
+					Tagebuchs hautnah und immersiv<note xml:id="ftn10">Der Begriff ,immersiv‘ und das
+						dazugehörige Nomen ,Immersion‘ bilden zusammen die Grundeigenschaft von VR. Unter dem
+						Begriff ist das Eintauchen (lat. immersio) der Rezipierenden in das Zielmedium zu
+						verstehen. Dabei werden durch den umgebenden 360°-Illusionsraum sämtliche Grenzen
+						zwischen Rezipient*in und Medium aufgelöst und dieser Effekt mithilfe von vornehmlich
+						audiovisuellen Mitteln verstärkt (<ref type="crossref" target="#grau2000">Grau
+							2000</ref>, 25–26). </note> erfahren werden; so, als wäre man selbst ein Teil der
+					untergetauchten Gruppe. Gerade bei einem so belastenden Thema wie dem der Shoah erscheint
+					es als präventive Maßnahme zur Vermeidung solcher Ereignisse wichtig, Gefühle und Regungen
+					Verstorbener wieder aufleben zu lassen und ins kulturelle Gedächtnis zurückzurufen. Daher
+					zeigen sich die Ressourcen in einem entsprechend gewollt düsteren Gewand, innerhalb
+					welchem durch Beleuchtung, Geräusche und räumliche Enge ein mulmiger Charakter verstärkt
+					wird.</p>
+				<p xml:id="p9">Die 3D-Szenarien sprengen damit jegliche navigatorischen Paradigmen von
+					(digitalen) Editionen, die sich meistens auf die Buchmetapher berufen. Hier wird nicht mit
+					einem 2D-Desktop und dem klassischen Maus-Tastatur-Interface agiert. Stattdessen wird
+					durch das Tragen einer Datenbrille ein 360° umfassender Illusionsraum erzeugt, durch
+					welchen mithilfe von zwei Kontrollern navigiert wird. Auf diese Weise wird die durch Leon
+					Battista Alberti formulierte Fenstermetapher, die auch auf digitale Desktop-Editionen
+					zutrifft, aufgelöst.<note xml:id="ftn11">Alberti warf 1435 in seiner Abhandlung über
+						Malerei und Perspektive <emph>De Pictura</emph> als erster die Idee auf, den Rahmen
+						eines Bildes als ein geöffnetes Fenster anzusehen (<ref type="crossref"
+							target="#friedberg2006">Friedberg 2006</ref>, 1–2).</note> Nutzende der App werden so
+					buchstäblich in das Innere des Hinterhauses hineinversetzt und erhalten das Gefühl, von
+					den Räumlichkeiten tatsächlich umgeben zu sein.</p>
+				<p xml:id="p10">Zuvor konnte das möblierte Hinterhaus im Zustand von Annes Aufenthalt nur
+					über einige Fotografien erschlossen werden. Ferner ließ Otto Frank 1961 ein Modell aus
+					Holz und Stoff mit der ursprünglichen Möblierung des Hauses anfertigen, um
+					Museumsbesucher*innen einen Eindruck des damaligen Zustandes zu vermitteln.<note
+						xml:id="ftn12">Vgl. <ref
+							target="https://web.archive.org/save/https://artsandculture.google.com/story/SAUBp8B2mXzPKw"
+							>https://web.archive.org/save/https://artsandculture.google.com/story/SAUBp8B2mXzPKw</ref>
+						und <ref
+							target="https://web.archive.org/save/https://www.annefrank.org/en/museum/anne-frank-collection/40/scale-model-part-1/"
+							>https://web.archive.org/save/https://www.annefrank.org/en/museum/anne-frank-collection/40/scale-model-part-1/</ref>.</note>
+					Insgesamt bietet die ,Edition‘ eine Fülle an Informationen rund um das Leben im
+					Hinterhaus. Dazu zählen neben den erwähnten 360°-Aufnahmen bzw. Rekonstruktionen auch eine
+					Kommentierung, die Zitation von Tagebuchauszügen, das Einbinden von Videos, sowie – nur in
+					der VR-App enthalten – eine geführte Tour. Die App ist darüber hinaus in sieben Sprachen
+					abrufbar. In TSA wird außerdem ein Querschnitt des Hinterhauses eingeblendet, der zur
+					Navigation durch das virtuelle Versteck bestimmt ist.</p>
+				<p xml:id="p11">Die Kommentare können durch klickbare Symbole, die über den referierten
+					Objekten erscheinen, abgerufen werden. Dabei gibt es einen wesentlichen Unterschied
+					zwischen AFHVR und TSA. Während über die in TSA eingebetteten Icons Kontextkommentare,
+					weiterführende Links und korrespondierende Videos eingesehen werden können, erscheinen
+					durch das Klicken der Icons in der VR-Anwendung Zitate aus dem Tagebuch, die von einer
+					Mädchenstimme vorgelesen werden.</p>
+				<p xml:id="p12">
+					<figure xml:id="img1">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-1.png"/>
+						<head type="legend">Das Fernglas in der Hand.</head>
+					</figure>
+					<figure xml:id="img2">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-2.png"/>
+						<head type="legend">Das Tagebuch in der Hand.</head>
+					</figure>Darüber hinaus gibt es noch weitere nennenswerte Unterschiede zwischen der
+					Browserversion und der VR-App: Der größte besteht wohl darin, dass für AFHVR eine digitale
+					Rekonstruktion und somit ein digitales Bild die Grundlage bildet, während in TSA für die
+					meisten Räume 360°-Fotografien angefertigt wurden. Diese Fotografien wurden jeweils von
+					einem zentralen Standpunkt im Raum aus aufgenommen.<note xml:id="ftn13">Ob diese Aufnahmen
+						aus der ersten Projektphase stammen, wofür das Museum extra geschlossen und möbliert
+						wurde, oder im Rahmen des Studioaufbaus für die Produktion von <emph>Anne Franks
+							Videotagebüchern</emph>, konnte nicht ermittelt werden. Vgl. <ref
+							target="https://artsandculture.google.com/story/SAUBp8B2mXzPKw"
+							>https://artsandculture.google.com/story/SAUBp8B2mXzPKw</ref> und <ref
+							target="https://www.youtube.com/watch?v=sY8b5ptxWsI"
+							>https://www.youtube.com/watch?v=sY8b5ptxWsI</ref>.</note> Aufgrund dieser Tatsache
+					kann man sich in der Browseranwendung lediglich um die eigene Achse drehen. Das Gegenteil
+					dessen bietet die VR-App. Auf Basis der digitalen Rekonstruktion ist eine freie Bewegung
+					zu jedem beliebigen Punkt im Raum möglich. Zudem können die App-Nutzenden mit wichtigen
+					Objekten interagieren. Dazu zählen beispielsweise das Fernglas in Annes Zimmer (siehe <ref
+						type="crossref" target="#img1">Abb. 1</ref>) oder das Tagebuch (siehe <ref
+						type="crossref" target="#img2">Abb. 2</ref>), welches auf ihrem Schreibtisch liegt. Für
+					das immersive Erlebnis stehen nicht nur visuelle, sondern auch auditive Elemente in der
+					VR-Anwendung zur Verfügung.</p>
+			</div>
+			<div xml:id="div3">
+				<head>Ziele und Methoden</head>
+				<p xml:id="p13">Leider lassen sich Ziele und Absichten der beiden Projekte nur aus dem
+					Kontext erschließen. Da es sich bei den Ressourcen um keine Edition handelt, liegt demnach
+					auch kein editorischer Bericht im klassischen Sinn vor. Um an Informationen über die
+					,Edition‘ zu gelangen, müssen diverse externe Quellen konsultiert werden. Zu diesen
+					Quellen zählen etwa Pressemitteilungen,<note xml:id="ftn14">Vgl. <ref
+							target="https://web.archive.org/web/20240124160055/https://www.annefrank.org/en/about-us/news-and-press/news/2018/6/12/anne-frank-house-vr-launched/"
+							>https://web.archive.org/web/20240124160055/https://www.annefrank.org/en/about-us/news-and-press/news/2018/6/12/anne-frank-house-vr-launched/</ref>
+						und <ref
+							target="https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/"
+							>https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/</ref>.</note>
+					Beschreibungen aus dem App-Store von <emph>Oculus</emph>
+					<note xml:id="ftn15">Vgl. <ref
+							target="https://web.archive.org/save/https://www.oculus.com/experiences/go/1596151970428159/"
+							>https://web.archive.org/save/https://www.oculus.com/experiences/go/1596151970428159/</ref>.</note>
+					oder Videoreportagen auf <emph>YouTube</emph> (<ref type="crossref" target="#spiegel2012"
+						>Der Spiegel 2012</ref>). Dieser Umstand hat womöglich auch damit zu tun, dass sich
+					speziell dieses Angebot des AFH nicht an ein wissenschaftliches Publikum richtet. Vielmehr
+					geht es darum, die schon erwähnten Kernpunkte – zeitliche Erschließung, weltweiter Zugang
+					und Barrierefreiheit – stark zu machen und darüber hinaus ein junges Publikum
+					anzusprechen. Das soll jedoch nicht bedeuten, dass ein wissenschaftlicher Mehrwert durch
+					das Projekt völlig ausgeschlossen ist. Die Erschließung eines zeitlich begrenzten Zustands
+					kann durchaus eine Relevanz für die Forschung haben.</p>
+				<p xml:id="p14">Neben dem Fehlen eines ,editorischen‘ Berichts ist zudem auffällig, dass für
+					die Projekte keine spezifische Terminologie entwickelt wurde. Von Seiten des AFH wird kein
+					Begriffsangebot gemacht, um die Entitäten in eine gängige Klassifizierung, wie ,Edition‘
+					oder ,Simulation‘, einzuordnen. Selbst die Eigenbezeichnung der Projekte ist nicht
+					konsistent. So wird die App auf der Webseite des AFH als <emph>The Secret Annex in Virtual
+						Reality</emph> beworben. Tatsächlich heißt die VR-Anwendung aber <emph>Anne Frank House
+						VR</emph>.<note xml:id="ftn16">Vgl. <ref
+							target="https://web.archive.org/web/20240124161732/https://www.annefrank.org/en/museum/web-and-digital/"
+							>https://web.archive.org/web/20240124161732/https://www.annefrank.org/en/museum/web-and-digital/</ref>
+						und <ref
+							target="https://web.archive.org/save/https://www.oculus.com/experiences/go/1596151970428159/"
+							>https://web.archive.org/save/https://www.oculus.com/experiences/go/1596151970428159/</ref>.</note>
+					Eine spezielle Terminologie wird somit vermieden. In einer Pressemitteilung des
+					Onlineportals wird zur Beschreibung der VR-Anwendung der Begriff <emph>virtual reality
+						tour</emph> verwendet.<note xml:id="ftn17">Vgl. <ref
+							target="https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/"
+							>https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/</ref>.</note>
+					Innerhalb des Portals findet diese Bezeichnung allerdings keine Verwendung.</p>
+				<p xml:id="p15">Aufgrund des Fehlens dieser Angaben lässt sich nicht reflektieren, welches
+					Bestreben die Anwendung verfolgt. Generell konstatiert die DFG in Bezug auf die Erfassung
+					von dreidimensionalen Objekten, dass „sich [bislang] keine Standards im Bereich der
+					softwareunabhängigen Datenformate und der Dokumentation der Digitalisierung/Modellierung
+					und der Resultate durchgesetzt [haben]“ (<ref type="crossref" target="#dfg2016">DFG
+						2016</ref>, 27). Daher konnte das AFH auch auf keine Standards oder auf eine ,best
+					practice‘ zurückgreifen.</p>
+			</div>
+			<div xml:id="div4">
+				<head>Umsetzung und Präsentation</head>
+				<p xml:id="p16">
+					<figure xml:id="img3">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-3.png"/>
+						<head type="legend">Fußsymbol zur Fortbewegung im Raum.</head>
+					</figure>Wie auch im vorherigen Abschnitt ist bei der technischen Umsetzung grundlegend
+					zwischen der VR-App und der Browserversion zu differenzieren. Die App wird in einem
+					Format, welches für die <emph>Oculus Go</emph>, <emph>Rift</emph> und <emph>Quest</emph>
+					sowie für <emph>Gear VR</emph> geeignet ist, herausgegeben. Die Webanwendung präsentiert
+					sich wie üblich in HTML und ist somit mit jedem Browser lesbar. Die Bedienung von AFHVR
+					gestaltet sich als intuitiv und bietet zudem Personen, die noch keine Erfahrung mit VR
+					gemacht haben, eine Möglichkeit, sich schnell mit dem neuen Interface vertraut zu machen.
+					Dies gelingt speziell dadurch, dass beim Start der Anwendung zunächst der <emph>Story
+						Mode</emph> absolviert werden muss. In jenem Modus gibt es eine kleine Einführung, die
+					zeigt, wie man sich im Raum bewegt (siehe <ref type="crossref" target="#img3">Abb.
+					3</ref>), welche Bedeutung die verschiedenen Symbole haben und wie einzelne Objekte
+					manipuliert werden können.</p>
+				<p xml:id="p17">
+					<figure xml:id="img4">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-4.png"/>
+						<head type="legend">Türsymbol in Browseranwendung.</head>
+					</figure>Die Navigation in TSA unterscheidet sich insofern von AFHVR, als dass sie mit der
+					Computermaus gesteuert wird. Obwohl Barrierefreiheit eines der erklärten Ziele des AFH
+					darstellt, scheint eine Navigation mit der Tastatur noch nicht möglich zu sein. Der
+					Einstieg in die mögliche ,Edition‘ erfolgt im Browser durch einen Querschnitt des
+					Hinterhauses. Durch das Klicken auf einen speziellen Raum öffnet sich das entsprechende
+					Szenario mit einem kurzen Einführungstext. Anschließend kann man sich mithilfe der bereits
+					erwähnten Icons durch das Haus fortbewegen. Ein Türsymbol (siehe <ref type="crossref"
+						target="#img4">Abb. 4</ref>) suggeriert einen Raumwechsel. Durch das Drücken der
+					Maustaste und die gleichzeitige Bewegung kann die Kamera um die eigene Achse und von oben
+					nach unten bewegt werden.</p>
+				<p xml:id="p18">Die Bildqualität in beiden Teilen der Anwendungen überzeugt durch ihre
+					gestochene Schärfe. Teilweise ist die Wirkung der digitalen Bilder so ausgereift, dass
+					nicht mit Sicherheit gesagt werden kann, ob es sich um eine ,echte‘ Fotografie oder um
+					eine digitale Animation handelt. Die Grafik kann demzufolge mit modernsten
+					Computersimulationen mithalten. Die Rekonstruktion überzeugt durch eine detailreiche
+					Ausschmückung der einzelnen Räume, wodurch ein besonderer Grad der Immersion erreicht
+					wird.</p>
+				<p xml:id="p19">
+					<figure xml:id="img5">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-5.png"/>
+						<head type="legend">Unleserlicher Textträger.</head>
+					</figure>Einige Dokumente, die in der angenommenen ,Edition‘ auftauchen, sind jedoch trotz
+					der exzellenten Grafik leider nicht lesbar. Dazu zählen etwa eine Wandkarte der Normandie,
+					Bleistiftkritzeleien an der Wand, Briefe und Zeitschriften, die auf verschiedenen
+					Möbelstücken liegen, sowie das Tagebuch selbst. Durch die Datenbrille betrachtet
+					erscheinen diese Objekte bei Annäherung leider nur verschwommen. In der Browseranwendung,
+					wo diese Dokumente nur aus der Ferne betrachtet werden können, öffnen sich beim Anklicken
+					Fotografien, die ebenfalls zu unscharf sind und daher leider nicht für Forschungszwecke
+					genutzt werden können. (siehe <ref type="crossref" target="#img5">Abb. 5</ref>).</p>
+				<p xml:id="p20">
+					<figure xml:id="img6">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-6.png"/>
+						<head type="legend">Das Tagebuch in der VR-App.</head>
+					</figure>Dieses Defizit erstaunt aufgrund der Tatsache, dass laut eines Videobeitrags des
+					AFH alle Bilder und Texte an den Wänden abgenommen und einzeln faksimiliert wurden.<note
+						xml:id="ftn18">Vgl. <ref
+							target="https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/"
+							>https://web.archive.org/web/20240124155802/https://www.annefrank.org/en/about-us/news-and-press/news/2019/7/4/renewed-vr-tour-anne-franks-secret-annex/</ref>.</note>
+					Das Teilen dieser Daten hätte einen großen Mehrwert für die Forschung haben können. Es
+					wäre zudem wünschenswert gewesen, wenn mit dem Tagebuch, welches sich in Annes Raum auf
+					dem Schreibtisch befindet, mehr Interaktionen möglich gewesen wären. Leider ist dieses
+					historisch hochgradig relevante Zeitzeugnis nur in verschlossener Form dargestellt.
+					Innerhalb der VR-App lässt sich das Tagebuch mithilfe des Kontrollers aufheben und
+					bewegen, aber bedauerlicherweise nicht öffnen (siehe <ref type="crossref" target="#img6"
+						>Abb. 6</ref>). Auch an dieser Stelle soll erneut betont werden, dass sich das AFH mit
+					ihrer Ressource nicht explizit an ein wissenschaftliches Publikum richtet. Eine digitale
+					Animation des Tagebuchs würde der wissenschaftlichen Community freilich einen großen
+					Wertzuwachs bieten, gleichzeitig hätte ein solches Vorhaben zu einer ungemeinen Kosten-
+					und Aufwandsteigerung geführt.</p>
+				<p xml:id="p21">
+					<figure xml:id="img7">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-7.png"/>
+						<head type="legend">Nicht nachgewiesenes Zitat aus dem Tagebuch.</head>
+					</figure>Die Kommentierung, die nur bei TSA vorliegt, ist kurz und bündig gehalten.
+					Eingebettete Links laden zu einer vertiefenden Lektüre ein. Viele größere Themenkomplexe
+					werden in Videos ausgelagert. Die Kommentare sind in vier Sprachen (Deutsch, Englisch,
+					Niederländisch und Spanisch) verfügbar. Damit wird die Anwendung ihrem adressierten
+					Publikum, Jugendlichen, gerecht. Dennoch könnten die Zitate aus dem Tagebuch, die in der
+					geführten VR-Tour auftauchen, noch nachgewiesen werden (siehe <ref type="crossref"
+						target="#img7">Abb. 7</ref>).</p>
+				<p xml:id="p22">
+					<figure xml:id="img8">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-8.png"/>
+						<head type="legend">Wandkarte der Normandie.</head>
+					</figure>
+					<figure xml:id="img9">
+						<graphic
+							url="http://ride.i-d-e.de/wp-content/uploads/issue_20/anne-frank/pictures/picture-9.png"/>
+						<head type="legend">Bild von Norma Shearer.</head>
+					</figure>Metadaten zu einzelnen in den Räumen befindlichen Objekten sind
+					bedauerlicherweise nicht abrufbar. Es wäre ein großer Gewinn für eine ,Edition‘ gewesen,
+					wenn noch erhaltene Objekte mit dem digitalen Archiv,<note xml:id="ftn19">Vgl. <ref
+							target="http://web.archive.org/web/20240125143612/https://www.annefrank.org/en/museum/collection/"
+							>http://web.archive.org/web/20240125143612/https://www.annefrank.org/en/museum/collection/</ref>.</note>
+					welches ebenfalls über das Onlineportal abrufbar ist, verknüpft wären. Zu nennen ist hier
+					etwa die erwähnte Wandkarte der Normandie (siehe <ref type="crossref" target="#img8">Abb.
+						8</ref>) oder ein über Annes Schreibtisch aufgeklebtes Bild von Norma Shearer (siehe
+						<ref type="crossref" target="#img9">Abb. 9</ref>).<note xml:id="ftn20">Vgl. <ref
+							target="https://hdl.handle.net/21.12139/a21c60eb-0f64-495c-ace9-d5660077193d"
+							>https://hdl.handle.net/21.12139/a21c60eb-0f64-495c-ace9-d5660077193d</ref> und <ref
+							target="https://hdl.handle.net/21.12139/88998591-14ed-41da-94fc-895cc1d445a3"
+							>https://hdl.handle.net/21.12139/88998591-14ed-41da-94fc-895cc1d445a3</ref>.</note>
+				</p>
+				<p xml:id="p23">Ferner werden keinerlei Angaben dazu gemacht, welche Objekte der Simulation
+					tatsächlich rekonstruiert<note xml:id="ftn21">D. h. aufgrund von belegtem Wissen wie durch
+						Fotografien, Erzählungen oder auf Grundlage des Holzmodells von Otto Frank. </note> und
+					welche nur als ,Lückenfüller‘ für nicht überlieferte Stellen im Raum hinzugefügt wurden.
+					In diesem Rahmen wäre es auch interessant gewesen, die originalen Maßangaben der Objekte
+					zu erfahren. Ein solches Desiderat hätte mithilfe eines editorischen Berichts oder der
+					Verlinkung zum bereits vorhandenen Archiv hinzugefügt werden können. Ansonsten ist TSA gut
+					mit den anderen Inhalten des Portals vernetzt. Es kann nicht nur aus dem Projekt heraus
+					auf andere Inhalte des AFH zugegriffen, auch vice versa kann von verschiedenen Artikeln
+					sowie aus digitalen Lerneinheiten auf einzelne Räume der Simulation verwiesen werden.<note
+						xml:id="ftn22">Vgl. <ref
+							target="http://web.archive.org/web/20240125145447/https://www.lessonup.com/nl/channel/annefrank/lesson/mB3MbYQpZjKMsvjYN"
+							>http://web.archive.org/web/20240125145447/https://www.lessonup.com/nl/channel/annefrank/lesson/mB3MbYQpZjKMsvjYN</ref>.
+					</note>
+				</p>
+				<p xml:id="p24">Die Zitation von einzelnen Räumen und Objekten gestaltet sich erstaunlich
+					einfach. Zwar gibt es in Bezug auf die Zitation von Simulationen noch keine wirklichen
+					bibliografischen Standards, aber trotzdem verfügt jeder Kommentar und jeder Raum über
+					einen separaten und eindeutigen Link, der geteilt werden kann. Auf diese Weise können
+					gezielte Informationen aus den beiden Simulationen in andere Projekte, wie etwa in
+					digitale Lerneinheiten, einbezogen werden. Dem gegenüber ist die Zitation aus der
+					VR-Anwendung deutlich schwieriger. Hier können bislang nur Screenshots oder Screencasts
+					aufgenommen, jedoch keine Links erzeugt werden.<note xml:id="ftn23">Hier sei erwähnt, dass
+						das Aufnehmen von Screenshots und Screencasts kein Angebot der App selbst ist, sondern
+						eine standardmäßige Option von <emph>Oculus</emph>. Vgl. <ref
+							target="https://www.meta.com/help/quest/articles/in-vr-experiences/social-features-and-sharing/take-a-screenshot-oculus/"
+							>https://www.meta.com/help/quest/articles/in-vr-experiences/social-features-and-sharing/take-a-screenshot-oculus/</ref>.</note>
+				</p>
+				<p xml:id="p25">Lobenswert ist hervorzuheben, dass die VR-App von <emph>Oculus</emph>
+					lizenziert ist und somit im offiziellen <emph>Store </emph>geführt werden darf. Auf diese
+					Weise kann die App einfach auf die Datenbrille heruntergeladen werden. Damit hebt sich die
+					App von vielen anderen Apps aus dem Kulturbereich ab,<note xml:id="ftn24">Als Beispiel sei
+						hier die App von <emph>Radiance</emph> genannt, einer Plattform für VR-Kunst: <ref
+							target="http://web.archive.org/web/20240125150413/https://sidequestvr.com/app/5915/radiance-vr-app"
+							>http://web.archive.org/web/20240125150413/https://sidequestvr.com/app/5915/radiance-vr-app</ref>.</note>
+					die nicht lizenziert sind. Diese müssen aufwendig über alternative <emph>Stores</emph> wie
+						<emph>SideQuest</emph> auf das Endgerät geladen werden. Da dieser Vorgang aber
+					wesentlich komplizierter ist und ein technisches Know-how voraussetzt, bietet AFHVR durch
+					diesen Umstand einen leichten Zugang für alle, unabhängig von der jeweiligen technischen
+					Affinität. Durch den Download ist es außerdem möglich, die App offline nutzen zu können.
+					Dies ist ebenfalls ein positiv zu bewertender Punkt.</p>
+				<p xml:id="p26">Das AFH pflegt weltweit Kontakte zu Wissenschaft und Forschung und versteht
+					sich selbst als eine zentrale Anlaufstelle für die Aufarbeitung und Erforschung der Shoah
+					bzw. des Lebens der Anne Frank. In diesem Rahmen richtet die Stiftung weltweit
+					Ausstellungen aus und veranstaltet diverse Bildungsprogramme.<note xml:id="ftn25">Vgl.
+							<ref
+							target="http://web.archive.org/web/20240125150805/https://www.annefrank.org/en/about-us/what-we-do/worldwide-activities/"
+							>http://web.archive.org/web/20240125150805/https://www.annefrank.org/en/about-us/what-we-do/worldwide-activities/</ref>.</note>
+					Daneben betreibt das AFH auch das <emph>Anne Frank Youth Network</emph>, womit die
+					Organisation junge Menschen weltweit motivieren will, sich gegen Rassismus, Antisemitismus
+					und Vorurteile zu engagieren.<note xml:id="ftn26">Vgl. <ref
+							target="http://web.archive.org/web/20240125151206/https://www.annefrank.org/en/education/anne-frank-youth-network/"
+							>http://web.archive.org/web/20240125151206/https://www.annefrank.org/en/education/anne-frank-youth-network/</ref>.</note>
+					Aufgrund dessen agiert das AFH intensiv auf den Sozialen Medien. Neben <emph>Facebook
+					</emph>und <emph>Twitter </emph>ist die Stiftung auch auf <emph>Instagram</emph> und
+						<emph>YouTube</emph> aktiv. In allen Netzwerken werden mit einer hohen Frequenz Inhalte
+					rund um das AFH geteilt. Dennoch dienen die Sozialen Medien primär dazu, die Stiftung zu
+					bewerben. Sie können daher nur indirekt als Austauschplattform für die ,Edition‘ genutzt
+					werden.</p>
+				<p xml:id="p27">Leider ist das Projekt nicht als <emph>GitHub</emph>-<emph>Repository</emph>
+					o. Ä. verfügbar. Solchermaßen hätte das AFH zur Modellbildung für die technische
+					Realisierung und Archivierung von VR-Simulationen im wissenschaftlichen Kontext beitragen
+					können. Andere Institutionen, die ähnliche Projekte planen, hätten so von den zu Verfügung
+					gestellten Daten profitieren können. Demnach sind die Grunddaten für eine ,Edition‘ auch
+					nicht online abrufbar. In welchem Datenformat die Daten der Ressource vorliegen, konnte
+					nicht ermittelt werden.</p>
+				<p xml:id="p28">Dieser Umstand führt darüber hinaus zu einem Problem für die nachhaltige
+					Nutzbarkeit. Das Projekt gilt zwar offiziell seit dem überarbeiteten Launch im Jahr 2018
+					als abgeschlossen, allerdings bleibt eine dauerhafte Abrufbarkeit der möglichen ,Edition‘
+					aufgrund der mangelnden Einsicht in die Grunddaten fraglich. Die Webseite und damit TSA
+					sind an das AFH gekoppelt und fallen in seine Verantwortlichkeit. Die App und die
+					dazugehörige Datenstruktur sind wiederum an den Entwickler <emph>Force Field</emph>
+					gebunden. Sollte dieser irgendwann nicht mehr existieren, kann nur gehofft werden, dass
+					das AFH die entsprechenden Maßnahmen treffen wird, um die Daten selbst zu hosten.</p>
+				<p xml:id="p29">Bezüglich des Copyrights werden keine Angaben gemacht. Laut dem
+						<emph>Oculus</emph>-Store ist <emph>Force Field</emph> für den Inhalt der VR-App
+					verantwortlich. Ein Lizenzmodell wie das der <emph>Creative Commons</emph> wird nicht
+					verwendet. Dennoch scheint das AFH eine Nachnutzung zu unterstützen. Daher steht die App
+					einerseits kostenlos zum Download zur Verfügung, andererseits hat das AFH seine gesamten
+					digitalen Materialien aus dem Onlineportal für Lernplattformen wie <emph>LessonUp</emph>
+					zur Verfügung gestellt.<note xml:id="ftn27">Vgl. <ref
+							target="http://web.archive.org/web/20240125145447/https://www.lessonup.com/nl/channel/annefrank/lesson/mB3MbYQpZjKMsvjYN"
+							>http://web.archive.org/web/20240125145447/https://www.lessonup.com/nl/channel/annefrank/lesson/mB3MbYQpZjKMsvjYN</ref>.
+					</note>
+				</p>
+			</div>
+			<div xml:id="div5">
+				<head>Fazit</head>
+				<p xml:id="p30">Bevor darüber entschieden werden kann, ob es sich bei dem rezensierten
+					Projekt um eine Edition handelt oder nicht, sollten vorab ein paar wesentliche Punkte
+					hervorgehoben werden: Zum einen verwendet das AFH selbst den Begriff ,Edition‘ nicht.
+					Generell hält sich die Stiftung bei der grundlegenden Terminologie über AFHVR und TSA
+					recht verschlossen. Zum anderen geht an verschiedenen Stellen hervor, dass das Projekt
+					nicht zwangsläufig für Forschungszwecke bestimmt ist, sondern viel mehr darauf ausgelegt
+					ist, das Interesse von Schüler*innen und Jugendlichen im Allgemeinen für das Leben der
+					Anne Frank zu erwecken. Dennoch wird für das folgende Fazit die Prämisse angenommen, es
+					handele sich um eine digitale Edition. Dies geschieht, um aufzuzeigen, welcher Mehrwert
+					sich zukünftig sowohl für den musealen Sektor als auch für die digitale
+					Editionswissenschaft durch ihre Fusion im digitalen dreidimensionalen Raum entstehen
+					kann:</p>
+				<p xml:id="p31">Aus den genannten Gründen, die das Selbstverständnis des Projekts und die
+					angesprochene Rezipient*innengruppe betreffen, konnte in dieser Rezension aufgezeigt
+					werden, dass viele ,editorische Basics‘ gar nicht oder nur teilweise vorhanden sind.
+					Insbesondere fehlt das ,Herzstück‘ einer (digitalen) Edition: der editorische Bericht.
+					Aufgrund dieses Mangels werden weitere grundlegende Parameter einer Edition nicht erfüllt.
+					Dieser Umstand wird speziell durch die nicht vorhandene Dokumentation der Rekonstruktion
+					exemplifiziert. Hier ist ein deutliches Defizit in der Transparenz feststellbar, da nicht
+					eindeutig hervorgeht, wo ein Gegenstand rekonstruiert und wo er allein als ,Lückenfüller‘
+					eingesetzt wurde. Vereinfacht ausgedrückt können wir nicht mit Sicherheit sagen, was in
+					dem Projekt auf historischen Fakten beruht und was der Fantasie der Entwickler*innen
+					entsprungen ist. Daher ist das Projekts für wissenschaftliche Zwecke nicht zu verwenden.
+					Dennoch, um diesen Sachverhalt erneut ins Zentrum zu rücken, muss es dieser Absicht auch
+					gar nicht beikommen, da es sich in seinem Selbstverständnis als didaktisches Hilfsmittel
+					versteht.</p>
+				<p xml:id="p32">Maßgeblich standen dieser Rezension nur wenige Metadaten über das Projekt
+					zur Verfügung. Alle Informationen mussten dezentral aus verschiedenen Webseiten und aus
+					Videobeiträgen zusammengetragen werden. Zudem werden viele wichtige Informationen auch nur
+					implizit genannt und müssen aus dem größeren Kontext erschlossen werden. Ein Großteil der
+					Fragen aus dem Katalog zur Evaluierung von digitalen Editionen (<ref type="crossref"
+						target="#sahle2014">Sahle 2014</ref>) konnte schlicht gar nicht beantwortet werden. Das
+					führt folgerichtig zu einem weiteren Problem, welches das wissenschaftliche
+					Qualitätsniveau betrifft. Aus den genannten Gründen werden, wie schon erwartet, die
+					Kriterien für eine digitale Edition nicht erfüllt. Dabei würde ein solches Unterfangen
+					nicht an der grundsätzlichen Unmöglichkeit scheitern, eine VR-Anwendung in ihrem Wesen als
+					Edition zu verstehen, sondern aufgrund der Nicht-Erfüllung der editorischen
+					Mindestanforderungen in diesem konkreten Fall.</p>
+				<p xml:id="p33">Prinzipiell verfügt eine VR-Anwendung nichtsdestoweniger über die
+					Voraussetzungen, die Paradigmen einer digitalen Edition erfüllen zu können. Denn am
+					Beispiel der digitalen Rekonstruktion des AFH wird deutlich, dass die wesentlichen
+					Parameter für eine digitale Edition vorhanden sind: Letztlich findet hier in Grundzügen
+					vergleichbar mit den Ansätzen von Papadopoulos und Schreibman „eine erschließende
+					Wiedergabe“ (<ref type="crossref" target="#sahle2014">Sahle 2014</ref>)<note
+						xml:id="ftn28">In diesem Fall muss der Dokumentbegriff sehr weit gedacht werden.</note>
+					eines komplexen räumlichen und zeitlichen Ereignisses statt. Wobei der Editionsgegenstand
+					dieses Projekts nicht ein Dokument in Form eines beschriebenen Blattes Papier darstellt,
+					sondern ein Ort ist, der in einem gewissen historischen Moment existierte und durch eine
+					,Edition‘ erschlossen werden könnte. Infolgedessen wäre es für das AFH durch Nacharbeitung
+					möglich, zu einer 3D-Edition im Sinne von Papadopoulos und Schreibman zu werden – wenn sie
+					es denn wollten.</p>
+				<p xml:id="p34">Auch wenn das Projekt wie erwartet die Kriterien für eine digitale Edition
+					nicht hinreichend erfüllt, so erreicht es aber trotzdem seine selbstgesteckten Ziele
+					weitestgehend. Das Projekt verfolgt dabei, wie bereits erwähnt, drei verschiedene
+					Absichten. Als erstes und vordergründig steht die zeitliche Konservierung und
+					(Re)Möblierung des Hinterhauses im Fokus. Dieses Vorhaben ist definitiv gelungen. Auf
+					Grundlage von Bildern und dem Holzmodell ist es digital möglich, das gesamte Hinterhaus in
+					seinem möblierten Erscheinungsbild zwischen 1942 und 1944 zu begehen. Durch den Einsatz
+					der VR-App ist diese Besichtigung als immersives und einprägsames Erlebnis zugänglich. Die
+					zweite Absicht zielt auf einen weltweiten Zugang zum AFH ab und kann ebenfalls als erfüllt
+					betrachtet werden. Neben der kostenlosen App steht die Seite als HTML-Page zur Verfügung
+					und kann grundsätzlich von jedem Browser weltweit abgerufen werden. Der letztgenannte und
+					ein Stück weit auch innovativste Anlass für das Projekt wird durch den barrierefreien
+					Zugang zur historischen Stätte formuliert. Da das originale Gemäuer nur über sehr enge
+					Gänge und schmale Treppen begangen werden kann, ist das echte Hinterhaus leider nicht
+					barrierefrei. Umbaumaßnahmen würden aber vermutlich das Aussehen des denkmalgeschützten
+					Hauses erheblich verändern, wenn diese denn überhaupt möglich sind. Daher ist die Idee,
+					das Hinterhaus über VR für Menschen mit körperlichen Einschränkungen akzessibel zu machen,
+					ein hochgradig interessanter Ansatz, der auch für andere Kulturstätten modellbildenden
+					Charakter haben könnte. Nichtsdestoweniger könnte die Webseite per se noch barrierefreier
+					gestaltet werden. So sollten für Personen mit einer Sehschwäche Alternativtexte zur
+					Bildbeschreibung im Quellcode ergänzt oder eine Navigation mit der Tastatur innerhalb von
+					TSA ermöglicht werden. Insgesamt wird die Simulation ihren Zielen gerecht, wenn bedacht
+					wird, an wen sie sich richtet und dass sie nicht für die Forschung bestimmt ist. Sie ist
+					bestimmt in der Lage, das Interesse bei jungen Menschen für Anne Franks Leben im
+					Hinterhaus zu erwecken.</p>
+				<p xml:id="p35">Daneben können zukünftige digitale Editionen aus diesem Projekt etwas
+					mitnehmen. Aufgrund der kompletten Auflösung des Buchparadigmas innerhalb der VR-App
+					bietet das Projekt einen völlig neuartigen Ansatz. Denn VR bietet die Chance, zukünftig
+					auch Gegenstände zu edieren, die bislang aufgrund der Verhaftung der meisten Editionen am
+					zweidimensionalen Buch noch gar nicht in Betracht gezogen wurden (<ref type="crossref"
+						target="#sahle2013">Sahle 2013</ref>, 270–271). In der Folge könnte mithilfe von VR und
+					Augmented Reality (AR) etwa ein Gebäude wie das AFH ,edierbar‘ gemacht werden. Dies
+					gelingt speziell durch die bereits erwähnte Auflösung der Fenstermetapher, die nicht nur
+					für das analoge Buch, sondern auch für die digitale Desktop-Edition gilt. Denn auch
+					3D-Simulationen am PC werden durch ,Rahmen‘ begrenzt, sei es das Browserfenster oder der
+					Bildschirm selbst. Durch diese Auflösung sehen Nutzende der App nicht nur auf ein
+					begrenztes Szenario, sondern werden direkt von ihm umgeben. Und genau hierin besteht die
+					Stärke von VR für die Editionswissenschaft. Durch dieses neue Mittel zur Reproduktion von
+					Räumlichkeit vermag das Digitale zukünftig auch Gegenstände zu edieren, an denen eine
+					Buchausgabe basal gescheitert wäre. Denn geradewegs Räumlichkeit und die dritte Dimension
+					bringen das zweidimensionale Buch an seine Grenzen.</p>
+				<p xml:id="p36">Durch die Simulation des AFH ergibt sich für den wissenschaftlichen Gebrauch
+					insofern ein Mehrwert, als dass ziemlich eindringlich nachvollzogen werden kann, wie und
+					unter welchen Bedingungen das Tagebuch der Anne Frank entstanden ist. Durch das immersive
+					Erlebnis mit der Datenbrille entsteht das Gefühl, als würde der Schriftstellerin bei der
+					Produktion des Tagebuchs über die Schultern geblickt werden. Einzelne Passagen des Buches
+					können mit ,realen‘ Gegenständen, die sich im Hinterhaus befanden, verortet und
+					kontextualisiert, gewisse beschriebene Ereignisse nachvollzogen oder gar nacherlebt
+					werden. Das durch das Tagebuch beschriebene Hinterhaus kann vom heimischen PC aus besucht
+					und erforscht werden, was der Wissenschaft einen riesigen Vorteil bietet. Dennoch müssten
+					die weiter oben angeführten Kritikpunkte, die die qualitative Sicherung betreffen,
+					nachgearbeitet werden, wenn die Simulation für wissenschaftliche Zwecke fruchtbar gemacht
+					werden sollte. Ausgehend von dieser letztgenannten Prämisse sollen im Folgenden einige
+					Verbesserungsvorschläge angeführt werden, die darauf abzielen, die Simulation für
+					Forschungszwecke attraktiver zu gestalten.</p>
+				<p xml:id="p37">Das bei Weitem größte Defizit würde sich im Fehlen eines editorischen
+					Berichts offenbaren. Dieser müsste nachgereicht werden und sowohl einige Grundangaben
+					nachtragen als auch die Rekonstruktionsprinzipien offenlegen. Darunter müssten auf
+					Metaebene Informationen zu Ansprechpartner*innen in Form eines Projektorganigramms und
+					Informationen zu den verschiedenen Launchs und Versionen angegeben werden. Analog zu
+					,klassischen‘ Editionen müsste das AFH angeben, welches Ziel dieses Projekt verfolgt, auf
+					welcher Grundlage die Objekte rekonstruiert worden sind, welche Verfahren angewandt wurden
+					und wo eventuelle Wissenslücken bestehen.</p>
+				<p xml:id="p38">Die Tatsache, dass die App durch den Spieleentwickler <emph>Force
+						Field</emph> umgesetzt wurde, kam zwar der grafischen Umsetzung sehr entgegen, führt
+					aber auch dazu, dass hier ein Unternehmen mit wirtschaftlichem Interesse involviert ist.
+					Dies führt wiederum dazu, dass die Quellcodes zur Nachnutzung nicht zur Verfügung stehen.
+					TSA und AFHVR sind zwar kostenlos abrufbar, aber keine Open Source-Projekte. Andere
+					kulturelle Einrichtungen können somit nicht von der technischen Infrastruktur des AFH
+					profitieren. Eine Bereitstellung der Quelltexte auf der Webseite oder ein <emph>GitHub
+						Repository </emph>könnten hier Abhilfe schaffen.</p>
+				<p xml:id="p39">Wünschenswert wäre zudem eine Zusammenarbeit mit der <emph>kritischen
+						digitalen Tagebuchedition</emph> zu den Manuskripten der Anne Frank, die ebenfalls vom
+					AFH mitherausgegeben wird (<ref type="crossref" target="#bruijn2021">Bruijn et al.
+						2021</ref>). Die eingeblendeten Zitate könnten mit der digitalen Edition verlinkt
+					werden, sodass eine vertiefende Lektüre möglich ist. Sowohl in AFHVR und TSA kann jeweils
+					nur der Einband des Tagebuchs betrachtet und bewegt, jedoch nicht geöffnet werden. Es
+					könnte sich an dieser Stelle lohnen, die Faksimiles aus der digitalen Edition
+					einzubeziehen, sodass das Tagebuch innerhalb der Simulation an Annes virtuellem
+					Schreibtisch, also an der primären Produktionsstätte des Werks, gelesen werden kann. Auf
+					diese Weise würde eine noch nie dagewesene Leseerfahrung entstehen, die sowohl Produktion
+					als auch Rezeption miteinander verknüpft.</p>
+				<p xml:id="p40">Gleichzeitig könnte die Tagebuchedition vice versa von der Simulation
+					profitieren. Derartig findet nämlich schon im Abschnitt Locaties eine Verortung zwischen
+					den Tagebucheinträgen und den Räumlichkeiten des Hinterhauses statt.<note xml:id="ftn29"
+						>Vgl. <ref type="crossref" target="#bruijn2021">Bruijn et al. 2021</ref>: <ref
+							target="https://web.archive.org/save/https://www.annefrankmanuscripten.org/wegwijzer/locaties/prinsengracht263"
+							>https://web.archive.org/save/https://www.annefrankmanuscripten.org/wegwijzer/locaties/prinsengracht263</ref>.</note>
+					Diese Ortsbestimmung wird mithilfe eines Querschnitts visualisiert. Beim Anklicken eines
+					Raums filtert die Edition alle Zitate, die mit diesem Raum in Verbindung stehen, heraus.
+					Zukünftig könnte die Tagebuchedition mit geringem Aufwand eine Verlinkung zur Simulation
+					einfügen, um so direkt auf beschriebene Objekte oder Stellen im Raum zu verweisen.</p>
+				<p xml:id="p41">Generell können die Dokumente, die in den Räumlichkeiten des Hinterhauses
+					mit der VR-Brille betrachtet werden, nicht gelesen werden. Die Textträger sind zu
+					unscharf, als dass sie entziffert werden könnten. Dennoch wäre es denkbar, die Faksimiles
+					von Briefen, Zeitungen, Bildern und Kritzeleien an der Wand noch nachträglich in das
+					Szenario einzufügen, damit die Dokumente in ihrer ursprünglichen kontextuellen Einbettung
+					rezipiert werden können.</p>
+				<p xml:id="p42">Zusätzlich wäre es hilfreich, wenn noch erhaltene Objekte und Dokumente, die
+					in der Simulation auftauchen, neben der Annotation mit dem Archiv des AFH verlinkt werden
+					würden. Im Zuge dessen hätten Interessent*innen eine Option, an weitere Metadaten wie
+					Größe, Aufenthaltsort oder Zustand zu kommen.</p>
+				<p xml:id="p43">Als kleine Anregung wäre noch einzubringen, dass die Suchfunktion der
+					AFH-Webseite leider nicht auf die Simulation anwendbar ist. Es würde eine große
+					Hilfestellung bieten, wenn zukünftig die Objekte aus der Simulation auch in der
+					Suchfunktion erscheinen würden. Überdies ist die Maushandhabung zu fein reguliert, sodass
+					ruckartige Bewegungen vermieden werden sollten.</p>
+				<p xml:id="p44">Wie erwartet werden die Kriterien einen digitalen Edition nicht erfüllt.
+					Dennoch sei abschließend hervorgehoben, dass diese beiden Angebote des AFH ihrem Zweck
+					gerecht werden. Im Allgemeinen muss dem AFH ein großes Lob für sein Onlineportal
+					ausgesprochen werden. Es gibt bislang nur wenige kulturelle Einrichtungen, die in dem Maß,
+					wie es das AFH tut, aus den digitalen Vollen schöpfen. Für Jugendliche und auch Erwachsene
+					leistet die Stiftung auf diese Weise weltweit einen wertvollen Beitrag zur digitalen
+					Aufarbeitung der Shoah.</p>
+			</div>
+		</body>
+		<back>
+			<div type="bibliography">
+				<listBibl>
+					<bibl xml:id="afs2018a">Anne Frank Stichting, ed. 2018a. <emph>The Anne Frank House
+							online</emph>. <ref
+							target="https://web.archive.org/web/20250410134737/https://www.annefrank.org/en/museum/web-and-digital/"
+							>https://web.archive.org/web/20250410134737/https://www.annefrank.org/en/museum/web-and-digital/</ref>.</bibl>
+					<bibl xml:id="afs2018b">Anne Frank Stichting, ed. 2018b. <emph>Anne Frank House VR</emph>.
+						https://web.archive.org/web/20250315073649/https://www.annefrank.org/en/about-us/what-we-do/publications/anne-frank-house-virtual-reality/.</bibl>
+					<bibl xml:id="afs2018c">Anne Frank Stichting, ed. 2018c. <emph>The Secret Annex</emph>.
+						https://web.archive.org/web/20250410134801/https://www.annefrank.org/en/anne-frank/secret-annex/.</bibl>
+					<bibl xml:id="bruijn2021">Bruijn, Peter de, ed. 2021. <emph>Anne Frank
+						Manuscripten</emph>. <ref
+							target="https://web.archive.org/save/https://www.annefrankmanuscripten.org/"
+							>https://web.archive.org/save/https://www.annefrankmanuscripten.org/</ref>.</bibl>
+					<bibl xml:id="dfg2016">DFG. 2016. <emph>DFG-Praxisregeln ˈDigitalisierungˈ.</emph>
+						<ref
+							target="https://web.archive.org/save/https://www.dfg.de/download/pdf/foerderung/programme/lis/12_151_v1216_de.pdf"
+							>https://web.archive.org/save/https://www.dfg.de/download/pdf/foerderung/programme/lis/12_151_v1216_de.pdf</ref>.</bibl>
+					<bibl xml:id="friedberg2006">Friedberg, Anne. 2006. <emph>The Virtual Window: from Alberti
+							to Microsoft</emph>. Cambridge: MIT Press.</bibl>
+					<bibl xml:id="grau2000">Grau, Oliver. 2000. Virtuelle Kunst in Geschichte und Gegenwart.
+						Visuelle Strategien. Berlin: Dietrich Reimer Verlag.</bibl>
+					<bibl xml:id="papadopoulos_schreibman2019">Papadopoulos, Costas, and Schreibman, Susan.
+						2019. “Towards 3D Scholarly Editions: The Battle of Mount Street Bridge.” International
+						Journal of Digital Humanities 13 (1): <ref
+							target="http://www.digitalhumanities.org/dhq/vol/13/1/000415/000415.html"
+							>http://www.digitalhumanities.org/dhq/vol/13/1/000415/000415.html</ref>.</bibl>
+					<bibl xml:id="pure2023">Pure 3D. 2023. An Infrastructure for the Publication and
+						Preservation of 3D Scholarship. <ref
+							target="https://web.archive.org/web/20240503184758/https://pure3d.eu/"
+							>https://web.archive.org/web/20240503184758/https://pure3d.eu/</ref>.</bibl>
+					<bibl xml:id="radiance2023">Radiance. 2023. The International Research Platform For
+						Virtual Reality Experiences In Art. <ref
+							target="https://web.archive.org/save/https://www.radiancevr.co/"
+							>https://web.archive.org/save/https://www.radiancevr.co/</ref>.</bibl>
+					<bibl xml:id="sahle2014">Sahle, Patrick. 2014. “Criteria for Reviewing Scholarly Digital
+						Editions, version 1.1.” <ref
+							target="https://web.archive.org/web/20240124160901/https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/"
+							>https://web.archive.org/web/20240124160901/https://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/</ref>.</bibl>
+					<bibl xml:id="sahle2013">Sahle, Patrick. 2013. Digitale Editionsformen, 1: Das
+						typografische Erbe. Schriften des Instituts für Dokumentologie und Editorik Bd. 8.
+						Norderstedt: BoD.</bibl>
+					<bibl xml:id="spiegel2012">Der Spiegel. 2012. “ 3D-Erinnerung: Das virtuelle Anne Frank
+						Haus.“ YouTube video, 4:32. Posted 2012. <ref
+							target="https://web.archive.org/save/https://www.youtube.com/watch?v=sY8b5ptxWsI"
+							>https://web.archive.org/save/https://www.youtube.com/watch?v=sY8b5ptxWsI</ref>.</bibl>
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
