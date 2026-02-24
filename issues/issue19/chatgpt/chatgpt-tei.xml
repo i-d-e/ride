@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.19.4">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>ChatGPT as an assistant for digital scholarly editing</title>
+            <author ref="https://orcid.org/0000-0003-1438-3236">
+               <name>
+                  <forename>Martina</forename>
+                  <surname>Scholger</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Graz</orgName>
+                  <placeName>Graz, Austria</placeName>
+               </affiliation>
+               <email>martina.scholger@uni-graz.at</email>
+            </author>
+            <author ref="https://orcid.org/0000-0003-4674-1042">
+               <name>
+                  <forename>Roman</forename>
+                  <surname>Bleier</surname>
+               </name>
+               <affiliation>
+                  <orgName>University of Graz</orgName>
+                  <placeName>Graz, Austria</placeName>
+               </affiliation>
+               <email>roman.bleier@uni-graz.at</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2026-03">March 2026</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19/chatgpt</idno>
+            <idno type="DOI">10.18716/ride.a.19.4</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue19/chatgpt/chatgpt.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
+            <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="19">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19</idno>
+            <idno type="DOI">10.18716/ride.a.19</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>ChatGPT</title>
+                  <editor>OpenAI</editor>
+                  <date type="publication">2022–</date>
+                  <idno type="URI">https://openai.com/</idno>
+                  <date type="accessed">2026-02-01</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+
+      </fileDesc>
+
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>large language model</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>e-learning and online training</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>generative ai</term>
+               <term>tei/xml</term>
+               <term>text encoding</term>
+               <term>named entities</term>
+               <term>text analysis</term>
+               <term>digital editions</term>
+               <term>digital humanities</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>Large language models such as OpenAI’s ChatGPT have rapidly become prominent tools in
+               academic contexts, including digital scholarly editing. Although not originally
+               designed for editorial practice, ChatGPT is increasingly integrated into experimental
+               editorial workflows. This review surveys recent literature on its use in scholarly
+               editing and assesses its potential to support key editorial tasks. Drawing on
+               published case studies and our own experiments, we analyze the benefits and
+               limitations of employing ChatGPT at different stages of creating and analyzing
+               digital editions, including transcription, TEI encoding, and named-entity
+               recognition. The review also addresses significant concerns. As a commercial and
+               largely closed system, ChatGPT operates as a “black box” that allows only indirect
+               control through prompting, which poses challenges for transparency and
+               reproducibility in academic contexts. Issues of model bias, data governance, and
+               ecological impact must be carefully considered when integrating such tools into
+               research workflows. ChatGPT should therefore be adopted cautiously and critically.
+               Nevertheless, its capacity to lower technical barriers and to consolidate tasks that
+               previously required multiple tools and advanced programming skills makes it, or
+               similar AI tools, a potentially valuable assistant in digital editing workflows.</p>
+         </div>
+      </front>
+
+      <body>
+         <div xml:id="div1">
+            <head>Introduction</head>
+            <p xml:id="p1">In the rapidly evolving landscape of the Digital Humanities, large
+               language models (LLMs)<note xml:id="ftn1"> LLMs are trained with deep-learning
+                  algorithms on vast corpora of web pages, books and articles to learn the patterns
+                  and structures of language. With multi-billion-parameter architectures, they are
+                  able to generate context-aware text.</note> have become prominent tools for a
+               multitude of tasks, including text analysis, classification, and language
+               translation. This review examines ChatGPT’s capabilities as an assisting tool for
+               digital scholarly editing tasks. ChatGPT was selected due to its increased media
+               presence and widespread adoption within the humanities community in recent years,
+               including institutional deployments at universities such as the University of Graz,
+               where the authors are based. <note xml:id="ftn2">
+                  <p>Martina Scholger is a senior scientist at the Department of Digital Humanities
+                     at the University of Graz, where she works on digital scholarly editing. Roman
+                     Bleier is a postdoctoral researcher at the Department of Digital Humanities of
+                     the University of Graz and works in digital scholarly editing projects. Many
+                     thanks to Christopher Pollin of DH Craft for reading an early draft of this
+                     article and for providing valuable feedback and helpful suggestions, and to
+                     Thea Schaaf for proofreading.</p></note>
+            </p>
+            <p xml:id="p2">Introduced by OpenAI in November 2022 (<ref target="#OpenAI2023"
+                  type="crossref">OpenAI 2023</ref>), the chatbot ChatGPT is a generative artificial
+               intelligence system that communicates with users primarily through natural-language
+               interaction. It processes user input, known as prompts, to generate natural language
+               output and can be used as an assisting tool by scholars in the process of editing,
+               annotating, and curating (historical) texts. The authors evaluate ChatGPT primarily
+               as users, i.e., as editors working with the web-based graphical user interface,
+               rather than as developers engaging directly with the underlying models or APIs. All
+               experiments were performed using the ChatGPT web interface, specifically the GPT-4o
+               model, accessed between July 2024 and July 2025, using both free and Plus tier
+               access. At the time of writing, ChatGPT is offered in multiple subscription tiers and
+               model variants, each with different capabilities, usage limits, and available tools
+               such as web browsing, image generation, and data analysis. During the revision period
+               for this article, the default models and available features changed notably across
+               tiers, illustrating the platform’s rapid evolution and the time-bound nature of
+               experiments. The source material used derives from (digital) edition projects in
+               which the authors are involved. Given the rapid development of the models and
+               interface features, this review represents a time-bound snapshot rather than a final
+               assessment. </p>
+            <p xml:id="p3">In conceptualizing how generative AI might support scholarly editing, the
+               Institute for Documentology and Scholarly Editing (IDE) has proposed a processing
+               pipeline framework (<ref target="#Pollin2025" type="crossref">Pollin et al.
+                  2025</ref>). This model distinguishes between source material, edition as data,
+               and edition as publication, connected through intermediate editorial steps. Through
+               digitization, transcription, and annotation, the workflow progresses from raw source
+               materials toward a critical text prepared for publication. The framework further
+               differentiates between structural tasks (e.g., planning, documentation, tool
+               integration, quality control) and operational tasks (e.g., text recognition, entity
+               recognition, normalization, enrichment). This structured approach provides a useful
+               lens for assessing at which stages generative AI tools such as ChatGPT may be usable
+               within editorial workflows, and where their limitations become apparent. </p>
+            <p xml:id="p4">ChatGPT is developed by OpenAI, a company founded in 2015 in San
+               Francisco by a group of machine learning experts, research engineers, and
+                  scientists.<note xml:id="ftn3">OpenAI 2024, here: <ref
+                     target="https://openai.com/blog/introducing-openai"
+                     >https://openai.com/blog/introducing-openai</ref>; <ref
+                     target="https://web.archive.org/web/20241007222900/https://openai.com/blog/introducing-openai/"
+                     >https://web.archive.org/web/20241007222900/https://openai.com/blog/introducing-openai/</ref>.
+               </note> There is a huge interdisciplinary team of developers behind the system: the
+               GPT-4 technical report from 2023 lists 280 co-authors. Financial support is provided
+               by individuals and companies. In an interview with Bill Gates, OpenAI’s CEO, Sam
+               Altman has given an outlook on future developments: The focus will be on
+               multimodality, reasoning ability, reliability, customizability, and personalization
+                  (<ref target="#Gates2024" type="crossref">Gates 2024</ref>, <ref
+                  target="#Chudleigh2024" type="crossref">Chudleigh 2024</ref>). </p>
+            <p xml:id="p5">From a tool-identification perspective, ChatGPT is accessed via a
+               web-based interface running in a modern browser. It does not provide a stable version
+               identifier or persistent identifiers for individual interactions. Although
+               conversations can be shared via generated links, these are not designed as durable
+               scholarly references. This lack of stable versioning and citability is a significant
+               usability constraint in digital scholarly editing, where traceability and
+               documentation of editorial decisions are essential.</p>
+
+         </div>
+         <div xml:id="div2">
+            <head>Methods and Implementation</head>
+            <p xml:id="p6">The technical architecture of ChatGPT relies on generative pre-trained
+               transformer (GPT) models, which are fine-tuned for natural conversation using a
+               combination of supervised learning and reinforcement learning from human feedback.
+               These LLMs belong to the broader class of foundation models, which are designed to
+               support multiple downstream applications within a single system rather than being
+               optimized for a particular, narrowly defined task. Therefore, ChatGPT can in
+               principle be applied to a wide range of tasks at different stages of a digital
+               scholarly editing workflow. </p>
+            <div xml:id="div2.1">
+               <head>Training Data, Transparency, and Reproducibility</head>
+               <p xml:id="p7">The exact training data of the underlying models is not publicly
+                  disclosed, and the models are not freely available. According to OpenAI, training
+                  data consists of “information that is publicly available on the internet,
+                  information that we license from third parties, and information that our users or
+                  our human trainers provide.”<note xml:id="ftn4">OpenAI 2024, here: <ref
+                        target="https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed"
+                        >https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed</ref>;
+                        <ref
+                        target="https://web.archive.org/web/20240913163752/https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed"
+                        >https://web.archive.org/web/20240913163752/https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed</ref>.
+                  </note> This is an issue especially in a scholarly context, and ChatGPT has been
+                  repeatedly criticized for lacking transparency. Another significant limitation for
+                  scholarly work concerns reproducibility. Even if identical prompts and a
+                  temperature setting of 0 (intended to reduce randomness) are used, ChatGPT does
+                  not reliably produce identical outputs across multiple runs. This is due to the
+                  inherent non-deterministic nature of LLMs, which predict token probabilities in
+                  context based on the training data (<ref type="crossref" target="#Ouyang2023"
+                     >Ouyang et al. 2023</ref>). As a result, the same prompt can produce slightly
+                  different outputs across multiple runs, even when the underlying model remains
+                  unchanged. From the perspective of digital scholarly editing, this lack of strict
+                  reproducibility complicates the documentation and verification of editorial
+                  decisions. </p>
+               <p xml:id="p8">As of June 2025, free-tier users have, by default, access to GPT-4o,
+                  OpenAI’s flagship multimodal model, with a limited number of uses. Once this limit
+                  is reached, usage automatically defaults to a smaller, cost-efficient fallback.
+                  Core tools, including browsing, file uploads, data analysis, and vision, are
+                  available through GPT-4o. Users of the Plus, Pro, and Team tiers benefit from
+                  enhanced usage limits and access to a wider range of models through the model
+                  selector, including models optimized for complex reasoning tasks, high-performance
+                  multimodal interaction, and lightweight, cost-efficient processing. These models
+                  can be optimized through prompting for specific applications. </p>
+            </div>
+            <div xml:id="div2.2">
+               <head>Interaction Model and Prompting</head>
+               <p xml:id="p9">ChatGPT operates in a conversational style, engaging users with
+                  dialogue-based exchanges (so-called prompts) that mimic human conversation.
+                  Besides text, users can also start their conversations with images and voice. From
+                  these diverse starting points, a prompt is essentially a natural language input
+                  provided to a model that can vary from simple questions and instructions to
+                  complex scenarios, directing the LLM in its response generation. Consequently,
+                  prompt engineering is the process of designing, refining, and optimizing prompts
+                  to effectively communicate the intentions of users to an LLM. Crafting precise and
+                  contextually appropriate prompts is key to improving the accuracy of the model’s
+                  responses. Considerations of prompt length and structure are also relevant, as
+                  model inputs are processed as tokens and subject to contextual limits. There are
+                  various prompting techniques, such as zero-shot, few-shot, and chain-of-thought
+                  prompting, each designed to approach the model differently based on the complexity
+                  of the task (<ref target="#Saravia2022" type="crossref">Saravia 2022</ref>). In
+                  editorial contexts, careful prompting is essential for achieving consistent
+                  results, particularly when tasks involve formalized output formats or
+                  domain-specific conventions.</p>
+               <p xml:id="p10">All inputs and outputs processed by ChatGPT are internally segmented
+                  into tokens, which constitute the basic unit for both text processing and usage
+                  accounting. <cit>
+                     <quote> Tokens are the building blocks of text that OpenAI models process. They
+                        can be as short as a single character or as long as a full word, depending
+                        on the language and context. Spaces, punctuation, and partial words all
+                        contribute to token counts. This is how the API internally segments your
+                        text before generating a response.<note xml:id="ftn5">OpenAI 2025, here:
+                              <ref
+                              target="https://web.archive.org/web/20251012012828/https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them"
+                              >https://web.archive.org/web/20251012012828/https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them</ref>.
+                        </note>
+                     </quote>
+                  </cit></p>
+               <p xml:id="p11">How exactly tokens are calculated is difficult to understand for the
+                  average user. OpenAI suggests that “helpful rules of thumb” for English texts are
+                  that one token corresponds to approximately four characters, or about
+                  three-quarters of a word. Consequently, 100 tokens amount to roughly 75 English
+                  words. OpenAI provides an online tokenizer that allows users to test how specific
+                  inputs are segmented into tokens.<note xml:id="ftn6">
+                     <ref target="https://platform.openai.com/tokenizer"
+                        >https://platform.openai.com/tokenizer</ref>; <ref
+                        target="https://web.archive.org/web/20251008185403/https://platform.openai.com/tokenizer/"
+                        >https://web.archive.org/web/20251008185403/https://platform.openai.com/tokenizer/</ref>.
+                  </note> While this approximation is already slightly vague, an additional
+                  complication is that tokenization is language-dependent. This is especially
+                  relevant considering that the objective of digital editions very often involves
+                  historical texts in languages other than standard English.</p>
+            </div>
+            <div xml:id="div2.3">
+               <head>Customization and Configuration</head>
+               <p xml:id="p12">For creating so-called Custom GPTs, no programming knowledge is
+                  necessary. The configuration screen allows you to enter a picture, a name of the
+                  GPT, a short description, detailed instructions, a conversation starter to
+                  facilitate the start of a conversation, and the upload of an extra knowledge base.
+                  It is recommended to provide the additional knowledge in a minimalistic format
+                  (e.g., JSON or Markdown) to save tokens instead of ‘chatty’ formats like XML,
+                  where <ref target="https://platform.openai.com/tokenizer">each tag consumes
+                     tokens</ref>. Combining a language model’s capabilities with external
+                  information retrieval to tackle more complex tasks is known as RAG
+                  (Retrieval-Augmented Generation). For small-scale text documents, this is already
+                  integrated in the aforementioned Custom GPTs, while larger corpora require
+                  interfacing with external databases.<note xml:id="ftn7">Saravia 2022, here <ref
+                        target="https://www.promptingguide.ai/techniques/rag"
+                        >https://www.promptingguide.ai/techniques/rag</ref>; <ref
+                        target="https://web.archive.org/web/20250808170700/https://www.promptingguide.ai/techniques/rag"
+                        >https://web.archive.org/web/20250808170700/https://www.promptingguide.ai/techniques/rag</ref>.
+                  </note>
+               </p>
+               <p xml:id="p13">ChatGPT can be individually configured using ‘custom instructions’ to
+                  respond more effectively to prompts. Users may provide details about their
+                  activities, personal information, and describe their interests. Additionally, they
+                  can specify how ChatGPT should respond, such as choosing a formal or casual tone,
+                  neutral or opinionated interactions, and the desired length of responses. This
+                  customization means that users do not have to repeat these preferences in each
+                  request, thus saving tokens.</p>
+            </div>
+            <div xml:id="div2.4">
+               <head>Input, Output, and Data Analysis Capabilities</head>
+               <p xml:id="p14">ChatGPT can handle and process text in various data formats like
+                  plain text, XML, HTML, JSON, CSV, or Markdown, as well as image, video, and audio
+                  as input. Likewise, it can generate output in most textual data formats mentioned;
+                  in addition, recent multimodal versions support audio output, while the generation
+                  of standalone video files is not natively supported in the standard ChatGPT
+                  interface. Advanced data analysis (ADA), integrated into GPT-4-class models,
+                  allows the model to generate Python code for performing exploratory data analysis
+                  tasks. It processes various structured input formats (e.g., Excel, CSV, PDF, and
+                  JSON) and produces corresponding outputs (e.g., Python Code, Visualizations,
+                  Charts, and interactive tables). </p>
+               <p xml:id="p15">For developers, OpenAI provides an easy way to use its API via the
+                  programming language Python, the Curl command line tool for sending HTTP requests
+                  to APIs, and Node.js, a JavaScript framework to build rich applications, provided
+                  one has an API key. However, the focus of this article is the chatbot, and we will
+                  not explore the API. </p>
+            </div>
+            <div xml:id="div2.5">
+               <head>Positioning within the LLM landscape</head>
+               <p xml:id="p16">ChatGPT exists within a broader and rapidly evolving ecosystem of
+                  generative language models. Proprietary systems include Claude by Anthropic or
+                  Gemini by Google, as well as models integrated into platforms like Microsoft
+                  Copilot. At the same time, open-source and open-weight models are quickly catching
+                  up, or even outperforming them in certain tasks. (<ref type="crossref"
+                     target="#Chen2024">Chen et al. 2024</ref>) Leading examples include the Llama
+                  family (Meta), Mistral AI’s Mistral and Mixtral models, and Alibaba’s Quen series. </p>
+               <p xml:id="p17">When assessing a language model’s openness, it is important to
+                  differentiate between ‘open-source models’ and ‘open-weight models’. Open source
+                  refers to sharing the full source code, the underlying algorithms, training
+                  methods, and data, while open weight models only share the pretrained model
+                  parameters, which allows use but limits transparency and control. Open-weight
+                  models are easier to use but less transparent, while open-source promotes
+                  transparency and allows modification, but also requires more developer effort
+                     (<ref type="crossref" target="Ramlochan2023">Ramlochan 2023</ref>). For digital
+                  scholarly editing, these distinctions are relevant for sustainability,
+                  inspectability, and long-term reuse. The current leading open-source models can be
+                  consulted at the Chatbot Arena.<note xml:id="ftn8"> An overview of the leading
+                     chatbots is given by the ‘Chatbot Arena’ (<ref type="crossref"
+                        target="#Chiang2024">Chiang et al. 2024</ref>), an open platform for
+                     evaluating LLMs based on human preference.</note>
+               </p>
+            </div>
+            <div xml:id="div2.6">
+               <head>Examples and Current Uses of Generative AI in Digital Scholarly Editing</head>
+               <p xml:id="p18">The GPT models are generally considered not be trained on specific
+                  domains or tasks (though further user-guided fine-tuning can be used to that end).
+                  They are general models that can assist in different tasks related to the digital
+                  editing pipeline, from data creation to the final publication.</p>
+               <p xml:id="p19">One area of experiments includes custom GPTs, that is,
+                  user-configured applications built on top of a pre-trained GPT model. Examples
+                  include <emph>teiCrafter</emph>, an “expert automaton for converting plain text to
+                  TEI XML” (<ref target="#Pollin2023" type="crossref">Pollin 2023</ref>); <emph>TEI
+                     Scholar </emph>(<ref type="crossref" target="#Jankovic">Jankovic</ref>); and
+                     <emph>TEI Lex 0 Converter </emph>(<ref type="crossref" target="#Miyagawa"
+                     >Miyagawa</ref>). Designing custom GPTs does not involve training a new
+                  language model, but rather supplying detailed instructions and additional
+                  domain-specific knowledge, ideally in compact data formats such as Markdown or
+                  JSON, to reduce token usage. Custom GPTs can be kept for internal use only or
+                  shared with the broader community; they remain bound to OpenAI’s infrastructure
+                  and do not constitute independent editorial tools. </p>
+               <p xml:id="p20">A workshop at the DHd 2024 conference in Passau, organized by the
+                  Institute for Documentology and Scholarly Editing (IDE), provided a broad overview
+                  of current experiments with generative language models in digital scholarly
+                  editing (<ref target="#Pollin2024b" type="crossref">Pollin et al. 2024</ref>). 10
+                  contributions covered a wide range of editorial tasks, including transcription,
+                  OCR cleaning, markup generation, normalization, named entity recognition,
+                  annotation, translation, and text summarization. Pollin has shown with his
+                  workshop series on generative AI the various areas of its application across DH
+                  use-cases: from the transfer of unstructured data to TEI to generating and
+                  modeling RDF data to data analysis and visualization (<ref target="#Pollin2024a"
+                     type="crossref">Pollin 2024</ref>). Alongside these exploratory applications,
+                  recent contributions have also emphasized the need for systematic evaluation,
+                  proposing frameworks and metrics for assessing LLM-assisted TEI encoding (<ref
+                     target="#Strutz2025a" type="crossref">Strutz and Vogeler 2025</ref>) and the
+                  automated handling of editorial interventions (<ref target="#Strutz2025b">Strutz
+                     and Scholger 2025</ref>), thereby highlighting both the potential of LLMs for
+                  complex, context-sensitive tasks and the methodological challenges that remain.
+               </p>
+            </div>
+         </div>
+         <div xml:id="div3">
+            <head>Application for digital scholarly editing</head>
+            <p xml:id="p21">Conversations with ChatGPT are stored on OpenAI’s servers and can be
+               accessed by users through the history option, which is available in the left sidebar.
+               The conversations can be shared via generated links, allowing limited collaboration
+               or documentation of interactions<note xml:id="ftn9">OpenAI 2024, here: <ref
+                     target="https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq"
+                     >https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq</ref>;
+                     <ref
+                     target="https://web.archive.org/web/20251118195451/https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq"
+                     >https://web.archive.org/web/20251118195451/https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq</ref>.
+               </note>. However, due to the non-deterministic nature of the models (discussed in
+               section 1) and the absence of stable versioning, such records do not guarantee
+               reproducibility in a scholarly sense. While non-reproducibility poses challenges for
+               academic rigor, this behavior can also be used by editors as an advantage, namely by
+               generating multiple versions of the same output (e.g., requesting several TEI
+               encodings of a letter) and subsequently critically identifying the optimal encoding
+               approach. </p>
+            <p xml:id="p22">This approach might be viewed as a form of digital hermeneutics,
+               potentially transforming what appears to be a limitation into a tool for deeper
+               interpretive engagement with editorial decisions. ChatGPT can support editors with
+               various tasks during the creation of a digital scholarly edition, ranging from
+               summaries and translations to automated XML/TEI tagging and other NLP tasks. It can
+               also be used as a ‘buddy’ to provide feedback on an existing data model or XML/TEI
+               code. ChatGPT can even assist in writing small programs for the web presentation or
+               data analysis of an edition, utilizing <emph>Promptotyping</emph>, a prompt
+               engineering method on LLM-based software development.<note xml:id="ftn10">
+                  <ref target="https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin"
+                     >https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin</ref>; <ref
+                     target="https://web.archive.org/web/20260601000000*/https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin"
+                     >https://web.archive.org/web/20260601000000*/https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin</ref>.
+               </note> From a utility perspective, ChatGPT primarily supports exploratory and
+               preparatory stages of editorial work rather than final, authoritative decisions.</p>
+            <p xml:id="p23">To evaluate ChatGPT’s practical value for concrete editorial tasks, we
+               selected two common editorial tasks: (1) converting plain text into TEI-compliant XML
+               and (2) identifying and classifying named entities. All experiments were performed
+               using GPT-4o in the browser interface. For more elaborate examples, we refer to
+               slides including chat protocols in Pollin 2024. </p>
+            <p xml:id="p24">In the first example, a letter from the digital edition <emph>Joseph von
+                  Hammer-Purgstall: Korrespondenz</emph> (Höflechner 2024) was provided as plain
+               text and should be encoded following the <emph>Guidelines of the TEI</emph>. The
+               correspondence spans the late eighteenth to mid-nineteenth century and constitutes a
+               multilingual scholarly exchange within the context of Oriental studies. The plain
+               text of the letter was taken from the digital edition <emph>Joseph von
+                  Hammer-Purgstall: Korrespondenz</emph>:</p>
+            <cit>
+               <quote>Euer Gnaden, <lb/>Unterzeichneter1 bittet um die gnädige Erlaubnis, künftigen
+                  Sonntag die Redoute2 besuchen zu dürfen3, weil er <lb/>1.) im letzten und sechsten
+                  Jahre seiner Studien und bereits ein Jahr länger an der Akademie ist als es seine
+                  Vorfahren waren, da ihnen diese Erlaubnis erteilt wurde. <lb/>2.) auf das ihm
+                  jederzeit von S[einer] H[ochwohlgeboren] dem Herrn Direktor erteilte Zeugnis
+                  seines guten Verhaltens und sittlichen Betragen stolz ist, und sich daher
+                  schmeichelt, dass die Besorgnis einiger daraus entstehenden üblen Folgen bei ihm
+                  nicht statt haben dürfte. <lb/>3.) die Vorschrift einer für diesen Fall
+                  geforderten anständigen und sicheren Begleitung nicht besser erfüllt haben könnte,
+                  indem er in der Gesellschaft der Frau Schwester des Herrn Direktors sich befinden
+                  wird. <lb/>Den 20ten Hornung 1794 <lb/>Joseph Hammer <lb/>1 PvTh D.2.1.14. <lb/>2
+                  Eine Tanzveranstaltung oder auch ein eleganter Maskenball. Um welche derartige
+                  Veranstaltung es sich hier handelt, ist nicht feststellbar. <lb/>3 Die Erledigung
+                  durch Jenisch s. das nachfolgende Stück, findet sich auf demselben Blatt wie die
+                  vorangegangene Bitte HPs mit dem Vermerk „Von der Kanzlei den 20. Hornung 1794“.
+               </quote>
+            </cit>
+
+            <p xml:id="p25">The plain text of the letter together with the prompt (Fig. 1) was
+               entered into the chat and the resulting XML/TEI encoding is shown in Fig. 2. The
+               result shows that the overall letter structure is correctly identified and
+               appropriate XML/TEI elements are applied. Abbreviations are partially resolved, the
+               date is normalized, and notes are embedded in the correct position in the text, even
+               though the notes in the input text are placed at the end of the document. However,
+               the recognition of personal names was less reliable; in addition, a place name was
+               labeled, although only the tagging of person names was requested, suggesting that
+               unwanted annotations should be explicitly excluded in the prompt. Potential risks
+               include the incomplete preservation of the input text and the repositioning of
+               structural elements such as dates or signatures in the output. Such rearrangements
+               may suggest model-internal assumptions about typical letter layouts, possibly
+               reflecting generalized structural patterns learned during training. <figure
+                  xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
+                  <head type="legend">Prompt instructions to convert plain text into TEI.</head>
+               </figure>
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
+                  <head type="legend">Letter encoded in TEI.</head>
+               </figure>
+            </p>
+            <p xml:id="p26">In the second example, the same TEI annotation task was applied to
+               reports of envoys present at the Imperial Diet of Regensburg of 1576<emph>.</emph>
+               The envoys, Dr. Wolfgang Eulenbeck and Dr. Andreas Paulus, reported regularly to
+               Prince-elector (Kurfürst) August von Sachsen, who was not present at the Imperial
+               Diet. The form and structure of these reports are very similar to the above letter by
+                  <emph>Hammer-Purgstall</emph>. However, the significant difference is that they
+               were written three centuries earlier in Early New High German. The correspondence
+               between the envoys and August von Sachsen is published in the edition Der Reichstag
+               zu Regensburg 1576.<note xml:id="ftn11"> D. Berichte und Weisungen: <ref
+                     target="https://gams.uni-graz.at/context:rta1576.ed"
+                     >https://gams.uni-graz.at/context:rta1576.ed</ref>. </note>
+            </p>
+            <p xml:id="p27"> The following quote shows the plain text of the letter from May 11
+               1576, to August von Sachsen: <cit>
+                  <quote> Neunden Maii, Regenspurgk rhäte. Präs. Annaburg, 12. Maii anno 76. Zu s.
+                     kfl. Gn. henden.<lb/> Durchlauchtigster hochgeborner churfurst, ewern kfl. Gn.
+                     seint unsere underthenigste gehorsame dienste jeder zeit mit trewem vleiß
+                     zuvorn. Gnedigster herre.<lb/> Auf euer kfl. Gn. gnedigsten bevelch und uns
+                     zugeschickter instruction haben wir uns aufn wegk nach Regensburgk erhoben, und
+                     seint gestern umb acht schlage vor mittage alhier ankommen. Und wiewol wir
+                     under wegs verstendigt, als solte die röm. ksl. Mt. auf den vierzehenden tag
+                     ditz monats Maii alhie angelangen, so werden wir doch durch des Reichs
+                     marschalch alhier berichtet, das sich irer ksl. Mt. aufbruch zu Wyen bis in
+                     mitten ermelts monats verweilett, und ire Mt. wenig vor ende desselben alhier
+                     ankommen werden, inmassen euer kfl. Gn. aus inligender copey der
+                     höchstgedachten ksl. Mt. schreiben an den bischoff [1v] alhier, item hern
+                     Conraden zu Pappenheim und doctor Viecheussern gnedigst haben zuersehen.<lb/>
+                     So thuen euern kfl. Gn. wir hirbey underthenigst ein vorzeichnus ubersenden,
+                     was vor gesandten (derer doch wenig sein) bis auf itzo alhier angelangt.<lb/>
+                     Und, euer kfl. Gn. mit underthenigstem gehorsamb trewe dienste zuleisten, seint
+                     wir schuldig und geflissen. Datum Regensburgk, den neunden Maii anno 76.<lb/>
+                     Ewer kfl. Gn.<lb/> underthenigste gehorsame<lb/> Wolffgang Eylenbeck, Dr.<lb/>
+                     Andreas Paull propria[?] </quote>
+               </cit>
+            </p>
+
+            <p xml:id="p28">The same prompt instructions as in Fig. 1 were used together with the
+               plain text of the letter. However, the statement “keep the original language” had to
+               be added to ensure that the source text was not normalised to standard German, which
+               happened during the initial run. The result in Figure 3 shows that, even with a
+               historical language like Early New High German texts, ChatGPT identifies the
+               structure of the document reasonably well. <figure xml:id="img3">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-3.png"/>
+                  <head type="legend">The letter to August von Sachsen encoded in TEI using ChatGPT
+                     GPT-4o. The entire second paragraph was left out in order to fit the beginning
+                     and end on the picture.</head>
+               </figure>
+            </p>
+            <p xml:id="p29"> Close observation of the result shows that some text is missing. For
+               some reason, the part of the opener indicating when the letter was presented to
+               August von Sachsen: “Präs. Annaburg, 12. Maii anno 76” is missing. Furthermore,
+               identification and expansion of abbreviations is a challenge. While abbreviations,
+               such as ‘s.’, ‘Mt.’ and ‘kfl.’ are correctly resolved, others were not even
+               identified as abbreviations, e.g., ‘Gn.’, or words were incorrectly identified as
+               abbreviations, e.g., ‘ewern’, ‘bevelch’, ‘instruction’. This can easily be resolved
+               by providing a list of the abbreviations used in editions of the Imperial Diets.<note
+                  xml:id="ftn12"> Such a list is provided by every edition of the Imperial Diets:
+                     e.g.<ref target="https://gams.uni-graz.at/o:rta1576.bt17331b5u"
+                     >https://gams.uni-graz.at/o:rta1576.bt17331b5u</ref>. </note> Dates are
+               precisely tagged and correctly normalised using the <code>@when</code> attribute.
+               However, ChatGPT does not automatically take the Gregorian calendar reform into
+               consideration. It has to be explicitly mentioned to add <code>@calendar</code>.</p>
+            <p xml:id="p30">The tagging of people and places is also fine, but the identification
+               and linking to authority files, as asked in the prompt, is missing. When asked to
+               identify people and places and list them in a table with the columns (1. name as
+               found in the letter, 2. type of entity, 3. normalised name, 4. reference to an
+               authority file, such as GND, VIAF or Wikidata) the result (Fig. 4) shows that at
+               first, only one person could be correctly identified, Wolfgang Eylenbeck GND
+               104287020 (also VIAF 32430582). ChatGPT also provides the link to the following
+               sources: <ref
+                  target="https://link.springer.com/content/pdf/10.1007/978-1-349-25677-8.pdf?utm_source=chatgpt.com"
+                  >link.springer.com</ref>,<ref
+                  target="https://www.deutsche-biographie.de/pnd104287020.html?utm_source=chatgpt.com"> </ref>
+               <ref target="http://deutsche-biographie.de">deutsche-biographie.de</ref>. After being
+               asked again with consideration of the date of the source, ChatGPT identifies Conrad
+               von Pappenheim correctly with GND and VIAF identifiers. The other references to
+               people seem to be too vague. In the case of “doctor Viecheussern”, the Imperial
+               Vice-Chancellor Sigismund Viehauser (oder Vieheuser), the very particular variance of
+               the name could be the reason. Interesting is also the reference to place names. The
+               GND identifiers provided by ChatGPT for Wien and Regensburg do not actually exist.
+               However, if asked to provide Geoname references for the places, both are correctly
+               identified (Fig. 5). <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-4.png"/>
+                  <head type="legend">The figure shows the result from ChatGPT trying to identify
+                     persons and places in the letter of 1576. Wrongly identified places are
+                     highlighted.</head>
+               </figure>
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-5.png"/>
+                  <head type="legend">Geoname references of the places generated by ChatGPT.</head>
+               </figure>
+            </p>
+
+         </div>
+         <div xml:id="div4">
+            <head>Usability, sustainability, and maintainability</head>
+            <p xml:id="p33">Generally, ChatGPT can be used via the OpenAI website, and an API is
+               also available for programmatic use. The tool can be used with minimal setup, and the
+               web interface is simplistic and easy to use. It works well on all modern web browsers
+               and devices, and a ChatGPT app is available for mobile devices. Users require
+               internet access and an OpenAI account. Additional services beyond the free tier,
+               including expanded API usage and processing capabilities, are only available under a
+               pay plan based on OpenAI’s token system.<note xml:id="ftn13">OpenAI uses a token
+                  system for input, output, and training usage. <ref
+                     target="https://openai.com/pricing">https://openai.com/pricing</ref>. But this
+                  constantly changes. </note> We do not go into detail about pricing as it depends
+               on the model used; however, it has to be noted that for more complex and longer
+               tasks, it can get very expensive. This makes it less attractive for sustained
+               scholarly work and creates unequal conditions, as not all academics or projects might
+               have the resources to cover the costs. It is also worth noting that access to ChatGPT
+               varies globally.<note xml:id="ftn14"> For a brief period of time in 2023 even in
+                  Italy it was banned due to issues with the data protection regulations,
+                  DigitalTrends: <ref
+                     target="https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/"
+                     >https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/</ref>.
+                  See also a recent article (June 2024) about China: <ref
+                     target="https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html"
+                     >https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html</ref>.
+               </note> In regions where the tool is restricted, such as China, alternatives like
+               DeepSeek and Ernie Bot are available (<ref target="#Wikipedia2024" type="crossref"
+                  >Wikipedia contributors 2024</ref>; <ref target="#Yang2023" type="crossref">Yang
+                  2023</ref>). While these tools offer similar functionalities, their effectiveness
+               for digital scholarly editing would require separate evaluation. </p>
+            <p xml:id="p34">The various language models used within ChatGPT, and their differences,
+               are briefly documented and compared on the OpenAI website<note xml:id="ftn15">
+                  <ref target="https://platform.openai.com/docs/models/overview"
+                     >https://platform.openai.com/docs/models/overview</ref>.</note>. OpenAI also
+               has a help center and maintains a developer forum where, currently, mostly
+               API-related issues are discussed. ChatGPT has a big user community and is widely
+               used. Therefore, if you run into a general problem, the chance is very high that
+               someone else already had a similar problem, and the solution can be found online.
+               OpenAI also provides documentation and guidelines for the use of the tool. For
+               instance, the guidelines for prompt engineering explain strategies and suggestions
+               for crafting effective prompts to get better results from ChatGPT. In addition to the
+               material provided by OpenAI, it has to be pointed out that, due to the great interest
+               and broad application of chatbots in recent years, numerous introductions and
+               documentation about working with ChatGPT were developed by individuals, institutions,
+               and organizations all over the world. This also includes some subject-specific
+               introductions for digital humanities and digital scholarly editing<note
+                  xml:id="ftn16">One example is Christopher Pollin’s workshop series"Angewandte
+                  Generative KI in den (digitalen) Geisteswissenschaften" - AGKI, <ref
+                     target="https://chpollin.github.io/GM-DH/"
+                     >https://chpollin.github.io/GM-DH/</ref>.</note>.</p>
+            <p xml:id="p35">While interacting with ChatGPT is quite easy, creating effective prompts
+               requires some training. Prompt engineering has become its own discipline, and
+               mastering these techniques is particularly important in digital humanities contexts,
+               where specialized terminology, historical language material, and encoding standards
+               require precise instructions (<ref target="#Saravia2022" type="crossref">Saravia
+                  2022</ref>, <ref target="#Pollin2024a" type="crossref">Pollin 2024</ref>).
+               Well-designed prompts lead to better results and reduce frustration in the use of
+               ChatGPT. It has to be emphasized that the use of ChatGPT is very much experimental in
+               most disciplines, and its full capacities are not yet clear; further study is
+               necessary. This holds especially true for digital humanities and its use for digital
+               scholarly editing.</p>
+            <p xml:id="p36">ChatGPT is not open source. The tool itself and its development are
+               closed off. This means that neither the source code nor the underlying models can be
+               reused or built upon. However, the performance of GPT has been analyzed extensively
+               since its release. Users all over the world from various disciplines have
+               experimented and published benchmark tests and evaluations.<note xml:id="ftn17"> For
+                  instance, the ability of ChatGPT 3.5 and GPT 4 to write correct code was conducted
+                  by <ref type="crossref" target="#Liu2023">Liu et al. 2023</ref> and a test on
+                  various NLP tasks was conducted by <ref target="#Laskar2023" type="crossref"
+                     >Laskar et al. 2023</ref>. </note> This lack of openness raises concerns with
+               regard to transparency, sustainability, and long-term reusability in scholarly
+               workflows.</p>
+            <p xml:id="p37">OpenAI assures its users that all data shared with ChatGPT is encrypted,
+               and the input and the output you receive from ChatGPT are rightfully yours.<note
+                  xml:id="ftn18">
+                  <ref target="https://openai.com/enterprise-privacy/"
+                     >https://openai.com/enterprise-privacy/</ref>.</note> Nevertheless, there are
+               concerns that OpenAI uses input data for training purposes and that sensitive
+               information may end up in the company’s database and become available to other users
+               of the tool. Another concern that has been voiced is that OpenAI collects substantial
+               data about its users and their behavior (<ref target="#MertonMcCann2023"
+                  type="crossref">Merton-McCann 2023</ref>). </p>
+            <p xml:id="p38">Finally, the question of citation must be addressed. If ChatGPT is used
+               in research or for academic writing, its involvement needs to be acknowledged. This
+               is also an issue when we want to encourage our students to use it as a tool.
+               Conversations are tightly bound to a user account, and there are no permalinks, no
+               DOI, no URL that allows for persistent sharing. Consequently, referencing ChatGPT is
+               a big issue for students and researchers. There is not yet a general consensus on how
+               to cite ChatGPT conversations.<note xml:id="ftn19"> As an example we provide here the
+                  recommendation by the University of Graz, last update 24.06.2024: <ref
+                     target="https://lehren-und-lernen-mit-ki.uni-graz.at/de/ki-nutzung-kennzeichnen/"
+                     >https://lehren-und-lernen-mit-ki.uni-graz.at/de/ki-nutzung-kennzeichnen/</ref>.</note>
+               However, ChatGPT is usually not considered an author. This also means that ChatGPT –
+               or any AI – cannot claim copyright and any AI-generated output is automatically
+               considered public domain (<ref target="#Scholger2025" type="crossref">Scholger
+                  2025</ref>). APA, for example, suggests that ‘chats’ with the AI cannot be cited
+               as personal communications as there is no person communicating.<note xml:id="ftn20">
+                  ‘Unfortunately, the results of a ChatGPT “chat” are not retrievable by other
+                  readers, and although nonretrievable data or quotations in APA Style papers are
+                  usually cited as personal communications, with ChatGPT-generated text there is no
+                  person communicating.’ <ref
+                     target="https://apastyle.apa.org/blog/how-to-cite-chatgpt"
+                     >https://apastyle.apa.org/blog/how-to-cite-chatgpt</ref>. </note> It is
+               typically recommended to include the prompt or the entire conversation for reference
+               (for instance, in an appendix).<note xml:id="ftn21">
+                  <ref target="https://apastyle.apa.org/blog/how-to-cite-chatgpt"
+                     >https://apastyle.apa.org/blog/how-to-cite-chatgpt</ref>; APA policy on the use
+                  of generative artificial intelligence (AI) in scholarly materials, in: <emph>APA
+                     Publishing Policies (Aug. 2023)</emph>: <ref
+                     target="https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3"
+                     >https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3</ref>.
+               </note> This reminds us of the recommendations from the early 2000s to print out
+               entire websites and add them to an essay. However, this approach can quickly become
+               unwieldy, resulting in an overwhelming flood of appendices, as conversations with
+               ChatGPT can be quite extensive.</p>
+         </div>
+         <div xml:id="div5">
+            <head>User interaction, accessibility, and bias</head>
+            <p xml:id="p39">ChatGPT is a chatbot, and in this review, we focus on the GUI provided
+               by OpenAI at <ref target="https://chat.openai.com/">https://chat.openai.com/</ref>.
+               The interface requires a user account and login and is designed primarily for
+               conversational interaction, i.e., asking questions and receiving responses. Details
+               have already been described in previous sections. From a usability perspective, the
+               interface is minimalistic and straightforward, supporting quick access to the core
+               functionality of the tool: the conversation. One gets the impression that OpenAI did
+               not invest too much effort into the design, as their interest and attention are on
+               other aspects. And indeed, critical remarks can be found regarding its simplicity and
+               limited customization options<note xml:id="ftn22"> For instance, <ref
+                     target="#Sebastian2023" type="crossref">Sebastian 2023</ref>. </note>.</p>
+            <p xml:id="p40">While the customization of the web-based GUI provided by OpenAI is
+               minimal, users are encouraged to use the API to build their own customized
+               applications and workflows. And indeed, the API has been used by numerous companies,
+               institutions, and individuals to integrate language models into existing
+                  workflows.<note xml:id="ftn23"> For instance, in a recent article, Galka and
+                  Vogeler compared the integration of different LLMs into a workflow for adding NER
+                  annotations (<ref type="crossref" target="#Galka.Vogeler2026">2026</ref>).</note>
+               However, the usage depends very much on a user’s ability to formulate instructions in
+               one of the languages supported by the language model. </p>
+            <p xml:id="p41">ChatGPT is described as a multilingual chatbot that can communicate in
+               over 50 languages.<note xml:id="ftn24"> The chatbot and its user interface are
+                  constantly evolving and updated, but that is the situation in July 2024. OpenAI:
+                  How to use ChatGPT in a language other than English (alpha), <ref
+                     target="https://help.openai.com/en/articles/8357869-how-to-use-chatgpt-in-a-language-other-than-english-alpha"
+                     >https://help.openai.com/en/articles/8357869-how-to-use-chatgpt-in-a-language-other-than-english-alpha</ref>.
+               </note> It also provides the possibility to translate from one language into another,
+               making it a competitor for Google Translate, DeepL, and similar services.<note
+                  xml:id="ftn25"> See, for instance, <ref target="#Quillen2023" type="crossref"
+                     >Quillen 2023</ref>; <ref target="#PCMAG2023" type="crossref">PCMAG 2023</ref>.
+               </note> Also, the speech-to-text Audio API based on the Wisper model, which is also
+               part of the ChatGPT ecosystem, provides support for many languages. It was trained on
+               98 languages, but for only about 58 languages, the word error rate is lower than
+                  50%.<note xml:id="ftn26">OpenAI: Speech to text: <ref
+                     target="https://platform.openai.com/docs/guides/speech-to-text"
+                     >https://platform.openai.com/docs/guides/speech-to-text</ref>; <ref
+                     target="https://platform.openai.com/docs/guides/speech-to-text/supported-languages"
+                     >https://platform.openai.com/docs/guides/speech-to-text/supported-languages</ref>.
+               </note>
+            </p>
+            <p xml:id="p42">ChatGPT is also frequently discussed in the context of accessibility and
+               the provision of barrier-free content. The OpenAI web interface is simplistic and
+               screen-reader friendly. But the actual benefit comes from the use of the ChatGPT API
+               in various new applications. For instance, the description of images is one such
+                  use-case<note xml:id="ftn27">
+                  <ref
+                     target="https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/"
+                     >https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/</ref>.
+               </note>. </p>
+            <p xml:id="p43">At the end of this examination of ChatGPT’s usability, it is necessary
+               to address the question of bias. Even if we ‘talk’ to a machine, ChatGPT is not
+               objective. The chatbot is trained on an enormous amount of data, most of it from a
+               North American and European context, and the biases introduced through that data
+               influence the response of the language model. Gender, racial, religious, age, or
+               political bias, and other negative behaviors have been correctly criticized in the
+                  past.<note xml:id="ftn28"> See for instance examples on the UNESCO website (<ref
+                     target="#UNESCO2023" type="crossref">UNESCO 2023</ref>); on the matter see also
+                  the end of the keynote lecture by Pierazzo (<ref type="crossref"
+                     target="#Pierazzo2024">2024</ref>). </note> If you ask ChatGPT, it will explain
+               to you that it tries to be objective, but it is not free of bias. OpenAI provides a
+               disclaimer about bias and stereotypes in ChatGPT responses on its website. They
+               suggest that users should be careful with generated content, particularly when
+               dealing with culturally sensitive or historically situated material.<note
+                  xml:id="ftn29">OpenAI: Is ChatGPT biased?,
+                  https://help.openai.com/en/articles/8313359-is-chatgpt-biased.</note> Another
+               aspect that is currently discussed emotionally in politics and the media concerns the
+               ecological dimensions of using AI, especially the increase in power consumption of
+               data centers and companies in the coming years. Sustainability is therefore an
+               important topic that generates more and more attention and forms part of the broader
+               context in which decisions about adopting such tools for scholarly editing are made
+                  (<ref type="crossref" target="#Rohde2024">Rohde et al. 2024</ref>). </p>
+         </div>
+         <div xml:id="div6">
+            <head>Conclusion</head>
+            <p xml:id="p44">ChatGPT is not a tool that was explicitly developed with the digital
+               humanities or the scholarly editing community in mind. Nevertheless, it has a wide
+               range of possible applications for researchers and editors alike and can support
+               different stages of the development or analysis of a digital edition. It can be used
+               to aid with the transcription and data creation process, can help to develop scripts
+               for data processing and analysis, and more. </p>
+            <p xml:id="p45">There is still relatively little research on the use of LLMs for
+               editorial purposes, and the possibilities of what can be done with ChatGPT and
+               similar AI tools are constantly changing. We are aware that the evaluation of such
+               technology is only a snapshot that might not be relevant in a couple of months, and
+               that all predictions for future developments are quite difficult as development moves
+               so quickly. As we outlined in the article, we chose to evaluate ChatGPT (GPT-4o) over
+               other LLMs as it is well-known and currently widely used by humanities scholars.</p>
+            <p xml:id="p46">Several limitations significantly constrain the use of ChatGPT as a tool
+               for scholarly editing. First, the development of the tool is closed off as it is a
+               commercial product. For editors, this results in a black-box situation that can be
+               vaguely controlled using prompts. If prompts are not carefully crafted, the results
+               can be misleading or even totally wrong. Often, negative feedback about ChatGPT is
+               the result of knowing too little about its capabilities and how to create effective
+               prompts. Second, it remains unclear how OpenAI handles the data provided by users and
+               to what extent the data is used to train future models. Therefore, users have been
+               warned to be careful and not to share sensitive or unpublished material with AI. For
+               scholarly editing, this significantly restricts the range of sources for which
+               ChatGPT can be used responsibly. Third, while the chatbot interface is suitable for
+               small-scale experiments and exploratory tasks, complex multi-stage editorial
+               workflows for an entire corpus - from the TEI encoding to the recognition of named
+               entities and their enrichment with norm data - can only be effectively implemented
+               via the API. The associated costs cannot be covered by every project and also
+               contradict the principles of an open-knowledge society and equal access to research.
+               This is why it is so important that we focus more on developments in the area of
+               open-source LLMs in the future. Finally, ethical issues caused by the bias in the
+               models, along with ecological dimensions of using AI, such as high-power consumption,
+               are substantial issues and have to be kept in mind when incorporating these tools
+               into scholarly workflows.</p>
+            <p xml:id="p47">The use cases presented in this review demonstrate ChatGPT’s high
+               potential as an assistant for digital editing. Tasks that previously required several
+               tools and technical expertise can now be performed with comparatively little effort
+               using carefully designed prompting instructions. At the same time, we have also
+               discussed that the quality of the results can diverge depending on the source
+               material of the edition and a user’s ability to craft “good prompts”. In any case, a
+               human editor must remain in the loop to control, evaluate, and, if necessary, further
+               process the output. This is especially highlighted by our little experiment using
+               German texts from two different historical language periods. It shows that ChatGPT
+               works less effectively with historical languages. </p>
+         </div>
+      </body>
+
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="Chen2024">Chen, Hailin, Fangkai Jiao, Xingxuan Li, Chengwei Qin,
+                  Mathieu Ravaut, Ruochen Zhao, Caiming Xiong, and Shafiq Joty. 2024. “ChatGPT's
+                  One-year Anniversary: Are Open-Source Large Language Models Catching up?”
+                     <emph>arXiv</emph>. <ref target="https://doi.org/10.48550/arXiv.2311.16989"
+                     >https://doi.org/10.48550/arXiv.2311.16989</ref>.</bibl>
+               <bibl xml:id="Chiang2024">Chiang, Wei-Lin, Lianmin Zheng, Ying Sheng, Lisa Dunlap,
+                  Anastasios Angelopoulos, Christopher Chou, Tianle Li, and Siyuan Zhuang. 2024.
+                  “Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference.”
+                     <emph>arXiv</emph>. <ref target="https://doi.org/10.48550/arXiv.2403.04132"
+                     >https://doi.org/10.48550/arXiv.2403.04132</ref>. </bibl>
+               <bibl xml:id="Chudleigh2024">Chudleigh, Sarah. 2024. “Alles, was Sie über GPT wissen
+                  sollten -5.” <ref
+                     target="https://web.archive.org/web/20250608124031/https://botpress.com/de/blog/everything-you-should-know-about-gpt-5"
+                     >https://web.archive.org/web/20250608124031/https://botpress.com/de/blog/everything-you-should-know-about-gpt-5</ref>.</bibl>
+               <bibl xml:id="Galka.Vogeler2026">Galka, Selina, and Georg Vogeler. 2026. “Annotating,
+                  projecting, and interpreting named entities in digital scholarly editions with
+                  LLMs.” <emph>International Journal of Digital Humanities</emph>. <ref
+                     target="https://doi.org/10.1007/s42803-025-00114-8"
+                     >https://doi.org/10.1007/s42803-025-00114-8</ref>. </bibl>
+               <bibl xml:id="Gates2024">Gates, Bill. 2024. “Episode 6. Sam Altmann.” In
+                     <emph>Unconfuse Me with Bill Gates</emph>. YouTube video, posted 11.1.2024,
+                     <ref target="https://www.youtube.com/watch?v=PkXELH6Y2lM"
+                     >https://www.youtube.com/watch?v=PkXELH6Y2lM</ref>. </bibl>
+               <bibl xml:id="Jankovic">Jankovic, Nikola. “TEI Scholar.” <ref
+                     target="https://web.archive.org/web/20260211110717/https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar"
+                     >https://web.archive.org/web/20260211110717/https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar</ref>. </bibl>
+               <bibl xml:id="Laskar2023">Laskar, Md Tahmid Rahman, M Saiful Bari, Mizanur Rahman, Md
+                  Amran Hossen Bhuiyan, Shafiq R. Joty, J. Huang. 2023. “A Systematic Study and
+                  Comprehensive Evaluation of ChatGPT on Benchmark Datasets”. <emph>Annual Meeting
+                     of the Association for Computational Linguistics, 29 May 2023</emph>.
+                     <emph>arXiv</emph>. <ref target="https://doi.org/10.48550/arXiv.2305.18486"
+                     >https://doi.org/10.48550/arXiv.2305.18486</ref>. </bibl>
+               <bibl xml:id="Liu2023">Liu, Jiawei, Chunqiu Steven Xia, Yuyao Wang, Lingming Zhang.
+                  2023. “Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of
+                  Large Language Models for Code Generation”. <emph>37th Conference on Neural
+                     Information Processing Systems (NeurIPS 2023)</emph>. <emph>arXiv</emph>. <ref
+                     target="https://doi.org/10.48550/arXiv.2305.01210"
+                     >https://doi.org/10.48550/arXiv.2305.01210</ref>.</bibl>
+               <bibl xml:id="MertonMcCann2023">Merton-McCann, Alex. 2023. “How To Manage Your
+                  Privacy When Using ChatGPT or Other Generative AI.” <ref
+                     target="https://web.archive.org/web/20240804100338/https://www.mcafee.com/blogs/internet-security/chatgpts-impact-on-privacy-and-how-to-protect-yourself/"
+                     >https://web.archive.org/web/20240804100338/https://www.mcafee.com/blogs/internet-security/chatgpts-impact-on-privacy-and-how-to-protect-yourself/</ref>.</bibl>
+               <bibl xml:id="Miyagawa">Miyagawa, So. “Lex 0 Converter.” <ref
+                     target="https://chatgpt.com/g/g-kOuPR6Q7u-tei-lex-0-converter?ref=pluginsurf"
+                     >https://chatgpt.com/g/g-kOuPR6Q7u-tei-lex-0-converter?ref=pluginsurf</ref>. </bibl>
+               <bibl xml:id="OpenAI2023">OpenAI. 2023. “GPT-4 Technical Report.” <emph>arXiv</emph>.
+                     <ref target="https://doi.org/10.48550/arXiv.2303.08774"
+                     >https://doi.org/10.48550/arXiv.2303.08774</ref>. </bibl>
+               <bibl xml:id="Ouyang2023">Ouyang, Shuyin, Jie M. Zhang, Mark Harman, and Meng Wang.
+                  2023. “LLM is Like a Box of Chocolates: the Non-determinism of ChatGPT in Code
+                  Generation.” <emph>arXiv</emph>. <ref
+                     target="https://doi.org/10.48550/arXiv.2308.02828"
+                     >https://doi.org/10.48550/arXiv.2308.02828</ref>. </bibl>
+               <bibl xml:id="PCMAG2023">PCMAG. 2023. “Google Translate vs. ChatGPT: Which One Is the
+                  Best Language Translator?”. PCMAG, June 10, 2023. <ref
+                     target="https://web.archive.org/web/20230610132257/https://www.pcmag.com/news/google-translate-vs-chatgpt-which-one-is-the-best-language-translator"
+                     >https://web.archive.org/web/20230610132257/https://www.pcmag.com/news/google-translate-vs-chatgpt-which-one-is-the-best-language-translator</ref>. </bibl>
+               <bibl xml:id="Pierazzo2024">Pierazzo, Elena. 2024. “From Digital to Computational
+                  Scholarly Editing: Are We Ready for ChatGPT?” <ref
+                     target="https://www.youtube.com/watch?v=4_PtwZiWVz0"
+                     >https://www.youtube.com/watch?v=4_PtwZiWVz0</ref>. </bibl>
+               <bibl xml:id="Pollin2023">Pollin, Christopher. 2023. “teiCrafter.” <ref
+                     target="https://web.archive.org/web/20260211112810/https://chatgpt.com/g/g-FEUt7Fq48-teicrafter"
+                     >https://web.archive.org/web/20260211112810/https://chatgpt.com/g/g-FEUt7Fq48-teicrafter</ref>. </bibl>
+               <bibl xml:id="Pollin2024a">Pollin, Christopher. 2024ff. “Workshopreihe Angewandte
+                  Generative KI in den (digitalen) Geisteswissenschaften.” <emph>Zenodo</emph>. <ref
+                     target="https://doi.org/10.5281/zenodo.10647754"
+                     >https://doi.org/10.5281/zenodo.10647754</ref>. </bibl>
+               <bibl xml:id="Pollin2024b">Pollin, Christopher, Martina Scholger, Patrick Sahle,
+                  Georg Vogeler, Torsten Schaßan, Stefan Dumont, Franz Fischer, Ulrike
+                  Henny-Krahmer, Christiane Fritze, Torsten Roeder, and Alexander Czmiel. 2024.
+                  “Workshop Generative KI, LLMs und GPT bei digitalen Editionen.” <emph>DHd 2024 Quo
+                     Vadis DH (DHd2024), Passau, Deutschland</emph>. <emph>Zenodo</emph>. <ref
+                     target="https://doi.org/10.5281/zenodo.10893761"
+                     >https://doi.org/10.5281/zenodo.10893761</ref>. </bibl>
+               <bibl xml:id="Pollin2025">Pollin, Christopher, Franz Fischer, Patrick Sahle, Martina
+                  Scholger, and Georg Vogeler. 2025. “When it was 2024 – Generative AI in the Field
+                  of Digital Scholarly Editions.” <emph>Zeitschrift für digitale
+                     Geisteswissenschaften</emph> 10. <ref
+                     target="https://doi.org/10.17175/2025_008"
+                     >https://doi.org/10.17175/2025_008</ref>. </bibl>
+               <bibl xml:id="Quillen2023">Quillen, Sam. 2023. “How Many Languages Does ChatGPT
+                  Speak?” <emph>Medium, Apr 27, 2023</emph>. <ref
+                     target="https://web.archive.org/web/20240712110304/https://sjquillen.medium.com/how-many-languages-does-chatgpt-speak-bf5cfc35a586a"
+                     >https://web.archive.org/web/20240712110304/https://sjquillen.medium.com/how-many-languages-does-chatgpt-speak-bf5cfc35a586a</ref>. </bibl>
+               <bibl xml:id="Ramlochan2023">Ramlochan, Sunil. 2023. “Openness in Language Models:
+                  Open Source vs Open Weights vs Restricted Weights.” <ref
+                     target="https://web.archive.org/web/20250314093343/https://promptengineering.org/llm-open-source-vs-open-weights-vs-restricted-weights/"
+                     >https://web.archive.org/web/20250314093343/https://promptengineering.org/llm-open-source-vs-open-weights-vs-restricted-weights/</ref>. </bibl>
+               <bibl xml:id="Rohde2024">Rohde, Friederike, Josephin Wagner, Andreas Meyer, Philipp
+                  Reinhard, Marcus Voss, Ulrich Petschow, and Anne Mollen. 2024. “Broadening the
+                  perspective for sustainable artificial intelligence: sustainability criteria and
+                  indicators for Artificial Intelligence systems.” <emph>Current Opinion in
+                     Environmental Sustainability</emph> 66. <ref
+                     target="https://doi.org/10.1016/j.cosust.2023.101411"
+                     >https://doi.org/10.1016/j.cosust.2023.101411</ref>.</bibl>
+               <bibl xml:id="Saravia2022">Saravia, Elvis. 2022ff. “Prompt Engineering Guide.” <ref
+                     target="https://web.archive.org/web/20240316135941/https://github.com/dair-ai/Prompt-Engineering-Guide"
+                     >https://web.archive.org/web/20240316135941/https://github.com/dair-ai/Prompt-Engineering-Guide</ref>. </bibl>
+               <bibl xml:id="Scholger2025">Scholger, Walter. 2025. “Künstliche Intelligenz im
+                  Spannungsfeld von Innovation und Regulierung.” <ref
+                     target="https://doi.org/10.5281/zenodo.15790422"
+                     >https://doi.org/10.5281/zenodo.15790422</ref>. </bibl>
+               <bibl xml:id="Sebastian2023">Sebastian, Ebin. 2023. “Beyond the Clicks: A Closer Look
+                  at ChatGPT’s User Interface Through Heuristic Lenses.” <emph>Medium (Nov 22,
+                     2023)</emph>. <ref
+                     target="https://web.archive.org/web/20240712083258/https://medium.com/@ebinsk000/beyond-the-clicks-a-closer-look-at-chatgpts-user-interface-through-heuristic-lenses-dee5560f9316"
+                     >https://web.archive.org/web/20240712083258/https://medium.com/@ebinsk000/beyond-the-clicks-a-closer-look-at-chatgpts-user-interface-through-heuristic-lenses-dee5560f9316</ref>. </bibl>
+               <bibl xml:id="Strutz2025a">Strutz, Sabrina, and Georg Vogeler. 2025. “Towards an
+                  Evaluation Framework for Assessing Large Language Models in Text Encoding.”
+                     <emph>ADHO Digital Humanities Conference 2025 (DH 2025)</emph>.
+                     <emph>Zenodo</emph>. <ref target="https://doi.org/10.5281/zenodo.16364518"
+                     >https://doi.org/10.5281/zenodo.16364518</ref>.</bibl>
+               <bibl xml:id="Strutz2025b">Strutz, Sabrina, and Martina Scholger. 2025. “Beyond
+                  Rule-Based Processing: LLM-Assisted TEI Encoding of Editorial Interventions in
+                  Historical Correspondence.” <emph>TEI Annual Conference and Members' Meeting 2025,
+                     Jagielloninan University in Kraków</emph>. <emph>Zenodo</emph>. <ref
+                     target="https://doi.org/10.5281/zenodo.17176474"
+                     >https://doi.org/10.5281/zenodo.17176474</ref>.</bibl>
+               <bibl xml:id="Wikipedia2024">Wikipedia contributors. 2024. “ErnieBot.” <ref
+                     target="https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722"
+                     >https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722</ref>. </bibl>
+               <bibl xml:id="UNESCO2023">UNESCO. 2023. “Artificial Intelligence: examples of ethical
+                  dilemmas”. <ref
+                     target="https://web.archive.org/web/20240712082302/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics/cases"
+                     >https://web.archive.org/web/20240712082302/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics/cases</ref>. </bibl>
+               <bibl xml:id="Yang2023">Yang, Zeyi. 2023. “Chinese ChatGPT alternatives just got
+                  approved for the general public.” <emph>MIT Technology Review (Aug 30,
+                     2023)</emph>. <ref
+                     target="https://web.archive.org/web/20240712104430/https://www.technologyreview.com/2023/08/30/1078714/chinese-chatgpt-ernie-government-approval/"
+                     >https://web.archive.org/web/20240712104430/https://www.technologyreview.com/2023/08/30/1078714/chinese-chatgpt-ernie-government-approval/</ref>.
+               </bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
