@@ -1,0 +1,2104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.19.3">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>OpenRefine</title>
+            <author ref="https://orcid.org/0000-0003-2598-888X">
+               <name>
+                  <forename>Marthe</forename>
+                  <surname>Küster</surname>
+               </name>
+               <affiliation>
+                  <orgName>Humboldt Universität zu Berlin</orgName>
+                  <placeName>Berlin</placeName>
+               </affiliation>
+               <email>marthe.kuester.1@hu-berlin.de</email>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+            <date when="2026-02">Feburary 2026</date>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19/openrefine</idno>
+            <idno type="DOI">10.18716/ride.a.19.3</idno>
+            <idno type="archive"
+               >https://github.com/i-d-e/ride/raw/master/issues/issue19/openrefine/openrefine.pdf</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title level="j">RIDE - A review journal for digital editions and resources</title>
+            <editor ref="https://orcid.org/0000-0003-4674-1042">Roman Bleier</editor>
+            <editor ref="https://orcid.org/0000-0002-6923-0950">Stefan Dumont</editor>
+            <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+               Henny-Krahmer</editor>
+            <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+               Scholger</editor>
+            <biblScope unit="issue" n="19">Tools and Environments</biblScope>
+            <idno type="URI">http://ride.i-d-e.de/issues/issue-19</idno>
+            <idno type="DOI">10.18716/ride.a.19</idno>
+         </seriesStmt>
+         <notesStmt>
+            <relatedItem type="reviewed_resource">
+               <bibl>
+                  <title>OpenRefine</title>
+                  <editor>Google, Inc. &amp; OpenRefine contributors</editor>
+                  <respStmt>
+                     <resp>Editor</resp>
+                     <persName>Google, Inc. &amp; OpenRefine contributors</persName>
+                  </respStmt>
+                  <date type="publication">2010-2025</date>
+                  <idno type="URI">https://openrefine.org</idno>
+                  <date type="accessed">2025-06-30</date>
+               </bibl>
+            </relatedItem>
+            <relatedItem type="reviewing_criteria">
+               <bibl>
+                  <ref
+                     target="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/"
+                     >Criteria for Reviewing Tools and Environments for Digital Scholarly
+                     Editing</ref>
+               </bibl>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy
+               xml:base="https://www.i-d-e.de/publikationen/weitereschriften/criteria-tools-version-1/">
+               <category>
+                  <catDesc>General information</catDesc>
+                  <category xml:id="te001">
+                     <catDesc>Software type <ref target="#K0.1.1">cf. Catalogue 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What type of software is it?</catDesc>
+                     <category xml:id="te002">
+                        <catDesc>Software tool</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te003">
+                        <catDesc>Virtual Reseaerch Environment (VRE)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te004">
+                     <catDesc>Identification of the environment <ref target="#K1.4">cf. Catalogue
+                           1.4</ref>
+                     </catDesc>
+                     <catDesc>On which platform runs the tool?</catDesc>
+                     <category xml:id="te005">
+                        <catDesc>Operating system</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te006">
+                        <catDesc>Web browser</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te007">
+                        <catDesc>Another application</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te008">
+                     <catDesc>Purpose <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>For what purpose was the tool developed?</catDesc>
+                     <category xml:id="te009">
+                        <catDesc>developed to accomplish a general task</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te010">
+                        <catDesc>developed for a specific project or materials</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te011">
+                     <catDesc>Funding <ref target="#K1.6">cf. Catalogue 1.6</ref>
+                     </catDesc>
+                     <catDesc>Which is the financial model of the tool?</catDesc>
+                     <category xml:id="te012">
+                        <catDesc>Free/open</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te013">
+                        <catDesc>Support-based</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te014">
+                        <catDesc>Behind a paywall</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te015">
+                     <catDesc>Maturity <ref target="#K1.5">cf. Catalogue 1.5</ref>
+                     </catDesc>
+                     <catDesc>What is the development stage of the tool?</catDesc>
+                     <category xml:id="te016">
+                        <catDesc>Release</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te017">
+                        <catDesc>Beta</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te018">
+                        <catDesc>Alpha</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Methods and implementation</catDesc>
+                  <category xml:id="te019">
+                     <catDesc>Programming Language <ref target="#K2.3">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Which programming languages and technologies are used?</catDesc>
+                     <category xml:id="te020">
+                        <catDesc>C family</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te021">
+                        <catDesc>Java</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te022">
+                        <catDesc>Python</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te023">
+                        <catDesc>PHP</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te024">
+                        <catDesc>R</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te025">
+                        <catDesc>Ruby</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te026">
+                        <catDesc>XSLT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te027">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te028">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te029">
+                     <catDesc>Reuse <ref target="#K3.1.6">cf. Catalogue 2.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool reuse portions of other existing software?</catDesc>
+                     <category xml:id="te030">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te031">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te032">
+                     <catDesc>Input format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which input formats are supported?</catDesc>
+                     <category xml:id="te033">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te034">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te035">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te036">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te037">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te038">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te039">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te040">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te041">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te042">
+                     <catDesc>Output format <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which output formats are supported?</catDesc>
+                     <category xml:id="te043">
+                        <catDesc>.xml</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te044">
+                        <catDesc>.xml/tei</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te045">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te046">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te047">
+                        <catDesc>.csv</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te048">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te049">
+                        <catDesc>.json</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te050">
+                        <catDesc>.rdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te051">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te052">
+                     <catDesc>Encoding <ref target="#K2.3">cf. Catalogue 2.4</ref>
+                     </catDesc>
+                     <catDesc>Which character encoding formats are supported?</catDesc>
+                     <category xml:id="te053">
+                        <catDesc>latin-1</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te054">
+                        <catDesc>utf-8</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te055">
+                        <catDesc>utf-16</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te056">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te057">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te058">
+                     <catDesc>Encoding preprocessing</catDesc>
+                     <catDesc>Is a pre-processing conversion included?</catDesc>
+                     <category xml:id="te059">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te060">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te061">
+                     <catDesc>Dependencies <ref target="#K3.2">cf. Catalogue 3.2</ref>
+                     </catDesc>
+                     <catDesc>Does the documentation list dependencies on other software, libraries
+                        or hardware?</catDesc>
+                     <category xml:id="te062">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te063">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te064">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te065">
+                     <catDesc>Dependencies installation</catDesc>
+                     <catDesc>If yes, is the software handling the installation of dependencies
+                        during the general installation process (you don't have to install them
+                        manually before the installation)?</catDesc>
+                     <category xml:id="te066">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te067">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te068">
+                        <catDesc>Not applicable (no documentation provided)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Documentation and support</catDesc>
+                  <category xml:id="te069">
+                     <catDesc>Documentation <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is documentation and/or a manual available? (tool website, wiki, blog,
+                        documentation, or tutorial)</catDesc>
+                     <category xml:id="te070">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te071">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te072">
+                     <catDesc>Documentation format <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which format has the documentation?</catDesc>
+                     <category xml:id="te073">
+                        <catDesc>readme</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te074">
+                        <catDesc>.txt</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te075">
+                        <catDesc>.html</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te076">
+                        <catDesc>.pdf</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te077">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te078">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te079">
+                     <catDesc>Documentation parts <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>Which of the following sections does the documentation
+                        contain?</catDesc>
+                     <category xml:id="te080">
+                        <catDesc>‘Getting Started’ section (installation and
+                           configuration)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te081">
+                        <catDesc>Step-by-step instructions</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te082">
+                        <catDesc>Examples</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te083">
+                        <catDesc>Troubleshooting (a selection of possible error messages and related
+                           solutions)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te084">
+                        <catDesc>FAQ</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te085">
+                        <catDesc>Support</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te086">
+                        <catDesc>API documentation (if relevant)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te087">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te088">
+                     <catDesc>Documentation language <ref target="#K3.3">cf. Catalogue 3.3</ref>
+                     </catDesc>
+                     <catDesc>In what languages is the documentation available?</catDesc>
+                     <category xml:id="te089">
+                        <catDesc>Arabic</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te090">
+                        <catDesc>Chinese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te091">
+                        <catDesc>Danish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te092">
+                        <catDesc>English</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te093">
+                        <catDesc>Finnish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te094">
+                        <catDesc>French</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te095">
+                        <catDesc>German</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te096">
+                        <catDesc>Greek</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te097">
+                        <catDesc>Hebrew</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te098">
+                        <catDesc>Hindi</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te099">
+                        <catDesc>Italian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te100">
+                        <catDesc>Japanese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te101">
+                        <catDesc>Latin</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te102">
+                        <catDesc>Norwegian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te103">
+                        <catDesc>Polish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te104">
+                        <catDesc>Portuguese</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te105">
+                        <catDesc>Russian</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te106">
+                        <catDesc>Spanish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te107">
+                        <catDesc>Swedish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te108">
+                        <catDesc>Turkish</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te109">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te110">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te111">
+                     <catDesc>Support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is there a method to get active support from the developer(s) or from
+                        the community?</catDesc>
+                     <category xml:id="te112">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te113">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te114">
+                     <catDesc>From of support <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Which form of support is offered?</catDesc>
+                     <category xml:id="te115">
+                        <catDesc>Help desk</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te116">
+                        <catDesc>Forum</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te117">
+                        <catDesc>Mailing-list</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te118">
+                        <catDesc>Not applicable (if no support is given)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te119">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te120">
+                     <catDesc>Issue tracker <ref target="#K3.4">cf. Catalogue 3.4</ref>
+                     </catDesc>
+                     <catDesc>Is it possible to post bugs or issue using issue tracker
+                        mechanisms?</catDesc>
+                     <category xml:id="te121">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te122">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Usability and sustainability</catDesc>
+                  <category xml:id="te123">
+                     <catDesc>Build and install <ref target="#K3.6">cf. Catalogue 3.6</ref>
+                     </catDesc>
+                     <catDesc>Grade how straightforward it is to build or install the tool on a
+                        supported platform:</catDesc>
+                     <category xml:id="te124">
+                        <catDesc>straightforward</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te125">
+                        <catDesc>normal</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te126">
+                        <catDesc>tricky</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te127">
+                     <catDesc>Tests <ref target="#K3.7">cf. Catalogue 3.7</ref>
+                     </catDesc>
+                     <catDesc>Is there a test suite, covering the core functionality in order to
+                        check that the tool has been correctly built or installed?</catDesc>
+                     <category xml:id="te128">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te129">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te130">
+                     <catDesc>Portability and interoperability <ref target="#K3.8">cf. Catalogue
+                           3.8</ref>
+                     </catDesc>
+                     <catDesc>On which platforms can the tool/software be deployed?</catDesc>
+                     <category xml:id="te131">
+                        <catDesc>Linux/BSD/Unix</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te132">
+                        <catDesc>Mac OS X</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te133">
+                        <catDesc>Android</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te134">
+                        <catDesc>iOS</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te135">
+                        <catDesc>Windows</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te136">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te137">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te138">
+                     <catDesc>Devices <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>On which devices can the tool/software be deployed?</catDesc>
+                     <category xml:id="te139">
+                        <catDesc>Desktop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te140">
+                        <catDesc>Laptop</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te141">
+                        <catDesc>Smartphone</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te142">
+                        <catDesc>Tablet</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te143">
+                        <catDesc>Smartboard</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te144">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te145">
+                        <catDesc>Not applicable (if web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te146">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te147">
+                     <catDesc>Browsers <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: On which browsers can the tool/software be
+                        deployed?</catDesc>
+                     <category xml:id="te148">
+                        <catDesc>Mozilla Firefox</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te149">
+                        <catDesc>Google Chrome</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te150">
+                        <catDesc>Safari</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te151">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te152">
+                        <catDesc>Not applicable (if not web-based for example)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te153">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te154">
+                     <catDesc>Plugins <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>If the tool is web-based: Does the tool rely on browser
+                        plugins?</catDesc>
+                     <category xml:id="te155">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te156">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te157">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te158">
+                     <catDesc>API <ref target="#K3.8">cf. Catalogue 3.8</ref>
+                     </catDesc>
+                     <catDesc>Is there an API for the tool?</catDesc>
+                     <category xml:id="te159">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te160">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te161">
+                     <catDesc>Code <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the source code open?</catDesc>
+                     <category xml:id="te162">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te163">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te164">
+                     <catDesc>License <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Under what license is the tool released?</catDesc>
+                     <category xml:id="te165">
+                        <catDesc>GNU/GPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te166">
+                        <catDesc>GNU/LGPL</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te167">
+                        <catDesc>Apache</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te168">
+                        <catDesc>MIT</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te169">
+                        <catDesc>Mozilla</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te170">
+                        <catDesc>CC0</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te171">
+                        <catDesc>CC-BY</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te172">
+                        <catDesc>CC-BY-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te173">
+                        <catDesc>CC-BY-NC</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te174">
+                        <catDesc>CC-BY-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te175">
+                        <catDesc>CC-BY-NC-ND</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te176">
+                        <catDesc>CC-BY-NC-SA</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te177">
+                        <catDesc>No explicit license / all rights reserved</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te178">
+                        <catDesc>Other</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                        <catDesc>
+                           <gloss>BSD Clause-3 license</gloss>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te179">
+                     <catDesc>Credits <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Does the software make adequate acknowledgement and credit to the
+                        project contributors?</catDesc>
+                     <category xml:id="te180">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te181">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te182">
+                     <catDesc>Registered <ref target="#K3.9">cf. Catalogue 3.9</ref>
+                     </catDesc>
+                     <catDesc>Is the tool/software registered in a software repository?</catDesc>
+                     <category xml:id="te183">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te184">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te185">
+                     <catDesc>Possible contribution</catDesc>
+                     <catDesc>If yes, can you contribute to the software development via the
+                        repository/development platform?</catDesc>
+                     <category xml:id="te186">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te187">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te188">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>Analysability, extensibility, reusability of the code</catDesc>
+                  <category xml:id="te189">
+                     <catDesc>Analysability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be analyzed easily (is it structured, commented,
+                        following standards)?</catDesc>
+                     <category xml:id="te190">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te191">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te192">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te193">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te194">
+                     <catDesc>Extensibility <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be extended easily (because there are contribution
+                        mechanisms, attribution for changes and backward compatibility)?</catDesc>
+                     <category xml:id="te195">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te196">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te197">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te198">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te199">
+                     <catDesc>Reusability <ref target="#K3.10">cf. Catalogue 3.10</ref>
+                     </catDesc>
+                     <catDesc>Can the code be reused easily in other contexts (because there are
+                        appropriate interfaces and/or a modular architecture)?</catDesc>
+                     <category xml:id="te200">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te201">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te202">
+                        <catDesc>Unknown</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te203">
+                        <catDesc>Not applicable</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te204">
+                     <catDesc>Security and privacy <ref target="#K3.11">cf. Catalogue 3.11</ref>
+                     </catDesc>
+                     <catDesc>Does the software provide sufficient information about the treatment
+                        of the data entered by the users?</catDesc>
+                     <category xml:id="te205">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te206">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te207">
+                     <catDesc>Supportability and maintenance <ref target="#K3.12">cf. Catalogue
+                           3.12</ref>
+                     </catDesc>
+                     <catDesc>Is there information available whether the tool will be supported
+                        currently and in the future?</catDesc>
+                     <category xml:id="te208">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te209">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te210">
+                     <catDesc>Citability <ref target="#K3.13">cf. Catalogue 3.13</ref>
+                     </catDesc>
+                     <catDesc>Does the tool supply citation guidelines (e.g. using the Citation File
+                        Format)?</catDesc>
+                     <category xml:id="te211">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te212">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category>
+                  <catDesc>User interaction, GUI and visualization</catDesc>
+                  <category xml:id="te213">
+                     <catDesc>User profile <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of users are expected?</catDesc>
+                     <category xml:id="te214">
+                        <catDesc>Humanities researcher</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te215">
+                        <catDesc>Computer scientist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te216">
+                        <catDesc>Digital humanist</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te217">
+                        <catDesc>General public</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te218">
+                     <catDesc>User interaction <ref target="#K4.1">cf. Catalogue 4.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of user interactions are expected?</catDesc>
+                     <category xml:id="te219">
+                        <catDesc>Reading</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te220">
+                        <catDesc>Text editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te221">
+                        <catDesc>Text analysis</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te222">
+                        <catDesc>Image editing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te223">
+                        <catDesc>Searching</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te224">
+                        <catDesc>Visualization</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te225">
+                        <catDesc>Comparing</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te226">
+                        <catDesc>Compiling</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te227">
+                     <catDesc>User Interface <ref target="#K4.1">cf. Catalogue 4.2 and 0.1.1</ref>
+                     </catDesc>
+                     <catDesc>What kind of interface does the tool provide?</catDesc>
+                     <category xml:id="te228">
+                        <catDesc>Graphical User Interface (GUI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te229">
+                        <catDesc>Command Line Interface (CLI)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te230">
+                        <catDesc>Application Programming Interface (API)</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te231">
+                     <catDesc>Visualization <ref target="#K3.13">cf. Catalogue 4.3</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide a particular visualizations (in terms of
+                        analysis) of the input and/or the output data?</catDesc>
+                     <category xml:id="te232">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te233">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te234">
+                     <catDesc>User empowerment <ref target="#K3.13">cf. Catalogue 4.4</ref>
+                     </catDesc>
+                     <catDesc>Is the user allowed to customize the functioning of the tool and the
+                        output configuration?</catDesc>
+                     <category xml:id="te235">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te236">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="te237">
+                     <catDesc>Accessibility <ref target="#K4.5">cf. Catalogue 4.5</ref>
+                     </catDesc>
+                     <catDesc>Does the tool provide particular features for improving accessibility,
+                        allowing „people with the widest range of characteristics and capabilities"
+                        to use it?</catDesc>
+                     <category xml:id="te238">
+                        <catDesc>Yes</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="0"/>
+                        </catDesc>
+                     </category>
+                     <category xml:id="te239">
+                        <catDesc>No</catDesc>
+                        <catDesc>
+                           <num type="boolean" value="1"/>
+                        </catDesc>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de"/>
+         </langUsage>
+         <textClass>
+            <keywords xml:lang="en">
+               <term>cmif</term>
+               <term>correspondence</term>
+               <term>metadata</term>
+               <term>letters</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="abstract">
+            <p>OpenRefine is an open-source tool for cleaning (meta)data. It converts unstructured
+               data into machine-readable formats and supports the integration of additional
+               information from sources such as GND or Wikidata via plugins. The scripting language
+               of OpenRefine, GREL (General Refine Expression Language), is relatively easy to learn
+               compared to programming languages like Python. One example of how OpenRefine can be
+               used is to prepare metadata in the Correspondence Metadata Interchange Format (CMIF)
+               for the web service correspSearch. OpenRefine helps to clean and standardise metadata
+               and organise information. This makes it a useful tool for digital projects with
+               historical data and scholarly editions.</p>
+         </div>
+      </front>
+      <body>
+         <div xml:id="div1">
+            <head>Reviewerin</head>
+            <p xml:id="p1">Marthe Küster hat Bibliotheks- und Informationswissenschaft sowie
+               Geschichtswissenschaften (B.A.) und Information Science (M.A.) an der
+               Humboldt-Universität zu Berlin studiert. Von 2022 bis 2025 war sie studentische
+               Hilfskraft bei TELOTA an der Berlin-Brandenburgischen Akademie der Wissenschaften und
+               hat dort unter anderem beim Webservice "Briefeditionen durchsuchen und vernetzen"
+               mitgewirkt. Seit Dezember 2025 ist sie Wissenschaftliche Mitarbeiterin am Lehrstuhl
+               für Digital History in Berlin für das Projekt QUADRIGA Datenkompetenzzentrum.</p>
+         </div>
+         <div xml:id="div2">
+            <head>Einleitung</head>
+            <p xml:id="p2">Im Bereich der historischen Daten und der Editionswissenschaft stellt
+               sich häufig die Frage, wie die Metadaten standardisiert und maschinenlesbar gemacht
+               werden können. Das ist eine wesentliche Voraussetzung, um Daten effizient zu
+               visualisieren und zu analysieren. Ein nützliches Tool für diese Aufgabe ist
+               OpenRefine. Es eignet sich zur Bereinigung großer Datenmengen und bietet im Gegensatz
+               zu Excel Spreadsheets die Option mithilfe der General Refine Expression Language
+               (GREL) die Daten zu modellieren und mit Linked Data anzureichern. Auch ermöglicht die
+               Facettenfunktion von OpenRefine einen schnellen Überblick über die Daten zu erhalten.
+               Ein weiterer Vorteil von OpenRefine ist, dass der Quelltext open source ist und
+               kostenlos genutzt oder weiterentwickelt werden kann. Die Daten bleiben lokal auf dem
+               Rechner und es ist möglich, OpenRefine in mehreren Tabs parallel zu verwenden (<ref
+                  target="#dreßen2023">Dreßen and Sacher 2023</ref>). Grundsätzlich können Daten
+               auch mit Programmiersprachen wie Python bereinigt werden. OpenRefine ist jedoch durch
+               seine visuelle Oberfläche für Wissenschaftler*innen auch ohne umfangreiche
+               Programmierkenntnisse nutzbar und speziell für die Bereinigung von Daten
+               entwickelt.</p>
+            <p xml:id="p3">Die Idee für ein Open-Source-Tool zur Bereinigung großer Datenmengen
+               stammt von Metaweb Technologies und wurde von David Huynh bis Mai 2010 unter dem
+               Namen Freebase Gridworks entwickelt. Das Tool diente dazu, Daten umzuwandeln und zu
+               bereinigen, um diese in Freebase, einer Wissensdatenbank von Metaweb, zu importieren.
+               Im Juli 2010 übernahm Google Metaweb, woraufhin das Tool in Google Refine umbenannt
+               und mit zusätzlichen Funktionen erweitert wurde. Im Jahr 2012 übertrug Google die
+               Projektleitung an die Open-Source-Community, wodurch das Tool in OpenRefine umbenannt
+               und nach GitHub<note xml:id="ftn1"> GitHub: OpenRefine. URL: <ref
+                     target="https://github.com/OpenRefine">https://github.com/OpenRefine</ref>,
+                  zuletzt geprüft am 31.10.2024.</note> verschoben wurde. In den darauffolgenden
+               Jahren gewann OpenRefine zunehmend an Beliebtheit, insbesondere bei
+               Wissenschaftler*innen, Bibliotheken und Kultureinrichtungen. Seit 2017 ermöglicht ein
+               Plug-In die Anreicherung von Daten aus Wikidata. Seit 2018 erhielt OpenRefine nach
+               eigenen Angaben finanzielle Unterstützungen von der Google News Initiative, der Chang
+               Zuckerberg Initiative, der Wikimedia Foundation und der Nationalen
+               Forschungsdateninfrastruktur (NFDI).<note xml:id="ftn2">OpenRefine Project History.
+                  URL: <ref
+                     target="https://web.archive.org/web/20241114231340/https://openrefine.org/openrefine_history"
+                     >https://web.archive.org/web/20241114231340/https://openrefine.org/openrefine_history</ref>.</note>
+            </p>
+            <p xml:id="p4">OpenRefine verfügt über eine Dokumentation, die einen guten Einstieg in
+               die Arbeit mit dem Tool bietet. In der Dokumentation wird beschrieben, wie OpenRefine
+               installiert wird, worauf bei der Nutzung zu achten ist und wie ein Projekt gestartet
+               wird. Zudem werden Anleitungen zur Untersuchung, Umwandlung und zum Abgleich
+               (Reconciling) von Daten angeboten. Auch die Verwendung von Wikibase, Wikidata und
+               Wikimedia Commons im Zusammenhang mit OpenRefine wird erläutert. Abschließend wird
+               erklärt, wie Daten exportiert werden und man zur Weiterentwicklung von OpenRefine
+               beitragen kann.<note xml:id="ftn3">OpenRefine user manual. URL: <ref
+                     target="https://openrefine.org/docs">https://openrefine.org/docs</ref>, zuletzt
+                  geprüft am 31.10.2024.</note> OpenRefine arbeitet im Browser. Laut der
+               Dokumentation sind am besten Browser geeignet, die auf WebKit basieren. Dazu gehören
+               Google Chrome, Chromium, Opera, Microsoft Edge und Safari. In dem später im Text
+               behandelten Fallbeispiel wurde allerdings mit Firefox gearbeitet und auch hier kam es
+               zu keinen Problemen aufgrund des Browsers. Ein Internetzugang ist nur nötig, um Daten
+               ins Internet zu importieren, zu exportieren oder Daten über einen Webservice
+                  abzugleichen.<note xml:id="ftn4">Installing OpenRefine. URL: <ref
+                     target="https://web.archive.org/web/20241119005214/https://openrefine.org/docs/manual/installing"
+                     >https://web.archive.org/web/20241119005214/https://openrefine.org/docs/manual/installing</ref>.</note>
+               Neben der offiziellen Dokumentation von OpenRefine gibt es Videotutorials und
+               Onlinekurse, die von verschiedenen Anbietern veröffentlicht wurden und die
+               Arbeitsschritte mit OpenRefine anhand von Fallbeispielen visualisieren.<note
+                  xml:id="ftn5"> OpenRefine: External resources. URL: <ref
+                     target="https://web.archive.org/web/20251020144710/https://openrefine.org/external_resources"
+                     >https://web.archive.org/web/20251020144710/https://openrefine.org/external_resources</ref>.</note></p>
+            <p xml:id="p5">Jeder Datensatz hat seine eigenen Besonderheiten und muss individuell
+               bearbeitet werden. Um ein besseres Verständnis dafür zu vermitteln, wie OpenRefine
+               unterstützen kann und wo die Grenzen dieses Tools liegen, betrachten wir ein
+               konkretes Anwendungsbeispiel: Korrespondenzmetadaten aufbereiten für correspSearch.
+               Der Webservice correspSearch ermöglicht es, Verzeichnisse verschiedener digitaler und
+               gedruckter Briefeditionen zu durchsuchen (<ref target="#dumont-etal2025">Dumont et
+                  al. 2025</ref>). Nutzende können nach Sender und Empfänger sowie nach Ort, Datum
+               und weiteren Faktoren wie Geschlecht oder Beruf recherchieren. CorrespSearch
+               aggregiert Briefmetadaten aus verteilten Repositorien und stellt diese auch über eine
+               offene Schnittstelle zur Verfügung. Voraussetzung ist, dass die Briefmetadaten im
+               TEI-XML-basierten „Correspondence Metadata Interchange Format” (CMIF) vorliegen, das
+               seit 2015 im Rahmen der Correspondence Special Interest Group der Text Encoding
+               Initiative entwickelt wird (<ref target="#tei2025">TEI Correspondence SIG
+               2025</ref>). Sind die Briefmetadaten schon maschinenlesbar, wie es bei digitalen
+               Editionen der Fall ist, ist ein Tool wie OpenRefine nicht nötig. OpenRefine kommt
+               u.a. zum Einsatz, wenn gedruckte Editionen ein Briefverzeichnis aufweisen, das in
+               PDF-Form vorliegt und mit einfachen Mitteln kopierbar ist oder die Briefe in
+               Tabellenform bereits erfasst wurden. Die basalen Informationen zum Brief
+               (Absender*in, Empfänger*in, Ort, Datum) werden mit Hilfe von OpenRefine strukturiert,
+               bereinigt und aufbereitet. Im Anschluss wird die so entstandene Tabelle mit Hilfe
+               eines weiteren Dienstes in eine CMIF-Datei konvertiert.</p>
+            <p xml:id="p6">Da OpenRefine lokal auf dem Rechner läuft, kann ein zu kleiner
+               Speicherplatz bzw. ein zu großer Datensatz das Programm stark verlangsamen.<note
+                  xml:id="ftn6"> GitHub: Large text facets are excruciatingly slow, <ref
+                     target="https://web.archive.org/web/20260211094721/https://github.com/OpenRefine/OpenRefine/issues/672"
+                     >https://web.archive.org/web/20260211094721/https://github.com/OpenRefine/OpenRefine/issues/672</ref>.</note>
+               In der OpenRefine-Dokumentation wird ein Datensatz als „groß“ definiert, wenn er über
+               50 Megabyte oder mehr als eine Million Zellen hat. Abhängig von der Anzahl der
+               Spalten, können mehr oder weniger Zeilen problemlos bearbeitet werden. Standardmäßig
+               verwendet OpenRefine 1 GB Arbeitsspeicher. Bei Bedarf kann das Programm aber auch so
+               konfiguriert werden, das mehr Arbeitsspeicher verwendet wird (sofern verfügbar).<note
+                  xml:id="ftn7">Installing OpenRefine. URL: <ref
+                     target="https://web.archive.org/web/20250521112744/https://openrefine.org/docs/manual/installing"
+                     >https://web.archive.org/web/20250521112744/https://openrefine.org/docs/manual/installing</ref>.</note>
+               Große Datensätze können in kleinere Datensatzeinheiten geteilt und bearbeitet werden.
+               Eine andere Möglichkeit ist ein hybrides Vorgehen, wo die erste Mustererkennung und
+               finale Bereinigung mit OpenRefine erfolgt, aber die Massenverarbeitung über andere
+               Wege, wie einem Python-Skript.</p>
+            <p xml:id="p7">Die Nutzung von OpenRefine ist sinnvoll, wenn die Daten in digitaler Form
+               vorliegen, aber wenig strukturiert und unbereinigt sind. Das bedeutet, dass die
+               Datumsangaben beispielsweise nicht in einem maschinenlesbaren Format vorliegen oder
+               die Orts- und Personennamen keine zugewiesene ID haben oder in einem ungeeigneten
+               Format sind. Die Namen sind abgekürzt, falsch geschrieben oder der Vor- und Nachname
+               ist in einer ungewünschten Reihenfolge. Das alles kann mit einfachen Mitteln mit
+               OpenRefine behoben werden. Damit die Nutzung von OpenRefine lohnenswert ist, sollte
+               es sich um eine größere Anzahl an Datensätzen handeln. Die Einarbeitungszeit für das
+               Tool ist nicht zu unterschätzen. Besonders für Plugins, die Skriptsprache GREL und
+               die Facetten sollte dabei Zeit eingeplant werden. Dennoch ist GREL als Skriptsprache
+               einfacher zu lernen, als eine Programmiersprache wie Python, die je nach
+               Fragestellung mindestens das Gleiche leisten kann wie GREL. Bei kleineren Datensätzen
+               kann das manuelle Bereinigen oder die Nutzung von regulären Ausdrücken über Notepad++
+               zeitsparender sein. Am einfachsten ist es, wenn die zu bereinigenden Metadaten im
+               CSV-Format, in zeilenbasierten Textdateien oder als Excel-Dateien vorliegen.
+               OpenRefine erlaubt auch XML, JSON oder MARC als Importformat. Diese Dateien können
+               bei der Umwandlung in ein Tabellenformat durch die Verästelung aber Probleme
+               bereiten. Aus OpenRefine können CSV-, TSV-, ODF-, HTML- und Exceldateien im
+               Tabellenformat unkompliziert exportiert werden. Des Weiteren ist es möglich Templates
+               zu erstellen, die die Tabelle in andere Dateiformate umwandeln. </p>
+            <p xml:id="p8">Schließlich kann OpenRefine dabei unterstützen große Datenmengen zu
+               standardisieren und in Wikidata neu einzuspeisen oder bereits existierende
+               Wikidataeinträge zu bearbeiten (<ref target="#wikimedia">Wikimedia Foundation
+                  2024</ref>). Auch bei anderen Datenbanken wie FactGrid können auf diesem Weg Daten
+               eingespeist bzw. angereichert werden (<ref target="#factgrid2023">Factgrid
+               2023</ref>).</p>
+         </div>
+         <div xml:id="div3">
+            <head>Die Arbeit mit OpenRefine</head>
+            <p xml:id="p9"><figure xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-1.png"/>
+                  <head>Briefverzeichnis einer gedruckten Edition.</head>
+               </figure><figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-2.png"/>
+                  <head>Briefverzeichnis in einer TXT-Datei.</head>
+               </figure>Der Briefwechsel Hermann Diels, Hermann Usener und Eduard Zeller, welchen
+               Dietrich Ehlers 1992 herausgab, besitzt ein solches Briefverzeichnis (<ref
+                  target="#ehlers1992">Ehlers 1992</ref>, 23). Die Daten können mit wenigen
+               Schritten in eine Textdatei kopiert werden (siehe Abb. 1 und 2).</p>
+            <div xml:id="div3.1">
+               <head>Spalten</head>
+               <p xml:id="p10"><figure xml:id="img3">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-3.png"/>
+                     <head>Ansicht der Importvorschau.</head>
+                  </figure>
+                  <figure xml:id="img4">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-4.png"/>
+                     <head>Spaltentrennung mit Separatoren.</head>
+                  </figure>
+                  <figure xml:id="img5">
+                     <head>Spaltentrennung mit Separatoren.</head>
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-5.png"/>
+                     <head>Entfernung der letzten Zahl</head>
+                  </figure> OpenRefine bietet beim Importieren der Daten eine Vorschau, bei der
+                  überprüft werden kann, ob die Spaltentrennung und die Spaltenköpfe richtig
+                  übernommen sind (siehe Abb. 3). In unserem Fall haben wir eine Textdatei, die
+                  keine Überschriften enthält und an den Kommata getrennt werden soll. Allerdings
+                  kann auch hier im Nachgang nachbearbeitet und die Spalten an genau definierten
+                  Stellen getrennt werden. Das ist über den Pfeil im Spaltenkopf ➔ <emph>edit column</emph> ➔
+                  <emph>split into several columns…</emph>. möglich (siehe Abb. 4). Dabei sind Separatoren nötig
+                  wie ein Punkt „.“ oder Präpositionen wie „an“, „am“ oder „nach“. Um Wörter oder
+                  Zahlen zu entfernen, die in den Spalten immer an letzter Stelle sind, eignet sich
+                  der GREL-Ausdruck <code>value.split(" ").slice(0,-1).join(" ")</code> (siehe Abb. 5).
+                  Es handelt sich dabei um GREL, die JavaScript ähnelt und gut dafür geeignet ist,
+                  Strings umzuwandeln oder mathematische Berechnungen durchzuführen.<note
+                     xml:id="ftn8">OpenRefine: General Refine Expression Language. URL: <ref
+                        target="https://web.archive.org/web/20241007103332/https://openrefine.org/docs/manual/grel"
+                        >https://web.archive.org/web/20241007103332/https://openrefine.org/docs/manual/grel</ref>.</note></p>
+               <p xml:id="p11">Das Correspondence Metadata Interchange Format (CMIF), das
+                  correspSearch benötigt, ist TEI-XML basiert. Um die Daten aus einer
+                  Tabellenstruktur in CMIF zu überführen wird das Skript CSV2CMI verwendet (<ref
+                     target="#rettinghaus2025">Rettinghaus 2025</ref>), das von der Sächsischen
+                  Akademie der Wissenschaften auch als Webservice angeboten wird (<ref target="#saw"
+                     >Sächsische Akademie der Wissenschaften o.J.</ref>). CSV2CMI erwartet dabei
+                  standardisierte Spaltennamen und bestimmte Werte (Nummern, Text, Datumsangaben,
+                  Weblinks). Sollten Daten nicht vorhanden sein, wie für den Ort des Empfängers
+                     (<code>addresseePlace</code>), dann bleibt die Zelle in der Spalte leer. Hat
+                  eine Spalte ein bis mehrere Werte - wie es bei Personenspalten häufig ist - werden
+                  die Namen oder GND-URLs durch einen selbstgewählten Delimiter, wie den geraden
+                  Trennstrich <code>|</code>, getrennt. Vor und nach dem Delimiter sollte kein
+                  Leerzeichen stehen, ebenso wie vor und nach Einträgen in den Zellen. Ist das der
+                  Fall, können die Leerzeichen über den Pfeil im Spaltenkopf ➔ <emph>edit cells</emph> ➔ <emph>common
+                  transforms</emph> ➔ <emph>trim leading and trailing whitespace</emph> entfernt werden. </p>
+               <p xml:id="p12">Übersicht über die Spalten und die erwarteten Werte für den csv2cmi
+                  Webservice:</p>
+               <table rend="rules">
+                  <row>
+                     <cell style="text-align: left;">key</cell>
+                     <cell style="text-align: left;">Korrespondenznummer</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">edition</cell>
+                     <cell style="text-align: left;">Edition (UUID-Nummer, die mit einem Buchstaben
+                        beginnt – die genauen Editionsangaben werden über den csv2cmi Webservice
+                        eingetragen)</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">sender</cell>
+                     <cell style="text-align: left;">Ein bis mehrere Absender</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">senderID</cell>
+                     <cell style="text-align: left;">Ein bis mehrere <ref
+                           target="https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html"
+                           >GND</ref>-URLs der Absender</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">senderPlace</cell>
+                     <cell style="text-align: left;">Ort der Absender</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">senderPlaceID</cell>
+                     <cell style="text-align: left;"><ref target="http://www.geonames.org/"
+                           >GeoNames</ref> URL vom Ort des Absenders</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">senderDate</cell>
+                     <cell style="text-align: left;">Absendedatum standardisiert (yyyy-MM-dd)</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">senderDateText</cell>
+                     <cell style="text-align: left;">Absendedatum Text (z.B. dd.MM.yyyy)</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addressee</cell>
+                     <cell style="text-align: left;">Ein bis mehrere Empfänger</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addresseeID</cell>
+                     <cell style="text-align: left;">Ein bis mehrere <ref
+                           target="https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html"
+                           >GND</ref>-URLs der Empfänger</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addresseePlace</cell>
+                     <cell style="text-align: left;">Ort der Empfänger</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addresseePlaceID</cell>
+                     <cell style="text-align: left;"><ref target="http://www.geonames.org/"
+                           >GeoNames</ref> URL vom Ort des Empfängers</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addresseeDate</cell>
+                     <cell style="text-align: left;">Empfangsdatum standardisiert
+                        (yyyy-MM-dd)</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">addresseeDateText</cell>
+                     <cell style="text-align: left;">Empfangsdatum Text</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">page</cell>
+                     <cell style="text-align: left;">Seitenzahl (Nur nötig, wenn es keine
+                        Korrespondesnummer gibt)</cell>
+                  </row>
+                  <row>
+                     <cell style="text-align: left;">note</cell>
+                     <cell style="text-align: left;">Anmerkung</cell>
+                  </row>
+               </table>
+            </div>
+            <div xml:id="div3.2">
+               <head>Personen- und Ortsnamen</head>
+               <p xml:id="p13">
+                  <figure xml:id="img6">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-6.png"/>
+                     <head>Textfacette.</head>
+                  </figure> OpenRefine bietet mehrere einfache Möglichkeiten Personennamen zu
+                  vereinheitlichen. Zunächst gibt es Verzeichnisse, in denen der Absender immer
+                  gleich ist und daher nicht genannt wurde. Dann ist es nötig, eine neue Spalte für
+                  den Absender zu erstellen. Das funktioniert über den Pfeil im Spaltenkopf ➔ <emph>edit
+                  column</emph> ➔ <emph>add column based on this column</emph> ➔ <emph>Expression:</emph> <code>value.replace(value,
+                     "NAME DES ABSENDERS")</code>. Die Personennamen sollten keine Kürzel beinhalten
+                  und die gleiche Person gleich benannt werden. Das kann mit der Funktion Pfeil im
+                  Spaltenkopf ➔ <emph>facet</emph> ➔ <emph>text facet</emph> überprüft werden. Gibt es mehrere Empfänger oder
+                  Absender werden diese durch einen beliebigen Delimiter getrennt. Das richtige
+                  Format ist „Vorname Nachname“. Falls die Angabe umgekehrt ist („Nachname,
+                  Vorname“) kann über den GREL-Ausdruck <code>value.match(/(.*), (.*)/).reverse().join("
+                     ")</code> die Reihenfolge leicht korrigiert werden. Sollte es sich um eine
+                  Briefedition handeln, bei dem die Daten für die Spalte „sender“ oder „addressee“
+                  fehlen, weil sie im Kontext der Edition selbsterklärend sind, kann auf Basis der
+                  jeweils anderen Spalte, die Spalte erstellt werden. Das trifft zu wenn in der
+                  Edition Briefe von nur einer Person erfasst werden und nur die Empfänger gelistet
+                  sind (z.B. „An Goethe“). Oder es handelt sich um einen Briefwechsel bei dem nur
+                  die Sender aufgelistet werden (z.B. „Von Schiller). Im ersten Fall muss eine
+                  Spalte erstellt werden, die in jeder Zeile den gleichen Namen beinhalten. Im
+                  zweiten Fall wird die vorhandene Spalte dupliziert und die Namen mit dem/der
+                  Briefpartner*in ersetzt. Mit folgendem GREL-Ausdruck wird die Spalte dupliziert: Pfeil
+                  im Spaltenkopf ➔ <emph>edit column</emph> ➔ <emph>add column based on this column</emph> ➔ <emph>Expression:</emph>
+                     <code>value</code>. Um die Werte mit den jeweiligen Briefpartner*innen zu
+                  ersetzen, muss im Zwischenschritt auf Zahlen oder ein einmaliges Kürzel
+                  zurückgegriffen werden, da sich sonst die nachfolgenden Ausdrücke gegeneinander
+                  ausspielen: Pfeil im Spaltenkopf ➔ <emph>edit column</emph> ➔ <emph>add column based on this column</emph> ➔
+                  <emph>Expression:</emph> <code>value.replace("PERSON1","1").replace("PERSON2", "2")</code>.
+                  Wenn der Schritt übersprungen und ein*e Briefparter*in mit dem Namen der anderen
+                  Person ersetzt wird, findet sich in jeder Zeile die gleiche Person, weshalb der
+                  Zwischenschritt mit Kürzeln unumgänglich ist. Mit einem Klick in die gewünschte
+                  Zelle kann das Kürzel mit dem entsprechenden Namen wieder ersetzt und mit „Apply
+                  to All Identical Cells“ bestätigt werden, sodass der gewünschte Name bei allen
+                  identischen Zellen übernommen wird oder die Namen werden über die Textfacette und
+                  mit „edit“ angepasst (siehe Abb. 6).</p>
+               <p xml:id="p14">
+                  <figure xml:id="img7">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-7.png"/>
+                     <head>Verknüpfung mit der GND.</head>
+                  </figure>
+                  <figure xml:id="img8">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-8.png"/>
+                     <head>Identifikation der Person.</head>
+                  </figure>
+                  <figure xml:id="img9">
+                     <head>Identifikation der Person.</head>
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-9.png"/>
+                     <head>Ermittlung der GND-Nummer</head>
+                  </figure> Um Personen- und Ortsnamen anzureichern, können Daten über eine
+                  Schnittstelle mit Wikidata, ORCID, VIAF<note xml:id="ftn9">OpenRefine:
+                     Reconciling. URL: <ref
+                        target="https://web.archive.org/web/20241011204547/https://openrefine.org/docs/manual/reconciling"
+                        >https://web.archive.org/web/20241011204547/https://openrefine.org/docs/manual/reconciling</ref>.</note>
+                  oder der GND angereichert werden (<ref target="#steeg2018">Steeg und Pohl
+                     2018</ref>). Dafür muss zunächst das entsprechende Plugin installiert werden.
+                  Für die GND wurde der Plugin von lobid entwickelt und wird unter URL <ref
+                     target="https://lobid.org/gnd/reconcile">https://lobid.org/gnd/reconcile</ref>
+                  bereitgestellt. lobid ist ein Angebot vom Hochschulbibliothekszentrum des Landes
+                  Nordrhein-Westfalen (hbz) und stellt auf Basis von Linked Open Data (LOD)
+                  Progammierschnittstellen (APIs) und Rechercheoberflächen bereit (<ref
+                     target="#hbzlobid">Hochschulbibliothekszentrum des Landes NRW o. J.</ref>). Der
+                  GND-Plugin kann für die Anreicherung umfangreicher Personendaten sehr nützlich
+                  sein. Bei einem Briefwechsel mit zwei bis drei Beteiligten lohnt sich das Plugin
+                  nicht. Für einen Einsatz spricht, wenn sich viele bekannte Personen im Datensatz
+                  befinden oder neben der GND-Nummer weitere Daten wie Geschlecht, Beruf oder
+                  Beschäftigung über das Plugin ergänzt werden sollen. Schließlich müssen die
+                  richtigen Personen identifiziert werden (siehe Abb. 7 und 8). Auch Namen wie
+                  „Wilhelm Schneider“, die häufig vorkommen, können Probleme bereiten. In solchen
+                  Fällen macht es Sinn über lobid.org oder die DNB zu gehen, den Datensatz in Ruhe
+                  anzuschauen und die Daten händisch zu ergänzen. Anschließend kann eine Spalte mit
+                  der GND-Nummer hinzugefügt werden (siehe Abb. 9). Das Problem dabei ist, dass
+                  meist nicht nur die Nummer, sondern die ganze URL erwartet wird. Diese muss über
+                  den GREL-Ausdruck <code>"http://d-nb.info/gnd/" + value</code> ergänzt werden. In
+                  einigen Fällen ist es auch einfacher, auf das Plugin zu verzichten, die Spalten zu
+                  duplizieren und die Namen mit den gewünschten URLs manuell zu ersetzen.</p>
+            </div>
+            <div xml:id="div3.3">
+               <head>Datumsangaben</head>
+               <p xml:id="p15">
+                  <figure xml:id="img10">
+                     <graphic
+                        url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-10.png"/>
+                     <head>Umwandlung der Datumsangaben in ein maschinenlesbares Format.</head>
+                  </figure>Mit OpenRefine können Datumsangaben leicht umformatiert werden. Um wie in
+                  unserem Beispiel die Spalten „senderDate“ und „addresseeDate“ das Datum in das
+                  Format <code>yyyy-MM-dd</code> oder <code>yyyy-MM</code> oder <code>yyyy</code> zu
+                  bringen, bieten sich besonders häufig zwei Ausdrücke an. Um die Datumsangabe
+                  „02.12.1890“ nach „1890-12-02“ umzuwandeln, hilft der GREL-Ausdruck
+                     <code>value.toDate('dd.MM.yyyy')&#8203;.toString('yyyy-MM-dd')</code> (siehe
+                  Abb. 10). Bei der Datumsangabe vom „2. Dezember 1890“ nach „1890-12-02“, ist der
+                  GREL-Ausdruck <code>value.toDate('dd. MMM
+                     yyyy','dd.MM.yyyy').toString('yyyy-MM-dd')</code> nützlich. Mithilfe der
+                  Textfacette (siehe Abb. 6), können Datumsangaben auf Ihre Richtigkeit hin
+                  überprüft und manuell Angaben, die nicht automatisch umgewandelt wurden (z.B.
+                  Mitte September oder um den Tag X), korrigiert werden.</p>
+               <p xml:id="p16">Schreibweise der Attribute in CSV2CMI :</p>
+               <table rend="rules">
+                  <row>
+                     <cell>attribute</cell>
+                     <cell>Format</cell>
+                     <cell>Beispiel</cell>
+                  </row>
+                  <row>
+                     <cell>when</cell>
+                     <cell>yyyy-MM-dd</cell>
+                     <cell>1997-09-09</cell>
+                  </row>
+                  <row>
+                     <cell>from-to</cell>
+                     <cell>yyyy-MM-dd/yyyy-MM-ds</cell>
+                     <cell>1860-03-04/1860-03-10</cell>
+                  </row>
+                  <row>
+                     <cell>notBefore-notAfter</cell>
+                     <cell>[yyyy-MM-dd..yyyy-MM-dd]</cell>
+                     <cell>[1667-03-01..1667-06-15]</cell>
+                  </row>
+                  <row>
+                     <cell>notBefore</cell>
+                     <cell>[yyyy-MM-dd..]</cell>
+                     <cell>[1667-09-29..]</cell>
+                  </row>
+                  <row>
+                     <cell>notAfter</cell>
+                     <cell>[..yyyy-MM-dd]</cell>
+                     <cell>[..1867-09-29]</cell>
+                  </row>
+               </table>
+               <list rend="bulleted">
+                  <item>ermittelt: 1669-05-03~</item>
+                  <item>vermutlich (?): 1667%</item>
+               </list>
+            </div>
+         </div>
+         <div xml:id="div4">
+            <head>Anpassungen an moderne Technologien</head>
+            <p xml:id="p17">Die Fortschritte im Bereich des maschinellen Lernens greift auch die
+               OpenRefine-Community auf. Michael Markert entwickelte ein „OR-LLM-Script“, dass vor
+               allem für Spalten mit längeren Textblöcken wie etwa Kurzbiografien relevant ist und
+               lokal auf dem Rechner die Daten auswertet. Das geschieht mithilfe eines Large
+               Language Models (LLM) und einer API, die bei der Named-Entity Recognition (NER)
+               Datenbereinigung und inhaltliche Anreicherung unterstützen (<ref
+                  target="#markert2024">Markert 2024</ref>). Durch die Anwendung eines LLM in OpenRefine können große Mengen an
+               Textdaten automatisiert analysiert werden. Das LLM erkennt Entitäten wie Namen,
+               Datumsangaben und Orte und extrahiert diese. Für die Digital Humanities bietet das
+               die Möglichkeit Informationen auf Brieftexten oder Kurzbiografien automatisiert zu
+               erschließen. Die historischen Informationen können auf neue Weise auffindbar gemacht
+               und ausgewertet werden, was der historischen Forschung neue Perspektiven
+               aufzeigt. Ein Workflow könnte so aussehen, dass mit OpenRefine die Daten bereinigt
+               werden, mit LLMs oder NER-APIs Namen von Personen, Körperschaften, Orten und weitere
+               Entitäten erkannt werden, diese Entitäten dann mittels Reconciliation mit
+               Referenzdatensätzen von der GND oder Wikidata abgeglichen und die so aufbereiteten
+               Daten exportiert und in Datenbanken integriert werden.</p>
+         </div>
+         <div xml:id="div5">
+            <head>Fazit</head>
+            <p xml:id="p18">OpenRefine ist gut dafür geeignet große Mengen an Metadaten zu
+               bereinigen und zu strukturieren. Die Stärken von OpenRefine liegen in seiner
+               Fähigkeit, unstrukturierte Daten in strukturierte zu überführen und mit
+               Metadaten anzureichern. Auch ist die Skriptsprache GREL von OpenRefine einfacher zu
+               lernen als Programmiersprachen wie Python. Zukünftig sind weitere Entwicklungen 
+               im Bereich des maschinellen Lernens zu erwarten, die neue Möglichkeiten bei der Arbeit mit
+               OpenRefine aufzeigen werden.</p>
+            <p xml:id="p19">
+               <figure xml:id="img11">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/openrefine/pictures/picture-11.png"/>
+                  <head>Tabelle mit standardisierten Metadaten.</head>
+               </figure> Ein konkretes Beispiel seiner Anwendung ist die Aufbereitung von
+               Korrespondenzdaten als CMIF für den Webservice correspSearch. OpenRefine kann hier
+               eingesetzt werden, um Metadaten aus gedruckten oder unstrukturierten digitalen
+               Quellen zu bereinigen und zu standardisieren, bevor sie in CMIF umgewandelt werden.
+               Dabei bietet OpenRefine zahlreiche Funktionen wie das Trennen von Spalten an
+               definierten Stellen, das Anreichern von Daten über die GND oder Wikidata sowie das
+               Vereinheitlichen von Datumsangaben und Namen. Das Endergebnis ist eine Tabelle (siehe
+               Abb. 11), die problemlos über den csv2cmi Webservice in das CMIF umgewandelt und
+               anschließend in die Datenbank von correspSearch eingespeist werden kann. <note
+                  xml:id="ftn10">Siehe <ref
+                     target="https://correspsearch.net/de/suche.html?e=eb06446e-0c72-4cbf-8c56-b06fcc252610"
+                     >
+                     https://correspsearch.net/de/suche.html?e=eb06446e-0c72-4cbf-8c56-b06fcc252610
+                  </ref> für das Suchergebnis des hier konvertierten Briefverzeichnisses in
+                  correspSearch (abgerufen am 15.05.2025).</note></p>
+            <p xml:id="p20">Trotz der vielen Vorteile erfordert OpenRefine eine gewisse
+               Einarbeitungszeit. Kleinere Datensätze lassen sich möglicherweise effizienter mit
+               anderen Methoden bereinigen. Insgesamt stellt OpenRefine eine wertvolle Ressource
+               dar, um die Qualität und Interoperabilität von Metadaten zu verbessern und die Arbeit
+               mit historischen Daten und Editionen zu erleichtern.</p>
+         </div>
+      </body>
+      <back>
+         <div type="bibliography">
+            <listBibl>
+               <bibl xml:id="dreßen2023">Dreßen, Angela, Elodie Sacher. 2023. “Querying Art History
+                  Data on the Web (5): Modelling Data with OpenRefine.“ In <emph>Querying Museum and
+                     Art History Data on the Web</emph>. DOI: <ref
+                     target="https://doi.org/10.22032/dbt.55804">10.22032/dbt.55804</ref>.</bibl>
+               <bibl xml:id="dumont-etal2025">Dumont, Stefan, Sascha Grabsch, Jonas Müller-Laackman,
+                  Ruth Sander und Steven Sobkowski, Hg. 2025. correspSearch – Briefeditionen
+                  vernetzen (v3.1.0) [Webservice]. Berlin-Brandenburgische Akademie der
+                  Wissenschaften. <ref target="https://correspSearch.net"
+                     >https://correspSearch.net</ref>, abgerufen am 14.05.2025.</bibl>
+               <bibl xml:id="ehlers1992">Ehlers, Dietrich, Hg. 1992: „Hermann Diels, Hermann Usener,
+                  Eduard Zeller: Briefwechsel”. Berlin, Boston: Akademie Verlag. DOI:<ref
+                     target="https://doi.org/10.1515/9783050066752">
+                  10.1515/9783050066752</ref>.</bibl>
+               <bibl xml:id="factgrid2023">FactGrid, Hg. 2023: „Help:OpenRefine für FactGrid”. <ref
+                     target="https://web.archive.org/web/20251219093658/https://database.factgrid.de/wiki/Help:OpenRefine_f%C3%BCr_FactGrid"
+                     >https://web.archive.org/web/20251219093658/https://database.factgrid.de/wiki/Help:OpenRefine_f%C3%BCr_FactGrid</ref>,
+                  abgerufen am 14.05.2025.</bibl>
+               <bibl xml:id="github1">GitHub: OpenRefine.
+                  <ref target="https://github.com/OpenRefine">https://github.com/OpenRefine</ref>, abgerufen am 31.10.2024.</bibl>
+               <bibl xml:id="hbzlobid">Hochschulbibliothekszentrum des Landes NRW, Hg. o. J.
+                     <emph>lobid.org</emph>. <ref target="https://lobid.org/"
+                     >https://lobid.org/</ref>, abgerufen am 31.10.2024.</bibl>
+               <bibl xml:id="markert2024">Markert, Michael. 2024. Tutorial zur Nutzung eines lokalen
+                  LLM in OpenRefine für NER, Bereinigung, Anreicherung. <ref
+                     target="https://www.youtube.com/watch?v=jQLcthiOli8"
+                     >https://www.youtube.com/watch?v=jQLcthiOli8</ref>, abgerufen am 31.10.2024.</bibl>
+               <bibl xml:id="openrefine">OpenRefine (Hg.): OpenRefine user manual. <ref target="https://openrefine.org/docs">https://openrefine.org/docs</ref>, abgerufen am 31.10.2024.</bibl>
+               <bibl xml:id="rettinghaus2025">Rettinghaus, Klaus unter Mitarbeit von Uwe Kretschmer,
+                  Jana Dolan und Sophie Schneider. 2025. CSV2CMI (v2.2.1) [Software]. Zenodo. DOI: <ref
+                     target="https://doi.org/10.5281/zenodo.15350911"
+                     >10.5281/zenodo.15350911</ref>.
+               </bibl>
+               <bibl xml:id="saw">Sächsische Akademie der Wissenschaften zu Leipzig, Hg. o. J.
+                     <emph>csv2cmi webservice</emph>. <ref target="https://cmif.saw-leipzig.de/"
+                     >https://cmif.saw-leipzig.de/</ref>, abgerufen am 31.10.2024.</bibl>
+               <bibl xml:id="steeg2018">Steeg, Fabian, Adrian Pohl. 2018. „GND reconciliation for
+                  OpenRefine”. <ref
+                     target="https://web.archive.org/web/20251219093136/https://blog.lobid.org/2018/08/27/openrefine.html"
+                     >https://web.archive.org/web/20251219093136/https://blog.lobid.org/2018/08/27/openrefine.html</ref>.</bibl>
+               <bibl xml:id="tei2025"> TEI Correspondence Special Interest Group, Hg. 2025.
+                  Correspondence Metadata Interchange Format (CMIF). <ref
+                     target="https://github.com/TEI-Correspondence-SIG/CMIF"
+                     >https://github.com/TEI-Correspondence-SIG/CMIF</ref>, abgerufen am 14.05.2025.</bibl>
+               <bibl xml:id="wikimedia">Wikimedia Foundation, Hg. 2024. OpenRefine for Wikidata: the
+                  basics. <ref
+                     target="https://app.learn.wiki/learning/course/course-v1:WikimediaFoundation+WMF_GLAM001+2024/home"
+                     >https://app.learn.wiki/learning/course/course-v1:WikimediaFoundation+WMF_GLAM001+2024/home</ref>,
+                  abgerufen am 14.05.2025.</bibl>
+            </listBibl>
+         </div>
+      </back>
+   </text>
+</TEI>
