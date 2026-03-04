@@ -1932,7 +1932,19 @@
                </quote>
             </cit>
             </p>
-            <p xml:id="p25">The plain text of the letter together with the prompt (Fig. 1) was
+            <p xml:id="p25">
+               <figure
+                  xml:id="img1">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
+                  <head type="legend">Prompt instructions to convert plain text into TEI.</head>
+               </figure>
+               <figure xml:id="img2">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-2.png"/>
+                  <head type="legend">Letter encoded in TEI.</head>
+               </figure>               
+               The plain text of the letter together with the prompt (Fig. 1) was
                entered into the chat and the resulting XML/TEI encoding is shown in Fig. 2. The
                result shows that the overall letter structure is correctly identified and
                appropriate XML/TEI elements are applied. Abbreviations are partially resolved, the
@@ -1944,17 +1956,7 @@
                include the incomplete preservation of the input text and the repositioning of
                structural elements such as dates or signatures in the output. Such rearrangements
                may suggest model-internal assumptions about typical letter layouts, possibly
-               reflecting generalized structural patterns learned during training. <figure
-                  xml:id="img1">
-                  <graphic
-                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
-                  <head type="legend">Prompt instructions to convert plain text into TEI.</head>
-               </figure>
-               <figure xml:id="img2">
-                  <graphic
-                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
-                  <head type="legend">Letter encoded in TEI.</head>
-               </figure>
+               reflecting generalized structural patterns learned during training. 
             </p>
             <p xml:id="p26">In the second example, the same TEI annotation task was applied to
                reports of envoys present at the Imperial Diet of Regensburg of 1576<emph>.</emph>
@@ -1992,18 +1994,20 @@
                </cit>
             </p>
 
-            <p xml:id="p28">The same prompt instructions as in Fig. 1 were used together with the
-               plain text of the letter. However, the statement “keep the original language” had to
-               be added to ensure that the source text was not normalised to standard German, which
-               happened during the initial run. The result in Figure 3 shows that, even with a
-               historical language like Early New High German texts, ChatGPT identifies the
-               structure of the document reasonably well. <figure xml:id="img3">
+            <p xml:id="p28">
+               <figure xml:id="img3">
                   <graphic
                      url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-3.png"/>
                   <head type="legend">The letter to August von Sachsen encoded in TEI using ChatGPT
                      GPT-4o. The entire second paragraph was left out in order to fit the beginning
                      and end on the picture.</head>
                </figure>
+               The same prompt instructions as in Fig. 1 were used together with the
+               plain text of the letter. However, the statement “keep the original language” had to
+               be added to ensure that the source text was not normalised to standard German, which
+               happened during the initial run. The result in Figure 3 shows that, even with a
+               historical language like Early New High German texts, ChatGPT identifies the
+               structure of the document reasonably well. 
             </p>
             <p xml:id="p29"> Close observation of the result shows that some text is missing. For
                some reason, the part of the opener indicating when the letter was presented to
@@ -2019,7 +2023,20 @@
                precisely tagged and correctly normalised using the <code>@when</code> attribute.
                However, ChatGPT does not automatically take the Gregorian calendar reform into
                consideration. It has to be explicitly mentioned to add <code>@calendar</code>.</p>
-            <p xml:id="p30">The tagging of people and places is also fine, but the identification
+            <p xml:id="p30">
+               <figure xml:id="img4">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-4.png"/>
+                  <head type="legend">The figure shows the result from ChatGPT trying to identify
+                     persons and places in the letter of 1576. Wrongly identified places are
+                     highlighted.</head>
+               </figure>
+               <figure xml:id="img5">
+                  <graphic
+                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-5.png"/>
+                  <head type="legend">Geoname references of the places generated by ChatGPT.</head>
+               </figure>
+               The tagging of people and places is also fine, but the identification
                and linking to authority files, as asked in the prompt, is missing. When asked to
                identify people and places and list them in a table with the columns (1. name as
                found in the letter, 2. type of entity, 3. normalised name, 4. reference to an
@@ -2038,18 +2055,7 @@
                the name could be the reason. Interesting is also the reference to place names. The
                GND identifiers provided by ChatGPT for Wien and Regensburg do not actually exist.
                However, if asked to provide Geoname references for the places, both are correctly
-               identified (Fig. 5). <figure xml:id="img4">
-                  <graphic
-                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-4.png"/>
-                  <head type="legend">The figure shows the result from ChatGPT trying to identify
-                     persons and places in the letter of 1576. Wrongly identified places are
-                     highlighted.</head>
-               </figure>
-               <figure xml:id="img5">
-                  <graphic
-                     url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-5.png"/>
-                  <head type="legend">Geoname references of the places generated by ChatGPT.</head>
-               </figure>
+               identified (Fig. 5). 
             </p>
 
          </div>
