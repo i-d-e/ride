@@ -57,7 +57,7 @@
                <bibl>
                   <title>ChatGPT</title>
                   <editor>OpenAI</editor>
-                  <date type="publication">2022–</date>
+                  <date type="publication">2022</date>
                   <idno type="URI">https://openai.com/</idno>
                   <date type="accessed">2026-02-01</date>
                </bibl>
@@ -1573,21 +1573,21 @@
          <div type="abstract">
             <p>Large language models such as OpenAI’s ChatGPT have rapidly become prominent tools in
                academic contexts, including digital scholarly editing. Although not originally
-               designed for editorial practice, ChatGPT is increasingly integrated into experimental
-               editorial workflows. This review surveys recent literature on its use in scholarly
-               editing and assesses its potential to support key editorial tasks. Drawing on
+               designed for editorial practice, they are increasingly integrated into experimental
+               editorial workflows. This review asseses its potential to support key editorial tasks and surveys recent literature on their use in digital scholarly
+               editing. Drawing on
                published case studies and our own experiments, we analyze the benefits and
                limitations of employing ChatGPT at different stages of creating and analyzing
-               digital editions, including transcription, TEI encoding, and named-entity
-               recognition. The review also addresses significant concerns. As a commercial and
-               largely closed system, ChatGPT operates as a “black box” that allows only indirect
-               control through prompting, which poses challenges for transparency and
+               digital scholarly editions, including transcription, TEI encoding, and named-entity
+               recognition. At the same time, the review addresses significant concerns. As a commercial and
+               largely closed system, ChatGPT operates as a ‘black box’ that allows only indirect
+               control through prompting, raising challenges for transparency and
                reproducibility in academic contexts. Issues of model bias, data governance, and
                ecological impact must be carefully considered when integrating such tools into
                research workflows. ChatGPT should therefore be adopted cautiously and critically.
                Nevertheless, its capacity to lower technical barriers and to consolidate tasks that
                previously required multiple tools and advanced programming skills makes it, or
-               similar AI tools, a potentially valuable assistant in digital editing workflows.</p>
+               similar artificial intelligence tools, a potentially valuable assistant in digital editing workflows.</p>
          </div>
       </front>
 
@@ -1595,75 +1595,70 @@
          <div xml:id="div1">
             <head>Introduction</head>
             <p xml:id="p1">In the rapidly evolving landscape of the Digital Humanities, large
-               language models (LLMs)<note xml:id="ftn1"> LLMs are trained with deep-learning
+               language models (LLMs)<note xml:id="ftn1">LLMs are trained with deep-learning
                   algorithms on vast corpora of web pages, books and articles to learn the patterns
                   and structures of language. With multi-billion-parameter architectures, they are
-                  able to generate context-aware text.</note> have become prominent tools for a
-               multitude of tasks, including text analysis, classification, and language
+                  able to generate context-aware text.</note> have become prominent tools for numerous tasks, including text analysis, classification, and language
                translation. This review examines ChatGPT’s capabilities as an assisting tool for
-               digital scholarly editing tasks. ChatGPT was selected due to its increased media
+               digital scholarly editing tasks. ChatGPT was selected due to its growing media
                presence and widespread adoption within the humanities community in recent years,
                including institutional deployments at universities such as the University of Graz,
-               where the authors are based. <note xml:id="ftn2">
-                  <p>Martina Scholger is a senior scientist at the Department of Digital Humanities
-                     at the University of Graz, where she works on digital scholarly editing. Roman
-                     Bleier is a postdoctoral researcher at the Department of Digital Humanities of
-                     the University of Graz and works in digital scholarly editing projects. Many
-                     thanks to Christopher Pollin of DH Craft for reading an early draft of this
-                     article and for providing valuable feedback and helpful suggestions, and to
-                     Thea Schaaf for proofreading.</p></note>
+               where the authors are affiliated.<note xml:id="ftn2">
+                  <p>Martina Scholger and Roman Bleier are both affiliated with the Department of Digital
+                     Humanities at the University of Graz, where they work in the field of digital scholarly editing — Scholger as a senior
+                     scientist and Bleier as a postdoctoral researcher. We thank Christopher
+                     Pollin of DH Craft for reading an early draft of this article and for providing
+                     valuable feedback and helpful suggestions, and Thea Schaaf for
+                     proofreading.</p></note>
             </p>
-            <p xml:id="p2">Introduced by OpenAI in November 2022 (<ref target="#OpenAI2023"
-                  type="crossref">OpenAI 2023</ref>), the chatbot ChatGPT is a generative artificial
-               intelligence system that communicates with users primarily through natural-language
-               interaction. It processes user input, known as prompts, to generate natural language
-               output and can be used as an assisting tool by scholars in the process of editing,
+            <p xml:id="p2">Introduced in November 2022 (<ref target="#OpenAI2024a"
+                  type="crossref">OpenAI 2024</ref>), the chatbot ChatGPT is a generative artificial
+               intelligence (AI) system developed by OpenAI that communicates through natural language,
+               processing user inputs, known as prompts, to produce textual responses.
+               It can be used as an assisting tool for scholars in the process of editing,
                annotating, and curating (historical) texts. The authors evaluate ChatGPT primarily
-               as users, i.e., as editors working with the web-based graphical user interface,
-               rather than as developers engaging directly with the underlying models or APIs. All
+               as practitioner-users, i.e., as editors working with the web-based graphical user interface,
+               rather than as developers engaging with the underlying models or APIs. All
                experiments were performed using the ChatGPT web interface, specifically the GPT-4o
-               model, accessed between July 2024 and July 2025, using both free and Plus tier
-               access. At the time of writing, ChatGPT is offered in multiple subscription tiers and
+               model, accessed between July 2024 and July 2025 under both free and Plus tier
+               access. ChatGPT is offered in multiple subscription tiers and
                model variants, each with different capabilities, usage limits, and available tools
                such as web browsing, image generation, and data analysis. During the revision period
                for this article, the default models and available features changed notably across
-               tiers, illustrating the platform’s rapid evolution and the time-bound nature of
-               experiments. The source material used derives from (digital) edition projects in
-               which the authors are involved. Given the rapid development of the models and
-               interface features, this review represents a time-bound snapshot rather than a final
-               assessment. </p>
+               tiers, illustrating the platform’s rapid evolution. The source material draws on digital edition projects in
+               which the authors are involved. Given the pace of development in both models and
+               interface features, this review represents a time-bound snapshot rather than a comprehensive 
+               assessment.</p>
             <p xml:id="p3">In conceptualizing how generative AI might support scholarly editing, the
                Institute for Documentology and Scholarly Editing (IDE) has proposed a processing
-               pipeline framework (<ref target="#Pollin2025" type="crossref">Pollin et al.
+               pipeline framework (<ref target="#Pollinetal2025" type="crossref">Pollin et al.
                   2025</ref>). This model distinguishes between source material, edition as data,
                and edition as publication, connected through intermediate editorial steps. Through
                digitization, transcription, and annotation, the workflow progresses from raw source
                materials toward a critical text prepared for publication. The framework further
                differentiates between structural tasks (e.g., planning, documentation, tool
                integration, quality control) and operational tasks (e.g., text recognition, entity
-               recognition, normalization, enrichment). This structured approach provides a useful
-               lens for assessing at which stages generative AI tools such as ChatGPT may be usable
-               within editorial workflows, and where their limitations become apparent. </p>
+               recognition, normalization, enrichment). This framework helps locate the stages at which tools like ChatGPT may be effectively 
+               integrated into editorial workflows, and where their limitations become apparent.</p>
             <p xml:id="p4">ChatGPT is developed by OpenAI, a company founded in 2015 in San
                Francisco by a group of machine learning experts, research engineers, and
-                  scientists.<note xml:id="ftn3">OpenAI 2024, here: <ref
-                     target="https://openai.com/blog/introducing-openai"
-                     >https://openai.com/blog/introducing-openai</ref>; <ref
+               scientists.<note xml:id="ftn3"><ref target="Brockman">Brockman, Sutskever, and OpenAI 2024</ref>, here: <ref
                      target="https://web.archive.org/web/20241007222900/https://openai.com/blog/introducing-openai/"
                      >https://web.archive.org/web/20241007222900/https://openai.com/blog/introducing-openai/</ref>.
                </note> There is a huge interdisciplinary team of developers behind the system: the
-               GPT-4 technical report from 2023 lists 280 co-authors. Financial support is provided
-               by individuals and companies. In an interview with Bill Gates, OpenAI’s CEO, Sam
-               Altman has given an outlook on future developments: The focus will be on
-               multimodality, reasoning ability, reliability, customizability, and personalization
-                  (<ref target="#Gates2024" type="crossref">Gates 2024</ref>, <ref
-                  target="#Chudleigh2024" type="crossref">Chudleigh 2024</ref>). </p>
+               GPT-4 technical report lists 280 co-authors (<ref target="#OpenAI2024"
+                  type="crossref">OpenAI 2024</ref>). Financial support is provided by
+               individuals and companies. In an interview with Bill Gates, OpenAI’s CEO, Sam Altman
+               has given an outlook on future developments: The focus will be on multimodality,
+               reasoning ability, reliability, customizability, and personalization (<ref
+                  target="#Gates2024" type="crossref">Gates 2024</ref>, <ref target="#Chudleigh2024"
+                  type="crossref">Chudleigh 2024</ref>). </p>
             <p xml:id="p5">From a tool-identification perspective, ChatGPT is accessed via a
-               web-based interface running in a modern browser. It does not provide a stable version
+               web-based interface in a modern browser. The system does not provide a stable version
                identifier or persistent identifiers for individual interactions. Although
-               conversations can be shared via generated links, these are not designed as durable
-               scholarly references. This lack of stable versioning and citability is a significant
-               usability constraint in digital scholarly editing, where traceability and
+               conversations can be shared via generated links, these links are not designed as durable
+               scholarly references. This lack of stable versioning and citability constitutes a significant
+               usability constraint for digital scholarly editing, where traceability and
                documentation of editorial decisions are essential.</p>
 
          </div>
@@ -1673,60 +1668,55 @@
                transformer (GPT) models, which are fine-tuned for natural conversation using a
                combination of supervised learning and reinforcement learning from human feedback.
                These LLMs belong to the broader class of foundation models, which are designed to
-               support multiple downstream applications within a single system rather than being
+               support multiple downstream applications rather than being
                optimized for a particular, narrowly defined task. Therefore, ChatGPT can in
                principle be applied to a wide range of tasks at different stages of a digital
                scholarly editing workflow. </p>
             <div xml:id="div2.1">
                <head>Training Data, Transparency, and Reproducibility</head>
                <p xml:id="p7">The exact training data of the underlying models is not publicly
-                  disclosed, and the models are not freely available. According to OpenAI, training
+                  disclosed, and the models themselves are not openly available. According to OpenAI, training
                   data consists of “information that is publicly available on the internet,
                   information that we license from third parties, and information that our users or
-                  our human trainers provide.”<note xml:id="ftn4">OpenAI 2024, here: <ref
-                        target="https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed"
-                        >https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed</ref>;
-                        <ref
+                  our human trainers provide.”<note xml:id="ftn4"><ref target="#OpenAI2025" type="crossref">OpenAI 2025</ref>, here: <ref
                         target="https://web.archive.org/web/20240913163752/https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed"
                         >https://web.archive.org/web/20240913163752/https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed</ref>.
-                  </note> This is an issue especially in a scholarly context, and ChatGPT has been
-                  repeatedly criticized for lacking transparency. Another significant limitation for
-                  scholarly work concerns reproducibility. Even if identical prompts and a
-                  temperature setting of 0 (intended to reduce randomness) are used, ChatGPT does
-                  not reliably produce identical outputs across multiple runs. This is due to the
+                  </note> This limited transparency has been widely criticized, particularly in scholarly contexts where the
+                  provenance of training data is an important concern. Another significant limitation for
+                  scholarly work relates to reproducibility. Even when identical prompts are used, ChatGPT does
+                  not reliably produce identical outputs across multiple runs. This behavior reflects the 
                   inherent non-deterministic nature of LLMs, which predict token probabilities in
                   context based on the training data (<ref type="crossref" target="#Ouyang2023"
-                     >Ouyang et al. 2023</ref>). As a result, the same prompt can produce slightly
-                  different outputs across multiple runs, even when the underlying model remains
-                  unchanged. From the perspective of digital scholarly editing, this lack of strict
-                  reproducibility complicates the documentation and verification of editorial
-                  decisions. </p>
-               <p xml:id="p8">As of June 2025, free-tier users have, by default, access to GPT-4o,
-                  OpenAI’s flagship multimodal model, with a limited number of uses. Once this limit
-                  is reached, usage automatically defaults to a smaller, cost-efficient fallback.
-                  Core tools, including browsing, file uploads, data analysis, and vision, are
-                  available through GPT-4o. Users of the Plus, Pro, and Team tiers benefit from
-                  enhanced usage limits and access to a wider range of models through the model
+                     >Ouyang et al. 2023</ref>). As a result, identical prompts may produce slightly
+                  different outputs across multiple runs, even when the underlying model version remains
+                  unchanged, complicating the documentation, verification, and long-term traceability of editorial
+                  decisions.</p>
+               <p xml:id="p8">Another factor affecting reproducibility concerns the availability of different model versions 
+                  within the ChatGPT platform.
+                  As of June 2025, free-tier users have access by default to GPT-4o,
+                  OpenAI’s flagship multimodal model, though access is subject to usage limits. Once these limits
+                  are reached, usage automatically defaults to a smaller, cost-efficient fallback.
+                   Users of subscription tiers such as Plus, Pro, or Team receive higher
+                   usage limits and access to a wider range of models through the model
                   selector, including models optimized for complex reasoning tasks, high-performance
-                  multimodal interaction, and lightweight, cost-efficient processing. These models
-                  can be optimized through prompting for specific applications. </p>
+                  multimodal interaction, and lightweight, cost-efficient processing. Because different models may produce different outputs 
+                  for the same prompt, the presence of multiple model versions within a single platform introduces an additional source of variability when integrating ChatGPT into scholarly workflows.</p>
             </div>
             <div xml:id="div2.2">
                <head>Interaction Model and Prompting</head>
-               <p xml:id="p9">ChatGPT operates in a conversational style, engaging users with
-                  dialogue-based exchanges (so-called prompts) that mimic human conversation.
-                  Besides text, users can also start their conversations with images and voice. From
-                  these diverse starting points, a prompt is essentially a natural language input
-                  provided to a model that can vary from simple questions and instructions to
-                  complex scenarios, directing the LLM in its response generation. Consequently,
-                  prompt engineering is the process of designing, refining, and optimizing prompts
-                  to effectively communicate the intentions of users to an LLM. Crafting precise and
-                  contextually appropriate prompts is key to improving the accuracy of the model’s
-                  responses. Considerations of prompt length and structure are also relevant, as
-                  model inputs are processed as tokens and subject to contextual limits. There are
+               <p xml:id="p9">ChatGPT operates through a conversational interface in which users interact with the 
+                  system using natural language prompts.
+                  While text is the primary input modality, interactions can also begin with images or voice. 
+                  A prompt is the instruction or query provided to the model ranging from simple questions to
+                  complex scenarios, directing the LLM in its response generation. In addition to user prompts, ChatGPT also employs system prompts—internal instructions
+                  defined by the platform that guide the model's behavior and are not visible to the user. At the same time, users can 
+                  influence the model's responses through personalization settings available in the ChatGPT interface via the user profile menu. 
+                  Prompt engineering refers to the practice of designing and refining prompts
+                  to communicate the intentions of users to a large language model. Considerations of prompt length and structure are also relevant, as
+                  model inputs are processed as tokens and subject to context window limits. There are
                   various prompting techniques, such as zero-shot, few-shot, and chain-of-thought
                   prompting, each designed to approach the model differently based on the complexity
-                  of the task (<ref target="#Saravia2022" type="crossref">Saravia 2022</ref>). In
+                  of the task (<ref target="#Saravia2022" type="crossref">Saravia 2022</ref>). <!-- MS: letzter Satz weg? -->In
                   editorial contexts, careful prompting is essential for achieving consistent
                   results, particularly when tasks involve formalized output formats or
                   domain-specific conventions.</p>
@@ -1737,55 +1727,50 @@
                         can be as short as a single character or as long as a full word, depending
                         on the language and context. Spaces, punctuation, and partial words all
                         contribute to token counts. This is how the API internally segments your
-                        text before generating a response.<note xml:id="ftn5">OpenAI 2025, here:
+                        text before generating a response.<note xml:id="ftn5"><ref target="#OpenAI2025" type="crossref">OpenAI 2025</ref>, here:
                               <ref
                               target="https://web.archive.org/web/20251012012828/https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them"
                               >https://web.archive.org/web/20251012012828/https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them</ref>.
                         </note>
                      </quote>
                   </cit></p>
-               <p xml:id="p11">How exactly tokens are calculated is difficult to understand for the
-                  average user. OpenAI suggests that “helpful rules of thumb” for English texts are
-                  that one token corresponds to approximately four characters, or about
+               <p xml:id="p11">How exactly tokens are calculated is often not immediately intuitive for users. OpenAI suggests that as a rule of thumb for English texts  
+                  one token corresponds to approximately four characters, or about
                   three-quarters of a word. Consequently, 100 tokens amount to roughly 75 English
                   words. OpenAI provides an online tokenizer that allows users to test how specific
                   inputs are segmented into tokens.<note xml:id="ftn6">
-                     <ref target="https://platform.openai.com/tokenizer"
-                        >https://platform.openai.com/tokenizer</ref>; <ref
+                     <ref
                         target="https://web.archive.org/web/20251008185403/https://platform.openai.com/tokenizer/"
                         >https://web.archive.org/web/20251008185403/https://platform.openai.com/tokenizer/</ref>.
-                  </note> While this approximation is already slightly vague, an additional
+                  </note> While this approximation is slightly vague, an additional
                   complication is that tokenization is language-dependent. This is especially
-                  relevant considering that the objective of digital editions very often involves
-                  historical texts in languages other than standard English.</p>
+                  relevant for digital scholarly editing, which very often involves
+                  historical texts in languages other than contemporary English.</p>
             </div>
             <div xml:id="div2.3">
-               <head>Customization and Configuration</head>
-               <p xml:id="p12">For creating so-called Custom GPTs, no programming knowledge is
+               <head>Configuration and Personalization</head>
+               <p xml:id="p12">Beyond prompt-level interaction, ChatGPT also allows users to configure model behavior through 
+                  customizable applications known as Custom GPTs. For creating them, no programming knowledge is
                   necessary. The configuration screen allows you to enter a picture, a name of the
                   GPT, a short description, detailed instructions, a conversation starter to
                   facilitate the start of a conversation, and the upload of an extra knowledge base.
+                  When such files are provided, the system can retrieve relevant passages from them during response generation, 
+                  thereby implementing a form of retrieval-augmented generation (RAG).
                   It is recommended to provide the additional knowledge in a minimalistic format
                   (e.g., JSON or Markdown) to save tokens instead of ‘chatty’ formats like XML,
-                  where <ref target="https://platform.openai.com/tokenizer">each tag consumes
-                     tokens</ref>. Combining a language model’s capabilities with external
-                  information retrieval to tackle more complex tasks is known as RAG
-                  (Retrieval-Augmented Generation). For small-scale text documents, this is already
-                  integrated in the aforementioned Custom GPTs, while larger corpora require
+                  where each tag consumes tokens. While this built-in retrieval mechanism is suitable for small-scale text documents, 
+                  larger corpora typically require
                   interfacing with external databases.<note xml:id="ftn7">Saravia 2022, here <ref
-                        target="https://www.promptingguide.ai/techniques/rag"
-                        >https://www.promptingguide.ai/techniques/rag</ref>; <ref
                         target="https://web.archive.org/web/20250808170700/https://www.promptingguide.ai/techniques/rag"
                         >https://web.archive.org/web/20250808170700/https://www.promptingguide.ai/techniques/rag</ref>.
                   </note>
                </p>
-               <p xml:id="p13">ChatGPT can be individually configured using ‘custom instructions’ to
-                  respond more effectively to prompts. Users may provide details about their
-                  activities, personal information, and describe their interests. Additionally, they
-                  can specify how ChatGPT should respond, such as choosing a formal or casual tone,
-                  neutral or opinionated interactions, and the desired length of responses. This
-                  customization means that users do not have to repeat these preferences in each
-                  request, thus saving tokens.</p>
+               <p xml:id="p13">ChatGPT can be individually configured using ‘custom instructions’, a personalization feature distinct from Custom GPTs, within the 
+                  personalization settings. Users may provide details about their
+                  activities, interests, or working context and indicate how the model should respond, for example by specifying a preferred 
+                  tone or level of detail. These instructions persist across conversations
+                  so that users do not have to repeat these preferences in each
+                  prompt.</p>
             </div>
             <div xml:id="div2.4">
                <head>Input, Output, and Data Analysis Capabilities</head>
@@ -1808,12 +1793,12 @@
             <div xml:id="div2.5">
                <head>Positioning within the LLM landscape</head>
                <p xml:id="p16">ChatGPT exists within a broader and rapidly evolving ecosystem of
-                  generative language models. Proprietary systems include Claude by Anthropic or
+                  generative language models. Proprietary systems include Claude by Anthropic, 
                   Gemini by Google, as well as models integrated into platforms like Microsoft
-                  Copilot. At the same time, open-source and open-weight models are quickly catching
-                  up, or even outperforming them in certain tasks. (<ref type="crossref"
-                     target="#Chen2024">Chen et al. 2024</ref>) Leading examples include the Llama
-                  family (Meta), Mistral AI’s Mistral and Mixtral models, and Alibaba’s Quen series. </p>
+                  Copilot. At the same time, open-weight and open-source models are advancing 
+                  rapidly and in some benchmarks are even outperforming proprietary systems in certain tasks (<ref type="crossref"
+                     target="#Chen2024">Chen et al. 2024</ref>). Leading examples include the Llama
+                  family developed by Meta, Mistral AI’s Mistral and Mixtral models, and Alibaba’s Qwen series.</p>
                <p xml:id="p17">When assessing a language model’s openness, it is important to
                   differentiate between ‘open-source models’ and ‘open-weight models’. Open source
                   refers to sharing the full source code, the underlying algorithms, training
@@ -1821,49 +1806,54 @@
                   parameters, which allows use but limits transparency and control. Open-weight
                   models are easier to use but less transparent, while open-source promotes
                   transparency and allows modification, but also requires more developer effort
-                     (<ref type="crossref" target="Ramlochan2023">Ramlochan 2023</ref>). For digital
-                  scholarly editing, these distinctions are relevant for sustainability,
+                     (<ref type="crossref" target="#Ramlochan2023">Ramlochan 2023</ref>). For
+                  digital scholarly editing, these distinctions are relevant for sustainability,
                   inspectability, and long-term reuse. The current leading open-source models can be
-                  consulted at the Chatbot Arena.<note xml:id="ftn8"> An overview of the leading
-                     chatbots is given by the ‘Chatbot Arena’ (<ref type="crossref"
-                        target="#Chiang2024">Chiang et al. 2024</ref>), an open platform for
-                     evaluating LLMs based on human preference.</note>
+                  consulted at the Chatbot Arena<note xml:id="ftn8">An overview of leading chatbots
+                     is provided by the ‘Chatbot Arena’ (<ref type="crossref"
+                        target="#Chiang2024">Chiang et al. 2024</ref>), an online platform that ranks LLMs based
+                     on crowdsourced human preference evaluations.</note>.
                </p>
             </div>
             <div xml:id="div2.6">
                <head>Examples and Current Uses of Generative AI in Digital Scholarly Editing</head>
-               <p xml:id="p18">The GPT models are generally considered not be trained on specific
-                  domains or tasks (though further user-guided fine-tuning can be used to that end).
-                  They are general models that can assist in different tasks related to the digital
-                  editing pipeline, from data creation to the final publication.</p>
-               <p xml:id="p19">One area of experiments includes custom GPTs, that is,
+               <p xml:id="p18">GPT models are generally considered not to be trained on specific
+                  domains or tasks, although user-guided fine-tuning can be applied to that end.
+                  They are general-purpose models that can assist in different tasks related to the digital
+                  editing pipeline, from data creation to final publication.</p>
+               <p xml:id="p19">One area of experiments includes custom GPTs, i.e.,
                   user-configured applications built on top of a pre-trained GPT model. Examples
                   include <emph>teiCrafter</emph>, an “expert automaton for converting plain text to
-                  TEI XML” (<ref target="#Pollin2023" type="crossref">Pollin 2023</ref>); <emph>TEI
-                     Scholar </emph>(<ref type="crossref" target="#Jankovic">Jankovic</ref>); and
-                     <emph>TEI Lex 0 Converter </emph>(<ref type="crossref" target="#Miyagawa"
-                     >Miyagawa</ref>). Designing custom GPTs does not involve training a new
-                  language model, but rather supplying detailed instructions and additional
-                  domain-specific knowledge, ideally in compact data formats such as Markdown or
-                  JSON, to reduce token usage. Custom GPTs can be kept for internal use only or
-                  shared with the broader community; they remain bound to OpenAI’s infrastructure
-                  and do not constitute independent editorial tools. </p>
-               <p xml:id="p20">A workshop at the DHd 2024 conference in Passau, organized by the
+                  TEI XML” (<ref target="#Pollin2024" type="crossref">Pollin 2024</ref>);
+                     <emph>TEI Scholar </emph>(<ref type="crossref" target="#Jankovic"
+                     >Jankovic</ref>); and <emph>TEI Lex 0 Converter </emph>(<ref type="crossref"
+                     target="#Miyagawa">Miyagawa</ref>). Designing custom GPTs does not require
+                  training a new language model, but rather supplying detailed instructions and
+                  additional domain-specific knowledge, ideally in compact data formats such as
+                  Markdown or JSON to optimize token usage. Custom GPTs can be kept for internal use
+                  only or shared with the broader community; they remain bound to OpenAI’s
+                  infrastructure and do not constitute independent editorial tools.</p>
+               <p xml:id="p20">Beyond individual tools, broader community efforts further illustrate these developments. 
+                  A workshop at the DHd 2024 conference in Passau, organized by the
                   Institute for Documentology and Scholarly Editing (IDE), provided a broad overview
-                  of current experiments with generative language models in digital scholarly
-                  editing (<ref target="#Pollin2024b" type="crossref">Pollin et al. 2024</ref>). 10
+                  of ongoing experiments with generative language models in digital scholarly
+                  editing (<ref target="#Pollinetal2024" type="crossref">Pollin et al. 2024</ref>). The ten
                   contributions covered a wide range of editorial tasks, including transcription,
-                  OCR cleaning, markup generation, normalization, named entity recognition,
-                  annotation, translation, and text summarization. Pollin has shown with his
-                  workshop series on generative AI the various areas of its application across DH
-                  use-cases: from the transfer of unstructured data to TEI to generating and
-                  modeling RDF data to data analysis and visualization (<ref target="#Pollin2024a"
-                     type="crossref">Pollin 2024</ref>). Alongside these exploratory applications,
-                  recent contributions have also emphasized the need for systematic evaluation,
-                  proposing frameworks and metrics for assessing LLM-assisted TEI encoding (<ref
-                     target="#Strutz2025a" type="crossref">Strutz and Vogeler 2025</ref>) and the
-                  automated handling of editorial interventions (<ref target="#Strutz2025b">Strutz
-                     and Scholger 2025</ref>), thereby highlighting both the potential of LLMs for
+                  OCR post-correction, markup generation, normalization, named entity recognition,
+                  annotation, translation, and text summarization. As demonstrated in Pollin's 
+                  workshop series, generative AI can be applied across diverse DH
+                  use-cases: from transforming unstructured data into TEI to generating and
+                  modeling RDF data to data analysis and visualization (<ref target="#Pollin2025"
+                     type="crossref">Pollin 2025</ref>). Alongside these exploratory applications,
+                  recent research has emphasized the need for robust pipelines and systematic evaluation in LLM-assisted scholarly workflows.
+                  Recent contributions assess, for example, the quality and reliability of LLM-assisted TEI encoding (<ref
+                     target="#Strutz2025a" type="crossref">Strutz and Vogeler 2025</ref>); <ref
+                     target="#Strutz2026a" type="crossref">Strutz forthcoming</ref>), the
+                  automated handling and resolution of editorial interventions (<ref target="#Strutz2025b">Strutz
+                     and Scholger 2025</ref>), and the automated extraction and normalization of metadata from historical letter transcriptions (<ref target="#Strutz2026b">Strutz
+                        and Scholger 2026</ref>). Galka and Vogeler compare the integration of different LLMs within a workflow for adding named entity recognition
+                     annotations (<ref type="crossref" target="#Galka2026">2026</ref>).
+                  These studies highlight both the potential of LLMs for
                   complex, context-sensitive tasks and the methodological challenges that remain.
                </p>
             </div>
@@ -1871,21 +1861,18 @@
          <div xml:id="div3">
             <head>Application for digital scholarly editing</head>
             <p xml:id="p21">Conversations with ChatGPT are stored on OpenAI’s servers and can be
-               accessed by users through the history option, which is available in the left sidebar.
+               accessed by users via the history option in the left sidebar.
                The conversations can be shared via generated links, allowing limited collaboration
-               or documentation of interactions<note xml:id="ftn9">OpenAI 2024, here: <ref
-                     target="https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq"
-                     >https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq</ref>;
-                     <ref
+               or documentation of interactions.<note xml:id="ftn9"><ref target="#OpenAI2025" type="crossref">OpenAI 2025</ref>, here: <ref
                      target="https://web.archive.org/web/20251118195451/https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq"
                      >https://web.archive.org/web/20251118195451/https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq</ref>.
-               </note>. However, due to the non-deterministic nature of the models (discussed in
-               section 1) and the absence of stable versioning, such records do not guarantee
+               </note> However, due to the non-deterministic nature of the models (discussed in the
+               <ref target="#div1" type="crossref">Introduction</ref>) and the absence of stable versioning, such records do not guarantee
                reproducibility in a scholarly sense. While non-reproducibility poses challenges for
                academic rigor, this behavior can also be used by editors as an advantage, namely by
                generating multiple versions of the same output (e.g., requesting several TEI
                encodings of a letter) and subsequently critically identifying the optimal encoding
-               approach. </p>
+               approach.</p>
             <p xml:id="p22">This approach might be viewed as a form of digital hermeneutics,
                potentially transforming what appears to be a limitation into a tool for deeper
                interpretive engagement with editorial decisions. ChatGPT can support editors with
@@ -1895,83 +1882,87 @@
                code. ChatGPT can even assist in writing small programs for the web presentation or
                data analysis of an edition, utilizing <emph>Promptotyping</emph>, a prompt
                engineering method on LLM-based software development.<note xml:id="ftn10">
-                  <ref target="https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin"
-                     >https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin</ref>; <ref
+                  <ref
                      target="https://web.archive.org/web/20260601000000*/https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin"
                      >https://web.archive.org/web/20260601000000*/https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin</ref>.
                </note> From a utility perspective, ChatGPT primarily supports exploratory and
                preparatory stages of editorial work rather than final, authoritative decisions.</p>
             <p xml:id="p23">To evaluate ChatGPT’s practical value for concrete editorial tasks, we
-               selected two common editorial tasks: (1) converting plain text into TEI-compliant XML
+               selected two common use cases: (1) converting plain text into TEI-compliant XML
                and (2) identifying and classifying named entities. All experiments were performed
                using GPT-4o in the browser interface. For more elaborate examples, we refer to
-               slides including chat protocols in Pollin 2024. </p>
+               slides including chat protocols in <ref target="#Pollin2025" type="crossref">Pollin
+                  2025</ref>. </p>
             <p xml:id="p24">In the first example, a letter from the digital edition <emph>Joseph von
-                  Hammer-Purgstall: Korrespondenz</emph> (Höflechner 2024) was provided as plain
-               text and should be encoded following the <emph>Guidelines of the TEI</emph>. The
-               correspondence spans the late eighteenth to mid-nineteenth century and constitutes a
-               multilingual scholarly exchange within the context of Oriental studies. The plain
-               text of the letter was taken from the digital edition <emph>Joseph von
-                  Hammer-Purgstall: Korrespondenz</emph>:
-            <cit>
-               <quote>Euer Gnaden, <lb/>Unterzeichneter1 bittet um die gnädige Erlaubnis, künftigen
-                  Sonntag die Redoute2 besuchen zu dürfen3, weil er <lb/>1.) im letzten und sechsten
-                  Jahre seiner Studien und bereits ein Jahr länger an der Akademie ist als es seine
-                  Vorfahren waren, da ihnen diese Erlaubnis erteilt wurde. <lb/>2.) auf das ihm
-                  jederzeit von S[einer] H[ochwohlgeboren] dem Herrn Direktor erteilte Zeugnis
-                  seines guten Verhaltens und sittlichen Betragen stolz ist, und sich daher
-                  schmeichelt, dass die Besorgnis einiger daraus entstehenden üblen Folgen bei ihm
-                  nicht statt haben dürfte. <lb/>3.) die Vorschrift einer für diesen Fall
-                  geforderten anständigen und sicheren Begleitung nicht besser erfüllt haben könnte,
-                  indem er in der Gesellschaft der Frau Schwester des Herrn Direktors sich befinden
-                  wird. <lb/>Den 20ten Hornung 1794 <lb/>Joseph Hammer <lb/>1 PvTh D.2.1.14. <lb/>2
-                  Eine Tanzveranstaltung oder auch ein eleganter Maskenball. Um welche derartige
-                  Veranstaltung es sich hier handelt, ist nicht feststellbar. <lb/>3 Die Erledigung
-                  durch Jenisch s. das nachfolgende Stück, findet sich auf demselben Blatt wie die
-                  vorangegangene Bitte HPs mit dem Vermerk „Von der Kanzlei den 20. Hornung 1794“.
-               </quote>
-            </cit>
+                  Hammer-Purgstall. Korrespondenz</emph> (<ref target="#Hoeflechner2025"
+                  type="crossref">Höflechner 2025 et al.</ref>) was provided as plain text and should be
+               encoded following the <emph>Guidelines of the TEI</emph> (<ref target="TEI2026">TEI Consortium 2026</ref>). The correspondence spans
+               the late eighteenth to mid-nineteenth century and constitutes a multilingual
+               scholarly exchange within the context of Oriental studies. <cit>
+                  <quote>Euer Gnaden, <lb/>Unterzeichneter1 bittet um
+                     die gnädige Erlaubnis, künftigen Sonntag die Redoute2 
+                     besuchen zu dürfen3, weil er <lb/>1.) im letzten und sechsten Jahre
+                     seiner Studien und bereits ein Jahr länger an der Akademie ist als es seine
+                     Vorfahren waren, da ihnen diese Erlaubnis erteilt wurde. <lb/>2.) auf das ihm
+                     jederzeit von S[einer] H[ochwohlgeboren] dem Herrn Direktor erteilte Zeugnis
+                     seines guten Verhaltens und sittlichen Betragen stolz ist, und sich daher
+                     schmeichelt, dass die Besorgnis einiger daraus entstehenden üblen Folgen bei
+                     ihm nicht statt haben dürfte. <lb/>3.) die Vorschrift einer für diesen Fall
+                     geforderten anständigen und sicheren Begleitung nicht besser erfüllt haben
+                     könnte, indem er in der Gesellschaft der Frau Schwester des Herrn Direktors
+                     sich befinden wird. <lb/>Den 20ten Hornung 1794 <lb/>Joseph Hammer <lb/><lb/>
+                     1.) PvTh D.2.1.14. <lb/><lb/>2.)
+                     Eine Tanzveranstaltung oder auch ein eleganter Maskenball. Um welche derartige
+                     Veranstaltung es sich hier handelt, ist nicht feststellbar. <lb/><lb/>
+                     3.) Die Erledigung durch Jenisch s. das nachfolgende
+                     Stück, findet sich auf demselben Blatt wie die vorangegangene Bitte HPs mit dem
+                     Vermerk „Von der Kanzlei den 20. Hornung 1794“.</quote>
+                  <bibl><ref target="#Hammer1794" type="crossref">Hammer-Purgstall an Jenisch
+                        1794</ref></bibl>
+               </cit>
             </p>
             <p xml:id="p25">
-               <figure
-                  xml:id="img1">
+               <figure xml:id="img1">
                   <graphic
                      url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-1.png"/>
-                  <head type="legend">Prompt instructions to convert plain text into TEI.</head>
+                  <head type="legend">Prompt instructions to convert a letter from Joseph von
+                     Hammer-Purgstall to Bernhard von Jenisch into TEI.</head>
                </figure>
                <figure xml:id="img2">
                   <graphic
                      url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-2.png"/>
-                  <head type="legend">Letter encoded in TEI.</head>
-               </figure>               
-               The plain text of the letter together with the prompt (Fig. 1) was
-               entered into the chat and the resulting XML/TEI encoding is shown in Fig. 2. The
-               result shows that the overall letter structure is correctly identified and
-               appropriate XML/TEI elements are applied. Abbreviations are partially resolved, the
-               date is normalized, and notes are embedded in the correct position in the text, even
-               though the notes in the input text are placed at the end of the document. However,
-               the recognition of personal names was less reliable; in addition, a place name was
-               labeled, although only the tagging of person names was requested, suggesting that
-               unwanted annotations should be explicitly excluded in the prompt. Potential risks
-               include the incomplete preservation of the input text and the repositioning of
-               structural elements such as dates or signatures in the output. Such rearrangements
-               may suggest model-internal assumptions about typical letter layouts, possibly
-               reflecting generalized structural patterns learned during training. 
-            </p>
+                  <head type="legend">XML/TEI encoding of the letter generated by ChatGPT.</head>
+               </figure> The plain text of the letter together with the prompt (<ref type="crossref" target="#img1">Fig. 1</ref>) was entered
+               into the chat. In our case the prompt is structured in a task-oriented, rule-based format consisting of five main
+               components: (1) <emph>role framing</emph>, which assigns the model the role of an expert in TEI encoding; 
+               (2) <emph>task definition</emph>, which specifies the transformation of an unstructured letter into well-formed XML/TEI; 
+               (3) <emph>encoding rules</emph>, which specify the selection ans use of TEI elements for structural and semantic components; 
+               (4) <emph>output constraints</emph>, which restricht the form of the response; and 
+               (5) <emph>emotional prompting</emph>, which encourages a step-by-step approach to improve reliability and consistency of the output.
+               The resulting XML/TEI encoding <ref type="crossref" target="#img2">Fig. 2</ref> shows
+               that the overall letter structure is correctly identified and appropriate XML/TEI
+               elements are applied. Abbreviations are partially resolved, the date is normalized,
+               and notes are embedded in the correct position in the text, even though the notes in
+               the input text are placed at the end of the document. However, the recognition of
+               personal names was less reliable; in addition, a place name was labeled, although
+               only the tagging of person names was requested, suggesting that unwanted annotations
+               should be explicitly excluded in the prompt. Potential risks include the incomplete
+               preservation of the input text and the repositioning of structural elements such as
+               dates or signatures in the output. Such rearrangements may suggest model-internal
+               assumptions about typical letter layouts, possibly reflecting generalized structural
+               patterns learned during training. (<ref target="#Scholger2024" type="crossref">Scholger, Strutz, and Pollin 2024</ref>)</p>
             <p xml:id="p26">In the second example, the same TEI annotation task was applied to
-               reports of envoys present at the Imperial Diet of Regensburg of 1576<emph>.</emph>
-               The envoys, Dr. Wolfgang Eulenbeck and Dr. Andreas Paulus, reported regularly to
-               Prince-elector (Kurfürst) August von Sachsen, who was not present at the Imperial
-               Diet. The form and structure of these reports are very similar to the above letter by
-                  <emph>Hammer-Purgstall</emph>. However, the significant difference is that they
-               were written three centuries earlier in Early New High German. The correspondence
-               between the envoys and August von Sachsen is published in the edition Der Reichstag
-               zu Regensburg 1576.<note xml:id="ftn11"> D. Berichte und Weisungen: <ref
-                     target="https://gams.uni-graz.at/context:rta1576.ed"
-                     >https://gams.uni-graz.at/context:rta1576.ed</ref>. </note>
+               reports of envoys present at the Imperial Diet of Regensburg of 1576 (<ref target="#Leeb2023" type="crossref">Leeb et al. 2023</ref>). The envoys, Dr.
+               Wolfgang Eulenbeck and Dr. Andreas Paulus, reported regularly to Prince-elector
+               (Kurfürst) August von Sachsen, who was not present at the Imperial Diet. The form and
+               structure of these reports are very similar to the above letter from the <emph>Joseph
+                  von Hammer-Purgstall. Korrespondenz</emph>. However, the significant difference is
+               that they were written three centuries earlier in Early New High German. The
+               correspondence between the envoys and August von Sachsen is published in the edition
+                  <emph>Der Reichstag zu Regensburg 1576</emph>.
             </p>
-            <p xml:id="p27"> The following quote shows the plain text of the letter from May 11
-               1576, to August von Sachsen: <cit>
+            <p xml:id="p27"> The following quote shows the plain text of the letter from May 9 1576,
+               to August von Sachsen: <cit>
                   <quote> Neunden Maii, Regenspurgk rhäte. Präs. Annaburg, 12. Maii anno 76. Zu s.
                      kfl. Gn. henden.<lb/> Durchlauchtigster hochgeborner churfurst, ewern kfl. Gn.
                      seint unsere underthenigste gehorsame dienste jeder zeit mit trewem vleiß
@@ -1990,7 +1981,10 @@
                      Und, euer kfl. Gn. mit underthenigstem gehorsamb trewe dienste zuleisten, seint
                      wir schuldig und geflissen. Datum Regensburgk, den neunden Maii anno 76.<lb/>
                      Ewer kfl. Gn.<lb/> underthenigste gehorsame<lb/> Wolffgang Eylenbeck, Dr.<lb/>
-                     Andreas Paull propria[?] </quote>
+                     Andreas Paull propria[?]</quote>
+                  <bibl><ref target="#Bericht1576" type="crossref">Bericht: Dr. Wolfgang
+                     Eulenbeck und Dr. Andreas Paulus an Kurfürst August von Sachsen, 1576-05-09</ref></bibl>
+                  
                </cit>
             </p>
 
@@ -2001,160 +1995,153 @@
                   <head type="legend">The letter to August von Sachsen encoded in TEI using ChatGPT
                      GPT-4o. The entire second paragraph was left out in order to fit the beginning
                      and end on the picture.</head>
-               </figure>
-               The same prompt instructions as in Fig. 1 were used together with the
-               plain text of the letter. However, the statement “keep the original language” had to
-               be added to ensure that the source text was not normalised to standard German, which
-               happened during the initial run. The result in Figure 3 shows that, even with a
+               </figure> The same prompt instructions as in <ref type="crossref" target="#img1">Fig. 1</ref> were used together with the plain
+               text of the letter. However, the statement “keep the original language” had to be
+               added to ensure that the source text was not normalized to standard German, which
+               happened during the initial run. The result in <ref type="crossref" target="#img3">Fig. 3</ref> shows that, even with a
                historical language like Early New High German texts, ChatGPT identifies the
-               structure of the document reasonably well. 
-            </p>
+               structure of the document reasonably well. </p>
             <p xml:id="p29"> Close observation of the result shows that some text is missing. For
                some reason, the part of the opener indicating when the letter was presented to
-               August von Sachsen: “Präs. Annaburg, 12. Maii anno 76” is missing. Furthermore,
+               August von Sachsen: ‘Präs. Annaburg, 12. Maii anno 76’ is missing. Furthermore,
                identification and expansion of abbreviations is a challenge. While abbreviations,
                such as ‘s.’, ‘Mt.’ and ‘kfl.’ are correctly resolved, others were not even
                identified as abbreviations, e.g., ‘Gn.’, or words were incorrectly identified as
                abbreviations, e.g., ‘ewern’, ‘bevelch’, ‘instruction’. This can easily be resolved
                by providing a list of the abbreviations used in editions of the Imperial Diets.<note
-                  xml:id="ftn12"> Such a list is provided by every edition of the Imperial Diets:
-                     e.g.<ref target="https://gams.uni-graz.at/o:rta1576.bt17331b5u"
+                  xml:id="ftn11"> Such a list is provided by every edition of the Imperial Diets:
+                     e.g., <ref target="https://gams.uni-graz.at/o:rta1576.bt17331b5u"
                      >https://gams.uni-graz.at/o:rta1576.bt17331b5u</ref>. </note> Dates are
-               precisely tagged and correctly normalised using the <code>@when</code> attribute.
+               precisely tagged and correctly normalized using the <code>@when</code> attribute.
                However, ChatGPT does not automatically take the Gregorian calendar reform into
                consideration. It has to be explicitly mentioned to add <code>@calendar</code>.</p>
             <p xml:id="p30">
                <figure xml:id="img4">
                   <graphic
                      url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-4.png"/>
-                  <head type="legend">The figure shows the result from ChatGPT trying to identify
-                     persons and places in the letter of 1576. Wrongly identified places are
-                     highlighted.</head>
+                  <head type="legend">The figure shows the first result from ChatGPT trying to
+                     identify persons and places in the letter of 1576. Wrongly identified places
+                     are highlighted.</head>
                </figure>
                <figure xml:id="img5">
                   <graphic
                      url="http://ride.i-d-e.de/wp-content/uploads/issue_19/chatgpt/pictures/picture-5.png"/>
                   <head type="legend">Geoname references of the places generated by ChatGPT.</head>
-               </figure>
-               The tagging of people and places is also fine, but the identification
-               and linking to authority files, as asked in the prompt, is missing. When asked to
-               identify people and places and list them in a table with the columns (1. name as
-               found in the letter, 2. type of entity, 3. normalised name, 4. reference to an
-               authority file, such as GND, VIAF or Wikidata) the result (Fig. 4) shows that at
-               first, only one person could be correctly identified, Wolfgang Eylenbeck GND
-               104287020 (also VIAF 32430582). ChatGPT also provides the link to the following
-               sources: <ref
-                  target="https://link.springer.com/content/pdf/10.1007/978-1-349-25677-8.pdf?utm_source=chatgpt.com"
-                  >link.springer.com</ref>,<ref
-                  target="https://www.deutsche-biographie.de/pnd104287020.html?utm_source=chatgpt.com"> </ref>
-               <ref target="http://deutsche-biographie.de">deutsche-biographie.de</ref>. After being
-               asked again with consideration of the date of the source, ChatGPT identifies Conrad
-               von Pappenheim correctly with GND and VIAF identifiers. The other references to
-               people seem to be too vague. In the case of “doctor Viecheussern”, the Imperial
+               </figure> The tagging of people and places is also fine, but the identification and
+               linking to authority files, as asked in the prompt, is missing. When asked to
+               identify people and places and list them in a table with the columns (1. original name as
+               found in the letter, 2. type of entity, 3. normalized name, 4. reference to an
+               authority file, such as GND, VIAF or Wikidata) the result shows that at first, only
+               one person could be correctly identified, Wolfgang Eylenbeck, ‘GND 104287020 (also VIAF
+               32430582). ChatGPT also provides the link to sources for the identification:
+               ‘link.springer.com’ and ‘deutsche-biographie.de’. However, only the link to the
+               <emph>Deutsche Biographie</emph> (‘<ref
+                  target="https://www.deutsche-biographie.de/pnd104287020.html"
+                  >https://www.deutsche-biographie.de/pnd104287020.html</ref>’) provides additional
+               information about Eylenbeck and the references to the correct authority files. After
+               being asked again with consideration of the date of the source, ChatGPT identifies
+               ‘Conrad zu Pappenheim’ (Conrad von Pappenheim) correctly with GND and VIAF identifiers. The other references
+               to people seem to be too vague. In the case of ‘doctor Viecheussern’, the Imperial
                Vice-Chancellor Sigismund Viehauser (oder Vieheuser), the very particular variance of
-               the name could be the reason. Interesting is also the reference to place names. The
-               GND identifiers provided by ChatGPT for Wien and Regensburg do not actually exist.
+               the name could be the reason. It is also interesting that ChatGPT was not able to
+               correctly identify the place names mentioned, although it recognizes that
+               ‘Regenspurgk’ refers to ‘Regensburg’ and ‘Wyen’ to ‘Wien (Vienna)’. The GND
+               identifiers provided by ChatGPT for the two places do not actually exist (<ref type="crossref" target="#img4">Fig. 4</ref>).
                However, if asked to provide Geoname references for the places, both are correctly
-               identified (Fig. 5). 
-            </p>
-
+               identified (<ref type="crossref" target="#img5">Fig. 5</ref>). </p>
          </div>
          <div xml:id="div4">
             <head>Usability, sustainability, and maintainability</head>
-            <p xml:id="p33">Generally, ChatGPT can be used via the OpenAI website, and an API is
-               also available for programmatic use. The tool can be used with minimal setup, and the
+            <p xml:id="p31">Generally, ChatGPT can be accessed via the OpenAI website, and an API is
+               available for programmatic use. The tool requires minimal setup, and the
                web interface is simplistic and easy to use. It works well on all modern web browsers
                and devices, and a ChatGPT app is available for mobile devices. Users require
                internet access and an OpenAI account. Additional services beyond the free tier,
                including expanded API usage and processing capabilities, are only available under a
-               pay plan based on OpenAI’s token system.<note xml:id="ftn13">OpenAI uses a token
+               pay plan based on OpenAI’s token system.<note xml:id="ftn12">OpenAI uses a token
                   system for input, output, and training usage. <ref
-                     target="https://openai.com/pricing">https://openai.com/pricing</ref>. But this
+                     target="https://web.archive.org/web/20260314111058/https://chatgpt.com/pricing/">https://web.archive.org/web/20260314111058/https://chatgpt.com/pricing/</ref>. But this
                   constantly changes. </note> We do not go into detail about pricing as it depends
                on the model used; however, it has to be noted that for more complex and longer
                tasks, it can get very expensive. This makes it less attractive for sustained
                scholarly work and creates unequal conditions, as not all academics or projects might
                have the resources to cover the costs. It is also worth noting that access to ChatGPT
-               varies globally.<note xml:id="ftn14"> For a brief period of time in 2023 even in
+               varies globally.<note xml:id="ftn13"> For a brief period of time in 2023 even in
                   Italy it was banned due to issues with the data protection regulations,
                   DigitalTrends: <ref
-                     target="https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/"
-                     >https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/</ref>.
+                     target="https://web.archive.org/web/20260316110636/https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/"
+                     >https://web.archive.org/web/20260316110636/https://www.digitaltrends.com/computing/these-countries-chatgpt-banned/</ref>.
                   See also a recent article (June 2024) about China: <ref
-                     target="https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html"
-                     >https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html</ref>.
+                     target="https://web.archive.org/web/20240630064038/https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html"
+                     >https://web.archive.org/web/20240630064038/https://edition.cnn.com/2024/06/21/tech/apple-ai-chatgpt-ban-china/index.html</ref>.
                </note> In regions where the tool is restricted, such as China, alternatives like
-               DeepSeek and Ernie Bot are available (<ref target="#Wikipedia2024" type="crossref"
-                  >Wikipedia contributors 2024</ref>; <ref target="#Yang2023" type="crossref">Yang
-                  2023</ref>). While these tools offer similar functionalities, their effectiveness
+               DeepSeek and Ernie Bot are available (<ref target="#Yang2023" type="crossref">Yang
+                  2023</ref>; <ref target="#Wikipedia2024" type="crossref">Wikipedia contributors
+                  2024</ref>). While these tools offer similar functionalities, their effectiveness
                for digital scholarly editing would require separate evaluation. </p>
-            <p xml:id="p34">The various language models used within ChatGPT, and their differences,
-               are briefly documented and compared on the OpenAI website<note xml:id="ftn15">
-                  <ref target="https://platform.openai.com/docs/models/overview"
-                     >https://platform.openai.com/docs/models/overview</ref>.</note>. OpenAI also
+            <p xml:id="p32">The various language models used within ChatGPT, and their differences,
+               are briefly documented and compared on the OpenAI website.<note xml:id="ftn14">
+                  <ref target="https://web.archive.org/web/20260317093543/https://developers.openai.com/api/docs/models"
+                     >https://web.archive.org/web/20260317093543/https://developers.openai.com/api/docs/models</ref>.</note> OpenAI also
                has a help center and maintains a developer forum where, currently, mostly
                API-related issues are discussed. ChatGPT has a big user community and is widely
                used. Therefore, if you run into a general problem, the chance is very high that
                someone else already had a similar problem, and the solution can be found online.
                OpenAI also provides documentation and guidelines for the use of the tool. For
                instance, the guidelines for prompt engineering explain strategies and suggestions
-               for crafting effective prompts to get better results from ChatGPT. In addition to the
+               for crafting effective prompts to get better results from ChatGPT <note xml:id="ftn15"><ref target="https://web.archive.org/web/20260308121716/https://developers.openai.com/api/docs/guides/prompt-engineering">https://web.archive.org/web/20260308121716/https://developers.openai.com/api/docs/guides/prompt-engineering</ref></note>. In addition to the
                material provided by OpenAI, it has to be pointed out that, due to the great interest
                and broad application of chatbots in recent years, numerous introductions and
                documentation about working with ChatGPT were developed by individuals, institutions,
                and organizations all over the world. This also includes some subject-specific
-               introductions for digital humanities and digital scholarly editing<note
-                  xml:id="ftn16">One example is Christopher Pollin’s workshop series"Angewandte
-                  Generative KI in den (digitalen) Geisteswissenschaften" - AGKI, <ref
-                     target="https://chpollin.github.io/GM-DH/"
-                     >https://chpollin.github.io/GM-DH/</ref>.</note>.</p>
-            <p xml:id="p35">While interacting with ChatGPT is quite easy, creating effective prompts
+               introductions for Digital Humanities and digital scholarly editing (e.g. <ref target="#Pollin2025" type="crossref">Pollin 2025</ref>).</p>
+            <p xml:id="p33">While interacting with ChatGPT is quite easy, creating effective prompts
                requires some training. Prompt engineering has become its own discipline, and
                mastering these techniques is particularly important in digital humanities contexts,
                where specialized terminology, historical language material, and encoding standards
                require precise instructions (<ref target="#Saravia2022" type="crossref">Saravia
-                  2022</ref>, <ref target="#Pollin2024a" type="crossref">Pollin 2024</ref>).
+                  2022</ref>, <ref target="#Pollin2025" type="crossref">Pollin 2025</ref>).
                Well-designed prompts lead to better results and reduce frustration in the use of
                ChatGPT. It has to be emphasized that the use of ChatGPT is very much experimental in
                most disciplines, and its full capacities are not yet clear; further study is
                necessary. This holds especially true for digital humanities and its use for digital
                scholarly editing.</p>
-            <p xml:id="p36">ChatGPT is not open source. The tool itself and its development are
+            <p xml:id="p34">ChatGPT is not open source. The tool itself and its development are
                closed off. This means that neither the source code nor the underlying models can be
                reused or built upon. However, the performance of GPT has been analyzed extensively
                since its release. Users all over the world from various disciplines have
-               experimented and published benchmark tests and evaluations.<note xml:id="ftn17"> For
+               experimented and published benchmark tests and evaluations.<note xml:id="ftn16"> For
                   instance, the ability of ChatGPT 3.5 and GPT 4 to write correct code was conducted
                   by <ref type="crossref" target="#Liu2023">Liu et al. 2023</ref> and a test on
                   various NLP tasks was conducted by <ref target="#Laskar2023" type="crossref"
                      >Laskar et al. 2023</ref>. </note> This lack of openness raises concerns with
                regard to transparency, sustainability, and long-term reusability in scholarly
                workflows.</p>
-            <p xml:id="p37">OpenAI assures its users that all data shared with ChatGPT is encrypted,
+            <p xml:id="p35">OpenAI assures its users that all data shared with ChatGPT is encrypted,
                and the input and the output you receive from ChatGPT are rightfully yours.<note
-                  xml:id="ftn18">
-                  <ref target="https://openai.com/enterprise-privacy/"
-                     >https://openai.com/enterprise-privacy/</ref>.</note> Nevertheless, there are
+                  xml:id="ftn17">
+                  <ref target="https://web.archive.org/web/20260312100111/https://openai.com/enterprise-privacy/"
+                     >https://web.archive.org/web/20260312100111/https://openai.com/enterprise-privacy/</ref>.</note> Nevertheless, there are
                concerns that OpenAI uses input data for training purposes and that sensitive
                information may end up in the company’s database and become available to other users
                of the tool. Another concern that has been voiced is that OpenAI collects substantial
                data about its users and their behavior (<ref target="#MertonMcCann2023"
                   type="crossref">Merton-McCann 2023</ref>). </p>
-            <p xml:id="p38">Finally, the question of citation must be addressed. If ChatGPT is used
+            <p xml:id="p36">Finally, the question of citation must be addressed. If ChatGPT is used
                in research or for academic writing, its involvement needs to be acknowledged. This
                is also an issue when we want to encourage our students to use it as a tool.
                Conversations are tightly bound to a user account, and there are no permalinks, no
                DOI, no URL that allows for persistent sharing. Consequently, referencing ChatGPT is
                a big issue for students and researchers. There is not yet a general consensus on how
-               to cite ChatGPT conversations.<note xml:id="ftn19"> As an example we provide here the
-                  recommendation by the University of Graz, last update 24.06.2024: <ref
+               to cite ChatGPT conversations.<note xml:id="ftn18"> As an example we provide here the
+                  recommendation by the University of Graz, last update 18.08.2025: <ref
                      target="https://lehren-und-lernen-mit-ki.uni-graz.at/de/ki-nutzung-kennzeichnen/"
                      >https://lehren-und-lernen-mit-ki.uni-graz.at/de/ki-nutzung-kennzeichnen/</ref>.</note>
                However, ChatGPT is usually not considered an author. This also means that ChatGPT –
                or any AI – cannot claim copyright and any AI-generated output is automatically
                considered public domain (<ref target="#Scholger2025" type="crossref">Scholger
                   2025</ref>). APA, for example, suggests that ‘chats’ with the AI cannot be cited
-               as personal communications as there is no person communicating.<note xml:id="ftn20">
+               as personal communications as there is no person communicating.<note xml:id="ftn19">
                   ‘Unfortunately, the results of a ChatGPT “chat” are not retrievable by other
                   readers, and although nonretrievable data or quotations in APA Style papers are
                   usually cited as personal communications, with ChatGPT-generated text there is no
@@ -2162,13 +2149,13 @@
                      target="https://apastyle.apa.org/blog/how-to-cite-chatgpt"
                      >https://apastyle.apa.org/blog/how-to-cite-chatgpt</ref>. </note> It is
                typically recommended to include the prompt or the entire conversation for reference
-               (for instance, in an appendix).<note xml:id="ftn21">
+               (for instance, in an appendix).<note xml:id="ftn20">
                   <ref target="https://apastyle.apa.org/blog/how-to-cite-chatgpt"
                      >https://apastyle.apa.org/blog/how-to-cite-chatgpt</ref>; APA policy on the use
                   of generative artificial intelligence (AI) in scholarly materials, in: <emph>APA
                      Publishing Policies (Aug. 2023)</emph>: <ref
-                     target="https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3"
-                     >https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3</ref>.
+                        target="https://web.archive.org/web/20260301102507/https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3"
+                        >https://web.archive.org/web/20260301102507/https://www.apa.org/pubs/journals/resources/publishing-policies?tab=3</ref>.
                </note> This reminds us of the recommendations from the early 2000s to print out
                entire websites and add them to an essay. However, this approach can quickly become
                unwieldy, resulting in an overwhelming flood of appendices, as conversations with
@@ -2176,7 +2163,7 @@
          </div>
          <div xml:id="div5">
             <head>User interaction, accessibility, and bias</head>
-            <p xml:id="p39">ChatGPT is a chatbot, and in this review, we focus on the GUI provided
+            <p xml:id="p37">ChatGPT is a chatbot, and in this review, we focus on the GUI provided
                by OpenAI at <ref target="https://chat.openai.com/">https://chat.openai.com/</ref>.
                The interface requires a user account and login and is designed primarily for
                conversational interaction, i.e., asking questions and receiving responses. Details
@@ -2185,85 +2172,77 @@
                functionality of the tool: the conversation. One gets the impression that OpenAI did
                not invest too much effort into the design, as their interest and attention are on
                other aspects. And indeed, critical remarks can be found regarding its simplicity and
-               limited customization options<note xml:id="ftn22"> For instance, <ref
-                     target="#Sebastian2023" type="crossref">Sebastian 2023</ref>. </note>.</p>
-            <p xml:id="p40">While the customization of the web-based GUI provided by OpenAI is
-               minimal, users are encouraged to use the API to build their own customized
-               applications and workflows. And indeed, the API has been used by numerous companies,
-               institutions, and individuals to integrate language models into existing
-                  workflows.<note xml:id="ftn23"> For instance, in a recent article, Galka and
-                  Vogeler compared the integration of different LLMs into a workflow for adding NER
-                  annotations (<ref type="crossref" target="#Galka.Vogeler2026">2026</ref>).</note>
-               However, the usage depends very much on a user’s ability to formulate instructions in
-               one of the languages supported by the language model. </p>
-            <p xml:id="p41">ChatGPT is described as a multilingual chatbot that can communicate in
-               over 50 languages.<note xml:id="ftn24"> The chatbot and its user interface are
+               limited customization options (e.g., <ref
+                  target="#Sebastian2023" type="crossref">Sebastian 2023</ref>).</p>
+            <p xml:id="p38">ChatGPT is described as a multilingual chatbot that can communicate in
+               over 50 languages.<note xml:id="ftn21"> The chatbot and its user interface are
                   constantly evolving and updated, but that is the situation in July 2024. OpenAI:
                   How to use ChatGPT in a language other than English (alpha), <ref
                      target="https://help.openai.com/en/articles/8357869-how-to-use-chatgpt-in-a-language-other-than-english-alpha"
                      >https://help.openai.com/en/articles/8357869-how-to-use-chatgpt-in-a-language-other-than-english-alpha</ref>.
                </note> It also provides the possibility to translate from one language into another,
-               making it a competitor for Google Translate, DeepL, and similar services.<note
-                  xml:id="ftn25"> See, for instance, <ref target="#Quillen2023" type="crossref"
-                     >Quillen 2023</ref>; <ref target="#PCMAG2023" type="crossref">PCMAG 2023</ref>.
-               </note> Also, the speech-to-text Audio API based on the Wisper model, which is also
+               making it a competitor for Google Translate, DeepL, and similar services (see, for instance, <ref target="#Quillen2023" type="crossref"
+                     >Quillen 2023</ref>; <ref target="#PCMAG2023" type="crossref">PCMAG 2023</ref>). 
+               Also, the speech-to-text Audio API based on the Wisper model, which is also
                part of the ChatGPT ecosystem, provides support for many languages. It was trained on
                98 languages, but for only about 58 languages, the word error rate is lower than
-                  50%.<note xml:id="ftn26">OpenAI: Speech to text: <ref
+                  50%.<note xml:id="ftn22">OpenAI: Speech to text: <ref
                      target="https://platform.openai.com/docs/guides/speech-to-text"
                      >https://platform.openai.com/docs/guides/speech-to-text</ref>; <ref
                      target="https://platform.openai.com/docs/guides/speech-to-text/supported-languages"
                      >https://platform.openai.com/docs/guides/speech-to-text/supported-languages</ref>.
                </note>
             </p>
-            <p xml:id="p42">ChatGPT is also frequently discussed in the context of accessibility and
+            <p xml:id="p39">ChatGPT is also frequently discussed in the context of accessibility and
                the provision of barrier-free content. The OpenAI web interface is simplistic and
                screen-reader friendly. But the actual benefit comes from the use of the ChatGPT API
                in various new applications. For instance, the description of images is one such
-                  use-case<note xml:id="ftn27">
+                  use-case<note xml:id="ftn23">
                   <ref
-                     target="https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/"
-                     >https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/</ref>.
+                     target="https://web.archive.org/web/20260311135431/https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/"
+                     >https://web.archive.org/web/20260311135431/https://netzpolitik.org/2023/gpt-4-das-naechste-grosse-ding-fuer-digitale-zugaenglichkeit/</ref>.
                </note>. </p>
-            <p xml:id="p43">At the end of this examination of ChatGPT’s usability, it is necessary
+            <p xml:id="p40">At the end of this examination of ChatGPT’s usability, it is necessary
                to address the question of bias. Even if we ‘talk’ to a machine, ChatGPT is not
                objective. The chatbot is trained on an enormous amount of data, most of it from a
                North American and European context, and the biases introduced through that data
                influence the response of the language model. Gender, racial, religious, age, or
                political bias, and other negative behaviors have been correctly criticized in the
-                  past.<note xml:id="ftn28"> See for instance examples on the UNESCO website (<ref
+                  past.<note xml:id="ftn24"> See for instance examples on the UNESCO website (<ref
                      target="#UNESCO2023" type="crossref">UNESCO 2023</ref>); on the matter see also
                   the end of the keynote lecture by Pierazzo (<ref type="crossref"
-                     target="#Pierazzo2024">2024</ref>). </note> If you ask ChatGPT, it will explain
+                     target="#Pierazzo2024">2024</ref>).</note> If you ask ChatGPT, it will explain
                to you that it tries to be objective, but it is not free of bias. OpenAI provides a
                disclaimer about bias and stereotypes in ChatGPT responses on its website. They
                suggest that users should be careful with generated content, particularly when
                dealing with culturally sensitive or historically situated material.<note
-                  xml:id="ftn29">OpenAI: Is ChatGPT biased?,
-                  https://help.openai.com/en/articles/8313359-is-chatgpt-biased.</note> Another
-               aspect that is currently discussed emotionally in politics and the media concerns the
-               ecological dimensions of using AI, especially the increase in power consumption of
-               data centers and companies in the coming years. Sustainability is therefore an
-               important topic that generates more and more attention and forms part of the broader
-               context in which decisions about adopting such tools for scholarly editing are made
-                  (<ref type="crossref" target="#Rohde2024">Rohde et al. 2024</ref>). </p>
+                  xml:id="ftn25"><ref target="#OpenAI2025" type="crossref">OpenAI 2025</ref> “Is ChatGPT biased?”, <ref
+                     target="https://web.archive.org/web/20260311133649/https://help.openai.com/en/articles/8313359-is-chatgpt-biased"
+                     >https://web.archive.org/web/20260311133649/https://help.openai.com/en/articles/8313359-is-chatgpt-biased</ref>.</note>
+               Another aspect that is currently discussed emotionally in politics and the media
+               concerns the ecological dimensions of using AI, especially the increase in power
+               consumption of data centers and companies in the coming years. Sustainability is
+               therefore an important topic that generates more and more attention and forms part of
+               the broader context in which decisions about adopting such tools for scholarly
+               editing are made (<ref type="crossref" target="#Rohde2024">Rohde et al. 2024</ref>).
+            </p>
          </div>
          <div xml:id="div6">
             <head>Conclusion</head>
-            <p xml:id="p44">ChatGPT is not a tool that was explicitly developed with the digital
+            <p xml:id="p41">ChatGPT is not a tool that was explicitly developed with the digital
                humanities or the scholarly editing community in mind. Nevertheless, it has a wide
-               range of possible applications for researchers and editors alike and can support
-               different stages of the development or analysis of a digital edition. It can be used
-               to aid with the transcription and data creation process, can help to develop scripts
-               for data processing and analysis, and more. </p>
-            <p xml:id="p45">There is still relatively little research on the use of LLMs for
+               range of potential applications for researchers and editors and can support
+               different stages of the development or analysis of digital editions. It can assist
+               with transcription and data creation, support the development of scripts
+               for data processing and analysis, and facilitate related tasks.</p>
+            <p xml:id="p42">There is still relatively little research on the use of LLMs for
                editorial purposes, and the possibilities of what can be done with ChatGPT and
                similar AI tools are constantly changing. We are aware that the evaluation of such
-               technology is only a snapshot that might not be relevant in a couple of months, and
+               technology is only a snapshot that might not be relevant in a gcouple of months, and
                that all predictions for future developments are quite difficult as development moves
                so quickly. As we outlined in the article, we chose to evaluate ChatGPT (GPT-4o) over
                other LLMs as it is well-known and currently widely used by humanities scholars.</p>
-            <p xml:id="p46">Several limitations significantly constrain the use of ChatGPT as a tool
+            <p xml:id="p43">Several limitations significantly constrain the use of ChatGPT as a tool
                for scholarly editing. First, the development of the tool is closed off as it is a
                commercial product. For editors, this results in a black-box situation that can be
                vaguely controlled using prompts. If prompts are not carefully crafted, the results
@@ -2284,22 +2263,29 @@
                models, along with ecological dimensions of using AI, such as high-power consumption,
                are substantial issues and have to be kept in mind when incorporating these tools
                into scholarly workflows.</p>
-            <p xml:id="p47">The use cases presented in this review demonstrate ChatGPT’s high
+            <p xml:id="p44">The use cases presented in this review demonstrate ChatGPT’s high
                potential as an assistant for digital editing. Tasks that previously required several
                tools and technical expertise can now be performed with comparatively little effort
                using carefully designed prompting instructions. At the same time, we have also
                discussed that the quality of the results can diverge depending on the source
-               material of the edition and a user’s ability to craft “good prompts”. In any case, a
+               material of the edition and a user’s ability to craft ‘good prompts’. In any case, a
                human editor must remain in the loop to control, evaluate, and, if necessary, further
                process the output. This is especially highlighted by our little experiment using
                German texts from two different historical language periods. It shows that ChatGPT
-               works less effectively with historical languages. </p>
+               works less effectively with historical languages.</p>
          </div>
       </body>
 
       <back>
          <div type="bibliography">
             <listBibl>
+               
+               <bibl xml:id="Bericht1576">Bericht: Dr. Wolfgang
+                  Eulenbeck und Dr. Andreas Paulus an Kurfürst August von Sachsen, 1576-05-09. In
+                  <emph>Der Reichstag zu Regensburg 1576: D. Berichte und Weisungen</emph>, edited by Josef Leeb, Christiane Neerfeld, Eva Ortlieb, 
+                  Florian Zeilinger, Roman Bleier, Gabriele Haug-Moritz, Georg Vogeler. 2023. Graz. <ref
+                     target="https://web.archive.org/web/20260320100933/https://gams.uni-graz.at/o:rta1576.edd1e7d24431/sdef:TEI/get?mode=lesetext"
+                     >https://web.archive.org/web/20260320100933/https://gams.uni-graz.at/o:rta1576.edd1e7d24431/sdef:TEI/get?mode=lesetext</ref>.</bibl>
                <bibl xml:id="Chen2024">Chen, Hailin, Fangkai Jiao, Xingxuan Li, Chengwei Qin,
                   Mathieu Ravaut, Ruochen Zhao, Caiming Xiong, and Shafiq Joty. 2024. “ChatGPT's
                   One-year Anniversary: Are Open-Source Large Language Models Catching up?”
@@ -2309,29 +2295,48 @@
                   Anastasios Angelopoulos, Christopher Chou, Tianle Li, and Siyuan Zhuang. 2024.
                   “Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference.”
                      <emph>arXiv</emph>. <ref target="https://doi.org/10.48550/arXiv.2403.04132"
-                     >https://doi.org/10.48550/arXiv.2403.04132</ref>. </bibl>
+                     >https://doi.org/10.48550/arXiv.2403.04132</ref>.</bibl>
                <bibl xml:id="Chudleigh2024">Chudleigh, Sarah. 2024. “Alles, was Sie über GPT wissen
-                  sollten -5.” <ref
+                  sollten.” <ref
                      target="https://web.archive.org/web/20250608124031/https://botpress.com/de/blog/everything-you-should-know-about-gpt-5"
                      >https://web.archive.org/web/20250608124031/https://botpress.com/de/blog/everything-you-should-know-about-gpt-5</ref>.</bibl>
-               <bibl xml:id="Galka.Vogeler2026">Galka, Selina, and Georg Vogeler. 2026. “Annotating,
+               <bibl xml:id="Galka2026">Galka, Selina, and Georg Vogeler. 2026. “Annotating,
                   projecting, and interpreting named entities in digital scholarly editions with
                   LLMs.” <emph>International Journal of Digital Humanities</emph>. <ref
                      target="https://doi.org/10.1007/s42803-025-00114-8"
                      >https://doi.org/10.1007/s42803-025-00114-8</ref>. </bibl>
                <bibl xml:id="Gates2024">Gates, Bill. 2024. “Episode 6. Sam Altmann.” In
-                     <emph>Unconfuse Me with Bill Gates</emph>. YouTube video, posted 11.1.2024,
-                     <ref target="https://www.youtube.com/watch?v=PkXELH6Y2lM"
-                     >https://www.youtube.com/watch?v=PkXELH6Y2lM</ref>. </bibl>
-               <bibl xml:id="Jankovic">Jankovic, Nikola. “TEI Scholar.” <ref
-                     target="https://web.archive.org/web/20260211110717/https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar"
-                     >https://web.archive.org/web/20260211110717/https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar</ref>. </bibl>
+                     <emph>Unconfuse Me with Bill Gates</emph>. YouTube video, posted 11.01.2024.
+                   <ref
+                     target="https://www.youtube.com/watch?v=PkXELH6Y2lM"
+                      >https://www.youtube.com/watch?v=PkXELH6Y2lM</ref>, last accessed 10.01.2026.</bibl>
+
+               <bibl xml:id="Hammer1794">Joseph von Hammer-Purgstall an Bernhard von Jenisch [Wien],
+                  20.2.1794. In <emph>Joseph von Hammer-Purgstall. Korrespondenz</emph>, edited by
+                  Walter Höflechner, Martina Scholger, Alexandra Wagner, Sabrina Strutz, and
+                  Elisabeth Steiner. 2025. Graz. <ref
+                     target="http://hdl.handle.net/11471/559.20.1"
+                     >http://hdl.handle.net/11471/559.20.1</ref>.</bibl>
+               <bibl xml:id="Hoeflechner2025">Höflechner, Walter, Martina Scholger, Alexandra
+                  Wagner, Sabrina Strutz, Elisabeth Steiner, eds. 2025. <emph>Joseph von
+                     Hammer-Purgstall. Korrespondenz</emph>. Graz. <ref
+                     target="http://hdl.handle.net/11471/559.20"
+                     >http://hdl.handle.net/11471/559.20</ref>.</bibl>
+               <bibl xml:id="Jankovic">Jankovic, Nikola. “TEI Scholar”.
+                     <ref target="https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar"
+                        >https://chatgpt.com/g/g-5yZrEY1A7-tei-scholar</ref>, last accessed 10.01.2026.</bibl>
                <bibl xml:id="Laskar2023">Laskar, Md Tahmid Rahman, M Saiful Bari, Mizanur Rahman, Md
                   Amran Hossen Bhuiyan, Shafiq R. Joty, J. Huang. 2023. “A Systematic Study and
                   Comprehensive Evaluation of ChatGPT on Benchmark Datasets”. <emph>Annual Meeting
                      of the Association for Computational Linguistics, 29 May 2023</emph>.
                      <emph>arXiv</emph>. <ref target="https://doi.org/10.48550/arXiv.2305.18486"
                      >https://doi.org/10.48550/arXiv.2305.18486</ref>. </bibl>
+               
+               <bibl xml:id="Leeb2023">Leeb, Josef, Christiane Neerfeld, Eva Ortlieb, 
+                  Florian Zeilinger, Roman Bleier, Gabriele Haug-Moritz, Georg Vogeler, eds. 2023. <emph>Der Reichstag zu Regensburg 1576</emph>. Graz.
+                  <ref target="https://web.archive.org/web/20260316120750/https://gams.uni-graz.at/context:rta1576"
+                     >https://web.archive.org/web/20260316120750/https://gams.uni-graz.at/context:rta1576</ref>. </bibl>
+               
                <bibl xml:id="Liu2023">Liu, Jiawei, Chunqiu Steven Xia, Yuyao Wang, Lingming Zhang.
                   2023. “Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of
                   Large Language Models for Code Generation”. <emph>37th Conference on Neural
@@ -2342,12 +2347,15 @@
                   Privacy When Using ChatGPT or Other Generative AI.” <ref
                      target="https://web.archive.org/web/20240804100338/https://www.mcafee.com/blogs/internet-security/chatgpts-impact-on-privacy-and-how-to-protect-yourself/"
                      >https://web.archive.org/web/20240804100338/https://www.mcafee.com/blogs/internet-security/chatgpts-impact-on-privacy-and-how-to-protect-yourself/</ref>.</bibl>
-               <bibl xml:id="Miyagawa">Miyagawa, So. “Lex 0 Converter.” <ref
+               <bibl xml:id="Miyagawa">Miyagawa, So. “Lex 0 Converter”.
+                     <ref
                      target="https://chatgpt.com/g/g-kOuPR6Q7u-tei-lex-0-converter?ref=pluginsurf"
-                     >https://chatgpt.com/g/g-kOuPR6Q7u-tei-lex-0-converter?ref=pluginsurf</ref>. </bibl>
-               <bibl xml:id="OpenAI2023">OpenAI. 2023. “GPT-4 Technical Report.” <emph>arXiv</emph>.
-                     <ref target="https://doi.org/10.48550/arXiv.2303.08774"
-                     >https://doi.org/10.48550/arXiv.2303.08774</ref>. </bibl>
+                        >https://chatgpt.com/g/g-kOuPR6Q7u-tei-lex-0-converter?ref=pluginsurf</ref>, last accessed 10.01.2026.</bibl>
+               <bibl xml:id="OpenAI2024a">OpenAI. 2024 (v6). “GPT-4 Technical Report.”
+                     <emph>arXiv</emph>. <ref target="https://arxiv.org/abs/2303.08774v6"
+                     >https://arxiv.org/abs/2303.08774v6</ref>. </bibl>
+               <bibl xml:id="OpenAI2025">OpenAI. 2025. “OpenAI Help Center.” <ref target="https://web.archive.org/web/20250628133335/https://help.openai.com/en/"
+                     >https://web.archive.org/web/20250628133335/https://help.openai.com/en/</ref>.</bibl>
                <bibl xml:id="Ouyang2023">Ouyang, Shuyin, Jie M. Zhang, Mark Harman, and Meng Wang.
                   2023. “LLM is Like a Box of Chocolates: the Non-determinism of ChatGPT in Code
                   Generation.” <emph>arXiv</emph>. <ref
@@ -2358,24 +2366,25 @@
                      target="https://web.archive.org/web/20230610132257/https://www.pcmag.com/news/google-translate-vs-chatgpt-which-one-is-the-best-language-translator"
                      >https://web.archive.org/web/20230610132257/https://www.pcmag.com/news/google-translate-vs-chatgpt-which-one-is-the-best-language-translator</ref>. </bibl>
                <bibl xml:id="Pierazzo2024">Pierazzo, Elena. 2024. “From Digital to Computational
-                  Scholarly Editing: Are We Ready for ChatGPT?” <ref
+                  Scholarly Editing: Are We Ready for ChatGPT?” YouTube video, posted 05.03.2024.
+                  <ref
                      target="https://www.youtube.com/watch?v=4_PtwZiWVz0"
-                     >https://www.youtube.com/watch?v=4_PtwZiWVz0</ref>. </bibl>
-               <bibl xml:id="Pollin2023">Pollin, Christopher. 2023. “teiCrafter.” <ref
-                     target="https://web.archive.org/web/20260211112810/https://chatgpt.com/g/g-FEUt7Fq48-teicrafter"
-                     >https://web.archive.org/web/20260211112810/https://chatgpt.com/g/g-FEUt7Fq48-teicrafter</ref>. </bibl>
-               <bibl xml:id="Pollin2024a">Pollin, Christopher. 2024ff. “Workshopreihe Angewandte
-                  Generative KI in den (digitalen) Geisteswissenschaften.” <emph>Zenodo</emph>. <ref
-                     target="https://doi.org/10.5281/zenodo.10647754"
-                     >https://doi.org/10.5281/zenodo.10647754</ref>. </bibl>
-               <bibl xml:id="Pollin2024b">Pollin, Christopher, Martina Scholger, Patrick Sahle,
+                     >https://www.youtube.com/watch?v=4_PtwZiWVz0</ref>, last accessed 10.01.2026.</bibl>
+               <bibl xml:id="Pollin2024">Pollin, Christopher. 2024a. “teiCrafter.” <ref
+                     target="https://web.archive.org/web/20250804030610/https://digedtnt.github.io/teiCrafter/"
+                     >https://web.archive.org/web/20250804030610/https://digedtnt.github.io/teiCrafter/</ref>.</bibl>
+               <bibl xml:id="Pollinetal2024">Pollin, Christopher, Martina Scholger, Patrick Sahle,
                   Georg Vogeler, Torsten Schaßan, Stefan Dumont, Franz Fischer, Ulrike
                   Henny-Krahmer, Christiane Fritze, Torsten Roeder, and Alexander Czmiel. 2024.
                   “Workshop Generative KI, LLMs und GPT bei digitalen Editionen.” <emph>DHd 2024 Quo
                      Vadis DH (DHd2024), Passau, Deutschland</emph>. <emph>Zenodo</emph>. <ref
                      target="https://doi.org/10.5281/zenodo.10893761"
                      >https://doi.org/10.5281/zenodo.10893761</ref>. </bibl>
-               <bibl xml:id="Pollin2025">Pollin, Christopher, Franz Fischer, Patrick Sahle, Martina
+               <bibl xml:id="Pollin2025">Pollin, Christopher. 2025. “Workshopreihe Angewandte
+                  Generative KI in den (digitalen) Geisteswissenschaften.” (v1.1.0) <emph>Zenodo</emph>. <ref
+                     target="https://doi.org/10.5281/zenodo.10647754"
+                     >https://doi.org/10.5281/zenodo.10647754</ref>.</bibl>
+               <bibl xml:id="Pollinetal2025">Pollin, Christopher, Franz Fischer, Patrick Sahle, Martina
                   Scholger, and Georg Vogeler. 2025. “When it was 2024 – Generative AI in the Field
                   of Digital Scholarly Editions.” <emph>Zeitschrift für digitale
                      Geisteswissenschaften</emph> 10. <ref
@@ -2413,19 +2422,24 @@
                      <emph>ADHO Digital Humanities Conference 2025 (DH 2025)</emph>.
                      <emph>Zenodo</emph>. <ref target="https://doi.org/10.5281/zenodo.16364518"
                      >https://doi.org/10.5281/zenodo.16364518</ref>.</bibl>
+               
                <bibl xml:id="Strutz2025b">Strutz, Sabrina, and Martina Scholger. 2025. “Beyond
                   Rule-Based Processing: LLM-Assisted TEI Encoding of Editorial Interventions in
                   Historical Correspondence.” <emph>TEI Annual Conference and Members' Meeting 2025,
                      Jagielloninan University in Kraków</emph>. <emph>Zenodo</emph>. <ref
                      target="https://doi.org/10.5281/zenodo.17176474"
                      >https://doi.org/10.5281/zenodo.17176474</ref>.</bibl>
-               <bibl xml:id="Wikipedia2024">Wikipedia contributors. 2024. “ErnieBot.” <ref
-                     target="https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722"
-                     >https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722</ref>. </bibl>
+               <bibl xml:id="Strutz2026a">Strutz, Sabrina. forthcoming. “A Multi-Dimensional Evaluation Framework for Assessing LLM Performance in TEI Encoding.” Journal of Open Humanities Data.</bibl>
+               <bibl xml:id="Strutz2026b">Strutz, Sabrina, and Martina Scholger. 2026. “LLM-Assisted Metadata Extraction and Normalization for Historical Correspondence: A Multi-Stage Pipeline Approach.” DHd 2026 <emph>Nicht nur Text, nicht nur Daten (DHd 2026)</emph>, Vienna. Zenodo. <ref target="https://doi.org/10.5281/zenodo.18862770">https://doi.org/10.5281/zenodo.18862770</ref>.</bibl>
+               
+               <bibl xml:id="TEI2026">TEI Consortium (eds.) 2026: “Guidelines for Electronic Text Encoding and Interchange.” Version 4.11.0. <ref target="https://tei-c.org/Vault/P5/4.11.0/doc/tei-p5-doc/en/html/">https://tei-c.org/Vault/P5/4.11.0/doc/tei-p5-doc/en/html/</ref>.</bibl>
                <bibl xml:id="UNESCO2023">UNESCO. 2023. “Artificial Intelligence: examples of ethical
                   dilemmas”. <ref
                      target="https://web.archive.org/web/20240712082302/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics/cases"
                      >https://web.archive.org/web/20240712082302/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics/cases</ref>. </bibl>
+               <bibl xml:id="Wikipedia2024">Wikipedia contributors. 2024. “ErnieBot.” <ref
+                     target="https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722"
+                     >https://web.archive.org/web/20240712104208/https://en.wikipedia.org/w/index.php?title=Ernie_Bot&amp;oldid=1232272722</ref>. </bibl>
                <bibl xml:id="Yang2023">Yang, Zeyi. 2023. “Chinese ChatGPT alternatives just got
                   approved for the general public.” <emph>MIT Technology Review (Aug 30,
                      2023)</emph>. <ref
