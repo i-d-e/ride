@@ -1,0 +1,2156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.21.2">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Papyrological Editor</title>
+        <author ref="https://orcid.org/0009-0005-2619-117X">
+          <name>
+            <forename>Lavinia</forename>
+            <surname>Ferretti</surname>
+          </name>
+          <affiliation>
+            <orgName>Universität Basel</orgName>
+            <placeName>Basel</placeName>
+          </affiliation>
+          <email>lavinia.ferretti@unibas.ch</email>
+        </author>
+        <author ref="https://orcid.org/0000-0003-4688-6567">
+          <name>
+            <forename>Elisa</forename>
+            <surname>Nury</surname>
+          </name>
+          <affiliation>
+            <orgName>Université de Genève</orgName>
+            <placeName>Geneve</placeName>
+          </affiliation>
+          <email>elisa.nury@unige.ch</email>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+        <date when="2026-03">March 2026</date>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-21/papyrieditor</idno>
+        <idno type="DOI">10.18716/ride.a.21.2</idno>
+        <idno type="archive"
+          >https://github.com/i-d-e/ride/raw/master/issues/issue21/papyrieditor/papyrieditor.pdf</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="j">RIDE - A review journal for digital editions and resources</title>
+        <editor ref="https://orcid.org/0000-0001-5584-4807">Anna Busch</editor>
+        <editor ref="https://orcid.org/0000-0003-3152-6542">Martin Prell</editor>
+        <editor ref="https://orcid.org/0000-0001-7043-7820">Torsten Roeder</editor>
+        <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike
+          Henny-Krahmer</editor>
+        <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina
+          Scholger</editor>
+        <editor ref="https://orcid.org/0009-0005-6203-2942" role="assistant">Finnja
+          Borchardt</editor>
+        <biblScope unit="issue" n="21">Digital Scholarly Editions (Crowd Sourcing)</biblScope>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-21</idno>
+        <idno type="DOI">10.18716/ride.a.21</idno>
+      </seriesStmt>
+      <notesStmt>
+        <relatedItem type="reviewed_resource">
+          <bibl>
+            <title>The Papyrological Editor (PE, SoSOL)</title>
+            <editor>Ryan Baumann et al.</editor>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Baumann, Ryan</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>et al.</persName>
+            </respStmt>
+            <date type="publication">2010</date>
+            <idno type="URI">https://papyri.info/editor/</idno>
+            <date type="accessed">2024-08-14</date>
+          </bibl>
+        </relatedItem>
+        <relatedItem type="reviewing_criteria">
+          <bibl>
+            <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing Scholarly
+              Digital Editions</ref>
+          </bibl>
+        </relatedItem>
+      </notesStmt>
+      <sourceDesc>
+        <p>born digital</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+          <category>
+            <catDesc>Documentation</catDesc>
+            <category xml:id="se001">
+              <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+              </catDesc>
+              <catDesc>Is it easily possible to describe the project bibliographically along the
+                schema "responsible editors, publishing/hosting institution, year(s) of
+                publishing"?</catDesc>
+              <category xml:id="se002">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se003">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se004">
+              <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+              </catDesc>
+              <catDesc>Are the contributors (editors, institutions, associates) of the project fully
+                documented?</catDesc>
+              <category xml:id="se005">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se006">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se007">
+              <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+              </catDesc>
+              <catDesc>Does the project list contact persons?</catDesc>
+              <category xml:id="se008">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se009">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se010">
+              <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+              </catDesc>
+              <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
+              <category xml:id="se011">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se012">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se013">
+              <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+              </catDesc>
+              <catDesc>Is the selection by and large reasonable?</catDesc>
+              <category xml:id="se014">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se015">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se016">
+              <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the documentation include information about the long term sustainability
+                of the basic data (archiving of the data)?</catDesc>
+              <category xml:id="se017">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se018">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se019">
+              <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
+              <category xml:id="se020">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se021">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se022">
+              <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
+              <category xml:id="se023">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se024">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se025">
+              <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Does the project document which data model (e.g. TEI) has been used and for
+                what reason?</catDesc>
+              <category xml:id="se026">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se027">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se028">
+              <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts concerning the use of the
+                project?</catDesc>
+              <category xml:id="se029">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se030">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se031">
+              <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or
+                a part of it)?</catDesc>
+              <category xml:id="se032">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se033">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se034">
+              <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                further modifications and additions)?</catDesc>
+              <category xml:id="se035">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se036">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se037">
+              <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the project provide information about institutional support for the
+                curation and sustainability of the project?</catDesc>
+              <category xml:id="se038">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se039">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Contents</catDesc>
+            <category xml:id="se040">
+              <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
+              <category xml:id="se041">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se042">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se043">
+              <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Does the edition make use of these previous editions?</catDesc>
+              <category xml:id="se044">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se045">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se046">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se047">
+              <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer an introduction to the subject-matter (the author(s),
+                the work, its history, the theme, etc.) of the project?</catDesc>
+              <category xml:id="se048">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se049">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se050">
+              <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a bibliography?</catDesc>
+              <category xml:id="se051">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se052">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se053">
+              <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                passages, interpretation, etc.)?</catDesc>
+              <category xml:id="se054">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se055">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se056">
+              <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project include or link to external resources with contextual
+                material?</catDesc>
+              <category xml:id="se057">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se058">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se059">
+              <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of digitised sources?</catDesc>
+              <category xml:id="se060">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se061">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se062">
+              <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+              <category xml:id="se063">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se064">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se065">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se066">
+              <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Is the text fully transcribed?</catDesc>
+              <category xml:id="se067">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se068">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se069">
+              <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                etc.)?</catDesc>
+              <category xml:id="se070">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se071">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se072">
+              <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+              </catDesc>
+              <catDesc>Does the project feature compilations indices, registers or visualisations
+                that offer alternative ways to access the material?</catDesc>
+              <category xml:id="se073">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se074">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se075">
+              <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+              </catDesc>
+              <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+              <category xml:id="se076">
+                <catDesc>Single manuscript</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se077">
+                <catDesc>Single work</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se078">
+                <catDesc>Collection of texts</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se079">
+                <catDesc>Collected works</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se080">
+                <catDesc>Papers</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se081">
+                <catDesc>Archival holding</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se082">
+                <catDesc>Charters</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se083">
+                <catDesc>Letters</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se084">
+                <catDesc>Diary</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se085">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se086">
+              <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+              </catDesc>
+              <catDesc>What era(s) do the documents belong to?</catDesc>
+              <category xml:id="se087">
+                <catDesc>Classics</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se088">
+                <catDesc>Medieval</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se089">
+                <catDesc>Early modern</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se090">
+                <catDesc>Modern</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se091">
+              <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+              </catDesc>
+              <catDesc>Which perspective(s) do the editors take towards the edited material? How can
+                the edition be classified in general terms?</catDesc>
+              <category xml:id="se092">
+                <catDesc>History</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se093">
+                <catDesc>Philology / Literary Studies</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se094">
+                <catDesc>Philosophy / Theology</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se095">
+                <catDesc>History of Science</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se096">
+                <catDesc>Musicology</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se097">
+                <catDesc>Art History</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se098">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se099">
+              <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+              </catDesc>
+              <catDesc>Does the project offer any spin-offs?</catDesc>
+              <category xml:id="se100">
+                <catDesc>App</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se101">
+                <catDesc>Mobile</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se102">
+                <catDesc>PDF</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se103">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se104">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Access modes</catDesc>
+            <category xml:id="se105">
+              <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+              </catDesc>
+              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
+              <category xml:id="se106">
+                <catDesc>Authors</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se107">
+                <catDesc>Works</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se108">
+                <catDesc>Versions</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se109">
+                <catDesc>Structure</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se110">
+                <catDesc>Pages</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se111">
+                <catDesc>Documents</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se112">
+                <catDesc>Type of material</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se113">
+                <catDesc>Images</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se114">
+                <catDesc>Dates</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se115">
+                <catDesc>Persons</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se116">
+                <catDesc>Places</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se117">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+                <catDesc>
+                  <gloss>Editorial (Series, Collection of the print publication); Language; Advanced
+                    text search (string); Metadata; Identifiers</gloss>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se118">
+              <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer a simple search?</catDesc>
+              <category xml:id="se119">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se120">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se121">
+              <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer an advanced search?</catDesc>
+              <category xml:id="se122">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se123">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se124">
+              <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search support the use of wildcards?</catDesc>
+              <category xml:id="se125">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se126">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se127">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se128">
+              <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer an index of the searched field?</catDesc>
+              <category xml:id="se129">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se130">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se131">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se132">
+              <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
+              <category xml:id="se133">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se134">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se135">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se136">
+              <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts for the search?</catDesc>
+              <category xml:id="se137">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se138">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se139">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Aims and methods</catDesc>
+            <category xml:id="se140">
+              <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+              </catDesc>
+              <catDesc>Who is the intended audience of the project?</catDesc>
+              <category xml:id="se141">
+                <catDesc>Scholars</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se142">
+                <catDesc>Interested public</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se143">
+              <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+              </catDesc>
+              <catDesc>Which type fits best for the reviewed project?</catDesc>
+              <category xml:id="se144">
+                <catDesc>Facsimile edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se145">
+                <catDesc>Archive edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se146">
+                <catDesc>Documentary edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se147">
+                <catDesc>Diplomatic edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se148">
+                <catDesc>Genetic edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se149">
+                <catDesc>Work critical edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se150">
+                <catDesc>Text critical edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se151">
+                <catDesc>Enriched edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se152">
+                <catDesc>Database edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se153">
+                <catDesc>Digital library</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se154">
+                <catDesc>Collection of texts</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se155">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se156">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se158">
+              <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+              </catDesc>
+              <catDesc>In how far is the text critically edited?</catDesc>
+              <category xml:id="se159">
+                <catDesc>Transmission examined</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se160">
+                <catDesc>Palaeographic annotations</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se161">
+                <catDesc>Normalization</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se162">
+                <catDesc>Variants</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se163">
+                <catDesc>Emendation</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se164">
+                <catDesc>Commentary notes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se165">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se166">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se167">
+              <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Is the data encoded in XML? </catDesc>
+              <category xml:id="se168">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se169">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se170">
+              <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
+              <category xml:id="se171">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se172">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se173">
+              <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+              </catDesc>
+              <catDesc>Which kinds or forms of text are presented?</catDesc>
+              <category xml:id="se174">
+                <catDesc>Facsimiles</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se175">
+                <catDesc>Diplomatic transcription</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se176">
+                <catDesc>Edited text</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se177">
+                <catDesc>Translations</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se178">
+                <catDesc>Commentaries</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se179">
+                <catDesc>Semantic data</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Technical accessability</catDesc>
+            <category xml:id="se180">
+              <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Are there persistent identifiers and an addressing system for the edition
+                and/or parts/objects of it and which mechanism is used to that end?</catDesc>
+              <category xml:id="se181">
+                <catDesc>DOI</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se182">
+                <catDesc>ARK</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se183">
+                <catDesc>URN</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se184">
+                <catDesc>PURL.ORG</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se185">
+                <catDesc>Persistent URLs</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se186">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se187">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se188">
+              <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse
+                of the data of the project in other contexts?</catDesc>
+              <category xml:id="se189">
+                <catDesc>OAI-PMH</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se190">
+                <catDesc>REST</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se191">
+                <catDesc>General API</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se192">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se193">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se194">
+              <catDesc>Open Access</catDesc>
+              <catDesc>Is the edition Open Access?</catDesc>
+              <category xml:id="se195">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se196">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se197">
+              <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue 4.12</ref>
+              </catDesc>
+              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of
+                the edition (e.g. for a page)?</catDesc>
+              <category xml:id="se198">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se199">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se200">
+              <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
+              <category xml:id="se201">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se202">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se203">
+              <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can you use the data with other tools useful for this kind of
+                content?</catDesc>
+              <category xml:id="se204">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se205">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se206">
+              <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+              </catDesc>
+              <catDesc>Are the rights to (re)use the content declared?</catDesc>
+              <category xml:id="se207">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se208">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se209">
+              <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+              </catDesc>
+              <catDesc>Under what license are the contents released?</catDesc>
+              <category xml:id="se210">
+                <catDesc>CC0</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se211">
+                <catDesc>CC-BY</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se212">
+                <catDesc>CC-BY-ND</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se213">
+                <catDesc>CC-BY-NC</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se214">
+                <catDesc>CC-BY-SA</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se215">
+                <catDesc>CC-BY-NC-ND</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se216">
+                <catDesc>CC-BY-NC-SA</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se217">
+                <catDesc>PDM</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se218">
+                <catDesc>No license</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se219">
+                <catDesc>Multiple licenses</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se220">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en"/>
+      </langUsage>
+      <textClass>
+        <keywords xml:lang="en">
+          <term>classics</term>
+          <term>code editing</term>
+          <term>epidoc</term>
+          <term>transcription</term>
+          <term>virtual workspace</term>
+          <term>crowdsourcing</term>
+          <term>papyrology</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div type="abstract">
+        <p>The <emph>Papyrological Editor</emph> is the editing environment of
+            <emph>Papyri.info</emph>. It allows users to collectively curate data while keeping high
+          scientific standards through a peer-review system and a Git-based version history. A
+          custom syntax called Leiden+ makes the edition of XML data more easily accessible to
+          users. However, the complexity of the multiple interlinked databases and the technical
+          expertise needed to work with papyri may be a barrier for new users. The review focuses
+          particularly on the user perspective, analyzing what makes the <emph>Papyrological
+            Editor</emph> successful and how it could be improved.</p>
+      </div>
+    </front>
+    <body>
+      <div xml:id="div1">
+        <head>Introduction</head>
+        <p xml:id="p1">The <emph>Papyrological Editor</emph> (PE) is one of the two core components
+          of <ref target="https://web.archive.org/web/20240128084814/https:/papyri.info/"
+              ><emph>Papyri.info</emph></ref>, the platform for accessing a large collection of
+          ancient Greek documentary and literary texts on papyri and ostraca (potsherds). The PE
+          describes itself as an editing environment, enabling scholarly curation of the material
+          from <emph>Papyri.info</emph> with version control and peer review mechanisms; it is
+          accessible to everyone through registration. Its counterpart, the <emph>Papyrological
+            Navigator</emph> (PN), is the openly accessible interface that allows for searching and
+          viewing of the texts and their associated metadata. Lucia Vannini (<ref type="crossref"
+            target="#vannini2018">2018</ref>) previously reviewed the PN component of
+            <emph>Papyri.info</emph> for RIDE and received an <ref
+            target="https://web.archive.org/web/20240227060127/https:/ride.i-d-e.de/reviewers/ride-award-for-best-review/"
+            >award for best</ref> review. This review’s purpose is not to duplicate Lucia Vannini’s
+          work but to complement it with a review of the second component of
+            <emph>Papyri.info</emph>, the <emph>Papyrological Editor</emph>; we will thus focus on
+          the crowd editing aspect enabled by the PE.</p>
+        <p xml:id="p2">We begin with introductory remarks on the <emph>Papyrological Editor</emph>’s
+          history, authors, audience and aims. Afterwards, the body of the review is divided into
+          two parts. The technical infrastructure is first described with a particular focus on two
+          aspects that are tightly related: the Leiden+ syntax and the transcription interface.
+          Leiden+ is a user-friendly, low-code syntax specifically developed for the PE and plays a
+          central role in editing the transcriptions of papyri. The second part covers the various
+          steps of the crowd-editing and peer-review processes from a user perspective. While we
+          mention minor bugs, but we have not tried the platform across different browsers and
+            OS,<note xml:id="ftn1">We work on a firefox browser accessed through a Windows 10
+            Enterprise OS.</note> and so do not aim at universality on this point. We rely on our
+          experience of the platform combined with discussions with our colleagues.<note
+            xml:id="ftn2">Lavinia Ferretti is a papyrologist and a frequent user of the platform.
+            Her knowledge comes from a training workshop with Dr. Mike Sampson, many discussions
+            around specific publications with Dr. Sampson and Dr. James Cowey, two members of the
+            editorial board, and frequent submission of publications. She contributes the user
+            perspective. Elisa Nury is a DH specialist and a specialist of digital editions. She has
+            worked extensively with the DDbDP and HGV XML data for the grammateus project. She
+            contributes with technical knowledge and experience as a user of the PE. The reviewers
+            are funded by the Swiss National Science Foundation while writing this review
+            (grammateus, SNSF grant n° 212424, PI Paul Schubert, and EGRAPSA, SNSF n° 211682, PI
+            Isabelle Marthot-Santaniello). The authors wish to thank all reviewers for their
+            valuable input to this article.</note> We finally discuss the questions of rights and
+          attribution of scholarly contributions to <emph>Papyri.info</emph>. Users interested in
+          the process of integrating textual corrections to the database can also consult the review
+          of this aspect of the PE by Despina Borcea (<ref type="crossref" target="#borcea2022"
+            >2022</ref>).</p>
+        <div xml:id="div1.1">
+          <head>History</head>
+          <p xml:id="p3">The history of <emph>Papyri.info</emph> is described in a variety of
+            publications (<ref type="crossref" target="#sosin2010">Sosin 2010</ref>; <ref
+              type="crossref" target="#babeu2011">Babeu 2011</ref>; <ref type="crossref"
+              target="#baumann2011">Baumann et al. 2011</ref>; <ref type="crossref"
+              target="#baumann2013">Baumann 2013</ref>; <ref type="crossref" target="#reggiani2017"
+              >Reggiani 2017</ref>; <ref type="crossref" target="#cayless2019">Cayless 2019</ref>).
+            This platform is the result of three Mellon Foundation-funded projects titled
+              <emph>Integrating Digital Papyrology</emph> (IDP) which ran from 2008 to 2012. In
+            2010, both components of <emph>Papyri.info</emph> (PN and PE) were formally launched
+            during the 26th Congress of the International Association of Papyrologists (<ref
+              type="crossref" target="#sosin2010">Sosin 2010</ref>).<note xml:id="ftn3">Currently,
+                <emph>Papyri.info</emph> has no sustainable funding, as a call for support makes
+              clear.</note></p>
+          <p xml:id="p4">The IDP projects aimed to gather multiple databases with overlapping
+            papyrological content and make them accessible and editable through one common online
+            platform. The first databases integrated into <emph>Papyri.info</emph> were the
+              <emph>Duke Databank of Documentary Papyri</emph> (DDbDP), a textual collection of
+            edited documentary papyri encoded in TEI; the <emph>Heidelberger
+              Gesamtverzeichnis</emph> (HGV), an XML collection of metadata pertaining to
+            documentary papyri combined with a further database of XML translations into modern
+            languages; the <emph>Advanced Papyrological Information System</emph> (APIS), a metadata
+            repository for papyri collections primarily located in America. These were completed by
+            the addition of the <emph>Digital Corpus of Literary Papyri</emph> (DCLP), collecting
+            TEI-encoded text and metadata concerning literary and paraliterary papyri, and a
+            bibliographical database building on a copy of the <emph>Bibliographie
+              Papyrologique</emph> (BP).<note xml:id="ftn4">On the relationship between the latter
+              and <emph>Papyri.info</emph>, cf. <ref type="crossref" target="#vannini2018">Vannini
+                2018, §15</ref>.</note> In addition, <emph>Papyri.info</emph> also displays data
+            from <ref target="https://www.trismegistos.org/"><emph>Trismegistos</emph></ref>,
+            another database collecting metadata on texts from the ancient world, although the
+            latter cannot be edited through the PE.<note xml:id="ftn5">To see how the contents of
+              various databases are combined, see for instance papyrus ZPE 203 (2017), which
+              displays HGV, <emph>Trismegistos</emph>, and APIS metadata, a DDbDP transcription,and
+              HGV translations.</note> The <emph>Trismegistos</emph> numbers attributed to papyri
+              (<ref type="crossref" target="#depauw2014">Depauw and Gheldof 2014</ref>) serve as
+            stable identifiers to crosslink the databases.</p>
+          <p xml:id="p5">The model behind the conception of the PE is <emph>Suda On-Line</emph>
+            (SOL), a project to crowd-source the translation to English of a 10th-century Byzantine
+            encyclopedia called the <emph>Suda</emph>, pioneering in combining data openness with
+            editorial vetting. The editing environment was therefore named <emph>Son of Suda
+              On-Line</emph> (SoSOL). The PE is an instance of SoSOL (<ref type="crossref"
+              target="#baumann2013">Baumann 2013, 104</ref>), and SoSOL is the ‘bundle of services’
+            conceived as a reusable environment. The reusability of SoSOL was demonstrated in the
+              <ref target="https://web.archive.org/web/20180220025919/http:/www.litpap.info/"
+                ><emph>Digital Corpus of Literary Papyri</emph></ref>, a project that terminated in
+            the late 2010s and is <ref
+              target="https://web.archive.org/web/20231122172521/https:/wiki.digitalclassicist.org/Digital_Corpus_of_Literary_Papyri"
+              >now integrated</ref> into the <emph>Papyri.info</emph> environment.<note
+              xml:id="ftn6">For comments on the differences between <emph>Papyri.info</emph> and
+              DCLP, see Vannini (<ref type="crossref" target="#vannini2018">2018,
+            §19</ref>).</note></p>
+        </div>
+        <div xml:id="div1.2">
+          <head>Author(s)</head>
+          <p xml:id="p7">Although the conceptual inspiration of SoSOL is clear, correct authorship
+            attribution of the PE is not as straightforward. We have chosen to highlight Ryan
+            Baumann, the main contributor of the SoSOL code in the GitHub repository and author of
+            the peer-reviewed article describing SoSOL and its functionalities (<ref type="crossref"
+              target="#baumann2013">Baumann 2013</ref>). He was not working alone, but it is less
+            obvious who to credit as co-creators of SoSOL among the various collaborators of the
+            IDP. The <ref
+              target="https://web.archive.org/web/20110806101148/http:/www.duke.edu/~jds15/IDP2-FinalProposalRedacted.pdf"
+              >proposal for the IDP2 project</ref> mentions the University of Kentucky’s
+              <emph>Center for Visualization and Virtual Environments</emph> (VisCenter) as the
+            group responsible for SoSOL. The <ref
+              target="https://web.archive.org/web/20230926085505/https:/papyri.info/docs/ddbdp">
+              About page</ref> of the DDbDP gives the names of Charles Carpenter and John Fox as
+            members of the VisCenter. The <ref
+              target="https://web.archive.org/web/20221222090354/https:/wiki.digitalclassicist.org/Papyrological_Editor"
+              >Digital Classicist Wiki entry for the PE</ref> lists Hugh Cayless as a co-author to
+            Ryan Baumann. However, it is likely safe to assume that most scholars involved in IDP2
+            may have contributed more or less to the creation of SoSOL, whether from a technical or
+            conceptual perspective.</p>
+        </div>
+        <div xml:id="div1.3">
+          <head>Editorial Tasks</head>
+          <p xml:id="p8">The creation of the PE was motivated by the need to maintain and keep up to
+            date the databases gathered in <emph>Papyri.info</emph>, particularly the <emph>Duke
+              Databank of Documentary Papyri</emph>, which lacked financial resources (<ref
+              type="crossref" target="#sosin2010">Sosin 2010</ref>; <ref type="crossref"
+              target="#cayless2019">Cayless 2019</ref>). Moreover, it aimed to democratize the
+            management of a dataset that ultimately belongs to the community. The crowd is therefore
+            involved in helping to maintain the material on <emph>Papyri.info</emph> and keeping it
+            up-to-date with the scientific consensus.</p>
+          <p xml:id="p9">The editorial tasks carried out vary in scope: correcting existing
+            transcriptions and metadata, adding new material retrieved from academic publications,
+            or directly publishing new scholarship. In the first case, the corrections may be
+            relatively small, such as adding missing words to the transcription or updating the link
+            to an online facsimile. Adding new material from academic publications includes
+            incorporating a new conjecture from an article or creating new XML transcription files
+            for newly edited papyri published in a volume or article. New scholarship in
+              <emph>Papyri.info</emph> mainly takes the form of corrections to existing
+            transcriptions, except that these corrections have not been published elsewhere.<note
+              xml:id="ftn7">The accepted changes are recorded in the <emph>Bulletin of Online
+                Emendations to Papyri</emph> (BOEP), available as a downloadable PDF from 2012 to
+              2021 and integrated with the journal <emph>Pylon</emph> from 2022 (<ref
+                type="crossref" target="#ast2022">Ast et al. 2022</ref>).</note> In the past, some
+            experiences with native digital editions have also been made (<ref type="crossref"
+              target="#berkes2018">Berkes 2018)</ref>), but this practice is rare and will not be
+            the subject of this review.<note xml:id="ftn8">There are only five born-digital editions
+              of papyri and a few reeditions of already published texts.</note> All three forms of
+            editorial tasks undergo a double peer review from a board of editors before being
+            integrated.</p>
+        </div>
+        <div xml:id="div1.4">
+          <head>Users of the PE</head>
+          <p xml:id="p10">Although anyone can register to the PE, knowledge of Greek papyrology and
+            either the EpiDoc standard in XML or the Leiden+ syntax (see <ref type="crossref"
+              target="#div2.1">below</ref>) are necessary to contribute to <emph>Papyri.info</emph>.
+            The full list of PE users is available.<note xml:id="ftn9">
+              <ref
+                target="https://web.archive.org/web/20240709083723/https://papyri.info/editor/all_users_links"
+                >
+                https://web.archive.org/web/20240709083723/https://papyri.info/editor/all_users_links</ref>.</note>
+            There are 5,259 registered users as of June 21, 2024. However, this list contains
+            roughly 1,200 suspected spam users whose names are composed of random letters, and many
+            duplicates. Through the Git repository, we gain a better view. There have been a
+            thousand active users since the inception of <emph>Papyri.info</emph>, and the 100 most
+            active are responsible for over 97 % of the modifications. Again, there are duplicates
+            in this list since scholars may have contributed from different accounts created at
+            different times.<note xml:id="ftn10">Among the 20 most active users, one finds three
+              times James Cowey and twice Mike Sampson, who together have authored over 55 percent
+              of all the commits. These statistics are obtained with the commands “git shortlog
+              --all --summary” (for all users). The command was run in Git bash with a local copy of
+              the <ref target="https://github.com/papyri/idp.data">idp.data repository</ref>
+              (Accessed June 21, 2024).</note> In fact, the number of active users is rather small
+            compared to the amount of work required to keep it truly up-to-date. New volumes of
+            edited papyri are published each year.<note xml:id="ftn11"> See the checklist for the
+              list of volumes published each year. The addition of volumes into the PE is shared
+              among papyrologists (<ref type="crossref" target="#sosin2010">Sosin
+              2010</ref>).</note> Moreover, additional corrections and editions regularly appear in
+            journal articles. There can also be errors in the data due to the conversion to EpiDoc
+            XML from the original DDbDP and HGV databases, and their correction also relies on the
+            community of PE users.</p>
+        </div>
+      </div>
+      <div xml:id="div2">
+        <head>SoSOL Infrastructure</head>
+        <p xml:id="p11">Before addressing the PE user experience, we wish to explain and comment on
+          the technical aspects of the platform. The infrastructure of SoSOL is found <ref
+            target="https://web.archive.org/web/20221221142500/https:/github.com/papyri/sosol">open
+            source on GitHub</ref>, with a GPL-3.0 License. SoSOL is a custom platform developed for
+          the Integrating Digital Papyrology projects. It uses JRuby with the Rails web framework.
+          Contrary to other online editing environments, such as MediaWiki, it does not rely on a
+          SQL database but on Git, a tool meant for source code management and tracking versions of
+          files.</p>
+        <p xml:id="p12">The argument for Git was its decentralized workflow possibilities,
+          especially branching and merging. Git facilitates the editorial process where users and
+          board members may work in parallel on the same publication and preserves the version
+          history. There are two repositories for the data: the PE has its own GitHub repository,
+          which is regularly updated via the user interface, and the <ref
+            target="https://web.archive.org/web/20240422020248/https:/github.com/papyri/idp.data"
+            >idp.data</ref> is the public-facing repository. Both are “synchronized bidirectionnally
+          on an hourly basis”.<note xml:id="ftn12">
+            <ref
+              target="https://web.archive.org/web/20240422020248/https://github.com/papyri/idp.data"
+              >
+            https://web.archive.org/web/20240422020248/https://github.com/papyri/idp.data</ref>.</note>
+          The idp.data repository hosts the data of all the databases integrated into
+            <emph>Papyri.info</emph>. The <ref
+            target="https://aquila.zaw.uni-heidelberg.de/index.php/start">HGV</ref> data is
+          synchronized back to HGV, the only database still maintained separately. Advanced users
+          may change the data directly in the idp.data repository, but using the PE is recommended
+          as it incorporates the peer-review process.</p>
+        <div xml:id="div2.1">
+          <head>Leiden+ and EpiDoc Syntax</head>
+          <p xml:id="p13">Using Git is not the only innovation of the PE. The transcription
+            interface for XML editing, based on the Leiden+ syntax developed expressly for the
+            SoSOL, impacts users even more directly.</p>
+          <p xml:id="p14">The Leiden+ is inspired by the Leiden conventions for editing ancient
+            texts. Its developers aimed to offer a user-friendly alternative to XML editing for PE
+            users, encourage participation in the crowdsourcing effort with an easier-to-learn
+            system, and, therefore, bridge the gap between traditional and digital papyrology.</p>
+          <p xml:id="p15">
+            <figure xml:id="img1">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-1.png"/>
+              <head type="legend">The edition of P.Gen. IV 165 according to the Leiden (left) and
+                Leiden+ (right) conventions.</head>
+            </figure> The original Leiden conventions provided guidelines for indicating special
+            features of ancient texts in editions: for instance, lacunas, missing letters,
+            additions, and abbreviation expansions; they are widely used in editions of papyri and
+            are common knowledge for papyrologists who use print editions in their daily
+              research.<note xml:id="ftn13">On the Leiden system in general, cf. <ref
+                type="crossref" target="#dow1969">Dow 1969</ref>. On its creation, cf. <ref
+                type="crossref" target="#essai1932">‘Essai d’unification des méthodes’ 1932</ref>;
+                <ref type="crossref" target="#wilcken1932">Wilcken 1932</ref>; <ref type="crossref"
+                target="#collart1933">Collart 1933</ref>; <ref type="crossref" target="#congrès1932"
+                >‘XVIIIe Congrès international des Orientalistes’ 1932</ref>. On later efforts to
+              improve the system, cf. for instance <ref type="crossref" target="#krummrey1980"
+                >Krummrey and Panciera 1980</ref>; <ref type="crossref" target="#panciera1991"
+                >Panciera 1991</ref> for epigraphical textes, and <ref type="crossref"
+                target="#fournet2022">Fournet 2022</ref>; <ref type="crossref" target="#aip2022"
+                >Association Internationale de Papyrologues (AIP) 2022</ref> for papyrological
+              texts. The Leiden+ syntax and its relationship with both the Leiden Conventions and
+              EpiDoc encoding is discussed in particular by Ryan Baumann (<ref type="crossref"
+                target="#baumann2013">2013</ref>) and Nicola Reggiani (<ref type="crossref"
+                target="#reggiani2017">2017</ref>).</note> However, when these same texts are
+            encoded in XML, they follow the standard EpiDoc, a subset of the TEI used for ancient
+            documents that differs from the traditional practice. The Leiden+ syntax bridges the gap
+            as it imitates the traditional Leiden while enabling an automated generation of the XML
+            version of the data through <ref
+              target="https://web.archive.org/web/20231208182913/https:/www.brics.dk/xsugar/"
+              >XSugar</ref>.<note xml:id="ftn14">XSugar is a tool to manage back and forth
+              conversion between an XML syntax and another syntax.</note> As the Leiden Conventions
+            also encompasses other publications such as epigraphic editions, the Leiden+ syntax is
+            reusable in other projects, and indeed, a subset of the Leiden+ has been reused for the
+            online version of the Supplementum Epigraphicum Graecum. A comparison between a Leiden
+            and a Leiden+ edition of a text makes the relationship between the two systems
+            immediately visible (<ref type="crossref" target="#img1">Fig. 1</ref>).</p>
+          <p xml:id="p16">Nicola Reggiani (<ref type="crossref" target="#reggiani2017">2017,
+              232–40</ref>) presents a more in-depth discussion of the main differences between
+            Leiden+ and its XML equivalent: the Leiden Conventions and Leiden+ system consist of a
+            descriptive syntax, while the XML markup is semantic. For example, a lacuna is always
+            indicated with square brackets in Leiden systems, whereas in EpiDoc, it may be rendered
+            with either <code>&lt;gap&gt;</code> or <code>&lt;supplied&gt;</code> element, depending
+            on whether the editor attempted to render the text of the lacuna or not. Consequently,
+            semantic errors are not detected in Leiden+. This difference means that users may
+            produce valid Leiden+ syntax, for instance, for a lacuna, which the papyrological editor
+            may not transform into the semantically correct XML.</p>
+          <p xml:id="p17">The Leiden+/EpiDoc conversion is subject to minor bugs. For instance,
+            correct XML indicating ancient diacritics over dotted letters (e.g., <code> &lt;hi
+              rend="diaeresis"&gt;&lt;unclear&gt;ἀ&lt;unclear&gt;hi&gt;</code>) is not converted
+            into correct Leiden+ indicating the same feature (e.g., “ἀ̣ (¨)”). This conversion
+            problem results in broken documents that users can no longer edit in the PE Leiden+
+            interface. Editions with such combinations can only be properly edited in the XML
+            version of the data.<note xml:id="ftn15">
+              <ref
+                target="https://web.archive.org/web/20120119191435/http:/www.papyri.info/ddbdp/p.vat.aphrod;;5"
+                > P.vat.aphrod 5</ref> is such an example with several dotted accented letters, such
+              as ὑ̣ on line 12 of fragment C.</note></p>
+        </div>
+        <div xml:id="div2.2">
+          <head>Leiden+ and EpiDoc Transcription</head>
+          <p xml:id="p18">
+            <figure xml:id="img2">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-2.png"/>
+              <head type="legend">The Transcription Editor and the “insert a reading” popup
+                window.</head>
+            </figure> The need for user-friendly interfaces for XML transcription is not limited to
+            papyrology. Various solutions have been developed over the years, from the <ref
+              target="https://web.archive.org/web/20240116222259/https:/www.oxygenxml.com/doc/versions/26.0/ug-editor/topics/editing-xml-documents-author.html"
+              >“author mode” of the <emph>oXygen XML Editor</emph></ref> to the more recent editors
+              <emph>LEAF-Writer</emph><note xml:id="ftn16">
+              <ref target="https://leaf-writer.leaf-vre.org/"
+                >https://leaf-writer.leaf-vre.org/</ref> (Accessed January 25, 2024).</note> or
+              <emph>FairCopy</emph><note xml:id="ftn17">
+              <ref target="https://www.faircopyeditor.com/">https://www.faircopyeditor.com/</ref>
+              (Accessed January 25, 2024).</note>. In New Testament research, the
+              <emph>Transcription Editor</emph><note xml:id="ftn18">The <emph>Transcription
+                Editor</emph> is available as a <ref
+                target="https://web.archive.org/web/20240107145839/https:/itsee-wce.birmingham.ac.uk/ote/transcriptiontool"
+                >standalone web editor or from</ref> within the <emph>New Testament Virtual
+                Manuscript Room</emph>
+              <ref target="https://web.archive.org/web/20240110125413/https:/ntvmr.uni-muenster.de/"
+                >(NTVMR)</ref>.</note> plays a similar role to the <emph>Papyrological
+            Editor</emph>, as a tool meant to facilitate the collaborative effort of transcribing a
+            relatively homogenous corpus by a community of researchers. The Transcription Editor
+            offers buttons to include XML elements in the text and pop-up windows to fill the
+            metadata needed for the XML elements and attributes (<ref type="crossref" target="#img2"
+              >Fig. 2</ref>).</p>
+          <p xml:id="p19">
+            <figure xml:id="img3">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-3.png"/>
+              <head type="legend">The PE menu bar for adding elements via a popup window.</head>
+            </figure> The interface of the PE also offers buttons to include XML elements within the
+            transcription (see <ref type="crossref" target="#img3">Fig. 3</ref>); nevertheless, the
+            main difference and innovation between the PE and other editors remains the use of the
+            Leiden+ syntax in synchronization with EpiDoc XML. Once mastered, using Leiden+
+            facilitates the transcription process, making constant button clicks to include tags and
+            attributes unnecessary. In that regard, the PE takes advantage of the existing
+            formalized syntax well-known in the research community, the Leiden Conventions, to help
+            create the XML transcriptions. Without this valued feature (<ref type="crossref"
+              target="#borcea2022">Borcea 2022</ref>), it is unlikely that participation in the
+            collaborative editing effort would be as high as it is (<ref type="crossref"
+              target="#sosin2010">Sosin 2010</ref>).</p>
+        </div>
+      </div>
+      <div xml:id="div3">
+        <head>Crowd Editing in the PE</head>
+        <p xml:id="p20">If SoSOL is the environment developed during the <emph>Integrating Digital
+            Papyrology</emph> projects, the <emph>Papyrological Editor</emph> (PE) is the specific
+          instance of this environment which runs alongside the <emph>Papyrological Navigator</emph>
+          (PN) at <emph>Papyri.info</emph>. While the PN is openly accessible to browse and view the
+          contents of <emph>Papyri.info</emph>, the PE is only accessible to registered users,
+          although no restriction is placed on who can register. There follows a review of PE
+          through the crowd-editing process. For a review of the PN, we redirect our readers to the
+          RIDE review by Lucia Vannini (<ref type="crossref" target="#vannini2018">2018</ref>).</p>
+        <div xml:id="div3.1">
+          <head>Access and Home Page</head>
+          <p xml:id="p21">The sign-in process requires the user to log in or register with a
+              <emph>Papyri.info</emph> account or through a Google account. There is no assignment
+            of rights or user agreement. Newly logged users may start contributing immediately.</p>
+          <p xml:id="p22">
+            <figure xml:id="img4">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-4.png"/>
+              <head type="legend">The home dashboard of the <emph>Papyrological
+                Editor</emph>.</head>
+            </figure> Once the user has logged in, they will land on their home page or dashboard,
+            which gives an overview of the user’s work (<ref type="crossref" target="#img4">Fig.
+              4</ref>). Contributions to the database, called publications, are divided into four
+            main categories: New, Editing, Submitted, Committed, corresponding to the various phases
+            of the editing and reviewing process. Work in progress appears under “New” if it
+            concerns an entry not yet existing in the PN and under “Editing” if it concerns an
+            existing entry. In both cases, the entry will appear under “Submitted” after submission
+            to the editorial board. The editorial board then takes the relay; if it approves a
+            publication, it will integrate it into the system - the publication is now under
+            “Committed”. If the board refuses the publication, it will send it back to the user, who
+            will find it again under “Editing”. If the list of committed entries becomes too long,
+            it is possible to archive them through the “archive all” button.<note xml:id="ftn19">
+              The archiving process works well from the dashboard page, where the “archive all
+              committed” button allows users to archive all their committed publications, and the
+              “archived” button to access them. On the contrary, the “Archive” button in the
+              overview page of each committed publication is broken in <emph>Firefox</emph> as well
+              as <emph>Chrome</emph> and <emph>Edge.</emph></note></p>
+          <p xml:id="p23">For each publication, the dashboard presents a row of links allowing
+            access to the various parts of the related data. The first, “Publication”, leads to the
+            overview page, where it is possible to look at the comments that inform the editorial
+            history of the entry, to delete, submit or withdraw from the editorial review the
+            specific publication, and to download a copy of the XML data composing it. The other
+            links lead to the respective database entry for the same papyrus — DDbDP Text, HGV Meta,
+            DCLP Meta, DCLP Text, Translation, Biblio, and APIS. This specific data structure comes
+            from the original aim to merge data originating from various projects. It informs not
+            only the user dashboard but the entire structure of the <emph>Papyri.info</emph>
+            website. Each of these corpora can be edited, but most users will focus on Text and Meta
+            entries, so these will be at the core of this review.</p>
+          <p xml:id="p24">Through the user page, accessible from the top right corner of the home
+            page, one can edit user information and access the usage stats. Users with a Google
+            account can create a password to switch to a username-password account.<note
+              xml:id="ftn20">In the case of one of the writers, the process is bugged and it is now
+              impossible to retrieve or modify the password, or to edit the user. Nevertheless, this
+              problem does not impact the day to day usage of the system.</note> The activity
+            statistics of all users is accessible through the “usage stats by user” link. For each
+            user, it is possible to know whether they are a member of one or more editorial boards
+            and which publications they have submitted, voted upon, or finalized. However, there is
+            no list of the members of the various editorial boards who are allowed to vote upon
+            individual submissions, such information would further increase the transparency of the
+            peer review process.</p>
+        </div>
+        <div xml:id="div3.2">
+          <head>Creating a Publication</head>
+          <p xml:id="p25">
+            <figure xml:id="img5">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-5.png"/>
+              <head type="legend">The “advanced create” and the “create new publication”.</head>
+            </figure> Each papyrus in the PN has an “open in editor” button that creates a
+            publication, i.e., a copy of the data retrievable through the user dashboard that can be
+            modified and submitted to the editorial board for review. If the entry does not exist
+            yet (for instance, if the user wants to add to the database the text of a papyrus
+            recently published in a journal article), then the dashboard page includes an “Advanced
+            create” button (<ref type="crossref" target="#img5">Fig. 5</ref>) that leads to a “Start
+            a Publication” page. This page offers the possibility to create a new publication from
+            scratch (<ref type="crossref" target="#img5">Fig. 5</ref>). Knowing the structure of the
+            database facilitates the process: it is possible to create a DDB publication (an entry
+            for a documentary text, which can include HGV metadata, DDbDP text, and translation), a
+            DCLP publication (composed of DCLP Meta, Text, and possible translation), an APIS entry
+            or a Biblio entry.</p>
+          <p xml:id="p26">
+            <figure xml:id="img6">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-6.png"/>
+              <head type="legend">Overview of a publication.</head>
+            </figure> The newly created publication leads to the overview page (<ref type="crossref"
+              target="#img6">Fig. 6</ref>), which is the same overview page accessible from the
+            dashboard (<ref type="crossref" target="#p22">see above</ref>). The structure of the
+            publication can be found at the top left of the page; a simple entry will only contain
+            the tabs Overview – Text – Meta. APIS and Translation appear when relevant, and papyri
+            that have been re-edited will include one Text + Meta combination for each of their
+            re-editions.</p>
+          <p xml:id="p27">The overview page also allows users to expand the existing entries to
+            other IDP databases. For instance, it is possible to create a DDbDP textual entry for an
+            existing HGV one or a translation for an existing DCLP or DDbDP. This is possible
+            through the “create new” links at the bottom of the overview page (which is slightly
+            ambiguous as they do not create a new entry, as with the Advanced create button, but an
+            entry crosslinked to the one the user is working on; <ref type="crossref" target="#img6"
+              >Fig. 6</ref>). At the bottom of the overview page, the user can download a copy or
+            delete the publication; a deletion will only delete the user’s copy of that publication,
+            and not the database entry of existing papyri.</p>
+        </div>
+        <div xml:id="div3.3">
+          <head>Editing a Publication</head>
+          <p xml:id="p28">Most of the work will be done in the “Edit” tab of the “Text” and “Meta”
+            tab. The preview option gives the user an approximate idea of the final result and helps
+            check the data before submission. For textual entries, the “Commentary” tab also allows
+            for adding editorial comments to specific lines of text.</p>
+          <p xml:id="p29">
+            <figure xml:id="img7">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-7.png"/>
+              <head type="legend">A wrongly encoded square bracket at the end of line 6 of the
+                document prevents from saving the publication; the “*POSSIBLE ERROR*” indication at
+                the end of l. 3 of the text shows where to look for the mistake.</head>
+            </figure> Every time the user saves their modifications, the save button parses the
+            Leiden+ and converts it into an EpiDoc XML. If the text was correctly encoded, the PE
+            will display a green bar, save the data and allow the user to submit the publication to
+            the editorial board. If there are mistakes in the code, the PE will display a red bar
+            and indicate to the user where in the text it could not correctly process the Leiden+ by
+            marking it as “*POSSIBLE ERROR*” (<ref type="crossref" target="#img7">Fig. 7</ref>).
+            Until the problems have been solved, the user cannot submit the publication. Although
+            intimidating, this function is essential in ensuring that only correctly encoded data
+            enters the system. It also helps users by giving them feedback.</p>
+        </div>
+        <div xml:id="div3.4">
+          <head>Submission and Review of a Publication</head>
+          <p xml:id="p30">From the overview page, the user is able to submit the completed
+            publication for review to the editorial board, with a comment explaining the proposed
+            modifications and the reasons behind them. This comment will not only be available to
+            the editorial board during the voting phase but also be integrated into the XML entry of
+            the data and retrievable for every future user. It is always possible to delete a
+            publication as long as no editor has voted on it. Afterwards, the user can only wait for
+            the voting and committing process.</p>
+          <p xml:id="p31">Each submission undergoes editorial scrutiny; the practice of the
+            editorial board requires only one vote to send to finalization or reject proposals
+            related to the maintenance of the database and at least two votes from two different
+            editors for new scholarship. Each editor’s vote is associated with a comment that, in
+            addition to guaranteeing the transparency of the editorial process, functions as a space
+            for discussion among editors and as a source of feedback for users.</p>
+        </div>
+        <div xml:id="div3.5">
+          <head>Learning Curve</head>
+          <p xml:id="p32">
+            <figure xml:id="img8">
+              <graphic
+                url="http://ride.i-d-e.de/wp-content/uploads/issue_21/papyrieditor/pictures/picture-8.png"/>
+              <head type="legend">The entry form for HGV data.</head>
+            </figure> The system is conceived to make machine-readable data entry as human-friendly
+            as possible. For metadata, the users interact with a very standard form; an example may
+            be the entry form for HGV data (<ref type="crossref" target="#img8">Fig. 8</ref>).</p>
+          <p xml:id="p33">For the text, however, users have to learn either the Leiden+ language or
+            EpiDoc XML to fully engage with the PE. <emph>Papyri.info</emph> integrates a <ref
+              target="https://web.archive.org/web/20240129150428/https:/papyri.info/docs/leiden_plus"
+              >help page</ref>, accessible all the time on the top right of the website, and
+            provides a menu bar to help users correctly code in the language (<ref type="crossref"
+              target="#img3">Fig. 3</ref>).</p>
+          <p xml:id="p34">For textual entries, the Leiden+ help file furnishes reliable information
+            on how to encode the data, and the POSSIBLE ERROR feature of the automated Leiden+
+            verification indicates where mistakes must be corrected. More generally, the editorial
+            comments give feedback on the quality of the entry. For instance, when users do not know
+            how to enter some data correctly, they can always mention it in their commentary field
+            to leave the editorial board correctly encode the data; conversely, editor comments
+            indicate corrections to be done to the entry that users can read to learn how to improve
+            their future entries.<note xml:id="ftn21">The <code>revisionDesc</code> for the HGV
+              entry 3399 = UPZ I 8 (see <ref type="crossref" target="#code1">Code 1</ref>) is
+              a good example of such a learning from feedback process.</note></p>
+          <p xml:id="p35">According to some feedback by colleagues, the comments field and Leiden+
+            help page are insufficient to build confidence in the user. The complex structure of the
+            data and the website, with multiple interrelated databases each accessible through
+            multiple paths, can be overwhelming for newcomers. The overview page, for instance,
+            changes according to the status of the publication (New/Editing/Submitted/Commited). The
+            help page concerns only one part of the system, and the comments arrive late in the
+            process. Moreover, the EpiDoc encoding and the internal practice in the PE may evolve
+            faster than the examples on the help page. This fact increases the difficulty of
+            learning by example.</p>
+          <p xml:id="p36">Therefore, the creation of online tutorials for beginners on how to
+            approach the website would be much appreciated, and existing tutorials, such as the
+            SunoikisisDC class (<ref type="crossref" target="#bodard2022">Bodard, Vannini, and
+              Vierros 2022</ref>), could be better highlighted. FAQ or forum pages, where one could
+            ask specific questions, may be helpful too, although they are resource-consuming.
+            Moreover, some initial training from more knowledgeable users is often necessary.
+            Trainers can introduce users to the syntax of Leiden+ and give hints on how to properly
+            encode text. They can also share some insider knowledge on how to fill the entry forms.
+            A typical learning curve, therefore, is composed of a first introduction to the system
+            through formal training, followed by a phase of trial and error through which
+            familiarity with it develops. It may take some time to fully grasp the system, and some
+            users abandon the PE during the learning phase.</p>
+          <p xml:id="p37">A special mention should be made of the form used to create a
+            bibliographical entry. It is incredibly complex, to the point that without guidance, the
+            average user cannot learn how to enter the information correctly. Even with training, it
+            is easy to forget where each piece of information should go. Some fields tend to bug,
+            such as the Publisher – Name and Publisher – Place entries, that systematically
+            duplicate the information in the XML. Both reviewers have ended up directly editing the
+            information in the XML file, as this is easier to understand. However, this is a minor
+            criticism, as the addition of bibliographical data does not belong to the usual tasks of
+            PE users and is mostly done by experienced users directly in the GitHub repository.</p>
+        </div>
+      </div>
+      <div xml:id="div4">
+        <head>Rights and Attribution</head>
+        <p xml:id="p38">The texts of the DDbDP and metadata of HGV are licensed with a CC-BY 3.0
+          License (<ref type="crossref" target="#baumann2013">Baumann 2013</ref>), while APIS
+          records are under a CC-BY-NC 3.0 license. All licenses are clearly visible on each papyrus
+          record and encoded in the DDbDP XML files. The DDbDP/HGV license is also highlighted in
+          the project’s Git, but not the APIS license. However, the licenses appear to be absent
+          from the XML files of the HGV metadata and APIS records. For long-term reuse purposes, it
+          may be useful to include the licenses directly into the XML.</p>
+        <p xml:id="p39">The editing and voting process is entirely transparent, as every user
+          contribution and every vote from the editorial board must be associated with a comment
+            (<ref type="crossref" target="#sosin2010">Sosin 2010</ref>). If the publication is
+          approved and committed, these comments will also be retrievable for every future user. If
+          the publication is refused, the user can see the comments. Still, these are only
+          integrated into the XML files if they resubmit the publication (see <ref type="crossref"
+            target="#code1">Code 1</ref>) and will disappear if it is deleted.</p>
+        <p xml:id="p40">
+          <figure xml:id="code1">
+            <eg>&lt;change when="2021-01-12T07:38:39-05:00"
+              who="http://papyri.info/users/james.cowey"&gt;Vote - HGVReject - I am sending this
+              back because the link is nowhere to be see. I think that you entered the link and then
+              clicked on save. Please enter the link, click on the "add" button to the right of the
+              box into which you entered the link and then click save. &lt;change&gt;</eg>
+            <head type="legend">Example of a comment from the <code>&lt;revisionDesc&gt;</code> of
+              HGV 3399 = UPZ I 8, accessible at <ref target="https://papyri.info/hgv/3399/source"
+                >https://papyri.info/hgv/3399/source</ref> (Accessed January 29, 2024).</head>
+          </figure>
+        </p>
+        <p xml:id="p41">All the comments related to modifications of a file are included in the XML
+          revision description, which thus ensures credit for the work done in the PE. It is
+          accessible by looking at the XML itself, on the PN or the associated GitHub page, or by
+          creating a publication to modify the file and looking at the comment section of the
+          overview page. Comments pertaining to DDbDP and DCLP entries are also accessible at the
+          bottom of the related PN page by clicking “Editorial History” – this option is not
+          available for comments in the HGV metadata.</p>
+        <p xml:id="p42">In addition, logged users can access the statistics of any other user to see
+          what they have submitted and the changes accepted by the boards. However, such
+          contributions are not traditional research outputs, such as books or articles, and it may
+          still be difficult to cite them in a CV and secure proper recognition when applying for
+          academic positions – a problem that is not specific to the PE but more general to digital
+          scholarship.</p>
+        <p xml:id="p43">This problem is especially acute for maintenance work; newly published
+          scholarship, be it in the form of editorial corrections of new editions, is at least
+          clearly indicated on the main web page of each entry (e.g., in the form of an apparatus
+          note to the textual edition) and recorded in a specific publication that makes it easier
+          to cite it in CVs, the BOEP.<note xml:id="ftn22">See Rodney Ast’s <ref
+              target="https://informationssikkerhed.ku.dk/english/protection-of-information-privacy/mailman-gdpr/?url=https%3A%2F%2Flist.ku.dk%2Fgdpr.html%3F%2Fhyperkitty%2Flist%2Fpapy%40lists.hum.ku.dk%2Fthread%2F4YTXCDV3D7JQ526ASQBAB5IVQWKTEA2V%2F"
+              >message to the papy-list</ref> (Accessed January 30, 2024) for the explanations on
+            how to cite a BOEP publication.</note> This situation directly impacts the system’s
+          sustainability: although many papyrologists are aware of mistakes in the PN data, only a
+          few actively correct them – the lack of recognition for a time-consuming task being a
+          possible reason.</p>
+      </div>
+      <div xml:id="div5">
+        <head>Conclusion</head>
+        <p xml:id="p44">The <emph>Papyrological Editor</emph> has undoubtedly reached its primary
+          goal of maintaining and keeping up to date the databases it relies on: over the last ten
+          years, papyri newly published in print books have been thoroughly added to the system, and
+          mistakes in the legacy data could be at least partially curated by the free work of its
+          users. The vetting process guarantees the quality of the entered information and a
+          relative consistency of practices. Although the online data is still not entirely up to
+          date with print scholarship, especially concerning textual corrections and publications in
+          articles, the backlog is no longer increasing and is even reducing. Hence, the data in the
+          papyrological navigator remains an essential starting point for papyrological
+          research.</p>
+        <p xml:id="p45">The main barrier to updating the online data is the low number of PE users
+          compared to the amount of work required to keep the content up-to-date. Indeed, although
+          virtually all papyrologists rely on the <emph>Papyrological Navigator</emph> for their
+          work, and they are often aware of errors in the data, only some of them contribute to the
+          Editor; likewise, only a handful of editors actively contribute to voting and finalizing
+          publications, so that some user contributions wait a long time before being integrated to
+          the data. Improving the engagement of PN users in the PE would help the upkeep of the
+          data. Among the improvements that could go in this direction are the integration of better
+          guidelines for the whole editorial process and not simply the Leiden+ syntax, the increase
+          in visibility and crediting for the user and the editorial work, and solving the few bugs
+          that remain in the system. Better visibility of the editor on the website and more precise
+          documentation may help increase the users involvement with the PE.</p>
+        <p xml:id="p46">The PE in <emph>Papyri.info</emph> relies on the papyrological community’s
+          knowledge to maintain various databases that benefit the same community. By centralizing
+          access to these various resources and allowing collective editing, it simplifies access to
+          the gathered data and ensures its continuous relevance.</p>
+      </div>
+    </body>
+    <back>
+      <div type="bibliography">
+        <listBibl>
+          <bibl xml:id="aip2022">Association Internationale de Papyrologues (AIP). 2022. “Guidelines
+            for Editing Papyri.” <ref
+              target="https://web.archive.org/web/20230304172629/https://aip.ulb.be/PDF/Guidelines_for_editing_papyri.pdf"
+              >https://web.archive.org/web/20230304172629/https://aip.ulb.be/PDF/Guidelines_for_editing_papyri.pdf</ref>. </bibl>
+          <bibl xml:id="ast2022">Ast, Rodney, Lajos Berkes, James M.S. Cowey, Holger Essler, and
+            Julia Lougovaya. 2022. “Bulletin of Online Emendations to Papyri (BOEP) 10 (November 2,
+            2022).” <emph>Pylon: Editions and Studies of Ancient Texts</emph> 2. <ref
+              target="https://doi.org/10.48631/PYLON.2022.2.92976"
+              >https://doi.org/10.48631/PYLON.2022.2.92976</ref>. </bibl>
+          <bibl xml:id="babeu2011">Babeu, Alison. 2011. “‘Rome Wasn’t Digitized in a Day’: Building
+            a Cyberinfrastructure for Digital Classics.” Washington D.C. <ref
+              target="http://www.clir.org/pubs/abstract/reports/pub150"
+              >http://www.clir.org/pubs/abstract/reports/pub150</ref>. </bibl>
+          <bibl xml:id="baumann2013">Baumann, Ryan. 2013. “The Son of SUDA Online.” <emph>In The
+              Digital Classicist</emph> 2013, edited by Stuart Dunn and Simon Mahony, 91–106.
+            London: The Institute of Classical Studies. <ref
+              target="https://www.jstor.org/stable/44216325"
+              >https://www.jstor.org/stable/44216325</ref>. </bibl>
+          <bibl xml:id="baumann2011"> Baumann, Ryan, Gabriel Bodard, Hugh Cayless, Joshua Sosin, and
+            Raffaele Viglianti. 2011. “Integrated Digital Papyrology.” Presented at the DH2011,
+            Stanford. <ref
+              target="https://web.archive.org/web/20170710154928/http://dh2011abstracts.stanford.edu/xtf/view?docId=tei/ab-193.xml;brand=default"
+              >https://web.archive.org/web/20170710154928/http://dh2011abstracts.stanford.edu/xtf/view?docId=tei/ab-193.xml;brand=default</ref>. </bibl>
+          <bibl xml:id="berkes2018">Berkes, Lajos. 2018. “Perspectives and Challenges in Editing
+            Documentary Papyri Online: A Report on Born-Digital Editions through Papyri.Info.” In
+              <emph>Digital Papyrology II</emph>, edited by Nicola Reggiani, 75–86. Berlin, Boston:
+            De Gruyter. <ref target="https://doi.org/10.1515/9783110547450-004"
+              >https://doi.org/10.1515/9783110547450-004</ref>. </bibl>
+          <bibl xml:id="bodard2022">Bodard, Gabriel, Lucia Vannini, and Marja Vierros. 2022.
+            “Contributing Apparatus Corrections to Papyri.Info.” Presented at the Sunoikisis Digital
+            Classics, November 10. <ref
+              target="https://web.archive.org/web/20221110151510/https://github.com/SunoikisisDC/SunoikisisDC-2022-2023/wiki/Contributing-Apparatus-corrections-to-Papyri-info"
+              >
+              https://web.archive.org/web/20221110151510/https://github.com/SunoikisisDC/SunoikisisDC-2022-2023/wiki/Contributing-Apparatus-corrections-to-Papyri-info</ref>. </bibl>
+          <bibl xml:id="borcea2022">Borcea, Despina. 2022. “Review of the Papyrological Editor.”
+              <emph>The Stoa: A Review for Digital Classics</emph> (blog). 5 December 2022. <ref
+              target="https://web.archive.org/web/20231003011521/https://blog.stoa.org/archives/4163"
+              >https://web.archive.org/web/20231003011521/https://blog.stoa.org/archives/4163</ref>.</bibl>
+          <bibl xml:id="cayless2019">Cayless, Hugh. 2019. “Sustaining Linked Ancient World Data.” In
+              <emph>Digital Classical Philology</emph>, edited by Monica Berti, 35–50. Berlin,
+            Boston: De Gruyter. <ref target="https://doi.org/10.1515/9783110599572-004"
+              >https://doi.org/10.1515/9783110599572-004</ref>. </bibl>
+          <bibl xml:id="collart1933">Collart, Paul. 1933. “Bulletin papyrologique, XII (1932).”
+              <emph>Revue des Études Grecques</emph> 46 (218): 443–67. <ref
+              target="https://doi.org/10.3406/reg.1933.7142"
+              >https://doi.org/10.3406/reg.1933.7142</ref>. </bibl>
+          <bibl xml:id="depauw2014">Depauw, Mark, and Tom Gheldof. 2014. “Trismegistos: An
+            Interdisciplinary Platform for Ancient World Texts and Related Information.” In
+              <emph>Theory and Practice of Digital Libraries - TPDL 2013 Selected Workshops</emph>,
+            edited by Łukasz Bolikowski, Vittore Casarosa, Paula Goodale, Nikos Houssos, Paolo
+            Manghi, and Jochen Schirrwagen, 40–52. Cham: Springer International Publishing. <ref
+              target="https://doi.org/10.1007/978-3-319-08425-1_5"
+              >https://doi.org/10.1007/978-3-319-08425-1_5</ref>. </bibl>
+          <bibl xml:id="dow1969">Dow, Sterling. 1969. <emph>Conventions in Editing: A Suggested
+              Reformulation of the Leiden System</emph>. [Durham]: Duke University. </bibl>
+          <bibl xml:id="essai1932">“Essai d’unification des méthodes employées dans les éditions de
+            papyrus.” 1932. <emph>Chronique d’Egypte</emph> 7: 285–87. <ref
+              target="https://doi.org/10.1484/J.CDE.2.307092"
+              >https://doi.org/10.1484/J.CDE.2.307092</ref>. </bibl>
+          <bibl xml:id="fournet2022">Fournet, Jean-Luc. 2022. “Some Thoughts on the Papyrological
+            Edition.” In <emph>Proceedings of the 29th International Congress of Papyrology. Lecce,
+              28 July - 3 August 2019</emph>, edited by Mario Capasso, Paola Davoli, and Natascia
+            Pellé, 460–70. Lecce: Centro di Studi Papirologici dell’Università del Salento. <ref
+              target="https://doi.org/10.1285/i99788883051760p460"
+              >https://doi.org/10.1285/i99788883051760p460</ref>. </bibl>
+          <bibl xml:id="krummrey1980">Krummrey, Hans, and Silvio Panciera. 1980. “Criteri di
+            edizione e segni diacritici.” In <emph>Miscellanea</emph>, 205–15. Tituli 2. Roma: Ed.
+            di storia e letteratura. </bibl>
+          <bibl xml:id="panciera1991">Panciera, Silvio. 1991. “Struttura dei supplementi e segni
+            diacritici: dieci anni dopo.” In <emph>Supplementa italica 8</emph>, 9–21. Roma: Quasar. </bibl>
+          <bibl xml:id="reggiani2017"> Reggiani, Nicola. 2017. <emph>Digital Papyrology I: Methods,
+              Tools and Trends</emph>. Berlin, Boston: De Gruyter. <ref
+              target="https://doi.org/10.1515/9783110547474"
+              >https://doi.org/10.1515/9783110547474</ref>. </bibl>
+          <bibl xml:id="sosin2010">Sosin, Joshua. 2010. “Digital Papyrology.” <emph>The Stoa
+              Consortium</emph> (blog). 26 October 2010. <ref
+              target="https://web.archive.org/web/20170408110552/http://www.stoa.org/archives/1263"
+              >https://web.archive.org/web/20170408110552/http://www.stoa.org/archives/1263</ref>. </bibl>
+          <bibl xml:id="vannini2018">Vannini, Lucia. 2018. “Review of Papyri.Info.” <emph>RIDE – A
+              Review Journal for Digital Editions and Resources</emph> 9. <ref
+              target="https://doi.org/10.18716/RIDE.A.9.4"
+            >https://doi.org/10.18716/RIDE.A.9.4</ref>. </bibl>
+          <bibl xml:id="wilcken1932">Wilcken, Ulrich. 1932. “II. Miszellen. Das Leydener
+            Klammersystem.” <emph>Archiv für Papyrusforschung und Verwandte Gebiete</emph> 10:
+            211–12. <ref target="https://doi.org/10.1515/apf.1932.10.3-4.211"
+              >https://doi.org/10.1515/apf.1932.10.3-4.211</ref>. </bibl>
+          <bibl xml:id="congrès1932">“XVIIIe Congrès international des Orientalistes, Programme des
+            communications.” 1932. <emph>Chronique d’Egypte</emph> 7: 127–30. <ref
+              target="https://doi.org/10.1484/J.CDE.2.307071"
+              >https://doi.org/10.1484/J.CDE.2.307071</ref>.</bibl>
+        </listBibl>
+      </div>
+    </back>
+  </text>
+</TEI>
