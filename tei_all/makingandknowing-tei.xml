@@ -1,0 +1,2617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://relaxng.org/ns/structure/1.0?>
+<?xml-model https://raw.githubusercontent.com/i-d-e/ride/master/schema/ride.rng application/xml http://purl.oclc.org/dsdl/schematron?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ride.21.4">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Ways of making digital editions of historical recipes and experimental texts: The
+          Making and Knowing Project</title>
+        <author ref="https://orcid.org/0000-0002-4618-9481">
+          <name>
+            <forename>Sarah</forename>
+            <surname>Lang</surname>
+          </name>
+          <affiliation>
+            <orgName>Max Planck Institute for the History of Science</orgName>
+            <placeName>Berlin</placeName>
+          </affiliation>
+          <email>slang@mpiwg-berlin.mpg.de</email>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Institut für Dokumentologie und Editorik e.V.</publisher>
+        <date when="2026-05">May 2026</date>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-21/makingandknowing</idno>
+        <idno type="DOI">10.18716/ride.a.21.4</idno>
+        <idno type="archive"
+          >https://github.com/i-d-e/ride/raw/master/issues/issue21/makingandknowing/makingandknowing.pdf</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="j">RIDE - A review journal for digital editions and resources</title>
+        <editor ref="https://orcid.org/0000-0001-5584-4807">Anna Busch</editor>
+        <editor ref="https://orcid.org/0000-0003-3152-6542">Martin Prell</editor>
+        <editor ref="https://orcid.org/0000-0001-7043-7820">Torsten Roeder</editor>
+        <editor ref="https://orcid.org/0000-0003-2852-065X" role="managing">Ulrike Henny-Krahmer</editor>
+        <editor ref="https://orcid.org/0000-0003-1438-3236" role="managing">Martina Scholger</editor>
+        <editor ref="https://orcid.org/0009-0004-5854-8869" role="assistant">Magdalena Victoria
+          Basedow</editor>
+        <editor ref="https://orcid.org/0009-0005-6203-2942" role="assistant">Finnja
+          Borchardt</editor>
+        <editor role="assistant">Julia Dobesberger</editor>
+        <biblScope unit="issue" n="21">Digital Scholarly Editions (Crowdsourcing)</biblScope>
+        <idno type="URI">http://ride.i-d-e.de/issues/issue-21</idno>
+        <idno type="DOI">10.18716/ride.a.21</idno>
+      </seriesStmt>
+      <notesStmt>
+        <relatedItem type="reviewed_resource">
+          <bibl>
+            <title>The Making and Knowing Project. Intersections of Craft Making and Scientific
+              Knowing</title>
+            <editor>Pamela H. Smith, Naomi Rosenkranz, Tianna Helena Uchacz, Tillmann Taape, Clément
+              Godbarge, Sophie Pitman, Jenny Boulboullé, Joel Klein, Donna Bilak, Marc Smith, Terry
+              Catapano</editor>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Smith, Pamela</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Rosenkranz, Naomi</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Uchacz, Tianna Helena</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Taape, Tillmann</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Godbarge, Clément</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Pitman, Sophie</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Boulboullé, Jenny</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Klein, Joel</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Bilak, Donna</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Smith, Marc</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Editor</resp>
+              <persName>Catapano, Terry</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Programmer</resp>
+              <persName>Catapano, Terry</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Debuiche, Colin</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Munoz, Sarah</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Beentjes, Tonny</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Lacey, Andrew</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Bol, Marjolijn</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Hermens, Erma</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Anantharaman, Divya</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Atkinson, Jo Kirby</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Stijnman, Ad</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Sabel, Claire</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Hu, Bingyan</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Pensack, Miriam</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Palframan, Jeffrey</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Cherian, Philip</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Lyautey, Margot</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Hu, Christine</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Suryanarayanan, Sharan</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Tetik, Emre</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Vikram, Karuna</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Touze-Peiffer, Ludovic</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Nahley, Charlotte</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Mehrish, Divya</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Shulman, Camilla</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Vandermel, Katie</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Kumar, Matthew</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Troth, Kelsey</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Abruzzi, Ray</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Schare, Gregory</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Chaillard, Dana</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Kaufman, Roni</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Vandermel, Katie</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Macahilig, Christian</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Glenhaber, Linus</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Shende, Tanisha</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Vandermel, Jacklyn</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Ahmed, Atif</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Kumar, Mehul</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Maragi, Varsha</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Wayno, Jeffrey</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Elmer, Hannah</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Patel, Nilam</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Buscarino, Bella</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Sonnenberg, Scott</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Contributor</resp>
+              <persName>Rechberg, Carolin</persName>
+            </respStmt>
+            <respStmt>
+              <resp>Advisor</resp>
+              <persName>Gil, Alex</persName>
+            </respStmt>
+            <date type="publication">2020</date>
+            <idno type="URI">https://www.makingandknowing.org/bnf-ms-fr-640/</idno>
+            <date type="accessed">2025-05-05</date>
+          </bibl>
+        </relatedItem>
+        <relatedItem type="reviewing_criteria">
+          <bibl>
+            <ref target="http://www.i-d-e.de/criteria-version-1-1">Criteria for Reviewing Scholarly
+              Digital Editions</ref>
+          </bibl>
+        </relatedItem>
+      </notesStmt>
+      <sourceDesc>
+        <p>born digital</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <taxonomy xml:base="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1">
+          <category>
+            <catDesc>Documentation</catDesc>
+            <category xml:id="se001">
+              <catDesc>Bibliographic description <ref target="#K1.2">cf. Catalogue 1.2</ref>
+              </catDesc>
+              <catDesc>Is it easily possible to describe the project bibliographically along the
+                schema "responsible editors, publishing/hosting institution, year(s) of
+                publishing"?</catDesc>
+              <category xml:id="se002">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se003">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se004">
+              <catDesc>Contributors <ref target="#K1.4">cf. Catalogue 1.4</ref>
+              </catDesc>
+              <catDesc>Are the contributors (editors, institutions, associates) of the project fully
+                documented?</catDesc>
+              <category xml:id="se005">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se006">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se007">
+              <catDesc>Contacts <ref target="#K1.5">cf. Catalogue 1.5</ref>
+              </catDesc>
+              <catDesc>Does the project list contact persons?</catDesc>
+              <category xml:id="se008">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se009">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se010">
+              <catDesc>Selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+              </catDesc>
+              <catDesc>Is the selection of materials of the project explicitly documented?</catDesc>
+              <category xml:id="se011">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se012">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se013">
+              <catDesc>Reasonability of the selection <ref target="#K2.1">cf. Catalogue 2.1</ref>
+              </catDesc>
+              <catDesc>Is the selection by and large reasonable?</catDesc>
+              <category xml:id="se014">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se015">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se016">
+              <catDesc>Archiving of data <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the documentation include information about the long term sustainability
+                of the basic data (archiving of the data)?</catDesc>
+              <category xml:id="se017">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se018">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se019">
+              <catDesc>Aims <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the aims and purposes of the project explicitly documented?</catDesc>
+              <category xml:id="se020">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se021">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se022">
+              <catDesc>Methods <ref target="#K3.1">cf. Catalogue 3.1</ref>
+              </catDesc>
+              <catDesc>Are the methods employed in the project explicitly documented?</catDesc>
+              <category xml:id="se023">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se024">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se025">
+              <catDesc>Data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Does the project document which data model (e.g. TEI) has been used and for
+                what reason?</catDesc>
+              <category xml:id="se026">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se027">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se028">
+              <catDesc>Help <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts concerning the use of the
+                project?</catDesc>
+              <category xml:id="se029">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se030">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se031">
+              <catDesc>Citation <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Does the project supply citation guidelines (i.e. how to cite the project or
+                a part of it)?</catDesc>
+              <category xml:id="se032">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se033">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se034">
+              <catDesc>Completion <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the editon regard itself as a completed project (i.e. not promise
+                further modifications and additions)?</catDesc>
+              <category xml:id="se035">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se036">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se037">
+              <catDesc>Institutional curation <ref target="#K4.16">cf. Catalogue 4.16</ref>
+              </catDesc>
+              <catDesc>Does the project provide information about institutional support for the
+                curation and sustainability of the project?</catDesc>
+              <category xml:id="se038">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se039">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Contents</catDesc>
+            <category xml:id="se040">
+              <catDesc>Previous edition <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Has the material been previously edited (in print or digitally)?</catDesc>
+              <category xml:id="se041">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se042">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se043">
+              <catDesc>Materials used <ref target="#K2.2">cf. Catalogue 2.2</ref>
+              </catDesc>
+              <catDesc>Does the edition make use of these previous editions?</catDesc>
+              <category xml:id="se044">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se045">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se046">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se047">
+              <catDesc>Introduction <ref target="#K4.15">cf. Catalogue 4.15</ref>
+              </catDesc>
+              <catDesc>Does the project offer an introduction to the subject-matter (the author(s),
+                the work, its history, the theme, etc.) of the project?</catDesc>
+              <category xml:id="se048">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se049">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se050">
+              <catDesc>Bibliography <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a bibliography?</catDesc>
+              <category xml:id="se051">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se052">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se053">
+              <catDesc>Commentary <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer a scholarly commentary (e.g. notes on unclear
+                passages, interpretation, etc.)?</catDesc>
+              <category xml:id="se054">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se055">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se056">
+              <catDesc>Contexts <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project include or link to external resources with contextual
+                material?</catDesc>
+              <category xml:id="se057">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se058">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se059">
+              <catDesc>Images <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of digitised sources?</catDesc>
+              <category xml:id="se060">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se061">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se062">
+              <catDesc>Image quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer images of an acceptable quality?</catDesc>
+              <category xml:id="se063">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se064">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se065">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se066">
+              <catDesc>Transcriptions <ref target="#K2.3">cf. Catalogue 2.3</ref>
+              </catDesc>
+              <catDesc>Is the text fully transcribed?</catDesc>
+              <category xml:id="se067">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se068">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se069">
+              <catDesc>Text quality <ref target="#K4.6">cf. Catalogue 4.6</ref>
+              </catDesc>
+              <catDesc>Does the project offer texts of an acceptable quality (typos, errors,
+                etc.)?</catDesc>
+              <category xml:id="se070">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se071">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se072">
+              <catDesc>Indices <ref target="#K4.5">cf. Catalogue 4.5</ref>
+              </catDesc>
+              <catDesc>Does the project feature compilations indices, registers or visualisations
+                that offer alternative ways to access the material?</catDesc>
+              <category xml:id="se073">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se074">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se075">
+              <catDesc>Types of documents <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+              </catDesc>
+              <catDesc>Which kinds of documents are at the basis of the project?</catDesc>
+              <category xml:id="se076">
+                <catDesc>Single manuscript</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se077">
+                <catDesc>Single work</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se078">
+                <catDesc>Collection of texts</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se079">
+                <catDesc>Collected works</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se080">
+                <catDesc>Papers</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se081">
+                <catDesc>Archival holding</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se082">
+                <catDesc>Charters</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se083">
+                <catDesc>Letters</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se084">
+                <catDesc>Diary</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se085">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se086">
+              <catDesc>Document era <ref target="#K1.3 #K2.1">cf. Catalogue 1.3 and 2.1</ref>
+              </catDesc>
+              <catDesc>What era(s) do the documents belong to?</catDesc>
+              <category xml:id="se087">
+                <catDesc>Classics</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se088">
+                <catDesc>Medieval</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se089">
+                <catDesc>Early modern</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se090">
+                <catDesc>Modern</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se091">
+              <catDesc>Subject <ref target="#K1.3">cf. Catalogue 1.3</ref>
+              </catDesc>
+              <catDesc>Which perspective(s) do the editors take towards the edited material? How can
+                the edition be classified in general terms?</catDesc>
+              <category xml:id="se092">
+                <catDesc>History</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se093">
+                <catDesc>Philology / Literary Studies</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se094">
+                <catDesc>Philosophy / Theology</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se095">
+                <catDesc>History of Science</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se096">
+                <catDesc>Musicology</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se097">
+                <catDesc>Art History</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se098">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se099">
+              <catDesc>Spin-Offs <ref target="#K4.11">cf. Catalogue 4.11</ref>
+              </catDesc>
+              <catDesc>Does the project offer any spin-offs?</catDesc>
+              <category xml:id="se100">
+                <catDesc>App</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se101">
+                <catDesc>Mobile</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se102">
+                <catDesc>PDF</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se103">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se104">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Access modes</catDesc>
+            <category xml:id="se105">
+              <catDesc>Browse by <ref target="#K4.3">cf. Catalogue 4.3</ref>
+              </catDesc>
+              <catDesc>By which categories does the project offer to browse the contents?</catDesc>
+              <category xml:id="se106">
+                <catDesc>Authors</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se107">
+                <catDesc>Works</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se108">
+                <catDesc>Versions</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se109">
+                <catDesc>Structure</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se110">
+                <catDesc>Pages</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se111">
+                <catDesc>Documents</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se112">
+                <catDesc>Type of material</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se113">
+                <catDesc>Images</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se114">
+                <catDesc>Dates</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se115">
+                <catDesc>Persons</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se116">
+                <catDesc>Places</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se117">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se118">
+              <catDesc>Simple search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer a simple search?</catDesc>
+              <category xml:id="se119">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se120">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se121">
+              <catDesc>Advanced search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer an advanced search?</catDesc>
+              <category xml:id="se122">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se123">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se124">
+              <catDesc>Wildcard search <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search support the use of wildcards?</catDesc>
+              <category xml:id="se125">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se126">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se127">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se128">
+              <catDesc>Index <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer an index of the searched field?</catDesc>
+              <category xml:id="se129">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se130">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se131">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se132">
+              <catDesc>Suggest functionalities <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the search offer autocompletion or suggest functionalities?</catDesc>
+              <category xml:id="se133">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se134">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se135">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se136">
+              <catDesc>Help texts <ref target="#K4.4">cf. Catalogue 4.4</ref>
+              </catDesc>
+              <catDesc>Does the project offer help texts for the search?</catDesc>
+              <category xml:id="se137">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se138">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se139">
+                <catDesc>Not applicable</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Aims and methods</catDesc>
+            <category xml:id="se140">
+              <catDesc>Audience <ref target="#K3.3">cf. Catalogue 3.3</ref>
+              </catDesc>
+              <catDesc>Who is the intended audience of the project?</catDesc>
+              <category xml:id="se141">
+                <catDesc>Scholars</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se142">
+                <catDesc>Interested public</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se143">
+              <catDesc>Typology <ref target="#K3.3 #K5.1">cf. Catalogue 3.3 and 5.1</ref>
+              </catDesc>
+              <catDesc>Which type fits best for the reviewed project?</catDesc>
+              <category xml:id="se144">
+                <catDesc>Facsimile edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se145">
+                <catDesc>Archive edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se146">
+                <catDesc>Documentary edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se147">
+                <catDesc>Diplomatic edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se148">
+                <catDesc>Genetic edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se149">
+                <catDesc>Work critical edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se150">
+                <catDesc>Text critical edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se151">
+                <catDesc>Enriched edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se152">
+                <catDesc>Database edition</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se153">
+                <catDesc>Digital library</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se154">
+                <catDesc>Collection of texts</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se155">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se156">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se158">
+              <catDesc>Critical editing <ref target="#K3.6">cf. Catalogue 3.6</ref>
+              </catDesc>
+              <catDesc>In how far is the text critically edited?</catDesc>
+              <category xml:id="se159">
+                <catDesc>Transmission examined</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se160">
+                <catDesc>Palaeographic annotations</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se161">
+                <catDesc>Normalization</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se162">
+                <catDesc>Variants</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se163">
+                <catDesc>Emendation</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se164">
+                <catDesc>Commentary notes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se165">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se166">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se167">
+              <catDesc>XML <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Is the data encoded in XML? </catDesc>
+              <category xml:id="se168">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se169">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se170">
+              <catDesc>Standardized data model <ref target="#K3.7">cf. Catalogue 3.7</ref>
+              </catDesc>
+              <catDesc>Is the project employing a standardized data model (e.g. TEI)?</catDesc>
+              <category xml:id="se171">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se172">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se173">
+              <catDesc>Types of text <ref target="#K3.5">cf. Catalogue 3.5.</ref>
+              </catDesc>
+              <catDesc>Which kinds or forms of text are presented?</catDesc>
+              <category xml:id="se174">
+                <catDesc>Facsimiles</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se175">
+                <catDesc>Diplomatic transcription</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se176">
+                <catDesc>Edited text</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se177">
+                <catDesc>Translations</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se178">
+                <catDesc>Commentaries</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se179">
+                <catDesc>Semantic data</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+          <category>
+            <catDesc>Technical accessability</catDesc>
+            <category xml:id="se180">
+              <catDesc>Persistent identification <ref target="#K4.8">cf. Catalogue 4.8</ref>
+              </catDesc>
+              <catDesc>Are there persistent identifiers and an addressing system for the edition
+                and/or parts/objects of it and which mechanism is used to that end?</catDesc>
+              <category xml:id="se181">
+                <catDesc>DOI</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se182">
+                <catDesc>ARK</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se183">
+                <catDesc>URN</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se184">
+                <catDesc>PURL.ORG</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se185">
+                <catDesc>Persistent URLs</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se186">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se187">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se188">
+              <catDesc>Interfaces <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Are there technical interfaces like OAI-PMH, REST etc., which allow the reuse
+                of the data of the project in other contexts?</catDesc>
+              <category xml:id="se189">
+                <catDesc>OAI-PMH</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se190">
+                <catDesc>REST</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se191">
+                <catDesc>General API</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se192">
+                <catDesc>None</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se193">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+                <catDesc>
+                  <gloss/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se194">
+              <catDesc>Open Access</catDesc>
+              <catDesc>Is the edition Open Access?</catDesc>
+              <category xml:id="se195">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se196">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se197">
+              <catDesc>Accessability of the basic data <ref target="#K4.12">cf. Catalogue 4.12</ref>
+              </catDesc>
+              <catDesc>Is the basic data (e.g. the XML) of the project accessible for each part of
+                the edition (e.g. for a page)?</catDesc>
+              <category xml:id="se198">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se199">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se200">
+              <catDesc>Download <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can the entire raw data of the project be downloaded (as a whole)?</catDesc>
+              <category xml:id="se201">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se202">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se203">
+              <catDesc>Reuse <ref target="#K4.9">cf. Catalogue 4.9</ref>
+              </catDesc>
+              <catDesc>Can you use the data with other tools useful for this kind of
+                content?</catDesc>
+              <category xml:id="se204">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+              <category xml:id="se205">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se206">
+              <catDesc>Declaration of rights <ref target="#K4.13">cf. Catalogue 4.13</ref>
+              </catDesc>
+              <catDesc>Are the rights to (re)use the content declared?</catDesc>
+              <category xml:id="se207">
+                <catDesc>Yes</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se208">
+                <catDesc>No</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+              </category>
+            </category>
+            <category xml:id="se209">
+              <catDesc>License <ref target="#K4.13">cf. Catalogue 4.13</ref>
+              </catDesc>
+              <catDesc>Under what license are the contents released?</catDesc>
+              <category xml:id="se210">
+                <catDesc>CC0</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se211">
+                <catDesc>CC-BY</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se212">
+                <catDesc>CC-BY-ND</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se213">
+                <catDesc>CC-BY-NC</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se214">
+                <catDesc>CC-BY-SA</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se215">
+                <catDesc>CC-BY-NC-ND</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se216">
+                <catDesc>CC-BY-NC-SA</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se217">
+                <catDesc>PDM</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se218">
+                <catDesc>No license</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se219">
+                <catDesc>Multiple licenses</catDesc>
+                <catDesc>
+                  <num type="boolean" value="0"/>
+                </catDesc>
+              </category>
+              <category xml:id="se220">
+                <catDesc>Other</catDesc>
+                <catDesc>
+                  <num type="boolean" value="1"/>
+                </catDesc>
+                <catDesc>
+                  <gloss>Couldn't find rights declaration but it seems implied that reuse is
+                    permitted</gloss>
+                </catDesc>
+              </category>
+            </category>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en"/>
+      </langUsage>
+      <textClass>
+        <keywords xml:lang="en">
+          <term>history of science</term>
+          <term>recipes</term>
+          <term>citizen science</term>
+          <term>multimedia edition</term>
+          <term>experiment</term>
+          <term>replication</term>
+          <term>early modern</term>
+          <term>history of knowledge</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div type="abstract">
+        <p>The <emph>Making and Knowing Project</emph> is an educational and research project that
+          has employed citizen science to produce a digital critical edition of the 16th-century
+          manuscript BnF Ms. Fr. 640, along with accompanying educational resources. Situated within
+          a historiographical turn centered around materiality and practical making, the
+            <emph>Making and Knowing Project</emph>, led by Pamela Smith, explores the tacit
+          knowledge of early modern artisans and practitioners. A major component involves the
+          recreation of historical recipes in educational laboratory settings, documented in the
+          form of essays. The other central component is the digital critical edition of the
+          anonymous French technical tract, BnF Ms. Fr. 640. The first version of the edition and
+          website was completed during the initial funding phase by 2020. Further funding has
+          supported continued development of the edition and related outputs, such as a teaching
+          companion and the digital scholarly editing tool <emph>Edition Crafter</emph>.
+            <emph>Making and Knowing</emph> is a flagship project in historical recipe research and
+          in the application of experimental methods in the history of science and knowledge.</p>
+      </div>
+    </front>
+    <body>
+      <div xml:id="div1">
+        <head>Introduction</head>
+        <p xml:id="p1">The <emph>Making and Knowing Project</emph> (with the subtitle “Intersections
+          of Craft Making and Scientific Knowing”) is situated at the intersection of the
+          experimental history of science,<note xml:id="ftn1">The reviewer’s academic background is
+            in Classics (Neo-Latin), history of science (esp. alchemy) as well as the Digital
+            Humanities. Having written a PhD thesis on a use case for digital methods on the work of
+            an early modern alchemist, she has a background in relevant aspects of the project under
+            review (digital editing, history of science, recipes) and is familiar with the research
+            tradition. Furthermore she has been involved in a project which utilized citizen science
+            in the creation of a learner-oriented, educational digital edition. She also holds a
+            degree in French, the language of the manuscript which is the centerpiece of the digital
+            edition under review. The first draft of this review article was submitted in summer
+            2023 when the reviewer was still with University of Graz and not yet affiliated with the
+            „Metals, Minerals, and the Life Cycle“ project at Max Planck Institute for the History
+            of Science, in which Pamela Smith is involved. On the experimental history of science see,
+            for example, <ref type="crossref" target="#principe2000">Principe 2000</ref>, <ref
+              type="crossref" target="#gelius1997">Gelius 1997</ref>, <ref type="crossref"
+              target="#forsEtAl2016">Fors et al. 2016</ref>, <ref type="crossref"
+              target="#hagendijk2018">Hagendijk 2018</ref>, <ref type="crossref"
+              target="#dupreEtAl2020">Dupré et al. 2020</ref>, <ref type="crossref"
+              target="#hagendijk2020">Hagendijk et al. 2020</ref>, <ref type="crossref"
+              target="#hendriksen2020">Hendriksen 2020</ref>, <ref type="crossref"
+              target="#sibum2020">Sibum 2020</ref>, <ref type="crossref" target="#taapeEtAl2020"
+              >Taape et al. 2020</ref>. On experiments in the Digital Humanities see <ref
+              type="crossref" target="#lang2022">Lang 2022</ref>. On replication in the Humanities
+            see <ref type="crossref" target="#peels-bouter2018">Peels and Bouter 2018</ref>, <ref
+              type="crossref" target="#peels2019">Peels 2019</ref>.</note> recipe research and the
+          Digital Humanities, leveraging the help of citizen scientists to create a digital
+          scholarly edition.<note xml:id="ftn2">On citizen science see <ref type="crossref"
+              target="#vohlandEtAl2021">Vohland et al. 2021</ref>, on digital editions generated
+            using citizen science meant to serve as educational resources <ref type="crossref"
+              target="#lang-spielhofer2020">Lang and Spielhofer 2020</ref>.</note> The recreation of
+          historical recipes within educational laboratory contexts, documented in detailed essays,
+          complements a digital critical edition of a 16th-century technical treatise, BnF Ms. Fr.
+          640. While the initial version of this digital scholarly edition was completed during the
+          first funding run in 2020, the project later received additional funding to hone in on
+          Digital Humanities aspects, which go beyond the first version of the digital edition. The
+          <emph>Making and Knowing Project</emph> has received the Eugene S. Ferguson Prize (2019)
+          and the Renaissance Society of America’s (RSA) Digital Innovation Award (2022).</p>
+        <p xml:id="p2">In seeking to understand historical practices of knowledge-making, historians
+          of science have moved away from a narrowly defined concept of science as distinct from a
+          broader history of knowledge. This shift reflects a growing recognition that knowledge
+          production extends beyond the traditionally elite domains typically associated with the
+          sciences. By focusing solely on a conventional history of science, scholarly attention has
+          often been limited to specific practices and actors—frequently members of social or
+          intellectual elites—while marginalising or overlooking the contributions of more everyday
+          forms of knowledge.</p>
+        <p xml:id="p3">The <emph>Making and Knowing Project</emph> is situated within a
+          historiographical tradition that centres the study of knowledge rather than science alone.
+          It aligns with the material and practical turns that have reshaped epistemological and
+          historical inquiry in recent decades (<ref type="crossref" target="#rheinberger2001"
+            >Rheinberger 2001</ref>). Closely related to these developments is the adoption of
+          experimental methods, which have transformed the study of historical craft practices. Once
+          viewed as peripheral or esoteric, such practices are now understood as central to the
+          emergence of modern science and knowledge-making. In this framework, the historical
+          practices of artisans, craftspeople, and alchemists are reframed not merely as precursors
+          to scientific disciplines such as chemistry, but as integral components of their
+          historical development (<ref type="crossref" target="#smith2006">Smith 2006, 292</ref>).
+          This perspective emphasises the complex interrelationship between textual sources and
+          embodied, material practices.<note xml:id="ftn3">In the History of Science, a whole
+            sub-field has emerged investigating artisanal knowledge-making amongst which the
+              <emph>Making and Knowing Project</emph> is probably the most prominent among many
+            others, see <ref type="crossref" target="#smith2006">Smith 2006</ref>, <ref
+              type="crossref" target="#smith2017">2017</ref>, <ref type="crossref"
+              target="#smith2020b">2020b</ref>, <ref type="crossref" target="#smith2022">2022</ref>;
+              <ref type="crossref" target="#smithEtAl2017">Smith et al. 2017</ref>, <ref
+              type="crossref" target="#smithEtAl2020b">2020b</ref>; <ref type="crossref"
+              target="#neven2014">Neven 2014</ref>, <ref type="crossref" target="#valleriani2017"
+              >Valleriani 2017</ref>, <ref type="crossref" target="#hagendijk2018">Hagendijk
+              2018</ref>.</note> With the emergence of the experimental history of science, the
+          so-called 'RRR methods'—reconstruction, replication, and re-enactment—have become a
+          pivotal tool for investigating the tacit and practical dimensions of historical scientific
+          practices (<ref type="crossref" target="#hendriksen2020">Hendriksen 2020, 314</ref>).<note
+            xml:id="ftn4">A whole range of experimental methods has become established in the
+            experimental history of science under the label of ‘RRR methods’. Hendriksen (<ref
+              type="crossref" target="#hendriksen2020">2020, 314</ref>) provides a definition:
+            “Performative methods include, but are not limited to, reconstruction, replication, and
+            re-enactment (RRR) of historical experiments, apparatus, processes, and
+            techniques.”</note> These methods help address the documentary gaps in historical
+          recipes (<ref type="crossref" target="#forsEtAl2016">Fors et al. 2016</ref>).</p>
+        <p xml:id="p4">
+          <figure xml:id="img1">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-1.png"/>
+            <head type="legend">The main project website, which likely serves as the primary entry
+              point for most users before navigating to the digital edition itself.</head>
+          </figure>
+          <figure xml:id="img2">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-2.png"/>
+            <head type="legend">“About” page briefly describing the manuscript, linking to
+              high-resolution images in Gallica, and displaying the book’s spine.</head>
+          </figure> Under the leadership of Pamela Smith, the <emph>Making and Knowing
+            Project</emph> has employed citizen science to craft a digital critical edition of BnF
+          Ms. Fr. 640 (see the main website in <ref type="crossref" target="#img1">Fig. 1</ref>). Li
+            (<ref type="crossref" target="#li2020">2020, 586</ref>) describes the edition as “an
+          exceptionally close reading of the sixteenth-century manuscript Ms. Fr. 640, an anonymous
+          early modern source composed of handwritten entries that pertain to the history of
+          science, art history, and material culture.” Over 500 collaborators helped create a full
+          transcription and translation for 340 pages of manuscript. Over one hundred essays, many
+          created by ‘grad scholars’ participating in laboratory seminars, represent an impressive
+          output of the citizen science side of the project. Grounded in the historiographical turn
+          centered on materiality and craftsmanship as sources for the history of knowledge beyond
+          scholarly discourse, the project investigates the tacit knowledge (<ref type="crossref"
+            target="#polanyi2009">Polanyi 2009</ref>, <ref type="crossref" target="#sibum2020">Sibum
+            2020</ref>) of early modern artisans and practitioners. In its description (“About”
+          section, see <ref type="crossref" target="#img2">Fig. 2</ref>), the project frames itself
+          as both a research and pedagogical initiative exploring intersections between crafts
+          making and scientific knowing. It explores the earliest phases of a period p referred to
+          as the “Scientific Revolution” where artisanal making and scientific knowledge production
+          using experiments still overlapped.<note xml:id="ftn5">On the so-called ‘Scientific
+            Revolution’ see, for example, <ref type="crossref" target="#moran2009">Moran 2009</ref>
+            and <ref type="crossref" target="#principe2011">Principe 2011</ref>. Nowadays many
+            scholars are critical of this periodization because it suggests a rapid teleological
+            move towards to our modern notion of science, thereby creating an artificial,
+            ahistorical caesura and discarding other forms of pre-modern knowledge production, such
+            as certain aspects of alchemy which do not fit our modern idea of science.</note> The
+            <emph>Making and Knowing Project</emph> presents the results of its research at the
+          intersection of laboratory and archival work using the digital medium. The digital edition
+          was first launched in 2020 and updated to a more user-friendly version in 2021.<note
+            xml:id="ftn6"><ref
+              target="https://web.archive.org/web/20250327111435/https://edition640.makingandknowing.org/#/content/about"
+              >https://web.archive.org/web/20250327111435/https://edition640.makingandknowing.org/#/content/about</ref>.
+            Links were archived where possible, however, this is not always technically
+            feasible.</note></p>
+      </div>
+      <div xml:id="div2">
+        <head>The Project</head>
+        <p xml:id="p5">The <emph>Making and Knowing Project</emph> is situated at the Columbia
+          University Center for Science and Society and led by Pamela Smith (Seth Low Professor of
+          History, Director of the Center for Science and Society), Naomi Rosenkranz (Assistant
+          Director) and Caroline Surman (Project and Communications Coordinator).<note xml:id="ftn7"
+              ><ref
+              target="https://web.archive.org/web/20250519033653/https://scienceandsociety.columbia.edu/content/research-cluster-making-and-knowing-project"
+              >https://web.archive.org/web/20250519033653/https://scienceandsociety.columbia.edu/content/research-cluster-making-and-knowing-project</ref>;
+            The <emph>Making and Knowing Project</emph>: <ref
+              target="https://web.archive.org/web/20250519033648/https://www.makingandknowing.org/"
+              >https://web.archive.org/web/20250519033648/https://www.makingandknowing.org/</ref>.</note>
+          Apart from the editors, a considerable number of individuals have contributed to the
+          project, ranging from Digital Humanities professionals, palaeographers, postdoctoral and
+          visiting scholars, makers, teaching assistants to student research associates and
+          laboratory assistants.<note xml:id="ftn8">People sub-page: <ref
+            target="https://web.archive.org/web/20260313151958/https://www.makingandknowing.org/people/"
+            >https://web.archive.org/web/20260313151958/https://www.makingandknowing.org/people/</ref>.</note> The project (and its web
+          components) are twofold: A project website containing all activities revolving around
+            <emph>Making and Knowing</emph> as well as the Digital Critical Edition of BNF Ms. Fr.
+          640 whose first version was released in February 2020. The <emph>Making and Knowing
+            Project</emph> also maintains a number of social media outlets to keep the public and
+          research community updated on the current state of the project. Apart from the Flickr
+          photo repository, the project has X, Facebook, and YouTube accounts.<note xml:id="ftn9"
+            >Photo repository for the documentation on the reconstruction experiments: <ref
+              target="https://web.archive.org/web/20250519033846/https://www.flickr.com/photos/128418753@N06"
+              >https://web.archive.org/web/20250519033846/https://www.flickr.com/photos/128418753@N06</ref>;
+            X: <ref target="https://web.archive.org/web/20250325182455/https://x.com/makingknowing"
+              >https://web.archive.org/web/20250325182455/https://x.com/makingknowing</ref>;
+            Facebook: <ref
+              target="https://web.archive.org/web/20250519034038/https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FMakingKnowing%2F"
+              >https://web.archive.org/web/20250519034038/https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FMakingKnowing%2F</ref>;
+            YouTube: <ref
+              target="https://web.archive.org/web/20250519033936/https://www.youtube.com/channel/UCViaSZhCLq9zmI6djVL044Q"
+              >https://web.archive.org/web/20250519033936/https://www.youtube.com/channel/UCViaSZhCLq9zmI6djVL044Q</ref>.</note>
+          The “Publications and Press” section provides an extensive overview of outputs generated
+          in the <emph>Making and Knowing Project</emph>, covering a wide range of categories from a
+          GitHub sandbox, public lectures, scholarly articles and books, press mentions to artistic
+            responses.<note xml:id="ftn10"><ref
+              target="https://web.archive.org/web/20250519034127/https://www.makingandknowing.org/publications/"
+              >https://web.archive.org/web/20250519034127/https://www.makingandknowing.org/publications/</ref>;
+            for scholarly publications see, for example: <ref type="crossref" target="#klein2020"
+              >Klein 2020</ref>, <ref type="crossref" target="#smithEtAl2017">Smith et al.
+              2017</ref>, <ref type="crossref" target="#smithEtAl2020b">Smith et al. 2020b</ref>,
+              <ref type="crossref" target="#taapeEtAl2020">Taape et al. 2020</ref>, <ref
+              type="crossref" target="#uchacz2020">Uchacz 2020</ref>.</note></p>
+        <p xml:id="p6">Under “Support”, the project declares itself as “a largely self-funded
+          initiative” relying on federal or internal grants as well as donations, and its funding
+          sources are listed.<note xml:id="ftn11"><ref
+              target="https://web.archive.org/web/20250519034324/https://www.makingandknowing.org/support/"
+              >https://web.archive.org/web/20250519034324/https://www.makingandknowing.org/support/</ref>.</note>
+          The “Collaborations” tab lists an impressive number of collaborating institutions.<note
+            xml:id="ftn12"><ref
+              target="https://web.archive.org/web/20250519034156/https://www.makingandknowing.org/collaborators/"
+              >https://web.archive.org/web/20250519034156/https://www.makingandknowing.org/collaborators/</ref>.</note>
+          In “The Lab”, users of the website are redirected to a YouTube playlist containing the
+          video outputs of the project.<note xml:id="ftn13"><ref
+              target="https://web.archive.org/web/20250519034410/https://www.makingandknowing.org/the-lab/"
+              >https://web.archive.org/web/20250519034410/https://www.makingandknowing.org/the-lab/</ref>.</note>
+          The “Project Components” tab provides further information on text workshops, lab seminars,
+          and working groups previously held in the context of the project as well as digital
+          project components. The somewhat cryptically named dropdown option “Digital” (<ref
+            type="crossref" target="#img3">Fig. 3</ref>) leads users of the website to information
+          on the digital critical edition.<note xml:id="ftn14"><ref
+              target="https://web.archive.org/web/20250519034311/https://www.makingandknowing.org/digital/"
+              >https://web.archive.org/web/20250519034311/https://www.makingandknowing.org/digital/</ref>.</note>
+          This offers diplomatic and normalized French transcriptions as well as an English
+          translation of BNF Ms. Fr. 640 alongside high-resolution facsimile images. A YouTube video
+          of the Beta version is embedded as a demo. Below are two lists of “annotations” although
+          the purpose of those lists remains unclear to the author of this review. After it follow
+          links to earlier prototypes of the digital edition as well as the project sandbox, a
+          GitHub.io site allowing users access to experiment with the data underlying <emph>Making
+            and Knowing</emph>. Long-term sustainability of the digital edition is provided by the
+          Columbia University Libraries where it is provided as Open Access. The page further
+          documents three 2017/2018 Digital Humanities courses in collaboration with the project.
+          Through the use of ‘expert crowd sourcing’, i.e., citizen science in the form of
+          university class projects, the project has created a critical edition and English
+          translation of its source.<note xml:id="ftn15">The video lecture by project lead Pamela
+            Smith titled “Learning through Reconstruction: The Making and Knowing Project” (Yale
+            University Art Gallery; July 31, 2018) introduces the reasoning behind the pedagogy of
+              <emph>Making and Knowing</emph>. <ref
+              target="https://web.archive.org/web/20250519034533/https://www.youtube.com/embed/zlOyAdg1Td4"
+              >https://web.archive.org/web/20250519034533/https://www.youtube.com/embed/zlOyAdg1Td4</ref>.</note>
+          For example, the first transcription and markup were created during a series of three-week
+          workshops with graduate students, beginning in 2014, teaching them practical skills in
+          middle French palaeography while yielding base data for the digital edition.<note
+            xml:id="ftn16"><ref
+              target="https://web.archive.org/web/20250519034500/https://cu-mkp.github.io/2017-workshop-edition/about_mk/"
+              >https://web.archive.org/web/20250519034500/https://cu-mkp.github.io/2017-workshop-edition/about_mk/</ref>.</note>
+          The replications of historical recipes were conducted as part of laboratory seminars
+          involving modern expert practitioners, such as conservators, artists, and craftspeople.
+            <figure xml:id="img3">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-3.png"/>
+            <head type="legend">The “Digital” section of the project site, which provides access to
+              the digital critical edition, though its title “Digital” may be somewhat
+              confusing.</head>
+          </figure>
+        </p>
+      </div>
+      <div xml:id="div3">
+        <head>The Digital Critical Edition</head>
+        <p xml:id="p7">Between 2014 and 2020, the project’s main focus was creating a digital
+          critical edition of an anonymous French technical manuscript dating from the 16th century,
+          BnF Ms. Fr. 640. The manuscript, begun sometime after 1579 by an anonymous author,
+          consists of 170 folios, or 340 pages, of closely written text with hand-drawn figures. It
+          contains recipes, instructions, notes, and first-hand accounts of experiments with diverse
+          materials, techniques, and observations from pigment application to imitation gem
+          production, compiled over an unknown period, probably until around 1588. The resulting
+          manuscript is now known as Bibliothèque nationale de France, Ms. Fr. 640. It is a unique
+          record focusing on processes and the practice of making, and thus an invaluable source for
+          the history of craft and material culture in the late sixteenth and early seventeenth
+          centuries.</p>
+        <p xml:id="p8">This manuscript was transcribed and is given in its original French as well
+          as an English translation. To satisfy the particular needs of editing the text of
+          artisanal recipes, the critical apparatus offers not only annotations but also
+          essay-length analyses and a glossary of technical terms. Apart from this multimedia
+          apparatus to the text itself, the project held laboratory seminars, workshops, and working
+          groups bringing together a wide array of interdisciplinary expertise whose results can
+          also be accessed on the project website. The laboratory seminars would, for example, bring
+          together university students (“grad student scholars”) and artisanal experts (from museums
+          or craft-making contexts) to reconstruct the recipes contained in BnF Ms. Fr. 640, thereby
+          understanding it better. The tacit and gestural knowledge as well as practical insights
+          from these historical-critical experiments thus function as a new dimension of critical
+          apparatus to further inform the reader, just like linguistic notes or notes on the
+          transmission of a historical source.<note xml:id="ftn17"><ref type="crossref"
+              target="#polanyi2009">Polanyi 2009</ref>; on gestural knowledge: “[...] practical
+            engagement also builds up a working knowledge in the practitioner that Sibum has called
+            ‘gestural knowledge.’ [...]” The nature of this gestural knowledge is well-described in
+            his difficult-to-translate German phrase “das in seinem Handlungsvollzug gebundene
+            Wissen”. In: <ref type="crossref" target="#forsEtAl2016">Fors et al. 2016, 92</ref>; see
+            also <ref type="crossref" target="#sibum2020">Sibum 2020</ref>. On historical-critical
+            experiments (<ref type="crossref" target="#gelius1997">Gelius 1997</ref>), replication
+            in the context of historical experiments (<ref type="crossref" target="#forsEtAl2016"
+              >Fors et al. 2016</ref>) or the so-called ‘RRR methods’ more generally see <ref
+              type="crossref" target="#hendriksen2020">Hendriksen 2020</ref>. It is a matter of
+            discussion in the experimental history of science which term is best suited to describe
+            such research methods: While some favour ‘replication’ (<ref type="crossref"
+              target="#forsEtAl2016">Fors et al. 2016</ref>), Gelius suggests ‘historical-critical
+            experiments’ (<ref type="crossref" target="#gelius1997">Gelius 1997</ref>). The
+              <emph>Making and Knowing Project</emph> seems to have chosen ‘reconstruction’ to name
+            its method of ‘trying and testing’ the instructions contained in BnF Ms. Fr.
+          640.</note></p>
+        <p xml:id="p9">The “BNF MS. FR. 640” tab provides a central point of entry to the digital
+          edition, situating the source briefly as part of the “books of secrets” genre, recipe
+          books or how-to manuals which had become especially popular in the last decades of the
+          16th century.<note xml:id="ftn18"><ref
+              target="https://web.archive.org/web/20250519034812/https://www.makingandknowing.org/bnf-ms-fr-640/"
+              >https://web.archive.org/web/20250519034812/https://www.makingandknowing.org/bnf-ms-fr-640/</ref>.
+            On the genre of “books of secrets” see <ref type="crossref" target="#eamon1990">Eamon
+              1990</ref>, <ref type="crossref" target="#eamon1994">1994</ref>, <ref type="crossref"
+              target="#eamon2016">2016</ref>; <ref type="crossref" target="#zweifel2022">Zweifel
+              2022</ref>.</note> It contains a citation suggestion and links to a sub-site dedicated
+          specifically to citing the edition. Since the identity of the person responsible for
+          writing or compiling BnF Ms. Fr. 640 is unknown, they are referred to as “the
+          author-practitioner” throughout the <emph>Making and Knowing Project</emph>. This
+          technical writing transmits the “maker’s knowledge”—the tacit or gestural knowledge of
+          craftspeople who, previously illiterate, began recording their recipes during the print
+          boom between 1490 and 1800. However, the editors describe BnF Ms. Fr. 640 as singular
+          within this genre, as it is filled with self-reflexive commentary and process notes by the
+          author-practitioner, offering a unique window to their ways of making and knowing.</p>
+        <p xml:id="p10">Once the user of the website clicks “Explore” or any other link to the
+          edition itself, one is directed to a dedicated landing page.<note xml:id="ftn19"><ref
+              target="https://web.archive.org/web/20250519034702/https://edition640.makingandknowing.org/#/"
+              >https://web.archive.org/web/20250519034702/https://edition640.makingandknowing.org/#/</ref>.</note>
+          From there, one can choose to watch a video, “Read the edition”, “Learn more” (leading to
+          the “About” page) or access a list of resources and featured essays (<ref type="crossref"
+            target="#img4">Fig. 4</ref>, <ref type="crossref" target="#img5">5</ref>, <ref type="crossref"
+              target="#img6">6</ref>, <ref type="crossref" target="#img7">7</ref>).<note xml:id="ftn20"><ref
+              target="https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about"
+              >https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about</ref>.</note>
+          The essays all have their own DOI and citation suggestions.<note xml:id="ftn21">A few
+            relevant examples are: <ref type="crossref" target="#godbarge2020">Godbarge 2020</ref>;
+              <ref type="crossref" target="#camps-lyautey2020">Camps and Lyautey 2020</ref>; <ref
+              type="crossref" target="#smith2020a">Smith 2020a</ref>, <ref type="crossref"
+              target="#smith2020b">2020b</ref>. The list can be accessed under: 
+            <ref target="https://web.archive.org/web/20260313152943/https://edition640.makingandknowing.org/essays"
+              >https://web.archive.org/web/20260313152943/https://edition640.makingandknowing.org/essays</ref>.</note> Their topics range
+          from essays explaining the edition itself (<ref type="crossref" target="#img5">Fig.
+            5</ref>) (“An Introduction to Ms. Fr. 640 and Its Author-Practitioner”, “Ma&lt;r&gt;king
+          and Knowing: Encoding BnF Ms. Fr. 640”, “The Manuscript Seen from Afar: A Computational
+          Approach to Ms. Fr. 640”), information regarding the manuscript as a text-bearing object
+          (“Making Ms. Fr. 640”, “The Language of Experience in Ms. Fr. 640”) to contextual
+          information (“Artillery in 1590s France”, “Pigments in Sixteenth-Century Europe”) and
+          experimental recreations of recipes in BnF Ms. Fr. 640 (“Counterfeit Coral”, “Uses of
+          Sulfur for Casting”) (for examples of the essays, see also <ref type="crossref"
+            target="#img6">Fig. 6</ref> and <ref type="crossref" target="#img7">Fig. 7</ref>). Given
+          the French origin of the manuscript, some of the essays are provided both in French and
+          English versions. <figure xml:id="img4">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-4.png"/>
+            <head type="legend">Overview of the research essays, including an introduction to the
+              manuscript and its physical construction, as well as examples of texts in both French
+              and English, since some essays are available in both languages.</head>
+          </figure>
+          <figure xml:id="img5">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-5.png"/>
+            <head type="legend">Another example of the essay overview page, here showing essays
+              about the project itself—its encoding, translation, and methodologies—as well as
+              reflections on the edition as a digital text and computational approach.</head>
+          </figure>
+          <figure xml:id="img6">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-6.png"/>
+            <head type="legend">Example of a research essay presented in the project’s minimal
+              edition format.</head>
+          </figure>
+          <figure xml:id="img7">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-7.png"/>
+            <head type="legend">Example of an essay that includes an embedded video, illustrating
+              how video documentation makes the experiments accessible to users of the edition in
+              the digital format.</head>
+          </figure>
+        </p>
+        <p xml:id="p11">The digital scholarly edition (see <ref type="crossref" target="#img8">Fig.
+            8</ref>, <ref type="crossref" target="#img9">9</ref>, <ref type="crossref"
+            target="#img10">10</ref>, <ref type="crossref" target="#img11">11</ref>, and <ref
+            type="crossref" target="#img12">12</ref> for screenshots of the user interface) provides
+          detailed information on the manuscript, its author-practitioner, and the making of both
+          the manuscript and the edition itself. It outlines principles of transcription,
+          translation, and encoding, presented through website documentation and accompanying
+          scholarly essays. The digitised facsimile pages derive from Gallica, BnF’s digital
+          library. The edition was developed through workshops, courses, and conferences held within
+          the <emph>Making and Knowing Project</emph>. Its markup, in a custom XML format inspired
+          by the Text Encoding Initiative (TEI) standard, is available via the project’s GitHub
+          repository, where each folio appears as three XML files: a diplomatic transcription
+          (verbatim in the original French), a lightly normalised version (with added punctuation
+          and diacritics), and an English translation.</p>
+        <p xml:id="p12">The “Resources” section provides access to further material such as a
+          glossary and an extensive bibliography for the edition.<note xml:id="ftn22"><ref target="https://web.archive.org/web/20260313162434/https://edition640.makingandknowing.org/content/resources"
+              >https://web.archive.org/web/20260313162434/https://edition640.makingandknowing.org/content/resources</ref>.</note> The
+          principles of transcription and how exactly features from the TEI encoding are rendered in
+          the web view are explained in a lot of detail. A “How to Use” section informs visitors of
+          the site how to navigate, for example, the dual pane view of the digital edition or how to
+          search the edition thematically using the tags in the “List of Entries”.<note
+            xml:id="ftn23"><ref target="https://web.archive.org/web/20260312112539/https://edition640.makingandknowing.org/content/how-to-use"
+              >https://web.archive.org/web/20260312112539/https://edition640.makingandknowing.org/content/how-to-use</ref>.</note> The
+          “Reconstruction Insights” page provides another point of entry for accessing the research
+            essays.<note xml:id="ftn24"><ref
+              target="https://web.archive.org/web/20260312112539/https://edition640.makingandknowing.org/content/resources/reconstruction-insights"
+              >https://web.archive.org/web/20260312112539/https://edition640.makingandknowing.org/content/resources/reconstruction-insights</ref>.</note></p>
+        <p xml:id="p13">Manuscript data can be accessed via a GitHub repository.<note xml:id="ftn25"
+              ><ref
+              target="https://web.archive.org/web/20250519035228/https://github.com/cu-mkp/m-k-manuscript-data"
+              >https://web.archive.org/web/20250519035228/https://github.com/cu-mkp/m-k-manuscript-data</ref>.</note>
+          The edition itself provides a parallel view of text (transcriptions or translation) and
+          facsimile images.<note xml:id="ftn26"><ref
+            target="https://web.archive.org/web/20260430110945/http://web.archive.org/screenshot/https://edition640.makingandknowing.org/folios"
+            >https://web.archive.org/web/20260430110945/http://web.archive.org/screenshot/https://edition640.makingandknowing.org/folios</ref>.</note> The “About the
+          Edition” page contains explanations regarding questions such as ‘What is Ms. Fr. 640?’,
+          ‘What is the digital critical edition?’ or how the digital development was envisioned and
+            implemented.<note xml:id="ftn27"><ref
+              target="https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about"
+              >https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about</ref>.</note> This page
+          contains links to a number of further pages discussing the edition, transcription,
+          translation, encoding guidelines, and so forth. Creating the digital edition has been the
+          primary goal of the project since its foundation in 2014. It was developed through a
+          series of workshops, conferences, and university courses. Contents were created in a
+          specific form of citizen science that the project lead has termed “grad-sourcing” or
+          “expert crowd sourcing”, meaning that the citizens contributing to the project were picked
+          from the pool of Pamela Smith’s graduate students. Each essay published as part of the
+          edition underwent multiple rounds of internal and sometimes external review to ensure high
+          quality.</p>
+        <p xml:id="p14">The transcription and encoding were primarily undertaken during palaeography
+          and text workshops (2014–2018), which trained graduate students in Middle French scripts
+          and textual encoding. Senior project members and the digital lead later revised and
+          finalised the XML files. The resulting texts conform to a custom schema developed
+          iteratively during transcription and translation. This schema, influenced by the Text
+          Encoding Initiative (TEI), derives much of its tag set from TEI conventions and is
+          maintained in the project repositories, where the encoding principles and full tag
+          descriptions are documented in detail. The edition’s tag set includes common structural
+          and editorial elements such as <code>&lt;ab&gt;</code> (anonymous block),
+            <code>&lt;div&gt;</code> (division), <code>&lt;head&gt;</code> (heading),
+            <code>&lt;hand&gt;</code> (handwriting), <code>&lt;add&gt;</code> (addition),
+            <code>&lt;corr&gt;</code> (correction), <code>&lt;del&gt;</code> (deletion),
+            <code>&lt;emph&gt;</code> (emphasis), <code>&lt;exp&gt;</code> (expansion),
+            <code>&lt;figure&gt;</code> (figure), <code>&lt;gap&gt;</code> (gap), and
+            <code>&lt;ill&gt;</code> (illegible). Semantic categories extend beyond standard TEI
+          usage, incorporating tags such as <code>&lt;al&gt;</code> (animal),
+            <code>&lt;bp&gt;</code> (body parts), <code>&lt;cn&gt;</code> (currency),
+            <code>&lt;df&gt;</code> (definition), <code>&lt;m&gt;</code> (material),
+            <code>&lt;md&gt;</code> (medical), and <code>&lt;ms&gt;</code> (measurement). These
+          additions enable precise encoding of elements relevant to experimental reconstruction. The
+          manuscript’s multilingual elements are also tagged. Although the schema is only inspired
+          by TEI rather than fully compliant with it, this approach allows for highly specific
+          encoding suited to the project’s aims. A stricter adherence to TEI might have facilitated
+          broader interoperability, yet the documentation is so thorough that reuse remains entirely
+          feasible.</p>
+        <p xml:id="p15">The website documentation is exceptionally comprehensive, including written
+          explanations, videos, and photographic material from the workshops, offering valuable
+          insight into how the edition was produced and how collaborative, crowdsourced scholarly
+          projects can be organised. Beyond the brief overview on the “About” page, the sections on
+          “Principles of Transcription”, “Translation, and Encoding” provide detailed explanations,
+          while the “Credits” page lists all participants and workshops, allowing the tracing of
+          individual contributions.</p>
+        <p xml:id="p16">The digital aspects of the project were developed in a collaboration of
+            <emph>Making and Knowing Project</emph> members with Performant Software Solutions and
+          Columbia University Libraries.<note xml:id="ftn28"><ref
+              target="https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about"
+              >https://web.archive.org/web/20250519034649/https://edition640.makingandknowing.org/#/content/about</ref>.</note>
+          The project commits to making their data accessible openly and storing them sustainably by
+          choosing sustainable, open formats for data creation and using Open Access and Open Source
+          whenever possible. Furthermore, the adherence to minimal computing principles privileges
+          durability over presentational aspects. Data storage is handled on third-party virtual
+          servers (such as GitHub, AWS CloudFront, S3, and DigitalOcean). Facsimile images are
+          provided by BnF’s digital library Gallica and integrated into the edition using their IIIF
+          manifests. Each folio is represented as an individual XML file containing diplomatic
+          French, normalized French as well as an English translation. The encoding uses a
+          project-specific schema inspired by the Text Encoding Initiative (TEI) Guidelines which
+          can be found in the project repository. The XML base data is converted into HTML and JSON
+          for creating the static site contents using a command line tool called
+          <emph>Lizard</emph>, named after a sketch on the manuscript’s fol. 124v which became the
+          project’s logo. <figure xml:id="img8">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-8.png"/>
+            <head type="legend">The landing page of the digital edition, where the header and all
+              accompanying text are part of an image. This design is perhaps not ideal for users who
+              wish to copy text or access it via a screen reader, as only part of the image’s text
+              content is part of the logo’s alt text.</head>
+          </figure>
+          <figure xml:id="img9">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-9.png"/>
+            <head type="legend">Dual-pane view showing, on the left, an overview of the manuscript
+              pages and, on the right, the gecko animation used in place of a spinning cursor while
+              pages are loading.</head>
+          </figure>
+          <figure xml:id="img10">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-10.png"/>
+            <head type="legend">Edition view showing some laboratory notes. The left pane presents
+              the facsimile, while the right pane displays the diplomatic French
+              transcription.</head>
+          </figure>
+          <figure xml:id="img11">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-11.png"/>
+            <head type="legend">Folio 124v in the edition view.</head>
+          </figure>
+          <figure xml:id="img12">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-12.png"/>
+            <head type="legend">The same folio as the previous image, showing what happens when the
+              small beaker icon is clicked. The icon links to a research essay on <emph>rouge
+                clair</emph>, a material discussed in three manuscript entries that was replicated
+              and tested. The link shows a preview of the essay’s findings and allows navigating to
+              the essay itself.</head>
+          </figure>
+        </p>
+        <p xml:id="p17">To further highlight the innovative potential of the project, one might have
+          opted to connect the edition and the related research essays beyond merely linking the
+          essays in relevant passages. One could think of the results of replicative experiments as
+          a form of apparatus to the text, just like philologists would add remarks on grammar or
+          linguistic particularities. The replications are more than just results of engagement with
+          the text, they are complementary sources of knowledge that readers can use to read and
+          interpret the text. If the replication results were part of the TEI edition of the text,
+          the data could later be used as training data for research questions such as deep learning
+          recipe extraction. However, it is up for debate how such a direct integration of
+          replication results into a digital edition would be implemented.</p>
+      </div>
+      <div xml:id="div4">
+        <head>Sandbox</head>
+        <p xml:id="p18">The <emph>Making and Knowing Project</emph> sandbox is a digital platform
+          designed to support exploration and experimentation with the project's data by students,
+          scholars, and other interested users (<ref type="crossref" target="#img13">Fig. 13</ref>).
+          It provides access to a range of digital tools, while also encouraging the development and
+          integration of user-created tools, case studies, and additional resources. The platform
+          features a collection of projects that engage with the underlying data of <emph>Secrets of
+            Craft and Nature</emph>. These projects represent experimental, provisional, and ongoing
+          work, offering diverse approaches to analysing the content and themes central to
+            <emph>Secrets of Craft and Nature</emph> and the broader objectives of the <emph>Making
+            and Knowing Project</emph>. The sandbox provides access to the data underlying the
+            <emph>Secrets of Craft and Nature</emph> digital edition and offers tools for its
+          analysis, including textual analysis and visualisation methods.<note xml:id="ftn29"><ref
+              target="https://web.archive.org/web/20250519035629/https://cu-mkp.github.io/sandbox/"
+              >https://web.archive.org/web/20250519035629/https://cu-mkp.github.io/sandbox/</ref>
+            and <ref
+              target="https://web.archive.org/web/20250519035642/https://github.com/cu-mkp/sandbox"
+              >https://web.archive.org/web/20250519035642/https://github.com/cu-mkp/sandbox</ref>;
+            <ref target="https://doi.org/10.5281/zenodo.4914452">https://doi.org/10.5281/zenodo.4914452</ref>.</note> It also functions as an informal archive for early
+          minimal edition prototypes that predate the current version of the digital edition. In
+          addition, it links to a range of pedagogical materials developed and employed in the
+            <emph>Making and Knowing</emph> laboratory courses. Technically, the sandbox is
+          implemented as a GitHub repository (<ref type="crossref" target="#img14">Fig. 14</ref>),
+          made publicly accessible via a GitHub.io website. However, this front-facing site does not
+          directly host the computational resources themselves but instead provides links to other
+          sections of the project where these are maintained. As noted in Li’s review (<ref
+            type="crossref" target="#li2020">Li 2020</ref>), the sandbox was conceived in part to
+          separate experimental or in-progress components from the main edition, which is intended
+          for long-term archiving. This separation also supports the project's commitment to minimal
+          computing principles and ensures reliance on technologies that are more conducive to
+          long-term digital preservation. <figure xml:id="img13">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-13.png"/>
+            <head type="legend">The sandbox page on GitHub.io used for the less permanent, more
+              experimental parts of the project and for engaging with the digital data.</head>
+          </figure>
+          <figure xml:id="img14">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-14.png"/>
+            <head type="legend">The corresponding GitHub repository for the sandbox, including
+              information about adding content and contributing to the sandbox.</head>
+          </figure>
+        </p>
+        <p xml:id="p19">In terms of Digital Humanities, the most interesting part of the sandbox is
+          probably the sub-site “Digital Projects”<note xml:id="ftn30"><ref
+              target="https://web.archive.org/web/20250519035746/https://cu-mkp.github.io/sandbox/docs/index-digital-projects.html."
+              >https://web.archive.org/web/20250519035746/https://cu-mkp.github.io/sandbox/docs/index-digital-projects.html</ref>.</note>
+          which contains entries such as: “Interacting with the Manuscript object in Python”
+          (2020-11-02), “Understanding and Analyzing the Categories of the Entries in BnF Ms. Fr.
+          640” (2021-02-01), “Applying Machine Learning to the Manuscript: Semantic Trees, Word
+          Clouds, and Sentence Embedding” (Dana Chaillard), “Visualizing the Semantic Tagging in
+          Secrets of Craft and Nature” (Roni Kaufman), “ms-text-analysis: Files and tools for
+          performing textual analysis of BnF Ms Fr 640” (2020-02-04) as well as “Visualizing
+          Semantic Markup in BnF Ms. Fr. 640” by <emph>Making and Knowing</emph> postdoctoral
+          scholar Clément Godbarge (2021-03-09). It also allows users to use <emph>Voyant
+            Tools</emph> to explore the manuscript data (in v1.2.0 using “Normalized French” or
+          “English Translation”). Related repositories to the sandbox are
+          “cu-mkp/m-k-manuscript-data for XML transcriptions and translation of Fr. 640, as well as
+          metadata and derivative files” as well as “cu-mkp/manuscript-object for data extraction,
+          manipulation, transformation, and analysis”. The <emph>Manuscript Data Repository</emph>
+          contains working files, data as well as XML transcription and translation for BnF Ms. Fr
+          640 along with complementary data such as metadata and bibliographies.<note xml:id="ftn31"
+            ><ref target="https://web.archive.org/web/20260430111435/https://github.com/cu-mkp/m-k-manuscript-data"
+              >https://web.archive.org/web/20260430111435/https://github.com/cu-mkp/m-k-manuscript-data</ref>;
+            <ref target="https://doi.org/10.5281/zenodo.4724101">https://doi.org/10.5281/zenodo.4724101</ref>.</note> The repository is documented extremely well using
+          READMEs. However, the ms-xml subdirectory seems to include files with the naming ending in
+          “preTEI.xml” which aren’t valid TEI files. This would indicate that the creation of
+          TEI-conforming XML outputs was intended although this is in contradiction to the
+          documentation stating that a project-specific schema was used. It is not clear whether
+          TEI-conformant XML files can be found anywhere on the website or whether the creation
+          thereof was implemented at all. The <emph>manuscript-object</emph> repository provides the
+            <emph>Making and Knowing</emph> dataset based on the digital critical edition in the
+          form of a custom python manuscript object the use of which is also well-documented in the
+          README.md (including code examples).<note xml:id="ftn32"><ref
+              target="https://web.archive.org/web/20250519035912/https://github.com/cu-mkp/manuscript-object"
+              >https://web.archive.org/web/20250519035912/https://github.com/cu-mkp/manuscript-object</ref>.</note>
+          It is to be commended that releases of the contents of the GitHub repositories are
+          archived in Zenodo as well. The edition was inspired by Minimal Computing principles to
+          promote long-term sustainability.</p>
+      </div>
+      <div xml:id="div5">
+        <head>Usability</head>
+        <p xml:id="p20">A minor annoyance is that in many parts of the website, headings are
+          rendered as images rather than digital text, making them inaccessible to screen readers
+          and preventing users from copying them. This may limit navigation for screen reader users,
+          who may miss out on key structural cues across sub-sites. Otherwise, the website is
+          generally intuitive and easy to use, especially following the updated relaunch in 2021
+          (see <ref type="crossref" target="#img15">Fig. 15</ref>, <ref type="crossref"
+            target="#img16">16</ref>, and <ref type="crossref" target="#img17">17</ref> for
+          different sections of the website). However, the edition view can be slow to load. In such
+          cases, the <emph>Making and Knowing</emph> logo—a gecko from the manuscript—appears
+          spinning, though this sometimes leads to a timeout. Pre-loading lower-resolution images
+          could improve front-end performance and provide a smoother user experience.</p>
+        <p xml:id="p21">Furthermore, users may find themselves overwhelmed by the sheer volume of
+          information offered by the <emph>Making and Knowing Project</emph>. It could be helpful to
+          introduce thematic pathways or improve subject-based access through tagging and faceted
+          search options. Nevertheless, the current site structure is more than adequate for users
+          to navigate and locate relevant materials. If materials will continue to be added in the
+          long term, it will be important to develop efficient ways of accessing the expanding
+          collection of research essays associated with the broader <emph>Making and Knowing
+            Project</emph>, particularly for users who may not yet know what specifically interests
+          them. <figure xml:id="img15">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-15.png"/>
+            <head type="legend">Visualization from the “Resources” tab showing the manuscript’s
+              contents in percentages according to their tagging. The largest category is casting
+              (33.87 %), followed by painting (14.25 %), and others such as practical optics,
+              dyeing, alchemy, printing, household and daily life, and medicine.</head>
+          </figure>
+          <figure xml:id="img16">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-16.png"/>
+            <head type="legend">“About” page with the start of the section describing the manuscript
+              in detail, including an example of the handwriting.</head>
+          </figure>
+          <figure xml:id="img17">
+            <graphic
+              url="http://ride.i-d-e.de/wp-content/uploads/issue_21/makingandknowing/pictures/picture-17.png"/>
+            <head type="legend">Helper page explaining how to read and browse the digital edition of
+              manuscript, noting that it consists of four versions (facsimile, diplomatic,
+              normalized, and translation) and describing how the dual-pane view works.</head>
+          </figure>
+        </p>
+        <p xml:id="p22">The project outputs are licensed CC BY-NC-SA 4.0.</p>
+      </div>
+      <div xml:id="div6">
+        <head>Ending a Long-Term Project</head>
+        <p xml:id="p23">The original version of this review was written in late 2022 and 2023. Since
+          then, only minor changes have been made to the project, especially the digital scholarly
+          edition at the core of this review.<note xml:id="ftn33">There has been little further
+            development on the digital scholarly edition. Since the reviewer’s visits in October
+            2022 and August 2023, GitHub records indicate that little has changed in the
+              <emph>Making and Knowing Project</emph>. Despite the 2022 newsletter’s implication of
+            continued work, the website and repository suggest the project had already mostly
+            concluded by that point. The few identifiable edits include the addition of essays and
+            the correction of minor bugs and transcript errors. These were made or suggested by the
+            Digital Humanities Lead, Terry Capitano, and the project’s PI, Pamela Smith, presumably
+            the remaining permanent staff at Columbia associated with the project. Consequently, the
+            project can now definitely be considered concluded. Still, the continued activity shows
+            that the project and related efforts are continuously being maintained.</note> At the
+          time, it appeared the project might still be ongoing, based on a <emph>Making and
+            Knowing</emph> newsletter that mentioned additional funding for digital scholarly
+          editing: In the <emph>Making and Knowing</emph> newsletter from 17 August 2022, the
+          project announced receiving a new NSF grant to support the development and dissemination
+          of the open-source, customisable tool <emph>Edition Crafter</emph>. This tool, based on
+          the software developed for <emph>Secrets of Craft and Nature</emph>, is intended to enable
+          others to publish their own digital critical editions as feature-rich yet sustainable
+          websites.</p>
+        <p xml:id="p24">The 17 July 2024 newsletter announced the departure of Assistant Director
+          Naomi Rosenkranz in 2024. That year, the project also hosted another Open Laboratory Day
+          at Columbia, during which students participated in a workshop to develop a research and
+          teaching companion intended to help educators use the platform and demonstrate how to
+          incorporate hands-on experimentation in teaching. This research and teaching companion for
+            <emph>Making and Knowing</emph> is now available through the web portal as well—an
+          open-source, open-access online platform offering curated, searchable, and downloadable
+          guides, lesson plans for hands-on activities, and case studies for research and
+            teaching.<note xml:id="ftn34"><emph>Research and Teaching Companion to Secrets of Craft
+              and Nature in Renaissance France</emph>: <ref
+              target="https://web.archive.org/web/20250519040050/https://teaching640.makingandknowing.org/"
+              >https://web.archive.org/web/20250519040050/https://teaching640.makingandknowing.org/</ref>; 
+            <ref
+              target="https://web.archive.org/web/20250519040208/https://teaching640.makingandknowing.org/resources/digital/"
+              >https://web.archive.org/web/20250519040208/https://teaching640.makingandknowing.org/resources/digital/</ref>.
+            2024 entry from the <emph>Making and Knowing Project</emph> newsletter (dated 17 July
+            2024) reported that the project’s efforts culminated in the Ph.D. summer school
+              <emph>Mindscapes – Socio-Natural Sites of Extraction and Knowledge</emph>, co-led by
+            Pamela Smith and long-term collaborator Tina Asmussen. They are now working with the Max
+            Planck Institute for the History of Science as part of the <emph>Metals, Minerals, and
+              Life Cycle</emph> project, led by Dagmar Schäfer, and further summer school excursions
+            are planned for 2025 and 2026.</note> The <emph>Making and Knowing Project</emph> has
+          thus produced a wide range of material not only in Digital Humanities and the history of
+          science but also in public outreach and citizen science.<note xml:id="ftn35">The bulk of
+            the pedagogical initiatives and lab seminars seem to have ceased somewhere around 2023,
+            despite a few related activities still ongoing.</note> As part of a series of student
+          projects, the Computer Graphics and User Interfaces Lab (CGUI) at Columbia University,
+          under the direction of Professor Steven Feiner, developed an augmented reality (AR)
+          toolset to complement the <emph>Secrets of Craft and Nature Project</emph>. These
+          interactive tools are designed to convey the practice-based, experiential knowledge
+          produced in the <emph>Making and Knowing Lab</emph>. Through visualisation technologies,
+          such as Microsoft HoloLens and Google Tango devices, users are enabled to engage with
+          historical techniques in an immersive manner, experiencing processes rather than solely
+          reading about them. These activities remain connected to the broader intellectual
+          framework of <emph>Making and Knowing</emph>, though not to the digital scholarly edition,
+          which can now be considered complete.</p>
+      </div>
+      <div xml:id="div7">
+        <head>EditionCrafter</head>
+        <p xml:id="p25">The minimal edition tool, originally developed within the <emph>Making and
+            Knowing Project</emph>, has since been expanded into a standalone resource: Now known as
+            <emph>EditionCrafter</emph>, it was presented in a workshop at the 2025 ADHO Digital
+          Humanities Conference in Lisbon.<note xml:id="ftn36">Developed at the Center for Science
+            and Society at Columbia University by the <emph>Making and Knowing Project</emph> in
+            collaboration with Performant Software Solutions LLC, <emph>EditionCrafter</emph> was
+            funded by Grant SES-2218218 from the National Science Foundation (2022). <ref
+              target="https://web.archive.org/web/20250519035821/https://editioncrafter.org/"
+              >https://web.archive.org/web/20250519035821/https://editioncrafter.org/</ref>;
+              <ref
+              target="https://web.archive.org/web/20250519040007/https://github.com/cu-mkp/editioncrafter"
+              >https://web.archive.org/web/20250519040007/https://github.com/cu-mkp/editioncrafter</ref>.
+            Workshop at DH Lisbon: Nick Laiacona &amp; Christopher Ohge: <emph>Publishing Digital
+              Editions with EditionCrafter</emph>.</note> While it constitutes a significant and
+          valuable outcome of the broader project, it is not the main focus of this review.
+          Copyrighted in 2022, <emph>EditionCrafter</emph> appears largely complete, although recent
+          updates to the GitHub repository and the 2025 workshop indicate ongoing development and
+          support.</p>
+        <p xml:id="p26"><emph>EditionCrafter</emph> is an open-source platform designed for
+          publishing digital scholarly editions, enabling the creation of diplomatic renderings of
+          texts alongside deep-zoom views of original folios. Editions may include multiple textual
+          layers, such as transcriptions paired with translations, and support the display of
+          editorial notes and glossaries. Inheriting its methodological approach from its parent
+          edition, <emph>EditionCrafter</emph> employs minimal computing strategies to generate
+          static websites. It operates without a server or backend infrastructure; all components
+          are rendered from XML-TEI at the time of build. Projects may be initiated with as little
+          as a set of image files and corresponding plain text transcriptions. The resulting edition
+          is economical to host and can be maintained on nearly any standard internet hosting
+          service. A notable feature is its permalinking capability, which allows stable references
+          to individual pages within primary source materials.</p>
+        <p xml:id="p27">Building on the functionality of its predecessor, the development team
+          behind <emph>EditionCrafter</emph> conducted a survey of typical requirements expressed by
+          their Humanities collaborators. Two tasks often proved challenging for collaborators
+          lacking technical support: the transformation of plain text transcriptions into digital
+          scholarly editions encoded in XML-TEI, and the organisation of image sets for hosting via
+          a IIIF server. In response, the <emph>EditionCrafter</emph> build process was adapted to
+          better accommodate these use cases. A key requirement is that the XML-TEI file includes
+          references to folio images within the <code>&lt;facsimile&gt;</code> element. A
+          command-line utility, distributed as @cu-mkp/editioncrafter-cli, is provided to convert
+          base documents into the necessary output formats for the final edition.
+            <emph>EditionCrafter</emph> is designed to function within content management systems
+          (CMS) that support HTML editing. It has been tested across several platforms, including
+          Hugo CMS, Scalar CMS, and the Astro framework. The tool can be embedded directly into an
+          HTML-based website or implemented as a React component within a React application. A
+          ready-to-use example site built with Hugo is available for forking via the project’s
+          GitHub repository.</p>
+      </div>
+      <div xml:id="div8">
+        <head>Conclusion</head>
+        <p xml:id="p28">The experimental history of science aims to replicate historical experiments
+          and recipes in contemporary laboratories. This approach goes beyond revisiting historical
+          texts, using practical making as a method to bridge gaps in the historical record. Recipe
+          texts were once interpreted by craftspeople whose tacit knowledge allowed them to navigate
+          implicit instructions. For modern readers, removed by centuries and lacking this
+          experiential background, such texts often appear opaque. The project's aim was to recreate
+          aspects of this practical understanding by using making as an epistemic tool. Practical
+          making was both studied in historical texts and used as a method to investigate and fill
+          gaps in the sources that transmit chymical and craft recipes.</p>
+        <p xml:id="p29">The <emph>Making and Knowing Project</emph> has had a widespread impact on
+          the history of science and knowledge, beyond the manuscript under review here. The
+          project’s principal investigator, Pamela Smith, published the definitive study <emph>From
+            Lived Experience to the Written Word: Reconstructing Practical Knowledge in the Early
+            Modern World</emph> (<ref type="crossref" target="#smith2022">University of Chicago
+            Press, 2022</ref>). This book provides a comprehensive account of practical and recipe
+          literature, and of the broader phenomenon of encoding practical knowledge in writing,
+          particularly in how-to books. It examines the relationship between tacit, practical
+          knowledge and its written transmission, exploring what occurred when artisans began to
+          record their recipes and compose tracts that presented their expertise as part of
+          university learning. It considers artisan authors, the use of these texts, and the
+          implications of collecting and reconstructing knowledge, including its global
+          entanglements, situating makers’ writing within broader intellectual and social contexts.
+          Emerging directly from almost a decade of the <emph>Making and Knowing Project</emph> and
+          related activities, it reflects Smith’s 15–20 years of scholarship in this field and
+          constitutes both a culmination of the project and a major contribution to the state of
+          scholarship on the topic.</p>
+        <p xml:id="p30">The project has shaped and continues to shape the discipline. Its
+          interactive digital edition of BnF Ms. Fr. 640, alongside documentation of replicated
+          experiments, offers a rich array of resources for both scholars and the public. Li (<ref
+            type="crossref" target="#li2020">2020</ref>) highlights its pedagogical potential, but
+          one could argue that its most significant contribution lies in popularising experimental
+          methods in the history of science. Moreover, it is a pioneering effort in developing
+          digital editions informed by contributions from citizen scientists and in creating
+          editions of this unique type of text, where experimental reconstructions function as an
+          additional scholarly apparatus.</p>
+        <p xml:id="p31">A notable feature is the “project sandbox”, a digital platform designed for
+          users to experiment with distant reading techniques. This platform provides access to the
+          full dataset from the digital edition, facilitating data reuse in line with the FAIR
+          principles by ensuring the data is accessible, reusable, and interoperable through the use
+          of standard formats. Within the field of Digital Humanities, the <emph>Making and Knowing
+            Project</emph> has been a pioneer in adopting and promoting minimal computing principles
+          for digital scholarly editing. These principles have not only guided the technical
+          implementation of the project itself but have also led to the development of a spin-off
+          tool, <emph>EditionCrafter</emph>. This tool enables users to create sustainable digital
+          scholarly editions with minimal technical expertise, drawing directly on the approach and
+          implementation employed by <emph>Making and Knowing</emph>. Thus, the project has not only
+          developed a sustainable implementation for its own purposes but has also benefited the
+          wider scholarly community beyond the history of science and knowledge.</p>
+        <p xml:id="p32">While engagement with materiality, experimental replication, and artisanal
+          tacit knowledge have increasingly become the norm history of science and knowledge, the
+            <emph>Making and Knowing Project</emph> was at the forefront in integrating the latest
+          and best practices in Digital Humanities trends. Its pioneering approach not only recovers
+          the tacit knowledge of historical craftspeople but also opens new research paths, such as
+          the analysis of historical recipe books through making or distant reading. The project is
+          not merely a study of the past; it has shaped new methods in the historiography of
+          knowledge. As the field continues to evolve, the project will remain a central reference
+          point for researchers and enthusiasts alike.</p>
+      </div>
+    </body>
+    <back>
+      <div type="bibliography">
+        <listBibl>
+          <bibl xml:id="camps-lyautey2020">Camps, Celine and Margot Lyautey. 2020. “Ma&lt;r&gt;king
+            and Knowing: Encoding BnF Ms. Fr. 640.” In <emph>Secrets of Craft and Nature in
+              Renaissance France.</emph> Edited by <emph>Making and Knowing Project</emph> et al.,
+            New York: <emph>Making and Knowing Project</emph>.
+            <ref
+              target="https://www.doi.org/10.7916/cjhd-wh90"
+              >https://www.doi.org/10.7916/cjhd-wh90</ref>.</bibl>
+          <bibl xml:id="dupreEtAl2020">Dupré, Sven, Anna Harris, Julia Kursell, Patricia Lulof, and
+            Maartje Stols-Witlox, eds. 2020. <emph>Reconstruction, Replication and Re-enactment in
+              the Humanities and Social Sciences.</emph> Amsterdam: Amsterdam University
+            Press.</bibl>
+          <bibl xml:id="eamon1990">Eamon, William. 1990. “From the secrets of nature to public
+            knowledge.” In <emph>Reappraisals of the Scientific Revolution</emph>, edited by David
+            C. Lindberg and Robert S. Westman, 333–365. Cambridge: Cambridge University
+            Press.</bibl>
+          <bibl xml:id="eamon1994">Eamon, William. 1994. <emph>Science and the Secrets of Nature:
+              Books of Secrets in Medieval and Early Modern Culture.</emph> Princeton: Princeton
+            University Press.</bibl>
+          <bibl xml:id="eamon2016">Eamon, William. 2016. “How to Read a Book of Secrets.” In
+              <emph>Secrets and Knowledge in Medicine and Science, 1500–1800</emph>, edited by
+            Elaine Leong and Alisha Rankin, 23–46. NY: Routledge.</bibl>
+          <bibl xml:id="forsEtAl2016">Fors, Hjalmar, Lawrence M. Principe, and H. Otto Sibum. 2016.
+            “From the Library to the Laboratory and Back Again: Experiment as a Tool for Historians
+            of Science.” <emph>Ambix</emph> 63 (2): 85–97.</bibl>
+          <bibl xml:id="gelius1997">Gelius, Rolf. 1997. “Historische Experimente in Chemie und
+            chemischer Technik.” <emph>Chemie in unserer Zeit</emph> 31 (4): 162–67.</bibl>
+          <bibl xml:id="godbarge2020">Godbarge, Clément. 2020. “The Manuscript Seen from Afar: A
+            Computational Approach to Ms. Fr. 640.” In <emph>Secrets of Craft and Nature in
+              Renaissance France. A Digital Critical Edition and English Translation of BnF Ms. Fr.
+              640</emph>, edited by Making and Knowing Project, Pamela H. Smith, Naomi Rosenkranz,
+            Tianna Helena Uchacz, Tillmann Taape, Clément Godbarge, Sophie Pitman, Jenny Boulboullé,
+            Joel Klein, Donna Bilak, Marc Smith, and Terry Catapano. New York: Making and Knowing
+            Project. <ref
+              target="https://www.doi.org/10.7916/s7f5-5h76"
+              >https://www.doi.org/10.7916/s7f5-5h76</ref>.</bibl>
+          <bibl xml:id="hagendijk2018">Hagendijk, Thijs. 2018. “Learning a Craft from Books.
+            Historical Re-Enactment of Functional Reading in Gold- and Silversmithing.”
+            <emph>Nuncius</emph> 33, 198-235.</bibl>
+          <bibl xml:id="hagendijk2020">Hagendijk, Thijs, Peter Heering, Lawrence M. Principe, and
+            Sven Dupré. 2020. “Reworking Recipes and Experiments in the Classroom.” In
+              <emph>Reconstruction, Replication and Re-enactment in the Humanities and Social
+              Sciences</emph>, edited by Sven Dupré, Anna Harris, Julia Kursell, Patricia Lulof, and
+            Maartje Stols-Witlox, 199–224. Amsterdam: Amsterdam University Press.</bibl>
+          <bibl xml:id="hendriksen2020">Hendriksen, Marieke M. A. 2020. “Rethinking Performative
+            Methods in the History of Science.” <emph>Berichte zur Wissenschaftsgeschichte</emph>
+            43: 313–22.</bibl>
+          <bibl xml:id="klein2020">Klein, Joel. 2020. “Methodologies for Making and Knowing:
+            Reconstructions for Historical Research.” In <emph>Secrets of Craft and Nature in
+              Renaissance France.</emph> Edited by Making and Knowing Project et al., New York:
+            Making and Knowing Project. <ref
+              target="https://www.doi.org/10.7916/s7f5-5h76"
+              >https://www.doi.org/10.7916/s7f5-5h76</ref>.</bibl>
+          <bibl xml:id="lang2022">Lang, Sarah. 2022. “Experiments in the digital laboratory. What
+            the Computational Humanities can learn about their definition and terminology from the
+            History of Science.” In <emph>Fabrikation von Erkenntnis. Experimente in den Digital
+              Humanities</emph>, edited by Manuel Burghardt et al., Esch-sur-Alzette (LU): Melusina
+            Press. <ref target="https://doi.org/10.26298/melusina.8f8w-y749-eitd"
+              >https://doi.org/10.26298/melusina.8f8w-y749-eitd</ref>.</bibl>
+          <bibl xml:id="lang-spielhofer2020">Lang, Sarah, and Lukas Spielhofer. 2020. “Digitale
+            Lernplattformen und Open Educational Resources im Altsprachlichen Unterricht I.
+            Technische Spielräume am Beispiel des ›Grazer Repositorium antiker Fabeln‹ (GRaF).”
+              <emph>Zeitschrift für digitale Geisteswissenschaften</emph>. Wolfenbüttel. <ref
+              target="https://www.doi.org/10.17175/2020_004"
+              >https://www.doi.org/10.17175/2020_004</ref>.</bibl>
+          <bibl xml:id="li2020">Lan A. Li. 2020. “Crafting Digital Histories of Science: A Review
+            and Tour of Secrets of Craft and Nature in Renaissance France.” <emph>Isis</emph> 112
+            (3): 586-589.</bibl>
+          <bibl xml:id="moran2009">Moran, Bruce T. 2009. <emph>Distilling Knowledge: Alchemy,
+              Chemistry, and the Scientific Revolution.</emph> Cambridge, Massachusetts: Harvard
+            University Press.</bibl>
+          <bibl xml:id="neven2014">Neven, Sylvie. 2014. “Transmission of Alchemical and Artistic
+            Knowledge in German Mediaeval and Premodern Recipe Books.” In <emph>Laboratories of Art.
+              Alchemy and Art Technology from Antiquity to the 18th Century</emph>, edited by Sven
+            Dupré, 23–52. Cham: Springer.</bibl>
+          <bibl xml:id="peels2019">Peels, Rik. 2019. “Replicability and Replication in the
+            Humanities.” <emph>Research Integrity and Peer Review</emph> 4. <ref
+              target="https://doi.org/10.1186/s41073-018-0060-4"
+              >https://doi.org/10.1186/s41073-018-0060-4</ref>.</bibl>
+          <bibl xml:id="peels-bouter2018">Peels, Rik, and Lex Bouter. 2018. “The Possibility and
+            Desirability of Replication in the Humanities.” <emph>Palgrave Communications</emph> 4.
+             <ref target="https://doi.org/10.1057/s41599-018-0149-x"
+              >https://doi.org/10.1057/s41599-018-0149-x</ref>.</bibl>
+          <bibl xml:id="polanyi2009">Polanyi, Michael. 2009. <emph>The Tacit Dimension. With a New
+              Foreword by Amartya Sen.</emph> Chicago: University of Chicago Press.</bibl>
+          <bibl xml:id="principe2000">Principe, Lawrence. 2000. “Apparatus and Reproducibility in
+            Alchemy.” In <emph>Instruments and Experimentation in the History of Chemistry</emph>,
+            edited by Frederic Lawrence Holmes and Trevor Harvey Levere, 55–74. Dibner Institute
+            Studies. Cambridge, MA.</bibl>
+          <bibl xml:id="principle2011">Principe, Lawrence. 2011. <emph>The Scientific Revolution: A
+              Very Short Introduction.</emph> Oxford: Oxford University Press.</bibl>
+          <bibl xml:id="rheinberger2001">Rheinberger, Hans-Jörg. 2001. “History of Science and the
+            Practices of Experiment.” <emph>History and Philosophy of the Life Sciences</emph> 23
+            (1): 51–63.</bibl>
+          <bibl xml:id="sibum2020">Sibum, H. Otto. 2020. “Science and the Knowing Body: Making Sense
+            of Embodied Knowledge in Scientific Experiment.” In <emph>Reconstruction, Replication
+              and Re-enactment in the Humanities and Social Sciences</emph>, edited by Sven Dupré,
+            Anna Harris, Julia Kursell, Patricia Lulof, and Maartje Stols-Witlox, 275–94. Amsterdam:
+            Amsterdam University Press.</bibl>
+          <bibl xml:id="smith2006">Smith, Pamela H. 2006. “Laboratories.” In <emph>The Cambridge
+              History of Science 3 / Early Modern Science</emph>, edited by Katherine Park and
+            Lorraine Daston, 290–305. Cambridge: Cambridge University Press.</bibl>
+          <bibl xml:id="smith2017">Smith, Pamela H. 2017. “The Codification of Vernacular Theories
+            of Metallic Generation in Sixteenth-Century European Mining and Metalworking.” In
+              <emph>The Structures of Practical Knowledge</emph>, edited by Matteo Valleriani,
+            371–92. Cham: Springer.</bibl>
+          <bibl xml:id="smith2022">Smith, Pamela H. 2022. <emph>From Lived Experience to the Written
+              Word: Reconstructing Practical Knowledge in the Early Modern World.</emph> Chicago:
+            University of Chicago Press.</bibl>
+          <bibl xml:id="smith2020a">Smith, Pamela H. 2020a. “Making the Edition of Ms. Fr. 640.” In
+              <emph>Secrets of Craft and Nature in Renaissance France. A Digital Critical Edition
+              and English Translation of BnF Ms. Fr. 640</emph>, edited by Making and Knowing
+            Project, et al. New York: Making and Knowing Project. <ref
+              target="https://web.archive.org/web/20260312171930/https://edition640.makingandknowing.org/essays/ann_329_ie_19"
+              >https://web.archive.org/web/20260312171930/https://edition640.makingandknowing.org/essays/ann_329_ie_19</ref>.</bibl>
+          <bibl xml:id="smith2020b">Smith, Pamela H. 2020b. “An Introduction to Ms. Fr. 640 and its
+            Author-Practitioner.” In <emph>Secrets of Craft and Nature in Renaissance France. A
+              Digital Critical Edition and English Translation of BnF Ms. Fr. 640</emph>, edited by
+            Making and Knowing Project, et al. <ref
+              target="https://www.doi.org/10.7916/ny3t-qg71"
+              >https://www.doi.org/10.7916/ny3t-qg71</ref>.</bibl>
+          <bibl xml:id="smithEtAl2017">Smith, Pamela H., Amy R. W. Meyers, and Harold J. Cook. 2017.
+              <emph>Ways of Making and Knowing: The Material Culture of Empirical Knowledge.</emph>
+            Chicago: University of Chicago Press.</bibl>
+          <bibl xml:id="smithEtAl2020a">Smith, Pamela et al. 2020a. <emph>Making and Knowing. A
+              minimal edition of BnF Ms Fr 640 (with diplomatic and normalized transcriptions as
+              well as an English translation).</emph> <ref
+                target="https://web.archive.org/web/20260430111638/https://cu-mkp.github.io/2017-workshop-edition/"
+                >https://web.archive.org/web/20260430111638/https://cu-mkp.github.io/2017-workshop-edition/</ref>.</bibl>
+          <bibl xml:id="smithEtAl2020b">Smith, Pamela H., Tianna Helena Uchacz, Naomi Rosenkranz,
+            and Claire Conklin Sabel. 2020b. “The Making of Empirical Knowledge: Recipes, Craft, and
+            Scholarly Communication.” In <emph>Reassembling Scholarly Communications: Histories,
+              Infrastructures, and Global Politics of Open Access</emph>, edited by Martin Paul Eve
+            and Jonathan Gray, 125–144. Cambridge, MA: The MIT Press. <ref
+              target="https://doi.org/10.7551/mitpress/11885.003.0014"
+              >https://doi.org/10.7551/mitpress/11885.003.0014</ref>.</bibl>
+          <bibl xml:id="smithEtAlnd">Smith, Pamela, Naomi Rosenkranz, Terry Catapano, Caroline
+            Surman, Gregory Schare, and Sophia Qureshi, eds. n.d. <emph>Secrets of Craft and Nature
+              Sandbox.</emph> <ref target="https://web.archive.org/web/20260430112009/https://cu-mkp.github.io/sandbox/"
+                >https://web.archive.org/web/20260430112009/https://cu-mkp.github.io/sandbox/</ref>.</bibl>
+          <bibl xml:id="taapeEtAl2020">Taape, Tillmann, Pamela Smith, and Tianna Uchacz. 2020.
+            “Schooling the Eye and Hand: Performative Methods of Research and Pedagogy in the Making
+            and Knowing Project.” <emph>Berichte zur Wissenschaftsgeschichte</emph> 43 (3).</bibl>
+          <bibl xml:id="uchacz2020">Uchacz, Tianna Helena. 2020. “Reconstructing Early Modern
+            Artisanal Epistemologies and an ‘Undisciplined’ Mode of Inquiry.” <emph>Isis</emph> 111
+            (3): 606–613.</bibl>
+          <bibl xml:id="valleriani2017">Valleriani, Matteo. 2017. “The Epistemology of Practical
+            Knowledge.” In <emph>The Structures of Practical Knowledge</emph>, edited by Matteo
+            Valleriani, 1–21. Cham: Springer.</bibl>
+          <bibl xml:id="vohlandEtAl2021">Vohland, Katrin, Anne Land-Zandstra, Luigi Ceccaroni, Rob
+            Lemmens, Josep Perelló, Marisa Ponti, Roeland Samson, and Katherin Wagenknecht, eds.
+            2021. <emph>The Science of Citizen Science.</emph> Cham: Springer.</bibl>
+          <bibl xml:id="zweifel2022">Zweifel, Simone. 2021. <emph>Aus Büchern Bücher machen: Zur
+              Produktion und Multiplikation von Wissen in frühneuzeitlichen Kompilationen.</emph>
+            Berlin: De Gruyter.</bibl>
+        </listBibl>
+      </div>
+    </back>
+  </text>
+</TEI>
