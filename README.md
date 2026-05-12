@@ -28,7 +28,7 @@ The repository is run by members of the Institute for Documentology and Scholarl
 
 If you use the RIDE datasets, we kindly ask you to cite them as suggested here:
 
-Institut für Dokumentologie und Editorik (ed.) (2026). “Datasets of RIDE (A Review journal for digital editions and resources).” Version 7.0.0. GitHub.com. https://github.com/i-d-e/ride.
+Institut für Dokumentologie und Editorik (ed.) (2026). “Datasets of RIDE (A Review journal for digital editions and resources).” Version 7.0.1. GitHub.com. https://github.com/i-d-e/ride.
 
 
 
